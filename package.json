@@ -4,7 +4,7 @@
   "description": "Website for digital design agency, EDL",
   "scripts": {
     "dev": "TAILWIND_MODE=watch postcss src/css/index.css -o build/css/styles.css -w -m",
-    "build": "NODE_ENV=production postcss src/css/index.css -o build/css/styles.css",
+    "build": "NODE_ENV=production postcss src/css/index.css -o build/css/styles.css -w -m",
     "serve": "npx servor build index.html 8081 --reload --browse --static",
     "start": "run-p \"dev \" \"serve \" "
   },
