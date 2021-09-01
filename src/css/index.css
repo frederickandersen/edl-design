@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+@import "tailwindcss/base";
+
+/* interactivity using aria-state expanded */
+.accordion dt { cursor: pointer; }
+.accordion dd[aria-expanded=false] { opacity: 0; display: none; } /* hide using js */ 
+.accordion dd[aria-expanded=true] { display: inherit; }
+
+@media screen and (min-width: 640px) {
+    a[aria-current=page] {
+        position: relative;
+    }
+
+    a[aria-current=page]:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        bottom: -1px;
+        background-color: white;
+    }
+
+    a.text-black[aria-current=page]:before {
+        background-color: black;
+    }
+}
+
+a.link:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.silhouette {
+    width: 32rem;
+}
+
+.diagonal {
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.6' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.motion {
+    background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 0h2v20H9V0zm25.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm-20 20l1.732 1-10 17.32-1.732-1 10-17.32zM58.16 4.134l1 1.732-17.32 10-1-1.732 17.32-10zm-40 40l1 1.732-17.32 10-1-1.732 17.32-10zM80 9v2H60V9h20zM20 69v2H0v-2h20zm79.32-55l-1 1.732-17.32-10L82 4l17.32 10zm-80 80l-1 1.732-17.32-10L2 84l17.32 10zm96.546-75.84l-1.732 1-10-17.32 1.732-1 10 17.32zm-100 100l-1.732 1-10-17.32 1.732-1 10 17.32zM38.16 24.134l1 1.732-17.32 10-1-1.732 17.32-10zM60 29v2H40v-2h20zm19.32 5l-1 1.732-17.32-10L62 24l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM111 40h-2V20h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zM40 49v2H20v-2h20zm19.32 5l-1 1.732-17.32-10L42 44l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM91 60h-2V40h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM39.32 74l-1 1.732-17.32-10L22 64l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM71 80h-2V60h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM120 89v2h-20v-2h20zm-84.134 9.16l-1.732 1-10-17.32 1.732-1 10 17.32zM51 100h-2V80h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM100 109v2H80v-2h20zm19.32 5l-1 1.732-17.32-10 1-1.732 17.32 10zM31 120h-2v-20h2v20z' fill='%23000000' fill-opacity='0.72' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.point:after {
+    background-color: #FFFFFF;
+    border: 2px solid #000;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 21px;
+    left: -12px;
+    position: absolute;
+    top: 0;
+    width: 21px;
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+.marquee div {
+    display: block;
+    width: 200%;
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    animation: marquee 10s linear infinite;
+  }
+  
+.marquee h2 {
+    float: left;
+    width: 50%;
+}
+
+.sketch-0 {
+    background-image: url(https://cdn.sketch.com/assets/pages/home-relaunch/feature-collaborate-bg@2x.png);
+    background-color: #83d7cf;
+    background-size: cover;
+    background-position: left;
+    background-attachment: fixed;
+}
+
+.sketch-1 {
+    background-image: url(https://cdn.sketch.com/assets/pages/home-relaunch/testimonial-bg-teal@2x.png);
+    background-color: #83d7cf;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.sketch-2 {
+    background-image: url(https://cdn.sketch.com/assets/pages/home-relaunch/feature-design-systems-bg@2x.png);
+    background-repeat: no-repeat;
+    background-color: #fad266;
+    background-position: bottom left;
+    background-attachment: fixed;
+}
+
+.sketch-3 {
+    background-image: url(https://cdn.sketch.com/assets/pages/home-relaunch/cta-bg@2x.png);
+    background-size: 100%;
+    background-color: #fad266;
+    background-position: bottom right;
+    background-attachment: fixed;
+}
+
+.sketch-4 {
+    background-image: url(https://cdn.sketch.com/assets/pages/home-relaunch/testimonial-bg-yellow@2x.png);
+    background-color: #f5a925;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.sketch-5 {
+    background-image: url(https://cdn.sketch.com/assets/pages/home-relaunch/bg-hero.png);
+    background-size: cover;
+    background-color: #ffb387;
+    background-attachment: fixed;
+}
+  
+@keyframes marquee {
+    0% { left: 0; }
+    100% { left: -100%; }
+}
+
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer utilities {
+    @variants responsive {
+        .service {
+            height: 640px;
+        }
+        .text-indent-sm {
+            text-indent: 2.5rem;
+        }
+
+        .text-indent-md {
+            text-indent: 3rem;
+        }
+
+        .text-indent-lg {
+            text-indent: 3.5rem;
+        }
+
+        .w-landscape {
+            width: 48rem;
+        }
+
+        .h-landscape {
+            height: 34rem;
+        }
+
+        .w-portrait {
+            width: 36rem;
+        }
+
+        .h-portrait {
+            height: 40rem;
+        }
+
+        .h-min-md {
+            min-height: 32rem;
+        }
+
+        .h-min-lg {
+            min-height: 40rem;
+        }
+    }
+}
