@@ -1010,6 +1010,12 @@ a.link:before {
 .h-4{
 	height: 1rem;
 }
+.h-screen{
+	height: 100vh;
+}
+.h-4\/5{
+	height: 80%;
+}
 .w-full{
 	width: 100%;
 }
@@ -1057,6 +1063,9 @@ a.link:before {
 }
 .items-start{
 	align-items: flex-start;
+}
+.items-end{
+	align-items: flex-end;
 }
 .items-center{
 	align-items: center;
@@ -1351,18 +1360,25 @@ a.link:before {
 .text-indent-md {
             text-indent: 3rem;
         }
+.text-indent-lg {
+            text-indent: 3.5rem;
+        }
+
 .focus\:border-black:focus{
 	--tw-border-opacity: 1;
 	border-color: rgba(0, 0, 0, var(--tw-border-opacity));
 }
+
 .focus\:shadow-sm:focus{
 	--tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+
 .focus\:ring-black:focus{
 	--tw-ring-opacity: 1;
 	--tw-ring-color: rgba(0, 0, 0, var(--tw-ring-opacity));
 }
+
 @media (min-width: 640px){
 
 	.sm\:col-span-2{
@@ -1432,6 +1448,7 @@ a.link:before {
 		padding-top: 10rem;
 	}
 }
+
 @media (min-width: 768px){
 
 	.md\:top-12{
@@ -1458,6 +1475,10 @@ a.link:before {
 		margin-top: -0.25rem;
 	}
 
+	.md\:flex{
+		display: flex;
+	}
+
 	.md\:grid{
 		display: grid;
 	}
@@ -1466,12 +1487,36 @@ a.link:before {
 		height: 24rem;
 	}
 
+	.md\:h-screen{
+		height: 100vh;
+	}
+
+	.md\:w-full{
+		width: 100%;
+	}
+
 	.md\:grid-cols-2{
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
 	.md\:flex-row{
 		flex-direction: row;
+	}
+
+	.md\:flex-col{
+		flex-direction: column;
+	}
+
+	.md\:content-end{
+		align-content: flex-end;
+	}
+
+	.md\:items-end{
+		align-items: flex-end;
+	}
+
+	.md\:justify-items-end{
+		justify-items: end;
 	}
 
 	.md\:gap-16{
@@ -1508,6 +1553,10 @@ a.link:before {
 
 	.md\:p-16{
 		padding: 4rem;
+	}
+
+	.md\:p-0{
+		padding: 0px;
 	}
 
 	.md\:px-12{
@@ -1585,6 +1634,7 @@ a.link:before {
             text-indent: 3.5rem;
         }
 }
+
 @media (min-width: 1024px){
 
 	.lg\:sticky{
@@ -1801,6 +1851,10 @@ a.link:before {
 		padding-right: 1rem;
 	}
 
+	.lg\:pb-32{
+		padding-bottom: 8rem;
+	}
+
 	.lg\:text-2xl{
 		font-size: 1.5rem;
 		line-height: 2rem;
@@ -1856,6 +1910,7 @@ a.link:before {
             min-height: 32rem;
         }
 }
+
 @media (min-width: 1280px){
 
 	.xl\:mt-12{
@@ -1892,6 +1947,7 @@ a.link:before {
             min-height: 40rem;
         }
 }
+
 @media (min-width: 1536px){
 
 	.\32xl\:w-3\/4{
