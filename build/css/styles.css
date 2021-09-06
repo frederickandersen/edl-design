@@ -973,6 +973,9 @@ a.link:before {
 .mt-3{
 	margin-top: 0.75rem;
 }
+.mt-24{
+	margin-top: 6rem;
+}
 .block{
 	display: block;
 }
@@ -1352,6 +1355,9 @@ a.link:before {
 }
 .pr-3{
 	padding-right: 0.75rem;
+}
+.pt-24{
+	padding-top: 6rem;
 }
 .text-center{
 	text-align: center;
