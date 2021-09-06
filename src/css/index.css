@@ -94,7 +94,6 @@ a.link:before {
     background-image: url(https://cdn.sketch.com/assets/pages/home-relaunch/cta-bg@2x.png);
     background-size: cover;
     background-color: #fad266;
-    background-attachment: fixed;
 }
 
 .sketch-4 {
@@ -111,10 +110,40 @@ a.link:before {
     background-attachment: fixed;
 }
 
+.sketch-6 {
+    background-image: url(/media/cta.png);
+    background-size: cover;
+    background-color: #ffb387;
+}
+
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
 @layer utilities {
+    .link-line {
+        position: relative;
+    }
+
+    .link-line:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        bottom: -1px;
+    }
+
+    .link-red.link-line:before {
+        background-color: #ED0B0A;
+    }
+
+    .link-white.link-line:before {
+        background-color: #fff;
+    }
+
+    .link-black.link-line:before {
+        background-color: #000;
+    }
+
     @variants responsive {
         .service {
             height: 640px;
@@ -129,22 +158,6 @@ a.link:before {
 
         .text-indent-lg {
             text-indent: 3.5rem;
-        }
-
-        .w-landscape {
-            width: 48rem;
-        }
-
-        .h-landscape {
-            height: 34rem;
-        }
-
-        .w-portrait {
-            width: 36rem;
-        }
-
-        .h-portrait {
-            height: 40rem;
         }
 
         .h-min-md {

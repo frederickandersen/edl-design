@@ -22,13 +22,18 @@ module.exports = {
             red: '#ED0B0A',
             blue: '#3257DC',
             purple: '#FB428A',
-            yellow: '#C8A9B5',
+            yellow: '#F9BA43',
+            green: '#B3D46A',
             mint: {
                 'green': '#D3DABA',
                 'purple': '#D8B9DA',
                 'blue': '#C7D3DE',
                 'pink': '#D8BABC',
             },
+        },
+        minHeight: {
+            '104': '26rem',
+            '160': '40rem',
         },
         extend: {
             padding: {
@@ -38,8 +43,24 @@ module.exports = {
                 'gradient-red': "url('/media/gradient-1.png')",
                 'gradient-pink': "url('/media/gradient-2.png')",
                 'gradient-orange': "url('/media/gradient-3.png')",
-            })
-        }
+            }),
+            keyframes: {
+                marquee: {
+                    '0%': { transform: 'translateX(0)' },
+                    '100%': { transform: 'translateX(-100%)' },
+                },
+            },
+            animation: {
+                marquee: 'marquee 30s linear infinite',
+            },
+            spacing: {
+                '104': '26rem',
+                '120': '30rem',
+                '160': '40rem',
+                '208': '52rem',
+                '256': '64rem',
+            },
+        },
     },
     variants: {
         scrollSnapType: ['responsive'],

@@ -12,7 +12,7 @@
 	</head>
 
 	<body class="overflow-x-hidden font-sans antialiased bg-white">
-		<header class="absolute w-full pt-4 md:pt-0 md:top-12 sm:bg-transparent">
+		<header class="absolute w-full py-4 border-b border-black sm:bg-transparent">
 			<div class="container px-6 mx-auto md:px-12">
 				<div class="relative flex items-center justify-between h-16">
 					<div class="absolute inset-y-0 flex items-center -left-2 sm:hidden">
@@ -58,7 +58,7 @@
 			</div>
 		
 			<!-- Mobile menu, show/hide based on menu state. -->
-			<div class="relative z-20 hidden bg-white border-b border-black opacity-0 sm:hidden" id="mobile-menu" aria-expanded="false">
+			<div class="relative z-20 hidden bg-white opacity-0 sm:hidden" id="mobile-menu" aria-expanded="false">
 				<div class="px-2 pt-2 pb-3 space-y-1">
 					<a href="/about.html" class="block px-4 py-2 text-lg text-black">About</a>
 					<a href="/services.html" class="block px-4 py-2 text-lg text-black">Services</a>
@@ -71,16 +71,15 @@
 			<!-- Hero -->
 			<div class="h-auto bg-cover border-t border-black bg-gray sketch-0">
 				<div class="container px-6 pt-48 pb-10 mx-auto md:px-12 md:pt-80 lg:pb-24 2xl:pt-96">
-					<h1 class="w-full text-4xl leading-tight text-black text-indent-sm md:text-indent-lg lg:w-2/3 md:leading-tight md:text-5xl">Share your idea, challenge or whatever is keeping you up at night.</h1>
+					<h1 class="w-full text-4xl leading-tight text-black text-indent-sm md:text-indent-lg lg:w-2/3 md:leading-tight md:text-5xl 2xl:leading-tight 2xl:text-6xl 2xl:w-3/4">Share your idea or business challenge. No pitch, no strings attached.</h1>
 				</div>
 			</div>
 			
 			<div class="bg-white border-t border-black">
 				<div class="container grid grid-cols-1 mx-auto sm:border-l sm:border-r sm:border-black lg:divide-x lg:divide-black lg:grid-cols-9">					
-					
 					<!-- Contact form -->
 					<div class="px-6 py-10 mx-auto md:px-12 md:py-16 sm:px-8 lg:p-24 lg:col-span-5">
-						<h2 class="mb-4 text-3xl leading-tight text-black">Project inquiries</h3>
+						<h2 class="mb-4 text-3xl leading-tight text-black 2xl:text-4xl 2xl:leading-tight">Project inquiries</h3>
 						<p class="text-xl leading-normal text-black lg:leading-relaxed lg:text-2xl text-indent-sm">Tell us about your project and goals. We’ll take a look and let you know if it’s a good fit.</p>
 						
 						<form name="Project inquiries" action="/success.html" data-netlify="true" method="POST" netlify-honeypot="bot-field" class="grid grid-cols-1 mt-8 lg:mt-10 gap-y-6 sm:grid-cols-2 sm:gap-x-6">
@@ -136,7 +135,7 @@
 							</div>
 
 							<div class="sm:col-span-2 sm:flex sm:justify-end">
-								<button type="submit" class="inline-flex items-center justify-center w-full px-6 py-3 mt-2 text-lg text-white border border-transparent focus:shadow-sm bg-red sm:w-auto">
+								<button type="submit" class="inline-flex items-center justify-center w-full px-6 py-3 mt-2 text-lg text-white bg-black border border-transparent focus:shadow-sm sm:w-auto">
 									Send inquiry
 								</button>
 							</div>
@@ -152,8 +151,8 @@
 
 							<div class="flex flex-col mt-4 text-lg">
 								<p class="text-xl leading-normal text-black text-indent-sm">For all other matters, please send a email to the address below.<p>
-								<a href="mailto:careers@edl.design" class="flex items-center mt-4 space-x-1 text-red">
-									<span class="text-xl leading-tight">hello@edl.design</span>
+								<a href="mailto:careers@edl.design" class="flex items-center mt-4 space-x-1 text-black">
+									<span class="text-xl leading-tight link-line link-black">hello@edl.design</span>
 									<svg class="w-5 h-5 lg:h-6 lg:w-6" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 										<path d="M13.163 20L21 12l-7.837-8-1.347 1.375 5.545 5.643H3v1.964h14.361l-5.545 5.66L13.163 20z" fill="currentColor"/>
 									</svg>
@@ -165,11 +164,26 @@
 							<h3 class="text-2xl leading-tight text-black">Career openings</h3>
 
 							<div class="flex flex-col mt-4 text-lg">
-								<p class="text-black text-indent-sm">We are always looking for talented, curious, open minds.<p>
-								<a href="mailto:careers@edl.design" class="flex items-center mt-4 space-x-1 text-red">
-									<span class="text-xl leading-tight">careers@edl.design</span>
+								<p class="text-xl leading-normal text-black text-indent-sm">We are always looking for talented, curious, open minds.<p>
+								<a href="mailto:careers@edl.design" class="flex items-center mt-4 space-x-1 text-black">
+									<span class="text-xl leading-tight link-line link-black">careers@edl.design</span>
 									<svg class="w-5 h-5 lg:h-6 lg:w-6" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 										<path d="M13.163 20L21 12l-7.837-8-1.347 1.375 5.545 5.643H3v1.964h14.361l-5.545 5.66L13.163 20z" fill="currentColor"/>
+									</svg>
+								</a>
+							</div>
+						</div>
+
+						<div class="p-6 py-12 border-t border-black sm:px-8 lg:p-16">
+							<h3 class="text-2xl leading-tight text-black">Address</h3>
+
+							<div class="flex flex-col mt-4 text-lg">
+								<p class="pl-10 text-xl leading-normal text-black">Stærmosegårdsvej 8<br>5230 Odense M<br>Denmark<p>
+								
+								<a href="https://www.google.dk/maps/dir//Ecreo,+Stærmosegårdsvej+8,+5230+Odense/@55.3774584,10.4106656,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x464d208854fac03d:0xe1b0f492c3f6e5c2!2m2!1d10.4134821!2d55.3774328" target="blank" rel="noopener" class="flex items-center mt-4 space-x-1 text-black">
+									<span class="text-xl leading-tight link-line link-black">Directions</span>
+									<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+										<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
 									</svg>
 								</a>
 							</div>
@@ -177,8 +191,8 @@
 						
 						<ul class="flex p-6 py-12 space-x-12 border-t border-black sm:px-8 lg:p-16" role="list">
 							<li>
-								<a href="https://linkedin.com/company/edldesign" target="blank" class="flex items-center space-x-1 text-red">
-									<span class="text-xl leading-tight">LinkedIn</span>
+								<a href="https://linkedin.com/company/edldesign" target="blank" rel="noopener" class="flex items-center space-x-1 text-black">
+									<span class="text-xl leading-tight link-line link-black">LinkedIn</span>
 									<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 										<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
 									</svg>
@@ -186,8 +200,8 @@
 							</li>
 
 							<li>
-								<a href="https://instagram.com/edl.design" target="blank" class="flex items-center space-x-1 text-red">
-									<span class="text-xl leading-tight">Instagram</span>
+								<a href="https://instagram.com/edl.design" target="blank" rel="noopener" class="flex items-center space-x-1 text-black">
+									<span class="text-xl leading-tight link-line link-black">Instagram</span>
 									<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 										<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
 									</svg>
