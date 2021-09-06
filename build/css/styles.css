@@ -909,9 +909,6 @@ a.link:before {
 .z-10{
 	z-index: 10;
 }
-.col-span-1{
-	grid-column: span 1 / span 1;
-}
 .-m-1{
 	margin: -0.25rem;
 }
@@ -921,6 +918,14 @@ a.link:before {
 .mx-auto{
 	margin-left: auto;
 	margin-right: auto;
+}
+.my-4{
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.mx-4{
+	margin-left: 1rem;
+	margin-right: 1rem;
 }
 .mb-4{
 	margin-bottom: 1rem;
@@ -1107,6 +1112,9 @@ a.link:before {
 }
 .cursor-help{
 	cursor: help;
+}
+.cursor-wait{
+	cursor: wait;
 }
 .grid-cols-1{
 	grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -1762,16 +1770,16 @@ a.link:before {
 		margin-left: 1rem;
 	}
 
+	.lg\:mt-0{
+		margin-top: 0px;
+	}
+
 	.lg\:mt-1{
 		margin-top: 0.25rem;
 	}
 
 	.lg\:mt-3{
 		margin-top: 0.75rem;
-	}
-
-	.lg\:mt-0{
-		margin-top: 0px;
 	}
 
 	.lg\:grid{
@@ -1874,28 +1882,12 @@ a.link:before {
 		gap: 6rem;
 	}
 
-	.lg\:gap-12{
-		gap: 3rem;
-	}
-
-	.lg\:gap-16{
-		gap: 4rem;
-	}
-
-	.lg\:gap-20{
-		gap: 5rem;
-	}
-
-	.lg\:gap-32{
-		gap: 8rem;
-	}
-
-	.lg\:gap-40{
-		gap: 10rem;
-	}
-
 	.lg\:gap-48{
 		gap: 12rem;
+	}
+
+	.lg\:gap-12{
+		gap: 3rem;
 	}
 
 	.lg\:space-x-2 > :not([hidden]) ~ :not([hidden]){
@@ -1982,14 +1974,14 @@ a.link:before {
 		padding-right: 1rem;
 	}
 
-	.lg\:text-2xl{
-		font-size: 1.5rem;
-		line-height: 2rem;
-	}
-
 	.lg\:text-4xl{
 		font-size: 2.25rem;
 		line-height: 2.5rem;
+	}
+
+	.lg\:text-2xl{
+		font-size: 1.5rem;
+		line-height: 2rem;
 	}
 
 	.lg\:text-lg{
@@ -2000,11 +1992,6 @@ a.link:before {
 	.lg\:text-3xl{
 		font-size: 1.875rem;
 		line-height: 2.25rem;
-	}
-
-	.lg\:text-5xl{
-		font-size: 3rem;
-		line-height: 1;
 	}
 
 	.lg\:leading-relaxed{
@@ -2105,14 +2092,14 @@ a.link:before {
 		line-height: 1;
 	}
 
-	.\32xl\:text-4xl{
-		font-size: 2.25rem;
-		line-height: 2.5rem;
-	}
-
 	.\32xl\:text-5xl{
 		font-size: 3rem;
 		line-height: 1;
+	}
+
+	.\32xl\:text-4xl{
+		font-size: 2.25rem;
+		line-height: 2.5rem;
 	}
 
 	.\32xl\:leading-tight{
