@@ -70,7 +70,6 @@ a.link:before {
 .sketch-0 {
     background-image: url(https://cdn.sketch.com/assets/pages/home-relaunch/feature-collaborate-bg@2x.png);
     background-color: #83d7cf;
-    background-size: cover;
     background-position: left;
     background-attachment: fixed;
 }

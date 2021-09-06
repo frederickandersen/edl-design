@@ -807,7 +807,6 @@ a.link:before {
 .sketch-0 {
     background-image: url(https://cdn.sketch.com/assets/pages/home-relaunch/feature-collaborate-bg@2x.png);
     background-color: #83d7cf;
-    background-size: cover;
     background-position: left;
     background-attachment: fixed;
 }
@@ -919,10 +918,6 @@ a.link:before {
 	margin-left: auto;
 	margin-right: auto;
 }
-.my-4{
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-}
 .mx-4{
 	margin-left: 1rem;
 	margin-right: 1rem;
@@ -956,12 +951,6 @@ a.link:before {
 }
 .mb-2{
 	margin-bottom: 0.5rem;
-}
-.ml-4{
-	margin-left: 1rem;
-}
-.mr-4{
-	margin-right: 1rem;
 }
 .mb-12{
 	margin-bottom: 3rem;
@@ -1029,14 +1018,14 @@ a.link:before {
 .h-24{
 	height: 6rem;
 }
-.h-120{
-	height: 30rem;
+.h-80{
+	height: 20rem;
 }
 .h-full{
 	height: 100%;
 }
-.h-80{
-	height: 20rem;
+.h-120{
+	height: 30rem;
 }
 .h-4{
 	height: 1rem;
@@ -1067,9 +1056,6 @@ a.link:before {
 }
 .w-64{
 	width: 16rem;
-}
-.w-104{
-	width: 26rem;
 }
 .w-96{
 	width: 24rem;
@@ -1239,13 +1225,13 @@ a.link:before {
 	--tw-bg-opacity: 1;
 	background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
 }
-.bg-green{
-	--tw-bg-opacity: 1;
-	background-color: rgba(179, 212, 106, var(--tw-bg-opacity));
-}
 .bg-blackish{
 	--tw-bg-opacity: 1;
 	background-color: rgba(27, 26, 25, var(--tw-bg-opacity));
+}
+.bg-green{
+	--tw-bg-opacity: 1;
+	background-color: rgba(179, 212, 106, var(--tw-bg-opacity));
 }
 .bg-cover{
 	background-size: cover;
@@ -1271,6 +1257,18 @@ a.link:before {
 .object-right-bottom{
 	-o-object-position: right bottom;
 	   object-position: right bottom;
+}
+.object-center{
+	-o-object-position: center;
+	   object-position: center;
+}
+.object-top{
+	-o-object-position: top;
+	   object-position: top;
+}
+.object-left{
+	-o-object-position: left;
+	   object-position: left;
 }
 .p-2{
 	padding: 0.5rem;
@@ -1317,6 +1315,10 @@ a.link:before {
 .py-1{
 	padding-top: 0.25rem;
 	padding-bottom: 0.25rem;
+}
+.py-6{
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
 }
 .pt-2{
 	padding-top: 0.5rem;
@@ -1592,16 +1594,24 @@ a.link:before {
 		display: grid;
 	}
 
-	.md\:h-120{
-		height: 30rem;
-	}
-
 	.md\:h-208{
 		height: 52rem;
 	}
 
+	.md\:h-120{
+		height: 30rem;
+	}
+
 	.md\:h-96{
 		height: 24rem;
+	}
+
+	.md\:h-160{
+		height: 40rem;
+	}
+
+	.md\:w-120{
+		width: 30rem;
 	}
 
 	.md\:grid-cols-2{
@@ -1754,6 +1764,14 @@ a.link:before {
 		margin-top: 1.5rem;
 	}
 
+	.lg\:mt-0{
+		margin-top: 0px;
+	}
+
+	.lg\:mt-8{
+		margin-top: 2rem;
+	}
+
 	.lg\:mt-10{
 		margin-top: 2.5rem;
 	}
@@ -1762,16 +1780,8 @@ a.link:before {
 		margin-bottom: 6rem;
 	}
 
-	.lg\:mt-8{
-		margin-top: 2rem;
-	}
-
 	.lg\:ml-4{
 		margin-left: 1rem;
-	}
-
-	.lg\:mt-0{
-		margin-top: 0px;
 	}
 
 	.lg\:mt-1{
@@ -1822,6 +1832,10 @@ a.link:before {
 		height: 1.25rem;
 	}
 
+	.lg\:h-208{
+		height: 52rem;
+	}
+
 	.lg\:w-2\/3{
 		width: 66.666667%;
 	}
@@ -1840,10 +1854,6 @@ a.link:before {
 
 	.lg\:w-6{
 		width: 1.5rem;
-	}
-
-	.lg\:w-9{
-		width: 2.25rem;
 	}
 
 	.lg\:w-256{
@@ -1915,6 +1925,11 @@ a.link:before {
 
 	.lg\:border-0{
 		border-width: 0px;
+	}
+
+	.lg\:object-left-top{
+		-o-object-position: left top;
+		   object-position: left top;
 	}
 
 	.lg\:p-24{
@@ -2026,6 +2041,15 @@ a.link:before {
 
 	.xl\:h-208{
 		height: 52rem;
+	}
+
+	.xl\:w-256{
+		width: 64rem;
+	}
+
+	.xl\:object-left-top{
+		-o-object-position: left top;
+		   object-position: left top;
 	}
 
 	.xl\:p-24{
