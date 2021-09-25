@@ -1,29 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap');
-
 @import "tailwindcss/base";
 
 /* interactivity using aria-state expanded */
-.accordion dt { cursor: pointer; }
-.accordion dd[aria-expanded=false] { opacity: 0; display: none; } /* hide using js */ 
-.accordion dd[aria-expanded=true] { display: inherit; }
+/* .accordion dt { cursor: pointer; } */
+/* .accordion dd[aria-expanded=false] { opacity: 0; display: none; } */
+/* .accordion dd[aria-expanded=true] { display: inherit; } */
 
-@media screen and (min-width: 640px) {
-    a[aria-current=page] {
-        position: relative;
-    }
+::selection {
+    background: black;
+    color: white;
+}
 
-    a[aria-current=page]:before {
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 1px;
-        bottom: -1px;
-        background-color: white;
-    }
+a[aria-current=page] {
+    position: relative;
+}
 
-    a.text-black[aria-current=page]:before {
-        background-color: black;
-    }
+a[aria-current=page]:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    bottom: -1px;
+    background-color: black;
 }
 
 a.link:before {
@@ -37,22 +34,20 @@ a.link:before {
     z-index: 1;
 }
 
+/* 
 .carousel::-webkit-scrollbar {
     display: none;
 }
 
 .carousel {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
-
-.silhouette {
-    width: 32rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .diagonal {
     background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.6' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 }
+*/
 
 .point:after {
     background-color: #FFFFFF;
@@ -66,7 +61,8 @@ a.link:before {
     top: 0;
     width: 21px;
 }
-  
+
+/*
 .sketch-0 {
     background-image: url(https://cdn.sketch.com/assets/pages/home-relaunch/feature-collaborate-bg@2x.png);
     background-color: #83d7cf;
@@ -114,6 +110,8 @@ a.link:before {
     background-size: cover;
     background-color: #ffb387;
 }
+*/
+
 
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
@@ -131,10 +129,6 @@ a.link:before {
         bottom: -1px;
     }
 
-    .link-red.link-line:before {
-        background-color: #ED0B0A;
-    }
-
     .link-white.link-line:before {
         background-color: #fff;
     }
@@ -144,9 +138,20 @@ a.link:before {
     }
 
     @variants responsive {
-        .service {
-            height: 640px;
+        .hyphenate {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
         }
+
+        .max-w-92 {
+            max-width: 92%;
+        }
+
+        .max-w-94 {
+            max-width: 94%;
+        }
+
         .text-indent-sm {
             text-indent: 2.5rem;
         }

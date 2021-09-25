@@ -18,12 +18,11 @@ module.exports = {
             black: colors.black,
             white: colors.white,
             gray: '#E8EBE8',
-            blackish: '#1B1A19',
             red: '#ED0B0A',
             blue: '#3257DC',
             purple: '#FB428A',
             yellow: '#F9BA43',
-            green: '#B3D46A',
+            green: '#81BB55',
             mint: {
                 'green': '#D3DABA',
                 'purple': '#D8B9DA',
