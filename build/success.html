@@ -9,85 +9,47 @@
     	<meta name="description" content="EDL is an established design agency helping visionary companies make their complex technologies a joy to use.">
 		<meta name="robots" content="noindex">
 
+		<link rel="preconnect" href="https://fonts.googleapis.com"> 
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap" rel="stylesheet">
 		<link href="./css/styles.css" rel="stylesheet">
 	</head>
 
-	<body class="overflow-x-hidden font-sans antialiased bg-gray">
-		<header class="absolute w-full py-4 border-b border-black sm:bg-transparent">
+	<body class="overflow-x-hidden font-sans antialiased">
+		<header class="absolute z-20 w-full py-4 border-b border-black sm:bg-transparent">
 			<div class="container px-6 mx-auto md:px-12">
-				<div class="relative flex items-center justify-between h-16">
-					<div class="absolute inset-y-0 flex items-center -left-2 sm:hidden">
-						<!-- Mobile menu button-->
-						<button type="button" id="menu-button" class="inline-flex items-center justify-center p-2 text-black" aria-controls="mobile-menu" aria-expanded="false">
-							<span class="sr-only">Open main menu</span>
-
-							<svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
-							</svg>
-						</button>
-					</div>
-
-					<nav class="flex items-center justify-center flex-1 sm:justify-between">
-						<div class="hidden sm:block">
-							<div class="flex space-x-14">
-								<a href="/about.html" class="text-lg text-black" title="Learn our principles, what we do, and who we are">About</a>
-								<a href="/services.html" class="text-lg text-black" title="Read about our expertise and product offerings">Services</a>
-							</div>
-						</div>
-
+				<div class="relative flex items-center justify-between h-14 lg:h-16">
+					<nav class="flex items-center justify-between flex-1">
 						<a href="/" title="Go to the homepage">
-							<!-- <svg class="w-auto text-black h-9" viewbox="0 0 104 38" xmlns="http://www.w3.org/2000/svg">
-								<path fill="currentColor" d="M18.706 5.798a6.211 6.211 0 00-.953.627c-1.37 1.07-2.062 2.123-2.079 3.16-.05 1.303.977 2.866 3.082 4.689.868.769 1.57 1.404 2.104 1.906.117.1.226.142.326.125a.46.46 0 00.276-.176c.4-.501.935-1.145 1.603-1.93.935-1.104 1.846-1.597 2.73-1.48.886.117 1.763.502 2.631 1.154 1.504 1.187 2.665 1.52 3.483 1.003.434-.285.777-.301 1.027-.05.267.233.25.576-.05 1.027-.418.569-.843 1.137-1.278 1.706a9.376 9.376 0 01-1.478 1.58c-1.169 1.02-2.447.927-3.833-.276-1.503-1.22-2.656-1.747-3.458-1.58a.39.39 0 00-.3.276.367.367 0 00.1.4c1.87 2.057 2.881 3.854 3.032 5.392.167 2.14-2.59 4.765-8.268 7.874-.401.218-.702.2-.902-.05-.184-.25-.109-.527.225-.827 1.938-1.438 2.932-2.667 2.982-3.687.05-.685-.267-1.496-.952-2.432-.669-.936-1.854-2.182-3.558-3.736-3.457-3.143-5.17-5.751-5.136-7.824 0-1.906 1.436-3.753 4.31-5.542.1-.05.509-.284 1.227-.702.718-.435 1.236-.77 1.553-1.003.15-.134.209-.284.176-.452-.485-2.29-1.921-3.435-4.31-3.435-2.388 0-4.234 1.488-5.537 4.464-1.302 2.975-1.662 6.87-1.077 11.685.601 4.798 2.572 8.735 5.913 11.811 3.34 3.06 7.157 4.589 11.45 4.589 2.371 0 4.86-.635 7.466-1.906.417-.184.71-.142.876.126.184.267.092.56-.275.877-3.992 3.16-8.552 4.74-13.68 4.74-5.127 0-9.361-2.015-12.702-6.044-3.34-4.045-5.136-8-5.387-11.86-.35-5.584.71-10.315 3.182-14.194C5.72 1.945 8.843.005 12.617.005c1.537 0 2.765.393 3.683 1.179.936.769 1.579 1.697 1.93 2.783.05.15.133.234.25.251a.505.505 0 00.276.025l.1-.05A32.173 32.173 0 0022.94.607c.55-.418 1.177-.434 1.879-.05.718.368 1.378.702 1.979 1.003.551.318 1.244.694 2.08 1.129.835.434 1.67.46 2.505.075.384-.251.676-.268.877-.05.2.2.175.443-.075.727a87.562 87.562 0 01-2.38 2.257c-.735.652-1.454 1.295-2.155 1.93a.932.932 0 01-.601.201c-.218-.017-.51-.125-.877-.326-2.89-1.404-4.886-2.106-5.988-2.106-.485.016-.977.15-1.479.401zM39.676 34.66c-.435.285-.769.277-1.002-.024-.234-.301-.16-.619.225-.953 2.873-2.658 5.445-4.355 7.717-5.09 2.271-.736 5.261.075 8.969 2.432 3.29 2.106 6.205 3.017 8.744 2.733 2.539-.301 4.393-1.814 5.562-4.539 2.004-4.73 1.411-9.42-1.779-14.068-3.173-4.647-7.408-7.598-12.702-8.851-3.675-.87-7.35-.552-11.024.952-3.675 1.505-5.838 3.745-6.49 6.72-.8 3.578-.04 6.178 2.28 7.8 2.34 1.621 4.744 2.123 7.216 1.504.318-.084.635-.2.952-.351.451-.2.769-.134.952.2.2.335.067.628-.4.878-.635.268-1.044.427-1.228.477-2.372.752-4.994.343-7.867-1.229-2.873-1.571-4.31-4.64-4.31-9.203 0-2.524.794-4.815 2.38-6.87 1.588-2.074 3.617-3.729 6.089-4.966C46.432.958 49.146.24 52.102.056c2.974-.201 5.888.142 8.744 1.028 3.09 1.17 5.68 2.858 7.767 5.065 2.105 2.207 3.633 4.656 4.585 7.347a19.11 19.11 0 011.002 8.35c-.267 2.876-1.22 5.551-2.856 8.025-2.505 3.762-5.554 6.26-9.145 7.498-3.59 1.254-8.159.393-13.704-2.583a15.795 15.795 0 00-4.31-1.58c-1.453-.3-2.956.184-4.51 1.455zm14.38-5.867c-.467.234-.793.2-.976-.1-.184-.318-.092-.61.275-.878 1.921-1.304 2.263-2.658 1.027-4.063-1.219-1.404-2.346-2.557-3.382-3.46-3.424-2.926-4.543-5.467-3.357-7.623 1.186-2.157 3.09-3.962 5.712-5.417.468-.234.794-.183.977.15.2.319.092.611-.325.879-2.49 1.554-1.988 3.794 1.503 6.72 3.157 2.641 4.551 5.132 4.184 7.473-.368 2.34-2.247 4.447-5.637 6.319zM77.708 32.504c-.418.117-.685 0-.802-.35-.1-.352.117-.628.651-.828a13.752 13.752 0 002.806-1.555c.919-.669 1.963-1.739 3.132-3.21 1.17-1.488 1.295-2.959.376-4.413a140.964 140.964 0 00-2.856-4.464 12.632 12.632 0 01-1.904-4.012c-.368-1.421-.368-2.758 0-4.012.735-2.558 2.238-4.614 4.51-6.169 2.288-1.555 5.186-2.332 8.693-2.332 7.717.017 11.542 3.435 11.475 10.256-.017 3.193-1.361 5.517-4.034 6.971-2.656 1.438-5.462 1.413-8.418-.075-.551-.25-.76-.527-.626-.828.15-.317.442-.392.877-.225 1.703.702 3.332.61 4.885-.276s2.405-2.591 2.556-5.116c.167-2.959-.393-5.257-1.679-6.896-1.27-1.655-2.981-2.557-5.136-2.708-2.105 0-3.825.585-5.161 1.756-1.336 1.153-2.004 2.507-2.004 4.062 0 1.053.217 2.048.65 2.984.435.936.928 1.839 1.479 2.708 1.002 1.622 1.737 3.47 2.205 5.542.484 2.073-1.01 4.464-4.485 7.172-.167.134-.242.276-.225.426.033.15.15.25.35.301 2.372.836 4.577 2.107 6.615 3.812 1.954 1.638 4.017 2.44 6.188 2.407 2.188-.034 3.858-.894 5.011-2.583.267-.384.559-.485.877-.3.334.166.375.45.125.852-.818 1.17-1.812 2.34-2.981 3.51a10.61 10.61 0 01-4.06 2.583c-1.536.552-3.265.652-5.185.301-1.921-.334-4.042-1.438-6.364-3.31-1.253-1.003-2.497-1.722-3.733-2.156-1.236-.435-2.506-.377-3.808.175z"/>
-							</svg> -->
-
-							<svg class="w-auto h-16 text-black" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 154 88">
-								<g filter="url(#a)" fill="#000">
-									<path d="M43.706 30.798a6.21 6.21 0 0 0-.953.627c-1.37 1.07-2.062 2.123-2.079 3.16-.05 1.303.977 2.867 3.082 4.689.868.769 1.57 1.404 2.104 1.905.117.1.226.143.326.126a.46.46 0 0 0 .276-.176c.4-.501.935-1.145 1.603-1.93.935-1.104 1.846-1.597 2.73-1.48.886.117 1.763.502 2.631 1.154 1.504 1.187 2.664 1.52 3.483 1.003.434-.285.777-.301 1.027-.05.267.233.25.576-.05 1.027a111.32 111.32 0 0 1-1.278 1.706 9.376 9.376 0 0 1-1.478 1.58c-1.169 1.02-2.447.927-3.833-.276-1.503-1.22-2.656-1.747-3.458-1.58a.39.39 0 0 0-.3.276.367.367 0 0 0 .1.4c1.87 2.057 2.881 3.854 3.031 5.392.168 2.14-2.588 4.765-8.267 7.874-.401.218-.702.2-.902-.05-.184-.25-.109-.526.225-.827 1.938-1.438 2.932-2.667 2.982-3.687.05-.685-.267-1.496-.952-2.432-.669-.936-1.854-2.182-3.558-3.736-3.458-3.143-5.17-5.751-5.136-7.824 0-1.906 1.436-3.753 4.31-5.542.1-.05.509-.284 1.227-.702.718-.435 1.236-.77 1.553-1.003.15-.134.209-.284.176-.451-.485-2.29-1.921-3.436-4.31-3.436-2.388 0-4.234 1.488-5.537 4.464-1.303 2.975-1.662 6.87-1.077 11.685.601 4.798 2.572 8.735 5.913 11.811 3.34 3.06 7.157 4.589 11.45 4.589 2.371 0 4.86-.635 7.465-1.906.418-.184.71-.142.877.126.184.267.092.56-.275.877-3.992 3.16-8.552 4.74-13.68 4.74-5.127 0-9.362-2.015-12.702-6.044-3.34-4.045-5.136-8-5.387-11.86-.35-5.584.71-10.316 3.182-14.194s5.596-5.818 9.37-5.818c1.537 0 2.765.393 3.683 1.179.936.769 1.579 1.697 1.93 2.783.05.15.133.235.25.251a.506.506 0 0 0 .276.025l.1-.05a32.168 32.168 0 0 0 4.084-3.586c.55-.418 1.177-.434 1.879-.05.718.368 1.378.702 1.979 1.003a56.73 56.73 0 0 0 2.08 1.129c.835.434 1.67.46 2.505.075.384-.251.676-.268.877-.05.2.2.175.443-.075.727a87.521 87.521 0 0 1-2.38 2.257c-.736.652-1.454 1.295-2.155 1.93a.932.932 0 0 1-.602.201c-.217-.017-.509-.125-.876-.326-2.89-1.404-4.886-2.106-5.988-2.106-.485.017-.977.15-1.478.401zm20.97 28.862c-.435.285-.769.277-1.002-.024-.234-.301-.16-.619.225-.953 2.873-2.658 5.445-4.355 7.717-5.09 2.271-.736 5.261.074 8.969 2.432 3.29 2.106 6.205 3.017 8.744 2.733 2.539-.301 4.393-1.814 5.562-4.539 2.004-4.73 1.411-9.42-1.779-14.068-3.173-4.647-7.408-7.598-12.702-8.852-3.675-.869-7.35-.551-11.024.953-3.675 1.505-5.838 3.745-6.49 6.72-.8 3.578-.04 6.178 2.28 7.8 2.34 1.621 4.744 2.123 7.216 1.504.318-.084.635-.2.952-.351.451-.2.769-.134.952.2.2.335.067.627-.4.878-.635.268-1.044.427-1.228.477-2.372.752-4.994.343-7.867-1.229-2.873-1.571-4.31-4.64-4.31-9.203 0-2.524.794-4.815 2.38-6.87 1.588-2.074 3.617-3.729 6.089-4.966 2.472-1.254 5.186-1.973 8.143-2.156a23.834 23.834 0 0 1 8.743 1.028c3.09 1.17 5.68 2.858 7.767 5.065 2.105 2.207 3.633 4.656 4.585 7.347a19.11 19.11 0 0 1 1.002 8.35c-.267 2.876-1.22 5.551-2.856 8.025-2.505 3.762-5.554 6.26-9.145 7.498-3.59 1.254-8.159.393-13.704-2.583a15.795 15.795 0 0 0-4.31-1.58c-1.453-.3-2.956.184-4.51 1.455zm14.38-5.867c-.467.234-.793.2-.976-.1-.184-.318-.092-.61.275-.878 1.921-1.304 2.263-2.658 1.027-4.063-1.219-1.404-2.346-2.557-3.382-3.46-3.424-2.925-4.543-5.467-3.357-7.623 1.186-2.157 3.09-3.962 5.712-5.417.468-.234.794-.184.977.15.2.319.092.611-.325.879-2.49 1.554-1.988 3.794 1.503 6.72 3.157 2.641 4.551 5.132 4.184 7.473-.368 2.34-2.247 4.447-5.637 6.319zm23.652 3.711c-.418.117-.685 0-.802-.35-.1-.352.117-.628.651-.828a13.736 13.736 0 0 0 2.806-1.555c.919-.669 1.963-1.739 3.132-3.21 1.169-1.488 1.295-2.959.376-4.413a141.317 141.317 0 0 0-2.856-4.464 12.636 12.636 0 0 1-1.904-4.012c-.368-1.421-.368-2.758 0-4.012.735-2.558 2.238-4.614 4.509-6.169 2.289-1.555 5.187-2.332 8.694-2.332 7.717.017 11.542 3.435 11.475 10.256-.017 3.193-1.361 5.517-4.034 6.971-2.656 1.438-5.462 1.413-8.418-.075-.551-.25-.76-.527-.626-.828.15-.317.442-.392.877-.225 1.703.702 3.332.61 4.885-.276s2.405-2.591 2.556-5.116c.167-2.959-.393-5.257-1.679-6.895-1.269-1.655-2.981-2.558-5.136-2.709-2.105 0-3.825.585-5.161 1.756-1.336 1.153-2.005 2.507-2.005 4.062a7.01 7.01 0 0 0 .652 2.984c.434.936.927 1.839 1.478 2.708 1.002 1.622 1.737 3.47 2.205 5.542.484 2.073-1.011 4.464-4.485 7.172-.167.134-.242.276-.225.426.033.15.15.25.35.301 2.372.836 4.577 2.106 6.615 3.812 1.954 1.638 4.017 2.44 6.188 2.407 2.188-.034 3.858-.894 5.011-2.583.267-.384.559-.485.877-.3.334.166.375.45.125.852-.818 1.17-1.812 2.34-2.981 3.51a10.612 10.612 0 0 1-4.059 2.583c-1.537.552-3.266.652-5.186.301-1.921-.334-4.042-1.438-6.364-3.31-1.253-1.003-2.497-1.722-3.733-2.156-1.236-.435-2.506-.377-3.808.175z"/>
-								</g>
-
-								<defs>
-									<filter id="a" x="0" y="0" width="154" height="88" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-										<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-										<feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-										<feGaussianBlur stdDeviation="12.5" result="effect1_foregroundBlur"/>
-									</filter>
-								</defs>
+							<svg class="w-auto h-8 text-black lg:h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40">
+								<path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/>
 							</svg>
 						</a>
 
-						<div class="hidden sm:block">
-							<div class="flex space-x-14">
-								<a href="/contact.html" class="text-lg text-black" title="Reach out about a project, job application or just to say hi" aria-current="page">Contact</a>
+						<div class="w-full">
+							<div class="flex justify-end space-x-8 lg:space-x-16">
+								<a href="/contact.html" class="text-lg text-black lg:text-2xl">Contact</a>
 								
-								<button class="flex items-center space-x-2 text-black">
-									<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<button class="flex items-center space-x-3 text-black">
+									<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 lg:h-7 lg:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
 									</svg>
 
-									<span class="text-lg">Danish</span>
+									<span class="text-lg lg:text-2xl">Danish</span>
 								</button>
 							</div>
 						</div>
 					</nav>
 				</div>
 			</div>
-		
-			<!-- Mobile menu, show/hide based on menu state. -->
-			<div class="relative z-20 hidden bg-white opacity-0 sm:hidden" id="mobile-menu" aria-expanded="false">
-				<div class="px-2 pt-2 pb-3 space-y-1">
-					<a href="/about.html" class="block px-3 py-2 text-lg text-black">About</a>
-					<a href="/services.html" class="block px-3 py-2 text-lg text-black">Services</a>
-					<a href="/contact.html" class="block px-3 py-2 text-lg text-black" aria-current="page">Contact</a>
-				</div>
-			</div>
 		</header>
 
 		<main>
 			<!-- Hero -->
-			<div class="flex items-end h-screen bg-white border-t border-black sketch-3">
-				<div class="container w-full px-6 pt-48 pb-10 mx-auto md:px-12 md:pt-0 lg:pb-24">
-					<h1 class="w-full mb-4 text-4xl leading-tight text-black lg:w-2/3 md:leading-tight md:text-5xl 2xl:leading-tight 2xl:text-6xl 2xl:w-3/4">Your inquiry has been sent successfully.</h1>
-					<p class="text-xl leading-normal text-black text-indent-sm lg:text-2xl lg:leading-relaxed lg:text-indent-lg">Thanks for taking the time. We'll get in touch shortly.</p>
+			<div class="relative flex items-end w-full overflow-hidden bg-white border-t border-black h-screen">
+				<div class="container z-10 px-6 pt-56 pb-10 mx-auto md:px-12 md:pb-16 md:pt-80 lg:pb-24 2xl:pt-96">
+					<h1 class="mb-4 w-full text-4xl leading-tight text-black hyphenate text-indent-lg md:leading-tight md:text-5xl lg:text-6xl lg:leading-tight xl:leading-tight xl:text-7xl lg:w-3/4">Your inquiry has been sent successfully.</h1>
+					<p class="text-xl leading-normal text-black text-indent-sm lg:text-2xl lg:leading-relaxed">Thanks for taking the time. We'll get in touch shortly.</p>
 
 					<a href="/" title="You're all done here. Go back home" class="flex items-center mt-4 space-x-1 text-black lg:mt-6 lg:space-x-2">
 						<span class="text-lg md:text-xl link-line link-black">Go back home</span>
@@ -96,44 +58,33 @@
 						</svg>
 					</a>
 				</div>
-			</div>
 
+				<video class="absolute object-cover top-0 left-0 w-full h-full" playsinline loop autoplay muted>
+					<source src="../media/banner-03.mp4" type="video/mp4">
+				</video>
+			</div>
 		</main>
 
-		<footer class="bg-white border-t border-b border-black">
-			<div class="container flex flex-col justify-between p-6 mx-auto sm:p-8 lg:flex-row-reverse sm:border-l sm:border-r sm:border-black lg:p-16 md:px-12">
-				<nav class="flex mb-8 space-x-12 lg:m-0">
-					<a href="/about.html" class="text-lg text-black" title="Learn our principles, what we do, and who we are">About</a>
-					<a href="/services.html" class="text-lg text-black" title="Read about our expertise and product offerings">Services</a>
-					<a href="/contact.html" class="text-lg text-black" title="Reach out about a project, job application or just to say hi" aria-current="page">Contact</a>
+		<footer class="border-t border-b border-black">
+			<div class="container flex flex-col px-6 py-12 mx-auto lg:flex-row-reverse 2xl:border-l 2xl:border-r 2xl:border-black md:px-12 md:py-16 2xl:p-24">
+				<nav class="flex mb-12 space-x-8 lg:m-0">
+					<a href="https://instagram.com/edl.design" target="blank" rel="noopener" title="See EDL’s profile on Instagram." class="flex items-center space-x-1 text-black">
+						<span class="text-lg leading-tight lg:text-xl link-black link-line">Instagram</span>
+						<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
+						</svg>
+					</a>
+					
+					<a href="https://linkedin.com/company/edldesign" target="blank" rel="noopener" title="See EDL’s profile on LinkedIn" class="flex items-center space-x-1 text-black">
+						<span class="text-lg leading-tight lg:text-xl link-black link-line">LinkedIn</span>
+						<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
+						</svg>
+					</a>
 				</nav>
 				
-				<span class="">2021 &copy; EDL ApS</span>
+				<span class="text-lg leading-tight lg:text-xl lg:flex-1">2021 &copy; EDL ApS</span>
 			</div>
 		</footer>
 	</body>
-
-	<script>
-		(function () {
-			const menuButton = document.querySelector('#menu-button');
-			const mobileMenu = document.querySelector('#mobile-menu');
-			const header = document.querySelector('header');
-
-			menuButton.addEventListener('click', function () {
-				if(this.getAttribute('aria-expanded') === 'true'){
-					this.setAttribute('aria-expanded', 'false');
-					mobileMenu.setAttribute('aria-expanded','false');
-					mobileMenu.classList.remove('bg-white', 'block', 'opacity-1');
-					mobileMenu.classList.add('hidden', 'opacity-0');
-					header.classList.remove('bg-white');
-				} else {  
-					this.setAttribute('aria-expanded', 'true');
-					mobileMenu.setAttribute('aria-expanded', 'true');
-					mobileMenu.classList.add('bg-white', 'block', 'opacity-1');
-					mobileMenu.classList.remove('hidden', 'opacity-0');
-					header.classList.add('bg-white');
-				} 
-			}, false);
-		})();
-	</script>
 </html>
