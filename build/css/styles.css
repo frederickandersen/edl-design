@@ -1090,6 +1090,9 @@ a.link:before {
 .w-96 {
 	width: 24rem;
 }
+.w-1\/2 {
+	width: 50%;
+}
 .w-4 {
 	width: 1rem;
 }
@@ -1195,15 +1198,15 @@ a.link:before {
 	margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
 	margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
-.space-x-3 > :not([hidden]) ~ :not([hidden]) {
-	--tw-space-x-reverse: 0;
-	margin-right: calc(0.75rem * var(--tw-space-x-reverse));
-	margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
-}
 .space-x-8 > :not([hidden]) ~ :not([hidden]) {
 	--tw-space-x-reverse: 0;
 	margin-right: calc(2rem * var(--tw-space-x-reverse));
 	margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-x-3 > :not([hidden]) ~ :not([hidden]) {
+	--tw-space-x-reverse: 0;
+	margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+	margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .divide-y > :not([hidden]) ~ :not([hidden]) {
 	--tw-divide-y-reverse: 0;
@@ -1547,30 +1550,24 @@ a.link:before {
 .text-indent-lg {
             text-indent: 3.5rem;
         }
-
 .focus\:border-black:focus {
 	--tw-border-opacity: 1;
 	border-color: rgba(0, 0, 0, var(--tw-border-opacity));
 }
-
 .focus\:shadow-sm:focus {
 	--tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-
 .focus\:ring-black:focus {
 	--tw-ring-opacity: 1;
 	--tw-ring-color: rgba(0, 0, 0, var(--tw-ring-opacity));
 }
-
 .group:hover .group-hover\:inline-block {
 	display: inline-block;
 }
-
 .group:hover .group-hover\:hidden {
 	display: none;
 }
-
 @media (min-width: 640px) {
 
 	.sm\:col-span-2 {
@@ -1640,7 +1637,6 @@ a.link:before {
 		padding-right: 2rem;
 	}
 }
-
 @media (min-width: 768px) {
 
 	.md\:col-span-2 {
@@ -1811,7 +1807,6 @@ a.link:before {
             text-indent: 3.5rem;
         }
 }
-
 @media (min-width: 1024px) {
 
 	.lg\:absolute {
@@ -1900,10 +1895,6 @@ a.link:before {
 
 	.lg\:mt-3 {
 		margin-top: 0.75rem;
-	}
-
-	.lg\:mt-4 {
-		margin-top: 1rem;
 	}
 
 	.lg\:grid {
@@ -2208,7 +2199,6 @@ a.link:before {
             min-height: 32rem;
         }
 }
-
 @media (min-width: 1280px) {
 
 	.xl\:mt-12 {
@@ -2271,7 +2261,6 @@ a.link:before {
             min-height: 40rem;
         }
 }
-
 @media (min-width: 1536px) {
 
 	.\32xl\:container {
