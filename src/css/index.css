@@ -5,6 +5,22 @@
 /* .accordion dd[aria-expanded=false] { opacity: 0; display: none; } */
 /* .accordion dd[aria-expanded=true] { display: inherit; } */
 
+::-webkit-scrollbar-track
+{
+	background-color: #fff;
+    border-left: 1px solid black;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: #000;
+}
+
 ::selection {
     background: black;
     color: white;

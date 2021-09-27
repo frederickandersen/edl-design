@@ -22,7 +22,7 @@ module.exports = {
             blue: '#3257DC',
             purple: '#FB428A',
             yellow: '#F9BA43',
-            green: '#81BB55',
+            green: '#71CE5A',
             mint: {
                 'green': '#D3DABA',
                 'purple': '#D8B9DA',

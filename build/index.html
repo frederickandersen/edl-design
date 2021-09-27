@@ -44,14 +44,22 @@
 		</header>
 
 		<main>
+			<div class="scrollbar" id="style-9">
+				
+			  </div>
+
 			<!-- Hero -->
-			<div class="relative flex items-end w-full h-full overflow-hidden bg-white border-t border-black lg:h-screen">
+			<div class="relative flex items-end w-full h-full overflow-hidden border-t border-black bg-blue lg:h-screen">
 				<div class="container z-10 px-6 pt-56 pb-10 mx-auto md:px-12 md:pb-16 md:pt-80 lg:pb-24 2xl:pt-96">
 					<h1 class="w-full text-4xl leading-tight text-black hyphenate text-indent-lg md:leading-tight md:text-5xl lg:text-6xl lg:leading-tight xl:leading-tight xl:text-7xl lg:w-3/4">EDL is a design agency helping visionary companies make their <span class="font-serif italic">complex technologies</span> a joy to use.</h1>
 				</div>
 
-				<video class="absolute object-cover border border-black rounded-full top-1/4 left-2/4 w-96 h-96" playsinline loop autoplay muted>
+				<!-- <video class="absolute object-cover border border-black rounded-full top-1/4 left-2/4 w-208 h-96" playsinline loop autoplay muted>
 					<source src="../media/banner-04.mp4" type="video/mp4">
+				</video> -->
+
+				<video class="absolute top-0 left-0 object-cover w-full h-full mix-blend-luminosity" playsinline loop autoplay muted>
+					<source src="../media/banner-01-gradient.mp4" type="video/mp4">
 				</video>
 			</div>
 
@@ -128,11 +136,11 @@
 				</div>
 			</div>
 
-			<!-- Work -->
+			<!-- Work: Odense ZOO -->
 			<section class="relative border-t border-black">
 				<div class="relative z-10 2xl:container 2xl:mx-auto 2xl:border-l 2xl:border-r 2xl:border-black">
-					<article class="relative w-full h-120 md:h-160 2xl:h-208">
-						<div class="container h-full px-6 py-12 mx-auto md:p-12 md:py-16 lg:py-24 2xl:p-24">
+					<article class="w-full h-auto 2xl:h-208">
+						<div class="container h-full px-6 py-12 mx-auto md:p-12 md:py-16 lg:py-24 lg:pb-64 2xl:p-24">
 							<span class="inline-flex items-center px-4 py-2 mb-4 text-base leading-normal text-white bg-black rounded-full 2 lg:mb-8 lg:px-5 lg:text-lg">Case story</span>
 							<h2 class="text-3xl leading-tight text-black lg:leading-tight lg:text-5xl lg:w-2/4 hyphenate text-indent-lg">Transforming assumptions into a data-informed, <span class="font-serif italic">minimal viable product</span> users love.</h2>
 
@@ -144,21 +152,23 @@
 							</a>
 						</div>
 						
-						<video class="absolute top-0 right-0 object-cover w-1/2 h-full" playsinline loop autoplay muted>
-							<source src="../media/oz-screens.mp4" type="video/mp4" />
+						<video class="object-contain w-full border-t border-black lg:object-cover h-96 md:h-120 lg:border-0 lg:absolute lg:top-0 lg:right-0 lg:w-1/2 lg:h-full" playsinline loop autoplay muted>
+							<source src="../media/oz-screens.mp4" type="video/mp4; codecs='hvc1'">
+        					<source src="../media/oz-screens.webm" type="video/webm">
 						</video>
 					</article>
 				</div>
 
 				<picture class="absolute top-0 left-0 block w-full h-full">
-					<img src="../media/background-odense-zoo.png" class="object-cover object-top w-full h-full lg:object-center" alt="A beautiful, ambient green gradient." />
+					<img src="../media/oz-background.jpg" class="object-cover object-top w-full h-full lg:object-center" alt="A beautiful, ambient green gradient." />
 			  	</picture>
 			</section>
 
+			<!-- Work: Blue Ocean Robotics -->
 			<section class="relative border-t border-black">
 				<div class="relative z-10 2xl:container 2xl:mx-auto 2xl:border-l 2xl:border-r 2xl:border-black">
-					<article class="relative w-full h-120 md:h-160 2xl:h-208">
-						<div class="container h-full px-6 py-12 mx-auto md:p-12 md:py-16 lg:py-24 2xl:p-24">
+					<article class="w-full h-120 lg:h-auto 2xl:h-208">
+						<div class="container h-full px-6 py-12 mx-auto md:p-12 md:py-16 lg:py-24 lg:pb-64 2xl:p-24">
 							<span class="inline-flex items-center px-4 py-2 mb-4 text-base leading-normal text-white bg-black rounded-full lg:mb-8 lg:px-5 lg:text-lg">Case story</span>
 							<h2 class="text-3xl leading-tight text-black lg:leading-tight lg:text-5xl lg:w-2/4 hyphenate text-indent-lg">We helped design the visual design for the most <span class="font-serif italic">innovative iteration</span> of the global robotic phenomenon.</h2>
 
@@ -169,15 +179,39 @@
 								</svg>
 							</a>
 						</div>
-						
-						<video class="">
-							<source src="../media/thumbnail-odense-zoo.jpg" type="video/mp4" />
+					</article>
+				</div>
+
+				<picture class="absolute top-0 left-0 block w-full h-full">
+					<img src="../media/case-blue-ocean-robotics.png" class="object-cover object-right-top w-full h-full lg:object-center" alt="A UVD Robots' robot casually driving on a gradient-colored bridge." />
+			  	</picture>
+			</section>
+
+			<!-- Work: Smooth Robotics -->
+			<section class="relative border-t border-black">
+				<div class="relative z-10 2xl:container 2xl:mx-auto 2xl:border-l 2xl:border-r 2xl:border-black">
+					<article class="w-full h-auto 2xl:h-208">
+						<div class="container z-20 h-full px-6 py-12 mx-auto md:p-12 md:py-16 lg:py-24 lg:pb-64 2xl:p-24">
+							<span class="inline-flex items-center px-4 py-2 mb-4 text-base leading-normal text-white bg-black rounded-full lg:mb-8 lg:px-5 lg:text-lg">Case story</span>
+							<h2 class="text-3xl leading-tight text-black lg:leading-tight lg:text-5xl lg:w-2/4 text-indent-lg">We <span class="font-serif italic">reimagined</span> the user experience for building and executing robotic movements in 2 weeks.</h2>
+
+							<a href="/blue-ocean-robotics.html" title="Dig into how we created the visual design for UVD Robots" class="flex items-center mt-4 space-x-1 text-black link lg:mt-8 lg:space-x-2">
+								<span class="text-lg lg:text-2xl link-black link-line">Learn how</span>
+								<svg class="w-5 h-5 lg:h-6 lg:w-6" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+									<path d="M13.163 20L21 12l-7.837-8-1.347 1.375 5.545 5.643H3v1.964h14.361l-5.545 5.66L13.163 20z" fill="currentColor"/>
+								</svg>
+							</a>
+						</div>
+
+						<video class="z-10 object-cover object-top w-full border-t border-black md:object-right-top lg:object-contain lg:object-right-bottom h-96 md:h-120 lg:border-0 lg:absolute lg:top-0 lg:right-0 lg:w-1/2 lg:h-full" playsinline loop autoplay muted>
+							<source src="../media/srm-screens.mp4" type="video/mp4; codecs='hvc1'">
+        					<source src="../media/srm-screens.webm" type="video/webm">
 						</video>
 					</article>
 				</div>
 
 				<picture class="absolute top-0 left-0 block w-full h-full">
-					<img src="../media/case-blue-ocean-robotics.png" class="object-cover object-top w-full h-full lg:object-center" alt="A UVD Robots' robot casually driving on a gradient-colored bridge." />
+					<img src="../media/background-srm.png" class="object-cover object-top w-full h-full lg:object-center" alt="A UVD Robots' robot casually driving on a gradient-colored bridge." />
 			  	</picture>
 			</section>
 

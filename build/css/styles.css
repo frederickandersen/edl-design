@@ -749,6 +749,22 @@ select {
 /* .accordion dd[aria-expanded=false] { opacity: 0; display: none; } */
 /* .accordion dd[aria-expanded=true] { display: inherit; } */
 
+::-webkit-scrollbar-track
+{
+	background-color: #fff;
+    border-left: 1px solid black;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: #000;
+}
+
 ::-moz-selection {
     background: black;
     color: white;
@@ -1090,8 +1106,8 @@ a.link:before {
 .w-96 {
 	width: 24rem;
 }
-.w-1\/2 {
-	width: 50%;
+.w-208 {
+	width: 52rem;
 }
 .w-4 {
 	width: 1rem;
@@ -1284,7 +1300,11 @@ a.link:before {
 }
 .bg-green {
 	--tw-bg-opacity: 1;
-	background-color: rgba(129, 187, 85, var(--tw-bg-opacity));
+	background-color: rgba(113, 206, 90, var(--tw-bg-opacity));
+}
+.bg-blue {
+	--tw-bg-opacity: 1;
+	background-color: rgba(50, 87, 220, var(--tw-bg-opacity));
 }
 .bg-cover {
 	background-size: cover;
@@ -1319,9 +1339,9 @@ a.link:before {
 	-o-object-position: top;
 	   object-position: top;
 }
-.object-bottom {
-	-o-object-position: bottom;
-	   object-position: bottom;
+.object-right-top {
+	-o-object-position: right top;
+	   object-position: right top;
 }
 .p-2 {
 	padding: 0.5rem;
@@ -1501,6 +1521,12 @@ a.link:before {
 }
 .opacity-50 {
 	opacity: 0.5;
+}
+.mix-blend-overlay {
+	mix-blend-mode: overlay;
+}
+.mix-blend-luminosity {
+	mix-blend-mode: luminosity;
 }
 .filter {
 	filter: var(--tw-filter);
@@ -1735,6 +1761,11 @@ a.link:before {
 		background-position: right bottom;
 	}
 
+	.md\:object-right-top {
+		-o-object-position: right top;
+		   object-position: right top;
+	}
+
 	.md\:p-12 {
 		padding: 3rem;
 	}
@@ -1953,6 +1984,10 @@ a.link:before {
 		height: 52rem;
 	}
 
+	.lg\:h-auto {
+		height: auto;
+	}
+
 	.lg\:h-5 {
 		height: 1.25rem;
 	}
@@ -1990,6 +2025,10 @@ a.link:before {
 	}
 
 	.lg\:w-2\/4 {
+		width: 50%;
+	}
+
+	.lg\:w-1\/2 {
 		width: 50%;
 	}
 
@@ -2062,6 +2101,16 @@ a.link:before {
 		border-width: 0px;
 	}
 
+	.lg\:object-contain {
+		-o-object-fit: contain;
+		   object-fit: contain;
+	}
+
+	.lg\:object-cover {
+		-o-object-fit: cover;
+		   object-fit: cover;
+	}
+
 	.lg\:object-left-top {
 		-o-object-position: left top;
 		   object-position: left top;
@@ -2070,6 +2119,11 @@ a.link:before {
 	.lg\:object-center {
 		-o-object-position: center;
 		   object-position: center;
+	}
+
+	.lg\:object-right-bottom {
+		-o-object-position: right bottom;
+		   object-position: right bottom;
 	}
 
 	.lg\:p-16 {
@@ -2134,6 +2188,10 @@ a.link:before {
 
 	.lg\:pb-32 {
 		padding-bottom: 8rem;
+	}
+
+	.lg\:pb-64 {
+		padding-bottom: 16rem;
 	}
 
 	.lg\:pl-6 {
@@ -2216,10 +2274,6 @@ a.link:before {
 
 	.xl\:h-208 {
 		height: 52rem;
-	}
-
-	.xl\:w-3\/4 {
-		width: 75%;
 	}
 
 	.xl\:p-24 {
