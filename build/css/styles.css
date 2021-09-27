@@ -1550,24 +1550,30 @@ a.link:before {
 .text-indent-lg {
             text-indent: 3.5rem;
         }
+
 .focus\:border-black:focus {
 	--tw-border-opacity: 1;
 	border-color: rgba(0, 0, 0, var(--tw-border-opacity));
 }
+
 .focus\:shadow-sm:focus {
 	--tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+
 .focus\:ring-black:focus {
 	--tw-ring-opacity: 1;
 	--tw-ring-color: rgba(0, 0, 0, var(--tw-ring-opacity));
 }
+
 .group:hover .group-hover\:inline-block {
 	display: inline-block;
 }
+
 .group:hover .group-hover\:hidden {
 	display: none;
 }
+
 @media (min-width: 640px) {
 
 	.sm\:col-span-2 {
@@ -1637,6 +1643,7 @@ a.link:before {
 		padding-right: 2rem;
 	}
 }
+
 @media (min-width: 768px) {
 
 	.md\:col-span-2 {
@@ -1807,6 +1814,7 @@ a.link:before {
             text-indent: 3.5rem;
         }
 }
+
 @media (min-width: 1024px) {
 
 	.lg\:absolute {
@@ -2199,6 +2207,7 @@ a.link:before {
             min-height: 32rem;
         }
 }
+
 @media (min-width: 1280px) {
 
 	.xl\:mt-12 {
@@ -2261,6 +2270,7 @@ a.link:before {
             min-height: 40rem;
         }
 }
+
 @media (min-width: 1536px) {
 
 	.\32xl\:container {
