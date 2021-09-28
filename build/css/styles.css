@@ -875,6 +875,9 @@ a[aria-current=page]:before {
 .invisible {
 	visibility: hidden;
 }
+.fixed {
+	position: fixed;
+}
 .absolute {
 	position: absolute;
 }
