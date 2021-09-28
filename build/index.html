@@ -351,11 +351,10 @@
 			</div>
 		</footer>
 
-		<script type="module" async>
-			var splash = document.getElementsByClassName('splash');
-
+		<script>
 			window.addEventListener('DOMContentLoaded', function() {
-			
+				var splash = document.querySelector('.splash');
+				
 				// Check to see if localStorage indicates a first-time visit
 				if(!localStorage.getItem('visited')) {
 					
