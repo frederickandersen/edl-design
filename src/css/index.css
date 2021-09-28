@@ -39,7 +39,7 @@ a[aria-current=page]:before {
     background-color: black;
 }
 
-a.link:before {
+.link:before {
     content: "";
     display: block;
     position: absolute;
@@ -50,20 +50,21 @@ a.link:before {
     z-index: 1;
 }
 
-/* 
-.carousel::-webkit-scrollbar {
-    display: none;
+@keyframes reveal {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
 
-.carousel {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+.reveal {
+    animation-name: reveal;
+    animation-duration: 1000ms;
+    animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    animation-fill-mode: forwards;
 }
-
-.diagonal {
-    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.6' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
-}
-*/
 
 .point:after {
     background-color: #FFFFFF;
@@ -77,57 +78,6 @@ a.link:before {
     top: 0;
     width: 21px;
 }
-
-/*
-.sketch-0 {
-    background-image: url(https://cdn.sketch.com/assets/pages/home-relaunch/feature-collaborate-bg@2x.png);
-    background-color: #83d7cf;
-    background-position: left;
-    background-attachment: fixed;
-}
-
-.sketch-1 {
-    background-image: url(https://cdn.sketch.com/assets/pages/home-relaunch/testimonial-bg-teal@2x.png);
-    background-color: #83d7cf;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.sketch-2 {
-    background-image: url(https://cdn.sketch.com/assets/pages/home-relaunch/feature-design-systems-bg@2x.png);
-    background-repeat: no-repeat;
-    background-color: #fad266;
-    background-position: bottom left;
-    background-attachment: fixed;
-}
-
-.sketch-3 {
-    background-image: url(https://cdn.sketch.com/assets/pages/home-relaunch/cta-bg@2x.png);
-    background-size: cover;
-    background-color: #fad266;
-}
-
-.sketch-4 {
-    background-image: url(https://cdn.sketch.com/assets/pages/home-relaunch/testimonial-bg-yellow@2x.png);
-    background-color: #f5a925;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.sketch-5 {
-    background-image: url(https://cdn.sketch.com/assets/pages/home-relaunch/bg-hero.png);
-    background-size: cover;
-    background-color: #ffb387;
-    background-attachment: fixed;
-}
-
-.sketch-6 {
-    background-image: url(/media/cta.png);
-    background-size: cover;
-    background-color: #ffb387;
-}
-*/
-
 
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";

@@ -788,7 +788,7 @@ a[aria-current=page]:before {
     background-color: black;
 }
 
-a.link:before {
+.link:before {
     content: "";
     display: block;
     position: absolute;
@@ -799,20 +799,34 @@ a.link:before {
     z-index: 1;
 }
 
-/* 
-.carousel::-webkit-scrollbar {
-    display: none;
+@-webkit-keyframes reveal {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
 
-.carousel {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+@keyframes reveal {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
 
-.diagonal {
-    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.6' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+.reveal {
+    -webkit-animation-name: reveal;
+            animation-name: reveal;
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+    -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
 }
-*/
 
 .point:after {
     background-color: #FFFFFF;
@@ -827,61 +841,9 @@ a.link:before {
     width: 21px;
 }
 
-/*
-.sketch-0 {
-    background-image: url(https://cdn.sketch.com/assets/pages/home-relaunch/feature-collaborate-bg@2x.png);
-    background-color: #83d7cf;
-    background-position: left;
-    background-attachment: fixed;
-}
-
-.sketch-1 {
-    background-image: url(https://cdn.sketch.com/assets/pages/home-relaunch/testimonial-bg-teal@2x.png);
-    background-color: #83d7cf;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.sketch-2 {
-    background-image: url(https://cdn.sketch.com/assets/pages/home-relaunch/feature-design-systems-bg@2x.png);
-    background-repeat: no-repeat;
-    background-color: #fad266;
-    background-position: bottom left;
-    background-attachment: fixed;
-}
-
-.sketch-3 {
-    background-image: url(https://cdn.sketch.com/assets/pages/home-relaunch/cta-bg@2x.png);
-    background-size: cover;
-    background-color: #fad266;
-}
-
-.sketch-4 {
-    background-image: url(https://cdn.sketch.com/assets/pages/home-relaunch/testimonial-bg-yellow@2x.png);
-    background-color: #f5a925;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.sketch-5 {
-    background-image: url(https://cdn.sketch.com/assets/pages/home-relaunch/bg-hero.png);
-    background-size: cover;
-    background-color: #ffb387;
-    background-attachment: fixed;
-}
-
-.sketch-6 {
-    background-image: url(/media/cta.png);
-    background-size: cover;
-    background-color: #ffb387;
-}
-*/
-
-
 .container {
 	max-width: 100%;
 }
-
 
 @media (min-width: 640px) {
 
@@ -889,7 +851,6 @@ a.link:before {
 		max-width: 96%;
 	}
 }
-
 
 @media (min-width: 1536px) {
 
@@ -907,6 +868,12 @@ a.link:before {
 	clip: rect(0, 0, 0, 0);
 	white-space: nowrap;
 	border-width: 0;
+}
+.pointer-events-none {
+	pointer-events: none;
+}
+.invisible {
+	visibility: hidden;
 }
 .absolute {
 	position: absolute;
@@ -933,17 +900,14 @@ a.link:before {
 .left-0 {
 	left: 0px;
 }
-.top-1\/4 {
-	top: 25%;
-}
-.left-2\/4 {
-	left: 50%;
-}
 .z-20 {
 	z-index: 20;
 }
 .z-10 {
 	z-index: 10;
+}
+.z-40 {
+	z-index: 40;
 }
 .m-1 {
 	margin: 0.25rem;
@@ -1106,9 +1070,6 @@ a.link:before {
 .w-96 {
 	width: 24rem;
 }
-.w-208 {
-	width: 52rem;
-}
 .w-4 {
 	width: 1rem;
 }
@@ -1117,6 +1078,15 @@ a.link:before {
 }
 .flex-auto {
 	flex: 1 1 auto;
+}
+.translate-x-0 {
+	--tw-translate-x: 0px;
+	transform: var(--tw-transform);
+}
+.scale-125 {
+	--tw-scale-x: 1.25;
+	--tw-scale-y: 1.25;
+	transform: var(--tw-transform);
 }
 .transform {
 	transform: var(--tw-transform);
@@ -1265,6 +1235,9 @@ a.link:before {
 .border-l {
 	border-left-width: 1px;
 }
+.border-r {
+	border-right-width: 1px;
+}
 .border-dotted {
 	border-style: dotted;
 }
@@ -1302,9 +1275,13 @@ a.link:before {
 	--tw-bg-opacity: 1;
 	background-color: rgba(113, 206, 90, var(--tw-bg-opacity));
 }
-.bg-blue {
+.bg-mint-purple {
 	--tw-bg-opacity: 1;
-	background-color: rgba(50, 87, 220, var(--tw-bg-opacity));
+	background-color: rgba(216, 185, 218, var(--tw-bg-opacity));
+}
+.bg-yellow {
+	--tw-bg-opacity: 1;
+	background-color: rgba(249, 186, 67, var(--tw-bg-opacity));
 }
 .bg-cover {
 	background-size: cover;
@@ -1327,14 +1304,6 @@ a.link:before {
 	-o-object-position: right bottom;
 	   object-position: right bottom;
 }
-.object-center {
-	-o-object-position: center;
-	   object-position: center;
-}
-.object-left-top {
-	-o-object-position: left top;
-	   object-position: left top;
-}
 .object-top {
 	-o-object-position: top;
 	   object-position: top;
@@ -1342,6 +1311,14 @@ a.link:before {
 .object-right-top {
 	-o-object-position: right top;
 	   object-position: right top;
+}
+.object-center {
+	-o-object-position: center;
+	   object-position: center;
+}
+.object-left-top {
+	-o-object-position: left top;
+	   object-position: left top;
 }
 .p-2 {
 	padding: 0.5rem;
@@ -1522,11 +1499,14 @@ a.link:before {
 .opacity-50 {
 	opacity: 0.5;
 }
+.mix-blend-screen {
+	mix-blend-mode: screen;
+}
 .mix-blend-overlay {
 	mix-blend-mode: overlay;
 }
-.mix-blend-luminosity {
-	mix-blend-mode: luminosity;
+.mix-blend-soft-light {
+	mix-blend-mode: soft-light;
 }
 .filter {
 	filter: var(--tw-filter);
@@ -1980,12 +1960,12 @@ a.link:before {
 		height: 100vh;
 	}
 
-	.lg\:h-208 {
-		height: 52rem;
-	}
-
 	.lg\:h-auto {
 		height: auto;
+	}
+
+	.lg\:h-208 {
+		height: 52rem;
 	}
 
 	.lg\:h-5 {
@@ -2020,16 +2000,16 @@ a.link:before {
 		width: 75%;
 	}
 
-	.lg\:w-256 {
-		width: 64rem;
-	}
-
 	.lg\:w-2\/4 {
 		width: 50%;
 	}
 
 	.lg\:w-1\/2 {
 		width: 50%;
+	}
+
+	.lg\:w-256 {
+		width: 64rem;
 	}
 
 	.lg\:w-5 {
@@ -2111,11 +2091,6 @@ a.link:before {
 		   object-fit: cover;
 	}
 
-	.lg\:object-left-top {
-		-o-object-position: left top;
-		   object-position: left top;
-	}
-
 	.lg\:object-center {
 		-o-object-position: center;
 		   object-position: center;
@@ -2124,6 +2099,11 @@ a.link:before {
 	.lg\:object-right-bottom {
 		-o-object-position: right bottom;
 		   object-position: right bottom;
+	}
+
+	.lg\:object-left-top {
+		-o-object-position: left top;
+		   object-position: left top;
 	}
 
 	.lg\:p-16 {
