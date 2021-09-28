@@ -1411,6 +1411,9 @@ a[aria-current=page]:before {
 .pr-3 {
 	padding-right: 0.75rem;
 }
+.pt-32 {
+	padding-top: 8rem;
+}
 .text-center {
 	text-align: center;
 }
@@ -2061,6 +2064,12 @@ a[aria-current=page]:before {
 		--tw-space-x-reverse: 0;
 		margin-right: calc(4rem * var(--tw-space-x-reverse));
 		margin-left: calc(4rem * calc(1 - var(--tw-space-x-reverse)));
+	}
+
+	.lg\:space-x-3 > :not([hidden]) ~ :not([hidden]) {
+		--tw-space-x-reverse: 0;
+		margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+		margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
 	}
 
 	.lg\:divide-x > :not([hidden]) ~ :not([hidden]) {
