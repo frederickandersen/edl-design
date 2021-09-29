@@ -26,11 +26,11 @@
     color: white;
 }
 
-a[aria-current=page] {
+a[aria-current=page], button[aria-selected=true] {
     position: relative;
 }
 
-a[aria-current=page]:before {
+a[aria-current=page]:before, button[aria-selected=true]:before {
     position: absolute;
     content: "";
     width: 100%;
