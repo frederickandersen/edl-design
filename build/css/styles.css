@@ -1235,11 +1235,11 @@ a[aria-current=page]:before {
 .border-t {
 	border-top-width: 1px;
 }
-.border-l {
-	border-left-width: 1px;
-}
 .border-r {
 	border-right-width: 1px;
+}
+.border-l {
+	border-left-width: 1px;
 }
 .border-dotted {
 	border-style: dotted;
@@ -1410,9 +1410,6 @@ a[aria-current=page]:before {
 }
 .pr-3 {
 	padding-right: 0.75rem;
-}
-.pt-32 {
-	padding-top: 8rem;
 }
 .text-center {
 	text-align: center;
