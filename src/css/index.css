@@ -39,6 +39,48 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
     background-color: black;
 }
 
+.spinner {
+    text-indent: -9999em;
+    background: linear-gradient(to right, #000000 10%, rgba(0,0,0, 0) 42%);
+    animation: spinner 1.4s infinite linear;
+    transform: translateZ(0);
+    border-radius: 50%;
+}
+
+.spinner:before {
+    width: 50%;
+    height: 50%;
+    background: black;
+    border-radius: 100% 0 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+}
+
+.spinner:after {
+    background: #C7D3DE;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .link:before {
     content: "";
     display: block;
@@ -65,6 +107,45 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
     animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
     animation-fill-mode: forwards;
 }
+
+.slide-in {
+    animation-name: slide-in;
+    animation-duration: 800ms;
+    animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
+    animation-fill-mode: forwards;
+    animation-delay: 250ms;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-1%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-down {
+    animation-name: slide-down;
+    animation-duration: 800ms;
+    animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
+    animation-fill-mode: forwards;
+    animation-delay: 250ms;
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-25%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 
 .point:after {
     background-color: #FFFFFF;

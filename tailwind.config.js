@@ -38,11 +38,6 @@ module.exports = {
             padding: {
                 '26': '6.5rem'
             },
-            backgroundImage: theme => ({
-                'gradient-red': "url('/media/gradient-1.png')",
-                'gradient-pink': "url('/media/gradient-2.png')",
-                'gradient-orange': "url('/media/gradient-3.png')",
-            }),
             keyframes: {
                 marquee: {
                     '0%': { transform: 'translateX(0)' },

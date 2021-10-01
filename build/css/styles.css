@@ -778,6 +778,58 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
     background-color: black;
 }
 
+.spinner {
+    text-indent: -9999em;
+    background: linear-gradient(to right, #000000 10%, rgba(0,0,0, 0) 42%);
+    -webkit-animation: spinner 1.4s infinite linear;
+            animation: spinner 1.4s infinite linear;
+    transform: translateZ(0);
+    border-radius: 50%;
+}
+
+.spinner:before {
+    width: 50%;
+    height: 50%;
+    background: black;
+    border-radius: 100% 0 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+}
+
+.spinner:after {
+    background: #C7D3DE;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+@-webkit-keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .link:before {
     content: "";
     display: block;
@@ -817,6 +869,77 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
 }
+
+.slide-in {
+    -webkit-animation-name: slide-in;
+            animation-name: slide-in;
+    -webkit-animation-duration: 800ms;
+            animation-duration: 800ms;
+    -webkit-animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
+            animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-delay: 250ms;
+            animation-delay: 250ms;
+}
+
+@-webkit-keyframes slide-in {
+    from {
+        transform: translateX(-1%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-1%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-down {
+    -webkit-animation-name: slide-down;
+            animation-name: slide-down;
+    -webkit-animation-duration: 800ms;
+            animation-duration: 800ms;
+    -webkit-animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
+            animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-delay: 250ms;
+            animation-delay: 250ms;
+}
+
+@-webkit-keyframes slide-down {
+    from {
+        transform: translateY(-25%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-25%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 
 .point:after {
     background-color: #FFFFFF;
@@ -962,6 +1085,9 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 .h-auto {
 	height: auto;
 }
+.h-7 {
+	height: 1.75rem;
+}
 .h-96 {
 	height: 24rem;
 }
@@ -983,6 +1109,9 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 .w-5 {
 	width: 1.25rem;
 }
+.w-7 {
+	width: 1.75rem;
+}
 .w-24 {
 	width: 6rem;
 }
@@ -995,6 +1124,9 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 }
 .transform {
 	transform: var(--tw-transform);
+}
+.transform-gpu {
+	--tw-transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .cursor-wait {
 	cursor: wait;
@@ -1045,6 +1177,11 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 	--tw-space-x-reverse: 0;
 	margin-right: calc(1.5rem * var(--tw-space-x-reverse));
 	margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+	--tw-space-x-reverse: 0;
+	margin-right: calc(1rem * var(--tw-space-x-reverse));
+	margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .space-x-3 > :not([hidden]) ~ :not([hidden]) {
 	--tw-space-x-reverse: 0;
@@ -1220,6 +1357,9 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 .antialiased {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+.opacity-0 {
+	opacity: 0;
 }
 .mix-blend-screen {
 	mix-blend-mode: screen;
@@ -1476,6 +1616,14 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 		height: 3rem;
 	}
 
+	.lg\:h-8 {
+		height: 2rem;
+	}
+
+	.lg\:h-screen {
+		height: 100vh;
+	}
+
 	.lg\:h-full {
 		height: 100%;
 	}
@@ -1494,6 +1642,10 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 
 	.lg\:w-6 {
 		width: 1.5rem;
+	}
+
+	.lg\:w-8 {
+		width: 2rem;
 	}
 
 	.lg\:w-2\/4 {
@@ -1702,6 +1854,10 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 	.\32xl\:mx-auto {
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	.\32xl\:h-auto {
+		height: auto;
 	}
 
 	.\32xl\:h-208 {
