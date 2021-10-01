@@ -1,3 +1,6 @@
+/* This CSS resource incorporates links to font software which is the valuable copyrighted property of Monotype and/or its suppliers. You may not attempt to copy, install, redistribute, convert, modify or reverse engineer this font software. Please contact Monotype with any questions regarding Web Fonts: https://www.linotype.com */
+@import url("https://fast.fonts.net/lt/1.css?apiType=css&c=e143d2a0-7875-4e3d-8e59-d49b3eead621&fontids=5664093");
+
 @import "tailwindcss/base";
 
 /* interactivity using aria-state expanded */
@@ -146,7 +149,6 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
     }
 }
 
-
 .point:after {
     background-color: #FFFFFF;
     border: 2px solid #000;
@@ -161,6 +163,13 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 }
 
 @import "tailwindcss/components";
+
+@font-face {
+    font-family: "Helvetica Neue LT W05 55 Roman";
+    src: url("../fonts/08b57253-2e0d-4c12-9c57-107f6c67bc49.woff2") format("woff2"), url("../fonts/08edde9d-c27b-4731-a27f-d6cd9b01cd06.woff") format("woff");
+    font-display: swap;
+}
+
 @import "tailwindcss/utilities";
 
 @layer utilities {

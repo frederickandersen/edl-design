@@ -9,7 +9,7 @@ module.exports = {
     ],
     theme: {
         fontFamily: {
-            'sans': ['"Helvetica Neue"', 'Arial', 'sans-serif'],
+            'sans': ['"Helvetica Neue LT W05 55 Roman"', '"Helvetica Neue"', 'Arial', 'sans-serif'],
             'serif': ['"EB Garamond"', 'Times', 'serif'],
         },
         colors: {
