@@ -1068,6 +1068,10 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 	margin-top: 1.25rem;
 }
 
+.ml-4{
+	margin-left: 1rem;
+}
+
 .mb-8{
 	margin-bottom: 2rem;
 }
@@ -1078,6 +1082,14 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 
 .mt-6{
 	margin-top: 1.5rem;
+}
+
+.mr-4{
+	margin-right: 1rem;
+}
+
+.mr-1{
+	margin-right: 0.25rem;
 }
 
 .block{
@@ -1144,8 +1156,20 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 	height: 2.25rem;
 }
 
+.h-12{
+	height: 3rem;
+}
+
 .h-24{
 	height: 6rem;
+}
+
+.h-104{
+	height: 26rem;
+}
+
+.h-4{
+	height: 1rem;
 }
 
 .w-full{
@@ -1168,12 +1192,24 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 	width: 1.75rem;
 }
 
+.w-12{
+	width: 3rem;
+}
+
 .w-24{
 	width: 6rem;
 }
 
+.w-4{
+	width: 1rem;
+}
+
 .flex-1{
 	flex: 1 1 0%;
+}
+
+.flex-auto{
+	flex: 1 1 auto;
 }
 
 .translate-x-0{
@@ -1187,6 +1223,33 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 
 .transform-gpu{
 	--tw-transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@-webkit-keyframes marquee{
+
+	0%{
+		transform: translateX(0);
+	}
+
+	100%{
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes marquee{
+
+	0%{
+		transform: translateX(0);
+	}
+
+	100%{
+		transform: translateX(-100%);
+	}
+}
+
+.animate-marquee{
+	-webkit-animation: marquee 50s linear infinite;
+	        animation: marquee 50s linear infinite;
 }
 
 .cursor-wait{
@@ -1265,12 +1328,33 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 	margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-y-3 > :not([hidden]) ~ :not([hidden]){
+	--tw-space-y-reverse: 0;
+	margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+	margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+
+.divide-y > :not([hidden]) ~ :not([hidden]){
+	--tw-divide-y-reverse: 0;
+	border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+	border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
+}
+
+.divide-black > :not([hidden]) ~ :not([hidden]){
+	--tw-divide-opacity: 1;
+	border-color: rgba(0, 0, 0, var(--tw-divide-opacity));
+}
+
 .overflow-hidden{
 	overflow: hidden;
 }
 
 .overflow-x-hidden{
 	overflow-x: hidden;
+}
+
+.whitespace-nowrap{
+	white-space: nowrap;
 }
 
 .rounded-full{
@@ -1382,14 +1466,14 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 	padding-bottom: 0.75rem;
 }
 
-.py-10{
-	padding-top: 2.5rem;
-	padding-bottom: 2.5rem;
-}
-
 .py-2{
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
+}
+
+.py-10{
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
 }
 
 .pt-56{
@@ -1404,12 +1488,20 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 	padding-left: 2.5rem;
 }
 
+.pt-40{
+	padding-top: 10rem;
+}
+
 .pl-4{
 	padding-left: 1rem;
 }
 
 .pr-5{
 	padding-right: 1.25rem;
+}
+
+.pt-32{
+	padding-top: 8rem;
 }
 
 .font-sans{
@@ -1452,6 +1544,10 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 
 .italic{
 	font-style: italic;
+}
+
+.not-italic{
+	font-style: normal;
 }
 
 .leading-tight{
@@ -1587,12 +1683,21 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 	.sm\:bg-transparent{
 		background-color: transparent;
 	}
+
+	.sm\:px-8{
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
 }
 
 @media (min-width: 768px){
 
 	.md\:col-span-2{
 		grid-column: span 2 / span 2;
+	}
+
+	.md\:mt-8{
+		margin-top: 2rem;
 	}
 
 	.md\:mt-0{
@@ -1655,6 +1760,10 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 		padding-top: 20rem;
 	}
 
+	.md\:pt-48{
+		padding-top: 12rem;
+	}
+
 	.md\:text-5xl{
 		font-size: 3rem;
 		line-height: 1;
@@ -1704,6 +1813,10 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 		grid-column: span 1 / span 1;
 	}
 
+	.lg\:col-span-2{
+		grid-column: span 2 / span 2;
+	}
+
 	.lg\:m-0{
 		margin: 0px;
 	}
@@ -1714,6 +1827,10 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 
 	.lg\:mt-10{
 		margin-top: 2.5rem;
+	}
+
+	.lg\:mt-12{
+		margin-top: 3rem;
 	}
 
 	.lg\:mb-8{
@@ -1730,6 +1847,10 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 
 	.lg\:mt-0{
 		margin-top: 0px;
+	}
+
+	.lg\:mr-6{
+		margin-right: 1.5rem;
 	}
 
 	.lg\:h-16{
@@ -1768,6 +1889,10 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 		height: 9rem;
 	}
 
+	.lg\:h-160{
+		height: 40rem;
+	}
+
 	.lg\:w-7{
 		width: 1.75rem;
 	}
@@ -1784,6 +1909,10 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 		width: 2rem;
 	}
 
+	.lg\:w-11\/12{
+		width: 91.666667%;
+	}
+
 	.lg\:w-2\/4{
 		width: 50%;
 	}
@@ -1796,8 +1925,16 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 		width: 60%;
 	}
 
+	.lg\:w-1\/3{
+		width: 33.333333%;
+	}
+
 	.lg\:w-36{
 		width: 9rem;
+	}
+
+	.lg\:w-16{
+		width: 4rem;
 	}
 
 	.lg\:flex-1{
@@ -1812,8 +1949,20 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
+	.lg\:grid-cols-3{
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	.lg\:flex-row{
+		flex-direction: row;
+	}
+
 	.lg\:flex-row-reverse{
 		flex-direction: row-reverse;
+	}
+
+	.lg\:gap-20{
+		gap: 5rem;
 	}
 
 	.lg\:gap-24{
@@ -1838,10 +1987,22 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 		margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 	}
 
+	.lg\:space-x-6 > :not([hidden]) ~ :not([hidden]){
+		--tw-space-x-reverse: 0;
+		margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+		margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+	}
+
 	.lg\:divide-x > :not([hidden]) ~ :not([hidden]){
 		--tw-divide-x-reverse: 0;
 		border-right-width: calc(1px * var(--tw-divide-x-reverse));
 		border-left-width: calc(1px * calc(1 - var(--tw-divide-x-reverse)));
+	}
+
+	.lg\:divide-y-0 > :not([hidden]) ~ :not([hidden]){
+		--tw-divide-y-reverse: 0;
+		border-top-width: calc(0px * calc(1 - var(--tw-divide-y-reverse)));
+		border-bottom-width: calc(0px * var(--tw-divide-y-reverse));
 	}
 
 	.lg\:divide-black > :not([hidden]) ~ :not([hidden]){
@@ -1868,6 +2029,10 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 		   object-position: right bottom;
 	}
 
+	.lg\:p-20{
+		padding: 5rem;
+	}
+
 	.lg\:py-20{
 		padding-top: 5rem;
 		padding-bottom: 5rem;
@@ -1883,12 +2048,21 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 		padding-right: 1.25rem;
 	}
 
+	.lg\:py-6{
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+	}
+
 	.lg\:pb-24{
 		padding-bottom: 6rem;
 	}
 
 	.lg\:pb-64{
 		padding-bottom: 16rem;
+	}
+
+	.lg\:pb-20{
+		padding-bottom: 5rem;
 	}
 
 	.lg\:pl-5{
@@ -1919,6 +2093,11 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 		line-height: 2.5rem;
 	}
 
+	.lg\:text-3xl{
+		font-size: 1.875rem;
+		line-height: 2.25rem;
+	}
+
 	.lg\:text-lg{
 		font-size: 1.125rem;
 		line-height: 1.75rem;
@@ -1941,12 +2120,24 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
             max-width: 92%;
         }
 
+        .lg\:max-w-94 {
+            max-width: 94%;
+        }
+
+        .lg\:text-indent-lg {
+            text-indent: 3.5rem;
+        }
+
         .lg\:h-min-md {
             min-height: 32rem;
         }
 }
 
 @media (min-width: 1280px){
+
+	.xl\:w-3\/4{
+		width: 75%;
+	}
 
 	.xl\:text-7xl{
 		font-size: 4.5rem;
@@ -2000,6 +2191,10 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 		height: 52rem;
 	}
 
+	.\32xl\:h-256{
+		height: 64rem;
+	}
+
 	.\32xl\:w-4\/5{
 		width: 80%;
 	}
@@ -2025,7 +2220,34 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 		padding: 6rem;
 	}
 
+	.\32xl\:px-24{
+		padding-left: 6rem;
+		padding-right: 6rem;
+	}
+
 	.\32xl\:pt-96{
 		padding-top: 24rem;
+	}
+
+	.\32xl\:pb-24{
+		padding-bottom: 6rem;
+	}
+
+	.\32xl\:pt-64{
+		padding-top: 16rem;
+	}
+
+	.\32xl\:text-5xl{
+		font-size: 3rem;
+		line-height: 1;
+	}
+
+	.\32xl\:text-4xl{
+		font-size: 2.25rem;
+		line-height: 2.5rem;
+	}
+
+	.\32xl\:leading-tight{
+		line-height: 1.25;
 	}
 }

@@ -45,7 +45,7 @@ module.exports = {
                 },
             },
             animation: {
-                marquee: 'marquee 30s linear infinite',
+                marquee: 'marquee 50s linear infinite',
             },
             spacing: {
                 '104': '26rem',
