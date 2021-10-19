@@ -1124,6 +1124,18 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 	margin-top: 0.75rem;
 }
 
+.mb-24{
+	margin-bottom: 6rem;
+}
+
+.mb-16{
+	margin-bottom: 4rem;
+}
+
+.mt-10{
+	margin-top: 2.5rem;
+}
+
 .block{
 	display: block;
 }
@@ -1373,8 +1385,33 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 	justify-content: space-between;
 }
 
+.gap-24{
+	gap: 6rem;
+}
+
 .gap-y-6{
 	row-gap: 1.5rem;
+}
+
+.gap-x-24{
+	-moz-column-gap: 6rem;
+	     column-gap: 6rem;
+}
+
+.gap-y-8{
+	row-gap: 2rem;
+}
+
+.gap-y-12{
+	row-gap: 3rem;
+}
+
+.gap-y-16{
+	row-gap: 4rem;
+}
+
+.gap-y-20{
+	row-gap: 5rem;
 }
 
 .space-x-8 > :not([hidden]) ~ :not([hidden]){
@@ -1431,6 +1468,36 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 	margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
+.space-x-24 > :not([hidden]) ~ :not([hidden]){
+	--tw-space-x-reverse: 0;
+	margin-right: calc(6rem * var(--tw-space-x-reverse));
+	margin-left: calc(6rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-20 > :not([hidden]) ~ :not([hidden]){
+	--tw-space-y-reverse: 0;
+	margin-top: calc(5rem * calc(1 - var(--tw-space-y-reverse)));
+	margin-bottom: calc(5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-16 > :not([hidden]) ~ :not([hidden]){
+	--tw-space-y-reverse: 0;
+	margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
+	margin-bottom: calc(4rem * var(--tw-space-y-reverse));
+}
+
+.space-y-12 > :not([hidden]) ~ :not([hidden]){
+	--tw-space-y-reverse: 0;
+	margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
+	margin-bottom: calc(3rem * var(--tw-space-y-reverse));
+}
+
+.space-y-10 > :not([hidden]) ~ :not([hidden]){
+	--tw-space-y-reverse: 0;
+	margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+	margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+}
+
 .divide-y > :not([hidden]) ~ :not([hidden]){
 	--tw-divide-y-reverse: 0;
 	border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
@@ -1474,6 +1541,10 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 	border-width: 1px;
 }
 
+.border-2{
+	border-width: 2px;
+}
+
 .border-b{
 	border-bottom-width: 1px;
 }
@@ -1490,6 +1561,10 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 	border-left-width: 1px;
 }
 
+.border-t-2{
+	border-top-width: 2px;
+}
+
 .border-black{
 	--tw-border-opacity: 1;
 	border-color: rgba(0, 0, 0, var(--tw-border-opacity));
@@ -1497,6 +1572,15 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 
 .border-transparent{
 	border-color: transparent;
+}
+
+.border-gray{
+	--tw-border-opacity: 1;
+	border-color: rgba(232, 235, 232, var(--tw-border-opacity));
+}
+
+.border-opacity-25{
+	--tw-border-opacity: 0.25;
 }
 
 .bg-white{
@@ -1640,6 +1724,30 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 
 .pt-32{
 	padding-top: 8rem;
+}
+
+.pt-8{
+	padding-top: 2rem;
+}
+
+.pb-12{
+	padding-bottom: 3rem;
+}
+
+.pb-8{
+	padding-bottom: 2rem;
+}
+
+.pb-4{
+	padding-bottom: 1rem;
+}
+
+.pb-20{
+	padding-bottom: 5rem;
+}
+
+.pb-16{
+	padding-bottom: 4rem;
 }
 
 .font-sans{
@@ -1884,8 +1992,23 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 
 @media (min-width: 768px){
 
+	.md\:not-sr-only{
+		position: static;
+		width: auto;
+		height: auto;
+		padding: 0;
+		margin: 0;
+		overflow: visible;
+		clip: auto;
+		white-space: normal;
+	}
+
 	.md\:col-span-2{
 		grid-column: span 2 / span 2;
+	}
+
+	.md\:m-0{
+		margin: 0px;
 	}
 
 	.md\:mt-8{
@@ -1912,8 +2035,30 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
+	.md\:flex-row{
+		flex-direction: row;
+	}
+
 	.md\:gap-16{
 		gap: 4rem;
+	}
+
+	.md\:space-x-24 > :not([hidden]) ~ :not([hidden]){
+		--tw-space-x-reverse: 0;
+		margin-right: calc(6rem * var(--tw-space-x-reverse));
+		margin-left: calc(6rem * calc(1 - var(--tw-space-x-reverse)));
+	}
+
+	.md\:space-y-0 > :not([hidden]) ~ :not([hidden]){
+		--tw-space-y-reverse: 0;
+		margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+		margin-bottom: calc(0px * var(--tw-space-y-reverse));
+	}
+
+	.md\:space-y-16 > :not([hidden]) ~ :not([hidden]){
+		--tw-space-y-reverse: 0;
+		margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
+		margin-bottom: calc(4rem * var(--tw-space-y-reverse));
 	}
 
 	.md\:border-0{
@@ -1980,6 +2125,17 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 }
 
 @media (min-width: 1024px){
+
+	.lg\:not-sr-only{
+		position: static;
+		width: auto;
+		height: auto;
+		padding: 0;
+		margin: 0;
+		overflow: visible;
+		clip: auto;
+		white-space: normal;
+	}
 
 	.lg\:absolute{
 		position: absolute;
@@ -2328,6 +2484,11 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 		padding-bottom: 0.75rem;
 	}
 
+	.lg\:px-12{
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+
 	.lg\:pb-24{
 		padding-bottom: 6rem;
 	}
@@ -2346,6 +2507,14 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 
 	.lg\:pr-6{
 		padding-right: 1.5rem;
+	}
+
+	.lg\:pt-12{
+		padding-top: 3rem;
+	}
+
+	.lg\:pt-16{
+		padding-top: 4rem;
 	}
 
 	.lg\:text-2xl{
