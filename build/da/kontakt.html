@@ -21,23 +21,6 @@
 	</head>
 
 	<body class="overflow-x-hidden font-sans antialiased bg-white">
-		<!-- Splash screen -->
-		<div class="fixed z-40 invisible hidden w-full h-screen translate-x-0 border-r splash bg-mint-blue">
-			<div class="relative flex items-center justify-center w-full h-full">
-				<div class="z-10 flex items-end space-x-4">
-					<div class="relative w-7 h-7 lg:w-8 lg:h-8 spinner transform-gpu">Loading...</div>
-					<svg class="w-auto h-10 text-black lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40">
-						<path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/>
-					</svg>
-				</div>
-
-				<video class="absolute inset-0 object-cover w-full h-full mix-blend-soft-light" playsinline loop autoplay muted poster="media/gradient-poster.png">
-					<source src="../media/gradient.webm" type="video/webm">
-					<source src="../media/gradient.mp4" type="video/mp4">
-				</video>
-			</div>
-		</div>
-		
 		<header class="absolute z-20 w-full py-4 border-b border-black sm:bg-transparent">
 			<div class="container px-6 mx-auto md:px-12">
 				<div class="relative flex items-center justify-between h-14 lg:h-16">
@@ -68,7 +51,7 @@
 
 		<main>
 			<!-- Hero -->
-			<div class="relative flex items-end w-full h-auto overflow-hidden border-t border-black bg-green">
+			<div class="relative flex items-end w-full h-auto overflow-hidden border-t border-b border-black bg-green">
 				<div class="container z-10 px-6 pt-40 pb-10 mx-auto md:px-12 md:pb-16 md:pt-80 lg:pb-24 2xl:pt-96">
 					<h1 class="w-full text-4xl leading-tight text-black hyphenate md:leading-tight md:text-5xl lg:text-6xl lg:leading-tight xl:leading-tight xl:text-7xl lg:w-3/4">Del din idé eller forretningsudfordring. <span class="font-serif italic">Ingen salgssnak</span>, ingen binding.</h1>
 				</div>
@@ -79,155 +62,146 @@
 				</video>
 			</div>
 			
-			<div class="border-t border-black">
-				<div class="grid grid-cols-1 2xl:container 2xl:mx-auto 2xl:border-l 2xl:border-r 2xl:border-black lg:divide-x lg:divide-black lg:grid-cols-9">					
+			<section>
+				<div class="container flex flex-col mx-auto md:space-x-4 2xl:space-x-24 lg:flex-row">					
 					<!-- Contact form -->
-					<div class="lg:col-span-5">
-						<div class="container px-6 py-12 mx-auto lg:max-w-92 md:px-12 md:py-16 lg:py-20 2xl:max-w-full 2xl:p-24">
-							<h2 class="mb-4 text-3xl leading-tight text-black lg:leading-tight lg:text-4xl">Projektforespørgsler</h3>
-							<p class="text-xl leading-normal text-black lg:leading-relaxed lg:text-2xl text-indent-sm">Fortæl os om dit projekt og dine mål. Vi tager et kig og giver dig besked, hvis et samarbejde giver mening.</p>
-							
-							<form name="Projektforespørgsler" action="/da/succes.html" data-netlify="true" method="POST" netlify-honeypot="bot-field" class="grid grid-cols-1 mt-8 lg:mt-10 gap-y-6 sm:grid-cols-2 sm:gap-x-6">
-								<div class="hidden">
-									<label>Udfyld ikke dette, hvis du er menneske: <input name="bot-field" /></label>
-								</div>
-								<div class="sm:col-span-2">
-									<label for="name" class="block text-base text-black">Navn <span class="text-red">*</span></label>
-									
-									<div class="mt-1.5">
-										<input type="text" required name="name" id="name" autocomplete="given-name" class="block w-full px-4 py-3 text-black border-black focus:shadow-sm focus:ring-black focus:border-black">
-									</div>
-								</div>
-
-								<div class="sm:col-span-2">
-									<label for="company" class="block text-base text-black">Organisation <span class="text-red">*</span></label>
-									
-									<div class="mt-1.5">
-										<input type="text" required name="company" id="company" autocomplete="company" class="block w-full px-4 py-3 text-black border-black focus:shadow-sm focus:ring-black focus:border-black">
-									</div>
-								</div>
-
-								<div>
-									<label for="email" class="block text-base text-black">Email <span class="text-red">*</span></label>
-
-									<div class="mt-1.5">
-										<input id="email" required name="email" type="email" autocomplete="email" class="block w-full px-4 py-3 text-black border-black focus:shadow-sm focus:ring-black focus:border-black">
-									</div>
-								</div>
+					<div class="flex-1 px-6 py-12 lg:px-12 md:py-16 lg:py-20">
+						<h2 class="mb-4 text-3xl leading-tight text-black lg:leading-tight lg:text-4xl">Projektforespørgsler</h3>
+						<p class="text-xl leading-normal text-black lg:leading-relaxed lg:text-2xl text-indent-sm">Fortæl os om dit projekt og dine mål. Vi tager et kig og giver dig besked, hvis et samarbejde giver mening.</p>
+						
+						<form name="Projektforespørgsler" action="/da/succes.html" data-netlify="true" method="POST" netlify-honeypot="bot-field" class="grid grid-cols-1 mt-8 lg:mt-10 gap-y-6 sm:grid-cols-2 sm:gap-x-6">
+							<div class="hidden">
+								<label>Udfyld ikke dette, hvis du er menneske: <input name="bot-field" /></label>
+							</div>
+							<div class="sm:col-span-2">
+								<label for="name" class="block text-base text-black">Navn <span class="text-red">*</span></label>
 								
-								<div>
-									<label for="phone" class="block text-base text-black">Telefon</label>
-									
-									<div class="mt-1.5">
-										<input type="text" name="phone" id="phone" autocomplete="tel" class="block w-full px-4 py-3 text-black border-black focus:shadow-sm focus:ring-black focus:border-black" aria-describedby="phone-optional">
-									</div>
+								<div class="mt-1.5">
+									<input type="text" required name="name" id="name" autocomplete="given-name" class="block w-full px-4 py-3 text-black border-black focus:shadow-sm focus:ring-black focus:border-black">
 								</div>
+							</div>
 
-								<div class="sm:col-span-2">
-									<label for="timeframe" class="block text-base text-black">Tidsramme <span class="text-red">*</span></label>
-									
-									<div class="mt-1.5">
-										<input type="text" required placeholder="Ideelt set, hvornår er vi færdige?" name="timeframe" id="timeframe" class="block w-full px-4 py-3 text-black border-black focus:shadow-sm focus:ring-black focus:border-black">
-									</div>
+							<div class="sm:col-span-2">
+								<label for="company" class="block text-base text-black">Organisation <span class="text-red">*</span></label>
+								
+								<div class="mt-1.5">
+									<input type="text" required name="company" id="company" autocomplete="company" class="block w-full px-4 py-3 text-black border-black focus:shadow-sm focus:ring-black focus:border-black">
 								</div>
+							</div>
 
-								<div class="sm:col-span-2">
-									<label for="message" class="block text-base text-black">Projektbeskrivelse <span class="text-red">*</span></label>
+							<div>
+								<label for="email" class="block text-base text-black">Email <span class="text-red">*</span></label>
 
-									<div class="mt-1.5">
-										<textarea required id="message" placeholder="Kravspecifikation, intentioner, målgruppe, mål osv." name="message" rows="4" class="block w-full px-4 py-3 text-black border border-black focus:shadow-sm focus:ring-black focus:border-black" aria-describedby="message-max"></textarea>
-									</div>
+								<div class="mt-1.5">
+									<input id="email" required name="email" type="email" autocomplete="email" class="block w-full px-4 py-3 text-black border-black focus:shadow-sm focus:ring-black focus:border-black">
 								</div>
-
-								<div class="sm:col-span-2 sm:flex sm:justify-end">
-									<button type="submit" class="inline-flex items-center justify-center w-full px-6 py-3 text-lg text-white bg-black border border-transparent focus:shadow-sm sm:w-auto">
-										Send forespørgsel
-									</button>
+							</div>
+							
+							<div>
+								<label for="phone" class="block text-base text-black">Telefon</label>
+								
+								<div class="mt-1.5">
+									<input type="text" name="phone" id="phone" autocomplete="tel" class="block w-full px-4 py-3 text-black border-black focus:shadow-sm focus:ring-black focus:border-black" aria-describedby="phone-optional">
 								</div>
-							</form>
-						</div>
+							</div>
+
+							<div class="sm:col-span-2">
+								<label for="timeframe" class="block text-base text-black">Tidsramme <span class="text-red">*</span></label>
+								
+								<div class="mt-1.5">
+									<input type="text" required placeholder="Ideelt set, hvornår er vi færdige?" name="timeframe" id="timeframe" class="block w-full px-4 py-3 text-black border-black focus:shadow-sm focus:ring-black focus:border-black">
+								</div>
+							</div>
+
+							<div class="sm:col-span-2">
+								<label for="message" class="block text-base text-black">Projektbeskrivelse <span class="text-red">*</span></label>
+
+								<div class="mt-1.5">
+									<textarea required id="message" placeholder="Kravspecifikation, intentioner, målgruppe, mål osv." name="message" rows="4" class="block w-full px-4 py-3 text-black border border-black focus:shadow-sm focus:ring-black focus:border-black" aria-describedby="message-max"></textarea>
+								</div>
+							</div>
+
+							<div class="sm:col-span-2 sm:flex sm:justify-end">
+								<button type="submit" class="inline-flex items-center justify-center w-full px-6 py-3 text-lg text-white bg-black border border-transparent focus:shadow-sm sm:w-auto">
+									Send forespørgsel
+								</button>
+							</div>
+						</form>
 					</div>
 											
 					<!-- Contact information -->
-					<div class="lg:col-span-4">
-						<h2 class="sr-only">Kontaktinformationer</h2>
+					<div class="w-full px-6 pb-12 space-y-12 md:max-w-md 2xl:max-w-xl lg:space-y-16 lg:px-12 md:pb-16 lg:py-20">
 						
-						<div class="border-t border-black lg:border-0">
-							<div class="container px-6 py-12 mx-auto lg:max-w-92 md:px-12 md:py-16 lg:py-20 2xl:max-w-full 2xl:p-24">
-								<h3 class="text-2xl leading-tight text-black">Bare sig goddag</h3>
+						<div>
+							<h3 class="text-2xl leading-tight text-black">Bare sig goddag</h3>
 
-								<div class="flex flex-col mt-4 text-lg">
-									<p class="text-xl leading-normal text-black text-indent-sm">For alle andre henvendelser, bedes du sende en email til nedenstående adresse.<p>
-									<a href="mailto:hello@edl.dk?subject=Hvad sker der?" class="flex items-center mt-4 space-x-1 text-black" title="Kontakt os angående hvad som helst.">
-										<span class="text-xl leading-tight link-line link-black">hello@edl.dk</span>
-										<svg class="w-5 h-5 lg:h-6 lg:w-6" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-											<path d="M13.163 20L21 12l-7.837-8-1.347 1.375 5.545 5.643H3v1.964h14.361l-5.545 5.66L13.163 20z" fill="currentColor"/>
-										</svg>
-									</a>
-								</div>
+							<div class="flex flex-col mt-4 text-lg">
+								<p class="text-xl leading-normal text-black">For alle andre henvendelser, bedes du sende en email til nedenstående adresse.<p>
+								<a href="mailto:hello@edl.dk?subject=Hvad sker der?" class="flex items-center mt-4 space-x-1 text-black" title="Kontakt os angående hvad som helst.">
+									<span class="text-xl leading-tight link-line link-black">hello@edl.dk</span>
+									<svg class="w-5 h-5 lg:h-6 lg:w-6" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+										<path d="M13.163 20L21 12l-7.837-8-1.347 1.375 5.545 5.643H3v1.964h14.361l-5.545 5.66L13.163 20z" fill="currentColor"/>
+									</svg>
+								</a>
 							</div>
 						</div>
 
-						<div class="border-t border-black">
-							<div class="container px-6 py-12 mx-auto lg:max-w-92 md:px-12 md:py-16 lg:py-20 2xl:max-w-full 2xl:p-24">
-								<h3 class="text-2xl leading-tight text-black">Karriere</h3>
+						<div>
+							<h3 class="text-2xl leading-tight text-black">Karriere</h3>
 
-								<div class="flex flex-col mt-4 text-lg">
-									<p class="text-xl leading-normal text-black text-indent-sm">Vi leder altid efter talentfulde, nysgerrige og ambitiøse folk til at vokse vores team.<p>
-									<a href="mailto:careers@edl.dk?subject=Karriere hos EDL" class="flex items-center mt-4 space-x-1 text-black" title="Send en email angående en karriere hos EDL.">
-										<span class="text-xl leading-tight link-line link-black">careers@edl.dk</span>
-										<svg class="w-5 h-5 lg:h-6 lg:w-6" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-											<path d="M13.163 20L21 12l-7.837-8-1.347 1.375 5.545 5.643H3v1.964h14.361l-5.545 5.66L13.163 20z" fill="currentColor"/>
-										</svg>
-									</a>
-								</div>
+							<div class="flex flex-col mt-4 text-lg">
+								<p class="text-xl leading-normal text-black">Vi leder altid efter talentfulde, nysgerrige og ambitiøse folk til at vokse vores team.<p>
+								<a href="mailto:careers@edl.dk?subject=Karriere hos EDL" class="flex items-center mt-4 space-x-1 text-black" title="Send en email angående en karriere hos EDL.">
+									<span class="text-xl leading-tight link-line link-black">careers@edl.dk</span>
+									<svg class="w-5 h-5 lg:h-6 lg:w-6" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+										<path d="M13.163 20L21 12l-7.837-8-1.347 1.375 5.545 5.643H3v1.964h14.361l-5.545 5.66L13.163 20z" fill="currentColor"/>
+									</svg>
+								</a>
 							</div>
 						</div>
 
-						<div class="border-t border-black">
-							<div class="container px-6 py-12 mx-auto lg:max-w-92 md:px-12 md:py-16 lg:py-20 2xl:max-w-full 2xl:p-24">
-								<div class="tabs">
-									<div role="tablist" class="flex mb-4 space-x-6" aria-label="Sample Tabs">
-										<button class="text-2xl leading-tight text-black" role="tab" aria-selected="true" aria-controls="address-1" id="city-1" tabindex="0">
-											København
-										</button>
+						<div>
+							<div class="tabs">
+								<div role="tablist" class="flex mb-4 space-x-6" aria-label="Tabs">
+									<button class="text-2xl leading-tight text-black" role="tab" aria-selected="true" aria-controls="address-1" id="city-1" tabindex="0">
+										København
+									</button>
 
-										<button class="text-2xl leading-tight text-black" role="tab" aria-selected="false" aria-controls="address-2" id="city-2" tabindex="-1">
-											Odense
-										</button>
-									</div>
-									
-									<div id="address-1" role="tabpanel" tabindex="0" aria-labelledby="city-1">
-										<p class="pl-10 text-xl leading-normal text-black">Klosterstræde 9<br>1157 København<br>Danmark<p>
-									
-										<a href="https://goo.gl/maps/MYToXRtcRm17aNEM6" title="Få rutevejledning til vores københavnske kontor via Google Maps." target="blank" rel="noopener" class="flex items-center mt-4 space-x-1 text-black">
-											<span class="text-xl leading-tight link-line link-black">Rutevejledning</span>
-											<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-												<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
-											</svg>
-										</a>
-									</div>
+									<button class="text-2xl leading-tight text-black" role="tab" aria-selected="false" aria-controls="address-2" id="city-2" tabindex="-1">
+										Odense
+									</button>
+								</div>
+								
+								<div id="address-1" role="tabpanel" tabindex="0" aria-labelledby="city-1">
+									<p class="text-xl leading-normal text-black">Klosterstræde 9<br>1157 København<br>Danmark<p>
+								
+									<a href="https://goo.gl/maps/MYToXRtcRm17aNEM6" title="Få rutevejledning til vores københavnske kontor via Google Maps." target="blank" rel="noopener" class="flex items-center mt-4 space-x-1 text-black">
+										<span class="text-xl leading-tight link-line link-black">Rutevejledning</span>
+										<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+											<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
+										</svg>
+									</a>
+								</div>
 
-									<div id="address-2" role="tabpanel" tabindex="-1" aria-labelledby="city-2" hidden>
-										<p class="pl-10 text-xl leading-normal text-black">Stærmosegårdsvej 8<br>5230 Odense M<br>Danmark<p>
-									
-										<a href="https://goo.gl/maps/C7gqWv69bB8gdC4V9" title="Få rutevejledning til vores odenseanske kontor via Google Maps." target="blank" rel="noopener" class="flex items-center mt-4 space-x-1 text-black">
-											<span class="text-xl leading-tight link-line link-black">Rutevejledning</span>
-											<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-												<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
-											</svg>
-										</a>
-									</div>
+								<div id="address-2" role="tabpanel" tabindex="-1" aria-labelledby="city-2" hidden>
+									<p class="text-xl leading-normal text-black">Stærmosegårdsvej 8<br>5230 Odense M<br>Danmark<p>
+								
+									<a href="https://goo.gl/maps/C7gqWv69bB8gdC4V9" title="Få rutevejledning til vores odenseanske kontor via Google Maps." target="blank" rel="noopener" class="flex items-center mt-4 space-x-1 text-black">
+										<span class="text-xl leading-tight link-line link-black">Rutevejledning</span>
+										<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+											<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
+										</svg>
+									</a>
 								</div>
 							</div>
 						</div>				
 					</div>
 				</div>
-			</div>
+			</section>
 		</main>
-		
+
 		<footer class="border-t border-b border-black">
-			<div class="container flex flex-col px-6 py-12 mx-auto lg:flex-row-reverse 2xl:border-l 2xl:border-r 2xl:border-black md:px-12 md:py-16 2xl:p-24">
+			<div class="container flex flex-col px-6 py-12 mx-auto lg:flex-row-reverse lg:px-12 md:py-16">
 				<nav class="flex mb-12 space-x-8 lg:m-0">
 					<a href="https://instagram.com/edl.design" target="blank" rel="noopener" title="Se EDL’s profil på Instagram." class="flex items-center space-x-1 text-black">
 						<span class="text-lg leading-tight lg:text-xl link-black link-line">Instagram</span>
@@ -247,32 +221,6 @@
 				<span class="text-lg leading-tight lg:text-xl lg:flex-1">2021 &copy; EDL ApS</span>
 			</div>
 		</footer>
-
-		<script>
-			window.addEventListener('DOMContentLoaded', function() {
-				var splash = document.querySelector('.splash');
-				
-				// Check to see if localStorage indicates a first-time visit
-				if(!localStorage.getItem('visited')) {
-					
-					// Reveal splash and remove ability to scroll
-					splash.classList.remove('hidden', 'invisible');
-					document.body.classList.add('overflow-hidden');
-					
-					// 3 seconds later, hide the splash
-					setTimeout(function(){
-						splash.classList.add('reveal');
-						
-						setTimeout(function(){
-							document.body.classList.remove('overflow-hidden');
-						}, 1000);
-
-						// Set localStorage to visited here
-						localStorage.setItem('visited', 'true');
-					}, 3000);
-				} 
-			});
-		</script>
 
 		<script>
 			window.addEventListener("DOMContentLoaded", () => {

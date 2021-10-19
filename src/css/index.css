@@ -42,48 +42,6 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
     background-color: black;
 }
 
-.spinner {
-    text-indent: -9999em;
-    background: linear-gradient(to right, #000000 10%, rgba(0,0,0, 0) 42%);
-    animation: spinner 1.4s infinite linear;
-    transform: translateZ(0);
-    border-radius: 50%;
-}
-
-.spinner:before {
-    width: 50%;
-    height: 50%;
-    background: black;
-    border-radius: 100% 0 0 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: '';
-}
-
-.spinner:after {
-    background: #C7D3DE;
-    width: 80%;
-    height: 80%;
-    border-radius: 50%;
-    content: '';
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-
-@keyframes spinner {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
 .link:before {
     content: "";
     display: block;
@@ -198,14 +156,6 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
             word-wrap: break-word;
             overflow-wrap: break-word;
             hyphens: auto;
-        }
-
-        .max-w-92 {
-            max-width: 92%;
-        }
-
-        .max-w-94 {
-            max-width: 94%;
         }
 
         .text-indent-sm {

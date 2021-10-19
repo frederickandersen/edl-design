@@ -46,6 +46,7 @@ module.exports = {
             },
             animation: {
                 marquee: 'marquee 50s linear infinite',
+                'spin-slow': 'spin 10s linear infinite',
             },
             spacing: {
                 '104': '26rem',

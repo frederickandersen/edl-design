@@ -28,16 +28,17 @@
 		<div class="fixed z-40 invisible hidden w-full h-screen translate-x-0 border-r splash bg-mint-blue">
 			<div class="relative flex items-center justify-center w-full h-full">
 				<div class="z-10 flex items-end space-x-4">
-					<div class="relative w-7 h-7 lg:w-8 lg:h-8 spinner transform-gpu">Loading...</div>
+					<svg class="text-black w-9 h-9 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+						<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3"></circle>
+						<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+					</svg>
+
 					<svg class="w-auto h-10 text-black lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40">
 						<path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/>
 					</svg>
 				</div>
 
-				<video class="absolute inset-0 object-cover w-full h-full mix-blend-soft-light" playsinline loop autoplay muted poster="media/gradient-poster.png">
-					<source src="../media/gradient.webm" type="video/webm">
-					<source src="../media/gradient.mp4" type="video/mp4">
-				</video>
+				<img src="../media/gradient-poster.png" class="absolute inset-0 object-cover w-full h-full mix-blend-soft-light" alt="Beautiful purple-blue gradient." />
 			</div>
 		</div>
 		
@@ -151,12 +152,12 @@
 						<span class="inline-flex items-center px-4 py-2 mb-4 text-base leading-normal text-white bg-black rounded-full 2 lg:mb-8 lg:px-5 lg:text-lg">Case story</span>
 						<h2 class="text-3xl leading-tight text-black lg:leading-tight lg:text-5xl lg:w-2/4 hyphenate">Transforming assumptions into a data-informed, <span class="font-serif italic">minimal viable product</span> users love.</h2>
 
-						<a href="/work/odense-zoo.html" title="Learn how we designed the app for Odense ZOO." class="flex items-center mt-4 space-x-1 text-black link lg:mt-8 lg:space-x-2">
+						<!-- <a href="/work/odense-zoo.html" title="Learn how we designed the app for Odense ZOO." class="flex items-center mt-4 space-x-1 text-black link lg:mt-8 lg:space-x-2">
 							<span class="text-lg lg:text-2xl link-black link-line">Learn how</span>
 							<svg class="w-5 h-5 lg:h-6 lg:w-6" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 								<path d="M13.163 20L21 12l-7.837-8-1.347 1.375 5.545 5.643H3v1.964h14.361l-5.545 5.66L13.163 20z" fill="currentColor"/>
 							</svg>
-						</a>
+						</a> -->
 					</div>
 					
 					<video class="object-contain w-full border-t border-black lg:object-cover h-96 md:h-120 lg:border-0 lg:absolute lg:top-0 lg:right-0 lg:w-1/2 lg:h-full" playsinline loop autoplay muted>
@@ -178,19 +179,19 @@
 			<section>
 				<div class="container px-6 py-10 mx-auto lg:px-12 md:py-16 lg:py-24">
 					<h2 class="mb-4 text-3xl leading-tight text-black lg:leading-tight lg:text-5xl hyphenate">Our team</h2>
-					<p class="text-xl text-black lg:leading-relaxed lg:text-2xl text-indent-sm lg:w-3/5">Don’t let the size fool you. We are teeny-tiny (not for long, though), but that enables a more nimble and heuristic parternship.</p>
+					<p class="text-xl text-black lg:leading-relaxed lg:text-2xl text-indent-sm lg:w-3/5">Don’t let the size fool you. We are teeny-tiny, but that enables a more nimble and heuristic parternship.</p>
 				</div>
 
 				<div class="pb-4 md:border-t md:border-black">
 					<div class="container flex flex-col px-6 pb-10 mx-auto space-y-12 md:space-x-24 md:space-y-0 md:flex-row lg:px-12 md:py-16 lg:py-24">
 						<!-- Frederick -->
-						<div class="relative w-full">
-							<img class="w-24 h-24 mb-4 border border-black rounded-full lg:mb-6 lg:w-36 lg:h-36" src="../media/edl-frederick-andersen.png" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
+						<div class="w-full">
+							<img class="w-24 h-24 mb-5 border border-black rounded-full lg:mb-8 lg:w-36 lg:h-36" src="../media/edl-frederick-andersen.png" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
 
-							<h3 class="sr-only">Frederick Andersen</h3>
-							<p class="mt-5 text-xl leading-normal text-black 2xl:w-4/5 text-indent-sm lg:text-2xl lg:leading-relaxed">As co-founder of EDL, Frederick Andersen is responsible for transforming businesses through purposeful, consumer-centric design. Additionally, Frederick plays a leading role in our business development.</p>
+							<h3 class="text-2xl text-black lg:leading-tight lg:text-3xl">Frederick J. Andersen</h3>
+							<p class="mt-2 text-xl leading-normal text-black lg:mt-4 2xl:w-4/5 text-indent-sm lg:text-2xl lg:leading-relaxed">As co-founder of EDL, Frederick is responsible for transforming businesses through purposeful, consumer-centric design. Additionally, Frederick plays a leading role in our business development.</p>
 
-							<a href="https://www.linkedin.com/in/frederickjanandersen/" target="_blank" rel="noopener" title="Read more about Frederick Andersen on LinkedIn" class="flex items-center mt-4 space-x-1 text-black link lg:mt-8 lg:space-x-2">
+							<a href="https://www.linkedin.com/in/frederickjanandersen/" target="_blank" rel="noopener" title="Read more about Frederick Andersen on LinkedIn" class="flex items-center mt-4 space-x-1 text-black lg:mt-8 lg:space-x-2">
 								<span class="text-lg lg:text-2xl link-black link-line">View on LinkedIn</span>
 								<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
@@ -199,21 +200,27 @@
 						</div>
 
 						<!-- Join us -->
-						<div class="relative w-full">
-							<div class="flex items-start justify-between">
+						<div class="w-full">
+							<div class="relative flex items-start justify-between mb-5 lg:mb-8">
 								<div class="flex items-center justify-center w-24 h-24 border border-black rounded-full lg:w-36 lg:h-36">
 									<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-										</svg>
+									</svg>
 								</div>
-								
-								<span class="inline-flex items-center px-4 py-2 mb-8 text-base leading-normal text-white bg-black rounded-full lg:px-5 lg:text-lg">We’re hiring!</span>
+
+								<div class="absolute top-0 right-0 flex items-center justify-center w-20 h-20 p-4 lg:w-32 lg:h-32 lg:p-6">
+									<span class="relative z-10 text-xs font-bold leading-3 text-center text-black uppercase lg:text-lg lg:leading-5 rotate-6">Help wanted</span>
+									
+									<svg class="absolute top-0 right-0 w-20 h-20 text-black lg:w-32 lg:h-32 animate-spin-slow" viewBox="0 0 156 156" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path stroke="currentColor" d="M78 0L90.0215 17.564L107.849 5.93739L112.234 26.7648L133.154 22.8457L129.235 43.7658L150.063 48.1507L138.436 65.9785L156 78L138.436 90.0215L150.063 107.849L129.235 112.234L133.154 133.154L112.234 129.235L107.849 150.063L90.0215 138.436L78 156L65.9785 138.436L48.1507 150.063L43.7658 129.235L22.8457 133.154L26.7648 112.234L5.93739 107.849L17.564 90.0215L0 78L17.564 65.9785L5.93739 48.1507L26.7648 43.7658L22.8457 22.8457L43.7658 26.7648L48.1507 5.93739L65.9785 17.564L78 0Z" />
+									</svg>
+								</div>
 							</div>
 
-							<h3 class="sr-only">Open position as UX Designer</h3>
-							<p class="mt-5 text-xl leading-normal text-black 2xl:w-4/5 text-indent-sm lg:text-2xl lg:leading-relaxed">As user experience designer at EDL, you are creative-driven, business-minded, and data-informed.</p>
+							<h3 class="text-2xl text-black lg:leading-tight lg:text-3xl">UX Designer</h3>
+							<p class="mt-2 text-xl leading-normal text-black 2xl:w-4/5 lg:mt-4 text-indent-sm lg:text-2xl lg:leading-relaxed">As user experience designer at EDL, you are creative-driven, business-minded, and data-informed.</p>
 
-							<a href="mailto:careers@edl.dk?subject=UX Designer at EDL" title="Send a mail regarding careers at EDL." class="flex items-center mt-4 space-x-1 text-black link lg:mt-8 lg:space-x-2">
+							<a href="mailto:careers@edl.dk?subject=UX Designer at EDL" title="Send a mail regarding careers at EDL." class="flex items-center mt-4 space-x-1 text-black lg:mt-8 lg:space-x-2">
 								<span class="text-lg leading-tight lg:text-2xl link-black link-line">Get in touch</span>
 								<svg class="w-5 h-5 lg:h-6 lg:w-6" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path d="M13.163 20L21 12l-7.837-8-1.347 1.375 5.545 5.643H3v1.964h14.361l-5.545 5.66L13.163 20z" fill="currentColor"/>
@@ -274,13 +281,13 @@
 				<div class="pb-4 md:border-t md:border-black">
 					<div class="container flex flex-col px-6 pb-10 mx-auto space-y-12 md:space-x-24 md:space-y-0 md:flex-row lg:px-12 md:py-16 lg:py-24">
 						<!-- Casper Stendal -->
-						<div class="relative w-full">
-							<img class="w-24 h-24 mb-4 border border-black rounded-full lg:mb-6 lg:w-36 lg:h-36" src="../media/edl-casper-stendal.png" alt="Profile picture of co-founder and advisor, Casper Stendal smiling with sunshine in his back.">
+						<div class="w-full">
+							<img class="w-24 h-24 mb-5 border border-black rounded-full lg:mb-8 lg:w-36 lg:h-36" src="../media/edl-casper-stendal.png" alt="Profile picture of co-founder and advisor, Casper Stendal smiling with sunshine in his back.">
 
-							<h3 class="sr-only">Casper Stendal</h3>
-							<p class="mt-5 text-xl leading-normal text-black 2xl:w-4/5 text-indent-sm lg:text-2xl lg:leading-relaxed">Through business strategy and digital transformation, Casper Stendal excels at understanding, challenging, and inspiring companies to help them gain a competitive advantage.</p>
+							<h3 class="text-2xl text-black lg:leading-tight lg:text-3xl">Casper Stendal</h3>
+							<p class="mt-2 text-xl leading-normal text-black 2xl:w-4/5 lg:mt-4 text-indent-sm lg:text-2xl lg:leading-relaxed">Through business strategy and digital transformation, Casper excels at understanding, challenging, and inspiring companies to help them gain a competitive advantage.</p>
 
-							<a href="https://www.linkedin.com/in/stendal/" target="_blank" rel="noopener" title="Read more about Casper Stendal on LinkedIn." class="flex items-center mt-4 space-x-1 text-black link lg:mt-8 lg:space-x-2">
+							<a href="https://www.linkedin.com/in/stendal/" target="_blank" rel="noopener" title="Read more about Casper Stendal on LinkedIn." class="flex items-center mt-4 space-x-1 text-black lg:mt-8 lg:space-x-2">
 								<span class="text-lg lg:text-2xl link-black link-line">View on LinkedIn</span>
 								<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
@@ -289,13 +296,13 @@
 						</div>
 						
 						<!-- Anders Wind -->
-						<div class="relative w-full">
-							<img class="w-24 h-24 mb-4 border border-black rounded-full lg:mb-6 lg:w-36 lg:h-36" src="../media/edl-anders-wind.png" alt="Profile picture of co-founder and advisor, Anders Wind smiling with sunshine and computer screen behind him.">
+						<div class="w-full">
+							<img class="w-24 h-24 mb-5 border border-black rounded-full lg:mb-8 lg:w-36 lg:h-36" src="../media/edl-anders-wind.png" alt="Profile picture of co-founder and advisor, Anders Wind smiling with sunshine and computer screen behind him.">
 
-							<h3 class="sr-only">Anders Wind</h3>
-							<p class="mt-5 text-xl leading-normal text-black 2xl:w-4/5 text-indent-sm lg:text-2xl lg:leading-relaxed">While heavily invested in empowering and motivating people to unleash their full potential, Anders Wind also helps with agency operations and finance.</p>
+							<h3 class="text-2xl text-black lg:leading-tight lg:text-3xl">Anders Wind</h3>
+							<p class="mt-2 text-xl leading-normal text-black 2xl:w-4/5 lg:mt-4 text-indent-sm lg:text-2xl lg:leading-relaxed">While heavily invested in empowering and motivating people to unleash their full potential, Anders Wind also helps with agency operations and finance.</p>
 	
-							<a href="https://www.linkedin.com/in/anderswind/" target="_blank" rel="noopener" title="Read more about Anders Wind on LinkedIn." class="flex items-center mt-4 space-x-1 text-black link lg:mt-8 lg:space-x-2">
+							<a href="https://www.linkedin.com/in/anderswind/" target="_blank" rel="noopener" title="Read more about Anders Wind on LinkedIn." class="flex items-center mt-4 space-x-1 text-black lg:mt-8 lg:space-x-2">
 								<span class="text-lg lg:text-2xl link-black link-line">View on LinkedIn</span>
 								<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
@@ -331,7 +338,7 @@
 					</div>
 				</div>
 
-				<div class="absolute top-0 left-0 w-full h-full overflow-hidden bg-mint-blue">
+				<div class="absolute inset-0 w-full h-full overflow-hidden bg-mint-blue">
 					<video class="object-cover w-full h-full mix-blend-soft-light" playsinline loop autoplay muted>
 						<source src="../media/gradient.webm" type="video/webm">
 						<source src="../media/gradient.mp4" type="video/mp4">
@@ -341,7 +348,7 @@
 		</main>
 
 		<footer class="border-t border-b border-black">
-			<div class="container flex flex-col px-6 py-12 mx-auto lg:flex-row-reverse md:px-12 md:py-16 2xl:p-24">
+			<div class="container flex flex-col px-6 py-12 mx-auto lg:flex-row-reverse lg:px-12 md:py-16">
 				<nav class="flex mb-12 space-x-8 lg:m-0">
 					<a href="https://instagram.com/edl.design" target="blank" rel="noopener" title="See EDL’s profile on Instagram." class="flex items-center space-x-1 text-black">
 						<span class="text-lg leading-tight lg:text-xl link-black link-line">Instagram</span>
