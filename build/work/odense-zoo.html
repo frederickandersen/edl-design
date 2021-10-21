@@ -31,7 +31,7 @@
 		class="overflow-x-hidden font-sans antialiased bg-white">
 
 		<header class="absolute z-20 w-full py-4 border-b border-black sm:bg-transparent">
-			<div class="container px-6 mx-auto md:px-12">
+			<div class="container px-6 mx-auto lg:px-12">
 				<div class="relative flex items-center justify-between h-14 lg:h-16">
 					<nav class="flex items-center justify-between flex-1">
 						<a href="/" title="Go to the homepage">
@@ -60,49 +60,69 @@
 		
 		<main>
 			<!-- Hero -->
-			<div class="relative w-full h-auto overflow-hidden border-t border-b border-black bg-green">
-				<div class="container relative z-10 px-6 pt-32 pb-10 mx-auto md:px-12 md:pb-16 md:pt-48 2xl:pb-24 2xl:pt-64">
+			<div class="relative w-full h-auto border-t">
+				<div class="container relative z-10 px-6 pt-32 pb-10 mx-auto lg:px-12 md:pb-16 md:pt-48 2xl:pb-24 2xl:pt-64">
 					<span class="inline-flex items-center px-4 py-2 mb-4 text-base leading-normal text-white bg-black rounded-full 2 lg:mb-8 lg:px-5 lg:text-xl">Case story</span>
-					<h1 class="w-full text-4xl leading-tight text-black hyphenate text-indent-lg md:leading-tight md:text-5xl lg:text-6xl lg:leading-tight xl:leading-tight xl:text-7xl xl:w-3/4">Transforming assumptions into a data-informed, <span class="font-serif italic">minimal viable product</span> users love.</h1>
+					<h1 class="w-full text-4xl leading-tight text-black hyphenate text-indent-lg md:leading-tight md:text-5xl lg:text-6xl lg:leading-tight xl:leading-tight xl:text-7xl xl:w-4/6">Transforming assumptions into a data-informed, <span class="font-serif italic">minimal viable product</span> users love.</h1>
 
 					<button @click="open = true" aria-label="Open panel" class="flex items-center mt-8 text-black lg:mt-12 group">
-						<svg class="w-5 h-5 group-hover:hidden lg:h-9 lg:w-9" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+						<svg class="hidden w-6 h-6 lg:inline-block group-hover:hidden lg:h-9 lg:w-9" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
 							<path d="M25.144 15.913l2.85 4.939M19.273 18.658l.889 5.043M12.716 18.655l-.89 5.044M6.851 15.91L3.986 20.87M4 13.11C6.1 15.71 9.954 19 16 19s9.898-3.29 12-5.89" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 						</svg>
 
-						<svg class="hidden w-5 h-5 group-hover:inline-block lg:h-9 lg:w-9" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+						<svg class="w-6 h-6 lg:hidden group-hover:inline-block lg:h-9 lg:w-9" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
 							<path d="M16 6.999C6 6.999 2 16 2 16s4 8.999 14 8.999S30 16 30 16s-4-9.001-14-9.001z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 							<path d="M16 21a5 5 0 100-10 5 5 0 000 10z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 						</svg>
 
-						<span class="ml-1 text-2xl lg:ml-4 lg:text-3xl link-black link-line">Read project description</span>	
+						<span class="ml-3 text-2xl lg:ml-4 lg:text-3xl link-black link-line">Read project description</span>	
 					</button>
 				</div>
 
-				<video class="absolute inset-0 object-cover w-full h-full mix-blend-overlay" playsinline loop autoplay muted poster="media/gradient-poster.png">
-					<source src="../media/gradient.webm" type="video/webm">
-					<source src="../media/gradient.mp4" type="video/mp4">
-				</video>
+				<!-- <video class="object-contain w-full lg:object-cover h-96 md:h-120 lg:absolute lg:top-48 lg:right-0 lg:w-1/2 lg:h-full" playsinline loop autoplay muted>
+					<source src="../media/oz-hero.mp4" type='video/mp4; codecs="hvc1"'>
+					<source src="../media/oz-hero.webm" type="video/webm">
+					Sorry, your browser doesn't support HTML5 video.
+				</video> -->
 			</div>
 
-			<section>
+			<section class="space-y-8">
 				<!-- Image -->
-				<div class="container relative mx-auto">
-					<picture class="relative z-10 block">
+				<div class="border-t border-b border-black bg-gray">
+					<picture class="container block mx-auto rounded-md bg-gray">
 						<source>
 						<img src="../media/oz-hero.png" class="object-contain w-full h-full" alt="iPhone with UI of the home screen of the Odense ZOO app.">
 					</picture>
 				</div>
 
+				<div class="container px-6 py-10 mx-auto lg:flex lg:flex-col lg:items-end lg:px-12 md:py-16 lg:py-24">
+					<div class="lg:w-1/2">
+						<h2 class="mb-4 text-3xl leading-tight lg:leading-tight lg:text-4xl">Surveys and prototyping</h2>
+						<p class="text-xl text-black lg:leading-relaxed lg:text-2xl text-indent-sm">"Shortly after our initial workshop, we sent out a nine-question survey, which amassed 5000 answers. We quickly turned to our prototyping tools to explore each feature."</p>
+						<button @click="open = true" aria-label="Open panel" class="flex items-center mt-6 text-black lg:mt-8 group">
+							<svg class="hidden w-6 h-6 lg:inline-block lg:group-hover:hidden lg:h-7 lg:w-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+								<path d="M25.144 15.913l2.85 4.939M19.273 18.658l.889 5.043M12.716 18.655l-.89 5.044M6.851 15.91L3.986 20.87M4 13.11C6.1 15.71 9.954 19 16 19s9.898-3.29 12-5.89" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+
+							<svg class="w-6 h-6 lg:hidden lg:group-hover:inline-block lg:h-7 lg:w-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+								<path d="M16 6.999C6 6.999 2 16 2 16s4 8.999 14 8.999S30 16 30 16s-4-9.001-14-9.001z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M16 21a5 5 0 100-10 5 5 0 000 10z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+
+							<span class="ml-2 text-xl lg:ml-4 lg:text-2xl link-black link-line">Read project description</span>	
+						</button>
+					</div>
+				</div>
+
 				<!-- Images -->
-				<div class="border-t border-black">
-					<div class="container flex mx-auto">
-						<picture class="block lg:col-span-1">
+				<div class="border-t border-b border-black bg-gray">
+					<div class="container flex mx-auto lg:space-x-8">
+						<picture class="block rounded-md bg-gray">
 							<source>
 							<img src="../media/oz-map.png" class="object-cover w-full h-full" alt="iPhone with UI of the home screen of the Odense ZOO app.">
 						</picture>
 						
-						<picture class="block lg:col-span-1">
+						<picture class="block rounded-md bg-gray">
 							<source>
 							<img src="../media/oz-passes.png" class="object-cover w-full h-full" alt="iPhone with UI of the home screen of the Odense ZOO app.">
 						</picture>
@@ -223,61 +243,51 @@
 					</article>
 				</div>
 			</div>
-
-			<!-- Call to action -->
-			<section class="relative border-t border-black">
-				<div class="container relative z-10 mx-auto">
-					<div class="px-6 py-12 mx-auto lg:px-12 md:py-16 lg:py-24 md:grid lg:grid-cols-2 lg:gap-24">
-						<h2 class="text-3xl leading-tight text-black lg:leading-tight lg:text-5xl">We’d love to hear about your design and business challenges.</h2>
-						<div class="mt-4 lg:mt-0 2xl:w-4/5">
-							<p class="text-xl leading-normal text-black text-indent-sm lg:leading-relaxed lg:text-2xl">Even if you’re unsure what’s next. No sales talk, no strings attached.</p>
-							
-							<div class="flex items-center mt-6 space-x-6 lg:space-x-8 lg:mt-8">
-								<a href="tel:+4528253694" title="Reach out and let us chat about design and business." class="inline-flex items-center justify-center py-2 pl-4 pr-5 space-x-3 text-lg text-white bg-black rounded-full lg:py-3 lg:pl-5 lg:pr-6 lg:text-2xl focus:shadow-sm">
-									<svg class="w-6 h-6 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18h.01M8 21h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-									<span>28 25 36 94</span>
-								</a>
-								
-								<a href="/contact.html" title="Reach out about a project, job application or just to say hi." class="flex items-center space-x-1 text-black lg:space-x-2">
-									<span class="text-lg lg:text-2xl link-black link-line">Contact us</span>
-									<svg class="w-5 h-5 lg:h-6 lg:w-6" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-										<path d="M13.163 20L21 12l-7.837-8-1.347 1.375 5.545 5.643H3v1.964h14.361l-5.545 5.66L13.163 20z" fill="currentColor"/>
-									</svg>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="absolute inset-0 w-full h-full overflow-hidden bg-mint-blue">
-					<video class="object-cover w-full h-full mix-blend-soft-light" playsinline loop autoplay muted>
-						<source src="../media/gradient.webm" type="video/webm">
-						<source src="../media/gradient.mp4" type="video/mp4">
-					</video>
-				</div>
-			</section>
 		</main>
 
-		<footer class="border-t border-b border-black">
-			<div class="container flex flex-col px-6 py-12 mx-auto lg:flex-row-reverse lg:px-12 md:py-16">
+		<footer class="flex flex-col justify-between h-screen bg-black bg-bottom bg-cover border-t border-b border-black bg-cta">
+			<!-- Call to action -->
+			<section class="container w-full px-6 py-12 mx-auto lg:px-12 md:py-16 lg:py-24">
+				<h2 class="text-3xl leading-tight text-gray lg:leading-tight lg:text-7xl lg:w-7/12">We’d love to hear about your <span class="font-serif italic">design and business</span> challenges.</h2>
+				<div class="mt-4 lg:mt-6 lg:w-1/2 2xl:w-5/12">
+					<p class="text-xl leading-normal text-gray text-indent-sm lg:leading-relaxed lg:text-2xl">Even if you’re unsure what’s next. No sales talk, no strings attached.</p>
+					
+					<div class="flex items-center mt-6 space-x-6 lg:space-x-8 lg:mt-8">
+						<a href="tel:+4528253694" title="Reach out and let us chat about design and business." class="flex items-center space-x-1 text-gray lg:space-x-2">
+							<span class="text-lg lg:text-2xl link-white link-line">28 25 36 94</span>
+							<svg class="w-6 h-6 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18h.01M8 21h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							
+						</a>
+						
+						<a href="/contact.html" title="Reach out about a project, job application or just to say hi." class="flex items-center space-x-1 text-gray lg:space-x-2">
+							<span class="text-lg lg:text-2xl link-white link-line">Contact us</span>
+							<svg class="w-5 h-5 lg:h-6 lg:w-6" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+								<path d="M13.163 20L21 12l-7.837-8-1.347 1.375 5.545 5.643H3v1.964h14.361l-5.545 5.66L13.163 20z" fill="currentColor"/>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="container flex flex-col w-full px-6 py-12 mx-auto lg:flex-row-reverse lg:px-12 md:py-16">
 				<nav class="flex mb-12 space-x-8 lg:m-0">
-					<a href="https://instagram.com/edl.design" target="blank" rel="noopener" title="See EDL’s profile on Instagram." class="flex items-center space-x-1 text-black">
-						<span class="text-lg leading-tight lg:text-xl link-black link-line">Instagram</span>
+					<a href="https://instagram.com/edl.design" target="blank" rel="noopener" title="See EDL’s profile on Instagram." class="flex items-center space-x-1 text-gray">
+						<span class="text-lg leading-tight lg:text-xl link-white link-line">Instagram</span>
 						<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 							<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
 						</svg>
 					</a>
 					
-					<a href="https://linkedin.com/company/edldesign" target="blank" rel="noopener" title="See EDL’s profile on LinkedIn" class="flex items-center space-x-1 text-black">
-						<span class="text-lg leading-tight lg:text-xl link-black link-line">LinkedIn</span>
+					<a href="https://linkedin.com/company/edldesign" target="blank" rel="noopener" title="See EDL’s profile on LinkedIn" class="flex items-center space-x-1 text-gray">
+						<span class="text-lg leading-tight lg:text-xl link-white link-line">LinkedIn</span>
 						<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 							<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
 						</svg>
 					</a>
 				</nav>
 				
-				<span class="text-lg leading-tight lg:text-xl lg:flex-1">2021 &copy; EDL ApS</span>
-			</div>
+				<span class="text-lg leading-tight text-gray lg:text-xl lg:flex-1">2021 &copy; EDL ApS</span>
+			</section>
 		</footer>
 	</body>
 </html>

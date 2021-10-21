@@ -35,6 +35,9 @@ module.exports = {
             '160': '40rem',
         },
         extend: {
+            backgroundImage: {
+                'cta': "url('/media/edl-cta.jpg')",
+            },
             padding: {
                 '26': '6.5rem'
             },
@@ -45,7 +48,7 @@ module.exports = {
                 },
             },
             animation: {
-                marquee: 'marquee 50s linear infinite',
+                'marquee': 'marquee 50s linear infinite',
                 'spin-slow': 'spin 10s linear infinite',
             },
             spacing: {
