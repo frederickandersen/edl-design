@@ -1579,6 +1579,11 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 	   object-position: right;
 }
 
+.object-\[72\%\]{
+	-o-object-position: 72%;
+	   object-position: 72%;
+}
+
 .p-4{
 	padding: 1rem;
 }
@@ -2366,6 +2371,11 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 	.lg\:object-right-bottom{
 		-o-object-position: right bottom;
 		   object-position: right bottom;
+	}
+
+	.lg\:object-right-top{
+		-o-object-position: right top;
+		   object-position: right top;
 	}
 
 	.lg\:p-5{
