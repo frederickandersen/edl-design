@@ -3,43 +3,14 @@
 
 @import "tailwindcss/base";
 
-/* interactivity using aria-state expanded */
-/* .accordion dt { cursor: pointer; } */
-/* .accordion dd[aria-expanded=false] { opacity: 0; display: none; } */
-/* .accordion dd[aria-expanded=true] { display: inherit; } */
-
-::-webkit-scrollbar-track
-{
-	background-color: #fff;
-    border-left: 1px solid black;
-}
-
-::-webkit-scrollbar
-{
-	width: 10px;
-}
-
-::-webkit-scrollbar-thumb
-{
-    background-color: #000;
-}
-
 ::selection {
-    background: black;
+    background-color: black;
     color: white;
 }
 
-a[aria-current=page], button[aria-selected=true] {
-    position: relative;
-}
-
-a[aria-current=page]:before, button[aria-selected=true]:before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 1px;
-    bottom: -1px;
-    background-color: black;
+.bg-black ::selection {
+    background-color: white;
+    color: black;
 }
 
 .link:before {
@@ -53,73 +24,6 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
     z-index: 1;
 }
 
-@keyframes reveal {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-.reveal {
-    animation-name: reveal;
-    animation-duration: 1000ms;
-    animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-    animation-fill-mode: forwards;
-}
-
-.slide-in {
-    animation-name: slide-in;
-    animation-duration: 800ms;
-    animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
-    animation-fill-mode: forwards;
-    animation-delay: 250ms;
-}
-
-@keyframes slide-in {
-    from {
-        transform: translateX(-1%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-.slide-down {
-    animation-name: slide-down;
-    animation-duration: 800ms;
-    animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
-    animation-fill-mode: forwards;
-    animation-delay: 250ms;
-}
-
-@keyframes slide-down {
-    from {
-        transform: translateY(-25%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.point:after {
-    background-color: #FFFFFF;
-    border: 2px solid #000;
-    border-radius: 50%;
-    content: "";
-    display: block;
-    height: 21px;
-    left: -12px;
-    position: absolute;
-    top: 0;
-    width: 21px;
-}
-
 @import "tailwindcss/components";
 
 @font-face {
@@ -131,51 +35,51 @@ a[aria-current=page]:before, button[aria-selected=true]:before {
 @import "tailwindcss/utilities";
 
 @layer utilities {
-    .link-line {
+    .line {
         position: relative;
     }
 
-    .link-line:before {
+    .line:before {
         position: absolute;
         content: "";
         width: 100%;
         height: 1px;
         bottom: -1px;
-    }
-
-    .link-white.link-line:before {
-        background-color: #fff;
-    }
-
-    .link-black.link-line:before {
         background-color: #000;
     }
 
     @variants responsive {
+        .scrollbar-white::-webkit-scrollbar-thumb {
+            background-color: #555;
+        }
+
+        .scrollbar-white::-webkit-scrollbar {
+            height: 2px;
+            -webkit-appearance: none;
+        }
+
+        .scrollbar-white::-webkit-scrollbar-track {
+            background-color: #222;
+        }
+
+        /* Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
         .hyphenate {
             word-wrap: break-word;
             overflow-wrap: break-word;
             hyphens: auto;
         }
 
-        .text-indent-sm {
+        .text-indent {
             text-indent: 2.5rem;
-        }
-
-        .text-indent-md {
-            text-indent: 3rem;
-        }
-
-        .text-indent-lg {
-            text-indent: 3.5rem;
-        }
-
-        .h-min-md {
-            min-height: 32rem;
-        }
-
-        .h-min-lg {
-            min-height: 40rem;
         }
     }
 }
