@@ -49,6 +49,16 @@
     }
 
     @variants responsive {
+        /* Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        
         .scrollbar-white::-webkit-scrollbar-thumb {
             background-color: #555;
         }
@@ -60,20 +70,11 @@
         .scrollbar-white::-webkit-scrollbar {
             height: 2px;
             -webkit-appearance: none;
+            display: block;
         }
 
         .scrollbar-white::-webkit-scrollbar-track {
             background-color: #222;
-        }
-
-        /* Chrome, Safari and Opera */
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-    
-        .no-scrollbar {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
         }
 
         .hyphenate {
