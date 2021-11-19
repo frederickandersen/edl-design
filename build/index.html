@@ -23,6 +23,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap" rel="stylesheet">
 		<link href="./css/styles.css" rel="stylesheet">
 
+		<script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
 		<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 	</head>
 
@@ -46,7 +47,7 @@
 							</div>
 						</div>
 
-						<button @click="show = !show" class="fixed z-20 flex items-center justify-center w-20 h-20 px-2 py-4 text-white bg-black rounded-full bottom-6 right-6 lg:hidden" x-text="!show ? 'Menu' : 'Close'">Menu</button>
+						<button @click="show = !show" class="fixed z-20 flex items-center justify-center w-20 h-20 px-2 py-4 text-white bg-black rounded-full bottom-6 right-6 md:hidden" x-text="!show ? 'Menu' : 'Close'">Menu</button>
 
 						<div class="fixed inset-0 bg-black bg-opacity-50 md:hidden" x-show="show">
 							<div
@@ -144,10 +145,10 @@
 			</section>
 
 			<!-- We partner with -->
-			<section class="bg-black">
-				<div class="container px-6 py-16 mx-auto space-y-12 md:py-20 lg:space-y-20 lg:px-12 lg:py-32">
+			<section class="bg-black" x-data="{ shown: false }" x-intersect:enter.full="shown = true">
+				<div class="container relative px-6 py-16 mx-auto space-y-12 md:py-20 lg:space-y-20 lg:px-12 lg:py-32">
 					<div class="text-white">
-						<h2 class="mb-4 text-4xl leading-tight lg:max-w-5xl lg:leading-tight lg:text-7xl">We partner with <span class="font-serif italic">forward-thinking</span> companies</h2>
+						<h2 class="mb-4 text-4xl leading-tight md:leading-tight md:text-5xl lg:max-w-5xl lg:leading-tight lg:text-7xl">We partner with <span class="font-serif italic">forward-thinking</span> companies</h2>
 						<p class="text-2xl leading-normal md:max-w-3xl lg:leading-relaxed lg:text-3xl text-indent">We have the privilege of working with ambitious companies looking to merge design and business strategy.</p>
 					</div>
 					
@@ -198,19 +199,31 @@
 								</div>
 							</div>
 						</div>
+
 					</div>
+
+					<button
+						x-show="shown"
+						@click.prevent="alert('yo')"
+						class="absolute z-20 flex items-center justify-center w-20 h-20 px-2 py-4 text-black bg-white rounded-full bottom-6 right-6"
+						x-transition:enter="transition ease-out duration-300"
+						x-transition:enter-start="opacity-0 transform scale-90"
+						x-transition:enter-end="opacity-100 transform scale-100"
+						x-transition:leave="transition ease-in duration-300"
+						x-transition:leave-start="opacity-100 transform scale-100"
+        				x-transition:leave-end="opacity-0 transform scale-90">Drag</button>
 				</div>
 			</section>
 		</main>
 		
 		<footer class="mt-16 lg:mt-24">
 			<div class="container px-6 pb-12 mx-auto space-y-4 lg:px-12 md:pb-16 lg:pb-24">
-				<h2 class="text-4.5xl leading-tight text-black md:text-5xl md:leading-tight lg:leading-tight lg:text-7xl lg:w-7/12">We’d love to hear about your <span class="font-serif italic">design and business</span> challenges.</h2>
+				<h2 class="text-4.5xl leading-tight text-black md:text-6xl md:leading-tight lg:leading-tight lg:max-w-5xl lg:text-7xl">We’d love to hear about your <span class="font-serif italic">design and business</span> challenges.</h2>
 
 				<div class="max-w-2xl mt-4 space-y-8 text-black md:space-y-12">
 					<p class="text-2xl leading-normal text-indent lg:leading-relaxed lg:text-3xl">Even if you’re unsure what’s next. No sales talk, no strings attached.</p>
 					
-					<div class="flex items-center space-x-6 lg:space-x-8 2xl:space-x-12 ">
+					<div class="flex items-center space-x-6 lg:space-x-8 2xl:space-x-12">
 						<a href="tel:+4528253694" title="Reach out and let us chat about design and business." class="flex items-center space-x-1 lg:space-x-2 2xl:space-x-3">
 							<span class="text-2xl md:text-3xl line 2xl:text-3xl">28 25 36 94</span>
 							<svg class="w-7 h-7 2xl:w-9 2xl:h-9" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18h.01M8 21h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>

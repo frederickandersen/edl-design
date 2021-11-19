@@ -53,6 +53,10 @@
             background-color: #555;
         }
 
+        .scrollbar-white::-webkit-scrollbar-thumb:hover  {
+            background-color: white;
+        }
+
         .scrollbar-white::-webkit-scrollbar {
             height: 2px;
             -webkit-appearance: none;
