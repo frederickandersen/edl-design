@@ -49,6 +49,7 @@ module.exports = {
             },
             fontSize: {
                 '4.5xl': '2.75rem',
+                '7.5xl': '5.25rem',
             },
             keyframes: {
                 marquee: {
@@ -72,7 +73,7 @@ module.exports = {
             },
             gridTemplateColumns: {
                 'section': 'fit-content(35%) 1fr',
-                'contact': 'auto 1fr',
+                'contact': 'fit-content(56%) 1fr',
             },
         },
     },

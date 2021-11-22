@@ -24,6 +24,24 @@
     z-index: 1;
 }
 
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 14px;
+    height: 100%;
+    width: 1px;
+    background: black;
+    z-index: -1;
+}
+
+@media only screen and (min-width: 1024px) {
+    .timeline::before {
+        left: 50%;
+        margin-left: -0.5px;
+    }
+}
+
 @import "tailwindcss/components";
 
 @font-face {
