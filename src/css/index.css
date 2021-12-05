@@ -28,17 +28,20 @@
     content: "";
     position: absolute;
     top: 0;
-    left: 14px;
-    height: 100%;
+    left: 20px;
+    height: 96%;
     width: 1px;
-    background: black;
+    background-color: black;
     z-index: -1;
+    margin-top: 8px;
 }
 
 @media only screen and (min-width: 1024px) {
     .timeline::before {
         left: 50%;
         margin-left: -0.5px;
+        height: 100%;
+        margin-top: auto;
     }
 }
 

@@ -1,0 +1,10 @@
+[[plugins]]
+package = "@netlify/plugin-sitemap"
+
+  [plugins.inputs]
+  buildDir = "build"
+  exclude = [
+    # By file Path
+    './build/404.html',
+    './build/success.html'
+  ]
