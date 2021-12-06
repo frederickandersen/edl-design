@@ -906,6 +906,14 @@ select{
 	right: -1.5rem;
 }
 
+.top-0{
+	top: 0px;
+}
+
+.left-1{
+	left: 0.25rem;
+}
+
 .top-3{
 	top: 0.75rem;
 }
@@ -1107,8 +1115,8 @@ select{
 	height: auto;
 }
 
-.h-104{
-	height: 26rem;
+.h-8{
+	height: 2rem;
 }
 
 .max-h-80{
@@ -1173,6 +1181,10 @@ select{
 
 .w-40{
 	width: 10rem;
+}
+
+.w-8{
+	width: 2rem;
 }
 
 .max-w-2xl{
@@ -1504,17 +1516,8 @@ select{
 	background-color: rgba(249, 186, 67, var(--tw-bg-opacity));
 }
 
-.bg-green{
-	--tw-bg-opacity: 1;
-	background-color: rgba(113, 206, 90, var(--tw-bg-opacity));
-}
-
 .bg-opacity-50{
 	--tw-bg-opacity: 0.5;
-}
-
-.bg-opacity-10{
-	--tw-bg-opacity: 0.1;
 }
 
 .bg-gradient-to-t{
@@ -1688,6 +1691,10 @@ select{
 
 .pt-16{
 	padding-top: 4rem;
+}
+
+.text-center{
+	text-align: center;
 }
 
 .font-sans{
@@ -2188,12 +2195,12 @@ select{
 		top: 0px;
 	}
 
-	.lg\:top-5{
-		top: 1.25rem;
-	}
-
 	.lg\:left-1\/2{
 		left: 50%;
+	}
+
+	.lg\:top-5{
+		top: 1.25rem;
 	}
 
 	.lg\:top-16{
@@ -2257,8 +2264,8 @@ select{
 		margin-left: 1.5rem;
 	}
 
-	.lg\:mb-16{
-		margin-bottom: 4rem;
+	.lg\:-ml-4{
+		margin-left: -1rem;
 	}
 
 	.lg\:-ml-2{
@@ -2267,6 +2274,10 @@ select{
 
 	.lg\:ml-0{
 		margin-left: 0px;
+	}
+
+	.lg\:mb-16{
+		margin-bottom: 4rem;
 	}
 
 	.lg\:mt-0{
@@ -2313,6 +2324,10 @@ select{
 		height: 8rem;
 	}
 
+	.lg\:h-48{
+		height: 12rem;
+	}
+
 	.lg\:max-h-160{
 		max-height: 40rem;
 	}
@@ -2357,6 +2372,10 @@ select{
 		width: 50%;
 	}
 
+	.lg\:w-48{
+		width: 12rem;
+	}
+
 	.lg\:max-w-7xl{
 		max-width: 80rem;
 	}
@@ -2397,6 +2416,14 @@ select{
 		flex-direction: row-reverse;
 	}
 
+	.lg\:flex-col{
+		flex-direction: column;
+	}
+
+	.lg\:items-end{
+		align-items: flex-end;
+	}
+
 	.lg\:items-center{
 		align-items: center;
 	}
@@ -2415,6 +2442,10 @@ select{
 
 	.lg\:gap-20{
 		gap: 5rem;
+	}
+
+	.lg\:gap-16{
+		gap: 4rem;
 	}
 
 	.lg\:gap-4{
@@ -2649,6 +2680,10 @@ select{
 		text-align: center;
 	}
 
+	.lg\:text-right{
+		text-align: right;
+	}
+
 	.lg\:text-2xl{
 		font-size: 1.5rem;
 		line-height: 2rem;
@@ -2818,6 +2853,12 @@ select{
 		margin-bottom: calc(7rem * var(--tw-space-y-reverse));
 	}
 
+	.\32xl\:space-y-32 > :not([hidden]) ~ :not([hidden]){
+		--tw-space-y-reverse: 0;
+		margin-top: calc(8rem * calc(1 - var(--tw-space-y-reverse)));
+		margin-bottom: calc(8rem * var(--tw-space-y-reverse));
+	}
+
 	.\32xl\:pt-96{
 		padding-top: 24rem;
 	}
@@ -2848,5 +2889,9 @@ select{
 
 	.\32xl\:leading-normal{
 		line-height: 1.5;
+	}
+
+	.\32xl\:leading-relaxed{
+		line-height: 1.625;
 	}
 }
