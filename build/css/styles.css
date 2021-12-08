@@ -1577,6 +1577,11 @@ select{
 	   object-position: top;
 }
 
+.object-left{
+	-o-object-position: left;
+	   object-position: left;
+}
+
 .p-6{
 	padding: 1.5rem;
 }
@@ -1864,7 +1869,11 @@ select{
         width: 100%;
         height: 1px;
         bottom: -1px;
-        background-color: #000;
+        background-color: black;
+    }
+
+.line-white:before {
+        background-color: white;
     }
 
 /* Chrome, Safari and Opera */
@@ -2887,11 +2896,11 @@ select{
 		line-height: 1.25;
 	}
 
-	.\32xl\:leading-normal{
-		line-height: 1.5;
-	}
-
 	.\32xl\:leading-relaxed{
 		line-height: 1.625;
+	}
+
+	.\32xl\:leading-normal{
+		line-height: 1.5;
 	}
 }
