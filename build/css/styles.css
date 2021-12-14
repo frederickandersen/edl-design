@@ -1612,6 +1612,18 @@ select{
 	padding: 1.5rem;
 }
 
+.p-12{
+	padding: 3rem;
+}
+
+.p-8{
+	padding: 2rem;
+}
+
+.p-4{
+	padding: 1rem;
+}
+
 .py-4{
 	padding-top: 1rem;
 	padding-bottom: 1rem;
@@ -1750,6 +1762,10 @@ select{
 
 .pl-4{
 	padding-left: 1rem;
+}
+
+.pl-10{
+	padding-left: 2.5rem;
 }
 
 .text-center{
@@ -2121,6 +2137,10 @@ select{
 		overflow-x: visible;
 	}
 
+	.md\:p-12{
+		padding: 3rem;
+	}
+
 	.md\:py-16{
 		padding-top: 4rem;
 		padding-bottom: 4rem;
@@ -2463,6 +2483,20 @@ select{
 		max-width: 20rem;
 	}
 
+	.lg\:max-w-0{
+		max-width: 0rem;
+	}
+
+	.lg\:max-w-max{
+		max-width: -webkit-max-content;
+		max-width: -moz-max-content;
+		max-width: max-content;
+	}
+
+	.lg\:max-w-4xl{
+		max-width: 56rem;
+	}
+
 	.lg\:flex-1{
 		flex: 1 1 0%;
 	}
@@ -2655,6 +2689,10 @@ select{
 		   object-fit: contain;
 	}
 
+	.lg\:p-12{
+		padding: 3rem;
+	}
+
 	.lg\:px-12{
 		padding-left: 3rem;
 		padding-right: 3rem;
@@ -2749,6 +2787,14 @@ select{
 
 	.lg\:pt-6{
 		padding-top: 1.5rem;
+	}
+
+	.lg\:pl-12{
+		padding-left: 3rem;
+	}
+
+	.lg\:pl-4{
+		padding-left: 1rem;
 	}
 
 	.lg\:text-center{
