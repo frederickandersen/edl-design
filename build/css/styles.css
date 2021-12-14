@@ -1608,6 +1608,11 @@ select{
 	   object-position: left;
 }
 
+.object-right{
+	-o-object-position: right;
+	   object-position: right;
+}
+
 .p-6{
 	padding: 1.5rem;
 }
@@ -2687,6 +2692,16 @@ select{
 	.lg\:object-contain{
 		-o-object-fit: contain;
 		   object-fit: contain;
+	}
+
+	.lg\:object-cover{
+		-o-object-fit: cover;
+		   object-fit: cover;
+	}
+
+	.lg\:object-center{
+		-o-object-position: center;
+		   object-position: center;
 	}
 
 	.lg\:p-12{
