@@ -1207,6 +1207,14 @@ select{
 	max-width: 36rem;
 }
 
+.max-w-sm{
+	max-width: 24rem;
+}
+
+.max-w-lg{
+	max-width: 32rem;
+}
+
 .flex-1{
 	flex: 1 1 0%;
 }
@@ -1236,6 +1244,18 @@ select{
 
 .transform-gpu{
 	--tw-transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.list-inside{
+	list-style-position: inside;
+}
+
+.list-disc{
+	list-style-type: disc;
+}
+
+.list-decimal{
+	list-style-type: decimal;
 }
 
 .grid-cols-1{
@@ -1392,6 +1412,12 @@ select{
 	--tw-space-x-reverse: 0;
 	margin-right: calc(3rem * var(--tw-space-x-reverse));
 	margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-2 > :not([hidden]) ~ :not([hidden]){
+	--tw-space-y-reverse: 0;
+	margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+	margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
 .divide-y > :not([hidden]) ~ :not([hidden]){
@@ -1698,6 +1724,34 @@ select{
 	padding-top: 4rem;
 }
 
+.pl-8{
+	padding-left: 2rem;
+}
+
+.pl-12{
+	padding-left: 3rem;
+}
+
+.pl-16{
+	padding-left: 4rem;
+}
+
+.pb-4{
+	padding-bottom: 1rem;
+}
+
+.pt-4{
+	padding-top: 1rem;
+}
+
+.pl-2{
+	padding-left: 0.5rem;
+}
+
+.pl-4{
+	padding-left: 1rem;
+}
+
 .text-center{
 	text-align: center;
 }
@@ -1752,6 +1806,10 @@ select{
 .text-sm{
 	font-size: 0.875rem;
 	line-height: 1.25rem;
+}
+
+.capitalize{
+	text-transform: capitalize;
 }
 
 .italic{
@@ -2345,6 +2403,10 @@ select{
 		max-height: 30rem;
 	}
 
+	.lg\:max-h-208{
+		max-height: 52rem;
+	}
+
 	.lg\:w-6{
 		width: 1.5rem;
 	}
@@ -2665,10 +2727,6 @@ select{
 		padding-bottom: 12rem;
 	}
 
-	.lg\:pt-12{
-		padding-top: 3rem;
-	}
-
 	.lg\:pt-56{
 		padding-top: 14rem;
 	}
@@ -2681,8 +2739,16 @@ select{
 		padding-top: 6rem;
 	}
 
+	.lg\:pt-12{
+		padding-top: 3rem;
+	}
+
 	.lg\:pl-16{
 		padding-left: 4rem;
+	}
+
+	.lg\:pt-6{
+		padding-top: 1.5rem;
 	}
 
 	.lg\:text-center{
