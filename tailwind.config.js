@@ -40,6 +40,7 @@ module.exports = {
                 'purple-gradient': "url('/media/srm-cover-bg.png')",
                 'orange-gradient': "url('/media/bor-cover-bg.png')",
                 'green-gradient': "url('/media/oz-cover-bg.png')",
+                'sky-gradient': "url('/media/joeni-cover-bg.png')",
                 'radial-yellow': "radial-gradient(41.33% 41.33% at 50% 50%, #ffc738 0%, rgba(248,232,225,0) 100%)",
                 'radial-heaven': "radial-gradient(41.33% 41.33% at 50% 50%, rgba(252,164,69,1) 0%, rgba(148,187,233,0) 100%)",
                 'radial-green': "radial-gradient(41.33% 41.33% at 50% 50%, #D3DABA 0%, rgba(181,252,70,0) 100%)",

@@ -1119,6 +1119,10 @@ select{
 	height: 2rem;
 }
 
+.max-h-256{
+	max-height: 64rem;
+}
+
 .max-h-80{
 	max-height: 20rem;
 }
@@ -1207,14 +1211,6 @@ select{
 	max-width: 36rem;
 }
 
-.max-w-sm{
-	max-width: 24rem;
-}
-
-.max-w-lg{
-	max-width: 32rem;
-}
-
 .flex-1{
 	flex: 1 1 0%;
 }
@@ -1244,18 +1240,6 @@ select{
 
 .transform-gpu{
 	--tw-transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.list-inside{
-	list-style-position: inside;
-}
-
-.list-disc{
-	list-style-type: disc;
-}
-
-.list-decimal{
-	list-style-type: decimal;
 }
 
 .grid-cols-1{
@@ -1304,6 +1288,10 @@ select{
 
 .gap-16{
 	gap: 4rem;
+}
+
+.gap-4{
+	gap: 1rem;
 }
 
 .gap-2{
@@ -1412,12 +1400,6 @@ select{
 	--tw-space-x-reverse: 0;
 	margin-right: calc(3rem * var(--tw-space-x-reverse));
 	margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.space-y-2 > :not([hidden]) ~ :not([hidden]){
-	--tw-space-y-reverse: 0;
-	margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-	margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
 .divide-y > :not([hidden]) ~ :not([hidden]){
@@ -1570,6 +1552,14 @@ select{
 	background-image: url('/media/bor-cover-bg.png');
 }
 
+.bg-sky-gradient{
+	background-image: url('/media/joeni-cover-bg.png');
+}
+
+.bg-radial-heaven{
+	background-image: radial-gradient(41.33% 41.33% at 50% 50%, rgba(252,164,69,1) 0%, rgba(148,187,233,0) 100%);
+}
+
 .from-white{
 	--tw-gradient-from: #fff;
 	--tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
@@ -1581,6 +1571,14 @@ select{
 
 .bg-right-bottom{
 	background-position: right bottom;
+}
+
+.bg-top{
+	background-position: top;
+}
+
+.bg-bottom{
+	background-position: bottom;
 }
 
 .object-contain{
@@ -1608,17 +1606,18 @@ select{
 	   object-position: left;
 }
 
-.object-right{
-	-o-object-position: right;
-	   object-position: right;
+.object-left-bottom{
+	-o-object-position: left bottom;
+	   object-position: left bottom;
+}
+
+.object-left-top{
+	-o-object-position: left top;
+	   object-position: left top;
 }
 
 .p-6{
 	padding: 1.5rem;
-}
-
-.p-12{
-	padding: 3rem;
 }
 
 .p-8{
@@ -1741,36 +1740,12 @@ select{
 	padding-top: 4rem;
 }
 
-.pl-8{
-	padding-left: 2rem;
-}
-
-.pl-12{
-	padding-left: 3rem;
-}
-
-.pl-16{
-	padding-left: 4rem;
-}
-
 .pb-4{
 	padding-bottom: 1rem;
 }
 
-.pt-4{
-	padding-top: 1rem;
-}
-
-.pl-2{
-	padding-left: 0.5rem;
-}
-
 .pl-4{
 	padding-left: 1rem;
-}
-
-.pl-10{
-	padding-left: 2.5rem;
 }
 
 .text-center{
@@ -1827,10 +1802,6 @@ select{
 .text-sm{
 	font-size: 0.875rem;
 	line-height: 1.25rem;
-}
-
-.capitalize{
-	text-transform: capitalize;
 }
 
 .italic{
@@ -2083,6 +2054,10 @@ select{
 		height: 6rem;
 	}
 
+	.md\:max-h-160{
+		max-height: 40rem;
+	}
+
 	.md\:w-80{
 		width: 20rem;
 	}
@@ -2140,10 +2115,6 @@ select{
 
 	.md\:overflow-x-visible{
 		overflow-x: visible;
-	}
-
-	.md\:p-12{
-		padding: 3rem;
 	}
 
 	.md\:py-16{
@@ -2420,16 +2391,16 @@ select{
 		height: 12rem;
 	}
 
-	.lg\:max-h-160{
-		max-height: 40rem;
+	.lg\:max-h-208{
+		max-height: 52rem;
 	}
 
 	.lg\:max-h-120{
 		max-height: 30rem;
 	}
 
-	.lg\:max-h-208{
-		max-height: 52rem;
+	.lg\:max-h-160{
+		max-height: 40rem;
 	}
 
 	.lg\:w-6{
@@ -2486,16 +2457,6 @@ select{
 
 	.lg\:max-w-xs{
 		max-width: 20rem;
-	}
-
-	.lg\:max-w-0{
-		max-width: 0rem;
-	}
-
-	.lg\:max-w-max{
-		max-width: -webkit-max-content;
-		max-width: -moz-max-content;
-		max-width: max-content;
 	}
 
 	.lg\:max-w-4xl{
@@ -2558,6 +2519,10 @@ select{
 		gap: 4rem;
 	}
 
+	.lg\:gap-8{
+		gap: 2rem;
+	}
+
 	.lg\:gap-4{
 		gap: 1rem;
 	}
@@ -2587,6 +2552,10 @@ select{
 
 	.lg\:gap-y-32{
 		row-gap: 8rem;
+	}
+
+	.lg\:gap-y-24{
+		row-gap: 6rem;
 	}
 
 	.lg\:space-x-16 > :not([hidden]) ~ :not([hidden]){
@@ -2694,18 +2663,17 @@ select{
 		   object-fit: contain;
 	}
 
-	.lg\:object-cover{
-		-o-object-fit: cover;
-		   object-fit: cover;
+	.lg\:object-top{
+		-o-object-position: top;
+		   object-position: top;
 	}
 
-	.lg\:object-center{
-		-o-object-position: center;
-		   object-position: center;
+	.lg\:p-24{
+		padding: 6rem;
 	}
 
-	.lg\:p-12{
-		padding: 3rem;
+	.lg\:p-20{
+		padding: 5rem;
 	}
 
 	.lg\:px-12{
@@ -2746,6 +2714,11 @@ select{
 	.lg\:py-5{
 		padding-top: 1.25rem;
 		padding-bottom: 1.25rem;
+	}
+
+	.lg\:px-24{
+		padding-left: 6rem;
+		padding-right: 6rem;
 	}
 
 	.lg\:pb-24{
@@ -2800,16 +2773,12 @@ select{
 		padding-left: 4rem;
 	}
 
-	.lg\:pt-6{
-		padding-top: 1.5rem;
+	.lg\:pb-12{
+		padding-bottom: 3rem;
 	}
 
 	.lg\:pl-12{
 		padding-left: 3rem;
-	}
-
-	.lg\:pl-4{
-		padding-left: 1rem;
 	}
 
 	.lg\:text-center{
