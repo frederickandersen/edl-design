@@ -1211,6 +1211,10 @@ select{
 	max-width: 36rem;
 }
 
+.max-w-screen-md{
+	max-width: 768px;
+}
+
 .flex-1{
 	flex: 1 1 0%;
 }
@@ -1544,20 +1548,16 @@ select{
 	background-image: url('/media/po-cover-bg.png');
 }
 
+.bg-sky-gradient{
+	background-image: url('/media/joeni-cover-bg.png');
+}
+
 .bg-purple-gradient{
 	background-image: url('/media/srm-cover-bg.png');
 }
 
 .bg-orange-gradient{
 	background-image: url('/media/bor-cover-bg.png');
-}
-
-.bg-sky-gradient{
-	background-image: url('/media/joeni-cover-bg.png');
-}
-
-.bg-radial-heaven{
-	background-image: radial-gradient(41.33% 41.33% at 50% 50%, rgba(252,164,69,1) 0%, rgba(148,187,233,0) 100%);
 }
 
 .from-white{
@@ -1571,10 +1571,6 @@ select{
 
 .bg-right-bottom{
 	background-position: right bottom;
-}
-
-.bg-top{
-	background-position: top;
 }
 
 .bg-bottom{
@@ -1611,9 +1607,9 @@ select{
 	   object-position: left bottom;
 }
 
-.object-left-top{
-	-o-object-position: left top;
-	   object-position: left top;
+.object-right-top{
+	-o-object-position: right top;
+	   object-position: right top;
 }
 
 .p-6{
@@ -2550,12 +2546,12 @@ select{
 		row-gap: 5rem;
 	}
 
-	.lg\:gap-y-32{
-		row-gap: 8rem;
-	}
-
 	.lg\:gap-y-24{
 		row-gap: 6rem;
+	}
+
+	.lg\:gap-y-32{
+		row-gap: 8rem;
 	}
 
 	.lg\:space-x-16 > :not([hidden]) ~ :not([hidden]){
@@ -2666,6 +2662,11 @@ select{
 	.lg\:object-top{
 		-o-object-position: top;
 		   object-position: top;
+	}
+
+	.lg\:object-right-top{
+		-o-object-position: right top;
+		   object-position: right top;
 	}
 
 	.lg\:p-24{

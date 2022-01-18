@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+	<head>
+    	<meta charset="UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Blue Ocean Robotics – EDL</title>
+
+		<meta name="title" content="Blue Ocean Robotics – EDL">
+    	<meta name="description" content="We worked as part of a multidisciplinary team to help design the newest iteration of the UVD Robot.">
+		
+		<meta property="og:title" content="Blue Ocean Robotics – EDL">
+    	<meta property="og:description" content="We worked as part of a multidisciplinary team to help design the newest iteration of the UVD Robot.">
+		<meta property="og:site_name" content="EDL®">
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="https://www.edl.dk/media/bor-open-graph.jpg">
+
+		<link rel="alternate" hreflang="en" href="https://edl.dk/work/blue-ocean-robotics.html" />
+		<link rel="alternate" hreflang="da" href="https://edl.dk/da/cases/blue-ocean-robotics.html" />
+		<link rel="alternate" hreflang="x-default" href="https://edl.dk/work/blue-ocean-robotics.html" />
+
+		<link rel="icon" href="../favicon.png">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com"> 
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap" rel="stylesheet">
+		<link href="../css/styles.css" rel="stylesheet">
+
+		<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+	</head>
+
+	<body class="overflow-x-hidden font-sans antialiased bg-white" x-data="{ show: false }" :class="{ 'overflow-y-hidden' : show, '' : !open }">
+		<header class="absolute z-20 w-full py-4">
+			<div class="container px-6 mx-auto lg:px-12">
+				<div class="relative flex items-center justify-between h-16 lg:h-20">
+					<nav class="flex items-center justify-between flex-1">
+						<a href="/" title="Go to the homepage." class="z-20">
+							<svg class="w-auto h-10 text-black lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40">
+								<path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/>
+							</svg>
+						</a>
+					
+						<div class="hidden w-full md:block">
+							<div class="flex justify-end space-x-8 lg:space-x-16">
+								<a href="/work.html" class="text-lg text-black lg:text-2xl line" title="View all of our work.">Work</a>
+								<a href="/approach.html" class="text-lg text-black lg:text-2xl" title="See how we can help you, and how we plan to do it.">Approach</a>
+								<a href="/about.html" class="text-lg text-black lg:text-2xl" title="Get to know EDL and the people behind it.">About</a>
+								<a href="/contact.html" class="text-lg text-black lg:text-2xl" title="Tell us about a project or say hi!">Contact</a>
+							</div>
+						</div>
+
+						<button @click="show = !show" class="fixed z-20 flex items-center justify-center w-20 h-20 px-2 py-4 text-white bg-black rounded-full bottom-6 right-6 md:hidden" x-text="!show ? 'Menu' : 'Close'">Menu</button>
+
+						<div class="fixed inset-0 bg-black bg-opacity-50 md:hidden" x-show="show">
+							<div
+								x-show="show"
+								@click.outside="show = false;"
+								x-transition:enter="transition ease-in-out duration-300"
+								x-transition:enter-start="translate-y-full transform opacity-0"
+								x-transition:enter-end="translate-y-0 transform opacity-100"
+								x-transition:leave="transition ease-in-out duration-300"
+								x-transition:leave-start="translate-y-0 transform"
+								x-transition:leave-end="translate-y-full transform"
+								class="fixed inset-x-0 bottom-0 z-10 flex w-full p-6 pb-8 bg-white rounded-t-2xl transform-gpu">
+
+								<div class="flex flex-col items-start w-full">
+									<nav class="flex flex-col items-start space-y-4">
+										<a href="/work.html" class="inline text-2xl text-black line" title="View all of our work." aria-current="page">Work</a>
+										<a href="/approach.html" class="inline text-2xl text-black" title="See how we can help you, and how we plan to do it.">Approach</a>
+										<a href="/about.html" class="inline text-2xl text-black" title="Get to know EDL and the people behind it.">About</a>
+										<a href="/contact.html" class="inline text-2xl text-black" title="Tell us about a project or say hi!">Contact</a>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<!-- Hero -->
+			<section>
+				<!-- Media -->
+				<div class="h-screen bg-bottom bg-cover bg-sky-gradient">
+					<picture class="block w-full h-full mx-auto">
+						<source>
+						<img src="../media/bor-cover-bg.png" class="object-cover object-right-top w-full h-full" alt="A UVD Robot driving autonomously across the screen.">
+					</picture>
+				</div>
+
+				<!-- Title -->
+				<div class="container px-6 pt-12 pb-6 mx-auto md:pb-8 lg:pt-24 lg:px-12 lg:pb-24">
+					<h1 class="text-4.5xl leading-tight text-black md:leading-tight md:text-6xl lg:text-7xl lg:leading-tight lg:max-w-7xl 2xl:leading-tight 2xl:text-8xl hyphenate">We helped design the visual design for the most <span class="font-serif italic">innovative iteration</span> of the global robot phenomenon.</h1>
+				</div>
+			</section>
+
+			<div class="container flex flex-col-reverse px-6 mx-auto lg:flex-row lg:space-x-8 lg:px-12">
+				<!-- Sidebar -->
+				<div class="flex flex-col w-full mt-16 space-y-10 lg:space-y-12 lg:max-w-xs lg:mt-0 lg:h-full xl:max-w-sm lg:sticky lg:top-16">
+					<div>
+						<h4 class="text-2xl leading-normal">Deliverables</h4>
+							
+						<div class="flex flex-col mt-3 space-y-3 text-lg leading-snug">
+							<span>Prototyping</span>
+							<span>UI design</span>
+
+							<a href="/services/design-sprints.html" target="blank" rel="noopener" title="Learn more about Design Sprints and how we facilitate them." class="flex items-center space-x-1 text-black">
+								<span class="line">Design sprints</span>
+								<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+									<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
+								</svg>
+							</a>
+
+							<span>Design system</span>
+						</div>
+					</div>
+
+					<div>
+						<h4 class="text-2xl leading-normal">Launch</h4>
+							
+						<div class="flex flex-col mt-2 space-y-3">
+							<span class="text-lg leading-snug">Summer 2020</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="w-full space-y-12 lg:space-y-24">
+					<div class="max-w-5xl">
+						<h2 class="text-2xl leading-normal lg:leading-relaxed lg:text-4xl text-indent">We worked as part of a multidisciplinary team of exceptional UX designers, researchers, and engineers at Blue Ocean Robotics to build the next generation of the UVD Robot.</h2>
+					</div>
+
+					<div class="max-w-2xl space-y-4 text-xl leading-normal 2xl:max-w-3xl lg:leading-relaxed lg:text-2xl lg:space-y-6">
+						<h3 class="mb-4 text-3xl leading-tight lg:leading-tight lg:text-4xl">A safer environment for hospitals</h3>
+						<p class="text-indent">While COVID-19 overwhelms hospitals with highly infectious patients, a fully autonomous robot is the perfect solution. The ability to remotely disinfect hospital rooms in a matter of minutes makes for a safer environment for both staff and bedridden patients.</p>
+					</div>
+
+					<figure>
+						<picture class="block max-w-screen-md overflow-hidden rounded-md bg-gray">
+							<source>
+							<img src="../media/bor-robot.jpg" class="object-contain w-full h-full" alt="Image of a third-generation UVD Robot in an airport."/>
+						</picture>
+
+						<figcaption class="w-full max-w-2xl mt-3 text-sm lg:leading-snug lg:text-base opacity-60">The third-generation UV-C Robot in an airport. Photo by <a href="https://uvd.blue-ocean-robotics.com" class="line" title="Visit UVD Robots' website." target="noopener">UVD Robots</a>.</figcaption>
+					</figure>
+					
+					<div class="max-w-2xl space-y-4 text-xl leading-normal 2xl:max-w-3xl lg:leading-relaxed lg:text-2xl lg:space-y-6">
+						<h3 class="mb-4 text-3xl leading-tight lg:leading-tight lg:text-4xl">Our role</h3>
+						<p class="text-indent">We designed a design system around efficiency, clarity, and a sense of security for the Human Machine Interface (HMI). Systemizing our approach to design makes for a clear and delightful user experience all the time.</p>
+					</div>
+
+					<figure>
+						<picture class="block max-w-screen-md overflow-hidden rounded-md bg-gray">
+							<source>
+							<img src="../media/bor-frederick.jpg" class="object-contain w-full h-full" alt="Image of Frederick Andersen next to the UVD Robot."/>
+						</picture>
+
+						<figcaption class="w-full max-w-2xl mt-3 text-sm lg:leading-snug lg:text-base opacity-60">Our designer Frederick with the UVD Robot.</figcaption>
+					</figure>
+				</div>
+			</div>
+		</main>
+
+		<footer class="mt-16 lg:mt-24 2xl:mt-40">
+			<div class="container px-6 pb-12 mx-auto space-y-4 lg:px-12 md:pb-16 lg:pb-24">
+				<h2 class="text-4.5xl leading-tight text-black md:text-6xl md:leading-tight lg:leading-tight lg:text-7xl lg:max-w-5xl">We’d love to hear about your <span class="font-serif italic">design and business</span> challenges.</h2>
+
+				<div class="max-w-2xl mt-4 space-y-8 text-black md:space-y-12">
+					<p class="text-2xl leading-normal text-indent lg:leading-relaxed lg:text-3xl">Even if you’re unsure what’s next. No sales talk, no strings attached.</p>
+					
+					<div class="flex items-center space-x-6 lg:space-x-8 2xl:space-x-12 ">
+						<a href="tel:+4528253694" title="Reach out and let us chat about design and business." class="flex items-center space-x-1 lg:space-x-2 2xl:space-x-3">
+							<span class="text-2xl md:text-3xl line 2xl:text-3xl">28 25 36 94</span>
+							<svg class="w-7 h-7 2xl:w-9 2xl:h-9" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18h.01M8 21h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						</a>
+						
+						<a href="/contact.html" title="Reach out about a project, job application or just to say hi." class="flex items-center space-x-1 2xl:space-x-3 lg:space-x-2">
+							<span class="text-2xl md:text-3xl line 2xl:text-3xl">Contact us</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="container flex flex-col w-full px-6 py-8 mx-auto lg:flex-row-reverse lg:px-12 md:py-16">
+				<nav class="flex mb-12 space-x-8 lg:mb-0">
+					<a href="https://instagram.com/edl.design" target="blank" rel="noopener" title="See EDL’s profile on Instagram." class="flex items-center space-x-1 text-black">
+						<span class="text-lg leading-tight lg:text-xl line">Instagram</span>
+						<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
+						</svg>
+					</a>
+					
+					<a href="https://linkedin.com/company/edldesign" target="blank" rel="noopener" title="See EDL’s profile on LinkedIn" class="flex items-center space-x-1 text-black">
+						<span class="text-lg leading-tight lg:text-xl line">LinkedIn</span>
+						<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
+						</svg>
+					</a>
+				</nav>
+				
+				<span class="text-lg leading-tight text-black lg:text-xl lg:flex-1">2021 &copy; EDL ApS</span>
+			</div>
+		</footer>
+	</body>
+</html>
