@@ -1602,14 +1602,14 @@ select{
 	   object-position: left;
 }
 
-.object-left-bottom{
-	-o-object-position: left bottom;
-	   object-position: left bottom;
-}
-
 .object-right-top{
 	-o-object-position: right top;
 	   object-position: right top;
+}
+
+.object-left-bottom{
+	-o-object-position: left bottom;
+	   object-position: left bottom;
 }
 
 .p-6{
@@ -2662,11 +2662,6 @@ select{
 	.lg\:object-top{
 		-o-object-position: top;
 		   object-position: top;
-	}
-
-	.lg\:object-right-top{
-		-o-object-position: right top;
-		   object-position: right top;
 	}
 
 	.lg\:p-24{
