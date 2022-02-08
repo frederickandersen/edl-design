@@ -39,6 +39,7 @@ module.exports = {
                 'blue-gradient': "url('/media/po-cover-bg.png')",
                 'purple-gradient': "url('/media/srm-cover-bg.png')",
                 'orange-gradient': "url('/media/bor-cover-bg.png')",
+                'blood-orange-gradient': "url('/media/kettle-hero-bg.png')",
                 'green-gradient': "url('/media/oz-cover-bg.png')",
                 'sky-gradient': "url('/media/joeni-cover-bg.png')",
                 'radial-yellow': "radial-gradient(41.33% 41.33% at 50% 50%, #ffc738 0%, rgba(248,232,225,0) 100%)",
