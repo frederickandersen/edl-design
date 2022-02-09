@@ -1051,10 +1051,6 @@ select{
 	display: grid;
 }
 
-.list-item{
-	display: list-item;
-}
-
 .hidden{
 	display: none;
 }
@@ -1252,10 +1248,6 @@ select{
 
 .list-disc{
 	list-style-type: disc;
-}
-
-.list-decimal{
-	list-style-type: decimal;
 }
 
 .grid-cols-1{
@@ -1530,14 +1522,14 @@ select{
 	background-color: rgba(249, 186, 67, var(--tw-bg-opacity));
 }
 
-.bg-mint-purple{
-	--tw-bg-opacity: 1;
-	background-color: rgba(216, 185, 218, var(--tw-bg-opacity));
-}
-
 .bg-blue{
 	--tw-bg-opacity: 1;
 	background-color: rgba(50, 87, 220, var(--tw-bg-opacity));
+}
+
+.bg-mint-purple{
+	--tw-bg-opacity: 1;
+	background-color: rgba(216, 185, 218, var(--tw-bg-opacity));
 }
 
 .bg-opacity-50{
@@ -1560,20 +1552,20 @@ select{
 	background-image: url('/media/po-cover-bg.png');
 }
 
-.bg-sky-gradient{
-	background-image: url('/media/joeni-cover-bg.png');
+.bg-blood-orange-gradient{
+	background-image: url('/media/kettle-hero-bg.png');
 }
 
 .bg-orange-gradient{
 	background-image: url('/media/bor-cover-bg.png');
 }
 
-.bg-purple-gradient{
-	background-image: url('/media/srm-cover-bg.png');
+.bg-sky-gradient{
+	background-image: url('/media/joeni-cover-bg.png');
 }
 
-.bg-blood-orange-gradient{
-	background-image: url('/media/kettle-hero-bg.png');
+.bg-purple-gradient{
+	background-image: url('/media/srm-cover-bg.png');
 }
 
 .from-white{
@@ -1591,6 +1583,10 @@ select{
 
 .bg-bottom{
 	background-position: bottom;
+}
+
+.bg-left{
+	background-position: left;
 }
 
 .object-contain{
@@ -1626,6 +1622,11 @@ select{
 .object-left-bottom{
 	-o-object-position: left bottom;
 	   object-position: left bottom;
+}
+
+.object-bottom{
+	-o-object-position: bottom;
+	   object-position: bottom;
 }
 
 .p-6{
@@ -1766,10 +1767,6 @@ select{
 
 .pl-2{
 	padding-left: 0.5rem;
-}
-
-.pt-4{
-	padding-top: 1rem;
 }
 
 .text-center{
@@ -2139,6 +2136,16 @@ select{
 
 	.md\:overflow-x-visible{
 		overflow-x: visible;
+	}
+
+	.md\:object-contain{
+		-o-object-fit: contain;
+		   object-fit: contain;
+	}
+
+	.md\:object-bottom{
+		-o-object-position: bottom;
+		   object-position: bottom;
 	}
 
 	.md\:py-16{
@@ -2692,12 +2699,17 @@ select{
 		   object-position: top;
 	}
 
-	.lg\:p-24{
-		padding: 6rem;
+	.lg\:object-bottom{
+		-o-object-position: bottom;
+		   object-position: bottom;
 	}
 
 	.lg\:p-20{
 		padding: 5rem;
+	}
+
+	.lg\:p-24{
+		padding: 6rem;
 	}
 
 	.lg\:p-16{
