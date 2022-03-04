@@ -942,6 +942,10 @@ select{
 	margin: -0.75rem;
 }
 
+.m-auto{
+	margin: auto;
+}
+
 .mx-auto{
 	margin-left: auto;
 	margin-right: auto;
@@ -1031,6 +1035,10 @@ select{
 	margin-right: 0.25rem;
 }
 
+.mt-32{
+	margin-top: 8rem;
+}
+
 .block{
 	display: block;
 }
@@ -1049,6 +1057,10 @@ select{
 
 .grid{
 	display: grid;
+}
+
+.contents{
+	display: contents;
 }
 
 .hidden{
@@ -1203,16 +1215,24 @@ select{
 	max-width: 48rem;
 }
 
-.max-w-6xl{
-	max-width: 72rem;
+.max-w-7xl{
+	max-width: 80rem;
 }
 
 .max-w-xl{
 	max-width: 36rem;
 }
 
+.max-w-6xl{
+	max-width: 72rem;
+}
+
 .max-w-screen-md{
 	max-width: 768px;
+}
+
+.max-w-4xl{
+	max-width: 56rem;
 }
 
 .flex-1{
@@ -1577,16 +1597,17 @@ select{
 	background-size: cover;
 }
 
+.bg-clip-text{
+	-webkit-background-clip: text;
+	        background-clip: text;
+}
+
 .bg-right-bottom{
 	background-position: right bottom;
 }
 
 .bg-bottom{
 	background-position: bottom;
-}
-
-.bg-left{
-	background-position: left;
 }
 
 .object-contain{
@@ -1622,11 +1643,6 @@ select{
 .object-left-bottom{
 	-o-object-position: left bottom;
 	   object-position: left bottom;
-}
-
-.object-bottom{
-	-o-object-position: bottom;
-	   object-position: bottom;
 }
 
 .p-6{
@@ -1769,6 +1785,14 @@ select{
 	padding-left: 0.5rem;
 }
 
+.pt-208{
+	padding-top: 52rem;
+}
+
+.pt-96{
+	padding-top: 24rem;
+}
+
 .text-center{
 	text-align: center;
 }
@@ -1820,6 +1844,16 @@ select{
 	line-height: 1rem;
 }
 
+.text-7xl{
+	font-size: 4.5rem;
+	line-height: 1;
+}
+
+.text-6xl{
+	font-size: 3.75rem;
+	line-height: 1;
+}
+
 .text-sm{
 	font-size: 0.875rem;
 	line-height: 1.25rem;
@@ -1862,6 +1896,10 @@ select{
 .text-red{
 	--tw-text-opacity: 1;
 	color: rgba(237, 11, 10, var(--tw-text-opacity));
+}
+
+.text-transparent{
+	color: transparent;
 }
 
 .antialiased{
@@ -2176,6 +2214,10 @@ select{
 		padding-top: 20rem;
 	}
 
+	.md\:pt-48{
+		padding-top: 12rem;
+	}
+
 	.md\:pb-8{
 		padding-bottom: 2rem;
 	}
@@ -2213,6 +2255,11 @@ select{
 	.md\:text-xl{
 		font-size: 1.25rem;
 		line-height: 1.75rem;
+	}
+
+	.md\:text-9xl{
+		font-size: 8rem;
+		line-height: 1;
 	}
 
 	.md\:leading-tight{
@@ -2376,6 +2423,14 @@ select{
 
 	.lg\:mt-0{
 		margin-top: 0px;
+	}
+
+	.lg\:mt-16{
+		margin-top: 4rem;
+	}
+
+	.lg\:mt-12{
+		margin-top: 3rem;
 	}
 
 	.lg\:flex{
@@ -2699,11 +2754,6 @@ select{
 		   object-position: top;
 	}
 
-	.lg\:object-bottom{
-		-o-object-position: bottom;
-		   object-position: bottom;
-	}
-
 	.lg\:p-20{
 		padding: 5rem;
 	}
@@ -2823,6 +2873,10 @@ select{
 
 	.lg\:pl-4{
 		padding-left: 1rem;
+	}
+
+	.lg\:pt-64{
+		padding-top: 16rem;
 	}
 
 	.lg\:text-center{
