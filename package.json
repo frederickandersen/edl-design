@@ -6,7 +6,7 @@
     "dev": "concurrently \"npm run watch\" \"npm run serve\"",
     "serve": "live-server ./build",
     "watch": "tailwindcss -i ./src/css/index.css -o ./build/css/styles.css --watch",
-    "build": "NODE_ENV=production tailwindcss -o ./build/css/styles.css --minify"
+    "build": "NODE_ENV=production tailwindcss -i ./src/css/index.css -o ./build/css/styles.css --minify"
   },
   "repository": {
     "type": "git",
