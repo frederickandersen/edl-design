@@ -1,51 +1,9 @@
 /* This CSS resource incorporates links to font software which is the valuable copyrighted property of Monotype and/or its suppliers. You may not attempt to copy, install, redistribute, convert, modify or reverse engineer this font software. Please contact Monotype with any questions regarding Web Fonts: https://www.linotype.com */
 @import url("https://fast.fonts.net/lt/1.css?apiType=css&c=e143d2a0-7875-4e3d-8e59-d49b3eead621&fontids=5664093");
 
-@import "tailwindcss/base";
-
-::selection {
-    background-color: black;
-    color: white;
-}
-
-.bg-black ::selection {
-    background-color: white;
-    color: black;
-}
-
-.link:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.timeline::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 20px;
-    height: 96%;
-    width: 1px;
-    background-color: black;
-    z-index: -1;
-    margin-top: 8px;
-}
-
-@media only screen and (min-width: 1024px) {
-    .timeline::before {
-        left: 50%;
-        margin-left: -0.5px;
-        height: 100%;
-        margin-top: auto;
-    }
-}
-
-@import "tailwindcss/components";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @font-face {
     font-family: "Helvetica Neue LT W05 55 Roman";
@@ -53,9 +11,50 @@
     font-display: swap;
 }
 
-@import "tailwindcss/utilities";
+@layer base {
+    ::selection {
+        background-color: black;
+        color: white;
+    }
+
+    .bg-black ::selection {
+        background-color: white;
+        color: black;
+    }
+}
 
 @layer utilities {
+    .link:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    
+    .timeline::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 20px;
+        height: 96%;
+        width: 1px;
+        background-color: black;
+        margin-top: 8px;
+    }
+    
+    @media only screen and (min-width: 1024px) {
+        .timeline::before {
+            left: 50%;
+            margin-left: -0.5px;
+            height: 100%;
+            margin-top: auto;
+        }
+    }
+
     .line {
         position: relative;
     }
@@ -73,43 +72,40 @@
         background-color: white;
     }
 
-    @variants responsive {
-        /* Chrome, Safari and Opera */
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
     
-        .no-scrollbar {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
-        }
-        
-        .scrollbar-white::-webkit-scrollbar-thumb {
-            background-color: #555;
-        }
+    .scrollbar-white::-webkit-scrollbar-thumb {
+        background-color: #555;
+    }
 
-        .scrollbar-white::-webkit-scrollbar-thumb:hover  {
-            background-color: white;
-        }
+    .scrollbar-white::-webkit-scrollbar-thumb:hover  {
+        background-color: white;
+    }
 
-        .scrollbar-white::-webkit-scrollbar {
-            height: 2px;
-            -webkit-appearance: none;
-            display: block;
-        }
+    .scrollbar-white::-webkit-scrollbar {
+        height: 2px;
+        -webkit-appearance: none;
+        display: block;
+    }
 
-        .scrollbar-white::-webkit-scrollbar-track {
-            background-color: #222;
-        }
+    .scrollbar-white::-webkit-scrollbar-track {
+        background-color: #222;
+    }
 
-        .hyphenate {
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            hyphens: auto;
-        }
+    .hyphenate {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
 
-        .text-indent {
-            text-indent: 2.5rem;
-        }
+    .text-indent {
+        text-indent: 2.5rem;
     }
 }

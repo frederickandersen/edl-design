@@ -1,11 +1,6 @@
-// tailwind.config.js
-const colors = require('tailwindcss/colors')
-
 module.exports = {
-    mode: 'jit',
-    purge: [
-        'src/*.html',
-        'build/**/*.html',
+    content: [
+        './build/**/*.{html,js}'
     ],
     theme: {
         fontFamily: {
@@ -15,8 +10,8 @@ module.exports = {
         colors: {
             transparent: 'transparent',
             current: 'currentColor',
-            black: colors.black,
-            white: colors.white,
+            black: '#000',
+            white: '#FFF',
             gray: '#E8EBE8',
             red: '#ED0B0A',
             blue: '#3257DC',
@@ -29,10 +24,6 @@ module.exports = {
                 'blue': '#C7D3DE',
                 'pink': '#D8BABC',
             },
-        },
-        minHeight: {
-            '104': '26rem',
-            '160': '40rem',
         },
         extend: {
             backgroundImage: {
@@ -53,16 +44,6 @@ module.exports = {
                 '4.5xl': '2.75rem',
                 '7.5xl': '5.25rem',
             },
-            keyframes: {
-                marquee: {
-                    '0%': { transform: 'translateX(0)' },
-                    '100%': { transform: 'translateX(-100%)' },
-                },
-            },
-            animation: {
-                'marquee': 'marquee 50s linear infinite',
-                'spin-slow': 'spin 10s linear infinite',
-            },
             spacing: {
                 '104': '26rem',
                 '120': '30rem',
@@ -70,24 +51,18 @@ module.exports = {
                 '208': '52rem',
                 '256': '64rem',
             },
-            zIndex: {
-                '-1': '-1',
-            },
             gridTemplateColumns: {
                 'section': 'fit-content(35%) 1fr',
                 'contact': 'fit-content(56%) 1fr',
             },
         },
     },
-    variants: {
-        scrollSnapType: ['responsive'],
-    },
     corePlugins: {
         container: false
     },
     plugins: [
         require('@tailwindcss/forms'),
-        require('tailwindcss-scroll-snap'),
+        
         function ({ addComponents }) {
             addComponents({
                 '.container': {
