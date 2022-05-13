@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="da">
+<html lang="da" class="scroll-smooth">
 	<head>
     	<meta charset="UTF-8" />
     	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,9 +21,12 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap" rel="stylesheet">
 		<link href="../css/styles.css" rel="stylesheet">
+		<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
 		<script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
 		<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+
+		<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 	</head>
 
 	<body class="overflow-x-hidden font-sans antialiased bg-white" x-data="{ show: false }" :class="{ 'overflow-y-hidden' : show, '' : !open }">
@@ -80,21 +83,21 @@
 				<div class="container px-6 mx-auto lg:px-12">
 					<h1 class="leading-tight text-5xl text-center md:leading-tight md:text-6xl lg:text-7.5xl lg:leading-tight 2xl:leading-tight 2xl:text-8xl">Design som abonnement</h1>
 					<div class="max-w-5xl mx-auto mt-4 space-y-10 text-center">
-						<p class="text-2xl leading-normal md:leading-normal md:text-4xl">Sig farvel til obskure timepriser, og hej til ubegrænsede revisioner til en fast månedlig ydelse.</p>
-						<a class="inline-flex items-center px-6 py-4 text-xl text-black bg-white rounded-full lg:px-8 lg:py-5 lg:text-2xl" href="#priser" title="Take a deep-dive in some of most recent work.">Se hvad det koster</a>
+						<p class="text-2xl leading-normal md:leading-normal md:text-4xl">Skaler din virksomhed med ad hoc UX og UI design til en fast månedlig ydelse.</p>
+						<a class="inline-flex items-center px-6 py-4 text-xl text-black bg-white rounded-md lg:px-8 lg:py-5 lg:text-2xl" href="#priser" title="Bliv scrollet ned til prisoversigten for design abonnementet.">Se hvad det koster</a>
 					</div>
 				</div>
 			</section>
 
 			<section class="pt-16 bg-black md:pt-24 lg:pt-32">
-				<div class="container gap-8 px-6 mx-auto columns-3 lg:gap-24 sm:columns-2 lg:columns-3 lg:px-12">
+				<div class="container gap-8 px-6 mx-auto columns-3 lg:gap-24 2xl:gap-28 sm:columns-2 lg:columns-3 lg:px-12">
 					<div class="space-y-4 text-white">
 						<svg width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M25.667 49V31.733a1.4 1.4 0 0 0-1.4-1.4H7M25.667 49H8.4A1.4 1.4 0 0 1 7 47.6V30.333M25.667 49h7M7 30.333v-7M14 7H8.4A1.4 1.4 0 0 0 7 8.4V14m25.667-7h-9.334M49 23.333v9.334M42 7h5.6A1.4 1.4 0 0 1 49 8.4V14m-7 35h5.6a1.4 1.4 0 0 0 1.4-1.4V42M25.667 23.333h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 						</svg>
 
-						<h3 class="text-2xl leading-tight text-white">Fleksibelt og skalerbart</h3>
-						<p class="text-xl leading-normal text-white/80">Behovet for design kan variere fra måned til måned. Skaler op eller ned efter behov, og annuller når som helst.</p>
+						<h3 class="text-2xl leading-tight text-white 2xl:text-3xl 2xl:leading-tight">Fleksibelt og skalerbart</h3>
+						<p class="text-xl leading-normal text-white/80 2xl:text-2xl 2xl:leading-normal">Behovet for design kan variere fra måned til måned. Skaler op eller ned efter behov, og annuller når som helst.</p>
 					</div>
 
 					<div class="space-y-4 text-white">
@@ -102,8 +105,8 @@
 							<path d="M25.667 49V31.733a1.4 1.4 0 0 0-1.4-1.4H7M25.667 49H8.4A1.4 1.4 0 0 1 7 47.6V30.333M25.667 49h7M7 30.333v-7M14 7H8.4A1.4 1.4 0 0 0 7 8.4V14m25.667-7h-9.334M49 23.333v9.334M42 7h5.6A1.4 1.4 0 0 1 49 8.4V14m-7 35h5.6a1.4 1.4 0 0 0 1.4-1.4V42M25.667 23.333h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 						</svg>
 
-						<h3 class="text-2xl leading-tight text-white">In-house designer</h3>
-						<p class="text-xl leading-normal text-white/80">I dagligdagen sidder vi side om side med produktejere, udviklere og ledere i din virksomhed.</p>
+						<h3 class="text-2xl leading-tight text-white 2xl:text-3xl 2xl:leading-tight">In-house designer</h3>
+						<p class="text-xl leading-normal text-white/80 2xl:text-2xl 2xl:leading-normal">I dagligdagen sidder vi side om side med produktejere, udviklere og ledere i din virksomhed.</p>
 					</div>
 
 					<div class="space-y-4 text-white">
@@ -111,20 +114,49 @@
 							<path d="M25.667 49V31.733a1.4 1.4 0 0 0-1.4-1.4H7M25.667 49H8.4A1.4 1.4 0 0 1 7 47.6V30.333M25.667 49h7M7 30.333v-7M14 7H8.4A1.4 1.4 0 0 0 7 8.4V14m25.667-7h-9.334M49 23.333v9.334M42 7h5.6A1.4 1.4 0 0 1 49 8.4V14m-7 35h5.6a1.4 1.4 0 0 0 1.4-1.4V42M25.667 23.333h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 						</svg>
 
-						<h3 class="text-2xl leading-tight text-white">Uovertruffen kvalitet</h3>
-						<p class="text-xl leading-normal text-white/80">Vi leverer et kvalitetsniveau, der erstatter behovet for en <span class="underline decoration-dotted">fuldtidsansat seniordesigner</span>.</p>
+						<h3 class="text-2xl leading-tight text-white 2xl:text-3xl 2xl:leading-tight">Den bedste kvalitet</h3>
+						<p class="text-xl leading-normal text-white/80 2xl:text-2xl 2xl:leading-normal">On-demand designkompetencer, der erstatter behovet for fuldtidsansatte seniordesignere.</p>
 					</div>
 				</div>
 			</section>
 
 			<section class="pt-16 bg-black md:pt-24 lg:pt-32">
+				<div class="container gap-8 px-6 mx-auto lg:grid lg:grid-cols-2 lg:px-12 lg:gap-12">
+					<picture class="block w-full bg-white/10 h-80 md:h-104 lg:h-120 2xl:h-160">
+						<source>
+						<img src="../media/oz-map.png" class="object-cover w-full h-full" alt="The bottom of the map view with a search function visible."/>
+					</picture>
+
+					<picture class="block w-full bg-white/10 h-80 md:h-104 lg:h-120 2xl:h-160">
+						<source>
+						<img src="../media/oz-map.png" class="object-cover w-full h-full" alt="The bottom of the map view with a search function visible."/>
+					</picture>
+
+					<picture class="block w-full bg-white/10 h-80 md:h-104 lg:h-120 2xl:h-160">
+						<source>
+						<img src="../media/oz-map.png" class="object-cover w-full h-full" alt="The bottom of the map view with a search function visible."/>
+					</picture>
+
+					<picture class="block w-full bg-white/10 h-80 md:h-104 lg:h-120 2xl:h-160">
+						<source>
+						<img src="../media/oz-map.png" class="object-cover w-full h-full" alt="The bottom of the map view with a search function visible."/>
+					</picture>
+
+					<picture class="block w-full bg-white/10 h-80 md:h-104 lg:h-120 2xl:h-160">
+						<source>
+						<img src="../media/oz-map.png" class="object-cover w-full h-full" alt="The bottom of the map view with a search function visible."/>
+					</picture>
+				</div>
+			</section>
+
+			<section class="pt-16 bg-black md:pt-24 lg:pt-32 2xl:pt-48">
 				<div class="container px-6 mx-auto space-y-8 lg:px-12 lg:space-y-16">
-					<div class="max-w-4xl mx-auto space-y-4 text-center text-white">
+					<div class="space-y-4 text-center text-white">
 						<h2 class="text-4xl leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7xl">Hverdagen med design som abonnement</h2>
-						<p class="text-2xl leading-normal lg:leading-relaxed lg:text-3xl">Et no-bullshit sammenspil mellem design og softwareudvikling.</p>
+						<p class="text-2xl leading-normal lg:leading-relaxed lg:text-3xl">En no-bullshit erstatning af freelancere og månedlange designprojekter.</p>
 					</div>
 
-					<div x-data="{ active: 0 }" class="max-w-4xl space-y-3 text-white lg:space-y-4">
+					<div x-data="{ active: 0 }" class="max-w-4xl mx-auto space-y-3 text-white lg:space-y-4">
 						<div x-data="{ id: 1, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border border-white rounded-md">
 							<h2>
 								<button @click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full p-6 text-2xl leading-tight lg:leading-tight lg:text-3xl">
@@ -133,7 +165,7 @@
 											<span class="text-lg lg:text-2xl">1</span>
 										</span>
 										
-										<span>Du tilføjer én opgave til din kø</span>
+										<span>Designkø</span>
 									</div>
 									
 									<svg x-show="expanded" class="w-6 h-6 ml-4 text-white lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
@@ -159,7 +191,7 @@
 											<span class="text-lg lg:text-2xl">2</span>
 										</span>
 										
-										<span>Din designer udarbejder udkast</span>
+										<span>Designer udarbejder udkast</span>
 									</div>
 
 									<svg x-show="expanded" class="w-6 h-6 ml-4 text-white lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
@@ -185,7 +217,7 @@
 											<span class="text-lg lg:text-2xl">3</span>
 										</span>
 										
-										<span>Vi reviderer indtil godkendelse</span>
+										<span>Revision indtil godkendelse</span>
 									</div>
 
 									<svg x-show="expanded" class="w-6 h-6 ml-4 text-white lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
@@ -199,6 +231,301 @@
 							</h2>
 
 							<div x-show="expanded" class="px-6 pb-6 text-xl leading-normal lg:pr-16 lg:pl-24 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
+								Visuals can help distinguish competing products. We build design systems that align engineering teams, support product growth, and accelerate time-to-market.
+							</div>
+						</div>
+
+						<div x-data="{ id: 4, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border border-white rounded-md">
+							<h2>
+								<button @click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full p-6 text-2xl leading-tight lg:leading-tight lg:text-3xl">
+									<div class="flex items-center">
+										<span class="flex items-center justify-center w-10 h-10 mr-6 border border-white rounded-full lg:w-12 lg:h-12">
+											<span class="text-lg lg:text-2xl">4</span>
+										</span>
+										
+										<span>Overlevering</span>
+									</div>
+
+									<svg x-show="expanded" class="w-6 h-6 ml-4 text-white lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+										<path d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									
+									<svg x-show="!expanded" class="w-6 h-6 ml-4 text-white lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+										<path d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+							</h2>
+
+							<div x-show="expanded" class="px-6 pb-6 text-xl leading-normal lg:pr-16 lg:pl-24 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
+								Visuals can help distinguish competing products. We build design systems that align engineering teams, support product growth, and accelerate time-to-market.
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="pt-16 bg-black md:pt-24 lg:pt-32 2xl:pt-48">
+				<div class="container px-6 mx-auto space-y-10 text-white md:space-y-14 lg:px-12 lg:space-y-20">
+					<div class="w-full space-y-4">
+						<h2 class="text-4xl leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7xl">Dit abonnement, dine behov</h2>
+						<p class="text-2xl leading-normal lg:leading-relaxed lg:text-3xl">Vælg frit, hvilke kompetencer, der skal sættes i spil.</p>
+					</div>
+					
+					<div class="space-y-6 text-2xl leading-tight lg:gap-x-16 lg:leading-tight lg:text-3xl lg:columns-2 lg:max-w-7xl 2xl:max-w-none">
+						<ul class="space-y-6 lg:space-y-10">
+							<li>Rapid prototyping</li>
+							<li>User experience design</li>
+							<li>User interface design</li>
+							<li>Brugerundersøgelser og tests</li>
+							<li>Produktstrategi</li>
+						</ul>
+
+						<ul class="space-y-6 lg:space-y-10">
+							<li>Designsystemer</li>
+							<li>Roadmapping</li>
+							<li>Vækstoptimering</li>
+							<li>Informationsarkitektur</li>
+							<li>Dokumentation</li>
+						</ul>
+					</div>
+
+					<div class="flex flex-col text-xl leading-normal lg:items-center lg:flex-row lg:space-x-2 lg:text-2xl lg:leading-normal">
+						<span class="text-white/80">I tvivl om jeres behov?</span>
+
+						<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/frederickandersen/designabonnement?hide_event_type_details=1&hide_gdpr_banner=1'});return false;" class="flex items-center space-x-1" title="Book en uforpligtende snak om behov og strategi.">
+							<span class="line line-white">Book en uforpligtende snak</span>
+							<svg class="w-5 h-5 lg:h-6 lg:w-6" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+								<path d="M13.163 20L21 12l-7.837-8-1.347 1.375 5.545 5.643H3v1.964h14.361l-5.545 5.66L13.163 20z" fill="currentColor"/>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="py-16 bg-black md:py-24 lg:py-32 2xl:py-48" id="priser">
+				<div class="container px-6 mx-auto space-y-10 text-white md:space-y-14 lg:px-12 lg:space-y-20">
+					<div class="w-full space-y-4 text-center">
+						<h2 class="text-4xl leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7xl">Én plan, ingen overraskelser</h2>
+						<p class="text-2xl leading-normal lg:leading-relaxed lg:text-3xl">Transparent abonnement, der understøtter enhver softwarevirksomhed.</p>
+					</div>
+					
+					<div class="mx-auto space-y-6 lg:grid-flow-col lg:space-y-0 lg:gap-8 lg:grid lg:grid-rows-2 lg:grid-cols-9 max-w-7xl">
+						<!-- Plan -->
+						<article class="p-8 space-y-8 border border-white rounded-md lg:row-span-2 lg:col-span-5 2xl:p-16 lg:p-12 border-opacity-20">
+							<header class="space-y-2 lg:space-y-4">
+								<h3 class="text-3xl leading-tight lg:leading-tight lg:text-4xl 2xl:text-5xl 2xl:leading-tight">Design</h3>
+								<p class="text-xl leading-normal text-white/80 lg:max-w-2xl lg:leading-normal lg:text-2xl">For startups, scale-ups eller etablerede virksomheder med svingende designbehov.</p>
+							</header>
+
+							<div class="space-y-2">
+								<div class="text-3xl leading-tight lg:leading-tight lg:text-3xl 2xl:text-4xl 2xl:leading-tight">30.000 kr. <span class="text-lg leading-tight">/ måned</span></div>
+								<span class="block leading-tight text-normal 2xl:leading-tight text-white/60 2xl:text-lg">Pause eller annuller når som helst</span>
+							</div>
+
+							<a class="block px-6 py-4 text-xl text-center text-black bg-white rounded-md lg:px-8 lg:py-5 lg:text-2xl" href="#" title="Kom i gang med design som abonnement.">Kom i gang</a>
+
+							<div class="space-y-2 text-xl leading-normal">
+								<span>Hvad får I?</span>
+
+								<ol class="pl-8 space-y-2 list-disc">
+									<li class="pl-2">Unikt design</li>
+									<li class="pl-2">Ubegrænset revision</li>
+									<li class="pl-2">Eget design team</li>
+									<li class="pl-2">Eget komponentbibliotek</li>
+									<li class="pl-2">Eget kundeområde</li>
+									<li class="pl-2">Kildefiler</li>
+								</ol>
+							</div>
+						</article>
+
+						<!-- En hurtig snak online -->
+						<article class="p-8 space-y-6 text-black bg-white rounded-md lg:col-span-4 lg:p-10">
+							<div class="relative inline-flex -space-x-6">
+								<img class="object-cover w-16 h-16 border-4 border-white rounded-full" src="../media/edl-anders-wind.png" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
+								<img class="object-cover w-16 h-16 border-4 border-white rounded-full" src="../media/edl-casper-stendal.png" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
+								<img class="object-cover w-16 h-16 border-4 border-white rounded-full" src="../media/edl-frederick-andersen.png" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
+								<div class="absolute bottom-0 right-0 w-5 h-5 border-4 border-white rounded-full bg-green"></div>
+							</div>
+
+							<header class="space-y-2">
+								<h3 class="text-2xl leading-tight">En hurtig snak online</h3>
+								<p class="text-xl leading-normal text-black/80">Vi sidder altid klar til at gennemgå konceptet og besvare dine spørgsmål.</p>
+							</header>
+
+							<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/frederickandersen/designabonnement?hide_event_type_details=1&hide_gdpr_banner=1'});return false;" class="flex items-center space-x-2 text-xl leading-normal" title="Book en uforpligtende snak om behov og strategi.">
+								<span class="line">Book en uforpligtende snak</span>
+								<svg class="w-5 h-5" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+									<path d="M13.163 20L21 12l-7.837-8-1.347 1.375 5.545 5.643H3v1.964h14.361l-5.545 5.66L13.163 20z" fill="currentColor"/>
+								</svg>
+							</a>
+						</article>
+
+						<!-- Gratis designsession -->
+						<article class="p-8 space-y-6 text-white border border-white rounded-md lg:col-span-4 border-opacity-20 lg:p-10">
+							<svg class="w-12 h-12" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+								<path d="M30.564 36.046A15.891 15.891 0 0 0 36 34.11l7.2 1.34-1.34-7.2a15.998 15.998 0 0 0-8.617-23.107 16 16 0 0 0-21.077 12.805M15 44.25a11 11 0 1 0-9.528-5.5L4.55 43.7l4.95-.92a10.947 10.947 0 0 0 5.5 1.47Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							
+							<header class="space-y-2">
+								<h3 class="text-2xl leading-tight">Gratis designsession</h3>
+								<p class="text-xl leading-normal text-white/80">Oplev, hvordan vi arbejder i en 90 minutters design-session, hvor vi takler en aktuel designudfordring.</p>
+							</header>
+
+							<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/frederickandersen/designabonnement?hide_event_type_details=1&hide_gdpr_banner=1'});return false;" class="flex items-center space-x-2 text-xl leading-normal" title="Book en uforpligtende snak om behov og strategi.">
+								<span class="line line-white">Planlæg session</span>
+								<svg class="w-5 h-5" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+									<path d="M13.163 20L21 12l-7.837-8-1.347 1.375 5.545 5.643H3v1.964h14.361l-5.545 5.66L13.163 20z" fill="currentColor"/>
+								</svg>
+							</a>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section class="py-16 md:pt-24 lg:pt-32 2xl:pt-40">
+				<div class="container px-6 mx-auto space-y-8 lg:px-12 lg:space-y-16">
+					<div class="space-y-4 text-center">
+						<h2 class="text-4xl leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7xl">Ofte stillede spørgsmål</h2>
+						<p class="text-2xl leading-normal lg:leading-relaxed lg:text-3xl">Hvis du har andre spørgsmål, så lad os høre fra dig.</p>
+					</div>
+
+					<div x-data="{ active: 0 }" class="max-w-4xl mx-auto space-y-3 lg:space-y-4">
+						<div x-data="{ id: 1, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border border-black rounded-md">
+							<h2>
+								<button @click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full px-6 text-2xl leading-tight py-7 lg:leading-tight lg:text-3xl">
+									<span>Hvordan kommer man i gang?</span>
+									
+									<svg x-show="expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+										<path d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									
+									<svg x-show="!expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+										<path d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+							</h2>
+
+							<div x-show="expanded" class="px-6 pb-6 text-xl leading-normal lg:pr-16 lg:pb-8 lg:text-2xl lg:leading-relaxed">
+								<p class="text-indent">Din virksomhed får sit eget kundeområde, hvor I kan specificere og klargøre designopgaver. Når I er parat, udvælger I én aktiv opgave, som vi kaster os over.</p>
+							</div>
+						</div>
+						
+						<div x-data="{ id: 2, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border border-black rounded-md">
+							<h2>
+								<button @click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full p-6 text-2xl leading-tight lg:leading-tight lg:text-3xl">
+									<span>Hvorfor hyrer jeg ikke bare en fuldtidsdesigner?</span>
+
+									<svg x-show="expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+										<path d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									
+									<svg x-show="!expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+										<path d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+							</h2>
+
+							<div x-show="expanded" class="px-6 pb-6 text-xl leading-normal lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
+								Rapid prototyping allows us to try and test many designs before executing just a few. Commonly accomplished across four days, we transform napkin sketches into blueprints for your ideal user experience.
+							</div>
+						</div>
+
+						<div x-data="{ id: 3, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border border-black rounded-md">
+							<h2>
+								<button @click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full p-6 text-2xl leading-tight lg:leading-tight lg:text-3xl">
+									<span>Er det virkelig ubegrænset revision?</span>
+
+									<svg x-show="expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+										<path d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									
+									<svg x-show="!expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+										<path d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+							</h2>
+
+							<div x-show="expanded" class="px-6 pb-6 text-xl leading-normal lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
+								Visuals can help distinguish competing products. We build design systems that align engineering teams, support product growth, and accelerate time-to-market.
+							</div>
+						</div>
+
+						<div x-data="{ id: 4, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border border-black rounded-md">
+							<h2>
+								<button @click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full p-6 text-2xl leading-tight lg:leading-tight lg:text-3xl">
+									<span>Hvem designer for mig?</span>
+
+									<svg x-show="expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+										<path d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									
+									<svg x-show="!expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+										<path d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+							</h2>
+
+							<div x-show="expanded" class="px-6 pb-6 text-xl leading-normal lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
+								Visuals can help distinguish competing products. We build design systems that align engineering teams, support product growth, and accelerate time-to-market.
+							</div>
+						</div>
+
+						<div x-data="{ id: 5, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border border-black rounded-md">
+							<h2>
+								<button @click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full p-6 text-2xl leading-tight lg:leading-tight lg:text-3xl">
+									<span>Kan jeg annullere når som helst?</span>
+
+									<svg x-show="expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+										<path d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									
+									<svg x-show="!expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+										<path d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+							</h2>
+
+							<div x-show="expanded" class="px-6 pb-6 text-xl leading-normal lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
+								Visuals can help distinguish competing products. We build design systems that align engineering teams, support product growth, and accelerate time-to-market.
+							</div>
+						</div>
+
+						<div x-data="{ id: 6, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border border-black rounded-md">
+							<h2>
+								<button @click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full p-6 text-2xl leading-tight lg:leading-tight lg:text-3xl">
+									<span>Hvad sker der, hvis jeg annullere abonnementet?</span>
+
+									<svg x-show="expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+										<path d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									
+									<svg x-show="!expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+										<path d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+							</h2>
+
+							<div x-show="expanded" class="px-6 pb-6 text-xl leading-normal lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
+								Visuals can help distinguish competing products. We build design systems that align engineering teams, support product growth, and accelerate time-to-market.
+							</div>
+						</div>
+
+						<div x-data="{ id: 7, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border border-black rounded-md">
+							<h2>
+								<button @click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full p-6 text-2xl leading-tight lg:leading-tight lg:text-3xl">
+									<span>Hvad er leveringstiden?</span>
+
+									<svg x-show="expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+										<path d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									
+									<svg x-show="!expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+										<path d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+							</h2>
+
+							<div x-show="expanded" class="px-6 pb-6 text-xl leading-normal lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
 								Visuals can help distinguish competing products. We build design systems that align engineering teams, support product growth, and accelerate time-to-market.
 							</div>
 						</div>
