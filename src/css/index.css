@@ -23,6 +23,16 @@
     }
 }
 
+@layer components {
+    .tooltip {
+        @apply w-5 h-5 ml-2 text-sm rounded-full hover:text-black bg-gray;
+    }
+
+    .accordion {
+        @apply flex items-center justify-between w-full py-6 text-xl leading-snug text-left md:p-6 md:text-2xl md:leading-snug lg:leading-snug lg:text-3xl;
+    }
+}
+
 @layer utilities {
     .link:before {
         content: "";
@@ -108,4 +118,11 @@
     .text-indent {
         text-indent: 2.5rem;
     }
+}
+
+.tippy-box[data-theme~='default'] {
+    background-color: #5438D1;
+    color: white;
+    font-size: 18px;
+    padding: 8px;
 }

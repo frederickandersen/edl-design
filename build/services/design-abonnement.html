@@ -7,10 +7,10 @@
 		<title>Design som abonnement - EDL</title>
 
 		<meta name="title" content="Design som abonnement – EDL">
-    	<meta name="description" content="Sig farvel til obskure timepriser, og hej til ubegrænsede revisioner til en fast månedlig ydelse.">
+    	<meta name="description" content="Skalér din virksomhed med ad hoc UX og UI design til en fast månedlig ydelse. Slip for freelancere og månedlange designprojekter.">
 
 		<meta property="og:title" content="Design som abonnement – EDL">
-    	<meta property="og:description" content="Sig farvel til obskure timepriser, og hej til ubegrænsede revisioner til en fast månedlig ydelse.">
+    	<meta property="og:description" content="Skalér din virksomhed med ad hoc UX og UI design til en fast månedlig ydelse. Slip for freelancere og månedlange designprojekter.">
 		<meta property="og:site_name" content="EDL®">
 		<meta property="og:type" content="website">
 		<meta property="og:image" content="https://www.edl.dk/media/open-graph.jpg">
@@ -21,8 +21,11 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap" rel="stylesheet">
 		<link href="../css/styles.css" rel="stylesheet">
+		
 		<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+		<link href="https://unpkg.com/tippy.js@6/dist/tippy.css" rel="stylesheet" />
 
+		<script src="https://cdn.jsdelivr.net/npm/@ryangjchandler/alpine-tooltip@1.x.x/dist/cdn.min.js" defer></script>
 		<script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
 		<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 
@@ -42,10 +45,10 @@
 
 						<div class="hidden w-full md:block">
 							<div class="flex justify-end space-x-8 text-white lg:space-x-16">
-								<a href="/work.html" class="text-lg lg:text-2xl" title="View all of our work.">Work</a>
-								<a href="/approach.html" class="text-lg lg:text-2xl line line-white" title="See how we can help you, and how we plan to do it.">Approach</a>
-								<a href="/about.html" class="text-lg lg:text-2xl" title="Get to know EDL and the people behind it.">About</a>
-								<a href="/contact.html" class="text-lg lg:text-2xl" title="Tell us about a project or say hi!">Contact</a>
+								<a href="#hvordan-det-fungerer" class="text-lg lg:text-2xl" title="Læs om, hvordan design som abonnement fungerer i praksis.">Hvordan det fungerer</a>
+								<a href="#kompetencer" class="text-lg lg:text-2xl" title="Se hvilke kompetencer, vi tilbyder i abonnementet.">Kompetencer</a>
+								<a href="#priser" class="text-lg lg:text-2xl" title="Find ud af, hvad det koster og hvad, der er inkluderet.">Priser</a>
+								<a href="/contact.html" class="text-lg lg:text-2xl" title="Tell us about a project or say hi!">Kom i gang</a>
 							</div>
 						</div>
 
@@ -65,10 +68,10 @@
 
 								<div class="flex flex-col items-start w-full">
 									<nav class="flex flex-col items-start space-y-4">
-										<a href="/work.html" class="inline text-2xl text-black" title="View all of our work.">Work</a>
-										<a href="/approach.html" class="inline text-2xl text-black line" title="See how we can help you, and how we plan to do it.">Approach</a>
-										<a href="/about.html" class="inline text-2xl text-black" title="Get to know EDL and the people behind it.">About</a>
-										<a href="/contact.html" class="inline text-2xl text-black" title="Tell us about a project or say hi!">Contact</a>
+										<a href="#hvordan-det-fungerer" class="inline text-2xl text-black" title="Læs om, hvordan design som abonnement fungerer i praksis.">Hvordan det fungerer</a>
+										<a href="#kompetencer" class="inline text-2xl text-black line" title="Se hvilke kompetencer, vi tilbyder i abonnementet.">Kompetencer</a>
+										<a href="#priser" class="inline text-2xl text-black" title="Find ud af, hvad det koster og hvad, der er inkluderet.">Priser</a>
+										<a href="/contact.html" class="inline text-2xl text-black" title="Tell us about a project or say hi!">Kom i gang</a>
 									</nav>
 								</div>
 							</div>
@@ -78,214 +81,356 @@
 			</div>
 		</header>
 
-		<main>
-			<section class="pt-32 text-white bg-black md:pt-48 lg:pt-56 2xl:pt-64">
-				<div class="container px-6 mx-auto lg:px-12">
-					<h1 class="leading-tight text-5xl text-center md:leading-tight md:text-6xl lg:text-7.5xl lg:leading-tight 2xl:leading-tight 2xl:text-8xl">Design som abonnement</h1>
-					<div class="max-w-5xl mx-auto mt-4 space-y-10 text-center">
-						<p class="text-2xl leading-normal md:leading-normal md:text-4xl">Skaler din virksomhed med ad hoc UX og UI design til en fast månedlig ydelse.</p>
-						<a class="inline-flex items-center px-6 py-4 text-xl text-black bg-white rounded-md lg:px-8 lg:py-5 lg:text-2xl" href="#priser" title="Bliv scrollet ned til prisoversigten for design abonnementet.">Se hvad det koster</a>
-					</div>
-				</div>
-			</section>
+		<main x-data="{ open: false }">
+			<div class="fixed inset-0 z-50 items-start justify-center hidden w-full h-full py-12 overflow-y-auto bg-black/60 touch-none" :class="{ 'flex' : open, 'hidden' : !open }" x-show="open">
+				<div class="w-full p-8 mx-6 space-y-4 bg-white rounded-md md:max-w-xl md:p-10 lg:p-12" @click.away="open = false">
+					<header class="flex items-center justify-between">
+						<h3 class="text-3xl leading-tight">Fortæl os lidt om dig</h3>
 
-			<section class="pt-16 bg-black md:pt-24 lg:pt-32">
-				<div class="container gap-8 px-6 mx-auto columns-3 lg:gap-24 2xl:gap-28 sm:columns-2 lg:columns-3 lg:px-12">
-					<div class="space-y-4 text-white">
-						<svg width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M25.667 49V31.733a1.4 1.4 0 0 0-1.4-1.4H7M25.667 49H8.4A1.4 1.4 0 0 1 7 47.6V30.333M25.667 49h7M7 30.333v-7M14 7H8.4A1.4 1.4 0 0 0 7 8.4V14m25.667-7h-9.334M49 23.333v9.334M42 7h5.6A1.4 1.4 0 0 1 49 8.4V14m-7 35h5.6a1.4 1.4 0 0 0 1.4-1.4V42M25.667 23.333h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>
+						<button class="p-2 text-black rounded-md select-none bg-gray no-outline focus:shadow-outline" @click="open = false">
+							<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="w-6 h-6" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 19 5 17.6l5.6-5.6L5 6.4 6.4 5l5.6 5.6L17.6 5 19 6.4 13.4 12l5.6 5.6-1.4 1.4-5.6-5.6Z"/></svg>
+						</button>
+					</header>
 
-						<h3 class="text-2xl leading-tight text-white 2xl:text-3xl 2xl:leading-tight">Fleksibelt og skalerbart</h3>
-						<p class="text-xl leading-normal text-white/80 2xl:text-2xl 2xl:leading-normal">Behovet for design kan variere fra måned til måned. Skaler op eller ned efter behov, og annuller når som helst.</p>
-					</div>
+					<p class="max-w-lg text-xl leading-normal text-black/80">Vi rækker ud kort efter for at få styr på det praktiske, så vi kan kickstarte processen.</p>
+					
+					<form name="Designabonnement" class="space-y-4" action="/success.html" data-netlify="true" method="POST" netlify-honeypot="bot-field">
+						<div class="hidden">
+							<label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+						</div>
+						
+						<div class="sm:col-span-2">
+							<label for="name" class="block text-base text-black lg:text-lg">Navn <span class="text-red">*</span></label>
+							
+							<div class="mt-1.5">
+								<input type="text" required name="name" id="name" autocomplete="given-name" class="block w-full px-4 py-3 text-black border-black focus:shadow-sm focus:ring-black focus:border-black">
+							</div>
+						</div>
 
-					<div class="space-y-4 text-white">
-						<svg width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M25.667 49V31.733a1.4 1.4 0 0 0-1.4-1.4H7M25.667 49H8.4A1.4 1.4 0 0 1 7 47.6V30.333M25.667 49h7M7 30.333v-7M14 7H8.4A1.4 1.4 0 0 0 7 8.4V14m25.667-7h-9.334M49 23.333v9.334M42 7h5.6A1.4 1.4 0 0 1 49 8.4V14m-7 35h5.6a1.4 1.4 0 0 0 1.4-1.4V42M25.667 23.333h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>
+						<div class="sm:col-span-2">
+							<label for="company" class="block text-base text-black lg:text-lg">Virksomhed <span class="text-red">*</span></label>
+							
+							<div class="mt-1.5">
+								<input type="text" required name="company" id="company" autocomplete="company" class="block w-full px-4 py-3 text-black border-black focus:shadow-sm focus:ring-black focus:border-black">
+							</div>
+						</div>
 
-						<h3 class="text-2xl leading-tight text-white 2xl:text-3xl 2xl:leading-tight">In-house designer</h3>
-						<p class="text-xl leading-normal text-white/80 2xl:text-2xl 2xl:leading-normal">I dagligdagen sidder vi side om side med produktejere, udviklere og ledere i din virksomhed.</p>
-					</div>
+						<div>
+							<label for="email" class="block text-base text-black lg:text-lg">Email <span class="text-red">*</span></label>
 
-					<div class="space-y-4 text-white">
-						<svg width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M25.667 49V31.733a1.4 1.4 0 0 0-1.4-1.4H7M25.667 49H8.4A1.4 1.4 0 0 1 7 47.6V30.333M25.667 49h7M7 30.333v-7M14 7H8.4A1.4 1.4 0 0 0 7 8.4V14m25.667-7h-9.334M49 23.333v9.334M42 7h5.6A1.4 1.4 0 0 1 49 8.4V14m-7 35h5.6a1.4 1.4 0 0 0 1.4-1.4V42M25.667 23.333h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>
-
-						<h3 class="text-2xl leading-tight text-white 2xl:text-3xl 2xl:leading-tight">Den bedste kvalitet</h3>
-						<p class="text-xl leading-normal text-white/80 2xl:text-2xl 2xl:leading-normal">On-demand designkompetencer, der erstatter behovet for fuldtidsansatte seniordesignere.</p>
-					</div>
-				</div>
-			</section>
-
-			<section class="pt-16 bg-black md:pt-24 lg:pt-32">
-				<div class="container gap-8 px-6 mx-auto lg:grid lg:grid-cols-2 lg:px-12 lg:gap-12">
-					<picture class="block w-full bg-white/10 h-80 md:h-104 lg:h-120 2xl:h-160">
-						<source>
-						<img src="../media/oz-map.png" class="object-cover w-full h-full" alt="The bottom of the map view with a search function visible."/>
-					</picture>
-
-					<picture class="block w-full bg-white/10 h-80 md:h-104 lg:h-120 2xl:h-160">
-						<source>
-						<img src="../media/oz-map.png" class="object-cover w-full h-full" alt="The bottom of the map view with a search function visible."/>
-					</picture>
-
-					<picture class="block w-full bg-white/10 h-80 md:h-104 lg:h-120 2xl:h-160">
-						<source>
-						<img src="../media/oz-map.png" class="object-cover w-full h-full" alt="The bottom of the map view with a search function visible."/>
-					</picture>
-
-					<picture class="block w-full bg-white/10 h-80 md:h-104 lg:h-120 2xl:h-160">
-						<source>
-						<img src="../media/oz-map.png" class="object-cover w-full h-full" alt="The bottom of the map view with a search function visible."/>
-					</picture>
-
-					<picture class="block w-full bg-white/10 h-80 md:h-104 lg:h-120 2xl:h-160">
-						<source>
-						<img src="../media/oz-map.png" class="object-cover w-full h-full" alt="The bottom of the map view with a search function visible."/>
-					</picture>
-				</div>
-			</section>
-
-			<section class="pt-16 bg-black md:pt-24 lg:pt-32 2xl:pt-48">
-				<div class="container px-6 mx-auto space-y-8 lg:px-12 lg:space-y-16">
-					<div class="space-y-4 text-center text-white">
-						<h2 class="text-4xl leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7xl">Hverdagen med design som abonnement</h2>
-						<p class="text-2xl leading-normal lg:leading-relaxed lg:text-3xl">En no-bullshit erstatning af freelancere og månedlange designprojekter.</p>
-					</div>
-
-					<div x-data="{ active: 0 }" class="max-w-4xl mx-auto space-y-3 text-white lg:space-y-4">
-						<div x-data="{ id: 1, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border border-white rounded-md">
-							<h2>
-								<button @click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full p-6 text-2xl leading-tight lg:leading-tight lg:text-3xl">
-									<div class="flex items-center">
-										<span class="flex items-center justify-center w-10 h-10 mr-6 border border-white rounded-full lg:w-12 lg:h-12">
-											<span class="text-lg lg:text-2xl">1</span>
-										</span>
-										
-										<span>Designkø</span>
-									</div>
-									
-									<svg x-show="expanded" class="w-6 h-6 ml-4 text-white lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-										<path d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									
-									<svg x-show="!expanded" class="w-6 h-6 ml-4 text-white lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-										<path d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-								</button>
-							</h2>
-
-							<div x-show="expanded" class="px-6 pb-6 text-xl leading-normal lg:pr-16 lg:pb-8 lg:pl-24 lg:text-2xl lg:leading-relaxed">
-								<p class="text-indent">Din virksomhed får sit eget kundeområde, hvor I kan specificere og klargøre designopgaver. Når I er parat, udvælger I én aktiv opgave, som vi kaster os over.</p>
+							<div class="mt-1.5">
+								<input id="email" required name="email" type="email" autocomplete="email" class="block w-full px-4 py-3 text-black border-black focus:shadow-sm focus:ring-black focus:border-black">
 							</div>
 						</div>
 						
-						<div x-data="{ id: 2, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border border-white rounded-md">
-							<h2>
-								<button @click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full p-6 text-2xl leading-tight lg:leading-tight lg:text-3xl">
-									<div class="flex items-center">
-										<span class="flex items-center justify-center w-10 h-10 mr-6 border border-white rounded-full lg:w-12 lg:h-12">
-											<span class="text-lg lg:text-2xl">2</span>
-										</span>
-										
-										<span>Designer udarbejder udkast</span>
-									</div>
-
-									<svg x-show="expanded" class="w-6 h-6 ml-4 text-white lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-										<path d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									
-									<svg x-show="!expanded" class="w-6 h-6 ml-4 text-white lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-										<path d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-								</button>
-							</h2>
-
-							<div x-show="expanded" class="px-6 pb-6 text-xl leading-normal lg:pr-16 lg:pl-24 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
-								Rapid prototyping allows us to try and test many designs before executing just a few. Commonly accomplished across four days, we transform napkin sketches into blueprints for your ideal user experience.
+						<div>
+							<label for="phone" class="block text-base text-black lg:text-lg">Telefon</label>
+							
+							<div class="mt-1.5">
+								<input type="text" name="phone" id="phone" autocomplete="tel" class="block w-full px-4 py-3 text-black border-black focus:shadow-sm focus:ring-black focus:border-black" aria-describedby="phone-optional">
 							</div>
 						</div>
 
-						<div x-data="{ id: 3, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border border-white rounded-md">
-							<h2>
-								<button @click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full p-6 text-2xl leading-tight lg:leading-tight lg:text-3xl">
-									<div class="flex items-center">
-										<span class="flex items-center justify-center w-10 h-10 mr-6 border border-white rounded-full lg:w-12 lg:h-12">
-											<span class="text-lg lg:text-2xl">3</span>
-										</span>
-										
-										<span>Revision indtil godkendelse</span>
-									</div>
+						<div class="flex items-center space-x-2">
+							<input type="checkbox" name="privacy" id="privacy" class="w-4 h-4 transition duration-200 border border-black rounded-sm appearance-none cursor-pointer checked:bg-black checked:border-black focus:outline-none">
+							
+							<label class="inline-block text-base leading-tight text-black/80" for="privacy">
+								Jeg accepterer <a href="/privacy-policy.html" class="text-black underline" target="_blank" title="Læs vores privatlivspolitik, som er skrevet på engelsk.">privatlivspolitik</a>.
+							</label>
+						</div>
 
-									<svg x-show="expanded" class="w-6 h-6 ml-4 text-white lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-										<path d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
+						<div class="sm:col-span-2 sm:flex sm:justify-center">
+							<button type="submit" class="inline-flex items-center justify-center w-full px-6 py-3 mt-4 text-lg text-white bg-black rounded-md lg:px-8 lg:py-4 lg:text-xl focus:shadow-sm sm:w-auto">
+								Påbegynd forløbet 
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<!-- Hero -->
+			<section class="relative pt-32 bg-gradient-to-t from-black md:pt-48 lg:pt-56 2xl:pt-64">
+				<div class="container z-10 px-6 mx-auto text-center lg:px-12">
+					<span class="inline-block mb-2 text-2xl leading-normal text-transparent bg-clip-text bg-gradient-to-r from-pink to-blueish lg:mb-4 lg:leading-normal lg:text-5xl">Design som abonnement</span>
+					<h1 class="hyphenate leading-tight text-5xl md:leading-tight text-white md:text-6xl lg:text-7.5xl lg:leading-tight 2xl:leading-tight 2xl:text-8xl">Skalér din virksomhed med design</h1>
+
+					<div class="max-w-5xl mx-auto mt-6 space-y-8 lg:space-y-10 2xl:space-y-16">
+						<p class="text-2xl leading-normal text-white md:leading-normal md:text-4xl">UX og UI designkompetencer til en fast månedlig ydelse.</p>
+						
+						<div class="flex flex-col max-w-xs mx-auto space-y-4 md:max-w-none md:justify-center md:space-y-0 md:flex-row md:space-x-6">
+							<button @click="open = true" class="block w-full px-6 py-4 text-xl text-black bg-white rounded-md md:w-auto lg:px-16 lg:py-5 lg:text-2xl" title="Kom i gang med design som abonnement med EDL.">Kom i gang</button>
+							<a class="block w-full px-6 py-4 text-xl text-white rounded-md bg-white/10 md:w-auto lg:px-8 lg:py-5 lg:text-2xl" href="#priser" title="Scroll ned til prisoversigten for designabonnementet.">Se hvad det koster</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="relative flex px-6 mx-auto mt-16 lg:mt-24 md:max-w-5xl 2xl:max-w-7xl aspect-video">
+					<video class="relative object-cover w-full mx-auto rounded-md" playsinline preload="true" loop autoplay muted poster="/build/media/edl-reel-poster.jpg">
+						<source src="../media/edl-reel.webm" type="video/webm">
+						<source src="../media/edl-reel.mp4" type="video/mp4">
+						This browser does not support the HTML5 video element.
+					</video>
+
+					<div class="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 ">
+						<button class="flex items-center justify-center p-4 text-white rounded-full lg:p-8 bg-black/40 backdrop-blur-md">
+							<svg class="w-8 h-8 lg:w-12 lg:h-12 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48">
+								<path fill="currentColor" d="M16 38V10l22 14-22 14Z"/>
+							</svg>
+						</button>
+					</div>
+				</div>
+
+				<div class="absolute inset-0 w-full h-full bg-cover bg-dark-gradient -z-10"></div>
+			</section>
+
+			<section class="pt-16 bg-black md:pt-24 lg:pt-32">
+				<div class="container px-6 mx-auto space-y-16 md:gap-20 lg:space-y-24 xl:space-y-32 xl:gap-32 lg:gap-24 md:columns-2 lg:px-12 max-w-[1600px]">
+					<div class="relative space-y-4 text-white">
+						<div class="flex items-center space-x-4 lg:space-x-6">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-10 h-10 lg:w-14 lg:h-14 text-pink" viewBox="0 0 56 56">
+								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M25.667 49V31.733a1.4 1.4 0 0 0-1.4-1.4H7M25.667 49H8.4A1.4 1.4 0 0 1 7 47.6V30.333M25.667 49h7M7 30.333v-7M14 7H8.4A1.4 1.4 0 0 0 7 8.4V14m25.667-7h-9.334M49 23.333v9.334M42 7h5.6A1.4 1.4 0 0 1 49 8.4V14m-7 35h5.6a1.4 1.4 0 0 0 1.4-1.4V42M25.667 23.333h7v7"/>
+							</svg>
+
+							<h3 class="text-2xl leading-tight text-transparent bg-clip-text bg-gradient-to-r from-pink to-blueish lg:text-3xl lg:leading-tight">Fleksibelt og skalerbart</h3>
+						</div>
+
+						<p class="text-xl leading-normal lg:text-2xl lg:leading-normal">Behovet for design kan variere fra måned til måned. Skaler op eller ned efter behov, og annuller når som helst.</p>
+					</div>
+
+					<div class="relative space-y-4 text-white">
+						<div class="flex items-center space-x-4 lg:space-x-6">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-10 h-10 lg:w-14 lg:h-14 text-pink" viewBox="0 0 56 56">
+								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 51.333a16.333 16.333 0 1 0 0-32.666 16.333 16.333 0 0 0 0 32.666Z"/>
+								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M35 37.333a16.334 16.334 0 1 0 0-32.667 16.334 16.334 0 0 0 0 32.667Z"/>
+							</svg>
+
+							<h3 class="text-2xl leading-tight text-transparent bg-clip-text bg-gradient-to-r from-pink to-blueish lg:text-3xl lg:leading-tight">In-house designer</h3>
+						</div>
+
+						<p class="text-xl leading-normal lg:text-2xl lg:leading-normal">Vi sidder side om side med produktejere, udviklere og ledere eller online fra vores kontor i DR Byen.</p>
+					</div>
+
+					<div class="relative space-y-4 text-white">
+						<div class="flex items-center space-x-4 lg:space-x-6">
+							<svg class="w-14 h-14 text-pink" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M25.667 49V31.733a1.4 1.4 0 0 0-1.4-1.4H7M25.667 49H8.4A1.4 1.4 0 0 1 7 47.6V30.333M25.667 49h7M7 30.333v-7M14 7H8.4A1.4 1.4 0 0 0 7 8.4V14m25.667-7h-9.334M49 23.333v9.334M42 7h5.6A1.4 1.4 0 0 1 49 8.4V14m-7 35h5.6a1.4 1.4 0 0 0 1.4-1.4V42M25.667 23.333h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+
+							<h3 class="text-2xl leading-tight text-transparent bg-clip-text bg-gradient-to-r from-pink to-blueish lg:text-3xl lg:leading-tight">Specialdesign</h3>
+						</div>
+
+						<p class="text-xl leading-normal lg:text-2xl lg:leading-normal">Vi leverer unikt design on-demand, der erstatter behovet for en fuldstidsansat seniordesigner.</p>
+					</div>
+
+					<div class="relative space-y-4 text-white">
+						<div class="flex items-center space-x-4 lg:space-x-6">
+							<svg class="w-14 h-14 text-pink" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M25.667 49V31.733a1.4 1.4 0 0 0-1.4-1.4H7M25.667 49H8.4A1.4 1.4 0 0 1 7 47.6V30.333M25.667 49h7M7 30.333v-7M14 7H8.4A1.4 1.4 0 0 0 7 8.4V14m25.667-7h-9.334M49 23.333v9.334M42 7h5.6A1.4 1.4 0 0 1 49 8.4V14m-7 35h5.6a1.4 1.4 0 0 0 1.4-1.4V42M25.667 23.333h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+
+							<h3 class="text-2xl leading-tight text-transparent bg-clip-text bg-gradient-to-r from-pink to-blueish lg:text-3xl lg:leading-tight">Lynhurtig levering</h3>
+						</div>
+
+						<p class="text-xl leading-normal lg:text-2xl lg:leading-normal">Designopgaver leveres en ad gangen på blot et par dage i gennemsnit.</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="hvordan-det-fungerer" class="pt-16 bg-black md:pt-24 lg:pt-32 2xl:pt-48">
+				<div class="container px-6 mx-auto space-y-8 md:space-y-12 lg:px-12 lg:space-y-16">
+					<div class="mx-auto space-y-4 text-center text-white max-w-7xl">
+						<span class="inline-block text-2xl leading-tight text-transparent bg-clip-text bg-gradient-to-r from-pink to-blueish lg:text-3xl lg:leading-tight">Hvordan det fungerer</span>
+						<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight hyphenate lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7xl">Erstat freelancere og månedlange designprojekter</h2>
+					</div>
+
+					<div x-data="{ active: 0 }" class="max-w-4xl mx-auto text-white md:space-y-4">
+						<div x-data="{ id: 1, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="md:border-white md:border md:rounded-md">
+							<button @click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full py-6 text-2xl leading-tight md:p-6 lg:leading-tight lg:text-3xl">
+								<div class="flex items-center">
+									<span class="flex items-center justify-center w-10 h-10 mr-6 border border-white rounded-full lg:w-12 lg:h-12">
+										<span class="text-lg lg:text-2xl">1</span>
+									</span>
 									
-									<svg x-show="!expanded" class="w-6 h-6 ml-4 text-white lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-										<path d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-								</button>
-							</h2>
+									<span>Designopgave vælges</span>
+								</div>
+								
+								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
 
-							<div x-show="expanded" class="px-6 pb-6 text-xl leading-normal lg:pr-16 lg:pl-24 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
-								Visuals can help distinguish competing products. We build design systems that align engineering teams, support product growth, and accelerate time-to-market.
+							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal text-indent md:px-6 lg:pr-16 lg:pb-8 lg:pl-24 lg:text-2xl lg:leading-relaxed">
+								Din virksomhed får sit eget kundeområde, hvor I kan specificere og klargøre designopgaver. Når I er parat, udvælger I en designopgave, som vi kaster os over.
+							</div>
+						</div>
+						
+						<div x-data="{ id: 2, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-white/30 md:border-white md:border md:rounded-md">
+							<button @click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full py-6 text-2xl leading-tight md:p-6 lg:leading-tight lg:text-3xl">
+								<div class="flex items-center">
+									<span class="flex items-center justify-center w-10 h-10 mr-6 border border-white rounded-full lg:w-12 lg:h-12">
+										<span class="text-lg lg:text-2xl">2</span>
+									</span>
+									
+									<span>Designer udarbejder udkast</span>
+								</div>
+
+								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+
+							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pl-24 lg:pb-8 lg:text-2xl lg:leading-relaxed">
+								<p class="text-indent">Din designer, som har kendskab til din forretning og dine brugers behov, designer første udkast.</p>
+								<p>Tidsforbruget varierer afhængig af kompleksitet, men vi bruger gennemsnitligt tre arbejdsdage per opgave.</p>
 							</div>
 						</div>
 
-						<div x-data="{ id: 4, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border border-white rounded-md">
-							<h2>
-								<button @click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full p-6 text-2xl leading-tight lg:leading-tight lg:text-3xl">
-									<div class="flex items-center">
-										<span class="flex items-center justify-center w-10 h-10 mr-6 border border-white rounded-full lg:w-12 lg:h-12">
-											<span class="text-lg lg:text-2xl">4</span>
-										</span>
-										
-										<span>Overlevering</span>
-									</div>
-
-									<svg x-show="expanded" class="w-6 h-6 ml-4 text-white lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-										<path d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
+						<div x-data="{ id: 3, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-white/30 md:border-white md:border md:rounded-md">
+							<button @click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full py-6 text-2xl leading-tight md:p-6 lg:leading-tight lg:text-3xl">
+								<div class="flex items-center">
+									<span class="flex items-center justify-center w-10 h-10 mr-6 border border-white rounded-full lg:w-12 lg:h-12">
+										<span class="text-lg lg:text-2xl">3</span>
+									</span>
 									
-									<svg x-show="!expanded" class="w-6 h-6 ml-4 text-white lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-										<path d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-								</button>
-							</h2>
+									<span>Revision indtil godkendelse</span>
+								</div>
 
-							<div x-show="expanded" class="px-6 pb-6 text-xl leading-normal lg:pr-16 lg:pl-24 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
-								Visuals can help distinguish competing products. We build design systems that align engineering teams, support product growth, and accelerate time-to-market.
+								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+
+							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pl-24 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
+								Vi er velkendt for at ramme plet i første forsøg, men skulle det ske, at I ønsker flere revisioner, så guider jeres designer jer igennem mulighederne.
+							</div>
+						</div>
+
+						<div x-data="{ id: 4, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-white/30 md:border-white md:border md:rounded-md">
+							<button @click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full py-6 text-2xl leading-tight md:p-6 lg:leading-tight lg:text-3xl">
+								<div class="flex items-center">
+									<span class="flex items-center justify-center w-10 h-10 mr-6 border border-white rounded-full lg:w-12 lg:h-12">
+										<span class="text-lg lg:text-2xl">4</span>
+									</span>
+									
+									<span>Overlevering</span>
+								</div>
+
+								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+
+							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pl-24 lg:pb-8 lg:text-2xl lg:leading-relaxed">
+								<p class="text-indent">Det er vigtigt, at jeres team føler ejerskab og har knowhow omkring design.</p>
+								<p>Derfor dokumenterer vi åbent vores design, og gør os umage for at imødekomme jeres udviklers unikke behov og arbejdsgange.</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="pt-16 bg-black md:pt-24 lg:pt-32 2xl:pt-48">
+			<section id="kompetencer" class="py-16 bg-black md:py-24 lg:py-32 2xl:py-48">
 				<div class="container px-6 mx-auto space-y-10 text-white md:space-y-14 lg:px-12 lg:space-y-20">
 					<div class="w-full space-y-4">
-						<h2 class="text-4xl leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7xl">Dit abonnement, dine behov</h2>
+						<span class="inline-block text-2xl leading-tight text-transparent bg-clip-text bg-gradient-to-r from-pink to-blueish lg:text-3xl lg:leading-tight">Kompetencer</span>
+						<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7xl">Dit abonnement, dine behov</h2>
 						<p class="text-2xl leading-normal lg:leading-relaxed lg:text-3xl">Vælg frit, hvilke kompetencer, der skal sættes i spil.</p>
 					</div>
 					
 					<div class="space-y-6 text-2xl leading-tight lg:gap-x-16 lg:leading-tight lg:text-3xl lg:columns-2 lg:max-w-7xl 2xl:max-w-none">
 						<ul class="space-y-6 lg:space-y-10">
-							<li>Rapid prototyping</li>
-							<li>User experience design</li>
-							<li>User interface design</li>
-							<li>Brugerundersøgelser og tests</li>
-							<li>Produktstrategi</li>
+							<li class="flex items-center space-x-3 lg:space-x-6">
+								<svg class="w-7 h-7 lg:w-9 lg:h-9" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 36 36">
+									<path stroke="url(#pinkGradient)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m7.5 19.5 6 6 15-15"/>
+
+									<defs>
+										<linearGradient id="pinkGradient" x1="7.477" x2="19.943" y1="25.5" y2="31.742" gradientUnits="userSpaceOnUse">
+											<stop stop-color="#D6B3F4"/>
+											<stop offset="1" stop-color="#87BFFF"/>
+										</linearGradient>
+									</defs>
+								</svg>
+
+								<span class="inline-block">Rapid prototyping</span>
+							</li>
+							
+							<li class="flex items-center space-x-3 lg:space-x-6">
+								<svg class="w-7 h-7 lg:w-9 lg:h-9" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 36 36">
+									<path stroke="url(#pinkGradient)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m7.5 19.5 6 6 15-15"/>
+								</svg>
+
+								<span class="inline-block">User experience design</span>
+							</li>
+							
+							<li class="flex items-center space-x-3 lg:space-x-6">
+								<svg class="w-7 h-7 lg:w-9 lg:h-9" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 36 36">
+									<path stroke="url(#pinkGradient)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m7.5 19.5 6 6 15-15"/>
+								</svg>
+
+								<span class="inline-block">User interface design</span>
+							</li>
+
+							<li class="flex items-center space-x-3 lg:space-x-6">
+								<svg class="w-7 h-7 lg:w-9 lg:h-9" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 36 36">
+									<path stroke="url(#pinkGradient)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m7.5 19.5 6 6 15-15"/>
+								</svg>
+
+								<span class="inline-block">Brugerundersøgelser og tests</span>
+							</li>
+
+							<li class="flex items-center space-x-3 lg:space-x-6">
+								<svg class="w-7 h-7 lg:w-9 lg:h-9" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 36 36">
+									<path stroke="url(#pinkGradient)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m7.5 19.5 6 6 15-15"/>
+								</svg>
+
+								<span class="inline-block">Produktstrategi</span>
+							</li>
 						</ul>
 
 						<ul class="space-y-6 lg:space-y-10">
-							<li>Designsystemer</li>
-							<li>Roadmapping</li>
-							<li>Vækstoptimering</li>
-							<li>Informationsarkitektur</li>
-							<li>Dokumentation</li>
+							<li class="flex items-center space-x-3 lg:space-x-6">
+								<svg class="w-7 h-7 lg:w-9 lg:h-9" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 36 36">
+									<path stroke="url(#pinkGradient)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m7.5 19.5 6 6 15-15"/>
+								</svg>
+
+								<span class="inline-block">Designsystemer</span>
+							</li>
+
+							<li class="flex items-center space-x-3 lg:space-x-6">
+								<svg class="w-7 h-7 lg:w-9 lg:h-9" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 36 36">
+									<path stroke="url(#pinkGradient)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m7.5 19.5 6 6 15-15"/>
+								</svg>
+
+								<span class="inline-block">Roadmapping</span>
+							</li>
+
+							<li class="flex items-center space-x-3 lg:space-x-6">
+								<svg class="w-7 h-7 lg:w-9 lg:h-9" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 36 36">
+									<path stroke="url(#pinkGradient)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m7.5 19.5 6 6 15-15"/>
+								</svg>
+
+								<span class="inline-block">Vækstoptimering</span>
+							</li>
+
+							<li class="flex items-center space-x-3 lg:space-x-6">
+								<svg class="w-7 h-7 lg:w-9 lg:h-9" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 36 36">
+									<path stroke="url(#pinkGradient)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m7.5 19.5 6 6 15-15"/>
+								</svg>
+
+								<span class="inline-block">Informationsarkitektur</span>
+							</li>
+
+							<li class="flex items-center space-x-3 lg:space-x-6">
+								<svg class="w-7 h-7 lg:w-9 lg:h-9" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 36 36">
+									<path stroke="url(#pinkGradient)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m7.5 19.5 6 6 15-15"/>
+								</svg>
+
+								<span class="inline-block">Dokumentation</span>
+							</li>
 						</ul>
 					</div>
 
@@ -302,53 +447,85 @@
 				</div>
 			</section>
 
-			<section class="py-16 bg-black md:py-24 lg:py-32 2xl:py-48" id="priser">
-				<div class="container px-6 mx-auto space-y-10 text-white md:space-y-14 lg:px-12 lg:space-y-20">
-					<div class="w-full space-y-4 text-center">
-						<h2 class="text-4xl leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7xl">Én plan, ingen overraskelser</h2>
-						<p class="text-2xl leading-normal lg:leading-relaxed lg:text-3xl">Transparent abonnement, der understøtter enhver softwarevirksomhed.</p>
+			<section class="pt-16 md:pt-24 lg:pt-32 2xl:pt-48" id="priser">
+				<div class="container px-6 mx-auto space-y-8 md:space-y-12 lg:px-12 lg:space-y-16">
+					<div class="w-full max-w-5xl space-y-4">
+						<span class="inline-block text-2xl leading-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-purple-400 lg:text-3xl lg:leading-tight">Priser</span>
+						<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7xl">For startups, scale-ups eller etablerede virksomheder med <span class="font-serif italic">svingende designbehov</span>.</h2>
 					</div>
 					
-					<div class="mx-auto space-y-6 lg:grid-flow-col lg:space-y-0 lg:gap-8 lg:grid lg:grid-rows-2 lg:grid-cols-9 max-w-7xl">
-						<!-- Plan -->
-						<article class="p-8 space-y-8 border border-white rounded-md lg:row-span-2 lg:col-span-5 2xl:p-16 lg:p-12 border-opacity-20">
-							<header class="space-y-2 lg:space-y-4">
-								<h3 class="text-3xl leading-tight lg:leading-tight lg:text-4xl 2xl:text-5xl 2xl:leading-tight">Design</h3>
-								<p class="text-xl leading-normal text-white/80 lg:max-w-2xl lg:leading-normal lg:text-2xl">For startups, scale-ups eller etablerede virksomheder med svingende designbehov.</p>
-							</header>
+					<div class="md:columns-2 max-w-[1600px] space-y-12 md:space-y-0">
+						<div class="space-y-10 lg:space-y-12 md:break-after-column">
+							<ul class="space-y-6 text-xl leading-normal lg:leading-normal lg:text-2xl">
+								<li class="flex items-center space-x-3 lg:space-x-6">
+									<svg class="w-6 h-6 lg:w-7 lg:h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28">
+										<path stroke="url(#purpleGradient)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m5.833 15.167 4.667 4.666L22.167 8.167"/>
 
-							<div class="space-y-2">
-								<div class="text-3xl leading-tight lg:leading-tight lg:text-3xl 2xl:text-4xl 2xl:leading-tight">30.000 kr. <span class="text-lg leading-tight">/ måned</span></div>
-								<span class="block leading-tight text-normal 2xl:leading-tight text-white/60 2xl:text-lg">Pause eller annuller når som helst</span>
+										<defs>
+											<linearGradient id="purpleGradient" x1="5.833" x2="20.893" y1="14" y2="14" gradientUnits="userSpaceOnUse">
+												<stop stop-color="#5438D1"/>
+												<stop offset="1" stop-color="#8938D1"/>
+											</linearGradient>
+										</defs>
+									</svg>
+									
+									<span class="flex items-center">Specialdesignet <button class="tooltip" x-tooltip.raw.arrowless.theme.default="Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world!">?</button></span>
+								</li>
+
+								<li class="flex items-center space-x-3 lg:space-x-6">
+									<svg class="w-6 h-6 lg:w-7 lg:h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28">
+										<path stroke="url(#purpleGradient)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m5.833 15.167 4.667 4.666L22.167 8.167"/>
+									</svg>
+									
+									<span class="flex items-center">Ubegrænset revision <button class="tooltip" x-tooltip.raw.arrowless.theme.default="Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world!">?</button></span>
+								</li>
+
+								<li class="flex items-center space-x-3 lg:space-x-6">
+									<svg class="w-6 h-6 lg:w-7 lg:h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28">
+										<path stroke="url(#purpleGradient)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m5.833 15.167 4.667 4.666L22.167 8.167"/>
+									</svg>
+									
+									<span class="flex items-center">Tilknyttet designer <button class="tooltip" x-tooltip.raw.arrowless.theme.default="Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world!">?</button></span>
+								</li>
+
+								<li class="flex items-center space-x-3 lg:space-x-6">
+									<svg class="w-6 h-6 lg:w-7 lg:h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28">
+										<path stroke="url(#purpleGradient)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m5.833 15.167 4.667 4.666L22.167 8.167"/>
+									</svg>
+									
+									<span class="flex items-center">Komponentbibliotek <button class="tooltip" x-tooltip.raw.arrowless.theme.default="Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world!">?</button></span>
+								</li>
+
+								<li class="flex items-center space-x-3 lg:space-x-6">
+									<svg class="w-6 h-6 lg:w-7 lg:h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28">
+										<path stroke="url(#purpleGradient)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m5.833 15.167 4.667 4.666L22.167 8.167"/>
+									</svg>
+									
+									<span class="flex items-center">Kildefiler <button class="tooltip" x-tooltip.raw.arrowless.theme.default="Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world!">?</button></span>
+								</li>
+							</ul>
+
+							<div class="space-y-8">
+								<div class="space-y-2">
+									<div class="text-4xl leading-tight lg:leading-tight lg:text-5xl 2xl:text-6xl 2xl:leading-tight">30.000 kr. <span class="text-lg leading-tight lg:text-xl lg:leading-tight 2xl:text-2xl 2xl:leading-tight">/ måned</span></div>
+									<span class="block text-base leading-tight 2xl:leading-tight text-black/60 2xl:text-lg">Pause eller annuller når som helst</span>
+								</div>
+							
+								<button @click="open = true" class="inline-block px-6 py-4 text-xl text-white bg-black rounded-md md:w-auto lg:px-16 lg:py-5 lg:text-2xl" title="Kom i gang med design som abonnement med EDL.">Kom i gang</button>
 							</div>
-
-							<a class="block px-6 py-4 text-xl text-center text-black bg-white rounded-md lg:px-8 lg:py-5 lg:text-2xl" href="#" title="Kom i gang med design som abonnement.">Kom i gang</a>
-
-							<div class="space-y-2 text-xl leading-normal">
-								<span>Hvad får I?</span>
-
-								<ol class="pl-8 space-y-2 list-disc">
-									<li class="pl-2">Unikt design</li>
-									<li class="pl-2">Ubegrænset revision</li>
-									<li class="pl-2">Eget design team</li>
-									<li class="pl-2">Eget komponentbibliotek</li>
-									<li class="pl-2">Eget kundeområde</li>
-									<li class="pl-2">Kildefiler</li>
-								</ol>
-							</div>
-						</article>
+						</div>
 
 						<!-- En hurtig snak online -->
-						<article class="p-8 space-y-6 text-black bg-white rounded-md lg:col-span-4 lg:p-10">
+						<article class="max-w-2xl p-8 space-y-6 rounded-md bg-gray lg:col-span-4 lg:p-10">
 							<div class="relative inline-flex -space-x-6">
-								<img class="object-cover w-16 h-16 border-4 border-white rounded-full" src="../media/edl-anders-wind.png" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
-								<img class="object-cover w-16 h-16 border-4 border-white rounded-full" src="../media/edl-casper-stendal.png" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
-								<img class="object-cover w-16 h-16 border-4 border-white rounded-full" src="../media/edl-frederick-andersen.png" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
-								<div class="absolute bottom-0 right-0 w-5 h-5 border-4 border-white rounded-full bg-green"></div>
+								<img class="object-cover w-16 h-16 border-4 rounded-full border-gray" src="../media/edl-anders-wind.png" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
+								<img class="object-cover w-16 h-16 border-4 rounded-full border-gray" src="../media/edl-casper-stendal.png" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
+								<img class="object-cover w-16 h-16 border-4 rounded-full border-gray" src="../media/edl-frederick-andersen.png" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
+								<div class="absolute bottom-0 right-0 w-5 h-5 border-4 rounded-full border-gray bg-green"></div>
 							</div>
 
 							<header class="space-y-2">
-								<h3 class="text-2xl leading-tight">En hurtig snak online</h3>
+								<h3 class="text-2xl leading-tight">En 30-minutters indflyvning</h3>
 								<p class="text-xl leading-normal text-black/80">Vi sidder altid klar til at gennemgå konceptet og besvare dine spørgsmål.</p>
 							</header>
 
@@ -359,173 +536,119 @@
 								</svg>
 							</a>
 						</article>
-
-						<!-- Gratis designsession -->
-						<article class="p-8 space-y-6 text-white border border-white rounded-md lg:col-span-4 border-opacity-20 lg:p-10">
-							<svg class="w-12 h-12" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-								<path d="M30.564 36.046A15.891 15.891 0 0 0 36 34.11l7.2 1.34-1.34-7.2a15.998 15.998 0 0 0-8.617-23.107 16 16 0 0 0-21.077 12.805M15 44.25a11 11 0 1 0-9.528-5.5L4.55 43.7l4.95-.92a10.947 10.947 0 0 0 5.5 1.47Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-							</svg>
-							
-							<header class="space-y-2">
-								<h3 class="text-2xl leading-tight">Gratis designsession</h3>
-								<p class="text-xl leading-normal text-white/80">Oplev, hvordan vi arbejder i en 90 minutters design-session, hvor vi takler en aktuel designudfordring.</p>
-							</header>
-
-							<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/frederickandersen/designabonnement?hide_event_type_details=1&hide_gdpr_banner=1'});return false;" class="flex items-center space-x-2 text-xl leading-normal" title="Book en uforpligtende snak om behov og strategi.">
-								<span class="line line-white">Planlæg session</span>
-								<svg class="w-5 h-5" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path d="M13.163 20L21 12l-7.837-8-1.347 1.375 5.545 5.643H3v1.964h14.361l-5.545 5.66L13.163 20z" fill="currentColor"/>
-								</svg>
-							</a>
-						</article>
 					</div>
 				</div>
 			</section>
-
-			<section class="py-16 md:pt-24 lg:pt-32 2xl:pt-40">
-				<div class="container px-6 mx-auto space-y-8 lg:px-12 lg:space-y-16">
+			
+			<section class="py-16 md:py-24 lg:py-32 2xl:py-40">
+				<div class="container px-6 mx-auto space-y-8 lg:px-12 md:space-y-12 lg:space-y-16">
 					<div class="space-y-4 text-center">
-						<h2 class="text-4xl leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7xl">Ofte stillede spørgsmål</h2>
-						<p class="text-2xl leading-normal lg:leading-relaxed lg:text-3xl">Hvis du har andre spørgsmål, så lad os høre fra dig.</p>
+						<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7xl">Har du stadig spørgsmål?</h2>
+						<p class="text-2xl leading-normal lg:leading-relaxed lg:text-3xl">Du er altid velkommen til at ringe, hvis dit spørgsmål ikke besvares.</p>
 					</div>
 
-					<div x-data="{ active: 0 }" class="max-w-4xl mx-auto space-y-3 lg:space-y-4">
-						<div x-data="{ id: 1, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border border-black rounded-md">
-							<h2>
-								<button @click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full px-6 text-2xl leading-tight py-7 lg:leading-tight lg:text-3xl">
-									<span>Hvordan kommer man i gang?</span>
-									
-									<svg x-show="expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-										<path d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									
-									<svg x-show="!expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-										<path d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-								</button>
-							</h2>
+					<div x-data="{ active: 0 }" class="max-w-4xl mx-auto md:space-y-3 lg:space-y-4">
+						<div x-data="{ id: 1, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="md:border md:border-black md:rounded-md">
+							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
+								<span>Hvordan kommer man i gang?</span>
+								
+								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
 
-							<div x-show="expanded" class="px-6 pb-6 text-xl leading-normal lg:pr-16 lg:pb-8 lg:text-2xl lg:leading-relaxed">
+							<div x-show="expanded" class="pb-6 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 lg:text-2xl lg:leading-relaxed">
 								<p class="text-indent">Din virksomhed får sit eget kundeområde, hvor I kan specificere og klargøre designopgaver. Når I er parat, udvælger I én aktiv opgave, som vi kaster os over.</p>
 							</div>
 						</div>
 						
-						<div x-data="{ id: 2, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border border-black rounded-md">
-							<h2>
-								<button @click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full p-6 text-2xl leading-tight lg:leading-tight lg:text-3xl">
-									<span>Hvorfor hyrer jeg ikke bare en fuldtidsdesigner?</span>
+						<div x-data="{ id: 2, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20 md:border md:border-black md:rounded-md">
+							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
+								<span>Hvorfor hyrer jeg ikke bare en fuldtidsdesigner?</span>
 
-									<svg x-show="expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-										<path d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									
-									<svg x-show="!expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-										<path d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-								</button>
-							</h2>
+								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
 
-							<div x-show="expanded" class="px-6 pb-6 text-xl leading-normal lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
+							<div x-show="expanded" class="pb-6 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
 								Rapid prototyping allows us to try and test many designs before executing just a few. Commonly accomplished across four days, we transform napkin sketches into blueprints for your ideal user experience.
 							</div>
 						</div>
 
-						<div x-data="{ id: 3, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border border-black rounded-md">
-							<h2>
-								<button @click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full p-6 text-2xl leading-tight lg:leading-tight lg:text-3xl">
-									<span>Er det virkelig ubegrænset revision?</span>
+						<div x-data="{ id: 3, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20 md:border md:border-black md:rounded-md">
+							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
+								<span>Er det virkelig ubegrænset revision?</span>
 
-									<svg x-show="expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-										<path d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									
-									<svg x-show="!expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-										<path d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-								</button>
-							</h2>
+								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
 
-							<div x-show="expanded" class="px-6 pb-6 text-xl leading-normal lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
+							<div x-show="expanded" class="pb-6 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
 								Visuals can help distinguish competing products. We build design systems that align engineering teams, support product growth, and accelerate time-to-market.
 							</div>
 						</div>
 
-						<div x-data="{ id: 4, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border border-black rounded-md">
-							<h2>
-								<button @click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full p-6 text-2xl leading-tight lg:leading-tight lg:text-3xl">
-									<span>Hvem designer for mig?</span>
+						<div x-data="{ id: 4, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20 md:border md:border-black md:rounded-md">
+							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
+								<span>Hvem designer for mig?</span>
 
-									<svg x-show="expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-										<path d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									
-									<svg x-show="!expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-										<path d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-								</button>
-							</h2>
+								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
 
-							<div x-show="expanded" class="px-6 pb-6 text-xl leading-normal lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
+							<div x-show="expanded" class="pb-6 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
 								Visuals can help distinguish competing products. We build design systems that align engineering teams, support product growth, and accelerate time-to-market.
 							</div>
 						</div>
 
-						<div x-data="{ id: 5, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border border-black rounded-md">
-							<h2>
-								<button @click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full p-6 text-2xl leading-tight lg:leading-tight lg:text-3xl">
-									<span>Kan jeg annullere når som helst?</span>
+						<div x-data="{ id: 5, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20 md:border md:border-black md:rounded-md">
+							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
+								<span>Kan jeg annullere når som helst?</span>
 
-									<svg x-show="expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-										<path d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									
-									<svg x-show="!expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-										<path d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-								</button>
-							</h2>
+								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
 
-							<div x-show="expanded" class="px-6 pb-6 text-xl leading-normal lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
+							<div x-show="expanded" class="pb-6 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
 								Visuals can help distinguish competing products. We build design systems that align engineering teams, support product growth, and accelerate time-to-market.
 							</div>
 						</div>
 
-						<div x-data="{ id: 6, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border border-black rounded-md">
-							<h2>
-								<button @click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full p-6 text-2xl leading-tight lg:leading-tight lg:text-3xl">
-									<span>Hvad sker der, hvis jeg annullere abonnementet?</span>
+						<div x-data="{ id: 6, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20 md:border md:border-black md:rounded-md">
+							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
+								<span>Hvad sker der, hvis jeg annullere abonnementet?</span>
 
-									<svg x-show="expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-										<path d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									
-									<svg x-show="!expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-										<path d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-								</button>
-							</h2>
+								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
 
-							<div x-show="expanded" class="px-6 pb-6 text-xl leading-normal lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
+							<div x-show="expanded" class="pb-6 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
 								Visuals can help distinguish competing products. We build design systems that align engineering teams, support product growth, and accelerate time-to-market.
 							</div>
 						</div>
 
-						<div x-data="{ id: 7, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border border-black rounded-md">
-							<h2>
-								<button @click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full p-6 text-2xl leading-tight lg:leading-tight lg:text-3xl">
-									<span>Hvad er leveringstiden?</span>
+						<div x-data="{ id: 7, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20 md:border md:border-black md:rounded-md">
+							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
+								<span>Hvad er leveringstiden?</span>
 
-									<svg x-show="expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-										<path d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									
-									<svg x-show="!expanded" class="w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-										<path d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-								</button>
-							</h2>
+								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
 
-							<div x-show="expanded" class="px-6 pb-6 text-xl leading-normal lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
+							<div x-show="expanded" class="pb-6 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
 								Visuals can help distinguish competing products. We build design systems that align engineering teams, support product growth, and accelerate time-to-market.
 							</div>
 						</div>
@@ -534,44 +657,75 @@
 			</section>
 		</main>
 		
-		<footer class="mt-12 bg-white md:mt-24 lg:mt-32">
-			<div class="container px-6 pb-12 mx-auto space-y-4 lg:px-12 md:pb-16 lg:pb-24">
-				<h2 class="text-4.5xl leading-tight text-black md:text-6xl md:leading-tight lg:leading-tight lg:text-7xl lg:max-w-5xl">We’d love to hear about your <span class="font-serif italic">design and business</span> challenges.</h2>
+		<footer>
+			<div class="container px-6 mx-auto space-y-16 lg:space-y-28 lg:px-12">
+				<!-- Call to action -->
+				<div class="space-y-4">
+					<h2 class="text-4.5xl leading-tight text-black md:text-6xl md:leading-tight lg:leading-tight lg:text-7xl lg:max-w-5xl">Vi vil meget gerne høre om dine designudfordringer.</h2>
 
-				<div class="max-w-2xl mt-4 space-y-8 text-black md:space-y-12">
-					<p class="text-2xl leading-normal text-indent lg:leading-relaxed lg:text-3xl">Even if you’re unsure what’s next. No sales talk, no strings attached.</p>
-					
-					<div class="flex items-center space-x-6 lg:space-x-8 2xl:space-x-12 ">
-						<a href="tel:+4528253694" title="Reach out and let us chat about design and business." class="flex items-center space-x-1 lg:space-x-2 2xl:space-x-3">
-							<span class="text-2xl md:text-3xl line 2xl:text-3xl">28 25 36 94</span>
-							<svg class="w-7 h-7 2xl:w-9 2xl:h-9" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18h.01M8 21h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-						</a>
+					<div class="max-w-2xl mt-4 space-y-8 text-black md:space-y-12">
+						<p class="text-2xl leading-normal text-indent lg:leading-relaxed lg:text-3xl">Også selvom du er usikker på, hvad næste skridt er. Ingen salgssnak, ingen bindinger.</p>
 						
-						<a href="/contact.html" title="Reach out about a project, job application or just to say hi." class="flex items-center space-x-1 2xl:space-x-3 lg:space-x-2">
-							<span class="text-2xl md:text-3xl line 2xl:text-3xl">Contact us</span>
+						<div class="flex items-center space-x-6 lg:space-x-8 2xl:space-x-12 ">
+							<a href="tel:+4528253694" title="Reach out and let us chat about design and business." class="flex items-center space-x-1 lg:space-x-2 2xl:space-x-3">
+								<span class="text-2xl md:text-3xl line 2xl:text-3xl">28 25 36 94</span>
+								<svg class="w-7 h-7 2xl:w-9 2xl:h-9" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18h.01M8 21h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							</a>
+							
+							<a href="/contact.html" title="Reach out about a project, job application or just to say hi." class="flex items-center space-x-1 2xl:space-x-3 lg:space-x-2">
+								<span class="text-2xl md:text-3xl line 2xl:text-3xl">Kontakt os</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Addresses -->
+				<div class="lg:max-w-5xl columns-2">
+					<div class="space-y-4">
+						<div class="text-2xl leading-tight lg:leading-tight lg:text-3xl">København</div>
+						<p class="text-xl leading-normal lg:text-2xl lg:leading-normal">Amagerfælledvej 106<br>2300 København<br>Danmark<p>
+					
+						<a href="https://goo.gl/maps/rvbUxQUX1cxjvyaG9" title="Få rutevejledning til vores københavnske kontor via Google Maps." target="blank" rel="noopener" class="flex items-center space-x-1 text-black">
+							<span class="text-xl leading-tight line link-black">Find vej</span>
+							<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+								<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
+							</svg>
+						</a>
+					</div>
+
+					<div class="space-y-4">
+						<div class="text-2xl leading-tight lg:leading-tight lg:text-3xl">Odense</div>
+						<p class="text-xl leading-normal lg:text-2xl lg:leading-normal">Stærmosegårdsvej 8<br>5230 Odense<br>Danmark<p>
+					
+						<a href="https://goo.gl/maps/C7gqWv69bB8gdC4V9" title="Få rutevejledning til vores odenseanske kontor via Google Maps." target="blank" rel="noopener" class="flex items-center mt-4 space-x-1 text-black">
+							<span class="text-xl leading-tight line link-black">Find vej</span>
+							<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+								<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
+							</svg>
 						</a>
 					</div>
 				</div>
-			</div>
 
-			<div class="container flex flex-col w-full px-6 py-8 mx-auto lg:flex-row-reverse lg:px-12 md:py-16">
-				<nav class="flex mb-12 space-x-8 lg:mb-0">
-					<a href="https://instagram.com/edl.design" target="blank" rel="noopener" title="See EDL’s profile on Instagram." class="flex items-center space-x-1 text-black">
-						<span class="text-lg leading-tight lg:text-xl line">Instagram</span>
-						<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-							<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
-						</svg>
-					</a>
+				<!-- Socials -->
+				<div class="flex flex-col w-full pb-8 lg:flex-row-reverse md:pb-16">
+					<nav class="flex mb-12 space-x-8 lg:mb-0">
+						<a href="https://instagram.com/edl.design" target="blank" rel="noopener" title="See EDL’s profile on Instagram." class="flex items-center space-x-1 text-black">
+							<span class="text-lg leading-tight lg:text-xl line">Instagram</span>
+							<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+								<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
+							</svg>
+						</a>
+						
+						<a href="https://linkedin.com/company/edldesign" target="blank" rel="noopener" title="See EDL’s profile on LinkedIn" class="flex items-center space-x-1 text-black">
+							<span class="text-lg leading-tight lg:text-xl line">LinkedIn</span>
+							<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+								<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
+							</svg>
+						</a>
+					</nav>
 					
-					<a href="https://linkedin.com/company/edldesign" target="blank" rel="noopener" title="See EDL’s profile on LinkedIn" class="flex items-center space-x-1 text-black">
-						<span class="text-lg leading-tight lg:text-xl line">LinkedIn</span>
-						<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-							<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
-						</svg>
-					</a>
-				</nav>
-				
-				<span class="text-lg leading-tight text-black lg:text-xl lg:flex-1">2022 &copy; EDL ApS</span>
+					<span class="text-lg leading-tight text-black lg:text-xl lg:flex-1">&copy; 2022 EDL</span>
+				</div>
 			</div>
 		</footer>
 	</body>
