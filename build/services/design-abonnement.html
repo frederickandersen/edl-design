@@ -377,7 +377,27 @@
 				</div>
 			</section>
 
-			<section class="relative pt-16 md:pt-24 lg:pt-32 2xl:pt-48 bg-gradient-to-t from-white" id="priser">
+			<section id="priser" class="relative pt-16 md:pt-24 lg:pt-32 2xl:pt-48 bg-gradient-to-t from-white" x-data="{ open: false }">
+				<div class="fixed inset-0 z-50 items-start justify-center hidden w-full h-full py-12 overflow-y-auto bg-black/60 touch-none" :class="{ 'flex' : open, 'hidden' : !open }" x-show="open">
+					<div class="relative w-full p-8 mx-6 bg-white rounded-md md:max-w-xl md:p-10 lg:p-12" @click.away="open = false">
+						<button class="absolute p-2 text-black rounded-md top-4 right-4 bg-gray no-outline focus:shadow-outline" @click="open = false">
+							<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="w-6 h-6" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 19 5 17.6l5.6-5.6L5 6.4 6.4 5l5.6 5.6L17.6 5 19 6.4 13.4 12l5.6 5.6-1.4 1.4-5.6-5.6Z"/></svg>
+						</button>
+						
+						<header class="space-y-4">
+							<svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48">
+								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M30.564 36.046A15.891 15.891 0 0 0 36 34.11l7.2 1.34-1.34-7.2a15.998 15.998 0 0 0-8.617-23.107 16 16 0 0 0-21.077 12.805M15 44.25a11 11 0 1 0-9.528-5.5L4.55 43.7l4.95-.92a10.947 10.947 0 0 0 5.5 1.47Z"/>
+							</svg>
+
+							<h3 class="text-3xl leading-tight">Gratis designsession</h3>
+							
+							<p class="text-xl leading-normal ">Oplev, hvordan vi arbejder i en 90 minutters designsession, hvor vi takler en aktuel designudfordring.</p>
+						</header>
+
+						<a class="inline-block px-6 py-4 mt-6 text-xl text-white bg-black rounded-md md:w-auto md:px-8" title="Book en gratis designsession med EDL." href="https://savvycal.com/edl/designsession" data-savvycal-embed>Book designsession</a>
+					</div>
+				</div>
+
 				<div class="absolute inset-0 w-full h-full bg-cover bg-sky-gradient -z-10"></div>
 				
 				<div class="container px-6 mx-auto space-y-8 md:space-y-12 lg:px-12 lg:space-y-16">
@@ -437,13 +457,16 @@
 								</li>
 							</ul>
 
-							<div class="space-y-8">
+							<div class="space-y-8 2xl:space-y-12">
 								<div class="space-y-2">
 									<div class="text-4xl leading-tight lg:leading-tight lg:text-5xl 2xl:text-6xl 2xl:leading-tight">30.000 kr. <span class="text-lg leading-tight lg:text-xl lg:leading-tight 2xl:text-2xl 2xl:leading-tight">/ måned</span></div>
-									<span class="block text-base leading-tight 2xl:leading-tight text-black/60 2xl:text-lg">Pause eller annuller når som helst</span>
+									<span class="block text-base leading-tight lg:text-lg lg:leading-tight 2xl:leading-tight text-black/60 2xl:text-xl">Pause eller annuller når som helst</span>
 								</div>
 							
-								<a class="inline-block px-6 py-4 text-xl text-white bg-black rounded-md md:w-auto lg:px-16 lg:py-5 lg:text-2xl" title="Kom i gang med design som abonnement med EDL." href="https://savvycal.com/edl/abonnement" data-savvycal-embed>Kom i gang</a>
+								<div class="flex flex-col space-y-4 text-center sm:space-y-0 sm:flex-row sm:space-x-6">
+									<a class="inline-block px-6 py-4 text-xl text-white bg-black rounded-md md:w-auto lg:px-12 lg:py-5 lg:text-2xl" title="Kom i gang med design som abonnement med EDL." href="https://savvycal.com/edl/abonnement" data-savvycal-embed>Kom i gang</a>
+									<button @click="open = true" class="inline-block px-6 py-4 text-xl text-black rounded-md bg-black/10 md:w-auto lg:px-12 lg:py-5 lg:text-2xl" title="Kom i gang med design som abonnement med EDL.">Gratis designsession</button>
+								</div>
 							</div>
 						</div>
 
@@ -490,8 +513,9 @@
 								</svg>
 							</button>
 
-							<div x-show="expanded" class="pb-6 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 lg:text-2xl lg:leading-relaxed">
-								<p class="text-indent">Din virksomhed får sit eget kundeområde, hvor I kan specificere og klargøre designopgaver. Når I er parat, udvælger I én aktiv opgave, som vi kaster os over.</p>
+							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 lg:text-2xl lg:leading-relaxed">
+								<p class="text-indent"><a class="line" title="Kom i gang med design som abonnement med EDL." href="https://savvycal.com/edl/abonnement" data-savvycal-embed>Book et indledende møde</a> med vores CEO, Frederick, hvor jeres behov afstemmes. Er design som abonnement overhovedet det rette for jer?</p>
+								<p>Når det praktiske er på plads, begynder det sjove. I vælger en designopgave, som vi kaster os over, og derfra kører samarbejdet på skinner.</p>
 							</div>
 						</div>
 						
@@ -505,8 +529,11 @@
 								</svg>
 							</button>
 
-							<div x-show="expanded" class="pb-6 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
-								Rapid prototyping allows us to try and test many designs before executing just a few. Commonly accomplished across four days, we transform napkin sketches into blueprints for your ideal user experience.
+							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
+								<p class="text-indent">De fleste ledere ved, at godt design er uundværligt, men ansættelse af softwareudviklere er typisk første prioritet.</p>
+								<p>Designtalent er desuden svært at tiltrække, og selv hvis det lykkes, hvad hvis kvaliteten ikke lever op til forventningerne?</p>
+								<p>Den største fordel ved design som abonnement er dog, at man kun forpligter sig én måned ad gangen.</p>
+								<p>Dermed kan man bedre udholde, hvis nogle måneder er mindre designfokuseret.</p>
 							</div>
 						</div>
 
@@ -520,8 +547,9 @@
 								</svg>
 							</button>
 
-							<div x-show="expanded" class="pb-6 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
-								Visuals can help distinguish competing products. We build design systems that align engineering teams, support product growth, and accelerate time-to-market.
+							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 lg:text-2xl lg:leading-relaxed">
+								<p class="text-indent">Vi designer indtil I er tilfredse. Vi er dygtige til at ramme plet i første forsøg, men nogle situationer kræver revision eller alternativer.</p>
+								<p>Det hjælper vi glædeligt med.</p>
 							</div>
 						</div>
 
@@ -535,8 +563,10 @@
 								</svg>
 							</button>
 
-							<div x-show="expanded" class="pb-6 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
-								Visuals can help distinguish competing products. We build design systems that align engineering teams, support product growth, and accelerate time-to-market.
+							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 lg:text-2xl lg:leading-relaxed">
+								<p class="text-indent">I bliver tildelt en specialiseret designer, som gradvist bliver ekspert indenfor jeres forretning, produkt og målgruppe.</p>
+								<p>Vi forsøger altid er matche nye kunder med en designer, der har den rette balance af brancheviden og nysgerrig uvished.</p>
+								<p>Innovation blomstrer bedst under disse forhold.</p>
 							</div>
 						</div>
 
@@ -550,7 +580,7 @@
 								</svg>
 							</button>
 
-							<div x-show="expanded" class="pb-6 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
+							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
 								Visuals can help distinguish competing products. We build design systems that align engineering teams, support product growth, and accelerate time-to-market.
 							</div>
 						</div>
@@ -565,7 +595,7 @@
 								</svg>
 							</button>
 
-							<div x-show="expanded" class="pb-6 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
+							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
 								Visuals can help distinguish competing products. We build design systems that align engineering teams, support product growth, and accelerate time-to-market.
 							</div>
 						</div>
@@ -580,8 +610,9 @@
 								</svg>
 							</button>
 
-							<div x-show="expanded" class="pb-6 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 text-indent lg:text-2xl lg:leading-relaxed">
-								Visuals can help distinguish competing products. We build design systems that align engineering teams, support product growth, and accelerate time-to-market.
+							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 lg:text-2xl lg:leading-relaxed">
+								<p class="text-indent">Enkelte designopgaver leverer vi på én dag, mens andre mere komplekse opgaver kan tage mere end en uge.</p>
+								<p>Vi leverer gennemsnitligt færdige løsninger på fire dage, men hejser naturligvis et flag, hvis vi mener opgaven bør brydes ned.</p>
 							</div>
 						</div>
 					</div>
