@@ -25,16 +25,15 @@
 		<link href="https://unpkg.com/tippy.js@6/dist/tippy.css" rel="stylesheet" />
 
 		<script src="https://cdn.jsdelivr.net/npm/@ryangjchandler/alpine-tooltip@1.x.x/dist/cdn.min.js" defer></script>
-		<script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
 		<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 	</head>
 
-	<body class="overflow-x-hidden font-sans antialiased bg-white" x-data="{ show: false }" :class="{ 'overflow-y-hidden' : show, '' : !open }">
+	<body class="overflow-x-hidden font-sans antialiased bg-white">
 		<header class="absolute z-20 w-full py-4">
 			<div class="container px-6 mx-auto lg:px-12">
 				<div class="relative flex items-center justify-between h-16 lg:h-20">
 					<nav class="flex items-center justify-between flex-1">
-						<a href="/" title="Go to the homepage">
+						<a href="/" title="Gå til forsiden.">
 							<svg class="w-auto h-10 text-white lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40">
 								<path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/>
 							</svg>
@@ -42,33 +41,9 @@
 
 						<div class="hidden w-full md:block">
 							<div class="flex justify-end space-x-8 text-white lg:space-x-16">
-								<a href="#hvordan-det-fungerer" class="text-lg lg:text-2xl" title="Læs om, hvordan design som abonnement fungerer i praksis.">Hvordan det fungerer</a>
+								<a href="#hvordan-det-fungerer" class="text-lg lg:text-2xl" title="Læs hvordan design som abonnement fungerer i praksis.">Hvordan det fungerer</a>
 								<a href="#kompetencer" class="text-lg lg:text-2xl" title="Se hvilke kompetencer, vi tilbyder i abonnementet.">Kompetencer</a>
 								<a href="#priser" class="text-lg lg:text-2xl" title="Find ud af, hvad det koster og hvad, der er inkluderet.">Priser</a>
-							</div>
-						</div>
-
-						<button @click="show = !show" class="fixed z-20 flex items-center justify-center w-20 h-20 px-2 py-4 text-white bg-black rounded-full bottom-6 right-6 md:hidden" x-text="!show ? 'Menu' : 'Luk'">Menu</button>
-
-						<div class="fixed inset-0 bg-black bg-opacity-50 md:hidden" x-show="show">
-							<div
-								x-show="show"
-								@click.outside="show = false;"
-								x-transition:enter="transition ease-in-out duration-300"
-								x-transition:enter-start="translate-y-full transform opacity-0"
-								x-transition:enter-end="translate-y-0 transform opacity-100"
-								x-transition:leave="transition ease-in-out duration-300"
-								x-transition:leave-start="translate-y-0 transform"
-								x-transition:leave-end="translate-y-full transform"
-								class="fixed inset-x-0 bottom-0 z-10 flex w-full p-6 pb-8 bg-white rounded-t-3xl transform-gpu">
-
-								<div class="flex flex-col items-start w-full">
-									<nav class="flex flex-col items-start space-y-4">
-										<a href="#hvordan-det-fungerer" class="inline text-2xl text-black" title="Læs om, hvordan design som abonnement fungerer i praksis.">Hvordan det fungerer</a>
-										<a href="#kompetencer" class="inline text-2xl text-black" title="Se hvilke kompetencer, vi tilbyder i abonnementet.">Kompetencer</a>
-										<a href="#priser" class="inline text-2xl text-black" title="Find ud af, hvad det koster og hvad, der er inkluderet.">Priser</a>
-									</nav>
-								</div>
 							</div>
 						</div>
 					</nav>
@@ -473,10 +448,10 @@
 						<!-- En hurtig snak online -->
 						<article class="relative max-w-2xl p-8 space-y-6 bg-white border rounded-md lg:col-span-4 lg:p-10">
 							<div class="relative inline-flex -space-x-6">
-								<img class="object-cover w-16 h-16 border-4 border-white rounded-full" src="../media/edl-anders-wind.png" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
-								<img class="object-cover w-16 h-16 border-4 border-white rounded-full" src="../media/edl-casper-stendal.png" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
+								<img class="object-cover w-16 h-16 border-4 border-white rounded-full" src="../media/edl-anders-wind.png" alt="Profile picture of Anders Wind smiling infront of computer screens.">
+								<img class="object-cover w-16 h-16 border-4 border-white rounded-full" src="../media/edl-casper-stendal.png" alt="Profile picture of Casper Stendal smiling.">
 								<img class="object-cover w-16 h-16 border-4 border-white rounded-full" src="../media/edl-frederick-andersen.png" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
-								<div class="absolute bottom-0 right-0 w-5 h-5 border-4 rounded-full border-gray bg-green"></div>
+								<div class="absolute bottom-0 right-0 w-5 h-5 border-4 border-white rounded-full bg-green"></div>
 							</div>
 
 							<header class="space-y-2">
@@ -616,12 +591,12 @@
 						<p class="text-2xl leading-normal text-indent lg:leading-relaxed lg:text-3xl">Også selvom du er usikker på, hvad næste skridt er. Ingen salgssnak, ingen bindinger.</p>
 						
 						<div class="flex items-center space-x-6 lg:space-x-8 2xl:space-x-12 ">
-							<a href="tel:+4528253694" title="Reach out and let us chat about design and business." class="flex items-center space-x-1 lg:space-x-2 2xl:space-x-3">
+							<a href="tel:+4528253694" title="Ræk ud og lad os snakke design og forretning." class="flex items-center space-x-1 lg:space-x-2 2xl:space-x-3">
 								<span class="text-2xl md:text-3xl line 2xl:text-3xl">28 25 36 94</span>
 								<svg class="w-7 h-7 2xl:w-9 2xl:h-9" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18h.01M8 21h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
 							</a>
 							
-							<a href="/contact.html" title="Reach out about a project, job application or just to say hi." class="flex items-center space-x-1 2xl:space-x-3 lg:space-x-2">
+							<a href="/contact.html" title="Kontakt os om et projekt, jobansøgning eller bare for at sige hej." class="flex items-center space-x-1 2xl:space-x-3 lg:space-x-2">
 								<span class="text-2xl md:text-3xl line 2xl:text-3xl">Kontakt os</span>
 							</a>
 						</div>
@@ -658,14 +633,14 @@
 				<!-- Socials -->
 				<div class="flex flex-col w-full pb-8 lg:flex-row-reverse md:pb-16">
 					<nav class="flex mb-12 space-x-8 lg:mb-0">
-						<a href="https://instagram.com/edl.design" target="blank" rel="noopener" title="See EDL’s profile on Instagram." class="flex items-center space-x-1 text-black">
+						<a href="https://instagram.com/edl.design" target="blank" rel="noopener" title="Se EDL’s profil på Instagram." class="flex items-center space-x-1 text-black">
 							<span class="text-lg leading-tight lg:text-xl line">Instagram</span>
 							<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 								<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
 							</svg>
 						</a>
 						
-						<a href="https://linkedin.com/company/edldesign" target="blank" rel="noopener" title="See EDL’s profile on LinkedIn" class="flex items-center space-x-1 text-black">
+						<a href="https://linkedin.com/company/edldesign" target="blank" rel="noopener" title="Se EDL’s profil på LinkedIn" class="flex items-center space-x-1 text-black">
 							<span class="text-lg leading-tight lg:text-xl line">LinkedIn</span>
 							<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 								<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
