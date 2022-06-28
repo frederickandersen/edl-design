@@ -5,7 +5,7 @@ module.exports = {
     theme: {
         fontFamily: {
             'sans': ['"Helvetica Neue LT W05 55 Roman"', '"Helvetica Neue"', 'Arial', 'sans-serif'],
-            'serif': ['"EB Garamond"', 'Times', 'serif'],
+            'serif': ['"Neco"', 'Times', 'serif'],
         },
         colors: {
             transparent: 'transparent',
@@ -15,7 +15,7 @@ module.exports = {
             gray: '#E8EBE8',
             red: '#ED0B0A',
             blue: '#3257DC',
-            pink: '#D6B3F4',
+            pink: '#FE98FC',
             blueish: '#87BFFF',
             purple: {
                 '400': '#8938D1',
@@ -23,6 +23,7 @@ module.exports = {
             },
             yellow: '#F9BA43',
             green: '#71CE5A',
+            orange: '#FF7544',
             mint: {
                 'green': '#D3DABA',
                 'purple': '#D8B9DA',

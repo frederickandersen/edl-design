@@ -6,6 +6,16 @@
 @tailwind utilities;
 
 @font-face {
+    font-family: 'Neco';
+    src: url('../fonts/Neco-Italic.woff2') format('woff2'),
+         url('../fonts/Neco-Italic.woff') format('woff'),
+         url('../fonts/Neco-Italic.ttf') format('truetype');
+         font-weight: 400;
+         font-display: swap;
+         font-style: italic;
+}  
+
+@font-face {
     font-family: "Helvetica Neue LT W05 55 Roman";
     src: url("../fonts/08b57253-2e0d-4c12-9c57-107f6c67bc49.woff2") format("woff2"), url("../fonts/08edde9d-c27b-4731-a27f-d6cd9b01cd06.woff") format("woff");
     font-display: swap;
