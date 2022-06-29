@@ -1,3 +1,5 @@
+/dss /services/design-service
+/services/design-abonnement /services/design-service
 /work/smooth-robotics /work
 /career /career/junior-ux-designer 302
 https://edl.design/* https://www.edl.dk/:splat 301!
