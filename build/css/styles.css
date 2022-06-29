@@ -2700,6 +2700,11 @@ select{
     line-height: 1;
   }
 
+  .md\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
   .md\:leading-tight{
     line-height: 1.25;
   }
