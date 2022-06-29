@@ -952,10 +952,6 @@ select{
   margin-right: 0.25rem;
 }
 
-.mr-3{
-  margin-right: 0.75rem;
-}
-
 .block{
   display: block;
 }
@@ -986,10 +982,6 @@ select{
 
 .hidden{
   display: none;
-}
-
-.aspect-square{
-  aspect-ratio: 1 / 1;
 }
 
 .aspect-video{
@@ -1066,10 +1058,6 @@ select{
 
 .h-8{
   height: 2rem;
-}
-
-.h-2{
-  height: 0.5rem;
 }
 
 .max-h-256{
@@ -1164,10 +1152,6 @@ select{
   width: 50%;
 }
 
-.w-2{
-  width: 0.5rem;
-}
-
 .max-w-2xl{
   max-width: 42rem;
 }
@@ -1254,58 +1238,6 @@ select{
 .animate-pulse{
   -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
           animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-@-webkit-keyframes ping{
-  75%, 100%{
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-
-@keyframes ping{
-  75%, 100%{
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-
-.animate-ping{
-  -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-          animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-}
-
-@-webkit-keyframes bounce{
-  0%, 100%{
-    transform: translateY(-25%);
-    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
-            animation-timing-function: cubic-bezier(0.8,0,1,1);
-  }
-
-  50%{
-    transform: none;
-    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
-            animation-timing-function: cubic-bezier(0,0,0.2,1);
-  }
-}
-
-@keyframes bounce{
-  0%, 100%{
-    transform: translateY(-25%);
-    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
-            animation-timing-function: cubic-bezier(0.8,0,1,1);
-  }
-
-  50%{
-    transform: none;
-    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
-            animation-timing-function: cubic-bezier(0,0,0.2,1);
-  }
-}
-
-.animate-bounce{
-  -webkit-animation: bounce 1s infinite;
-          animation: bounce 1s infinite;
 }
 
 .cursor-help{
@@ -1491,16 +1423,22 @@ select{
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-y-16 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(4rem * var(--tw-space-y-reverse));
+}
+
 .space-x-12 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(3rem * var(--tw-space-x-reverse));
   margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-y-16 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-y-reverse: 0;
-  margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(4rem * var(--tw-space-y-reverse));
+.space-x-2 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]){
@@ -1513,12 +1451,6 @@ select{
   --tw-space-x-reverse: 0;
   margin-right: calc(-1.5rem * var(--tw-space-x-reverse));
   margin-left: calc(-1.5rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.space-x-2 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .divide-y > :not([hidden]) ~ :not([hidden]){
@@ -1672,17 +1604,17 @@ select{
   background-color: rgb(113 206 90 / var(--tw-bg-opacity));
 }
 
+.bg-orange{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 117 68 / var(--tw-bg-opacity));
+}
+
 .bg-black\/60{
   background-color: rgb(0 0 0 / 0.6);
 }
 
 .bg-black\/70{
   background-color: rgb(0 0 0 / 0.7);
-}
-
-.bg-orange{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 117 68 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-50{
@@ -1715,6 +1647,10 @@ select{
 
 .bg-orange-gradient{
   background-image: url('/media/bor-cover-bg.png');
+}
+
+.bg-ocean-blue-gradient{
+  background-image: url('/media/dbp-cover-bg.jpg');
 }
 
 .bg-purple-gradient{
@@ -1870,6 +1806,11 @@ select{
   padding-right: 0.75rem;
 }
 
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .py-24{
   padding-top: 6rem;
   padding-bottom: 6rem;
@@ -1893,11 +1834,6 @@ select{
 .px-8{
   padding-left: 2rem;
   padding-right: 2rem;
-}
-
-.px-5{
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
 }
 
 .pb-8{
@@ -1952,6 +1888,10 @@ select{
   padding-bottom: 0px;
 }
 
+.pt-32{
+  padding-top: 8rem;
+}
+
 .pt-16{
   padding-top: 4rem;
 }
@@ -1962,10 +1902,6 @@ select{
 
 .pt-8{
   padding-top: 2rem;
-}
-
-.pt-32{
-  padding-top: 8rem;
 }
 
 .pb-24{
@@ -2367,16 +2303,6 @@ select{
     margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
-  .sm\:px-8{
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .sm\:py-5{
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-  }
-
   .sm\:text-5xl{
     font-size: 3rem;
     line-height: 1;
@@ -2706,11 +2632,6 @@ select{
     padding-bottom: 0.5rem;
   }
 
-  .md\:py-5{
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-  }
-
   .md\:pb-16{
     padding-bottom: 4rem;
   }
@@ -2719,16 +2640,12 @@ select{
     padding-top: 20rem;
   }
 
-  .md\:pt-56{
-    padding-top: 14rem;
+  .md\:pt-48{
+    padding-top: 12rem;
   }
 
   .md\:pt-24{
     padding-top: 6rem;
-  }
-
-  .md\:pt-48{
-    padding-top: 12rem;
   }
 
   .md\:pb-32{
@@ -3013,6 +2930,10 @@ select{
     height: 8rem;
   }
 
+  .lg\:h-4{
+    height: 1rem;
+  }
+
   .lg\:h-14{
     height: 3.5rem;
   }
@@ -3031,10 +2952,6 @@ select{
 
   .lg\:h-24{
     height: 6rem;
-  }
-
-  .lg\:h-4{
-    height: 1rem;
   }
 
   .lg\:max-h-208{
@@ -3081,6 +2998,10 @@ select{
     width: 14rem;
   }
 
+  .lg\:w-4{
+    width: 1rem;
+  }
+
   .lg\:w-14{
     width: 3.5rem;
   }
@@ -3103,10 +3024,6 @@ select{
 
   .lg\:w-48{
     width: 12rem;
-  }
-
-  .lg\:w-4{
-    width: 1rem;
   }
 
   .lg\:max-w-7xl{
@@ -3354,14 +3271,14 @@ select{
        object-fit: contain;
   }
 
-  .lg\:object-top{
-    -o-object-position: top;
-       object-position: top;
-  }
-
   .lg\:object-center{
     -o-object-position: center;
        object-position: center;
+  }
+
+  .lg\:object-top{
+    -o-object-position: top;
+       object-position: top;
   }
 
   .lg\:p-12{
