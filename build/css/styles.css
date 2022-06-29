@@ -952,6 +952,10 @@ select{
   margin-right: 0.25rem;
 }
 
+.mr-3{
+  margin-right: 0.75rem;
+}
+
 .block{
   display: block;
 }
@@ -1064,6 +1068,10 @@ select{
   height: 2rem;
 }
 
+.h-2{
+  height: 0.5rem;
+}
+
 .max-h-256{
   max-height: 64rem;
 }
@@ -1156,6 +1164,10 @@ select{
   width: 50%;
 }
 
+.w-2{
+  width: 0.5rem;
+}
+
 .max-w-2xl{
   max-width: 42rem;
 }
@@ -1242,6 +1254,58 @@ select{
 .animate-pulse{
   -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
           animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@-webkit-keyframes ping{
+  75%, 100%{
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes ping{
+  75%, 100%{
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-ping{
+  -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+          animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@-webkit-keyframes bounce{
+  0%, 100%{
+    transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50%{
+    transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+@keyframes bounce{
+  0%, 100%{
+    transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50%{
+    transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce{
+  -webkit-animation: bounce 1s infinite;
+          animation: bounce 1s infinite;
 }
 
 .cursor-help{
@@ -1610,6 +1674,11 @@ select{
   background-color: rgb(0 0 0 / 0.7);
 }
 
+.bg-orange{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 117 68 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-50{
   --tw-bg-opacity: 0.5;
 }
@@ -1818,6 +1887,11 @@ select{
 .px-8{
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .pb-8{
@@ -2949,6 +3023,10 @@ select{
     height: 6rem;
   }
 
+  .lg\:h-4{
+    height: 1rem;
+  }
+
   .lg\:max-h-208{
     max-height: 52rem;
   }
@@ -3015,6 +3093,10 @@ select{
 
   .lg\:w-48{
     width: 12rem;
+  }
+
+  .lg\:w-4{
+    width: 1rem;
   }
 
   .lg\:max-w-7xl{
