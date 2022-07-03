@@ -1496,6 +1496,10 @@ select{
   scroll-behavior: smooth;
 }
 
+.text-clip{
+  text-overflow: clip;
+}
+
 .whitespace-nowrap{
   white-space: nowrap;
 }
@@ -1680,12 +1684,30 @@ select{
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(84 56 209 / 0));
 }
 
+.from-blue{
+  --tw-gradient-from: #3257DC;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(50 87 220 / 0));
+}
+
+.from-black{
+  --tw-gradient-from: #000;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(0 0 0 / 0));
+}
+
 .to-pink{
   --tw-gradient-to: #FE98FC;
 }
 
 .to-purple-400{
   --tw-gradient-to: #8938D1;
+}
+
+.to-blue{
+  --tw-gradient-to: #3257DC;
+}
+
+.to-orange{
+  --tw-gradient-to: #FF7544;
 }
 
 .bg-cover{
@@ -2057,6 +2079,25 @@ select{
 
 .text-black\/80{
   color: rgb(0 0 0 / 0.8);
+}
+
+.underline{
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.decoration-black{
+  -webkit-text-decoration-color: #000;
+          text-decoration-color: #000;
+}
+
+.decoration-dotted{
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
+
+.decoration-1{
+  text-decoration-thickness: 1px;
 }
 
 .antialiased{
@@ -2695,14 +2736,14 @@ select{
     line-height: 1.75rem;
   }
 
-  .md\:text-9xl{
-    font-size: 8rem;
-    line-height: 1;
-  }
-
   .md\:text-lg{
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-9xl{
+    font-size: 8rem;
+    line-height: 1;
   }
 
   .md\:leading-tight{
