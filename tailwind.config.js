@@ -63,6 +63,9 @@ module.exports = {
                 'section': 'fit-content(35%) 1fr',
                 'contact': 'fit-content(56%) 1fr',
             },
+            screens: {
+                '3xl': '2000px',
+            },
         },
     },
     corePlugins: {

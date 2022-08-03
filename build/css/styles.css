@@ -1453,6 +1453,12 @@ select{
   margin-left: calc(-1.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-y-1 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+
 .divide-y > :not([hidden]) ~ :not([hidden]){
   --tw-divide-y-reverse: 0;
   border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
@@ -1494,10 +1500,6 @@ select{
 
 .scroll-smooth{
   scroll-behavior: smooth;
-}
-
-.text-clip{
-  text-overflow: clip;
 }
 
 .whitespace-nowrap{
@@ -1684,30 +1686,12 @@ select{
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(84 56 209 / 0));
 }
 
-.from-blue{
-  --tw-gradient-from: #3257DC;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(50 87 220 / 0));
-}
-
-.from-black{
-  --tw-gradient-from: #000;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(0 0 0 / 0));
-}
-
 .to-pink{
   --tw-gradient-to: #FE98FC;
 }
 
 .to-purple-400{
   --tw-gradient-to: #8938D1;
-}
-
-.to-blue{
-  --tw-gradient-to: #3257DC;
-}
-
-.to-orange{
-  --tw-gradient-to: #FF7544;
 }
 
 .bg-cover{
@@ -1737,14 +1721,14 @@ select{
      object-fit: cover;
 }
 
-.object-center{
-  -o-object-position: center;
-     object-position: center;
-}
-
 .object-top{
   -o-object-position: top;
      object-position: top;
+}
+
+.object-center{
+  -o-object-position: center;
+     object-position: center;
 }
 
 .object-left{
@@ -2086,18 +2070,9 @@ select{
           text-decoration-line: underline;
 }
 
-.decoration-black{
-  -webkit-text-decoration-color: #000;
-          text-decoration-color: #000;
-}
-
 .decoration-dotted{
   -webkit-text-decoration-style: dotted;
           text-decoration-style: dotted;
-}
-
-.decoration-1{
-  text-decoration-thickness: 1px;
 }
 
 .antialiased{
@@ -3591,6 +3566,10 @@ select{
     margin-top: 10rem;
   }
 
+  .\32xl\:h-160{
+    height: 40rem;
+  }
+
   .\32xl\:h-9{
     height: 2.25rem;
   }
@@ -3639,16 +3618,8 @@ select{
     max-width: 48rem;
   }
 
-  .\32xl\:grid-cols-3{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .\32xl\:grid-cols-1{
     grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-
-  .\32xl\:gap-24{
-    gap: 6rem;
   }
 
   .\32xl\:gap-40{
@@ -3802,5 +3773,15 @@ select{
 
   .\32xl\:leading-normal{
     line-height: 1.5;
+  }
+}
+
+@media (min-width: 2000px){
+  .\33xl\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .\33xl\:gap-24{
+    gap: 6rem;
   }
 }
