@@ -1605,11 +1605,6 @@ select{
   background-color: rgb(216 185 218 / var(--tw-bg-opacity));
 }
 
-.bg-green{
-  --tw-bg-opacity: 1;
-  background-color: rgb(113 206 90 / var(--tw-bg-opacity));
-}
-
 .bg-orange{
   --tw-bg-opacity: 1;
   background-color: rgb(255 117 68 / var(--tw-bg-opacity));
@@ -1617,6 +1612,11 @@ select{
 
 .bg-black\/60{
   background-color: rgb(0 0 0 / 0.6);
+}
+
+.bg-green{
+  --tw-bg-opacity: 1;
+  background-color: rgb(113 206 90 / var(--tw-bg-opacity));
 }
 
 .bg-black\/70{
