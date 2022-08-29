@@ -20,6 +20,9 @@
 
 		<script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
 		<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+
+		<script src="https://unpkg.com/gsap/dist/gsap.min.js"></script>
+		<script src="https://unpkg.com/scrollxp/dist/scrollxp.min.js"></script>
 	</head>
 
 	<body class="overflow-x-hidden font-sans antialiased bg-white" x-data="{ show: false }" :class="{ 'overflow-y-hidden' : show, '' : !open }">
@@ -111,6 +114,147 @@
 							<svg class="w-auto h-9 lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 40">
 								<path fill="currentColor" d="M8.188 22.621S.194 25.393.008 37.046a.348.348 0 0 0 .36.358c1.496-.043 6.078-.203 9.196-.203 3.118 0 8.947.16 10.392.203a.34.34 0 0 0 .356-.327c.073-1.556-.174-7.548-8.173-7.548 0 0 8.014-2.774 8.178-14.462a.347.347 0 0 0-.358-.353c-1.53.033-7.587.166-10.395.166-2.809 0-7.717-.14-9.191-.174a.346.346 0 0 0-.365.326c-.07 1.51.113 7.587 8.18 7.587v.002Zm34.275-5.703c-2.087-1.868-5.16-2.804-9.224-2.806-4.06-.004-7.133.932-9.217 2.804-2.089 1.87-3.133 4.917-3.133 9.14 0 4.222 1.044 7.267 3.133 9.135C26.11 37.064 29.183 38 33.245 38c4.06 0 7.135-.936 9.222-2.81 2.086-1.867 3.13-4.912 3.133-9.134.003-4.223-1.043-7.269-3.138-9.14v.002h.001ZM35.208 28.74a2.24 2.24 0 0 1-1.797.91 2.227 2.227 0 0 1-1.797-.91c-.367-.608-.551-1.503-.551-2.685 0-1.184.184-2.078.55-2.684a2.239 2.239 0 0 1 1.798-.912 2.228 2.228 0 0 1 1.797.912c.369.607.554 1.5.554 2.684 0 1.182-.185 2.078-.554 2.684v.001Zm33.66-11.823c-2.088-1.868-4.584-2.806-8.642-2.806-4.06 0-7.717.937-9.803 2.804-2.088 1.868-3.134 4.926-3.134 9.14 0 4.213 1.046 7.267 3.134 9.135C52.51 37.058 55.586 38 59.644 38c4.06 0 7.136-.938 9.223-2.81C70.954 33.32 72 30.278 72 26.057s-1.046-7.268-3.133-9.14v.002ZM61.441 28.74a2.235 2.235 0 0 1-2.806.669 2.226 2.226 0 0 1-.788-.67c-.371-.607-.554-1.502-.554-2.684 0-1.184.184-2.078.554-2.684a2.239 2.239 0 0 1 1.796-.912 2.228 2.228 0 0 1 1.798.912c.367.607.551 1.5.553 2.684.004 1.182-.182 2.078-.553 2.684v.001ZM4.792 2c-1.225 0-2.17.35-2.813 1.035-.642.685-.967 1.688-.967 3.012 0 1.323.328 2.334.972 3.03.64.697 1.595 1.058 2.807 1.058 1.213 0 2.19-.353 2.82-1.058.63-.704.972-1.715.972-3.03 0-1.317-.326-2.335-.972-3.012C6.965 2.358 6.014 2 4.791 2Zm0 6.918a2.099 2.099 0 0 1-1.733-.693 3.342 3.342 0 0 1-.6-2.178 3.26 3.26 0 0 1 .601-2.132 2.115 2.115 0 0 1 1.732-.698 2.13 2.13 0 0 1 1.738.698c.448.615.664 1.371.608 2.132a3.306 3.306 0 0 1-.608 2.178 2.126 2.126 0 0 1-1.739.693Zm12.68-6.872c-1.254 0-2.68.157-2.68.157a.22.22 0 0 0-.221.225s.132 1.946.132 3.633c0 1.689-.132 3.577-.132 3.577a.221.221 0 0 0 .222.225c.886.129 1.779.203 2.676.221a3.808 3.808 0 0 0 2.742-.967c.697-.64 1.05-1.662 1.05-3.048 0-1.384-.338-2.404-1.05-3.042a3.69 3.69 0 0 0-2.74-.98Zm-1.483 1.312c.464-.052.93-.077 1.399-.074a2.35 2.35 0 0 1 1.758.661c.44.443.666 1.168.666 2.12 0 .954-.225 1.685-.666 2.125a2.373 2.373 0 0 1-1.758.661 6.138 6.138 0 0 1-1.399-.12s.081-1.556.081-2.673-.08-2.7-.08-2.7Zm11.356 2.618c0 1.234-.097 3.724-.097 3.724a.222.222 0 0 0 .222.225s1.444-.062 2.324-.062c.877 0 2.44.067 2.44.067a.112.112 0 0 0 .112-.114 1.108 1.108 0 0 0-.68-1.021 1.096 1.096 0 0 0-.42-.083s-1.723-.071-2.587 0l.05-2.292c.604.038 1.402.02 1.402.02a1.103 1.103 0 0 0 1.102-1.106.112.112 0 0 0-.112-.112c-.799.045-1.6.045-2.4 0l-.031-1.888c.862.049 1.725.049 2.587 0a1.107 1.107 0 0 0 1.091-1.105.112.112 0 0 0-.033-.078.108.108 0 0 0-.08-.03s-1.07.034-2.438.034c-.775.002-1.55-.011-2.324-.038a.22.22 0 0 0-.22.225s.092 2.4.092 3.634Zm17.248-3.93a1.108 1.108 0 0 0-1.1 1.098s-.047 1.257-.047 2.148c0 .89.066 2.314.066 2.314-.961-2.093-3.18-4.72-3.487-5.085a1.07 1.07 0 0 0-.897-.475h-.57a.217.217 0 0 0-.205.223s.105 2.626.105 4.202c0 1.575-.105 3.4-.105 3.4a.22.22 0 0 0 .217.221h.089a1.107 1.107 0 0 0 1.089-1.089s.054-1.44.054-2.526c0-1.084-.062-2.05-.062-2.05 1.642 1.799 3.33 4.899 3.535 5.195a1.097 1.097 0 0 0 .907.478h.495a.221.221 0 0 0 .221-.222s-.104-3.147-.104-4.578c0-1.432.105-3.024.105-3.024a.223.223 0 0 0-.221-.222l-.085-.008ZM55.29 5.89a8.392 8.392 0 0 0-1.549-.568 2.225 2.225 0 0 1-.926-.462.858.858 0 0 1 .11-1.358c.295-.17.634-.253.975-.237.32-.012.638.039.938.147a.902.902 0 0 0 1.123-.315l.104-.159a.146.146 0 0 0-.038-.196 3.32 3.32 0 0 0-.813-.389 5.23 5.23 0 0 0-1.457-.187 3.326 3.326 0 0 0-1.367.268c-.373.158-.7.41-.945.732a1.846 1.846 0 0 0-.349 1.105 1.888 1.888 0 0 0 .488 1.362 3.785 3.785 0 0 0 1.739.84c.434.084.847.257 1.212.506a.918.918 0 0 1 .33.74c0 .746-.488 1.112-1.496 1.112a2.839 2.839 0 0 1-.878-.128 4.252 4.252 0 0 1-.353-.144.877.877 0 0 0-1.076.28l-.148.202a.153.153 0 0 0-.027.113c.009.038.03.07.062.093.386.25.807.445 1.247.576.416.101.84.152 1.266.152.493.007.979-.094 1.429-.296.479-.202.885-.548 1.163-.989.189-.322.281-.694.268-1.068a2.15 2.15 0 0 0-.237-1.029 1.824 1.824 0 0 0-.794-.703Zm7.096.086c0 1.23-.093 3.724-.093 3.724a.221.221 0 0 0 .133.207.22.22 0 0 0 .085.018s1.444-.066 2.324-.066c.814.01 1.629.033 2.443.07a.113.113 0 0 0 .109-.113 1.111 1.111 0 0 0-.68-1.021 1.096 1.096 0 0 0-.42-.083s-1.721-.075-2.587 0l.05-2.292c.604.043 1.405.023 1.405.023a1.098 1.098 0 0 0 1.1-1.105.113.113 0 0 0-.108-.113c-.8.045-1.602.045-2.401 0L63.7 3.342c.86.05 1.72.05 2.582 0a1.096 1.096 0 0 0 1.12-1.113.11.11 0 0 0-.109-.112s-1.073.034-2.44.034-2.323-.034-2.323-.034a.22.22 0 0 0-.222.225s.078 2.4.078 3.634Z" />
 							</svg>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="bg-black" id="section">
+				<div class="container h-[2000px] relative px-6 pb-32 mx-auto lg:px-12 top-24">
+					<article class="relative z-30 flex text-white bg-black border border-white h-160 will-change-transform" data-scene-reverse="true" data-scene  data-scene-duration="75%" data-scene-pin="true" data-scene-indicator="scene">
+						<div class="flex flex-col justify-between">
+							<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-5xl">Visibility of system status</h3>
+							<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed">The design should always keep users informed of what is going on.</p>
+							<span class="number">1</span>
+						</div>
+
+						<div class="">
+
+						</div>
+					</article>
+
+					<article class="absolute inset-x-0 z-20 flex mt-20 text-white border border-white h-160 will-change-transform" data-scene-reverse="true" data-scene data-scene-duration="75%" data-scene-pin="true" data-scene-indicator="scene">
+						<div class="flex flex-col justify-between">
+							<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-5xl">Visibility of system status</h3>
+							<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed">The design should always keep users informed of what is going on.</p>
+							<span class="number">2</span>
+						</div>
+
+						<div class="">
+							
+						</div>
+					</article>
+
+					<article class="absolute inset-x-0 z-10 flex mt-40 text-white border border-white h-160 will-change-transform" data-scene-reverse="true" data-scene data-scene-duration="75%" data-scene-pin="true" data-scene-indicator="scene">
+						<div class="flex flex-col justify-between">
+							<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-5xl">Visibility of system status</h3>
+							<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed">The design should always keep users informed of what is going on.</p>
+							<span class="number">3</span>
+						</div>
+
+						<div class="">
+							
+						</div>
+					</article>
+
+				</div>
+			</section>
+
+			<section class="pb-24 bg-black md:pb-32 lg:pb-48 2xl:pb-56">
+				<div class="container px-6 mx-auto lg:px-12">
+					<div class="flex flex-col text-white md:flex-row md:items-center md:justify-between">
+						<h2 class="text-4xl w-full leading-tight md:leading-tight md:text-6xl xl:text-7.5xl lg:leading-tight">What we evaluate</h2>
+					</div>
+
+					<div class="grid gap-6 mt-8 text-white md:mt-12 lg:mt-16 md:gap-8 md:grid-cols-2 lg:grid-cols-3">
+						<div class="tile">
+							<span class="number">1</span>
+							
+							<div class="space-y-4">
+								<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-5xl">Visibility of system status</h3>
+								<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed">The design should always keep users informed of what is going on.</p>
+							</div>
+						</div>
+
+						<div class="tile">
+							<span class="number">2</span>
+							
+							<div class="space-y-4">
+								<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-5xl">Match between system and the real world</h3>
+								<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed">The design must speak the language of the users.</p>
+							</div>
+						</div>
+
+						<div class="tile">
+							<span class="number">3</span>
+							
+							<div class="space-y-4">
+								<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-5xl">User control and freedom</h3>
+								<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed">Users often perform actions by mistake and this must be supported.</p>
+							</div>
+						</div>
+
+						<div class="tile">
+							<span class="number">4</span>
+							
+							<div class="space-y-4">
+								<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-5xl">Consistency and standards</h3>
+								<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed">Users should not wonder if different words, situations, or actions mean the same thing.</p>
+							</div>
+						</div>
+
+						<div class="tile">
+							<span class="number">5</span>
+							
+							<div class="space-y-4">
+								<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-5xl">Error prevention</h3>
+								<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed">Good error messages are important, but the best designs prevent problems from occurring at all.</p>
+							</div>
+						</div>
+
+						<div class="tile">
+							<span class="number">6</span>
+							
+							<div class="space-y-4">
+								<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-5xl">Recognition rather than recall</h3>
+								<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed">Minimize the user’s memory load by making items, actions, and options visible.</p>
+							</div>
+						</div>
+
+						<div class="tile">
+							<span class="number">7</span>
+							
+							<div class="space-y-4">
+								<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-5xl">Flexibility and efficiency of use</h3>
+								<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed">The design must be adapted to both inexperienced and experienced users.</p>
+							</div>
+						</div>
+
+						<div class="tile">
+							<span class="number">8</span>
+							
+							<div class="space-y-4">
+								<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-5xl">Aesthetic and minimalist design</h3>
+								<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed">The interface should not contain information that is irrelevant or rarely needed.</p>
+							</div>
+						</div>
+
+						<div class="tile">
+							<span class="number">9</span>
+							
+							<div class="space-y-4">
+								<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-5xl">Help users recover from errors</h3>
+								<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed">Errors must be expressed in plain language, state the problem accurately, and suggest a solution.</p>
+							</div>
+						</div>
+
+						<div class="tile">
+							<span class="number">10</span>
+							
+							<div class="space-y-4">
+								<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-5xl">Help and documentation</h3>
+								<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed">Help and documentation must be easy to search for and focus on the user’s task.</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -393,5 +537,11 @@
 				<span class="text-lg leading-tight text-black lg:text-xl lg:flex-1">2022 &copy; EDL ApS</span>
 			</div>
 		</footer>
+		
+		<script>
+			new ScrollXP({
+			  container: document.body,
+			});
+		  </script>
 	</body>
 </html>

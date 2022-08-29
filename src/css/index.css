@@ -41,6 +41,14 @@
     .accordion {
         @apply flex items-center justify-between w-full py-6 text-xl leading-snug text-left md:p-6 md:text-2xl md:leading-snug;
     }
+
+    .tile {
+        @apply justify-between w-full p-6 space-y-12 transition-all border border-white 2xl:space-y-32 border-opacity-40 lg:space-x-0 lg:flex lg:flex-col hover:bg-white hover:text-black hover:border-opacity-0 rounded-2xl lg:p-8 break-inside-avoid;
+    }
+
+    .number {
+        @apply relative inline-flex items-center justify-center w-12 h-12 font-serif text-lg italic border rounded-full tabular-nums 2xl:w-16 2xl:h-16 2xl:leading-tight 2xl:text-3xl;
+    }
 }
 
 @layer utilities {
