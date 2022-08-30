@@ -83,59 +83,62 @@
 		<main>
 			<!-- Hero -->
 			<section class="relative pt-32 pb-24 bg-gradient-to-tr from-white via-white md:pt-48 md:pb-32 2xl:pt-64 2xl:pb-48">
-				<div class="container z-10 px-6 mx-auto space-y-16 lg:space-y-24 2xl:space-y-32 lg:px-12">
-					<div class="relative space-y-6 text-black md:space-y-10 max-w-screen-2xl 2xl:space-y-12">
-						<span class="inline-block px-4 py-2 font-serif text-2xl italic text-black border rounded-full lg:py-3 lg:px-6 md:text-4xl 2xl:text-5xl">Free agency trial</span>						
-						<h1 x-data="{ isIn: false }"
-						x-intersect:enter.half="isIn = true"
-						x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }"
-						class="w-full text-4.5xl transition duration-1000 leading-tight md:text-7xl md:leading-tight xl:leading-tight xl:text-8xl 2xl:text-9xl 2xl:leading-tight">Choosing a design agency can be risky.</h1>
+				<div class="container z-10 px-6 mx-auto space-y-16 lg:px-12 lg:space-y-24 2xl:space-y-40">
+					<div class="space-y-10 md:space-y-16 2xl:space-y-20">
+						<div class="space-y-6 md:space-y-10 2xl:space-y-12 max-w-screen-2xl">
+							<span class="inline-block px-4 py-2 font-serif text-2xl italic text-black border rounded-full lg:py-3 lg:px-6 md:text-4xl 2xl:text-5xl">Free agency trial</span>						
+							<h1 x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="w-full text-4.5xl transition duration-1000 leading-tight md:text-7xl md:leading-tight xl:leading-tight xl:text-8xl 2xl:text-8.5xl 2xl:leading-tight">Choosing a design agency can be risky.</h1>
+							<p x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="w-full text-4.5xl transition delay-500 duration-1000 leading-tight md:text-7xl md:leading-tight xl:leading-tight xl:text-8xl 2xl:text-8.5xl 2xl:leading-tight">We eliminate the risk by offering a 90-minute trial period.</p>
+						</div>
 						
-						<p x-data="{ isIn: false }"
-						x-intersect:enter.half="isIn = true"
-						x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }"
-						class="w-full text-4.5xl transition delay-500 duration-1000 leading-tight md:text-7xl md:leading-tight xl:leading-tight xl:text-8xl 2xl:text-9xl 2xl:leading-tight">We eliminate the risk by offering a 90-minute trial period.</p>
-						
-						<div>
-							<a class="inline-block px-4 py-3 mt-4 text-xl text-white bg-black rounded-md md:mt-6 lg:px-6 lg:py-4 md:text-2xl 2xl:py-5 2xl:px-8 2xl:text-3xl" title="Schedule your free 90-minute trial." href="https://savvycal.com/edl/designsession" data-savvycal-embed>Get started now</a>
+						<div class="flex flex-col space-y-3 sm:space-y-0 sm:space-x-6 sm:flex-row">
+							<a class="inline-block px-6 py-4 text-xl text-center text-white bg-black rounded-md md:text-left lg:px-8 lg:py-5 md:text-2xl 2xl:py-5 2xl:px-8 2xl:text-3xl" title="Schedule your free 90-minute trial." href="https://savvycal.com/edl/designsession" data-savvycal-embed>Get started now</a>
+							<a class="inline-block px-6 py-4 text-xl text-center text-black border rounded-md md:text-left lg:px-8 lg:py-5 md:text-2xl 2xl:py-5 2xl:px-8 2xl:text-3xl" title="Learn more about getting started." href="#how">Learn more</a>
 						</div>
 					</div>
 					
 					<div class="space-y-12 md:grid md:grid-cols-2 md:gap-16 lg:gap-x-20 2xl:gap-x-32 lg:max-w-7xl 2xl:max-w-screen-2xl md:space-y-0">
-						<div class="space-y-4">
-							<h3 class="font-serif text-2xl italic leading-normal lg:space-y-4 lg:leading-relaxed lg:text-3xl 2xl:text-4xl 2xl:leading-relaxed">Format</h3>
-							<p class="text-2xl leading-normal lg:space-y-4 lg:leading-relaxed lg:text-3xl">
-								A condensed, in-person design session showcasing our pragmatic approach to software design.
-								<p class="flex items-center mt-4 space-x-2 text-lg lg:mt-6 text-black/60 lg:text-xl lg:leading-normal">
-									<span>Available in</span>
-									<span class="flex items-center px-2 border rounded-full border-black/20">
-										<svg class="w-5 h-5 mr-1" viewBox="0 0 36 36">
-											<path fill="#C60C30" d="M32 5H15v11h21V9a4 4 0 0 0-4-4zM15 31h17c2.209 0 4-1.791 4-4.5V20H15v11zM0 20v6.5C0 29.209 1.791 31 4 31h7V20H0zM11 5H4a4 4 0 0 0-4 4v7h11V5z"/>
-											<path fill="#fff" d="M15 5h-4v11H0v4h11v11h4V20h21v-4H15z"/>
-										</svg>
-										Danish
-									</span>
-									<span>and</span>
-									<span class="flex items-center px-2 border rounded-full border-black/20">
-										<svg class="w-5 h-5 mr-1" viewBox="0 0 36 36">
-											<path fill="#B22334" d="M35.445 7C34.752 5.809 33.477 5 32 5H18v2h17.445zM0 25h36v2H0zm18-8h18v2H18zm0-4h18v2H18zM0 21h36v2H0zm4 10h28c1.477 0 2.752-.809 3.445-2H.555c.693 1.191 1.968 2 3.445 2zM18 9h18v2H18z"/>
-											<path fill="#EEE" d="M.068 27.679c.017.093.036.186.059.277c.026.101.058.198.092.296c.089.259.197.509.333.743L.555 29h34.89l.002-.004a4.22 4.22 0 0 0 .332-.741a3.75 3.75 0 0 0 .152-.576c.041-.22.069-.446.069-.679H0c0 .233.028.458.068.679zM0 23h36v2H0zm0-4v2h36v-2H18zm18-4h18v2H18zm0-4h18v2H18zM0 9zm.555-2l-.003.005L.555 7zM.128 8.044c.025-.102.06-.199.092-.297a3.78 3.78 0 0 0-.092.297zM18 9h18c0-.233-.028-.459-.069-.68a3.606 3.606 0 0 0-.153-.576A4.21 4.21 0 0 0 35.445 7H18v2z"/>
-											<path fill="#3C3B6E" d="M18 5H4a4 4 0 0 0-4 4v10h18V5z"/>
-											<path fill="#FFF" d="m2.001 7.726l.618.449l-.236.725L3 8.452l.618.448l-.236-.725L4 7.726h-.764L3 7l-.235.726zm2 2l.618.449l-.236.725l.617-.448l.618.448l-.236-.725L6 9.726h-.764L5 9l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L9 9l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L13 9l-.235.726zm-8 4l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L5 13l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L9 13l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L13 13l-.235.726zm-6-6l.618.449l-.236.725L7 8.452l.618.448l-.236-.725L8 7.726h-.764L7 7l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L11 7l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L15 7l-.235.726zm-12 4l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L3 11l-.235.726zM6.383 12.9L7 12.452l.618.448l-.236-.725l.618-.449h-.764L7 11l-.235.726h-.764l.618.449zm3.618-1.174l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L11 11l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L15 11l-.235.726zm-12 4l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L3 15l-.235.726zM6.383 16.9L7 16.452l.618.448l-.236-.725l.618-.449h-.764L7 15l-.235.726h-.764l.618.449zm3.618-1.174l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L11 15l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L15 15l-.235.726z"/>
-										</svg>
-										English
-									</span>
-								</p>
-							</p>
+						<div class="space-y-4 lg:space-y-6 2xl:space-y-8">
+							<h3 class="text-3xl leading-tight lg:space-y-4 lg:leading-tight lg:text-4xl 2xl:text-5xl 2xl:leading-tight">Format</h3>
+							<p class="text-2xl leading-normal lg:leading-relaxed lg:text-3xl">A condensed, in-person design session showcasing our pragmatic approach to software design.</p>
+
+							<div class="flex items-center space-x-2 text-lg lg:text-xl lg:leading-normal">
+								<span>Available in</span>
+								<span class="flex items-center px-2 border rounded-full border-black/20">
+									<svg class="w-5 h-5 mr-1.5" viewBox="0 0 64 64">
+										<path fill="#ed4c5c" d="M61.2 25C58 11.8 46.2 2 32 2h-1v23h30.2M17 6C10 10.1 4.8 16.9 2.8 25H17V6M2.8 39c2 8.1 7.2 14.9 14.2 19V39H2.8zM31 62h1c14.2 0 26-9.8 29.2-23H31v23"/>
+										<path fill="#fff" d="M61.2 25H31V2c-5.1.2-9.9 1.6-14 4v19H2.8c-.5 2.2-.8 4.6-.8 7s.3 4.8.8 7H17v19c4.1 2.4 8.9 3.8 14 4V39h30.2c.5-2.2.8-4.6.8-7s-.3-4.8-.8-7"/>
+									</svg>
+									Danish
+								</span>
+								<span>and</span>
+								<span class="flex items-center px-2 border rounded-full border-black/20">
+									<svg class="w-5 h-5 mr-1.5" viewBox="0 0 64 64">
+										<path fill="#ed4c5c" d="M48 6.6C43.3 3.7 37.9 2 32 2v4.6h16"/>
+										<path fill="#fff" d="M32 11.2h21.6C51.9 9.5 50 7.9 48 6.6H32v4.6z"/>
+										<path fill="#ed4c5c" d="M32 15.8h25.3c-1.1-1.7-2.3-3.2-3.6-4.6H32v4.6z"/>
+										<path fill="#fff" d="M32 20.4h27.7c-.7-1.6-1.5-3.2-2.4-4.6H32v4.6"/>
+										<path fill="#ed4c5c" d="M32 25h29.2c-.4-1.6-.9-3.1-1.5-4.6H32V25z"/>
+										<path fill="#fff" d="M32 29.7h29.9c-.1-1.6-.4-3.1-.7-4.6H32v4.6"/>
+										<path fill="#ed4c5c" d="M61.9 29.7H32V32H2c0 .8 0 1.5.1 2.3h59.8c.1-.8.1-1.5.1-2.3c0-.8 0-1.6-.1-2.3"/>
+										<path fill="#fff" d="M2.8 38.9h58.4c.4-1.5.6-3 .7-4.6H2.1c.1 1.5.3 3.1.7 4.6"/>
+										<path fill="#ed4c5c" d="M4.3 43.5h55.4c.6-1.5 1.1-3 1.5-4.6H2.8c.4 1.6.9 3.1 1.5 4.6"/>
+										<path fill="#fff" d="M6.7 48.1h50.6c.9-1.5 1.7-3 2.4-4.6H4.3c.7 1.6 1.5 3.1 2.4 4.6"/>
+										<path fill="#ed4c5c" d="M10.3 52.7h43.4c1.3-1.4 2.6-3 3.6-4.6H6.7c1 1.7 2.3 3.2 3.6 4.6"/>
+										<path fill="#fff" d="M15.9 57.3h32.2c2.1-1.3 3.9-2.9 5.6-4.6H10.3c1.7 1.8 3.6 3.3 5.6 4.6"/>
+										<path fill="#ed4c5c" d="M32 62c5.9 0 11.4-1.7 16.1-4.7H15.9c4.7 3 10.2 4.7 16.1 4.7"/>
+										<path fill="#428bc1" d="M16 6.6c-2.1 1.3-4 2.9-5.7 4.6c-1.4 1.4-2.6 3-3.6 4.6c-.9 1.5-1.8 3-2.4 4.6c-.6 1.5-1.1 3-1.5 4.6c-.4 1.5-.6 3-.7 4.6c-.1.8-.1 1.6-.1 2.4h30V2c-5.9 0-11.3 1.7-16 4.6"/>
+										<path fill="#fff" d="m25 3l.5 1.5H27l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm4 6l.5 1.5H31l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H23l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm4 6l.5 1.5H27l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H19l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H11l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm20 6l.5 1.5H31l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H23l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H15l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm12 6l.5 1.5H27l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H19l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm-8 0l.5 1.5H11l-1.2 1l.4 1.5l-1.2-.9l-1.2.9l.4-1.5l-1.2-1h1.5zm2.8-14l1.2-.9l1.2.9l-.5-1.5l1.2-1h-1.5L13 9l-.5 1.5h-1.4l1.2.9l-.5 1.6m-8 12l1.2-.9l1.2.9l-.5-1.5l1.2-1H5.5L5 21l-.5 1.5h-1c0 .1-.1.2-.1.3l.8.6l-.4 1.6"/>
+									</svg>
+									English
+								</span>
+							</div>
 						</div>
 
-						<div class="space-y-4">
-							<h3 class="font-serif text-2xl italic leading-normal lg:space-y-4 lg:leading-relaxed lg:text-3xl 2xl:text-4xl 2xl:leading-relaxed">Outcome</h3>
-
-							<p class="text-2xl leading-normal lg:space-y-4 lg:leading-relaxed lg:text-3xl">
-								Gain clarity and solutions to a design challenge you and your team are currently facing.
-								<span class="block mt-4 text-lg lg:mt-6 text-black/60 lg:text-xl lg:leading-normal">Need inspiration? <a href="#examples" title="View use cases for the design session." class="underline underline-offset-4">View examples</a></span>
-							</p>
+						<div class="space-y-4 lg:space-y-6 2xl:space-y-8">
+							<h3 class="text-3xl leading-tight lg:space-y-4 lg:leading-tight lg:text-4xl 2xl:text-5xl 2xl:leading-tight">Outcome</h3>
+							<p class="text-2xl leading-normal lg:leading-relaxed lg:text-3xl">Gain clarity and solutions to a design challenge you and your team are currently facing.</p>
+							<span class="block mt-4 text-lg lg:mt-6 lg:text-xl lg:leading-normal">Need inspiration? <a href="#examples" title="View use cases for the design session." class="underline underline-offset-4">View examples</a></span>
 						</div>
 					</div>
 				</div>
@@ -143,7 +146,7 @@
 				<div class="absolute inset-0 w-full bg-no-repeat bg-cover 2xl:bg-contain bg-bubble-gradient -z-10"></div>
 			</section>
 
-			<section class="relative py-24 text-white bg-black md:py-32 lg:py-40 2xl:py-48">
+			<section id="how" class="relative py-24 text-white bg-black md:py-32 lg:py-40 2xl:py-48">
 				<div class="container px-6 mx-auto space-y-8 lg:px-12 lg:space-y-16 2xl:space-y-20">
 					<div class="w-full space-y-4">
 						<h2 class="max-w-5xl text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7xl">From zero to <span class="font-serif italic">free design session</span></h2>
@@ -151,20 +154,20 @@
 					</div>
 					
 					<div class="space-y-6 lg:space-y-0 lg:gap-8 lg:grid lg:grid-cols-2 lg:grid-rows-2">
-						<div class="justify-between w-full p-6 space-y-12 border border-white border-opacity-40 lg:space-x-0 lg:flex lg:flex-col rounded-2xl lg:p-8 break-inside-avoid">
+						<div class="justify-between w-full p-6 space-y-12 border border-white lg:space-y-20 2xl:space-y-28 border-opacity-40 lg:space-x-0 lg:flex lg:flex-col rounded-2xl lg:p-8">
 							<span class="relative inline-flex items-center justify-center w-12 h-12 font-serif text-lg italic border rounded-full tabular-nums 2xl:w-16 2xl:h-16 2xl:leading-tight 2xl:text-3xl">1</span>
 							
 							<div class="space-y-4">
-								<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-5xl">Identify a challenge</h3>
+								<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-4.5xl">Identify a challenge</h3>
 								<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed">Pick the toughest nut to crack.</p>
 							</div>
 						</div>
 
-						<div class="relative justify-between w-full p-6 space-y-12 text-black bg-white lg:space-x-0 lg:flex lg:flex-col rounded-2xl lg:p-8 break-inside-avoid">
+						<div class="relative justify-between w-full p-6 space-y-12 text-black bg-white lg:space-y-20 2xl:space-y-28 lg:space-x-0 lg:flex lg:flex-col rounded-2xl lg:p-8">
 							<span class="relative inline-flex items-center justify-center w-12 h-12 font-serif text-lg italic border rounded-full tabular-nums 2xl:w-16 2xl:h-16 2xl:leading-tight 2xl:text-3xl">2</span>
 							
 							<div class="space-y-4">
-								<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-5xl ">Explain the challenge</h3>
+								<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-4.5xl ">Explain the challenge</h3>
 								
 								<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed">
 									<span>It can be done online in 30 minutes. <a data-savvycal-embed class="underline link underline-offset-4" title="Book en uforpligtende snak online omkring konceptet og dine behov." href="https://savvycal.com/edl/designsession">Book directly in our calendar</a>.</span>
@@ -172,21 +175,21 @@
 							</div>
 						</div>
 
-						<div class="justify-between w-full p-6 space-y-12 border border-white border-opacity-40 lg:space-x-0 lg:flex lg:flex-col rounded-2xl lg:p-8 break-inside-avoid">
+						<div class="justify-between w-full p-6 space-y-12 border border-white lg:space-y-20 2xl:space-y-28 border-opacity-40 lg:space-x-0 lg:flex lg:flex-col rounded-2xl lg:p-8">
 							<span class="relative inline-flex items-center justify-center w-12 h-12 font-serif text-lg italic border rounded-full tabular-nums 2xl:w-16 2xl:h-16 2xl:leading-tight 2xl:text-3xl">3</span>
 							
 							<div class="space-y-4">
-								<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-5xl">Book meeting room</h3>
+								<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-4.5xl">Book meeting room</h3>
 								<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed">The room should preferably have a whiteboard.</p>
 							</div>
 						</div>
 
-						<div class="justify-between w-full p-6 space-y-12 border border-white border-opacity-40 lg:space-x-0 lg:flex lg:flex-col rounded-2xl lg:p-8 break-inside-avoid">
+						<div class="justify-between w-full p-6 space-y-12 border border-white lg:space-y-20 2xl:space-y-28 border-opacity-40 lg:space-x-0 lg:flex lg:flex-col rounded-2xl lg:p-8">
 							<span class="relative inline-flex items-center justify-center w-12 h-12 font-serif text-lg italic border rounded-full tabular-nums 2xl:w-16 2xl:h-16 2xl:leading-tight 2xl:text-3xl">4</span>
 							
 							<div class="space-y-4">
-								<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-5xl">Invite your team</h3>
-								<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed"><span class="font-serif italic">Bonus points:</span> If they bring good spirits and small egos.</p>
+								<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-4.5xl">Invite your team</h3>
+								<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed">Bonus points: If they bring good spirits and small egos.</p>
 							</div>
 						</div>
 					</div>
@@ -218,32 +221,53 @@
 				</div>
 			</section>
 
-			<!--
-			<section class="relative py-24 md:py-32 lg:py-40 2xl:py-48">
-				<div class="container relative px-6 mx-auto space-y-6 lg:px-12 lg:space-y-8">
-					<h3 class="inline font-serif text-2xl italic leading-tight text-transparent bg-clip-text bg-gradient-to-tr from-blue to-blueish lg:text-5xl lg:leading-tight">Få din prøveperiode</h3>
-
-					<div class="max-w-6xl text-4xl leading-relaxed md:text-5xl md:leading-relaxed lg:leading-relaxed lg:text-5xl 2xl:leading-relaxed 2xl:text-6xl">
-						<span class="mr-1 md:mr-2 relative inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 font-serif text-lg italic text-black border rounded-full -top-1.5 lg:-top-2 tabular-nums 2xl:w-16 2xl:h-16 2xl:leading-tight 2xl:text-3xl">1</span>
-						Udpeg en designudfordring
-
-						<span class="mr-1 ml-2 md:ml-4 md:mr-2 relative inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 font-serif text-lg lg:text-2xl italic border rounded-full -top-1.5 md:-top-2 tabular-nums 2xl:w-16 2xl:h-16 2xl:leading-tight 2xl:text-3xl">2</span>
-						<a class="underline decoration-dotted underline-offset-4 lg:underline-offset-8" title="Book en gratis designsession med EDL." href="https://savvycal.com/edl/designsession" data-savvycal-embed="">Indflyv os til problemet</a>
-
-						<span class="mr-1 ml-2 md:ml-4 md:mr-2 relative inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 font-serif text-lg lg:text-2xl italic border rounded-full -top-1.5 md:-top-2 tabular-nums 2xl:w-16 2xl:h-16 2xl:leading-tight 2xl:text-3xl">3</span>
-						Book mødelokale med whiteboard
-
-						<span class="mr-1 ml-2 md:ml-4 md:mr-2 relative inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 font-serif text-lg lg:text-2xl italic border rounded-full -top-1.5 md:-top-2 tabular-nums 2xl:w-16 2xl:h-16 2xl:leading-tight 2xl:text-3xl">4</span>
-						Invitér dit team
+			<section id="examples" class="pt-16 md:pt-24 lg:pt-32 2xl:pt-48">
+				<div class="container px-6 mx-auto space-y-6 lg:space-y-8 2xl:space-y-12 lg:px-12">
+					<div class="w-full space-y-4">
+						<h2 class="max-w-5xl text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7xl">Use cases</h2>
+						<p class="text-2xl leading-normal lg:leading-relaxed lg:text-3xl">Not sure what to spend the 90 minutes on? Here’s a few ideas to get the ball rolling.</p>
 					</div>
+					
+					<ul class="text-xl divide-y divide-black/20 md:leading-tight leading-tight md:text-2xl lg:text-3xl lg:leading-tight 2xl:text-4.5xl 2xl:leading-tight">
+						<li x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="flex items-center py-4 transition duration-1000 md:py-6 lg:py-8 2xl:py-12">
+							<svg class="w-8 h-8 mr-4 shrink-0 lg:h-10 lg:w-10 2xl:h-12 2xl:w-12 lg:mr-6 2xl:mr-8" viewBox="0 0 32 32">
+								<path fill="currentColor" d="M28 18h-6a2.002 2.002 0 0 0-2 2v2h-5.586L10 17.586V12h2a2.002 2.002 0 0 0 2-2V4a2.002 2.002 0 0 0-2-2H6a2.002 2.002 0 0 0-2 2v6a2.002 2.002 0 0 0 2 2h2v5.586l-4.707 4.707a1 1 0 0 0 0 1.414l5 5a1 1 0 0 0 1.414 0L14.414 24H20v2a2.002 2.002 0 0 0 2 2h6a2.002 2.002 0 0 0 2-2v-6a2.002 2.002 0 0 0-2-2ZM6 4h6v6H6Zm3 22.586L5.414 23L9 19.414L12.586 23ZM22 26v-6h6v6Z"/>
+							</svg>
+							
+							Sort out navigation issues in your web app
+						</li>
+						
+						<li x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="flex items-center py-4 transition duration-1000 md:py-6 lg:py-8 2xl:py-12">
+							<svg class="w-8 h-8 mr-4 shrink-0 lg:h-10 lg:w-10 2xl:h-12 2xl:w-12 lg:mr-6 2xl:mr-8" viewBox="0 0 32 32">
+								<path fill="currentColor" d="M16 18H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2zM6 6v10h10V6zm20 6v4h-4v-4h4m0-2h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2zm0 12v4h-4v-4h4m0-2h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2zm-10 2v4h-4v-4h4m0-2h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2z"/>
+							</svg>
 
-					<p class="text-xl leading-normal lg:text-2xl opacity-80 lg:leading-normal"><span class="font-serif italic">Bonuspoint:</span> God kaffe, godt humør og små egoer.</p>
+							Improve adaptation of your SaaS mobile application
+						</li>
+						
+						<li x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="flex items-center py-4 transition duration-1000 md:py-6 lg:py-8 2xl:py-12">
+							<svg class="w-8 h-8 mr-4 shrink-0 lg:h-10 lg:w-10 2xl:h-12 2xl:w-12 lg:mr-6 2xl:mr-8" viewBox="0 0 32 32">
+								<path fill="currentColor" d="M16 2a14 14 0 1 0 14 14A14 14 0 0 0 16 2Zm0 26a12 12 0 1 1 12-12a12 12 0 0 1-12 12Z"/>
+								<path fill="currentColor" d="M11.5 11a2.5 2.5 0 1 0 2.5 2.5a2.48 2.48 0 0 0-2.5-2.5zm9 0a2.5 2.5 0 1 0 2.5 2.5a2.48 2.48 0 0 0-2.5-2.5zM16 24a8 8 0 0 0 6.85-3.89l-1.71-1a6 6 0 0 1-10.28 0l-1.71 1A8 8 0 0 0 16 24z"/>
+							</svg>
+
+							Promote a feeling in your software experience (e.g. safety, security)
+						</li>
+
+						<li x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="flex items-center py-4 transition duration-1000 md:py-6 lg:py-8 2xl:py-12">
+							<svg class="w-8 h-8 mr-4 shrink-0 lg:h-10 lg:w-10 2xl:h-12 2xl:w-12 lg:mr-6 2xl:mr-8" viewBox="0 0 32 32">
+								<path fill="currentColor" d="M11 21H9v-2a3.003 3.003 0 0 1 3-3h6v2h-6a1.001 1.001 0 0 0-1 1zm4-6a4 4 0 1 1 4-4a4.005 4.005 0 0 1-4 4zm0-6a2 2 0 1 0 2 2a2.002 2.002 0 0 0-2-2zm9 13a4 4 0 1 1 4-4a4.005 4.005 0 0 1-4 4zm0-6a2 2 0 1 0 2 2a2.002 2.002 0 0 0-2-2zm6 12h-2v-2a1.001 1.001 0 0 0-1-1h-6a1.001 1.001 0 0 0-1 1v2h-2v-2a3.003 3.003 0 0 1 3-3h6a3.003 3.003 0 0 1 3 3z"/>
+								<path fill="currentColor" d="m14 27.733l-5.234-2.79A8.986 8.986 0 0 1 4 17V4h20v6h2V4a2.002 2.002 0 0 0-2-2H4a2.002 2.002 0 0 0-2 2v13a10.981 10.981 0 0 0 5.824 9.707L14 30Z"/>
+							</svg>
+							
+							Optimize onboarding of new users
+						</li>
+					</ul>
 				</div>
 			</section>
-			-->
 
 			<!-- A few cases -->
-			<section class="pt-16 md:pt-24 lg:pt-32 2xl:pt-40">
+			<section class="pt-16 md:pt-24 lg:pt-32 2xl:pt-48">
 				<div class="container px-6 mx-auto lg:px-12">
 					<div class="mb-8 space-y-4 lg:mb-16">
 						<h2 class="max-w-5xl text-4xl leading-tight text-black md:text-5xl md:leading-tight lg:leading-tight lg:text-7xl hyphenate">You’re in great company</h2>
@@ -260,8 +284,8 @@
 							</div>
 							
 							<div>
-								<span class="inline-flex items-center px-4 py-2 mb-4 text-base leading-normal text-black border rounded-full lg:mb-8 lg:px-5 lg:text-lg">SaaS</span>
-								<h2 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-tight lg:text-5xl hyphenate">Making data compliance simple, accessible, and <span class="font-serif italic">enjoyable</span> for a new market.</h2>
+								<span class="inline-flex items-center px-4 py-2 mb-4 text-base leading-normal text-black border rounded-full lg:mb-8 lg:px-5 lg:text-lg 2xl:text-xl">SaaS</span>
+								<h2 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-tight lg:text-5xl hyphenate 2xl:text-6xl 2xl:leading-tight">Making data compliance simple, accessible, and <span class="font-serif italic">enjoyable</span> for a new market.</h2>
 							</div>
 						</article>
 
@@ -276,19 +300,12 @@
 							
 							<div>
 								<div class="flex space-x-4">
-									<span class="inline-flex items-center px-4 py-2 mb-4 text-base leading-normal text-black border rounded-full lg:mb-8 lg:px-5 lg:text-lg">Cloud</span>
-									<span class="inline-flex items-center px-4 py-2 mb-4 text-base leading-normal text-black border rounded-full lg:mb-8 lg:px-5 lg:text-lg">Robotics</span>
-									<span class="inline-flex items-center px-4 py-2 mb-4 text-base leading-normal text-black border rounded-full lg:mb-8 lg:px-5 lg:text-lg">Apps</span>
+									<span class="inline-flex items-center px-4 py-2 mb-4 text-base leading-normal text-black border rounded-full lg:mb-8 lg:px-5 lg:text-lg 2xl:text-xl">Cloud</span>
+									<span class="inline-flex items-center px-4 py-2 mb-4 text-base leading-normal text-black border rounded-full lg:mb-8 lg:px-5 lg:text-lg 2xl:text-xl">Robotics</span>
+									<span class="inline-flex items-center px-4 py-2 mb-4 text-base leading-normal text-black border rounded-full lg:mb-8 lg:px-5 lg:text-lg 2xl:text-xl">Apps</span>
 								</div>
 
-								<h2 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-tight lg:text-5xl hyphenate">We <span class="font-serif italic">reimagined</span> the user experience for building and executing robotic movements.</h2>
-
-								<!-- <a href="/work/smooth-robotics.html" title="Learn how we designed the robot-controlling software for Smooth Robotics." class="inline-flex items-center mt-6 space-x-1 text-black link lg:mt-8 lg:space-x-2">
-									<span class="text-xl lg:text-2xl line">Learn how</span>
-									<svg class="w-5 h-5 lg:h-6 lg:w-6" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-										<path d="M13.163 20L21 12l-7.837-8-1.347 1.375 5.545 5.643H3v1.964h14.361l-5.545 5.66L13.163 20z" fill="currentColor"/>
-									</svg>
-								</a> -->
+								<h2 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-tight lg:text-5xl hyphenate 2xl:text-6xl 2xl:leading-tight">We <span class="font-serif italic">reimagined</span> the user experience for building and executing robotic movements.</h2>
 							</div>
 						</article>
 					</div>
@@ -296,14 +313,14 @@
 			</section>
 
 			<!-- FAQ -->
-			<section class="py-16 md:py-24 lg:py-32 2xl:py-40">
+			<section class="py-16 md:py-24 lg:py-32 2xl:py-48">
 				<div class="container px-6 mx-auto space-y-8 lg:px-12 md:space-y-12 lg:space-y-16">
 					<div class="space-y-4 text-center">
-						<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7xl">You still have questions?</h2>
-						<p class="text-2xl leading-normal lg:leading-relaxed lg:text-3xl">No worries. Just making sure we’re all aligned.</p>
+						<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7xl">Any lingering questions?</h2>
+						<p class="text-2xl leading-normal lg:leading-relaxed lg:text-3xl">No worries. Better make sure we’re all aligned.</p>
 					</div>
 
-					<div x-data="{ active: 0 }" class="max-w-4xl mx-auto md:space-y-3 lg:space-y-4">
+					<div x-data="{ active: 0 }" class="max-w-4xl mx-auto md:space-y-3 lg:space-y-4 2xl:max-w-6xl">
 						<div x-data="{ id: 1, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="md:border md:border-black md:rounded-md">
 							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
 								<span>What should we expect from the design session?</span>
@@ -314,7 +331,7 @@
 								</svg>
 							</button>
 
-							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 lg:text-2xl lg:leading-relaxed">
+							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 lg:text-2xl lg:leading-relaxed 2xl:px-8">
 								<p class="text-indent">Expect actionable output. Doodles on whiteboards or lines in Figma, our thoughts and ideas can typically be translated into solutions.</p>
 								<p>Just make sure you invite a teammate who can properly hand over the proposed improvements.</p>
 							</div>
@@ -330,7 +347,7 @@
 								</svg>
 							</button>
 
-							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 lg:text-2xl lg:leading-relaxed">
+							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 lg:text-2xl lg:leading-relaxed 2xl:px-8">
 								<p class="text-indent">Design sessions are most effective when we sit opposite each other. We can either meet at your place or at ours (we are located in <a class="underline underline-offset-4" href="https://goo.gl/maps/rvbUxQUX1cxjvyaG9" title="Get directions to our Copenhagen office via Google Maps." target="blank" rel="noopener">DR Byen</a>).</p>
 							</div>
 						</div>
@@ -345,7 +362,7 @@
 								</svg>
 							</button>
 
-							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 lg:text-2xl lg:leading-relaxed">
+							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 lg:text-2xl lg:leading-relaxed 2xl:px-8">
 								<p class="text-indent">Our purpose is always to make everyday life better for ordinary people. It should also be the starting point for your design session.</p>
 							</div>
 						</div>
@@ -360,8 +377,9 @@
 								</svg>
 							</button>
 
-							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 lg:text-2xl lg:leading-relaxed">
-								<p class="text-indent">We love collaborating with visionary startups building incredible new technology. However we understand how time-consuming and risky it can be to seek out agencies for good software design.</p>
+							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 lg:text-2xl lg:leading-relaxed 2xl:px-8">
+								<p class="text-indent">We collaborate daily with startups and scale-ups whom all build incredible new technologies.</p>
+								<p>We would like to continue to do so, however, we understand how time-consuming and risky it can be to seek out agencies for good software design.</p>
 								<p>This is our risk-free attempt to get to know more exciting founders and leaders.</p>
 							</div>
 						</div>
@@ -374,7 +392,7 @@
 			<div class="container px-6 mx-auto space-y-16 lg:space-y-28 lg:px-12">
 				<!-- Call to action -->
 				<div class="space-y-4">
-					<h2 class="hyphenate text-4.5xl leading-tight text-black md:text-6xl md:leading-tight lg:leading-tight lg:text-7xl lg:max-w-5xl">We’d love to hear about your <span class="font-serif italic">design and business</span> challenges.</h2>
+					<h2 class="text-4.5xl leading-tight text-black md:text-6xl md:leading-tight lg:leading-tight lg:text-7xl lg:max-w-5xl 2xl:text-8xl 2xl:leading-tight 2xl:max-w-7xl">We’d love to hear about your <span class="font-serif italic">design and business</span> challenges.</h2>
 
 					<div class="max-w-2xl mt-4 space-y-8 text-black md:space-y-12">
 						<p class="text-2xl leading-normal text-indent lg:leading-relaxed lg:text-3xl">Even if you’re unsure what’s next. No sales talk, no strings attached.</p>

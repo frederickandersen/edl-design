@@ -39,7 +39,7 @@
     }
 
     .accordion {
-        @apply flex items-center justify-between w-full py-6 text-xl leading-snug text-left md:p-6 md:text-2xl md:leading-snug;
+        @apply flex items-center justify-between w-full py-6 text-xl leading-snug text-left md:p-6 md:text-2xl md:leading-snug 2xl:text-3xl 2xl:leading-snug 2xl:p-8;
     }
 
     .tile {

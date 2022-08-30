@@ -53,6 +53,7 @@ module.exports = {
             fontSize: {
                 '4.5xl': '2.75rem',
                 '7.5xl': '5.25rem',
+                '8.5xl': '7rem',
             },
             spacing: {
                 '104': '26rem',
