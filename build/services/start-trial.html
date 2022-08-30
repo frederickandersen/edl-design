@@ -93,7 +93,7 @@
 						
 						<div class="flex flex-col space-y-3 sm:space-y-0 sm:space-x-6 sm:flex-row">
 							<a class="inline-block px-6 py-4 text-xl text-center text-white bg-black rounded-md md:text-left lg:px-8 lg:py-5 md:text-2xl 2xl:py-5 2xl:px-8 2xl:text-3xl" title="Schedule your free 90-minute trial." href="https://savvycal.com/edl/designsession" data-savvycal-embed>Get started now</a>
-							<a class="inline-block px-6 py-4 text-xl text-center text-black border rounded-md md:text-left lg:px-8 lg:py-5 md:text-2xl 2xl:py-5 2xl:px-8 2xl:text-3xl" title="Learn more about getting started." href="#how">Learn more</a>
+							<!-- <a class="inline-block px-6 py-4 text-xl text-center text-black border rounded-md md:text-left lg:px-8 lg:py-5 md:text-2xl 2xl:py-5 2xl:px-8 2xl:text-3xl" title="Learn more about getting started." href="#how">Learn more</a> -->
 						</div>
 					</div>
 					
@@ -159,7 +159,10 @@
 							
 							<div class="space-y-4">
 								<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-4.5xl">Identify a challenge</h3>
-								<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed">Pick the toughest nut to crack.</p>
+								
+								<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed">
+									<span>Pick the toughest nut to crack. <a class="underline link underline-offset-4" title="Learn more about getting started." href="#examples">Get inspired</a>.</span>
+								</p>
 							</div>
 						</div>
 
@@ -170,7 +173,7 @@
 								<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-4.5xl ">Explain the challenge</h3>
 								
 								<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed">
-									<span>It can be done online in 30 minutes. <a data-savvycal-embed class="underline link underline-offset-4" title="Book en uforpligtende snak online omkring konceptet og dine behov." href="https://savvycal.com/edl/designsession">Book directly in our calendar</a>.</span>
+									<span>It can be done online in 30 minutes. <a data-savvycal-embed class="underline link underline-offset-4" title="Schedule a chat online about the concept and your needs." href="https://savvycal.com/edl/designsession">Book directly in our calendar</a>.</span>
 								</p>
 							</div>
 						</div>
@@ -271,7 +274,7 @@
 				<div class="container px-6 mx-auto lg:px-12">
 					<div class="mb-8 space-y-4 lg:mb-16">
 						<h2 class="max-w-5xl text-4xl leading-tight text-black md:text-5xl md:leading-tight lg:leading-tight lg:text-7xl hyphenate">You’re in great company</h2>
-						<p class="text-2xl leading-normal md:max-w-3xl lg:leading-relaxed lg:text-3xl text-indent">Dig into a few selected case studies where we applied the same principles.</p>
+						<p class="text-2xl leading-normal md:max-w-3xl lg:leading-relaxed lg:text-3xl">Dig into a few selected case studies where we applied the same principles.</p>
 					</div>
 					
 					<div class="grid gap-16 lg:grid-cols-2 lg:gap-x-16 2xl:gap-x-40">
@@ -289,7 +292,7 @@
 							</div>
 						</article>
 
-						<article class="relative space-y-8 lg:space-y-14 lg:mt-32">
+						<article class="relative space-y-8 lg:space-y-14 lg:mt-32 2xl:mt-48">
 							<div class="relative overflow-hidden bg-cover h-96 md:h-120 lg:h-160 2xl:h-208 bg-mint-purple bg-purple-gradient">
 								<video class="inset-0 object-cover w-full h-full lg:absolute" playsinline loop autoplay muted>
 									<source src="../media/srm-screens.mp4" type='video/mp4; codecs="hvc1"'>
@@ -332,8 +335,7 @@
 							</button>
 
 							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 lg:text-2xl lg:leading-relaxed 2xl:px-8">
-								<p class="text-indent">Expect actionable output. Doodles on whiteboards or lines in Figma, our thoughts and ideas can typically be translated into solutions.</p>
-								<p>Just make sure you invite a teammate who can properly hand over the proposed improvements.</p>
+								<p class="text-indent">Expect actionable output. Our thoughts and ideas can typically be translated into solutions.</p>
 							</div>
 						</div>
 						
@@ -370,6 +372,23 @@
 						<div x-data="{ id: 4, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20 md:border md:border-black md:rounded-md">
 							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
 								<span>Why do you offer a trial period?</span>
+
+								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+
+							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 lg:text-2xl lg:leading-relaxed 2xl:px-8">
+								<p class="text-indent">We collaborate daily with startups and scale-ups whom all build incredible new technologies.</p>
+								<p>We would like to continue to do so, however, we understand how time-consuming and risky it can be to seek out agencies for good software design.</p>
+								<p>This is our risk-free attempt to get to know more exciting founders and leaders.</p>
+							</div>
+						</div>
+
+						<div x-data="{ id: 5, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20 md:border md:border-black md:rounded-md">
+							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
+								<span>What's my next step?</span>
 
 								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
 									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
