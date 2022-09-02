@@ -547,7 +547,7 @@
 						<p class="text-2xl leading-normal lg:leading-relaxed lg:text-3xl">Du er altid velkommen til at ringe, hvis dit spørgsmål ikke besvares.</p>
 					</div>
 
-					<div x-data="{ active: 0 }" class="max-w-4xl mx-auto md:space-y-3 lg:space-y-4">
+					<div x-data="{ active: 0 }" class="max-w-4xl mx-auto md:space-y-3 lg:space-y-4 2xl:max-w-6xl">
 						<div x-data="{ id: 1, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="md:border md:border-black md:rounded-md">
 							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
 								<span>Hvordan kommer man i gang?</span>

@@ -49,6 +49,10 @@
     .number {
         @apply relative inline-flex items-center justify-center w-12 h-12 font-serif text-lg italic border rounded-full tabular-nums 2xl:w-16 2xl:h-16 2xl:leading-tight 2xl:text-3xl;
     }
+    
+    .tag {
+        @apply inline-flex items-center px-4 py-2 mb-4 text-base leading-normal border rounded-full lg:mb-8 lg:px-5 lg:text-lg 2xl:text-xl;
+    }
 }
 
 @layer utilities {
