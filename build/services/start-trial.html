@@ -36,11 +36,15 @@
 						<div class="hidden w-full md:block">
 							<div class="flex items-center justify-end space-x-8 lg:space-x-16">
 								<a href="/work.html" class="text-lg text-black lg:text-2xl" title="View all of our work.">Work</a>
-								<a href="/approach.html" class="text-lg text-black lg:text-2xl line" title="See how we can help you, and how we plan to do it." aria-current="page">Approach</a>
+								<a href="/approach.html" class="text-lg text-black lg:text-2xl" title="See how we can help you, and how we plan to do it.">Approach</a>
 								<a href="/about.html" class="text-lg text-black lg:text-2xl" title="Get to know EDL and the people behind it.">About</a>
 								<a href="/contact.html" class="text-lg text-black lg:text-2xl" title="Tell us about a project or say hi!">Contact</a>
-								<a href="/services/start-trial.html" class="block px-4 py-3 text-xl text-white bg-black rounded-full lg:px-6 lg:py-4 sm:w-auto lg:text-2xl" title="Get started scheduling your free 90-minute trial.">Start free trial</a>
+								<a href="/services/start-trial.html" aria-current="page" class="block px-4 py-3 text-xl text-white bg-black rounded-full lg:px-6 lg:py-4 sm:w-auto lg:text-2xl" title="Get started scheduling your free 90-minute trial.">Start free trial</a>
 							</div>
+						</div>
+
+						<div class="flex justify-end w-full md:hidden">
+							<a class="inline-block px-5 py-3 text-xl text-center text-white bg-black rounded-full" title="Get started scheduling your free 90-minute trial." href="https://savvycal.com/edl/designsession" data-savvycal-embed>Get started</a>
 						</div>
 
 						<button @click="show = !show" class="fixed z-20 flex items-center justify-center w-20 h-20 px-2 py-4 text-white bg-black rounded-full bottom-6 right-6 md:hidden" x-text="!show ? 'Menu' : 'Close'">Menu</button>
@@ -55,14 +59,15 @@
 								x-transition:leave="transition ease-in-out duration-300"
 								x-transition:leave-start="translate-y-0 transform"
 								x-transition:leave-end="translate-y-full transform"
-								class="fixed inset-x-0 bottom-0 z-10 flex w-full p-6 pb-8 bg-white rounded-t-3xl transform-gpu">
+								class="fixed inset-x-0 bottom-0 z-10 flex w-full px-6 pt-8 pb-10 bg-white rounded-t-3xl transform-gpu">
 
 								<div class="flex flex-col items-start w-full">
 									<nav class="flex flex-col items-start space-y-4">
 										<a href="/work.html" class="inline text-2xl text-black" title="View all of our work.">Work</a>
-										<a href="/approach.html" class="inline text-2xl text-black line" title="See how we can help you, and how we plan to do it." aria-current="page">Approach</a>
+										<a href="/approach.html" class="inline text-2xl text-black" title="See how we can help you, and how we plan to do it.">Approach</a>
 										<a href="/about.html" class="inline text-2xl text-black" title="Get to know EDL and the people behind it.">About</a>
 										<a href="/contact.html" class="inline text-2xl text-black" title="Tell us about a project or say hi!">Contact</a>
+										<a href="/services/start-trial.html" aria-current="page" class="inline font-serif text-2xl italic line" title="Get started scheduling your free 90-minute trial.">Start free trial</a>
 									</nav>
 								</div>
 							</div>
@@ -80,18 +85,16 @@
 						<div class="space-y-6 md:space-y-10 2xl:space-y-12 max-w-screen-2xl">
 							<span class="inline-block px-4 py-2 font-serif text-2xl italic text-black border rounded-full lg:py-3 lg:px-6 md:text-4xl 2xl:text-5xl">Free agency trial</span>						
 							<h1 x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="w-full text-4.5xl transition duration-1000 leading-tight md:text-7xl md:leading-tight xl:leading-tight xl:text-8xl 2xl:text-8.5xl 2xl:leading-tight">Choosing a design agency can be risky.</h1>
-							<p x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="w-full text-4.5xl transition delay-500 duration-1000 leading-tight md:text-7xl md:leading-tight xl:leading-tight xl:text-8xl 2xl:text-8.5xl 2xl:leading-tight">We eliminate the risk by offering a 90-minute trial period.</p>
+							<p x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="w-full text-4.5xl transition delay-500 duration-1000 leading-tight md:text-7xl md:leading-tight xl:leading-tight xl:text-8xl 2xl:text-8.5xl 2xl:leading-tight"><span class="font-serif italic">We eliminate the risk</span> by offering a 90-minute trial period.</p>
 						</div>
 						
-						<div class="flex flex-col space-y-3 sm:space-y-0 sm:space-x-6 sm:flex-row">
-							<a class="inline-block px-6 py-4 text-xl text-center text-white bg-black rounded-full md:text-left lg:px-8 lg:py-5 md:text-2xl 2xl:py-5 2xl:px-8 2xl:text-3xl" title="Get started scheduling your free 90-minute trial." href="https://savvycal.com/edl/designsession" data-savvycal-embed>Get started now</a>
-						</div>
+						<a class="inline-block px-6 py-4 text-xl text-white bg-black rounded-full lg:px-8 lg:py-5 md:text-2xl 2xl:py-5 2xl:px-8 2xl:text-3xl" title="Get started scheduling your free 90-minute trial." href="https://savvycal.com/edl/designsession" data-savvycal-embed>Get started now</a>
 					</div>
 					
 					<div class="space-y-12 md:grid md:grid-cols-2 md:gap-16 lg:gap-x-20 2xl:gap-x-32 lg:max-w-7xl 2xl:max-w-screen-2xl md:space-y-0">
 						<div class="space-y-4 lg:space-y-6 2xl:space-y-8">
-							<h3 class="text-3xl leading-tight lg:space-y-4 lg:leading-tight lg:text-4xl 2xl:text-5xl 2xl:leading-tight">Format</h3>
-							<p class="text-2xl leading-normal lg:leading-relaxed lg:text-3xl">A condensed, in-person design session showcasing our pragmatic approach to software design.</p>
+							<h3 class="text-2xl leading-tight md:text-3xl md:leading-tight lg:space-y-4 lg:leading-tight lg:text-4xl 2xl:text-5xl 2xl:leading-tight">Format</h3>
+							<p class="text-xl leading-normal md:text-2xl md:leading-relaxed lg:leading-relaxed lg:text-3xl">A condensed, in-person design session showcasing our pragmatic approach to software design.</p>
 
 							<div class="space-y-2 text-lg lg:space-y-0 lg:space-x-2 lg:flex lg:items-center lg:text-xl lg:leading-normal">
 								<span class="hidden lg:block">Available in</span>
@@ -130,9 +133,10 @@
 						</div>
 
 						<div class="space-y-4 lg:space-y-6 2xl:space-y-8">
-							<h3 class="text-3xl leading-tight lg:space-y-4 lg:leading-tight lg:text-4xl 2xl:text-5xl 2xl:leading-tight">Outcome</h3>
-							<p class="text-2xl leading-normal lg:leading-relaxed lg:text-3xl">Gain clarity and solutions to a design challenge you and your team are currently facing.</p>
-							<span class="block mt-4 text-lg lg:mt-6 lg:text-xl lg:leading-normal">Need inspiration? <a href="#examples" title="View use cases for the design session." class="underline underline-offset-4">View examples</a></span>
+							<h3 class="text-2xl leading-tight md:text-3xl md:leading-tight lg:space-y-4 lg:leading-tight lg:text-4xl 2xl:text-5xl 2xl:leading-tight">Outcome</h3>
+							<p class="text-xl leading-normal md:text-2xl md:leading-relaxed lg:leading-relaxed lg:text-3xl">Gain clarity and solutions to a design challenge you and your team are currently facing.</p>
+							
+							<span class="block mt-4 text-lg lg:mt-6 lg:text-xl lg:leading-normal">Need inspiration? <a href="#examples" title="View use cases for the design session." class="underline underline-offset-4">View use cases</a></span>
 						</div>
 					</div>
 				</div>
@@ -140,19 +144,19 @@
 				<div class="absolute inset-0 w-full bg-no-repeat bg-cover 2xl:bg-contain bg-bubble-gradient -z-10"></div>
 			</section>
 
-			<section id="how" class="relative py-24 text-white bg-black md:py-32 lg:py-40 2xl:py-48">
+			<section id="how" class="py-16 text-white bg-black md:py-24 lg:py-40 2xl:py-48">
 				<div class="container px-6 mx-auto space-y-8 lg:px-12 lg:space-y-16 2xl:space-y-20">
 					<div class="w-full space-y-4">
 						<h2 class="max-w-5xl text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7xl">From zero to <span class="font-serif italic">free design session</span></h2>
 						<p class="text-2xl leading-normal lg:leading-relaxed lg:text-3xl">A step by step guide to getting 90 minutes of free, effective design fun.</p>
 					</div>
 					
-					<div class="space-y-6 lg:space-y-0 lg:gap-8 lg:grid lg:grid-cols-2 lg:grid-rows-2">
+					<div class="space-y-6 lg:space-y-0 lg:gap-8 lg:grid lg:grid-cols-2 lg:grid-rows-2 2xl:gap-12">
 						<div class="relative justify-between w-full p-6 space-y-12 border border-white lg:space-y-20 2xl:space-y-28 border-opacity-40 lg:space-x-0 lg:flex lg:flex-col rounded-2xl lg:p-8">
 							<span class="relative inline-flex items-center justify-center w-12 h-12 font-serif text-lg italic border rounded-full tabular-nums 2xl:w-16 2xl:h-16 2xl:leading-tight 2xl:text-3xl">1</span>
 							
 							<div class="space-y-4">
-								<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-4.5xl">Identify a challenge</h3>
+								<h3 class="text-3xl leading-tight md:text-4xl md:leading-tight lg:leading-tight lg:text-4.5xl">Identify a challenge</h3>
 								
 								<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed">
 									<span>Pick the toughest nut to crack. <a href="#examples" class="underline underline-offset-4" title="Learn more about getting started.">Get inspired</a>.</span>
@@ -164,7 +168,7 @@
 							<span class="relative inline-flex items-center justify-center w-12 h-12 font-serif text-lg italic border rounded-full tabular-nums 2xl:w-16 2xl:h-16 2xl:leading-tight 2xl:text-3xl">2</span>
 							
 							<div class="space-y-4">
-								<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-4.5xl ">Explain the challenge</h3>
+								<h3 class="text-3xl leading-tight md:text-4xl md:leading-tight lg:leading-tight lg:text-4.5xl ">Explain the challenge</h3>
 								
 								<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed">
 									<span>It can be done online in 30 minutes. <a href="https://savvycal.com/edl/designsession" class="underline link underline-offset-4" title="Schedule a chat online about the concept and your needs." data-savvycal-embed>Book directly in our calendar</a>.</span>
@@ -176,7 +180,7 @@
 							<span class="relative inline-flex items-center justify-center w-12 h-12 font-serif text-lg italic border rounded-full tabular-nums 2xl:w-16 2xl:h-16 2xl:leading-tight 2xl:text-3xl">3</span>
 							
 							<div class="space-y-4">
-								<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-4.5xl">Book meeting room</h3>
+								<h3 class="text-3xl leading-tight md:text-4xl md:leading-tight lg:leading-tight lg:text-4.5xl">Book meeting room</h3>
 								<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed">The room should preferably have a whiteboard.</p>
 							</div>
 						</div>
@@ -185,7 +189,7 @@
 							<span class="relative inline-flex items-center justify-center w-12 h-12 font-serif text-lg italic border rounded-full tabular-nums 2xl:w-16 2xl:h-16 2xl:leading-tight 2xl:text-3xl">4</span>
 							
 							<div class="space-y-4">
-								<h3 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-4.5xl">Invite your team</h3>
+								<h3 class="text-3xl leading-tight md:text-4xl md:leading-tight lg:leading-tight lg:text-4.5xl">Invite your team</h3>
 								<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed">Bonus points: If they bring good spirits and small egos.</p>
 							</div>
 						</div>
@@ -225,8 +229,8 @@
 						<p class="text-2xl leading-normal lg:leading-relaxed lg:text-3xl">Not sure what to spend the 90 minutes on? Here’s a few ideas to get the ball rolling.</p>
 					</div>
 					
-					<ul class="text-xl leading-tight divide-y divide-black/20 md:leading-tight md:text-2xl lg:text-3xl lg:leading-tight 2xl:text-4xl 2xl:leading-tight">
-						<li x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="flex items-center py-4 transition duration-1000 md:py-6 lg:py-8 2xl:py-12">
+					<ul class="text-xl leading-snug divide-y divide-black/10 md:leading-tight md:text-2xl lg:text-3xl lg:leading-tight 2xl:text-4xl 2xl:leading-tight">
+						<li x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="flex items-center py-5 transition duration-1000 md:py-6 lg:py-8 2xl:py-12">
 							<svg class="w-8 h-8 mr-4 shrink-0 lg:h-10 lg:w-10 2xl:h-12 2xl:w-12 lg:mr-6 2xl:mr-8" viewBox="0 0 32 32">
 								<path fill="currentColor" d="M28 18h-6a2.002 2.002 0 0 0-2 2v2h-5.586L10 17.586V12h2a2.002 2.002 0 0 0 2-2V4a2.002 2.002 0 0 0-2-2H6a2.002 2.002 0 0 0-2 2v6a2.002 2.002 0 0 0 2 2h2v5.586l-4.707 4.707a1 1 0 0 0 0 1.414l5 5a1 1 0 0 0 1.414 0L14.414 24H20v2a2.002 2.002 0 0 0 2 2h6a2.002 2.002 0 0 0 2-2v-6a2.002 2.002 0 0 0-2-2ZM6 4h6v6H6Zm3 22.586L5.414 23L9 19.414L12.586 23ZM22 26v-6h6v6Z"/>
 							</svg>
@@ -234,7 +238,7 @@
 							Sort out navigation issues in your web app
 						</li>
 						
-						<li x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="flex items-center py-4 transition duration-1000 delay-200 md:py-6 lg:py-8 2xl:py-12">
+						<li x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="flex items-center py-5 transition duration-1000 delay-200 md:py-6 lg:py-8 2xl:py-12">
 							<svg class="w-8 h-8 mr-4 shrink-0 lg:h-10 lg:w-10 2xl:h-12 2xl:w-12 lg:mr-6 2xl:mr-8" viewBox="0 0 32 32">
 								<path fill="currentColor" d="M16 18H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2zM6 6v10h10V6zm20 6v4h-4v-4h4m0-2h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2zm0 12v4h-4v-4h4m0-2h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2zm-10 2v4h-4v-4h4m0-2h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2z"/>
 							</svg>
@@ -242,7 +246,7 @@
 							Improve adaptation of your SaaS mobile application
 						</li>
 						
-						<li x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="flex items-center py-4 transition duration-1000 delay-300 md:py-6 lg:py-8 2xl:py-12">
+						<li x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="flex items-center py-5 transition duration-1000 delay-300 md:py-6 lg:py-8 2xl:py-12">
 							<svg class="w-8 h-8 mr-4 shrink-0 lg:h-10 lg:w-10 2xl:h-12 2xl:w-12 lg:mr-6 2xl:mr-8" viewBox="0 0 32 32">
 								<path fill="currentColor" d="M16 2a14 14 0 1 0 14 14A14 14 0 0 0 16 2Zm0 26a12 12 0 1 1 12-12a12 12 0 0 1-12 12Z"/>
 								<path fill="currentColor" d="M11.5 11a2.5 2.5 0 1 0 2.5 2.5a2.48 2.48 0 0 0-2.5-2.5zm9 0a2.5 2.5 0 1 0 2.5 2.5a2.48 2.48 0 0 0-2.5-2.5zM16 24a8 8 0 0 0 6.85-3.89l-1.71-1a6 6 0 0 1-10.28 0l-1.71 1A8 8 0 0 0 16 24z"/>
@@ -251,7 +255,7 @@
 							Promote a feeling in your software experience (e.g. safety, security)
 						</li>
 
-						<li x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="flex items-center py-4 transition duration-1000 delay-500 md:py-6 lg:py-8 2xl:py-12">
+						<li x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="flex items-center py-5 transition duration-1000 delay-500 md:py-6 lg:py-8 2xl:py-12">
 							<svg class="w-8 h-8 mr-4 shrink-0 lg:h-10 lg:w-10 2xl:h-12 2xl:w-12 lg:mr-6 2xl:mr-8" viewBox="0 0 32 32">
 								<path fill="currentColor" d="M11 21H9v-2a3.003 3.003 0 0 1 3-3h6v2h-6a1.001 1.001 0 0 0-1 1zm4-6a4 4 0 1 1 4-4a4.005 4.005 0 0 1-4 4zm0-6a2 2 0 1 0 2 2a2.002 2.002 0 0 0-2-2zm9 13a4 4 0 1 1 4-4a4.005 4.005 0 0 1-4 4zm0-6a2 2 0 1 0 2 2a2.002 2.002 0 0 0-2-2zm6 12h-2v-2a1.001 1.001 0 0 0-1-1h-6a1.001 1.001 0 0 0-1 1v2h-2v-2a3.003 3.003 0 0 1 3-3h6a3.003 3.003 0 0 1 3 3z"/>
 								<path fill="currentColor" d="m14 27.733l-5.234-2.79A8.986 8.986 0 0 1 4 17V4h20v6h2V4a2.002 2.002 0 0 0-2-2H4a2.002 2.002 0 0 0-2 2v13a10.981 10.981 0 0 0 5.824 9.707L14 30Z"/>
@@ -302,13 +306,6 @@
 								</div>
 								
 								<h2 class="text-3xl leading-snug md:text-4xl md:leading-snug lg:leading-tight lg:text-5xl hyphenate 2xl:text-6xl 2xl:leading-tight">Helping commercial kitchens increase their <span class="font-serif italic">energy efficiency</span> with digital displays.</h2>
-
-								<a href="/work/iot-digital-display.html" title="Learn how we designed the IoT digital display for JØNI." class="inline-flex items-center mt-6 space-x-1 text-black link lg:mt-8 lg:space-x-2">
-									<span class="text-xl lg:text-2xl line">Learn how</span>
-									<svg class="w-5 h-5 lg:h-6 lg:w-6" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-										<path d="M13.163 20L21 12l-7.837-8-1.347 1.375 5.545 5.643H3v1.964h14.361l-5.545 5.66L13.163 20z" fill="currentColor"/>
-									</svg>
-								</a>
 							</div>
 						</article>
 					</div>
@@ -316,9 +313,9 @@
 			</section>
 
 			<!-- FAQ -->
-			<section class="py-16 md:py-24 lg:py-32 2xl:py-48">
+			<section class="pt-20 pb-16 md:py-24 lg:py-32 2xl:py-48">
 				<div class="container px-6 mx-auto space-y-8 lg:px-12 md:space-y-12 lg:space-y-16">
-					<div class="space-y-4 text-center">
+					<div class="space-y-4 md:text-center">
 						<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7xl">Any lingering questions?</h2>
 						<p class="text-2xl leading-normal lg:leading-relaxed lg:text-3xl">No worries. Better make sure we’re all aligned.</p>
 					</div>
@@ -411,7 +408,7 @@
 					<article class="flex flex-col items-start p-8 mx-auto space-y-6 text-white bg-black rounded-lg md:space-y-8 lg:items-center max-w-screen-2xl lg:space-y-0 lg:flex-row lg:space-x-4 md:p-10 lg:p-12 2xl:p-16">
 						<div class="w-full space-y-2 lg:space-y-2">
 							<h3 class="text-3xl leading-tight md:text-4xl md:leading-tight lg:leading-tight lg:text-5xl 2xl:leading-tight">Ready to <span class="font-serif italic">rock-and-roll?</span></h3>
-							<p class="max-w-3xl text-2xl leading-normal lg:leading-relaxed lg:text-3xl">First things first: Schedule a 30-minute online call to plan the design session.</p>
+							<p class="max-w-3xl text-xl leading-normal md:text-2xl md:leading-normal lg:leading-relaxed lg:text-3xl">First things first: Schedule a 30-minute online call to plan the design session.</p>
 						</div>
 
 						<a class="inline-block px-6 py-4 text-xl text-center text-black bg-white rounded-full shrink-0 md:text-left lg:px-8 lg:py-5 md:text-2xl 2xl:py-5 2xl:px-8 2xl:text-3xl" title="Get started scheduling your free 90-minute trial." href="https://savvycal.com/edl/designsession" data-savvycal-embed>Get started now</a>

@@ -1459,6 +1459,10 @@ select{
   align-items: center;
 }
 
+.justify-start{
+  justify-content: flex-start;
+}
+
 .justify-end{
   justify-content: flex-end;
 }
@@ -1625,6 +1629,12 @@ select{
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-y-5 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+
 .space-y-reverse > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 1;
 }
@@ -1642,6 +1652,10 @@ select{
 
 .divide-black\/20 > :not([hidden]) ~ :not([hidden]){
   border-color: rgb(0 0 0 / 0.2);
+}
+
+.divide-black\/10 > :not([hidden]) ~ :not([hidden]){
+  border-color: rgb(0 0 0 / 0.1);
 }
 
 .divide-opacity-20 > :not([hidden]) ~ :not([hidden]){
@@ -2035,6 +2049,11 @@ select{
   padding-right: 2rem;
 }
 
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .pb-8{
   padding-bottom: 2rem;
 }
@@ -2125,6 +2144,10 @@ select{
 
 .pl-4{
   padding-left: 1rem;
+}
+
+.pt-20{
+  padding-top: 5rem;
 }
 
 .text-left{
@@ -3676,6 +3699,11 @@ select{
     padding-right: 6rem;
   }
 
+  .lg\:px-7{
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+
   .lg\:pb-24{
     padding-bottom: 6rem;
   }
@@ -3955,6 +3983,10 @@ select{
 
   .\32xl\:gap-40{
     gap: 10rem;
+  }
+
+  .\32xl\:gap-12{
+    gap: 3rem;
   }
 
   .\32xl\:gap-x-40{
