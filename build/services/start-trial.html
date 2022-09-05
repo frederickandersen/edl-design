@@ -151,8 +151,8 @@
 						<p class="text-2xl leading-normal lg:leading-relaxed lg:text-3xl">A step by step guide to getting 90 minutes of free, effective design fun.</p>
 					</div>
 					
-					<div class="space-y-6 lg:space-y-0 lg:gap-8 lg:grid lg:grid-cols-2 lg:grid-rows-2 2xl:gap-12">
-						<div class="relative justify-between w-full p-6 space-y-12 border border-white lg:space-y-20 2xl:space-y-28 border-opacity-40 lg:space-x-0 lg:flex lg:flex-col rounded-2xl lg:p-8">
+					<div class="md:space-y-6 lg:space-y-0 lg:gap-8 lg:grid lg:grid-cols-2 lg:grid-rows-2 2xl:gap-12">
+						<div x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="justify-between w-full py-8 space-y-12 transition duration-700 md:p-6 md:border border-white/40 lg:space-y-20 2xl:space-y-28 lg:space-x-0 lg:flex lg:flex-col md:rounded-2xl lg:p-8">
 							<span class="relative inline-flex items-center justify-center w-12 h-12 font-serif text-lg italic border rounded-full tabular-nums 2xl:w-16 2xl:h-16 2xl:leading-tight 2xl:text-3xl">1</span>
 							
 							<div class="space-y-4">
@@ -164,8 +164,8 @@
 							</div>
 						</div>
 
-						<div class="relative justify-between w-full p-6 space-y-12 text-black bg-white lg:space-y-20 2xl:space-y-28 lg:space-x-0 lg:flex lg:flex-col rounded-2xl lg:p-8">
-							<span class="relative inline-flex items-center justify-center w-12 h-12 font-serif text-lg italic border rounded-full tabular-nums 2xl:w-16 2xl:h-16 2xl:leading-tight 2xl:text-3xl">2</span>
+						<div x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="relative justify-between w-full py-8 space-y-12 transition duration-700 delay-200 border-t border-white/40 md:border-0 md:text-black md:bg-white md:p-6 lg:space-y-20 2xl:space-y-28 lg:space-x-0 lg:flex lg:flex-col md:rounded-2xl lg:p-8">
+							<span class="relative inline-flex items-center justify-center w-12 h-12 font-serif text-lg italic text-black bg-white rounded-full md:bg-transparent md:border tabular-nums 2xl:w-16 2xl:h-16 2xl:leading-tight 2xl:text-3xl">2</span>
 							
 							<div class="space-y-4">
 								<h3 class="text-3xl leading-tight md:text-4xl md:leading-tight lg:leading-tight lg:text-4.5xl ">Explain the challenge</h3>
@@ -176,7 +176,7 @@
 							</div>
 						</div>
 
-						<div class="justify-between w-full p-6 space-y-12 border border-white lg:space-y-20 2xl:space-y-28 border-opacity-40 lg:space-x-0 lg:flex lg:flex-col rounded-2xl lg:p-8">
+						<div x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="justify-between w-full py-8 space-y-12 transition duration-700 delay-500 border-t md:p-6 md:border border-white/40 lg:space-y-20 2xl:space-y-28 lg:space-x-0 lg:flex lg:flex-col md:rounded-2xl lg:p-8">
 							<span class="relative inline-flex items-center justify-center w-12 h-12 font-serif text-lg italic border rounded-full tabular-nums 2xl:w-16 2xl:h-16 2xl:leading-tight 2xl:text-3xl">3</span>
 							
 							<div class="space-y-4">
@@ -185,7 +185,7 @@
 							</div>
 						</div>
 
-						<div class="justify-between w-full p-6 space-y-12 border border-white lg:space-y-20 2xl:space-y-28 border-opacity-40 lg:space-x-0 lg:flex lg:flex-col rounded-2xl lg:p-8">
+						<div x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="justify-between w-full py-8 space-y-12 transition duration-700 delay-700 border-t md:p-6 md:border border-white/40 lg:space-y-20 2xl:space-y-28 lg:space-x-0 lg:flex lg:flex-col md:rounded-2xl lg:p-8">
 							<span class="relative inline-flex items-center justify-center w-12 h-12 font-serif text-lg italic border rounded-full tabular-nums 2xl:w-16 2xl:h-16 2xl:leading-tight 2xl:text-3xl">4</span>
 							
 							<div class="space-y-4">
