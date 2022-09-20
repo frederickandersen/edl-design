@@ -40,6 +40,7 @@ module.exports = {
                 'blood-orange-gradient': "url('/media/kettle-hero-bg.png')",
                 'green-gradient': "url('/media/oz-cover-bg.png')",
                 'sky-gradient': "url('/media/joeni-cover-bg.png')",
+                'black-gradient': "url('/media/edl-gradient-black.png')",
                 'dark-gradient': "url('/media/subscription-cover-bg.png')",
                 'postits': "url('/media/ds-cover.jpg')",
                 'bubble-gradient': "url('/media/edl-gradient-bubble.png')",
@@ -68,7 +69,7 @@ module.exports = {
             },
             screens: {
                 '3xl': '2000px',
-            },
+            }
         },
     },
     corePlugins: {

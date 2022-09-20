@@ -36,7 +36,7 @@
 
 @layer components {
     .tooltip {
-        @apply flex items-center justify-center w-5 h-5 ml-2 text-sm bg-white border rounded-full;
+        @apply flex items-center justify-center w-4 h-4 lg:w-5 lg:h-5 ml-2 text-xs lg:text-sm border lg:border-[1.5px] rounded-full;
     }
 
     .accordion {
@@ -141,11 +141,72 @@
     .text-indent {
         text-indent: 2.5rem;
     }
+
+    @media only screen and (max-width: 767px) {
+        :root {
+            --slide-up-y: -10rem;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        :root {
+            --slide-up-y: -4rem;
+        }
+    }
+
+    @media only screen and (min-width: 1280px) {
+        :root {
+            --slide-up-y: -6rem;
+        }
+    }
+
+    @media only screen and (min-width: 1536px) {
+        :root {
+            --slide-up-y: 16rem;
+        }
+    }
+    
+    @keyframes slackMessages {
+        to {
+            transform: translateY(var(--slide-up-y));
+        }
+    }
+
+    .slack {
+        animation: slackMessages 500ms ease-in-out 2000ms forwards;
+    }
+
+    @keyframes ellipsis {
+        to {
+            width: 24px;
+        }
+    }
+
+    .loading:after {
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: bottom;
+        animation: ellipsis steps(4, end) 900ms infinite;
+        content: "\2026";
+        /* ascii code for the ellipsis character */
+        width: 0px;
+    }
 }
 
 .tippy-box[data-theme~='default'] {
     background-color: #000;
     color: white;
     font-size: 16px;
-    padding: 8px;
+    padding: 4px;
+    line-height: 1.5;
+}
+
+@media only screen and (min-width: 768px) {
+    .tippy-box[data-theme~='default'] {
+        background-color: #000;
+        color: white;
+        font-size: 18px;
+        padding: 8px;
+        line-height: 1.5;
+    }
 }
