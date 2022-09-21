@@ -94,11 +94,11 @@
 					</div>
 
 					<!-- Slack -->
-					<div x-data="{ newMessage: false }" x-init="setTimeout(() => newMessage = true, 3000)" class="relative flex items-center justify-center w-full overflow-hidden rounded-lg md:px-12 md:aspect-square md:bg-blueish/20 md:h-160 lg:rounded-2xl lg:px-16 xl:w-1/2 xl:h-auto 2xl:px-12 3xl:px-24">
+					<div x-data="{ newMessage: false }" x-init="setTimeout(() => newMessage = true, 4000)" class="relative flex items-center justify-center w-full overflow-hidden rounded-lg md:px-12 md:aspect-square md:bg-blueish/20 md:h-160 lg:rounded-2xl lg:px-16 xl:w-1/2 xl:h-auto 2xl:px-12 3xl:px-24">
 						<div class="absolute inset-0 z-30 hidden rounded-t-lg pointer-events-none md:block lg:rounded-t-2xl h-1/4 lg:h-1/3 from-blueish/60 bg-gradient-to-b"></div>
 						
 						<div class="relative flex flex-col justify-end space-y-6 lg:space-y-8" :class="{ 'md:bottom-28 lg:bottom-20 xl:bottom-28 2xl:bottom-24 3xl:justify-center' : newMessage}">
-							<article class="w-full bg-white border divide-y rounded-lg border-gray md:border-0 md:shadow-2xl shadow-blueish/40 divide-black/10">
+							<article class="w-full bg-white border divide-y rounded-lg border-black/10 md:border-0 md:shadow-2xl shadow-blueish/40 divide-black/10">
 								<div class="flex p-4 space-x-3 lg:space-x-4">
 									<img src="../media/joeni-quote.jpg" class="object-cover w-10 h-10 rounded-md shrink-0 lg:w-12 2xl:w-14 2xl:h-14 lg:h-12 bg-gray" alt="Avatar of fictional, happy customer." />
 									
@@ -126,7 +126,7 @@
 
 							<div x-show="!newMessage" class="inline-flex items-center space-x-2 text-sm text-black transition duration-300 lg:text-base"><span class="inline-block w-2 h-2 rounded-full bg-blueish"></span><span class="loading">Frederick is typing</span></div>
 						
-							<article x-show="newMessage" x-transition class="flex w-full p-4 space-x-3 bg-white border rounded-lg border-gray md:border-0 md:shadow-2xl shadow-blueish/40 lg:space-x-4">
+							<article x-show="newMessage" x-transition class="flex w-full p-4 space-x-3 bg-white border rounded-lg border-black/10 md:border-0 md:shadow-2xl shadow-blueish/40 lg:space-x-4">
 								<img src="../media/edl-avatar.png" class="w-10 h-10 rounded-md shrink-0 lg:w-12 2xl:w-14 2xl:h-14 lg:h-12 bg-gray" alt="EDL logo in black square." />
 								
 								<figure class="text-base lg:text-lg" x-data="{ liked: false }">
@@ -532,7 +532,7 @@
 					</div>
 
 					<div x-data="{ active: 0 }" class="max-w-4xl mx-auto md:space-y-3 lg:space-y-4 2xl:max-w-6xl">
-						<div x-data="{ id: 1, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="md:border md:border-black md:rounded-md">
+						<div x-data="{ id: 1, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20 md:border md:border-black md:rounded-md">
 							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
 								<span>How to get started?</span>
 								
