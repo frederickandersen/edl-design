@@ -3624,6 +3624,14 @@ select{
     height: 2.5rem;
   }
 
+  .lg\:h-14{
+    height: 3.5rem;
+  }
+
+  .lg\:h-11{
+    height: 2.75rem;
+  }
+
   .lg\:max-h-208{
     max-height: 52rem;
   }
