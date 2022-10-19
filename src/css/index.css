@@ -88,6 +88,25 @@
         }
     }
 
+    .timeline-item:not(:last-child)::after {
+        content: "";
+        width: 12px;
+        background: black;
+        height: calc(100% + 6px);
+        left: 12px;
+        position: absolute;
+        top: 12px;
+    }
+
+    @media only screen and (min-width: 1024px) {
+        .timeline-item:not(:last-child)::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+
+
     .line {
         position: relative;
     }
