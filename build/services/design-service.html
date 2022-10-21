@@ -62,11 +62,11 @@
 
 								<div class="flex flex-col items-start w-full">
 									<nav class="flex flex-col items-start space-y-4">
-										<a href="/work.html" class="inline text-2xl text-black" title="View all of our work.">Work</a>
-										<a href="/approach.html" class="inline text-2xl text-black" title="See how we can help you, and how we plan to do it.">Approach</a>
-										<a href="/about.html" class="inline text-2xl text-black" title="Get to know EDL and the people behind it.">About</a>
-										<a href="/contact.html" class="inline text-2xl text-black" title="Tell us about a project or say hi!">Contact</a>
-										<a href="/services/start-trial.html" aria-current="page" class="inline font-serif text-2xl italic line" title="Get started scheduling your free 90-minute trial.">Start agency trial</a>
+										<a href="/work.html" class="inline text-2xl" title="View all of our work.">Work</a>
+										<a href="/approach.html" class="inline text-2xl" title="See how we can help you, and how we plan to do it.">Approach</a>
+										<a href="/about.html" class="inline text-2xl" title="Get to know EDL and the people behind it.">About</a>
+										<a href="/contact.html" class="inline text-2xl" title="Tell us about a project or say hi!">Contact</a>
+										<a href="/services/start-trial.html" aria-current="page" class="inline font-serif text-2xl italic underline underline-offset-4" title="Get started scheduling your free 90-minute trial.">Start agency trial</a>
 									</nav>
 								</div>
 							</div>
@@ -380,16 +380,6 @@
 							<span class="inline-block text-xl leading-tight text-black/70 lg:text-2xl lg:leading-tight 2xl:text-3xl 2xl:leading-tight">Plans</span>
 							<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-7xl 2xl:leading-tight 2xl:text-8xl">For startups, scale-ups or established companies with <span class="font-serif italic">fluctuating design needs</span>.</h2>
 						</div>
-
-						<div class="inline-flex items-center space-x-4 text-lg leading-tight cursor-pointer md:leading-tight md:text-xl 2xl:text-2xl 2xl:leading-tight 2xl:space-x-6" x-on:click="annually = !annually">
-							<span :class="{ 'text-black/40': annually }">Paid monthly</span>
-	
-							<button class="w-12 py-1 lg:w-16 lg:py-1.5 px-1 lg:px-2 transition duration-300 ease-in-out rounded-full bg-black/40" :class="{ 'bg-black/100': annually }">
-								<div class="w-5 h-5 transition duration-300 ease-in-out bg-white rounded-full shadow lg:w-6 lg:h-6" :class="{ 'transform translate-x-full' : annually }"></div>
-							</button>
-							
-							<span class="text-black/40" :class="{ 'text-black/100': annually }">Paid annually</span>
-						</div>
 					</div>
 					
 					<div class="mx-auto space-y-8 md:space-y-0 gap-x-8 md:grid md:grid-cols-2 max-w-7xl">
@@ -397,7 +387,7 @@
 						<div class="px-6 py-6 space-y-6 rounded-lg lg:space-y-8 md:p-6 2xl:rounded-2xl lg:p-10 bg-gray">
 							<header class="space-y-4 lg:space-y-5">
 								<h3 class="text-2xl leading-tight lg:leading-tight lg:text-3xl 2xl:text-4xl 2xl:leading-tight">Startup</h3>
-								<p class="text-xl leading-normal text-black/80 2xl:text-2xl 2xl:leading-normal">Perfect for small engineering teams with a single decision maker.</p>
+								<p class="text-xl leading-normal text-black/80 2xl:text-2xl 2xl:leading-normal">Perfect for small product teams with a single decision maker.</p>
 							</header>
 
 							<div class="space-y-1 lg:space-y-2">
@@ -406,7 +396,7 @@
 									<span class="text-base leading-tight lg:leading-tight lg:text-lg text-black/60 2xl:text-xl 2xl:leading-tight">/ month</span>
 								</div>
 
-								<span class="inline-block text-base leading-tight lg:leading-tight lg:text-lg text-black/60 2xl:text-xl 2xl:leading-tight" :class="{ 'invisible': !annually }">Billed annually</span>
+								
 							</div>
 
 							<ul class="space-y-4 text-lg leading-snug md:leading-snug md:text-xl lg:leading-snug lg:text-2xl">
@@ -415,7 +405,15 @@
 										<path d="M11.6438 21.2433L6 15.5913L4 17.498L11.6438 25.125L28 8.78162L26 6.875L11.6438 21.2433Z" fill="currentColor"/>
 									</svg>
 									
-									<span class="flex items-center">Specialized designer <button class="tooltip" x-tooltip.raw.arrowless.theme.default="You will be assigned a specialized designer. An expert on your business, product, and users.">?</button></span>
+									<span class="flex items-center">Design team <button class="tooltip" x-tooltip.raw.arrowless.theme.default="Our team has experts with complementary skills far broader than any single individual could excel at.">?</button></span>
+								</li>
+
+								<li class="flex items-center space-x-3 lg:space-x-6">
+									<svg class="w-5 h-5 lg:w-6 lg:h-6 2xl:h-7 2xl:w-7" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M11.6438 21.2433L6 15.5913L4 17.498L11.6438 25.125L28 8.78162L26 6.875L11.6438 21.2433Z" fill="currentColor"/>
+									</svg>
+									
+									<span class="flex items-center">Lead designer <button class="tooltip" x-tooltip.raw.arrowless.theme.default="You will be assigned a lead designer. An expert on your business, product, and users.">?</button></span>
 								</li>
 
 								<li class="flex items-center space-x-3 lg:space-x-6">
@@ -424,14 +422,6 @@
 									</svg>
 
 									<span class="flex items-center">Unlimited revision <button class="tooltip" x-tooltip.raw.arrowless.theme.default="We iterate until you and your team are satisfied with the result.">?</button></span>
-								</li>
-
-								<li class="flex items-center space-x-3 lg:space-x-6">
-									<svg class="w-5 h-5 lg:w-6 lg:h-6 2xl:h-7 2xl:w-7" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M11.6438 21.2433L6 15.5913L4 17.498L11.6438 25.125L28 8.78162L26 6.875L11.6438 21.2433Z" fill="currentColor"/>
-									</svg>
-									
-									<span class="flex items-center">Less meetings <button class="tooltip" x-tooltip.raw.arrowless.theme.default="We value your team’s time. Meetings and video calls can be necessary, but we keep them to a minimum.">?</button></span>
 								</li>
 
 								<li class="flex items-center space-x-3 lg:space-x-6">
@@ -460,7 +450,7 @@
 							</ul>
 
 							<div class="flex flex-col space-y-4 text-center">
-								<a class="inline-block px-6 py-4 mt-4 text-xl text-white bg-black rounded-full whitespace-nowrap md:w-auto md:px-8 lg:px-12 lg:py-5 lg:text-2xl" title="Get started with EDL's Design as a Service." href="https://savvycal.com/edl/abonnement" data-savvycal-embed>Get started now</a>
+								<a class="inline-block px-6 py-4 mt-4 text-xl text-white bg-black rounded-full whitespace-nowrap md:w-auto md:px-8 lg:px-12 lg:py-5 lg:text-2xl" title="Get started with EDLs Design as a Service." href="https://savvycal.com/edl/getstarted" data-savvycal-embed>Get started now</a>
 								
 								<div class="items-center text-base leading-snug text-center md:text-lg md:leading-snug lg:leading-snug lg:text-xl">
 									<span class="text-black/60">On the fence?</span>
@@ -482,7 +472,7 @@
 									<span class="text-base leading-tight lg:leading-tight lg:text-lg text-black/60 2xl:text-xl 2xl:leading-tight">/ month</span>
 								</div>
 								
-								<span class="inline-block text-base leading-tight lg:leading-tight lg:text-lg text-black/60 2xl:text-xl 2xl:leading-tight" :class="{ 'invisible': !annually }">Billed annually</span>
+								
 							</div>
 							
 							<ul class="space-y-4 text-lg leading-snug md:leading-snug md:text-xl lg:leading-snug lg:text-2xl">
@@ -515,7 +505,7 @@
 										<path d="M11.6438 21.2433L6 15.5913L4 17.498L11.6438 25.125L28 8.78162L26 6.875L11.6438 21.2433Z" fill="currentColor"/>
 									</svg>
 									
-									<span class="flex items-center">Biannual user research<button class="tooltip" x-tooltip.raw.arrowless.theme.default="Two times a year, we thoroughly test, examine, and evaluate the audience. Executives will receive a nice slideshow.">?</button></span>
+									<span class="flex items-center">Biannual research review<button class="tooltip" x-tooltip.raw.arrowless.theme.default="Two times a year, we thoroughly test, examine, and evaluate the audience. Executives will receive a nice slideshow.">?</button></span>
 								</li>
 							</ul>
 						</div>
@@ -543,7 +533,7 @@
 							</button>
 
 							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 lg:text-2xl lg:leading-relaxed">
-								<p class="text-indent"><a class="line" title="Kom i gang med design som service med EDL." href="https://savvycal.com/edl/abonnement" data-savvycal-embed>Schedule an initial meeting</a> with our CEO, Frederick, where your needs are coordinated. Is design as a service even right for you?</p>
+								<p class="text-indent"><a class="underline underline-offset-4" title="Get started with EDLs Design as a Service." href="https://savvycal.com/edl/getstarted" data-savvycal-embed>Schedule an initial meeting</a> with our CEO, Frederick, where your needs are coordinated. Is design as a service even right for you?</p>
 								<p>When the practical details are in order, the fun begins. You choose a task, and we deliver our first design within a few days.</p>
 							</div>
 						</div>

@@ -41,8 +41,6 @@ module.exports = {
                 'green-gradient': "url('/media/oz-cover-bg.png')",
                 'sky-gradient': "url('/media/joeni-cover-bg.png')",
                 'black-gradient': "url('/media/edl-gradient-black.png')",
-                'dark-gradient': "url('/media/subscription-cover-bg.png')",
-                'postits': "url('/media/ds-cover.jpg')",
                 'bubble-gradient': "url('/media/edl-gradient-bubble.png')",
                 'radial-yellow': "radial-gradient(41.33% 41.33% at 50% 50%, #ffc738 0%, rgba(248,232,225,0) 100%)",
                 'radial-heaven': "radial-gradient(41.33% 41.33% at 50% 50%, rgba(252,164,69,1) 0%, rgba(148,187,233,0) 100%)",
