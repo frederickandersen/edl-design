@@ -15,13 +15,10 @@
 		<meta property="og:type" content="website">
 		<meta property="og:image" content="https://www.edl.dk/media/open-graph.jpg">
 
-		<link rel="alternate" hreflang="en" href="https://edl.dk/about" />
-		<link rel="alternate" hreflang="da" href="https://edl.dk/da/om-os" />
-		<link rel="alternate" hreflang="x-default" href="https://edl.dk/about" />
-
 		<link rel="icon" href="./favicon.png">
 		<link rel="stylesheet" href="./css/styles.css">
 
+		<script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
 		<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 	</head>
 
@@ -38,10 +35,10 @@
 
 						<div class="hidden w-full md:block">
 							<div class="flex items-center justify-end space-x-8 lg:space-x-16">
-								<a href="/work.html" class="text-lg text-black lg:text-2xl" title="View all of our work.">Work</a>
-								<a href="/approach.html" class="text-lg text-black lg:text-2xl" title="See how we can help you, and how we plan to do it.">Approach</a>
-								<a href="/about.html" class="text-lg text-black underline lg:text-2xl underline-offset-4" title="Get to know EDL and the people behind it." aria-current="page">About</a>
-								<a href="/contact.html" class="text-lg text-black lg:text-2xl" title="Tell us about a project or say hi!">Contact</a>
+								<a href="/work.html" class="text-lg lg:text-2xl" title="View all of our work.">Work</a>
+								<a href="/approach.html" class="text-lg lg:text-2xl" title="See how we can help you, and how we plan to do it.">Approach</a>
+								<a href="/about.html" class="text-lg underline lg:text-2xl underline-offset-4" title="Get to know EDL and the people behind it." aria-current="page">About</a>
+								<a href="/contact.html" class="text-lg lg:text-2xl" title="Tell us about a project or say hi!">Contact</a>
 								<a href="/services/start-trial.html" class="block px-4 py-3 text-xl text-white bg-black rounded-full lg:px-6 lg:py-4 sm:w-auto lg:text-2xl" title="Get started scheduling your free 90-minute trial.">Start agency trial</a>
 							</div>
 						</div>
@@ -78,20 +75,20 @@
 
 		<main>
 			<!-- Hero -->
-			<div class="relative">
-				<div class="container z-10 px-6 pt-40 pb-10 mx-auto text-black lg:px-12 md:pb-16 md:pt-80 lg:pb-24 2xl:pt-96">
-					<h1 class="hyphenate w-full text-4.5xl leading-tight sm:text-5xl sm:leading-tight md:leading-tight md:text-7xl lg:text-7.5xl lg:leading-tight lg:max-w-7xl 2xl:leading-tight 2xl:text-8xl">A tight-knit team with over <span class="font-serif italic">40 years of combined experience</span> transforming businesses.</h1>
+			<section class="relative pt-32 bg-gradient-to-t from-white md:pt-48 lg:pt-56 2xl:pt-64">
+				<div class="container z-10 px-6 mx-auto space-y-10 transition duration-1000 md:space-y-12 lg:px-12 lg:space-y-16" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">
+					<h1 class="w-full text-4.5xl leading-tight md:text-7xl md:leading-tight hyphenate xl:leading-tight xl:text-8xl 2xl:text-8.5xl 2xl:leading-[1.2]">A small team with over <span class="font-serif italic">40 years of combined experience</span> scaling businesses</h1>
 				</div>
-				
-				<div class="absolute w-screen h-screen pointer-events-none -left-40 -top-40 -z-50 bg-radial-yellow"></div>
-			</div>
+
+				<div class="absolute inset-0 w-full h-full bg-cover bg-sky-gradient -z-10"></div>
+			</section>
 
 			<!-- What to expect from us -->
-			<section>
-				<div class="container grid px-6 pt-6 pb-16 mx-auto gap-y-8 gap-x-32 lg:px-12 lg:pb-32 lg:grid-cols-section lg:gap-y-0">				
+			<section class="relative py-16 md:py-24 lg:py-32 2xl:py-40">
+				<div class="container grid px-6 mx-auto gap-y-8 gap-x-32 lg:px-12 lg:grid-cols-section lg:gap-y-0">
 					<div>
 						<h2 class="mb-2 text-4xl leading-tight text-black md:mb-4 lg:leading-tight lg:text-5xl lg:mb-6 2xl:leading-tight 2xl:text-6xl">What to expect</h2>
-						<p class="text-2xl leading-normal text-black text-indent md:max-w-2xl lg:leading-relaxed lg:text-3xl lg:max-w-none">A fresh perspective, modeled by six tried-and-tested principles.</p>
+						<p class="text-2xl leading-normal text-black md:max-w-2xl lg:leading-relaxed lg:text-3xl lg:max-w-none">A fresh perspective, modeled by six tried-and-tested principles.</p>
 					</div>
 
 					<div x-data="{ active: 0 }" class="space-y-3 lg:space-y-4">
