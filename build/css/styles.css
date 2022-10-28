@@ -1822,8 +1822,8 @@ select{
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
 
-.bg-blood-orange-gradient{
-  background-image: url('/media/kettle-hero-bg.png');
+.bg-sky-gradient{
+  background-image: url('/media/joeni-cover-bg.png');
 }
 
 .bg-green-gradient{
@@ -1834,8 +1834,8 @@ select{
   background-image: url('/media/po-cover-bg.png');
 }
 
-.bg-sky-gradient{
-  background-image: url('/media/joeni-cover-bg.png');
+.bg-blood-orange-gradient{
+  background-image: url('/media/kettle-hero-bg.png');
 }
 
 .bg-orange-gradient{
@@ -2072,16 +2072,12 @@ select{
   padding-top: 5rem;
 }
 
-.pt-40{
-  padding-top: 10rem;
-}
-
-.pt-6{
-  padding-top: 1.5rem;
-}
-
 .pt-10{
   padding-top: 2.5rem;
+}
+
+.pt-40{
+  padding-top: 10rem;
 }
 
 .pb-4{
@@ -2110,6 +2106,10 @@ select{
 
 .pb-20{
   padding-bottom: 5rem;
+}
+
+.pt-6{
+  padding-top: 1.5rem;
 }
 
 .pt-12{
@@ -3049,14 +3049,14 @@ select{
     line-height: 2.25rem;
   }
 
-  .md\:text-xl{
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
   .md\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .md\:text-xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .md\:text-lg{
