@@ -1779,6 +1779,14 @@ select{
   background-color: rgb(255 255 255 / 0.1);
 }
 
+.bg-black\/10{
+  background-color: rgb(0 0 0 / 0.1);
+}
+
+.bg-black\/5{
+  background-color: rgb(0 0 0 / 0.05);
+}
+
 .bg-opacity-50{
   --tw-bg-opacity: 0.5;
 }
@@ -3168,6 +3176,10 @@ select{
     height: 2.5rem;
   }
 
+  .lg\:h-9{
+    height: 2.25rem;
+  }
+
   .lg\:max-h-208{
     max-height: 52rem;
   }
@@ -3860,6 +3872,10 @@ select{
 
   .\32xl\:mt-40{
     margin-top: 10rem;
+  }
+
+  .\32xl\:mt-12{
+    margin-top: 3rem;
   }
 
   .\32xl\:h-160{
