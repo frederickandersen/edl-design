@@ -1687,10 +1687,6 @@ select{
   border-top-width: 1px;
 }
 
-.border-dashed{
-  border-style: dashed;
-}
-
 .border-black{
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
@@ -1703,10 +1699,6 @@ select{
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
-.border-black\/40{
-  border-color: rgb(0 0 0 / 0.4);
 }
 
 .border-black\/10{
@@ -3147,16 +3139,16 @@ select{
     height: 3.5rem;
   }
 
+  .lg\:h-24{
+    height: 6rem;
+  }
+
   .lg\:h-7{
     height: 1.75rem;
   }
 
   .lg\:h-48{
     height: 12rem;
-  }
-
-  .lg\:h-24{
-    height: 6rem;
   }
 
   .lg\:h-4{
