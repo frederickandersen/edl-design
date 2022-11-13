@@ -1199,6 +1199,14 @@ select{
   height: 1.5rem;
 }
 
+.h-160{
+  height: 40rem;
+}
+
+.h-120{
+  height: 30rem;
+}
+
 .max-h-256{
   max-height: 64rem;
 }
@@ -3087,6 +3095,10 @@ select{
     display: grid;
   }
 
+  .lg\:aspect-video{
+    aspect-ratio: 16 / 9;
+  }
+
   .lg\:h-20{
     height: 5rem;
   }
@@ -3153,6 +3165,10 @@ select{
 
   .lg\:h-4{
     height: 1rem;
+  }
+
+  .lg\:h-auto{
+    height: auto;
   }
 
   .lg\:max-h-208{
