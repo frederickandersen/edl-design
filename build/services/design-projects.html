@@ -244,7 +244,7 @@
 							</div>
 
 							<div class="flex-1 space-y-8 lg:space-y-12">
-								<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed 2xl:text-3xl 2xl:leading-relaxed">Our testing process for digital sites or products helps identify the things that you think are easy and obvious but just aren’t. We help you move past these flaws to improve your user experience.</p>
+								<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed 2xl:text-3xl 2xl:leading-relaxed">Our testing process for digital products helps identify the things that you think are easy and obvious but just aren’t. We help you move past these flaws to improve your user experience.</p>
 							</div>
 						</div>
 					</div>
@@ -340,8 +340,8 @@
 							
 								<ul class="max-w-3xl pb-4 space-y-4 text-xl leading-normal list-disc pl-7 lg:pl-8 lg:text-2xl lg:leading-relaxed">
 									<li class="pl-1 lg:pl-2">After setting a solid base for the product, it’s time to fill in all the details.</li>
-									<li class="pl-1 lg:pl-2">We’ll prototype a true-to-life design of your digital product.</li>
-									<li class="pl-1 lg:pl-2">This allows for easy feedback from stakeholders or even users.</li>
+									<li class="pl-1 lg:pl-2">We’ll prototype a realistic design of your digital product.</li>
+									<li class="pl-1 lg:pl-2">This allows for easy feedback from stakeholders, engineers, or even users.</li>
 								</ul>
 							</div>
 						</div>
@@ -412,27 +412,10 @@
 								<p class="text-indent">It depends on the scope, but our minimum charge is 100,000 DKK. We build relationships. We don’t work like freelancers.</p>
 							</div>
 						</div>
-						
-						<div x-data="{ id: 2, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20 md:border md:border-black md:rounded-md">
-							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
-								<span>Why don’t I just hire a full-time designer?</span>
-
-								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>
-							</button>
-
-							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 2xl:px-8 lg:pb-8 lg:text-2xl lg:leading-relaxed">
-								<p class="text-indent">The best designers are already working full-time.</p>
-								<p>It can be a hard sell to convince them to jump ship. Especially for smaller startups or larger organizations where design hasn’t been prioritized.</p>
-								<p>Another big reason is commitment and flexibility. You can easily pause Design as a Service for one or two months. A full-time designer needs to be occupied with relevant tasks all day every day.</p>
-							</div>
-						</div>
 
 						<div x-data="{ id: 3, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20 md:border md:border-black md:rounded-md">
 							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
-								<span>Is it really unlimited revision?</span>
+								<span>How many revisions do we have?</span>
 
 								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
 									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -441,8 +424,7 @@
 							</button>
 
 							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 2xl:px-8 lg:text-2xl lg:leading-relaxed">
-								<p class="text-indent">We iterate your design until you are satisfied. We are skilled at hitting the mark on the first attempt, but some situations require revision or alternatives.</p>
-								<p>We are happy to help with that.</p>
+								<p class="text-indent">By default, all projects contain two rounds of iteration. More iterations can be discussed, but we typically hit the mark on the first attempt.</p>
 							</div>
 						</div>
 
@@ -457,41 +439,9 @@
 							</button>
 
 							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 2xl:px-8 lg:text-2xl lg:leading-relaxed">
-								<p class="text-indent">You will be assigned a specialized designer who will gradually become an expert within your business, product, and target group.</p>
+								<p class="text-indent">You will be assigned a specialized designer who will gradually become an expert within your business, product, and audience.</p>
 								<p>We always try to match new customers with a designer who has the right balance of industry knowledge and curious uncertainty.</p>
 								<p>Innovation flourishes best under these conditions.</p>
-							</div>
-						</div>
-
-						<div x-data="{ id: 5, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20 md:border md:border-black md:rounded-md">
-							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
-								<span>What happens if I cancel the subscription?</span>
-
-								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>
-							</button>
-
-							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 2xl:px-8 lg:text-2xl lg:leading-relaxed">
-								<p class="text-indent">You can cancel and pause your subscription. If the subscription is paused, you can resume the following month.</p>
-								<p>If you choose to cancel, source files and other relevant material will be handed over so that you are free to continue working on your own.</p>
-							</div>
-						</div>
-
-						<div x-data="{ id: 6, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20 md:border md:border-black md:rounded-md">
-							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
-								<span>What’s the delivery time?</span>
-
-								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>
-							</button>
-
-							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 2xl:px-8 lg:text-2xl lg:leading-relaxed">
-								<p class="text-indent">We deliver some design tasks in a few hours, while other more complex tasks can take several days.</p>
-								<p>We deliver finished solutions with an average duration of three days. We’ll address if a task should be broken down.</p>
 							</div>
 						</div>
 					</div>
