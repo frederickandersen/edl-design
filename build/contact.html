@@ -18,208 +18,97 @@
 		<link rel="icon" href="./favicon.png">
 		<link rel="stylesheet" href="./css/styles.css">
 
+		<script defer="">
+			/* https://github.com/madmurphy/cookies.js (GPL3) */
+			!function(){function e(e,o,t,n,r,s,i){var c="";if(t)switch(t.constructor){case Number:c=t===1/0?"; expires=Fri, 31 Dec 9999 23:59:59 GMT":"; max-age="+t;break;case String:c="; expires="+t;break;case Date:c="; expires="+t.toUTCString()}return encodeURIComponent(e)+"="+encodeURIComponent(o)+c+(r?"; domain="+r:"")+(n?"; path="+n:"")+(s?"; secure":"")+(i&&"no_restriction"!==i.toString().toLowerCase()?"lax"===i.toString().toLowerCase()||1===Math.ceil(i)||!0===i?"; samesite=lax":"none"===i.toString().toLowerCase()||i<0?"; samesite=none":"; samesite=strict":"")}var o=/[\-\.\+\*]/g,t=/^(?:expires|max\-age|path|domain|secure|samesite|httponly)$/i;window.docCookies={getItem:function(e){return e&&decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*"+encodeURIComponent(e).replace(o,"\\$&")+"\\s*\\=\\s*([^;]*).*$)|^.*$"),"$1"))||null},setItem:function(o,n,r,s,i,c,a){return!(!o||t.test(o))&&(document.cookie=e(o,n,r,s,i,c,a),!0)},removeItem:function(o,t,n,r,s){return!!this.hasItem(o)&&(document.cookie=e(o,"","Thu, 01 Jan 1970 00:00:00 GMT",t,n,r,s),!0)},hasItem:function(e){return!(!e||t.test(e))&&new RegExp("(?:^|;\\s*)"+encodeURIComponent(e).replace(o,"\\$&")+"\\s*\\=").test(document.cookie)},keys:function(){for(var e=document.cookie.replace(/((?:^|\s*;)[^\=]+)(?=;|$)|^\s*|\s*(?:\=[^;]*)?(?:\1|$)/g,"").split(/\s*(?:\=[^;]*)?;\s*/),o=e.length,t=0;t<o;t++)e[t]=decodeURIComponent(e[t]);return e},clear:function(e,o,t,n){for(var r=this.keys(),s=r.length,i=0;i<s;i++)this.removeItem(r[i],e,o,t,n)}}}(),"undefined"!=typeof module&&void 0!==module.exports&&(module.exports=docCookies);
+		</script>
+
 		<script defer src="https://unpkg.com/@alpinejs/intersect@3.10.4/dist/cdn.min.js"></script>
 		<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 	</head>
 
-	<body class="overflow-x-hidden font-sans antialiased" x-data="{ show: false }" :class="{ 'overflow-y-hidden' : show, '' : !open }">
-		<header class="absolute z-20 w-full py-4">
-			<div class="container px-6 mx-auto lg:px-12">
-				<div class="relative flex items-center justify-between h-16 lg:h-20">
-					<nav class="flex items-center justify-between flex-1">
-						<a href="/" title="Go to the homepage">
-							<svg class="w-auto h-10 text-black lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40">
-								<path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/>
-							</svg>
-						</a>
+	<body class="overflow-x-hidden font-sans antialiased">
+		<div class="relative hidden w-full px-12 py-4 text-center text-white bg-black hover:bg-black/80 md:block lg:px-24" x-data="{ hide_banner: true, cookie_name: 'announcement' }" x-init="hide_banner = docCookies.hasItem(cookie_name) ? (docCookies.getItem(cookie_name) == 'true') : false;" x-bind:class="{ 'hidden': hide_banner, 'relative hidden md:block': !hide_banner }">
+			<a href="/services/design-projects.html" class="block w-full space-x-2 text-base link lg:text-xl lg:leading-normal 2xl:text-2xl 2xl:leading-normal">
+				<span class="opacity-80">✴ Latest update</span>
+				<span>Design superpowers for your next project</span>
+			</a>
+			
+			<button type="button" class="absolute z-10 flex items-center justify-center w-8 h-8 ease-in-out -translate-y-1/2 rounded-md hover:bg-white/20 right-2 lg:right-4 top-1/2" @click="hide_banner = true; docCookies.setItem(cookie_name, true, (60*24*60*60));" aria-label="Dismiss">✕</button>
+		</div>
 
-						<div class="hidden w-full md:block">
-							<div class="flex items-center justify-end space-x-8 lg:space-x-16">
-								<a href="/work.html" class="text-lg lg:text-2xl" title="View all of our work.">Work</a>
-								<a href="/approach.html" class="text-lg lg:text-2xl" title="See how we can help you, and how we plan to do it.">Approach</a>
-								<a href="/about.html" class="text-lg lg:text-2xl" title="Get to know EDL and the people behind it.">About</a>
-								<a href="/contact.html" class="text-lg underline lg:text-2xl underline-offset-4" title="Tell us about a project or say hi!" aria-current="page">Contact</a>
-								<a href="/services/start-trial.html" class="block px-4 py-3 text-xl text-white bg-black rounded-full lg:px-6 lg:py-4 sm:w-auto lg:text-2xl" title="Get started scheduling your free 90-minute trial.">Start agency trial</a>
-							</div>
-						</div>
+		<header>
+			<div class="container px-6 py-6 mx-auto lg:px-12">
+				<nav class="space-y-4 sm:space-y-0 sm:flex sm:items-center sm:justify-between sm:flex-1 sm:h-16 lg:h-20">
+					<a href="/" title="Go to the homepage."><svg class="w-auto h-10 lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40"><path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/></svg></a>
 
-						<button @click="show = !show" class="fixed z-20 flex items-center justify-center w-20 h-20 px-2 py-4 text-white bg-black rounded-full bottom-6 right-6 md:hidden" x-text="!show ? 'Menu' : 'Close'">Menu</button>
-
-						<div class="fixed inset-0 bg-black bg-opacity-50 md:hidden" x-show="show">
-							<div
-								x-show="show"
-								@click.outside="show = false;"
-								x-transition:enter="transition ease-in-out duration-300"
-								x-transition:enter-start="translate-y-full transform opacity-0"
-								x-transition:enter-end="translate-y-0 transform opacity-100"
-								x-transition:leave="transition ease-in-out duration-300"
-								x-transition:leave-start="translate-y-0 transform"
-								x-transition:leave-end="translate-y-full transform"
-								class="fixed inset-x-0 bottom-0 z-10 flex w-full px-6 pt-8 pb-10 bg-white rounded-t-2xl transform-gpu">
-
-								<div class="flex flex-col items-start w-full">
-									<nav class="flex flex-col items-start space-y-4">
-										<a href="/work.html" class="inline text-2xl" title="View all of our work.">Work</a>
-										<a href="/approach.html" class="inline text-2xl" title="See how we can help you, and how we plan to do it.">Approach</a>
-										<a href="/about.html" class="inline text-2xl" title="Get to know EDL and the people behind it.">About</a>
-										<a href="/contact.html" class="inline text-2xl underline underline-offset-4" title="Tell us about a project or say hi!" aria-current="page">Contact</a>
-										<a href="/services/start-trial.html" class="inline font-serif text-2xl italic" title="Get started scheduling your free 90-minute trial.">Start agency trial</a>
-									</nav>
-								</div>
-							</div>
-						</div>
-					</nav>
-				</div>
+					<div class="flex">
+						<a href="/services.html" class="py-2 pr-4 text-lg lg:pr-8 lg:text-xl 2xl:text-2xl" title="See how we can help you, and how we plan to do it.">Services</a>
+						<a href="/work.html" class="px-4 py-2 text-lg lg:px-8 lg:text-xl 2xl:text-2xl" title="Follow along as we design deliverables for our clients.">Work</a>
+						<a href="/trial.html" class="px-4 py-2 text-lg lg:px-8 lg:text-xl 2xl:text-2xl" title="Get started scheduling your free 90-minute trial.">Trial</a>
+						<a href="/contact.html" class="py-2 pl-4 text-lg underline lg:pl-8 lg:text-xl 2xl:text-2xl underline-offset-4" title="Swing by for a cup of coffee." aria-current="page">Contact</a>
+					</div>
+				</nav>	
 			</div>
 		</header>
 
 		<main>
-			<!-- Hero -->
-			<section class="relative pt-32 bg-gradient-to-t from-white md:pt-48 lg:pt-56 2xl:pt-64">
-				<div class="container z-10 px-6 mx-auto space-y-10 transition duration-1000 md:space-y-12 lg:px-12 lg:space-y-16" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">
-					<h1 class="w-full text-4.5xl leading-tight md:text-7xl md:leading-tight xl:leading-tight xl:text-8xl 2xl:text-8.5xl 2xl:leading-[1.2]">Share your idea or business challenge. <span class="font-serif italic">No pitch</span>, no strings attached.</h1>
+			<section class="relative pt-4 sm:pt-12 lg:pt-24 3xl:pt-32">
+				<div class="container w-full px-6 mx-auto space-y-8 transition duration-1000 lg:px-12 md:space-y-12 lg:space-y-16 2xl:space-y-20" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">
+					<div class="space-y-6 lg:space-y-8 2xl:space-y-10">
+						<h1 class="w-full text-5xl leading-tight md:leading-tight md:text-7xl lg:text-7.5xl lg:leading-[1.2] xl:leading-[1.2] xl:text-8xl 2xl:leading-[1.2] 2xl:text-8.5xl 3xl:text-9xl 3xl:leading-[1.2]">Share your idea, plans, or obstacles. <span class="font-serif italic">No pitch</span>, no strings attached.</h1>
+					</div>
 				</div>
-				
-				<div class="absolute inset-0 w-full h-full bg-cover bg-sky-gradient -z-10"></div>
 			</section>
 			
 			<section class="relative py-16 md:py-24 lg:py-32 2xl:py-40">
-				<div class="container grid px-6 mx-auto gap-y-16 lg:px-12 lg:grid-cols-contact lg:gap-x-40 2xl:gap-x-48">
+				<div class="container grid px-6 mx-auto gap-y-16 lg:px-12 lg:grid-cols-contact lg:gap-x-24 2xl:gap-x-32">
 					<!-- Contact form -->
-					<div>
-						<h2 class="mb-4 text-4xl leading-tight lg:leading-tight lg:text-5xl">Project inquiries</h2>
-						<p class="text-2xl leading-normal lg:leading-relaxed 2xl:text-3xl 2xl:leading-relaxed md:text-indent">Tell us about your project and goals. We’ll take a look and let you know if it’s a good fit.</p>
-						
-						<form name="Project inquiries" action="/success.html" data-netlify="true" method="POST" netlify-honeypot="bot-field" class="grid grid-cols-1 mt-8 lg:mt-10 gap-y-6 sm:grid-cols-2 sm:gap-x-6">
-							<div class="hidden">
-								<label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-							</div>
-							<div class="sm:col-span-2">
-								<label for="name" class="block text-base text-black lg:text-lg">Name <span class="text-red">*</span></label>
-								
-								<div class="mt-1.5">
-									<input type="text" required name="name" id="name" autocomplete="given-name" class="block w-full px-4 py-3 text-black border-black focus:shadow-sm focus:ring-black focus:border-black">
-								</div>
-							</div>
-
-							<div class="sm:col-span-2">
-								<label for="company" class="block text-base text-black lg:text-lg">Company <span class="text-red">*</span></label>
-								
-								<div class="mt-1.5">
-									<input type="text" required name="company" id="company" autocomplete="company" class="block w-full px-4 py-3 text-black border-black focus:shadow-sm focus:ring-black focus:border-black">
-								</div>
-							</div>
-
-							<div>
-								<label for="email" class="block text-base text-black lg:text-lg">Email <span class="text-red">*</span></label>
-
-								<div class="mt-1.5">
-									<input id="email" required name="email" type="email" autocomplete="email" class="block w-full px-4 py-3 text-black border-black focus:shadow-sm focus:ring-black focus:border-black">
-								</div>
-							</div>
-							
-							<div>
-								<label for="phone" class="block text-base text-black lg:text-lg">Phone</label>
-								
-								<div class="mt-1.5">
-									<input type="text" name="phone" id="phone" autocomplete="tel" class="block w-full px-4 py-3 text-black border-black focus:shadow-sm focus:ring-black focus:border-black" aria-describedby="phone-optional">
-								</div>
-							</div>
-
-							<div class="sm:col-span-2">
-								<label for="timeframe" class="block text-base text-black lg:text-lg">Timeframe <span class="text-red">*</span></label>
-								
-								<div class="mt-1.5">
-									<input type="text" required placeholder="Ideally, when do we finish?" name="timeframe" id="timeframe" class="block w-full px-4 py-3 text-black border-black focus:shadow-sm focus:ring-black focus:border-black">
-								</div>
-							</div>
-
-							<div class="sm:col-span-2">
-								<label for="message" class="block text-base text-black lg:text-lg">Project description <span class="text-red">*</span></label>
-
-								<div class="mt-1.5">
-									<textarea required id="message" placeholder="Requirements, intentions, target audience, goals etc." name="message" rows="4" class="block w-full px-4 py-3 text-black border border-black focus:shadow-sm focus:ring-black focus:border-black" aria-describedby="message-max"></textarea>
-								</div>
-							</div>
-
-							<div class="sm:col-span-2 sm:flex sm:justify-end">
-								<button type="submit" class="inline-flex items-center justify-center w-full px-6 py-3 text-lg text-white bg-black rounded-full lg:px-8 lg:py-4 lg:text-xl focus:shadow-sm sm:w-auto">
-									Send inquiry
-								</button>
-							</div>
-						</form>
+					<div class="space-y-4 lg:space-y-8">
+						<img src="./media/edl-offices.jpg" class="object-cover w-full rounded-lg aspect-square" />
+						<h2 class="text-2xl leading-normal lg:leading-relaxed 2xl:text-3xl 2xl:leading-relaxed">Drop in for a coffee on the first floor at <a href="https://goo.gl/maps/rvbUxQUX1cxjvyaG9" class="text-link" title="Visit Google Maps for directions to Woods Augusthus.">Woods Augusthus</a>. Frederick will show some of our work.</h2>
 					</div>
 
 					<!-- Contact information -->
-					<div class="grid self-start gap-y-16 lg:gap-y-20 2xl:grid-cols-1 2xl:max-w-md">
+					<div class="space-y-12 lg:space-y-16 2xl:space-y-20">
 						<div class="space-y-4 lg:space-y-6">
-							<h3 class="text-2xl leading-tight text-black lg:leading-tight lg:text-3xl">Just say hello</h3>
-
-							<div class="flex flex-col text-lg">
-								<p class="text-xl leading-normal text-black">For all other matters, please send an email to the address below.<p>
-									<div class="flex items-center mt-4 space-x-6">
-										<a href="tel:+4528253694" title="Reach out and let us chat about design and business." class="flex items-center space-x-1">
-											<span class="text-xl leading-tight line link-black">28 25 36 94</span>
-											<svg class="w-5 h-5 lg:h-6 lg:w-6" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18h.01M8 21h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-										</a>
-
-										<a href="mailto:hello@edl.dk?subject=What’s good?" class="flex items-center space-x-1 text-black" title="Contact us through mail about anything.">
-											<span class="text-xl leading-tight line link-black">hello@edl.dk</span>
-											<svg class="w-5 h-5 lg:h-6 lg:w-6" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-												<path d="M13.163 20L21 12l-7.837-8-1.347 1.375 5.545 5.643H3v1.964h14.361l-5.545 5.66L13.163 20z" fill="currentColor"/>
-											</svg>
-										</a>
-										
-									</div>
-							</div>
+							<h3 class="text-2xl leading-tight lg:leading-tight lg:text-3xl 2xl:text-4xl 2xl:leading-tight">Talk shop</h3>
+							<p class="text-xl leading-normal 2xl:text-2xl 2xl:leading-normal">Our CEO Frederick loves chatting about digital projects. Book him for a <span class="font-serif italic">down to earth</span> chat.<p>
+							<a class="text-xl underline underline-offset-4 2xl:text-2xl hover:opacity-80" href="https://savvycal.com/edl/frederick" target="_blank" rel="noopener" title="Frederick always love talking shop. Shoot him an email!">Book a 30-minute chat</a>
 						</div>
 
 						<div class="space-y-4 lg:space-y-6">
-							<h3 class="text-2xl leading-tight text-black lg:leading-tight lg:text-3xl">Career openings</h3>
-
-							<div class="flex flex-col text-lg">
-								<p class="text-xl leading-normal text-black">We are always looking for talented, curious, open minds to join our team.<p>
-								<a href="mailto:careers@edl.dk?subject=Career at EDL" class="flex items-center mt-4 space-x-1 text-black" title="Send a mail regarding careers at EDL.">
-									<span class="text-xl leading-tight line link-black">careers@edl.dk</span>
-									<svg class="w-5 h-5 lg:h-6 lg:w-6" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-										<path d="M13.163 20L21 12l-7.837-8-1.347 1.375 5.545 5.643H3v1.964h14.361l-5.545 5.66L13.163 20z" fill="currentColor"/>
-									</svg>
-								</a>
-							</div>
+							<h3 class="text-2xl leading-tight lg:leading-tight lg:text-3xl 2xl:text-4xl 2xl:leading-tight">Just say hello</h3>
+							<p class="text-xl leading-normal 2xl:text-2xl 2xl:leading-normal">For all other matters, please send an email to the address below.<p>
+							<a class="text-xl underline underline-offset-4 2xl:text-2xl hover:opacity-80" href="mailto:hello@edl.dk?subject=What’s good?" title="Let us know what’s good with you!">hello@edl.dk</a>
 						</div>
 
+						<div class="space-y-4 lg:space-y-6">
+							<h3 class="text-2xl leading-tight lg:leading-tight lg:text-3xl 2xl:text-4xl 2xl:leading-tight">Career openings</h3>
+							<p class="text-xl leading-normal 2xl:text-2xl 2xl:leading-normal">We have no positions available, but always on the lookout for talented people. Please direct all portfolios here.<p>
+							<a class="text-xl underline underline-offset-4 2xl:text-2xl hover:opacity-80" href="mailto:careers@edl.dk?subject=Career at EDL" title="Send a mail regarding careers at EDL.">careers@edl.dk</a>
+						</div>
+						
 						<div>
 							<div x-data="{ tab: 'copenhagen' }" class="space-y-4 lg:space-y-6">
 								<div class="flex space-x-6">
-									<button :class="{ 'line': tab === 'copenhagen' }" @click.prevent="tab = 'copenhagen'" class="text-2xl leading-tight text-black lg:leading-tight lg:text-3xl">
+									<button :class="{ 'underline underline-offset-4': tab === 'copenhagen' }" @click.prevent="tab = 'copenhagen'" class="text-2xl leading-tight lg:leading-tight lg:text-3xl 2xl:text-4xl 2xl:leading-tight">
 										Copenhagen
 									</button>
 
-									<button :class="{ 'line': tab === 'odense' }" @click.prevent="tab = 'odense'" class="text-2xl leading-tight text-black lg:leading-tight lg:text-3xl">
+									<button :class="{ 'underline underline-offset-4': tab === 'odense' }" @click.prevent="tab = 'odense'" class="text-2xl leading-tight lg:leading-tight lg:text-3xl 2xl:text-4xl 2xl:leading-tight">
 										Odense
 									</button>
 								</div>
 								
-								<div x-show="tab === 'copenhagen'">
-									<p class="text-xl leading-normal text-black">Amagerfælledvej 106<br>2300 Copenhagen<br>Denmark<p>
-								
-									<a href="https://goo.gl/maps/rvbUxQUX1cxjvyaG9" title="Get directions to our Copenhagen office via Google Maps." target="blank" rel="noopener" class="flex items-center mt-4 space-x-1 text-black">
-										<span class="text-xl leading-tight line link-black">Directions</span>
-										<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-											<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
-										</svg>
-									</a>
+								<div x-show="tab === 'copenhagen'" class="space-y-4 lg:space-y-6">
+									<p class="text-xl leading-normal 2xl:text-2xl 2xl:leading-normal">Amagerfælledvej 106<br>2300 Copenhagen<br>Denmark</p>
+									<a class="inline-block text-xl underline underline-offset-4 2xl:text-2xl hover:opacity-80" href="https://goo.gl/maps/rvbUxQUX1cxjvyaG9" target="_blank" rel="noopener" title="Get directions to our Copenhagen office via Google Maps.">Directions</a>
 								</div>
 
-								<div x-show="tab === 'odense'">
-									<p class="text-xl leading-normal text-black">Stærmosegårdsvej 8<br>5230 Odense M<br>Denmark<p>
-								
-									<a href="https://goo.gl/maps/C7gqWv69bB8gdC4V9" title="Get directions to our Odense office via Google Maps." target="blank" rel="noopener" class="flex items-center mt-4 space-x-1 text-black">
-										<span class="text-xl leading-tight line link-black">Directions</span>
-										<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-											<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
-										</svg>
-									</a>
+								<div x-show="tab === 'odense'" class="space-y-4 lg:space-y-6">
+									<p class="text-xl leading-normal 2xl:text-2xl 2xl:leading-normal">Stærmosegårdsvej 8<br>5230 Odense M<br>Denmark</p>
+									<a class="inline-block text-xl underline underline-offset-4 2xl:text-2xl hover:opacity-80" href="https://goo.gl/maps/C7gqWv69bB8gdC4V9" target="_blank" rel="noopener" title="Get directions to our Odense office via Google Maps.">Directions</a>
 								</div>
 							</div>
 						</div>				

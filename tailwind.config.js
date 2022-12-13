@@ -67,7 +67,21 @@ module.exports = {
             },
             screens: {
                 '3xl': '2000px',
-            }
+            },
+            animation: {
+                marquee: 'marquee 40s linear infinite',
+                marqueeCopy: 'marqueeCopy 40s linear infinite',
+            },
+            keyframes: {
+                marquee: {
+                  '0%': { transform: 'translateX(0%)' },
+                  '100%': { transform: 'translateX(-100%)' },
+                },
+                marqueeCopy: {
+                  '0%': { transform: 'translateX(100%)' },
+                  '100%': { transform: 'translateX(0%)' },
+                },
+            },
         },
     },
     corePlugins: {
@@ -85,7 +99,7 @@ module.exports = {
                         maxWidth: '96%',
                     },
                     '@screen 2xl': {
-                        maxWidth: '88%',
+                        maxWidth: '1820px',
                     },
                 }
             })
