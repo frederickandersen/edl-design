@@ -1460,6 +1460,10 @@ select{
   max-width: 768px;
 }
 
+.max-w-lg{
+  max-width: 32rem;
+}
+
 .flex-1{
   flex: 1 1 0%;
 }
@@ -2781,6 +2785,14 @@ select{
   opacity: 0.8;
 }
 
+.hover\:opacity-60:hover{
+  opacity: 0.6;
+}
+
+.hover\:opacity-70:hover{
+  opacity: 0.7;
+}
+
 .focus\:shadow-sm:focus{
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
@@ -3159,6 +3171,11 @@ select{
   .md\:px-8{
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .md\:py-12{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .md\:pt-48{
@@ -3964,6 +3981,11 @@ select{
     padding-right: 1.25rem;
   }
 
+  .lg\:py-16{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
   .lg\:pt-56{
     padding-top: 14rem;
   }
@@ -4220,12 +4242,21 @@ select{
     line-height: 2.5rem;
   }
 
+  .xl\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
   .xl\:leading-tight{
     line-height: 1.25;
   }
 
   .xl\:leading-\[1\.2\]{
     line-height: 1.2;
+  }
+
+  .xl\:leading-snug{
+    line-height: 1.375;
   }
 }
 
@@ -4492,6 +4523,16 @@ select{
     padding-bottom: 3rem;
   }
 
+  .\32xl\:py-32{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  .\32xl\:py-24{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
   .\32xl\:pt-64{
     padding-top: 16rem;
   }
@@ -4625,11 +4666,25 @@ select{
     line-height: 1;
   }
 
+  .\33xl\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .\33xl\:text-6xl{
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
   .\33xl\:leading-\[1\.2\]{
     line-height: 1.2;
   }
 
   .\33xl\:leading-tight{
     line-height: 1.25;
+  }
+
+  .\33xl\:leading-snug{
+    line-height: 1.375;
   }
 }
