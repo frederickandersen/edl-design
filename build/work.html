@@ -18,284 +18,305 @@
 		<link rel="icon" href="./favicon.png">
 		<link rel="stylesheet" href="./css/styles.css">
 
+		<script defer="">
+			/* https://github.com/madmurphy/cookies.js (GPL3) */
+			!function(){function e(e,o,t,n,r,s,i){var c="";if(t)switch(t.constructor){case Number:c=t===1/0?"; expires=Fri, 31 Dec 9999 23:59:59 GMT":"; max-age="+t;break;case String:c="; expires="+t;break;case Date:c="; expires="+t.toUTCString()}return encodeURIComponent(e)+"="+encodeURIComponent(o)+c+(r?"; domain="+r:"")+(n?"; path="+n:"")+(s?"; secure":"")+(i&&"no_restriction"!==i.toString().toLowerCase()?"lax"===i.toString().toLowerCase()||1===Math.ceil(i)||!0===i?"; samesite=lax":"none"===i.toString().toLowerCase()||i<0?"; samesite=none":"; samesite=strict":"")}var o=/[\-\.\+\*]/g,t=/^(?:expires|max\-age|path|domain|secure|samesite|httponly)$/i;window.docCookies={getItem:function(e){return e&&decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*"+encodeURIComponent(e).replace(o,"\\$&")+"\\s*\\=\\s*([^;]*).*$)|^.*$"),"$1"))||null},setItem:function(o,n,r,s,i,c,a){return!(!o||t.test(o))&&(document.cookie=e(o,n,r,s,i,c,a),!0)},removeItem:function(o,t,n,r,s){return!!this.hasItem(o)&&(document.cookie=e(o,"","Thu, 01 Jan 1970 00:00:00 GMT",t,n,r,s),!0)},hasItem:function(e){return!(!e||t.test(e))&&new RegExp("(?:^|;\\s*)"+encodeURIComponent(e).replace(o,"\\$&")+"\\s*\\=").test(document.cookie)},keys:function(){for(var e=document.cookie.replace(/((?:^|\s*;)[^\=]+)(?=;|$)|^\s*|\s*(?:\=[^;]*)?(?:\1|$)/g,"").split(/\s*(?:\=[^;]*)?;\s*/),o=e.length,t=0;t<o;t++)e[t]=decodeURIComponent(e[t]);return e},clear:function(e,o,t,n){for(var r=this.keys(),s=r.length,i=0;i<s;i++)this.removeItem(r[i],e,o,t,n)}}}(),"undefined"!=typeof module&&void 0!==module.exports&&(module.exports=docCookies);
+		</script>
+
 		<script defer src="https://unpkg.com/@alpinejs/intersect@3.10.4/dist/cdn.min.js"></script>
 		<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 	</head>
 
-	<body class="overflow-x-hidden font-sans antialiased bg-white" x-data="{ show: false }" :class="{ 'overflow-y-hidden' : show, '' : !open }">
-		<header class="absolute z-20 w-full py-4">
-			<div class="container px-6 mx-auto lg:px-12">
-				<div class="relative flex items-center justify-between h-16 lg:h-20">
-					<nav class="flex items-center justify-between flex-1">
-						<a href="/" title="Go to the homepage">
-							<svg class="w-auto h-10 text-black lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40">
-								<path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/>
-							</svg>
-						</a>
+	<body class="overflow-x-hidden font-sans antialiased">
+		<div class="relative hidden w-full px-12 py-4 text-center text-white bg-black/80 hover:bg-black/70 md:block lg:px-24" x-data="{ hide_banner: true, cookie_name: 'announcement' }" x-init="hide_banner = docCookies.hasItem(cookie_name) ? (docCookies.getItem(cookie_name) == 'true') : false;" x-bind:class="{ 'hidden': hide_banner, 'relative hidden md:block': !hide_banner }">
+			<a href="/services/design-projects.html" class="block w-full space-x-2 text-base link lg:text-xl lg:leading-normal 2xl:text-2xl 2xl:leading-normal">
+				<span class="opacity-80">✴ Latest update</span>
+				<span>Design superpowers for your next project</span>
+			</a>
+			
+			<button type="button" class="absolute z-10 flex items-center justify-center w-8 h-8 ease-in-out -translate-y-1/2 rounded-md hover:bg-white/20 right-2 lg:right-4 top-1/2" @click="hide_banner = true; docCookies.setItem(cookie_name, true, (60*24*60*60));" aria-label="Dismiss">✕</button>
+		</div>
 
-						<div class="hidden w-full md:block">
-							<div class="flex items-center justify-end space-x-8 lg:space-x-16">
-								<a href="/work.html" class="text-lg underline lg:text-2xl underline-offset-4" title="View all of our work." aria-current="page">Work</a>
-								<a href="/approach.html" class="text-lg lg:text-2xl" title="See how we can help you, and how we plan to do it.">Approach</a>
-								<a href="/about.html" class="text-lg lg:text-2xl" title="Get to know EDL and the people behind it.">About</a>
-								<a href="/contact.html" class="text-lg lg:text-2xl" title="Tell us about a project or say hi!">Contact</a>
-								<a href="/services/start-trial.html" class="block px-4 py-3 text-xl text-white bg-black rounded-full lg:px-6 lg:py-4 sm:w-auto lg:text-2xl" title="Get started scheduling your free 90-minute trial.">Start agency trial</a>
-							</div>
-						</div>
+		<header>
+			<div class="container px-6 py-6 mx-auto lg:px-12">
+				<nav class="space-y-4 sm:space-y-0 sm:flex sm:items-center sm:justify-between sm:flex-1 sm:h-16 lg:h-20">
+					<a href="/" title="Go to the homepage."><svg class="w-auto h-10 lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40"><path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/></svg></a>
 
-						<button @click="show = !show" class="fixed z-20 flex items-center justify-center w-20 h-20 px-2 py-4 text-white bg-black rounded-full bottom-6 right-6 md:hidden" x-text="!show ? 'Menu' : 'Close'">Menu</button>
-
-						<div class="fixed inset-0 bg-black bg-opacity-50 md:hidden" x-show="show">
-							<div
-								x-show="show"
-								@click.outside="show = false;"
-								x-transition:enter="transition ease-in-out duration-300"
-								x-transition:enter-start="translate-y-full transform opacity-0"
-								x-transition:enter-end="translate-y-0 transform opacity-100"
-								x-transition:leave="transition ease-in-out duration-300"
-								x-transition:leave-start="translate-y-0 transform"
-								x-transition:leave-end="translate-y-full transform"
-								class="fixed inset-x-0 bottom-0 z-10 flex w-full px-6 pt-8 pb-10 bg-white rounded-t-2xl transform-gpu">
-
-								<div class="flex flex-col items-start w-full">
-									<nav class="flex flex-col items-start space-y-4">
-										<a href="/work.html" class="inline text-2xl underline underline-offset-4" title="View all of our work." aria-current="page">Work</a>
-										<a href="/approach.html" class="inline text-2xl" title="See how we can help you, and how we plan to do it.">Approach</a>
-										<a href="/about.html" class="inline text-2xl" title="Get to know EDL and the people behind it.">About</a>
-										<a href="/contact.html" class="inline text-2xl" title="Tell us about a project or say hi!">Contact</a>
-										<a href="/services/start-trial.html" class="inline font-serif text-2xl italic" title="Get started scheduling your free 90-minute trial.">Start agency trial</a>
-									</nav>
-								</div>
-							</div>
-						</div>
-					</nav>
-				</div>
+					<div class="flex">
+						<a href="/services.html" class="py-2 pr-4 text-lg lg:pr-8 lg:text-xl 2xl:text-2xl" title="See how we can help you, and how we plan to do it.">Services</a>
+						<a href="/work.html" class="px-4 py-2 text-lg underline lg:px-8 lg:text-xl 2xl:text-2xl underline-offset-4" title="Follow along as we design deliverables for our clients." aria-current="page">Work</a>
+						<a href="/trial.html" class="px-4 py-2 text-lg lg:px-8 lg:text-xl 2xl:text-2xl" title="Get started scheduling your free 90-minute trial.">Trial</a>
+						<a href="/contact.html" class="py-2 pl-4 text-lg lg:pl-8 lg:text-xl 2xl:text-2xl" title="Swing by for a cup of coffee.">Contact</a>
+					</div>
+				</nav>
 			</div>
 		</header>
 
-		<main x-data="{ active: 0, filter: (id, allowed) => allowed.includes(id) }">
-			<!-- Hero -->
-			<section class="relative pt-32 md:pt-48 lg:pt-56 2xl:pt-64">
-				<div class="container z-10 px-6 mx-auto space-y-10 transition duration-1000 md:space-y-12 lg:px-12 lg:space-y-16" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">
-					<h1 class="w-full text-4.5xl leading-tight md:text-7xl lg:max-w-none md:leading-tight xl:leading-tight xl:text-8xl 2xl:text-8.5xl 2xl:leading-[1.2]">Visionary companies <span class="font-serif italic">leading and inspiring</span> their industries</h1>
+		<main>
+			<section class="relative pt-4 sm:pt-12 lg:pt-24 3xl:pt-32">
+				<div class="container w-full px-6 mx-auto space-y-8 transition duration-1000 lg:px-12 md:space-y-12 lg:space-y-16 2xl:space-y-20" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">
+					<div class="space-y-6 lg:space-y-8 2xl:space-y-10">
+						<h1 class="w-full text-5xl leading-tight md:leading-tight md:text-7xl lg:text-7.5xl lg:leading-[1.2] xl:leading-[1.2] xl:text-8xl 2xl:leading-[1.2] 2xl:text-8.5xl 3xl:text-9xl 3xl:leading-[1.2]">Visionary companies <span class="font-serif italic">leading and inspiring</span> their industries.</h1>
+					</div>
 				</div>
 			</section>
-			
-			<section class="relative py-16 md:py-24 lg:py-32 2xl:py-40">
-				<div class="container grid gap-16 px-6 pb-16 mx-auto lg:px-12 lg:grid-cols-2 lg:gap-y-32 lg:pb-40 2xl:gap-40">
+
+			<section class="relative py-16 md:py-24">
+				<div class="container grid gap-16 px-6 pb-16 mx-auto lg:px-12 lg:grid-cols-2 lg:gap-y-24 2xl:gap-y-32 lg:pb-40">
 					<!-- Wult -->
-					<article class="relative space-y-8 lg:space-y-14" x-show="filter(active, [ 0, 5 ])">
-						<div class="relative overflow-hidden bg-cover h-96 md:h-120 lg:h-160 2xl:h-208 bg-sky-gradient">
-							<picture class="inset-0 w-full lg:absolute lg:h-full">
-								<img src="../media/dsa-new-features.gif" class="object-cover object-top w-full h-full" alt="User interface for Wult's data compliance software."/>
-							</picture>
+					<article class="relative space-y-8 lg:space-y-14">
+						<div class="relative overflow-hidden rounded-lg">
+							<img src="../media/wult-full.png" class="object-cover w-full aspect-square" alt="User interface for Wult's data compliance software."/>
 						</div>
 						
-						<div>
-							<span class="tag">SaaS</span>
-							<h2 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-tight lg:text-5xl hyphenate 2xl:text-6xl 2xl:leading-tight ">Making data compliance simple, accessible, and <span class="font-serif italic">enjoyable</span> for a new market.</h2>
+						<div class="space-y-4 lg:space-y-6">
+							<div class="flex space-x-2 lg:space-x-3">
+								<span class="tag">Initial 1.0</span>
+							</div>
+
+							<h3 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-tight lg:text-5xl">Enterprise data compliance made simple, collaborative, and <span class="font-serif italic">enjoyable</span>.</h3>
+
+							<ul class="flex flex-wrap text-lg lg:text-xl text-black/70">
+								<li class="py-1 mr-6 md:mr-8">Research</li>
+								<li class="py-1 mr-6 md:mr-8">User experience</li>
+								<li class="py-1 mr-6 md:mr-8">Design</li>
+								<li class="py-1">Design system</li>
+							</ul>
+						</div>
+					</article>
+
+					<!-- Aris Robotics -->
+					<article class="relative space-y-8 lg:space-y-14">
+						<div class="relative overflow-hidden rounded-lg">
+							<img src="../media/aris-full.png" class="object-cover w-full aspect-square" alt="User interface for Wult's data compliance software."/>
+						</div>
+						
+						<div class="space-y-4 lg:space-y-6">
+							<div class="flex space-x-2 lg:space-x-3">
+								<span class="tag">Initial 1.0</span>
+							</div>
+
+							<h3 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-tight lg:text-5xl">Accessible, gorgeous data visualization for a sustainable future.</h3>
+
+							<ul class="flex flex-wrap text-lg lg:text-xl text-black/70">
+								<li class="py-1 mr-6 md:mr-8">Concept</li>
+								<li class="py-1 mr-6 md:mr-8">User experience</li>
+								<li class="py-1">Design</li>
+							</ul>
+						</div>
+					</article>
+
+					<!-- Popermo -->
+					<article class="relative space-y-8 col-span-full lg:space-y-14">
+						<div class="relative overflow-hidden rounded-lg">
+							<img src="../media/po-full.png" class="object-cover w-full aspect-video" alt="User interface for Popermo's insurance product."/>
+						</div>
+						
+						<div class="space-y-4 lg:space-y-6">
+							<div class="flex space-x-2 lg:space-x-3">
+								<span class="tag">Reimagined 2.0</span>
+							</div>
+
+							<h3 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-tight lg:text-5xl 2xl:text-6xl 2xl:leading-tight">Rethinking how millennials buy insurance online.</h3>
+
+							<ul class="flex flex-wrap text-lg lg:text-xl text-black/70">
+								<li class="py-1 mr-6 md:mr-8">Research</li>
+								<li class="py-1 mr-6 md:mr-8">User experience</li>
+								<li class="py-1 mr-6 md:mr-8">Design</li>
+								<li class="py-1">Design system</li>
+							</ul>
+						</div>
+					</article>
+
+					<!-- Noitso -->
+					<article class="relative space-y-8 lg:space-y-14">
+						<div class="relative w-full overflow-hidden rounded-lg">
+							<img src="../media/noitso-nordea.png" class="object-cover w-full aspect-square" alt="User interface for Wult's data compliance software."/>
+						</div>
+						
+						<div class="space-y-4 lg:space-y-6">
+							<div class="flex space-x-2 lg:space-x-3">
+								<span class="tag">Reimagined 2.0</span>
+							</div>
+
+							<h3 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-tight lg:text-5xl">Designing a white-label experience onboarding thousands of users every week.</h3>
+
+							<ul class="flex flex-wrap text-lg lg:text-xl text-black/70">
+								<li class="py-1 mr-6 md:mr-8">Research</li>
+								<li class="py-1 mr-6 md:mr-8">User experience</li>
+								<li class="py-1 mr-6 md:mr-8">Design</li>
+								<li class="py-1">Design system</li>
+							</ul>
 						</div>
 					</article>
 
 					<!-- Odense ZOO -->
-					<article class="relative space-y-8 lg:space-y-14" x-show="filter(active, [ 0, 5 ])">
-						<div class="relative overflow-hidden bg-cover h-96 md:h-120 lg:h-160 2xl:h-208 bg-mint-green bg-green-gradient">
-							<video class="inset-0 object-cover w-full h-full lg:absolute" playsinline loop autoplay muted>
+					<article class="relative space-y-8 lg:space-y-14">
+						<div class="relative w-full overflow-hidden rounded-lg">
+							<video class="object-cover w-full h-full aspect-square bg-mint-green" playsinline loop autoplay muted>
 								<source src="../media/oz-screens.mp4" type='video/mp4; codecs="hvc1"'>
 								<source src="../media/oz-screens.webm" type="video/webm">
 								Sorry, your browser doesn't support HTML5 video.
 							</video>
 						</div>
 						
-						<div>
-							<span class="tag">Apps</span>
-							<h2 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-tight lg:text-5xl hyphenate 2xl:text-6xl 2xl:leading-tight ">Transforming assumptions into a data-informed, <span class="font-serif italic">minimal viable product</span> users love.</h2>
+						<div class="space-y-4 lg:space-y-6">
+							<div class="flex space-x-2 lg:space-x-3">
+								<span class="tag">Initial 1.0</span>
+							</div>
 
-							<a href="/work/odense-zoo.html" title="Learn how we designed the app for Odense ZOO." class="inline-flex items-center mt-6 space-x-1 text-black link lg:mt-8 lg:space-x-2">
-								<span class="text-xl lg:text-2xl line">Learn how</span>
-								<svg class="w-5 h-5 lg:h-6 lg:w-6" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path d="M13.163 20L21 12l-7.837-8-1.347 1.375 5.545 5.643H3v1.964h14.361l-5.545 5.66L13.163 20z" fill="currentColor"/>
-								</svg>
+							<a href="/work/odense-zoo.html" class="block group link" title="Learn how we designed the app for Odense ZOO.">
+								<h3 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-tight lg:text-5xl group-hover:underline group-hover:underline-offset-4">Transforming assumptions into a data-informed, <span class="font-serif italic">minimal viable product</span> users love.</h3>
 							</a>
+
+							<ul class="flex flex-wrap text-lg lg:text-xl text-black/70">
+								<li class="py-1 mr-6 md:mr-8">Usability tests</li>
+								<li class="py-1 mr-6 md:mr-8">UX design</li>
+								<li class="py-1 mr-6 md:mr-8">UI design</li>
+								<li class="py-1">Design system</li>
+							</ul>
 						</div>
 					</article>
 
-					<!-- Quote -->
-					<figure class="relative flex flex-col w-full max-w-3xl space-y-6 lg:mx-auto lg:max-w-5xl 2xl:max-w-7xl lg:items-center lg:justify-center lg:space-y-12 col-span-full" x-show="filter(active, [ 0 ])">
-						<blockquote class="space-y-6 md:space-y-8 lg:space-y-12">
-							<svg class="w-20 h-20 lg:mx-auto md:w-24 md:h-24 lg:h-32 lg:w-32" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-								<path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M73.253 19.76l.922-.557A39.933 39.933 0 0 1 80 40.001C80 62.056 62.058 80 40.001 80 17.945 80 0 62.058 0 40.001 0 17.945 17.945 0 40.001 0A40.107 40.107 0 0 1 58.4 4.486l1.032.544-.373.502-19.434 26.047a10.248 10.248 0 0 1-12.147 16.478l-10.359 13.87.12.154a31.627 31.627 0 0 0 53.795-15.836l1.05.206A32.696 32.696 0 0 1 16.452 62.8l-.037-.044-.818-1.007 10.833-14.496a10.245 10.245 0 0 1 12.138-16.428l19.07-25.537A38.157 38.157 0 0 0 40 1.072c-21.466 0-38.93 17.465-38.93 38.93 0 21.463 17.459 38.926 38.923 38.926 21.465 0 38.927-17.463 38.927-38.927a38.847 38.847 0 0 0-5.668-20.24zM39.82 43.98a8.021 8.021 0 1 0-13.339-8.912 8.021 8.021 0 0 0 13.34 8.913zm.181 31.394c19.503 0 35.373-15.87 35.373-35.373a35.454 35.454 0 0 0-11.592-26.17l.721-.798A36.525 36.525 0 0 1 76.443 40c0 20.093-16.347 36.442-36.442 36.442S3.56 60.093 3.56 40.001a36.272 36.272 0 0 1 22.967-33.87l.396.996A35.205 35.205 0 0 0 4.631 40.001c0 19.503 15.867 35.373 35.37 35.373zM12.77 45.685c.793 1.344 1.613 1.844 2.996 1.844 1.372 0 2.637-.445 2.637-3.665V29.198h2.722V43.96c0 3.96-1.973 6.224-5.414 6.224a5.726 5.726 0 0 1-5.253-3.163l-.401-.749 2.252-1.383.46.795zm46.404 4.165V29.198H56.51v13.124c0 .676 0 1.344.023 2.01l-9.117-15.134h-2.383V49.85h2.665V36.553c0-.627 0-1.233-.021-1.844L56.79 49.84l2.383.01zm3.674-20.652h2.723V49.85h-2.723V29.198zm-34.284 15.18l1.078.759 7.805-10.548-1.05-.768-7.833 10.557z" fill="currentColor" />
-							</svg>
-
-							<p class="w-full mt-8 text-2xl leading-normal text-black lg:text-center md:text-3xl md:leading-normal lg:text-4xl lg:leading-normal 2xl:leading-normal 2xl:text-5xl hyphenate">&ldquo;Our collaboration with Frederick from EDL has been really great. He knows what he’s doing, he’s not afraid to challenge, and he’s great to work with.&rdquo;</p>
-						</blockquote>
-
-						<figcaption class="flex items-center">
-							<img class="object-cover rounded-full pointer-events-none w-14 h-14 lg:w-20 lg:h-20" src="./media/joeni-quote.jpg" alt="Profile picture of Uffe Pilgaard from JØNI in a suit." />
-							<div class="flex flex-col ml-4 leading-normal lg:ml-6 text-normal lg:text-xl">
-								Uffe Pilgaard
-								<cite class="not-italic opacity-70">Mechanical Engineer</cite>
-							</div>
-						</figcaption>
-					</figure>
-
-					<!-- JØNI / Kettle -->
-					<article class="relative space-y-8 lg:space-y-14" x-show="filter(active, [ 0, 5 ])">
-						<div class="relative overflow-hidden bg-cover h-96 md:h-120 lg:h-160 2xl:h-208 bg-blood-orange-gradient">
-							<picture class="inset-0 w-full lg:absolute lg:h-full">
-								<img src="../media/kettle-cover.png" class="object-cover object-center w-full h-full" alt="User interface for JØNI's digitized kitchen equipment."/>
-							</picture>
+					<!-- JØNI kettle -->
+					<article class="relative space-y-8 lg:space-y-14">
+						<div class="relative w-full overflow-hidden rounded-lg">
+							<img src="../media/kettle-cover.png" class="object-cover w-full aspect-square bg-gray" alt="User interface for JØNI's digitized kitchen equipment." />
 						</div>
 						
-						<div>
-							<div class="flex space-x-4">
-								<span class="tag">Cloud</span>
-								<span class="tag">IoT</span>
-								<span class="tag">SaaS</span>
+						<div class="space-y-4 lg:space-y-6">
+							<div class="flex space-x-2 lg:space-x-3">
+								<span class="tag">Initial 1.0</span>
 							</div>
-							
-							<h2 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-tight lg:text-5xl hyphenate 2xl:text-6xl 2xl:leading-tight ">Helping commercial kitchens increase their <span class="font-serif italic">energy efficiency</span> with digital displays.</h2>
 
-							<a href="/work/iot-digital-display.html" title="Learn how we designed the IoT digital display for JØNI." class="inline-flex items-center mt-6 space-x-1 text-black link lg:mt-8 lg:space-x-2">
-								<span class="text-xl lg:text-2xl line">Learn how</span>
-								<svg class="w-5 h-5 lg:h-6 lg:w-6" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path d="M13.163 20L21 12l-7.837-8-1.347 1.375 5.545 5.643H3v1.964h14.361l-5.545 5.66L13.163 20z" fill="currentColor"/>
-								</svg>
+							<a href="/work/iot-digital-display.html" class="block group link" title="Learn how we designed the IoT digital display for JØNI.">
+								<h3 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-tight lg:text-5xl group-hover:underline group-hover:underline-offset-4">Helping commercial kitchens increase their energy efficiency with digital displays.</h3>
 							</a>
+
+							<ul class="flex flex-wrap text-lg lg:text-xl text-black/70">
+								<li class="py-1 mr-6 md:mr-8">Research</li>
+								<li class="py-1 mr-6 md:mr-8">UX design</li>
+								<li class="py-1 mr-6 md:mr-8">UI design</li>
+								<li class="py-1">Design system</li>
+							</ul>
 						</div>
 					</article>
 
-					<!-- JØNI -->
-					<article class="relative space-y-8 lg:space-y-14" x-show="filter(active, [ 0, 1, 2, 3 ])">
-						<div class="relative overflow-hidden bg-cover h-96 md:h-120 lg:h-160 2xl:h-208 bg-sky-gradient">
-							<picture class="inset-0 w-full lg:absolute lg:h-full">
-								<img src="../media/joeni-cover.png" class="object-cover object-top w-full h-full" alt="User interface for JØNI's cloud platform."/>
-							</picture>
+					<!-- JØNI Cloud -->
+					<article class="relative space-y-8 lg:space-y-14">
+						<div class="relative w-full overflow-hidden rounded-lg">
+							<img src="../media/joeni-cover.png" class="object-cover object-top w-full aspect-square bg-mint-blue" alt="User interface for JØNI's cloud platform." />
 						</div>
 						
-						<div>
-							<div class="flex space-x-4">
-								<span class="tag">Cloud</span>
-								<span class="tag">IoT</span>
-								<span class="tag">SaaS</span>
+						<div class="space-y-4 lg:space-y-6">
+							<div class="flex space-x-2 lg:space-x-3">
+								<span class="tag">Initial 1.0</span>
 							</div>
-							
-							<h2 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-tight lg:text-5xl hyphenate 2xl:text-6xl 2xl:leading-tight ">Helping catering kitchens build recipes and cook smarter through <span class="font-serif italic">Internet of Things</span>.</h2>
 
-							<a href="/work/cloud-platform.html" title="Learn how we designed the cloud platform for JØNI." class="inline-flex items-center mt-6 space-x-1 text-black link lg:mt-8 lg:space-x-2">
-								<span class="text-xl lg:text-2xl line">Learn how</span>
-								<svg class="w-5 h-5 lg:h-6 lg:w-6" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path d="M13.163 20L21 12l-7.837-8-1.347 1.375 5.545 5.643H3v1.964h14.361l-5.545 5.66L13.163 20z" fill="currentColor"/>
-								</svg>
+							<a href="/work/cloud-platform.html" class="block group link" title="Learn how we designed the cloud platform for JØNI.">
+								<h3 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-tight lg:text-5xl group-hover:underline group-hover:underline-offset-4">Cloud platform to help catering kitchens build recipes and cook smarter.</h3>
 							</a>
+
+							<ul class="flex flex-wrap text-lg lg:text-xl text-black/70">
+								<li class="py-1 mr-6 md:mr-8">Usability tests</li>
+								<li class="py-1 mr-6 md:mr-8">UX design</li>
+								<li class="py-1 mr-6 md:mr-8">UI design</li>
+								<li class="py-1">Design system</li>
+							</ul>
 						</div>
 					</article>
-
-					<!-- Quote -->
-					<figure class="relative flex flex-col w-full max-w-3xl space-y-6 lg:max-w-5xl lg:mx-auto 2xl:max-w-7xl lg:items-center lg:justify-center lg:space-y-12 col-span-full" x-show="filter(active, [ 0 ])">
-						<blockquote class="space-y-6 md:space-y-8 lg:space-y-12">
-							<svg class="w-40 h-auto lg:mx-auto md:w-40 lg:w-56" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 136 32">
-								<path fill="currentColor" d="M29.05 25.2c3.126-4.437 3.817-10.146 1.841-15.202C28.916 4.943 24.536 1.216 19.23.074L29.05 25.2zM16.191 7.471l-8.637 22.1c5.277 3.312 12.002 3.233 17.2-.2l-8.563-21.9zM13.181 0c-5.48 1.032-10.04 4.813-12.07 10.007C-.917 15.2-.128 21.072 3.2 25.545L13.181 0z"/>
-								<path fill="currentColor" d="M48.363 20.258l-1.175 2.9h-3.415L50.269 8h3.016l6.474 15.165h-3.392l-1.175-2.9-6.829-.007zm3.392-8.426l-2.217 5.521h4.456l-2.239-5.521zM68.054 18.994h3.082c-.365 2.636-2.687 4.553-5.344 4.412-2.016.054-3.902-.99-4.926-2.728-1.024-1.737-1.024-3.893 0-5.63 1.024-1.738 2.91-2.782 4.926-2.728 2.657-.141 4.98 1.776 5.344 4.412h-3.082c-.236-1.042-1.196-1.757-2.262-1.685-.735-.008-1.44.292-1.945.827-.505.534-.764 1.255-.715 1.989-.048.731.212 1.45.717 1.98.505.532 1.21.827 1.943.814 1.062.082 2.023-.625 2.262-1.663zM80.694 18.994h3.082c-.365 2.636-2.687 4.553-5.344 4.412-2.016.054-3.902-.99-4.926-2.728-1.024-1.737-1.024-3.893 0-5.63 1.024-1.738 2.91-2.782 4.926-2.728 2.657-.141 4.98 1.776 5.344 4.412h-3.082c-.236-1.042-1.196-1.757-2.262-1.685-.735-.008-1.44.292-1.945.827-.505.534-.764 1.255-.715 1.989-.048.731.212 1.45.717 1.98.505.532 1.21.827 1.943.814 1.062.082 2.023-.625 2.262-1.663zM96.482 23.162H93.4v-.754c-.852.71-1.928 1.098-3.038 1.092-2.793 0-4.656-2.018-4.656-5.1v-5.858h3.083v5.565c0 1.685.842 2.594 2.283 2.594.934-.078 1.786-.565 2.328-1.33v-6.829h3.082v10.62zM107.672 8.8c.033-.998.851-1.79 1.85-1.79.999 0 1.817.792 1.85 1.79-.056.98-.868 1.748-1.85 1.748-.982 0-1.794-.767-1.85-1.748zm3.414 14.367h-3.081V12.542h3.081v10.625zM121.2 18.994h3.082c-.364 2.636-2.686 4.553-5.343 4.412-2.016.054-3.902-.99-4.926-2.728-1.024-1.737-1.024-3.893 0-5.63 1.024-1.738 2.91-2.782 4.926-2.728 2.657-.14 4.979 1.776 5.343 4.412H121.2c-.236-1.042-1.195-1.757-2.261-1.685-.735-.008-1.44.292-1.946.826-.505.535-.764 1.256-.715 1.99-.049.732.212 1.45.717 1.981.506.53 1.21.826 1.944.813 1.061.081 2.023-.626 2.261-1.663zM128.45 19.5c.177 1.131 1 1.574 2.217 1.574 1.064 0 1.8-.355 1.8-.909 0-.421-.355-.754-1.064-.887l-2.262-.377c-1.618-.288-3.126-1.175-3.126-3.148 0-2.2 1.863-3.5 4.59-3.5 1.818 0 4.545.621 4.767 3.614l-2.816.022c-.067-.954-.931-1.33-1.951-1.33-1.065 0-1.575.421-1.575.909 0 .4.289.82 1.264 1l1.929.311c1.73.31 3.215 1.13 3.215 3.126 0 2.395-2.084 3.592-4.789 3.592-2.461 0-4.789-1-5.011-4.014l2.812.017zM105.5 20.369c-.586.17-1.19.267-1.8.288-.493.072-.991-.085-1.354-.426-.363-.342-.55-.83-.508-1.326v-3.769h3.836v-2.594h-3.836V8.75H98.78v10.177c0 2.75 1.684 4.568 4.256 4.568.975.01 1.944-.155 2.86-.488l-.396-2.638z"/>
-							</svg>
-
-							<p class="w-full mt-8 text-2xl leading-normal text-black lg:text-center md:text-3xl md:leading-normal lg:text-4xl lg:leading-normal 2xl:leading-normal 2xl:text-5xl hyphenate">&ldquo;The partnership is of great value to our company and saves us huge amounts of time.&rdquo;</p>
-						</blockquote>
-
-						<figcaption class="flex items-center">
-							<img class="object-cover rounded-full pointer-events-none w-14 h-14 lg:w-20 lg:h-20" src="./media/acc-quote.jpg" alt="Profile picture of Kasper Rasmussen from Accutics smiling." />
-							<div class="flex flex-col ml-4 leading-normal lg:ml-6 text-normal lg:text-xl">
-								Kasper Rasmussen
-								<cite class="not-italic opacity-70">Co-Founder</cite>
-							</div>
-						</figcaption>
-					</figure>
 
 					<!-- Blue Ocean Robotics -->
-					<article class="relative space-y-8 lg:space-y-14" x-show="filter(active, [ 0, 4, 5 ])">
-						<div class="relative overflow-hidden bg-right-bottom bg-cover h-96 md:h-120 lg:h-160 2xl:h-208 bg-orange-gradient bg-yellow"></div>
+					<article class="relative space-y-8 col-span-full lg:space-y-14">
+						<div class="relative overflow-hidden rounded-lg">
+							<img src="../media/bor-cover-bg.png" class="object-cover object-right w-full aspect-video" alt="The UVD Robots cruising on a orange gradient background." />
+						</div>
 						
-						<div>
-							<div class="flex space-x-4">
-								<span class="tag">Robotics</span>
-								<span class="tag">Apps</span>
+						<div class="space-y-4 lg:space-y-6">
+							<div class="flex space-x-2 lg:space-x-3">
+								<span class="tag">Reimagined 3.0</span>
 							</div>
 
-							<h2 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-tight lg:text-5xl hyphenate 2xl:text-6xl 2xl:leading-tight ">We helped design the visual design for the most <span class="font-serif italic">innovative iteration</span> of the global robot phenomenon.</h2>
-
-							<a href="/work/blue-ocean-robotics.html" title="Learn how we designed the Human Machine Interface for Blue Ocean Robotics." class="inline-flex items-center mt-6 space-x-1 text-black link lg:mt-8 lg:space-x-2">
-								<span class="text-xl lg:text-2xl line">Learn how</span>
-								<svg class="w-5 h-5 lg:h-6 lg:w-6" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path d="M13.163 20L21 12l-7.837-8-1.347 1.375 5.545 5.643H3v1.964h14.361l-5.545 5.66L13.163 20z" fill="currentColor"/>
-								</svg>
+							<a href="/work/blue-ocean-robotics.html" class="block group link" title="Learn how we helped design the HMR for Blue Ocean Robotics.">
+								<h3 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-tight lg:text-5xl 2xl:text-6xl 2xl:leading-tight group-hover:underline group-hover:underline-offset-4">We helped design the visual design for the most innovative iteration of the global robot phenomenon.</h3>
 							</a>
-						</div>
-					</article>
 
-					<!-- Popermo -->
-					<article class="relative space-y-8 lg:space-y-14" x-show="filter(active, [ 0, 5 ])">
-						<div class="relative overflow-hidden bg-cover h-96 md:h-120 lg:h-160 2xl:h-208 bg-blue-gradient bg-blue">
-							<picture class="inset-0 w-full lg:absolute lg:h-full">
-								<img src="../media/po-cover.png" class="object-cover object-top w-full h-full" alt="User interface for Popermo's insurance product."/>
-							</picture>
-						</div>
-						
-						<div>
-							<span class="tag">Apps</span>
-							<h2 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-tight lg:text-5xl hyphenate 2xl:text-6xl 2xl:leading-tight ">Rethinking how millennials buy insurance online with an <span class="font-serif italic">AI-based approach</span>.</h2>
+							<ul class="flex flex-wrap text-lg lg:text-xl text-black/70">
+								<li class="py-1 mr-6 md:mr-8">UX design</li>
+								<li class="py-1 mr-6 md:mr-8">UI design</li>
+								<li class="py-1">Design system</li>
+							</ul>
 						</div>
 					</article>
 
 					<!-- Den Blå Planet -->
-					<article class="relative space-y-8 lg:space-y-14" x-show="filter(active, [ 0, 5 ])">
-						<div class="relative overflow-hidden bg-cover h-96 md:h-120 lg:h-160 2xl:h-208 bg-ocean-blue-gradient bg-blue">
-							<picture class="inset-0 w-full lg:absolute lg:h-full">
-								<img src="../media/dbp-cover.png" class="object-cover object-top w-full h-full" alt="User interface for Den Blå Planet's shiny app."/>
-							</picture>
+					<article class="relative space-y-8 lg:space-y-14">
+						<div class="relative w-full overflow-hidden rounded-lg">
+							<img src="../media/dbp-cover.png" class="object-cover w-full aspect-square bg-mint-pink" alt="User interface for Den Blå Planet's shiny app." />
 						</div>
 						
-						<div>
-							<span class="tag">Apps</span>
-							<h2 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-tight lg:text-5xl hyphenate 2xl:text-6xl 2xl:leading-tight ">Redefining the omnichannel experience for <span class="font-serif italic tabular-nums ">500.000 annual guests</span>.</h2>
+						<div class="space-y-4 lg:space-y-6">
+							<div class="flex space-x-2 lg:space-x-3">
+								<span class="tag">Initial 1.0</span>
+							</div>
+
+							<h3 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-tight lg:text-5xl">Redefined the digtial experience for 500.000 annual guests.</h3>
+
+							<ul class="flex flex-wrap text-lg lg:text-xl text-black/70">
+								<li class="py-1 mr-6 md:mr-8">Research</li>
+								<li class="py-1 mr-6 md:mr-8">UX design</li>
+								<li class="py-1 mr-6 md:mr-8">UI design</li>
+								<li class="py-1">Design system</li>
+							</ul>
 						</div>
 					</article>
 
 					<!-- Accutics -->
-					<article class="relative space-y-8 lg:space-y-14" x-show="filter(active, [ 0, 5 ])">
-						<div class="relative overflow-hidden bg-cover h-96 md:h-120 lg:h-160 2xl:h-208 bg-sky-gradient">
-							<picture class="inset-0 w-full lg:absolute lg:h-full">
-								<img src="../media/acc-cover.png" class="object-cover object-center w-full h-full" alt="User interface for Accutics's MarTech SaaS."/>
-							</picture>
+					<article class="relative space-y-8 lg:space-y-14">
+						<div class="relative w-full overflow-hidden rounded-lg">
+							<img src="../media/acc-cover.png" class="object-cover w-full aspect-square bg-mint-green" alt="User interface for Accutics's MarTech SaaS." />
 						</div>
 						
-						<div>
-							<span class="tag">SaaS</span>
-							<h2 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-tight lg:text-5xl hyphenate 2xl:text-6xl 2xl:leading-tight ">Designing an <span class="font-serif italic">approachable and intuitive</span> data management experience.</h2>
+						<div class="space-y-4 lg:space-y-6">
+							<div class="flex space-x-2 lg:space-x-3">
+								<span class="tag">Reimagined 2.0</span>
+							</div>
+
+							<h3 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-tight lg:text-5xl">Designing an approachable enterprise data management experience.</h3>
+
+							<ul class="flex flex-wrap text-lg lg:text-xl text-black/70">
+								<li class="py-1 mr-6 md:mr-8">UX design</li>
+								<li class="py-1 mr-6 md:mr-8">UI design</li>
+								<li class="py-1">Design system</li>
+							</ul>
 						</div>
 					</article>
 
-
 					<!-- Smooth Robotics -->
-					<article class="relative space-y-8 lg:space-y-14" x-show="filter(active, [ 0, 1, 4, 5 ])">
-						<div class="relative overflow-hidden bg-cover h-96 md:h-120 lg:h-160 2xl:h-208 bg-mint-purple bg-purple-gradient">
-							<video class="inset-0 object-cover w-full h-full lg:absolute" playsinline loop autoplay muted>
+					<article class="relative space-y-8 lg:space-y-14">
+						<div class="relative w-full overflow-hidden rounded-lg">
+							<video class="object-cover w-full h-full aspect-square bg-mint-purple" playsinline loop autoplay muted>
 								<source src="../media/srm-screens.mp4" type='video/mp4; codecs="hvc1"'>
 								<source src="../media/srm-screens.webm" type="video/webm">
 								Sorry, your browser doesn't support HTML5 video.
 							</video>
 						</div>
 						
-						<div>
-							<div class="flex space-x-4">
-								<span class="tag">Cloud</span>
-								<span class="tag">Robotics</span>
-								<span class="tag">Apps</span>
+						<div class="space-y-4 lg:space-y-6">
+							<div class="flex space-x-2 lg:space-x-3">
+								<span class="tag">Initial 1.0</span>
 							</div>
 
-							<h2 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-tight lg:text-5xl hyphenate 2xl:text-6xl 2xl:leading-tight ">We <span class="font-serif italic">reimagined</span> the user experience for building and executing robotic movements.</h2>
+							<h3 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-tight lg:text-5xl">We reimagined the user experience for building and executing robotic movements.</h3>
+
+							<ul class="flex flex-wrap text-lg lg:text-xl text-black/70">
+								<li class="py-1 mr-6 md:mr-8">Usability tests</li>
+								<li class="py-1 mr-6 md:mr-8">UX design</li>
+								<li class="py-1 mr-6 md:mr-8">UI design</li>
+								<li class="py-1">Design system</li>
+							</ul>
 						</div>
 					</article>
-
 				</div>
 			</section>
 		</main>
