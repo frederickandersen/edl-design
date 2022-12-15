@@ -15,252 +15,223 @@
 		<meta property="og:type" content="website" />
 		<meta property="og:image" content="https://www.edl.dk/media/joeni-open-graph.jpg">
 
-		<link rel="alternate" hreflang="en" href="https://edl.dk/work/cloud-platform.html" />
-		<link rel="alternate" hreflang="da" href="https://edl.dk/da/cases/cloud-platform.html" />
-		<link rel="alternate" hreflang="x-default" href="https://edl.dk/work/cloud-platform.html" />
-
 		<link rel="icon" href="../favicon.png">
 		<link rel="stylesheet" href="../css/styles.css">
 
+		<script defer="">
+			/* https://github.com/madmurphy/cookies.js (GPL3) */
+			!function(){function e(e,o,t,n,r,s,i){var c="";if(t)switch(t.constructor){case Number:c=t===1/0?"; expires=Fri, 31 Dec 9999 23:59:59 GMT":"; max-age="+t;break;case String:c="; expires="+t;break;case Date:c="; expires="+t.toUTCString()}return encodeURIComponent(e)+"="+encodeURIComponent(o)+c+(r?"; domain="+r:"")+(n?"; path="+n:"")+(s?"; secure":"")+(i&&"no_restriction"!==i.toString().toLowerCase()?"lax"===i.toString().toLowerCase()||1===Math.ceil(i)||!0===i?"; samesite=lax":"none"===i.toString().toLowerCase()||i<0?"; samesite=none":"; samesite=strict":"")}var o=/[\-\.\+\*]/g,t=/^(?:expires|max\-age|path|domain|secure|samesite|httponly)$/i;window.docCookies={getItem:function(e){return e&&decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*"+encodeURIComponent(e).replace(o,"\\$&")+"\\s*\\=\\s*([^;]*).*$)|^.*$"),"$1"))||null},setItem:function(o,n,r,s,i,c,a){return!(!o||t.test(o))&&(document.cookie=e(o,n,r,s,i,c,a),!0)},removeItem:function(o,t,n,r,s){return!!this.hasItem(o)&&(document.cookie=e(o,"","Thu, 01 Jan 1970 00:00:00 GMT",t,n,r,s),!0)},hasItem:function(e){return!(!e||t.test(e))&&new RegExp("(?:^|;\\s*)"+encodeURIComponent(e).replace(o,"\\$&")+"\\s*\\=").test(document.cookie)},keys:function(){for(var e=document.cookie.replace(/((?:^|\s*;)[^\=]+)(?=;|$)|^\s*|\s*(?:\=[^;]*)?(?:\1|$)/g,"").split(/\s*(?:\=[^;]*)?;\s*/),o=e.length,t=0;t<o;t++)e[t]=decodeURIComponent(e[t]);return e},clear:function(e,o,t,n){for(var r=this.keys(),s=r.length,i=0;i<s;i++)this.removeItem(r[i],e,o,t,n)}}}(),"undefined"!=typeof module&&void 0!==module.exports&&(module.exports=docCookies);
+		</script>
+
+		<script defer src="https://unpkg.com/@alpinejs/intersect@3.10.4/dist/cdn.min.js"></script>
 		<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 	</head>
 
-	<body class="overflow-x-hidden font-sans antialiased bg-white" x-data="{ show: false }" :class="{ 'overflow-y-hidden' : show, '' : !open }">
-		<header class="absolute z-20 w-full py-4">
-			<div class="container px-6 mx-auto lg:px-12">
-				<div class="relative flex items-center justify-between h-16 lg:h-20">
-					<nav class="flex items-center justify-between flex-1">
-						<a href="/" title="Go to the homepage." class="z-20">
-							<svg class="w-auto h-10 text-black lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40">
-								<path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/>
-							</svg>
-						</a>
-					
-						<div class="hidden w-full md:block">
-							<div class="flex items-center justify-end space-x-8 lg:space-x-16">
-								<a href="/work.html" class="text-lg text-black lg:text-2xl line" title="View all of our work.">Work</a>
-								<a href="/approach.html" class="text-lg text-black lg:text-2xl" title="See how we can help you, and how we plan to do it.">Approach</a>
-								<a href="/about.html" class="text-lg text-black lg:text-2xl" title="Get to know EDL and the people behind it.">About</a>
-								<a href="/contact.html" class="text-lg text-black lg:text-2xl" title="Tell us about a project or say hi!">Contact</a>
-								<a href="/services/start-trial.html" class="block px-4 py-3 text-xl text-white bg-black rounded-full lg:px-6 lg:py-4 sm:w-auto lg:text-2xl" title="Get started scheduling your free 90-minute trial.">Start agency trial</a>
-							</div>
-						</div>
+	<body class="overflow-x-hidden font-sans antialiased">
+		<div class="relative hidden w-full px-12 py-4 text-center text-white bg-black hover:bg-black/80 md:block lg:px-24" x-data="{ hide_banner: true, cookie_name: 'announcement' }" x-init="hide_banner = docCookies.hasItem(cookie_name) ? (docCookies.getItem(cookie_name) == 'true') : false;" x-bind:class="{ 'hidden': hide_banner, 'relative hidden md:block': !hide_banner }">
+			<a href="/services/design-projects.html" class="block w-full space-x-2 text-base link lg:text-xl lg:leading-normal 2xl:text-2xl 2xl:leading-normal">
+				<span class="opacity-80">✴ Latest update</span>
+				<span>Design superpowers for your next project</span>
+			</a>
+			
+			<button type="button" class="absolute z-10 flex items-center justify-center w-8 h-8 ease-in-out -translate-y-1/2 rounded-md hover:bg-white/20 right-2 lg:right-4 top-1/2" @click="hide_banner = true; docCookies.setItem(cookie_name, true, (60*24*60*60));" aria-label="Dismiss">✕</button>
+		</div>
 
-						<button @click="show = !show" class="fixed z-20 flex items-center justify-center w-20 h-20 px-2 py-4 text-white bg-black rounded-full bottom-6 right-6 md:hidden" x-text="!show ? 'Menu' : 'Close'">Menu</button>
+		<header>
+			<div class="container px-6 py-6 mx-auto lg:px-12">
+				<nav class="space-y-4 sm:space-y-0 sm:flex sm:items-center sm:justify-between sm:flex-1 sm:h-16 lg:h-20">
+					<a href="/" title="Go to the homepage."><svg class="w-auto h-10 lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40"><path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/></svg></a>
 
-						<div class="fixed inset-0 bg-black bg-opacity-50 md:hidden" x-show="show">
-							<div
-								x-show="show"
-								@click.outside="show = false;"
-								x-transition:enter="transition ease-in-out duration-300"
-								x-transition:enter-start="translate-y-full transform opacity-0"
-								x-transition:enter-end="translate-y-0 transform opacity-100"
-								x-transition:leave="transition ease-in-out duration-300"
-								x-transition:leave-start="translate-y-0 transform"
-								x-transition:leave-end="translate-y-full transform"
-								class="fixed inset-x-0 bottom-0 z-10 flex w-full px-6 pt-8 pb-10 bg-white rounded-t-2xl transform-gpu">
-
-								<div class="flex flex-col items-start w-full">
-									<nav class="flex flex-col items-start space-y-4">
-										<a href="/work.html" class="inline text-2xl text-black line" title="View all of our work." aria-current="page">Work</a>
-										<a href="/approach.html" class="inline text-2xl text-black" title="See how we can help you, and how we plan to do it.">Approach</a>
-										<a href="/about.html" class="inline text-2xl text-black" title="Get to know EDL and the people behind it.">About</a>
-										<a href="/contact.html" class="inline text-2xl text-black" title="Tell us about a project or say hi!">Contact</a>
-										<a href="/services/start-trial.html" class="inline font-serif text-2xl italic" title="Get started scheduling your free 90-minute trial.">Start agency trial</a>
-									</nav>
-								</div>
-							</div>
-						</div>
-					</nav>
-				</div>
+					<div class="flex">
+						<a href="/services.html" class="py-2 pr-4 text-lg lg:pr-8 lg:text-xl 2xl:text-2xl" title="See how we can help you, and how we plan to do it.">Services</a>
+						<a href="/work.html" class="px-4 py-2 text-lg underline lg:px-8 lg:text-xl 2xl:text-2xl underline-offset-4" title="Follow along as we design deliverables for our clients.">Work</a>
+						<a href="/trial.html" class="px-4 py-2 text-lg lg:px-8 lg:text-xl 2xl:text-2xl" title="Get started scheduling your free 90-minute trial.">Trial</a>
+						<a href="/contact.html" class="py-2 pl-4 text-lg lg:pl-8 lg:text-xl 2xl:text-2xl" title="Swing by for a cup of coffee.">Contact</a>
+					</div>
+				</nav>	
 			</div>
 		</header>
-
 		<main>
-			<!-- Hero -->
-			<section>
-				<!-- Media -->
-				<div class="h-screen bg-bottom bg-cover bg-sky-gradient">
-					<picture class="block w-full h-full mx-auto">
-						<source>
-						<img src="../media/joeni-hero.png" class="object-cover object-center w-full h-full lg:object-top" alt="Two tablets showcasing the user interface we designed for JØNI.">
-					</picture>
-				</div>
+			<nav class="container items-center hidden px-6 mx-auto space-x-4 text-lg lg:px-12 md:flex lg:text-xl 2xl:text-2xl">
+				<a class="text-link " href="/work.html" title="View some of our best work.">Work</a>
+				<span class="opacity-40">▸</span>
+				<span class="opacity-70">JØNI Cloud Platform</span>
+			</nav>
 
-				<!-- Title -->
-				<div class="container px-6 pt-12 pb-6 mx-auto md:pb-8 lg:pt-24 lg:px-12 lg:pb-24">
-					<h1 class="text-4.5xl leading-tight text-black md:leading-tight md:text-6xl lg:text-7xl lg:leading-tight lg:max-w-7xl 2xl:leading-tight 2xl:text-8xl hyphenate">Helping catering kitchens build recipes and cook smarter through <span class="font-serif italic">Internet of Things</span>.</h1>
+			<section class="relative pt-4 pb-12 sm:pt-12 lg:pt-24 3xl:pt-32 md:pb-20 lg:pb-28 2xl:pb-32">
+				<div class="container z-10 px-6 mx-auto space-y-10 lg:px-12 lg:space-y-20 2xl:space-y-24">
+					<div x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="mx-auto space-y-4 transition duration-1000 md:space-y-6 2xl:space-y-8">
+						<h1 class="w-full text-5xl leading-tight mx-auto md:text-7xl md:leading-tight xl:leading-tight xl:text-8xl 2xl:text-8.5xl 2xl:leading-[1.2] 3xl:text-9xl 3xl:leading-tight">Helping catering kitchens build recipes and cook smarter through <span class="font-serif italic">Internet of Things</span>.</h1>
+					</div>
 				</div>
 			</section>
 
-			<div class="container flex flex-col-reverse px-6 mx-auto lg:flex-row lg:space-x-8 lg:px-12">
-				<!-- Sidebar -->
-				<div class="flex flex-col w-full mt-16 space-y-10 lg:space-y-12 lg:max-w-xs lg:mt-0 lg:h-full xl:max-w-sm lg:sticky lg:top-16">
-					<div>
-						<h4 class="text-2xl leading-normal">Deliverables</h4>
-							
-						<div class="flex flex-col mt-3 space-y-3 text-lg leading-snug">
-							<span>Strategy and concept</span>
-							<span>Prototyping</span>
-
-							<a href="/services/design-sprints.html" target="blank" rel="noopener" title="Learn more about Design Sprints and how we facilitate them." class="flex items-center space-x-1 text-black">
-								<span class="line">Design sprints</span>
-								<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
-								</svg>
-							</a>
-							<span>UX design</span>
-							<span>UI design</span>
-							<span>Design system</span>
-						</div>
-					</div>
-
-					<div>
-						<h4 class="text-2xl leading-normal">Launch</h4>
-							
-						<div class="flex flex-col mt-2 space-y-3">
-							<span class="text-lg leading-snug">Summer 2020</span>
-						</div>
-					</div>
-				</div>
-
-				<div class="w-full space-y-12 lg:space-y-24">
-					<div class="max-w-5xl">
-						<h2 class="text-2xl leading-normal lg:leading-relaxed lg:text-4xl text-indent">The Danish-based manufacturer JØNI has been producing equipment for the catering industry since 1973, and in 2017 they proceeded with the vision of digitizing their tilting kettles.</h2>
-					</div>
-					
-					<div class="max-w-2xl space-y-4 text-xl leading-normal 2xl:max-w-3xl lg:leading-relaxed lg:text-2xl lg:space-y-6">
-						<h3 class="mb-4 text-3xl leading-tight lg:leading-tight lg:text-4xl">The challenge</h3>
-						<p class="text-indent">Our biggest challenge was designing an approachable experience for a traditionally analog audience. Choosing the right features and making them intuitive to use was critical for user adaptation.</p>
-					</div>
-
-					<!-- Quote -->
-					<figure class="relative p-8 space-y-6 overflow-hidden border rounded-md lg:p-20 lg:space-y-8 col-span-full">
-						<blockquote class="space-y-6 md:space-y-8 lg:space-y-12">
-							<p class="w-full max-w-2xl text-2xl leading-normal lg:text-4xl lg:max-w-4xl lg:leading-normal hyphenate">&ldquo;Our collaboration with Frederick from EDL has been really great. He knows what he’s doing, he’s not afraid to challenge, and he’s great to work with.&rdquo;</p>
-						</blockquote>
-
-						<figcaption class="flex items-center">
-							<img class="object-cover rounded-full pointer-events-none w-14 h-14 lg:w-20 lg:h-20" src="../media/joeni-quote.jpg" alt="Profile picture of Uffe Pilgaard from JØNI." />
-							<div class="flex flex-col ml-4 leading-normal lg:ml-6 text-normal lg:text-xl">
-								Uffe Pilgaard
-								<cite class="not-italic opacity-70">Mechanical Engineer</cite>
-							</div>
-						</figcaption>
-					</figure>
-
-					<div class="max-w-2xl space-y-4 text-xl leading-normal lg:space-y-6 2xl:max-w-3xl lg:leading-relaxed lg:text-2xl">
-						<h2 class="text-4xl leading-tight lg:leading-tight lg:text-5xl">Defining a minimum viable product</h2>
-						<p class="text-indent">We started by mapping out the application. Across a few collaborative sessions, we prepared multiple user journeys and transformed them into an interactive prototype.</p>
-					</div>
-
-					<figure>
-						<picture class="block px-8 pt-8 overflow-hidden rounded-md lg:px-24 lg:pt-24 bg-gray">
-							<source>
-							<img src="../media/joeni-prototype.png" class="object-contain w-full h-full" alt="Image of early screens from the prototyping process."/>
-						</picture>
-
-						<figcaption class="w-full max-w-2xl mt-3 text-sm lg:leading-snug lg:text-base opacity-60">Early exploration from the prototyping process.</figcaption>
-					</figure>
-
-					<div class="max-w-2xl space-y-4 text-xl leading-normal lg:space-y-6 2xl:max-w-3xl lg:leading-relaxed lg:text-2xl">
-						<h2 class="text-4xl leading-tight lg:leading-tight lg:text-5xl">The exploration of familiar patterns</h2>
-						<p class="text-indent">Our visual design work centered around crafting a familiar and delightful experience: large input areas, conventional modality and interactions, and friendly copy.</p>
-					</div>
-
-					<figure>
-						<picture class="block px-8 pt-8 overflow-hidden rounded-md max-h-256 lg:px-24 lg:pt-24 bg-gray col-span-full">
-							<source>
-							<img src="../media/joeni-community.png" class="object-contain w-full h-full" alt="User interface with community recipes."/>
-						</picture>
-						
-						<video class="block w-full h-full p-8 mt-4 rounded-md lg:mt-8 lg:p-24 max-h-80 md:max-h-160 bg-gray lg:max-h-208 lg:object-contain" playsinline loop autoplay muted>
-							<source src="../media/joeni-recipes.mp4" type="video/mp4">
-							<source src="../media/joeni-recipes.webm" type="video/webm">
-							Sorry, your browser doesn't support HTML5 video.
-						</video>
-						
-						<div class="grid grid-cols-2 gap-4 mt-4 lg:gap-8 lg:mt-8">
-							<picture class="block pb-4 pl-4 overflow-hidden rounded-md bg-gray lg:pb-12 lg:pl-12 max-h-104 lg:max-h-120">
-								<source>
-								<img src="../media/joeni-graphs.png" class="object-cover object-left-bottom w-full h-full" alt="Multiple examples of graphs in the UI."/>
-							</picture>
-
-							<picture class="block p-4 overflow-hidden rounded-md lg:p-20 bg-gray max-h-104 lg:max-h-120">
-								<source>
-								<img src="../media/joeni-snackbar.png" class="object-contain object-center w-full h-full" alt="Three different examples of snackbars from the user interface."/>
-							</picture>
-						</div>
-
-						<picture class="block px-8 pt-8 mt-4 overflow-hidden rounded-md lg:px-24 lg:pt-24 bg-gray col-span-full lg:mt-8">
-							<source>
-							<img src="../media/joeni-kettles.jpg" class="object-contain w-full h-full" alt="The UI overview of data from all kettles."/>
-						</picture>
-
-						<picture class="block px-8 pt-8 mt-4 overflow-hidden rounded-md lg:px-24 lg:pt-24 bg-gray col-span-full lg:mt-8">
-							<source>
-							<img src="../media/joeni-translation.jpg" class="object-contain w-full h-full" alt="The screen for translating recipes."/>
-						</picture>
-
-						<picture class="block px-8 pt-8 mt-4 overflow-hidden rounded-md lg:px-24 lg:pt-24 bg-gray col-span-full lg:mt-8">
-							<source>
-							<img src="../media/joeni-onboarding.jpg" class="object-contain w-full h-full" alt="The user interface when signing up for an account."/>
-						</picture>
-
-						<picture class="block px-8 pt-8 mt-4 overflow-hidden rounded-md lg:px-24 lg:pt-24 bg-gray col-span-full lg:mt-8">
-							<source>
-							<img src="../media/joeni-trend.jpg" class="object-contain w-full h-full" alt="User interface for showing trends in energy usage."/>
-						</picture>
-						
-						<figcaption class="w-full max-w-2xl mt-3 text-sm lg:leading-snug lg:text-base opacity-60">Screens and elements from the new design system.</figcaption>
-					</figure>
-
-					<div class="max-w-2xl space-y-4 text-xl leading-normal lg:space-y-6 2xl:max-w-3xl lg:leading-relaxed lg:text-2xl">
-						<h2 class="text-4xl leading-tight lg:leading-tight lg:text-5xl">Design consistency across teams</h2>
-						<p class="text-indent">To keep the platform consistent and cohesive, we designed and built a living style guide in Figma that allowed developers to have a uniform reference while building new interfaces.</p>
-					</div>
-				</div>
+			<div class="px-6">
+				<img src="../media/joeni-hero.png" class="object-cover object-right w-full rounded-lg bg-mint-blue aspect-square lg:aspect-video" alt="Two tablets showcasing the user interface we designed for JØNI.">
 			</div>
+
+			<section class="relative py-16 md:py-24 lg:py-32 2xl:py-40">
+				<div class="container flex flex-col-reverse px-6 mx-auto lg:flex-row lg:space-x-8 lg:px-12">
+					<!-- Sidebar -->
+					<div class="flex flex-col w-full mt-16 space-y-10 lg:space-y-12 lg:max-w-xs lg:mt-0 lg:h-full xl:max-w-sm lg:sticky lg:top-16">
+						<div>
+							<h4 class="text-2xl leading-normal">Deliverables</h4>
+								
+							<div class="flex flex-col mt-3 space-y-3 text-lg leading-snug">
+								<span>Strategy and concept</span>
+								<span>Prototyping</span>
+
+								<a href="/services/design-sprints.html" target="blank" rel="noopener" title="Learn more about Design Sprints and how we facilitate them." class="flex items-center space-x-1 text-black">
+									<span class="line">Design sprints</span>
+									<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+										<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
+									</svg>
+								</a>
+								<span>UX design</span>
+								<span>UI design</span>
+								<span>Design system</span>
+							</div>
+						</div>
+
+						<div>
+							<h4 class="text-2xl leading-normal">Launch</h4>
+								
+							<div class="flex flex-col mt-2 space-y-3">
+								<span class="text-lg leading-snug">Summer 2020</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="w-full space-y-12 lg:space-y-24">
+						<div class="max-w-5xl">
+							<h2 class="text-2xl leading-normal lg:leading-relaxed lg:text-4xl text-indent">The Danish-based manufacturer JØNI has been producing equipment for the catering industry since 1973, and in 2017 they proceeded with the vision of digitizing their tilting kettles.</h2>
+						</div>
+						
+						<div class="max-w-2xl space-y-4 text-xl leading-normal 2xl:max-w-3xl lg:leading-relaxed lg:text-2xl lg:space-y-6">
+							<h3 class="mb-4 text-3xl leading-tight lg:leading-tight lg:text-4xl">The challenge</h3>
+							<p class="text-indent">Our biggest challenge was designing an approachable experience for a traditionally analog audience. Choosing the right features and making them intuitive to use was critical for user adaptation.</p>
+						</div>
+
+						<figure class="max-w-4xl space-y-6 transition duration-1000 2xl:max-w-4xl lg:space-y-8" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">
+							<blockquote>
+								<p class="w-full mt-8 text-2xl leading-normal md:text-3xl md:leading-normal lg:text-4xl lg:leading-normal">&ldquo;Our collaboration with Frederick from EDL has been really great. He knows what he’s doing, he’s not afraid to challenge, and he’s great to work with.&rdquo;</p>
+							</blockquote>
+		
+							<figcaption class="flex items-center">
+								<img class="object-cover rounded-lg pointer-events-none w-14 h-14 lg:w-20 lg:h-20" src="../media/joeni-quote.jpg" alt="Profile picture of Uffe Pilgaard from JØNI." />
+								<div class="flex flex-col ml-4 leading-normal lg:ml-6 text-normal lg:text-xl">
+									Uffe Pilgaard
+									<cite class="not-italic text-black/70">Mechanical Engineer at <a href="https://joeni.com" class="text-link" target="_blank" rel="noopener">JØNI</a></cite>
+								</div>
+							</figcaption>
+						</figure>
+
+						<div class="max-w-2xl space-y-4 text-xl leading-normal lg:space-y-6 2xl:max-w-3xl lg:leading-relaxed lg:text-2xl">
+							<h2 class="text-4xl leading-tight lg:leading-tight lg:text-5xl">Defining a minimum viable product</h2>
+							<p class="text-indent">We started by mapping out the application. Across a few collaborative sessions, we prepared multiple user journeys and transformed them into an interactive prototype.</p>
+						</div>
+
+						<figure>
+							<picture class="block px-8 pt-8 overflow-hidden rounded-md lg:px-24 lg:pt-24 bg-gray">
+								<source>
+								<img src="../media/joeni-prototype.png" class="object-contain w-full h-full" alt="Image of early screens from the prototyping process."/>
+							</picture>
+
+							<figcaption class="w-full max-w-2xl mt-3 text-sm lg:leading-snug lg:text-base opacity-60">Early exploration from the prototyping process.</figcaption>
+						</figure>
+
+						<div class="max-w-2xl space-y-4 text-xl leading-normal lg:space-y-6 2xl:max-w-3xl lg:leading-relaxed lg:text-2xl">
+							<h2 class="text-4xl leading-tight lg:leading-tight lg:text-5xl">The exploration of familiar patterns</h2>
+							<p class="text-indent">Our visual design work centered around crafting a familiar and delightful experience: large input areas, conventional modality and interactions, and friendly copy.</p>
+						</div>
+
+						<figure>
+							<picture class="block px-8 pt-8 overflow-hidden rounded-md max-h-256 lg:px-24 lg:pt-24 bg-gray col-span-full">
+								<source>
+								<img src="../media/joeni-community.png" class="object-contain w-full h-full" alt="User interface with community recipes."/>
+							</picture>
+							
+							<video class="block w-full h-full p-8 mt-4 rounded-md lg:mt-8 lg:p-24 max-h-80 md:max-h-160 bg-gray lg:max-h-208 lg:object-contain" playsinline loop autoplay muted>
+								<source src="../media/joeni-recipes.mp4" type="video/mp4">
+								<source src="../media/joeni-recipes.webm" type="video/webm">
+								Sorry, your browser doesn't support HTML5 video.
+							</video>
+							
+							<div class="grid grid-cols-2 gap-4 mt-4 lg:gap-8 lg:mt-8">
+								<picture class="block pb-4 pl-4 overflow-hidden rounded-md bg-gray lg:pb-12 lg:pl-12 max-h-104 lg:max-h-120">
+									<source>
+									<img src="../media/joeni-graphs.png" class="object-cover object-left-bottom w-full h-full" alt="Multiple examples of graphs in the UI."/>
+								</picture>
+
+								<picture class="block p-4 overflow-hidden rounded-md lg:p-20 bg-gray max-h-104 lg:max-h-120">
+									<source>
+									<img src="../media/joeni-snackbar.png" class="object-contain object-center w-full h-full" alt="Three different examples of snackbars from the user interface."/>
+								</picture>
+							</div>
+
+							<picture class="block px-8 pt-8 mt-4 overflow-hidden rounded-md lg:px-24 lg:pt-24 bg-gray col-span-full lg:mt-8">
+								<source>
+								<img src="../media/joeni-kettles.jpg" class="object-contain w-full h-full" alt="The UI overview of data from all kettles."/>
+							</picture>
+
+							<picture class="block px-8 pt-8 mt-4 overflow-hidden rounded-md lg:px-24 lg:pt-24 bg-gray col-span-full lg:mt-8">
+								<source>
+								<img src="../media/joeni-translation.jpg" class="object-contain w-full h-full" alt="The screen for translating recipes."/>
+							</picture>
+
+							<picture class="block px-8 pt-8 mt-4 overflow-hidden rounded-md lg:px-24 lg:pt-24 bg-gray col-span-full lg:mt-8">
+								<source>
+								<img src="../media/joeni-onboarding.jpg" class="object-contain w-full h-full" alt="The user interface when signing up for an account."/>
+							</picture>
+
+							<picture class="block px-8 pt-8 mt-4 overflow-hidden rounded-md lg:px-24 lg:pt-24 bg-gray col-span-full lg:mt-8">
+								<source>
+								<img src="../media/joeni-trend.jpg" class="object-contain w-full h-full" alt="User interface for showing trends in energy usage."/>
+							</picture>
+							
+							<figcaption class="w-full max-w-2xl mt-3 text-sm lg:leading-snug lg:text-base opacity-60">Screens and elements from the new design system.</figcaption>
+						</figure>
+
+						<div class="max-w-2xl space-y-4 text-xl leading-normal lg:space-y-6 2xl:max-w-3xl lg:leading-relaxed lg:text-2xl">
+							<h2 class="text-4xl leading-tight lg:leading-tight lg:text-5xl">Design consistency across teams</h2>
+							<p class="text-indent">To keep the platform consistent and cohesive, we designed and built a living style guide in Figma that allowed developers to have a uniform reference while building new interfaces.</p>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 
-		<footer class="mt-16 lg:mt-24 2xl:mt-40">
-			<div class="container px-6 pb-12 mx-auto space-y-4 lg:px-12 md:pb-16 lg:pb-24">
-				<h2 class="text-4.5xl leading-tight text-black md:text-6xl md:leading-tight lg:leading-tight lg:text-7xl lg:max-w-5xl">We’d love to hear about your <span class="font-serif italic">design and business</span> challenges.</h2>
+		<footer>
+			<div class="container px-6 mx-auto space-y-16 lg:space-y-28 lg:px-12">
+				<div class="space-y-4 2xl:space-y-6">
+					<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl lg:max-w-5xl 2xl:text-7.5xl 2xl:leading-tight 2xl:max-w-7xl">We’d love to hear about your <span class="font-serif italic">design and business</span> challenges.</h2>
 
-				<div class="max-w-2xl mt-4 space-y-8 text-black md:space-y-12">
-					<p class="text-2xl leading-normal text-indent lg:leading-relaxed lg:text-3xl">Even if you’re unsure what’s next. No sales talk, no strings attached.</p>
-					
-					<div class="flex items-center space-x-6 lg:space-x-8 2xl:space-x-12 ">
-						<a href="tel:+4528253694" title="Reach out and let us chat about design and business." class="flex items-center space-x-1 lg:space-x-2 2xl:space-x-3">
-							<span class="text-2xl md:text-3xl line 2xl:text-3xl">28 25 36 94</span>
-							<svg class="w-7 h-7 2xl:w-9 2xl:h-9" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18h.01M8 21h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-						</a>
+					<div class="max-w-2xl mt-4 space-y-8 md:space-y-12">
+						<p class="text-2xl leading-normal text-indent lg:leading-relaxed lg:text-3xl">Even if you’re unsure what’s next. No sales talk, no strings attached.</p>
 						
-						<a href="/contact.html" title="Reach out about a project, job application or just to say hi." class="flex items-center space-x-1 2xl:space-x-3 lg:space-x-2">
-							<span class="text-2xl md:text-3xl line 2xl:text-3xl">Contact us</span>
-						</a>
+						<a class="inline-block px-6 py-4 text-xl text-white bg-black rounded-full lg:px-7 lg:py-4 md:text-2xl 2xl:py-5 2xl:px-8 2xl:text-3xl" title="Reach out about a project, job application, or just to say hi." href="/contact.html">Contact us</a>
 					</div>
 				</div>
-			</div>
 
-			<div class="container flex flex-col w-full px-6 py-8 mx-auto lg:flex-row-reverse lg:px-12 md:py-16">
-				<nav class="flex mb-12 space-x-8 lg:mb-0">
-					<a href="https://instagram.com/edl.design" target="blank" rel="noopener" title="See EDL’s profile on Instagram." class="flex items-center space-x-1 text-black">
-						<span class="text-lg leading-tight lg:text-xl line">Instagram</span>
-						<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-							<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
-						</svg>
-					</a>
+				<div class="space-y-12 md:space-y-0 lg:max-w-5xl md:columns-2">
+					<div class="space-y-4">
+						<div class="text-2xl leading-tight lg:leading-tight lg:text-3xl">Copenhagen</div>
+						<p class="text-xl leading-normal lg:text-2xl lg:leading-normal">Amagerfælledvej 106<br>2300 Copenhagen<br>Denmark</p>
+						<a class="inline-block text-xl underline underline-offset-4 2xl:text-2xl hover:opacity-80" href="https://goo.gl/maps/rvbUxQUX1cxjvyaG9" target="_blank" rel="noopener" title="Get directions to our Copenhagen office via Google Maps.">Directions</a>
+					</div>
+
+					<div class="space-y-4">
+						<div class="text-2xl leading-tight lg:leading-tight lg:text-3xl">Odense</div>
+						<p class="text-xl leading-normal lg:text-2xl lg:leading-normal">Stærmosegårdsvej 8<br>5230 Odense<br>Denmark</p>
+						<a class="inline-block text-xl underline underline-offset-4 2xl:text-2xl hover:opacity-80" href="https://goo.gl/maps/C7gqWv69bB8gdC4V9" target="_blank" rel="noopener" title="Get directions to our Odense office via Google Maps.">Directions</a>
+					</div>
+				</div>
+
+				<div class="flex justify-between w-full pb-8 md:pb-16">
+					<a class="inline-block text-lg underline underline-offset-4 2xl:text-xl hover:opacity-80" href="https://linkedin.com/company/edldesign" target="_blank" rel="noopener" title="View EDL’s profile on LinkedIn.">LinkedIn</a>
 					
-					<a href="https://linkedin.com/company/edldesign" target="blank" rel="noopener" title="See EDL’s profile on LinkedIn" class="flex items-center space-x-1 text-black">
-						<span class="text-lg leading-tight lg:text-xl line">LinkedIn</span>
-						<svg class="w-5 h-5 lg:h-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-							<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
-						</svg>
-					</a>
-				</nav>
-				
-				<span class="text-lg leading-tight text-black lg:text-xl lg:flex-1">2022 &copy; EDL ApS</span>
+					<span class="text-lg 2xl:text-xl">&copy; 2022 EDL</span>
+				</div>
 			</div>
 		</footer>
 	</body>
