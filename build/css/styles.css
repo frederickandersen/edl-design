@@ -1356,6 +1356,10 @@ select{
   width: 1rem;
 }
 
+.w-12{
+  width: 3rem;
+}
+
 .max-w-3xl{
   max-width: 48rem;
 }
@@ -1751,6 +1755,10 @@ select{
   border-width: 1px;
 }
 
+.border-2{
+  border-width: 2px;
+}
+
 .border-t{
   border-top-width: 1px;
 }
@@ -2102,6 +2110,14 @@ select{
 
 .text-center{
   text-align: center;
+}
+
+.align-middle{
+  vertical-align: middle;
+}
+
+.align-text-bottom{
+  vertical-align: text-bottom;
 }
 
 .align-super{
@@ -3865,6 +3881,10 @@ select{
 
   .\32xl\:w-7{
     width: 1.75rem;
+  }
+
+  .\32xl\:w-16{
+    width: 4rem;
   }
 
   .\32xl\:max-w-7xl{
