@@ -26,7 +26,7 @@
 	</head>
 
 	<body class="overflow-x-hidden font-sans antialiased bg-white">
-		<div class="relative hidden w-full px-12 py-4 text-center text-white bg-black/80 hover:bg-black/70 md:block lg:px-24" x-data="{ hide_banner: true, cookie_name: 'announcement' }" x-init="hide_banner = docCookies.hasItem(cookie_name) ? (docCookies.getItem(cookie_name) == 'true') : false;" x-bind:class="{ 'hidden': hide_banner, 'relative hidden md:block': !hide_banner }">
+		<div class="relative hidden w-full px-12 py-4 text-center text-white bg-black hover:bg-black/80 md:block lg:px-24" x-data="{ hide_banner: true, cookie_name: 'announcement' }" x-init="hide_banner = docCookies.hasItem(cookie_name) ? (docCookies.getItem(cookie_name) == 'true') : false;" x-bind:class="{ 'hidden': hide_banner, 'relative hidden md:block': !hide_banner }">
 			<a href="/services/design-projects.html" class="block w-full space-x-2 text-base link lg:text-xl lg:leading-normal 2xl:text-2xl 2xl:leading-normal">
 				<span class="opacity-80">✴ Latest update</span>
 				<span>Design superpowers for your next project</span>
