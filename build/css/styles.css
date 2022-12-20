@@ -1674,6 +1674,18 @@ select{
   margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-x-12 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(3rem * var(--tw-space-x-reverse));
+  margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-24 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(6rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(6rem * var(--tw-space-y-reverse));
+}
+
 .divide-y > :not([hidden]) ~ :not([hidden]){
   --tw-divide-y-reverse: 0;
   border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
@@ -2677,6 +2689,14 @@ select{
     height: 30rem;
   }
 
+  .md\:h-8{
+    height: 2rem;
+  }
+
+  .md\:h-6{
+    height: 1.5rem;
+  }
+
   .md\:max-h-160{
     max-height: 40rem;
   }
@@ -2695,6 +2715,14 @@ select{
 
   .md\:w-auto{
     width: auto;
+  }
+
+  .md\:w-8{
+    width: 2rem;
+  }
+
+  .md\:w-6{
+    width: 1.5rem;
   }
 
   .md\:max-w-3xl{
@@ -2920,6 +2948,11 @@ select{
   .md\:text-6xl{
     font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .md\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .md\:leading-tight{
@@ -3190,6 +3223,10 @@ select{
     width: 12rem;
   }
 
+  .lg\:w-8{
+    width: 2rem;
+  }
+
   .lg\:max-w-5xl{
     max-width: 64rem;
   }
@@ -3416,6 +3453,12 @@ select{
     margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .lg\:space-x-4 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem * var(--tw-space-x-reverse));
+    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .lg\:self-center{
     align-self: center;
   }
@@ -3426,6 +3469,10 @@ select{
 
   .lg\:rounded-lg{
     border-radius: 0.5rem;
+  }
+
+  .lg\:border-2{
+    border-width: 2px;
   }
 
   .lg\:border-none{
@@ -3953,6 +4000,12 @@ select{
     --tw-space-x-reverse: 0;
     margin-right: calc(0.75rem * var(--tw-space-x-reverse));
     margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .\32xl\:space-y-12 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(3rem * var(--tw-space-y-reverse));
   }
 
   .\32xl\:rounded-2xl{
