@@ -1087,10 +1087,6 @@ select{
   grid-column: 1 / -1;
 }
 
-.m-auto{
-  margin: auto;
-}
-
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -1142,14 +1138,6 @@ select{
 
 .mt-6{
   margin-top: 1.5rem;
-}
-
-.mt-12{
-  margin-top: 3rem;
-}
-
-.mb-12{
-  margin-bottom: 3rem;
 }
 
 .mt-16{
@@ -1356,10 +1344,6 @@ select{
   width: 2.5rem;
 }
 
-.w-7{
-  width: 1.75rem;
-}
-
 .max-w-4xl{
   max-width: 56rem;
 }
@@ -1499,6 +1483,12 @@ select{
   list-style-type: disc;
 }
 
+.appearance-none{
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
 .break-after-column{
   -moz-column-break-after: column;
        break-after: column;
@@ -1576,6 +1566,16 @@ select{
 .gap-x-8{
   -moz-column-gap: 2rem;
        column-gap: 2rem;
+}
+
+.gap-x-24{
+  -moz-column-gap: 6rem;
+       column-gap: 6rem;
+}
+
+.gap-x-16{
+  -moz-column-gap: 4rem;
+       column-gap: 4rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]){
@@ -1850,8 +1850,8 @@ select{
   background-image: url('/media/joeni-cover-bg.png');
 }
 
-.bg-purple-gradient{
-  background-image: url('/media/srm-cover-bg.png');
+.bg-gradient-to-t{
+  background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
 
 .bg-radial-yellow{
@@ -1862,8 +1862,8 @@ select{
   background-image: url('/media/oz-cover-bg.png');
 }
 
-.bg-gradient-to-t{
-  background-image: linear-gradient(to top, var(--tw-gradient-stops));
+.bg-purple-gradient{
+  background-image: url('/media/srm-cover-bg.png');
 }
 
 .from-white{
@@ -1874,11 +1874,6 @@ select{
 
 .bg-cover{
   background-size: cover;
-}
-
-.bg-clip-text{
-  -webkit-background-clip: text;
-          background-clip: text;
 }
 
 .bg-no-repeat{
@@ -2088,12 +2083,16 @@ select{
   padding-bottom: 1.5rem;
 }
 
+.pb-10{
+  padding-bottom: 2.5rem;
+}
+
 .pt-40{
   padding-top: 10rem;
 }
 
-.pb-10{
-  padding-bottom: 2.5rem;
+.text-left{
+  text-align: left;
 }
 
 .text-center{
@@ -2161,16 +2160,6 @@ select{
   font-size: 2.75rem;
 }
 
-.text-7xl{
-  font-size: 4.5rem;
-  line-height: 1;
-}
-
-.text-6xl{
-  font-size: 3.75rem;
-  line-height: 1;
-}
-
 .italic{
   font-style: italic;
 }
@@ -2227,10 +2216,6 @@ select{
 
 .text-black\/80{
   color: rgb(0 0 0 / 0.8);
-}
-
-.text-transparent{
-  color: transparent;
 }
 
 .underline{
@@ -2350,10 +2335,6 @@ select{
   height: 1px;
   bottom: -1px;
   background-color: black;
-}
-
-.line-white:before {
-  background-color: white;
 }
 
 .hyphenate {
@@ -2600,10 +2581,6 @@ select{
 
   .md\:mr-4{
     margin-right: 1rem;
-  }
-
-  .md\:mt-24{
-    margin-top: 6rem;
   }
 
   .md\:mt-0{
@@ -2862,10 +2839,6 @@ select{
     padding-top: 6rem;
   }
 
-  .md\:pt-48{
-    padding-top: 12rem;
-  }
-
   .md\:pt-80{
     padding-top: 20rem;
   }
@@ -2916,16 +2889,6 @@ select{
   .md\:text-lg{
     font-size: 1.125rem;
     line-height: 1.75rem;
-  }
-
-  .md\:text-9xl{
-    font-size: 8rem;
-    line-height: 1;
-  }
-
-  .md\:text-6xl{
-    font-size: 3.75rem;
-    line-height: 1;
   }
 
   .md\:leading-tight{
@@ -3030,10 +2993,6 @@ select{
 
   .lg\:mt-32{
     margin-top: 8rem;
-  }
-
-  .lg\:mb-0{
-    margin-bottom: 0px;
   }
 
   .lg\:mt-0{
@@ -3241,10 +3200,6 @@ select{
     flex-direction: row;
   }
 
-  .lg\:flex-row-reverse{
-    flex-direction: row-reverse;
-  }
-
   .lg\:flex-col{
     flex-direction: column;
   }
@@ -3428,6 +3383,12 @@ select{
     margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .lg\:space-y-1 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+  }
+
   .lg\:self-center{
     align-self: center;
   }
@@ -3537,6 +3498,11 @@ select{
     padding-right: 1.5rem;
   }
 
+  .lg\:py-10{
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
   .lg\:py-3{
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
@@ -3545,6 +3511,11 @@ select{
   .lg\:px-5{
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+
+  .lg\:py-20{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .lg\:pr-8{
@@ -3760,6 +3731,11 @@ select{
     gap: 8rem;
   }
 
+  .xl\:gap-x-32{
+    -moz-column-gap: 8rem;
+         column-gap: 8rem;
+  }
+
   .xl\:space-x-2 > :not([hidden]) ~ :not([hidden]){
     --tw-space-x-reverse: 0;
     margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -3801,6 +3777,10 @@ select{
 
   .\32xl\:col-start-5{
     grid-column-start: 5;
+  }
+
+  .\32xl\:mt-16{
+    margin-top: 4rem;
   }
 
   .\32xl\:h-208{
@@ -3855,10 +3835,6 @@ select{
     width: 1.75rem;
   }
 
-  .\32xl\:w-9{
-    width: 2.25rem;
-  }
-
   .\32xl\:max-w-7xl{
     max-width: 80rem;
   }
@@ -3896,9 +3872,19 @@ select{
     row-gap: 8rem;
   }
 
+  .\32xl\:gap-x-48{
+    -moz-column-gap: 12rem;
+         column-gap: 12rem;
+  }
+
   .\32xl\:gap-x-40{
     -moz-column-gap: 10rem;
          column-gap: 10rem;
+  }
+
+  .\32xl\:gap-x-24{
+    -moz-column-gap: 6rem;
+         column-gap: 6rem;
   }
 
   .\32xl\:space-y-20 > :not([hidden]) ~ :not([hidden]){
@@ -3955,22 +3941,16 @@ select{
     margin-bottom: calc(7rem * var(--tw-space-y-reverse));
   }
 
+  .\32xl\:space-x-8 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-x-reverse: 0;
+    margin-right: calc(2rem * var(--tw-space-x-reverse));
+    margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .\32xl\:space-y-32 > :not([hidden]) ~ :not([hidden]){
     --tw-space-y-reverse: 0;
     margin-top: calc(8rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(8rem * var(--tw-space-y-reverse));
-  }
-
-  .\32xl\:space-x-12 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-x-reverse: 0;
-    margin-right: calc(3rem * var(--tw-space-x-reverse));
-    margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  .\32xl\:space-x-3 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-x-reverse: 0;
-    margin-right: calc(0.75rem * var(--tw-space-x-reverse));
-    margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .\32xl\:rounded-2xl{
@@ -4004,6 +3984,16 @@ select{
   .\32xl\:py-48{
     padding-top: 12rem;
     padding-bottom: 12rem;
+  }
+
+  .\32xl\:py-32{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  .\32xl\:py-28{
+    padding-top: 7rem;
+    padding-bottom: 7rem;
   }
 
   .\32xl\:pb-40{
