@@ -28,10 +28,10 @@
 	</head>
 
 	<body class="overflow-x-hidden font-sans antialiased">
-		<div class="relative hidden w-full px-12 py-4 text-center text-white bg-black hover:bg-black/80 md:block lg:px-24" x-data="{ hide_banner: true, cookie_name: 'announcement' }" x-init="hide_banner = docCookies.hasItem(cookie_name) ? (docCookies.getItem(cookie_name) == 'true') : false;" x-bind:class="{ 'hidden': hide_banner, 'relative hidden md:block': !hide_banner }">
-			<a href="/services/design-projects.html" class="block w-full space-x-2 text-base link lg:text-xl lg:leading-normal 2xl:text-2xl 2xl:leading-normal" @click="hide_banner = true; docCookies.setItem(cookie_name, true, (60*24*60*60));">
-				<span class="opacity-80">✴ Latest update</span>
-				<span>Design superpowers for your next project</span>
+		<div class="relative hidden w-full px-12 py-4 text-center text-white bg-black hover:bg-black/80 md:block lg:px-24" x-data="{ hide_banner: true, cookie_name: 'announcement-daas' }" x-init="hide_banner = docCookies.hasItem(cookie_name) ? (docCookies.getItem(cookie_name) == 'true') : false;" x-bind:class="{ 'hidden': hide_banner, 'relative hidden md:block': !hide_banner }">
+			<a href="/services/design-service.html" class="block w-full space-x-2 text-base link lg:text-xl lg:leading-normal 2xl:text-2xl 2xl:leading-normal" @click="hide_banner = true; docCookies.setItem(cookie_name, true, (60*24*60*60));">
+				<span class="opacity-80">Latest update</span>
+				<span>Don’t hire a design team, subscribe to one</span>
 			</a>
 			
 			<button type="button" class="absolute z-10 flex items-center justify-center w-8 h-8 ease-in-out -translate-y-1/2 rounded-md hover:bg-white/20 right-2 lg:right-4 top-1/2" @click="hide_banner = true; docCookies.setItem(cookie_name, true, (60*24*60*60));" aria-label="Dismiss">✕</button>
@@ -148,7 +148,7 @@
 		
 								<div class="relative py-6 space-y-1 lg:space-y-2 lg:py-8">
 									<h3><a class="text-2xl leading-tight lg:text-3xl lg:leading-tight 2xl:text-4xl 2xl:leading-tight link hover:underline hover:underline-offset-4" href="./services/design-service.html" title="Learn more about Design as a Service.">Continuous product improvements</a></h3>
-									<p class="text-xl leading-normal lg:text-2xl lg:leading-normal 2xl:leading-relaxed text-white/60">Research, UX and UI design for a fixed monthly fee.</p>
+									<p class="text-xl leading-normal lg:text-2xl lg:leading-normal 2xl:leading-relaxed text-white/60">Don’t hire a design team, subscribe to one.</p>
 								</div>
 								
 								<div class="relative py-6 space-y-1 lg:space-y-2 lg:py-8">

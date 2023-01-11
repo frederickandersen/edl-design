@@ -7,10 +7,10 @@
 		<title>Design as a Service - EDL</title>
 
 		<meta name="title" content="Design as a Service – EDL">
-    	<meta name="description" content="Uncomplicated and outcome-focused product design. Scale your business with UX and UI design for a fixed monthly fee.">
+    	<meta name="description" content="Don’t hire a design team, subscribe to one. Instant access to specialized designers for a fixed monthly fee.">
 
 		<meta property="og:title" content="Design as a Service – EDL">
-    	<meta property="og:description" content="Uncomplicated and outcome-focused product design. Scale your business with UX and UI design for a fixed monthly fee.">
+    	<meta property="og:description" content="Don’t hire a design team, subscribe to one. Instant access to specialized designers for a fixed monthly fee.">
 		<meta property="og:site_name" content="EDL®">
 		<meta property="og:type" content="website">
 		<meta property="og:image" content="https://www.edl.dk/media/daas-open-graph.png">
@@ -18,23 +18,20 @@
 		<link rel="icon" href="../favicon.png">
 		<link rel="stylesheet" href="../css/styles.css">
 		
-		<link href="https://unpkg.com/tippy.js@6/dist/tippy.css" rel="stylesheet" />
-
 		<script defer="">
 			/* https://github.com/madmurphy/cookies.js (GPL3) */
 			!function(){function e(e,o,t,n,r,s,i){var c="";if(t)switch(t.constructor){case Number:c=t===1/0?"; expires=Fri, 31 Dec 9999 23:59:59 GMT":"; max-age="+t;break;case String:c="; expires="+t;break;case Date:c="; expires="+t.toUTCString()}return encodeURIComponent(e)+"="+encodeURIComponent(o)+c+(r?"; domain="+r:"")+(n?"; path="+n:"")+(s?"; secure":"")+(i&&"no_restriction"!==i.toString().toLowerCase()?"lax"===i.toString().toLowerCase()||1===Math.ceil(i)||!0===i?"; samesite=lax":"none"===i.toString().toLowerCase()||i<0?"; samesite=none":"; samesite=strict":"")}var o=/[\-\.\+\*]/g,t=/^(?:expires|max\-age|path|domain|secure|samesite|httponly)$/i;window.docCookies={getItem:function(e){return e&&decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*"+encodeURIComponent(e).replace(o,"\\$&")+"\\s*\\=\\s*([^;]*).*$)|^.*$"),"$1"))||null},setItem:function(o,n,r,s,i,c,a){return!(!o||t.test(o))&&(document.cookie=e(o,n,r,s,i,c,a),!0)},removeItem:function(o,t,n,r,s){return!!this.hasItem(o)&&(document.cookie=e(o,"","Thu, 01 Jan 1970 00:00:00 GMT",t,n,r,s),!0)},hasItem:function(e){return!(!e||t.test(e))&&new RegExp("(?:^|;\\s*)"+encodeURIComponent(e).replace(o,"\\$&")+"\\s*\\=").test(document.cookie)},keys:function(){for(var e=document.cookie.replace(/((?:^|\s*;)[^\=]+)(?=;|$)|^\s*|\s*(?:\=[^;]*)?(?:\1|$)/g,"").split(/\s*(?:\=[^;]*)?;\s*/),o=e.length,t=0;t<o;t++)e[t]=decodeURIComponent(e[t]);return e},clear:function(e,o,t,n){for(var r=this.keys(),s=r.length,i=0;i<s;i++)this.removeItem(r[i],e,o,t,n)}}}(),"undefined"!=typeof module&&void 0!==module.exports&&(module.exports=docCookies);
 		</script>
 
-		<script defer src="https://cdn.jsdelivr.net/npm/@ryangjchandler/alpine-tooltip@1.x.x/dist/cdn.min.js"></script>
 		<script defer src="https://unpkg.com/@alpinejs/intersect@3.10.4/dist/cdn.min.js"></script>
 		<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 	</head>
 
 	<body class="overflow-x-hidden font-sans antialiased">
 		<div class="relative hidden w-full px-12 py-4 text-center text-white bg-black/80 hover:bg-black/70 md:block lg:px-24" x-data="{ hide_banner: true, cookie_name: 'announcement' }" x-init="hide_banner = docCookies.hasItem(cookie_name) ? (docCookies.getItem(cookie_name) == 'true') : false;" x-bind:class="{ 'hidden': hide_banner, 'relative hidden md:block': !hide_banner }">
-			<a href="/services/design-projects.html" class="block w-full space-x-2 text-base link lg:text-xl lg:leading-normal 2xl:text-2xl 2xl:leading-normal" @click="hide_banner = true; docCookies.setItem(cookie_name, true, (60*24*60*60));">
-				<span class="opacity-80">✴ Latest update</span>
-				<span>Design superpowers for your next project</span>
+			<a href="/services/design-service.html" class="block w-full space-x-2 text-base link lg:text-xl lg:leading-normal 2xl:text-2xl 2xl:leading-normal" @click="hide_banner = true; docCookies.setItem(cookie_name, true, (60*24*60*60));">
+				<span class="opacity-80">Latest update</span>
+				<span>Don’t hire a design team, subscribe to one</span>
 			</a>
 			
 			<button type="button" class="absolute z-10 flex items-center justify-center w-8 h-8 ease-in-out -translate-y-1/2 rounded-md hover:bg-white/20 right-2 lg:right-4 top-1/2" @click="hide_banner = true; docCookies.setItem(cookie_name, true, (60*24*60*60));" aria-label="Dismiss">✕</button>
@@ -63,19 +60,17 @@
 			</nav>
 			
 			<section class="relative pt-4 pb-12 sm:pt-12 lg:pt-24 3xl:pt-32 md:pb-20 lg:pb-28 2xl:pb-32">
-				<div class="container w-full px-6 mx-auto space-y-8 transition duration-1000 lg:px-12 md:space-y-12 lg:space-y-16 2xl:space-y-20" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">
-					<div class="space-y-6 lg:space-y-8 2xl:space-y-10">
-						<h1 class="w-full text-5xl leading-tight md:leading-tight md:text-7xl lg:text-7.5xl lg:leading-[1.2] xl:leading-[1.2] xl:text-8xl 2xl:leading-[1.2] 2xl:text-8.5xl 3xl:text-9xl 3xl:leading-[1.2]">Continous product improvements for a <span class="font-serif italic">fixed monthly fee</span>.</h1>
+				<div class="container px-6 mx-auto space-y-8 lg:px-12 lg:space-y-10 2xl:space-y-14">
+					<div class="space-y-6 lg:space-y-8 2xl:space-y-12">
+						<h1 class="w-full text-5xl leading-tight transition duration-1000 mx-auto md:text-7xl md:leading-tight xl:leading-tight xl:text-8xl 2xl:text-8.5xl 2xl:leading-[1.2] 3xl:text-9xl 3xl:leading-tight" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">Don’t hire a design team, <span class="font-serif italic">subscribe to one</span>.</h1>
+						<p class="max-w-4xl text-2xl leading-normal lg:leading-relaxed lg:text-3xl 2xl:leading-relaxed 2xl:text-4xl">Instant access to design-led product development for a <span class="font-serif italic">fixed monthly fee</span>. We adapt to your unique challenges, developers, and mission.</p>
 					</div>
 					
-					<div class="inline-flex items-center gap-6 lg:justify-center lg:gap-8">
-						<a class="inline-block px-6 py-4 text-xl text-white bg-black rounded-full lg:px-7 lg:py-4 md:text-2xl 2xl:py-5 2xl:px-8 2xl:text-3xl whitespace-nowrap" title="View our plans for Design as a Service." href="#plans">Choose your plan</a>
-						<span class="text-base leading-tight md:text-lg sm:inline-block lg:text-xl 2xl:text-2xl text-black/70">Pause <span class="hidden md:inline-block">or cancel</span> anytime.</span>
-					</div>
+					<a class="inline-block px-6 py-4 text-xl text-white bg-black rounded-full lg:px-7 lg:py-4 md:text-2xl 2xl:py-5 2xl:px-8 2xl:text-3xl" title="Chat with Frederick about our Design as a Service." href="https://savvycal.com/edl/daas" target="_blank">Book discovery call</a>
 				</div>
 			</section>
 
-			<div class="px-6">
+			<div class="px-6 mx-auto max-w-screen-3xl">
 				<video class="object-cover w-full bg-black rounded-lg 2xl:rounded-2xl h-120 lg:h-auto lg:aspect-video" playsinline loop autoplay muted poster="/media/daas-reel-poster.png">
 					<source src="../media/daas-reel.webm" type="video/webm">
 					<source src="../media/daas-reel.mp4" type="video/mp4">
@@ -84,505 +79,159 @@
 			</div>
 
 			<section class="relative py-16 md:py-24 lg:py-32 2xl:py-40">
-				<div class="container relative px-6 mx-auto space-y-8 lg:flex lg:items-start lg:space-y-0 lg:px-12 lg:gap-24 xl:gap-32 2xl:gap-48">
-					<div class="lg:w-5/12">
-						<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl">Fewer meetings and scoping, much more output</h2>
-					</div>
-					
-					<div class="space-y-12 lg:w-7/12 md:space-y-16 2xl:space-y-24">
-						<div class="divide-y divide-black divide-opacity-10">
-							<span class="block pb-4 text-base lg:text-2xl lg:pb-8 opacity-70">How it works</span>
+				<div class="container px-6 mx-auto space-y-20 lg:space-y-32 2xl:space-y-40 lg:px-12">
+					<div class="space-y-16 lg:space-y-24 2xl:space-y-32">
+						<div class="space-y-4 lg:space-y-6">
+							<div class="inline-flex items-center px-3 py-2 mb-2 text-lg leading-tight bg-white border border-black rounded-full md:px-4 md:text-2xl md:leading-tight lg:text-3xl">What is Design as a Service</div>
+							<h2 class="text-4xl leading-tight  md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7.5xl 3xl:text-8xl 3xl:leading-tight">We help companies be intentional about design and build better software <span class="font-serif italic">faster</span>.</h2>
+						</div>
+						
+						<div class="relative space-y-12 lg:flex lg:space-y-0 lg:gap-x-24 xl:gap-x-32">
+							<div class="relative w-full space-y-4 lg:space-y-8">
+								<h3 class="text-2xl leading-tight lg:text-3xl lg:leading-tight 2xl:text-4xl 2xl:leading-tight">We lay foundation</h3>
+								<p class="text-xl leading-normal lg:text-2xl lg:leading-normal 2xl:leading-relaxed text-black/80">We work with product teams to define visual design, streamline the user experience, and build better features with user research.</p>
+							</div>
 							
-							<div class="flex items-center py-6 space-x-6 lg:space-x-10 2xl:space-x-14 lg:py-8">
-								<span class="text-xl lg:text-2xl 2xl:text-3xl opacity-40">01</span>
-								
-								<div class="space-y-2">
-									<h3 class="text-2xl leading-tight md:text-3xl md:leading-tight lg:leading-tight lg:text-3xl">Select design task</h3>
-									<p class="text-lg leading-normal md:leading-normal md:text-xl text-black/70 lg:text-2xl lg:leading-relaxed">From a backlog filled with tasks, you choose your top priority.</p>
-								</div>
+							<div class="relative w-full space-y-4 lg:space-y-8">
+								<h3 class="text-2xl leading-tight lg:text-3xl lg:leading-tight 2xl:text-4xl 2xl:leading-tight">We build systems</h3>
+								<p class="text-xl leading-normal lg:text-2xl lg:leading-normal 2xl:leading-relaxed text-black/80">We’re systems thinkers and build rigid structures that allow for product teams to maintain and scale quickly without us.</p>
 							</div>
 
-							<div class="flex items-center py-6 space-x-6 lg:space-x-10 2xl:space-x-14 lg:py-8">
-								<span class="text-xl lg:text-2xl 2xl:text-3xl opacity-40">02</span>
-
-								<div class="space-y-2">
-									<h3 class="text-2xl leading-tight md:text-3xl md:leading-tight lg:leading-tight lg:text-3xl">First design iteration</h3>
-									<p class="text-lg leading-normal md:leading-normal md:text-xl text-black/70 lg:text-2xl lg:leading-relaxed">We design the first draft in three days.</p>
-								</div>
-							</div>
-
-							<div class="flex items-center py-6 space-x-6 lg:space-x-10 2xl:space-x-14 lg:py-8">
-								<span class="text-xl lg:text-2xl 2xl:text-3xl opacity-40">03</span>
-
-								<div class="space-y-2">
-									<h3 class="text-2xl leading-tight md:text-3xl md:leading-tight lg:leading-tight lg:text-3xl">Revision and feedback</h3>
-									<p class="text-lg leading-normal md:leading-normal md:text-xl text-black/70 lg:text-2xl lg:leading-relaxed">We work together to knock it out of the park. No flashy presentations.</p>
-								</div>
-							</div>
-
-							<div class="flex items-center py-6 space-x-6 lg:space-x-10 2xl:space-x-14 lg:py-8">
-								<span class="text-xl lg:text-2xl 2xl:text-3xl opacity-40">04</span>
-
-								<div class="space-y-2">
-									<h3 class="text-2xl leading-tight md:text-3xl md:leading-tight lg:leading-tight lg:text-3xl">Developer handover</h3>
-									<p class="text-lg leading-normal md:leading-normal md:text-xl text-black/70 lg:text-2xl lg:leading-relaxed">We openly document handovers, and we accommodate your developers.</p>
-								</div>
+							<div class="relative w-full space-y-4 lg:space-y-8">
+								<h3 class="text-2xl leading-tight lg:text-3xl lg:leading-tight 2xl:text-4xl 2xl:leading-tight">We’re creatives</h3>
+								<p class="text-xl leading-normal lg:text-2xl lg:leading-normal 2xl:leading-relaxed text-black/80">We love systems, but we also embrace exploration, innovation, and question how it’s always been done.</p>
 							</div>
 						</div>
-
-						<figure class="max-w-4xl space-y-6 transition duration-1000 2xl:max-w-4xl lg:space-y-8" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">
-							<blockquote>
-								<p class="w-full mt-8 text-2xl leading-normal md:text-3xl md:leading-normal lg:text-3xl lg:leading-normal">&ldquo;This hybrid employee solution is <span class="font-serif italic">the best of all worlds</span>. We get high quality and flexibility, and that’s generally hard to come by.&rdquo;</p>
-							</blockquote>
-		
-							<figcaption class="flex items-center">
-								<img class="object-cover rounded-lg pointer-events-none w-14 h-14 lg:w-20 lg:h-20" src="../media/wult-quote.jpg" alt="Profile picture of Rune Bromer from Wult." />
-								<div class="flex flex-col ml-4 leading-normal lg:ml-6 text-normal lg:text-xl">
-									Rune Bromer
-									<cite class="not-italic text-black/70">Co-founder at <a href="https://wult.io" class="text-link" target="_blank" rel="noopener">Wult</a></cite>
-								</div>
-							</figcaption>
-						</figure>
 					</div>
+
+					<figure class="max-w-4xl space-y-6 transition duration-1000 2xl:max-w-6xl lg:space-y-8" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">
+						<blockquote>
+							<p class="w-full mt-8 text-2xl leading-normal md:text-3xl md:leading-normal lg:text-4xl lg:leading-normal 2xl:text-5xl 2xl:leading-snug">&ldquo;The partnership is of great value to our company and <span class="font-serif italic">saves us huge amounts of time</span>.&rdquo;</p>
+						</blockquote>
+	
+						<figcaption class="flex items-center">
+							<img class="object-cover rounded-lg pointer-events-none w-14 h-14 lg:w-20 lg:h-20" src="../media/acc-quote.jpg" alt="Profile picture of Kasper Rasmussen from Accutics smiling." />
+							<div class="flex flex-col ml-4 leading-normal lg:ml-6 text-normal lg:text-xl">
+								Kasper Rasmussen
+								<cite class="not-italic text-black/70">Co-founder at <a href="https://accutics.com" class="text-link" target="_blank" rel="noopener">Accutics</a></cite>
+							</div>
+						</figcaption>
+					</figure>
 				</div>
 			</section>
 
-			<section class="pt-16 pb-20 text-white bg-black md:py-24 lg:py-32 2xl:py-40">
-				<div class="container relative px-6 mx-auto space-y-12 lg:px-12 lg:space-y-20 2xl:space-y-28">
-					<div class="w-full space-y-6 lg:space-y-12 lg:text-center">
-						<div class="space-y-4">
-							<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-7xl 2xl:leading-tight 2xl:text-8xl">Don’t let design slow down development</h2>
-							<p class="max-w-5xl mx-auto text-xl leading-normal md:leading-normal md:text-2xl lg:leading-relaxed lg:text-3xl">We use async video to help companies build better products.</p>
+			<section class="relative py-16 text-white bg-black md:py-24 lg:py-32 2xl:py-40">
+				<div class="container px-6 mx-auto space-y-20 lg:space-y-32 2xl:space-y-40 lg:px-12">
+					<div class="space-y-16 lg:space-y-24 2xl:space-y-32">
+						<div class="space-y-4 lg:space-y-6">
+							<div class="inline-flex items-center px-3 py-2 mb-2 text-lg leading-tight border border-white rounded-full md:px-4 md:text-2xl md:leading-tight lg:text-3xl">Working with us</div>
+							<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7.5xl 3xl:text-8xl 3xl:leading-tight">A long-term sparring partner, working hand-in-hand with founders, product owners, and engineers.</h2>
 						</div>
+						
+						<div class="relative space-y-12 lg:flex lg:space-y-0 lg:gap-x-24 xl:gap-x-32">
+							<div class="relative w-full space-y-4 lg:space-y-8">
+								<h3 class="text-2xl leading-tight lg:text-3xl lg:leading-tight 2xl:text-4xl 2xl:leading-tight"><span class="mr-2 text-white/60">01</span> Duration</h3>
+								<p class="text-xl leading-normal lg:text-2xl lg:leading-normal 2xl:leading-relaxed text-white/80">We typically recommend working on a retainer for a minimum of 6 months. Then, when design foundation is strong, we help you onboard your first designer.</p>
+							</div>
+							
+							<div class="relative w-full space-y-4 lg:space-y-8">
+								
+								<h3 class="text-2xl leading-tight lg:text-3xl lg:leading-tight 2xl:text-4xl 2xl:leading-tight"><span class="mr-2 text-white/60">02</span> Tempo</h3>
+								<p class="text-xl leading-normal lg:text-2xl lg:leading-normal 2xl:leading-relaxed text-white/80">We suggest aiming for three days of work per week, allowing us to integrate smoothly with your teams. To keep a steady pace, tasks need to be clearly defined ahead of time.</p>
+							</div>
 
-						<a href="https://savvycal.com/edl/daas" class="inline-block px-5 py-3 text-xl text-black bg-white rounded-full lg:px-8 lg:py-5 md:text-2xl 2xl:py-5 2xl:px-8 2xl:text-3xl" title="Schedule a video call to talk through the concept and your needs." target="_blank" rel="noopener">Book a discovery call</a>
+							<div class="relative w-full space-y-4 lg:space-y-8">
+								
+								<h3 class="text-2xl leading-tight lg:text-3xl lg:leading-tight 2xl:text-4xl 2xl:leading-tight"><span class="mr-2 text-white/60">03</span> Availability</h3>
+								<p class="text-xl leading-normal lg:text-2xl lg:leading-normal 2xl:leading-relaxed text-white/80">Our work happens in 4-hour blocks. We will accommodate your team’s schedule if the situation and context require a full-week sprint or a retainer based on specific days.</p>
+							</div>
+						</div>
 					</div>
-					
-					<div class="w-full space-y-6 2xl:space-y-8">
-						<video class="relative object-cover object-center w-full mx-auto rounded-sm lg:rounded-lg max-w-screen-2xl aspect-video" playsinline loop autoplay muted poster="/media/edl-reel-poster.jpg">
-							<source src="../media/daas-async-collab.webm" type="video/webm">
-							<source src="../media/daas-async-collab.mp4" type="video/mp4">
-							This browser does not support the HTML5 video element.
-						</video>
-					</div>
+
+					<figure class="max-w-4xl space-y-6 transition duration-1000 2xl:max-w-6xl lg:space-y-8" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">
+						<blockquote>
+							<p class="w-full mt-8 text-2xl leading-normal md:text-3xl md:leading-normal lg:text-4xl lg:leading-normal 2xl:text-5xl 2xl:leading-snug">&ldquo;This hybrid employee solution is <span class="font-serif italic">the best of all worlds</span>. We get high quality and flexibility, and that’s generally hard to come by.&rdquo;</p>
+						</blockquote>
+	
+						<figcaption class="flex items-center">
+							<img class="object-cover rounded-lg pointer-events-none w-14 h-14 lg:w-20 lg:h-20" src="../media/wult-quote.jpg" alt="Profile picture of Rune Bromer from Wult." />
+							<div class="flex flex-col ml-4 leading-normal lg:ml-6 text-normal lg:text-xl">
+								Rune Bromer
+								<cite class="not-italic text-white/70">Co-founder at <a href="https://wult.io" class="text-link" target="_blank" rel="noopener">Wult</a></cite>
+							</div>
+						</figcaption>
+					</figure>
 				</div>
 			</section>
 
 			<section class="relative py-16 md:py-24 lg:py-32 2xl:py-40">
-				<div class="container relative px-6 mx-auto space-y-8 lg:flex lg:items-start lg:space-y-0 lg:px-12 lg:gap-24 xl:gap-32 2xl:gap-48">
-					<div class="lg:w-5/12">
-						<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl">Good design is <span class="font-serif italic">good business</span></h2>
+				<div class="container px-6 mx-auto space-y-16 lg:space-y-24 lg:px-12 2xl:space-y-32">
+					<div class="space-y-4 lg:space-y-6">
+						<div class="inline-flex items-center px-3 py-2 mb-2 text-lg leading-tight bg-white border border-black rounded-full md:px-4 md:text-2xl md:leading-tight lg:text-3xl">What we do best</div>
+						<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7.5xl 3xl:text-8xl 3xl:leading-tight">Access to complementary skills far broader than any single designer.</h2>
 					</div>
 					
-					<div class="space-y-12 lg:w-7/12 md:space-y-16 2xl:space-y-24">						
-						<div class="divide-y divide-black divide-opacity-10">
-							<span class="block pb-4 text-base lg:text-2xl lg:pb-8 opacity-70">Metrics</span>
-							
-							<div class="flex items-center py-6 space-x-6 lg:space-x-10 2xl:space-x-14 lg:py-8">
-								<span class="text-xl lg:text-2xl 2xl:text-3xl opacity-40">01</span>
-								
-								<div class="space-y-2">
-									<h3 class="text-2xl leading-tight md:text-3xl md:leading-tight lg:leading-tight lg:text-3xl">User engagement</h3>
-								</div>
-							</div>
-
-							<div class="flex items-center py-6 space-x-6 lg:space-x-10 2xl:space-x-14 lg:py-8">
-								<span class="text-xl lg:text-2xl 2xl:text-3xl opacity-40">02</span>
-
-								<div class="space-y-2">
-									<h3 class="text-2xl leading-tight md:text-3xl md:leading-tight lg:leading-tight lg:text-3xl">Activation rate</h3>
-								</div>
-							</div>
-
-							<div class="flex items-center py-6 space-x-6 lg:space-x-10 2xl:space-x-14 lg:py-8">
-								<span class="text-xl lg:text-2xl 2xl:text-3xl opacity-40">03</span>
-
-								<div class="space-y-2">
-									<h3 class="text-2xl leading-tight md:text-3xl md:leading-tight lg:leading-tight lg:text-3xl">Retention rate</h3>
-								</div>
-							</div>
-
-							<div class="flex items-center py-6 space-x-6 lg:space-x-10 2xl:space-x-14 lg:py-8">
-								<span class="text-xl lg:text-2xl 2xl:text-3xl opacity-40">04</span>
-
-								<div class="space-y-2">
-									<h3 class="text-2xl leading-tight md:text-3xl md:leading-tight lg:leading-tight lg:text-3xl">Customer satisfaction</h3>
-								</div>
-							</div>
-
-							<div class="flex items-center py-6 space-x-6 lg:space-x-10 2xl:space-x-14 lg:py-8">
-								<span class="text-xl lg:text-2xl 2xl:text-3xl opacity-40">05</span>
-
-								<div class="space-y-2">
-									<h3 class="text-2xl leading-tight md:text-3xl md:leading-tight lg:leading-tight lg:text-3xl">Productivity</h3>
-								</div>
-							</div>
-
-							<div class="flex items-center py-6 space-x-6 lg:space-x-10 2xl:space-x-14 lg:py-8">
-								<span class="text-xl lg:text-2xl 2xl:text-3xl opacity-40">06</span>
-
-								<div class="space-y-2">
-									<h3 class="text-2xl leading-tight md:text-3xl md:leading-tight lg:leading-tight lg:text-3xl">Revenue growth</h3>
-								</div>
-							</div>
-						</div>
-
-						<figure class="max-w-4xl space-y-6 transition duration-1000 2xl:max-w-4xl lg:space-y-8" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">
-							<blockquote>
-								<p class="w-full mt-8 text-2xl leading-normal md:text-3xl md:leading-normal lg:text-4xl lg:leading-normal">&ldquo;The partnership is of great value to our company and <span class="font-serif italic">saves us huge amounts of time</span>.&rdquo;</p>
-							</blockquote>
-		
-							<figcaption class="flex items-center">
-								<img class="object-cover rounded-lg pointer-events-none w-14 h-14 lg:w-20 lg:h-20" src="../media/acc-quote.jpg" alt="Profile picture of Kasper Rasmussen from Accutics smiling." />
-								<div class="flex flex-col ml-4 leading-normal lg:ml-6 text-normal lg:text-xl">
-									Kasper Rasmussen
-									<cite class="not-italic text-black/70">Co-founder at <a href="https://accutics.com" class="text-link" target="_blank" rel="noopener">Accutics</a></cite>
-								</div>
-							</figcaption>
-						</figure>
-					</div>
-				</div>
-			</section>
-
-			<!-- Capabilities -->
-			<section class="pt-16 pb-20 text-white bg-black md:py-24 lg:py-32 2xl:py-48">
-				<div class="container relative px-6 mx-auto space-y-12 lg:flex lg:items-start lg:px-12 lg:space-y-0 lg:gap-24 xl:gap-32 2xl:gap-48">
-					<div class="sticky w-full max-w-2xl space-y-4 lg:top-20 lg:space-y-6">
-						<span class="inline-block text-xl leading-tight text-white/70 lg:text-2xl lg:leading-tight 2xl:text-3xl 2xl:leading-tight">Capabilities</span>
-						<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7xl">Freely choose what expertise to put into play</h2>
-					</div>
-					
-					<div class="w-full space-y-8">
-						<ul class="space-y-3 text-xl leading-snug 2xl:space-y-6 md:leading-tight md:text-2xl lg:text-3xl lg:leading-tight">
-							<li x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="flex items-center px-4 py-6 transition duration-1000 rounded-lg 2xl:rounded-2xl bg-white/10 md:p-6 lg:p-8">
-								<span class="relative inline-flex items-center justify-center w-8 h-8 mr-4 text-lg text-black bg-white rounded-full shrink-0 lg:mr-6 md:h-10 md:w-10 lg:w-12 lg:h-12 2xl:w-14 2xl:h-14 2xl:leading-tight 2xl:text-3xl">A</span>
-								
-								Rapid prototyping
-							</li>
-							
-							<li x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="flex items-center px-4 py-6 transition duration-1000 rounded-lg 2xl:rounded-2xl bg-white/10 md:p-6 lg:p-8">
-								<span class="relative inline-flex items-center justify-center w-8 h-8 mr-4 text-lg text-black bg-white rounded-full shrink-0 lg:mr-6 md:h-10 md:w-10 lg:w-12 lg:h-12 2xl:w-14 2xl:h-14 2xl:leading-tight 2xl:text-3xl">B</span>
-
-								User experience design
-							</li>
-							
-							<li x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="flex items-center px-4 py-6 transition duration-1000 rounded-lg 2xl:rounded-2xl bg-white/10 md:p-6 lg:p-8">
-								<span class="relative inline-flex items-center justify-center w-8 h-8 mr-4 text-lg text-black bg-white rounded-full shrink-0 lg:mr-6 md:h-10 md:w-10 lg:w-12 lg:h-12 2xl:w-14 2xl:h-14 2xl:leading-tight 2xl:text-3xl">C</span>
-
-								User interface design
-							</li>
-
-							<li x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="flex items-center px-4 py-6 transition duration-1000 rounded-lg 2xl:rounded-2xl bg-white/10 md:p-6 lg:p-8">
-								<span class="relative inline-flex items-center justify-center w-8 h-8 mr-4 text-lg text-black bg-white rounded-full shrink-0 lg:mr-6 md:h-10 md:w-10 lg:w-12 lg:h-12 2xl:w-14 2xl:h-14 2xl:leading-tight 2xl:text-3xl">D</span>
-								
-								Usability tests
-							</li>
-
-							<li x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="flex items-center px-4 py-6 transition duration-1000 rounded-lg 2xl:rounded-2xl bg-white/10 md:p-6 lg:p-8">
-								<span class="relative inline-flex items-center justify-center w-8 h-8 mr-4 text-lg text-black bg-white rounded-full shrink-0 lg:mr-6 md:h-10 md:w-10 lg:w-12 lg:h-12 2xl:w-14 2xl:h-14 2xl:leading-tight 2xl:text-3xl">E</span>
-								
-								Design systems
-							</li>
-
-							<li x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="flex items-center px-4 py-6 transition duration-1000 rounded-lg 2xl:rounded-2xl bg-white/10 md:p-6 lg:p-8">
-								<span class="relative inline-flex items-center justify-center w-8 h-8 mr-4 text-lg text-black bg-white rounded-full shrink-0 lg:mr-6 md:h-10 md:w-10 lg:w-12 lg:h-12 2xl:w-14 2xl:h-14 2xl:leading-tight 2xl:text-3xl">F</span>
-								
-								Roadmapping
-							</li>
-
-							<li x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="flex items-center px-4 py-6 transition duration-1000 rounded-lg 2xl:rounded-2xl bg-white/10 md:p-6 lg:p-8">
-								<span class="relative inline-flex items-center justify-center w-8 h-8 mr-4 text-lg text-black bg-white rounded-full shrink-0 lg:mr-6 md:h-10 md:w-10 lg:w-12 lg:h-12 2xl:w-14 2xl:h-14 2xl:leading-tight 2xl:text-3xl">G</span>
-								
-								Information architecture
-							</li>
-
-							<li x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="flex items-center px-4 py-6 transition duration-1000 rounded-lg 2xl:rounded-2xl bg-white/10 md:p-6 lg:p-8">
-								<span class="relative inline-flex items-center justify-center w-8 h-8 mr-4 text-lg text-black bg-white rounded-full shrink-0 lg:mr-6 md:h-10 md:w-10 lg:w-12 lg:h-12 2xl:w-14 2xl:h-14 2xl:leading-tight 2xl:text-3xl">H</span>
-								
-								Developer handover
-							</li>
-						</ul>
-
-						<div class="inline-flex flex-col text-lg leading-normal md:text-xl md:leading-normal xl:items-center xl:flex-row xl:space-x-2 lg:text-2xl lg:leading-normal">
-							<span class="text-white/80">Unsure about your needs?</span>
-
-							<a class="flex items-center space-x-1 text-white" title="Schedule a video call to talk through the concept and your needs." href="https://savvycal.com/edl/daas" target="_blank" rel="noopener">
-								<span class="underline underline-offset-4">Schedule a chat</span>
-								<svg class="w-5 h-5 lg:h-6 lg:w-6" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									<path d="M13.163 20L21 12l-7.837-8-1.347 1.375 5.545 5.643H3v1.964h14.361l-5.545 5.66L13.163 20z" fill="currentColor"/>
-								</svg>
-							</a>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!-- Plans -->
-			<section id="plans" class="relative pt-16 md:pt-24 lg:pt-32 2xl:pt-40">
-				<div class="container px-6 mx-auto space-y-12 md:space-y-12 lg:px-12 lg:space-y-20 2xl:space-y-28">
-					<div class="w-full space-y-10 text-center lg:space-y-16 2xl:space-y-20">
-						<div class="space-y-2 text-center md:space-y-4 lg:space-y-6">
-							<span class="inline-block text-xl leading-tight text-black/70 lg:text-2xl lg:leading-tight 2xl:text-3xl 2xl:leading-tight">Plans</span>
-							<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-7xl 2xl:leading-tight 2xl:text-8xl">For startups, scale-ups or established companies with <span class="font-serif italic">fluctuating design needs</span>.</h2>
-						</div>
-					</div>
-					
-					<div class="mx-auto space-y-8 md:space-y-0 gap-x-8 md:grid md:grid-cols-2 max-w-7xl" x-data="{ show: false }">
-						<!-- Basic -->
-						<div class="px-6 py-6 space-y-6 rounded-lg lg:space-y-8 md:p-6 2xl:rounded-2xl lg:p-10 bg-gray">
-							<header class="space-y-4 lg:space-y-5">
-								<h3 class="text-2xl leading-tight lg:leading-tight lg:text-3xl 2xl:text-4xl 2xl:leading-tight">Starter</h3>
-								<p class="text-xl leading-normal text-black/80 2xl:text-2xl 2xl:leading-normal">Perfect for small product teams with a single decision maker.</p>
-							</header>
-
-							<div class="space-y-1 lg:space-y-2">
-								<div class="text-3xl leading-tight lg:leading-tight lg:text-4xl 2xl:text-5xl 2xl:leading-tight">
-									<span class="inline-block">€3,549</span>
-									<span class="text-base leading-tight lg:leading-tight lg:text-lg text-black/60 2xl:text-xl 2xl:leading-tight">/ month</span>
-								</div>
-							</div>
-
-							<ul class="space-y-4 text-lg leading-snug md:leading-snug md:text-xl lg:leading-snug lg:text-2xl">
-								<li class="flex items-center space-x-3 lg:space-x-6">
-									<svg class="w-5 h-5 lg:w-6 lg:h-6 2xl:h-7 2xl:w-7" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M11.6438 21.2433L6 15.5913L4 17.498L11.6438 25.125L28 8.78162L26 6.875L11.6438 21.2433Z" fill="currentColor"/>
-									</svg>
-									
-									<span class="flex items-center">Design team <button class="tooltip" x-tooltip.raw.arrowless.theme.default="Our team has experts with complementary skills far broader than any single individual could excel at.">?</button></span>
-								</li>
-
-								<li class="flex items-center space-x-3 lg:space-x-6">
-									<svg class="w-5 h-5 lg:w-6 lg:h-6 2xl:h-7 2xl:w-7" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M11.6438 21.2433L6 15.5913L4 17.498L11.6438 25.125L28 8.78162L26 6.875L11.6438 21.2433Z" fill="currentColor"/>
-									</svg>
-									
-									<span class="flex items-center">Lead designer <button class="tooltip" x-tooltip.raw.arrowless.theme.default="You will be assigned a lead designer. An expert on your business, product, and users.">?</button></span>
-								</li>
-
-								<li class="flex items-center space-x-3 lg:space-x-6">
-									<svg class="w-5 h-5 lg:w-6 lg:h-6 2xl:h-7 2xl:w-7" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M11.6438 21.2433L6 15.5913L4 17.498L11.6438 25.125L28 8.78162L26 6.875L11.6438 21.2433Z" fill="currentColor"/>
-									</svg>
-
-									<span class="flex items-center">Unlimited revision <button class="tooltip" x-tooltip.raw.arrowless.theme.default="We iterate until you and your team are satisfied with the result.">?</button></span>
-								</li>
-
-								<li class="flex items-center space-x-3 lg:space-x-6">
-									<svg class="w-5 h-5 lg:w-6 lg:h-6 2xl:h-7 2xl:w-7" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M11.6438 21.2433L6 15.5913L4 17.498L11.6438 25.125L28 8.78162L26 6.875L11.6438 21.2433Z" fill="currentColor"/>
-									</svg>
-									
-									<span class="flex items-center">Component library <button class="tooltip" x-tooltip.raw.arrowless.theme.default="We maintain a documented library in Figma with UI components for your developers.">?</button></span>
-								</li>
-
-								<li class="flex items-center space-x-3 lg:space-x-6">
-									<svg class="w-5 h-5 lg:w-6 lg:h-6 2xl:h-7 2xl:w-7" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M11.6438 21.2433L6 15.5913L4 17.498L11.6438 25.125L28 8.78162L26 6.875L11.6438 21.2433Z" fill="currentColor"/>
-									</svg>
-									
-									<span class="flex items-center">Pause or cancel anytime <button class="tooltip" x-tooltip.raw.arrowless.theme.default="You can pause Design as a Service from month to month at any time.">?</button></span>
-								</li>
-
-								<li class="flex items-center space-x-3 lg:space-x-6">
-									<svg class="w-5 h-5 lg:w-6 lg:h-6 2xl:h-7 2xl:w-7" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M11.6438 21.2433L6 15.5913L4 17.498L11.6438 25.125L28 8.78162L26 6.875L11.6438 21.2433Z" fill="currentColor"/>
-									</svg>
-									
-									<span class="flex items-center">Source files <button class="tooltip" x-tooltip.raw.arrowless.theme.default="You can always ask for the source files if you wish to cancel the collaboration. No hard feelings.">?</button></span>
-								</li>
+					<div class="relative space-y-12 lg:flex lg:space-y-0 lg:gap-x-24 xl:gap-x-32">
+						<div class="relative w-full space-y-4 lg:space-y-8">
+							<h3 class="text-2xl leading-tight lg:text-3xl lg:leading-tight 2xl:leading-tight">Strategy</h3>
+							<ul class="space-y-4 text-2xl leading-tight lg:space-y-5 lg:text-3xl lg:leading-tight 2xl:leading-tight text-black/60">
+								<li>UX strategy</li>
+								<li>Brand strategy</li>
+								<li>Product strategy</li>
+								<li>Information architecture</li>
+								<li>Roadmapping</li>
 							</ul>
-
-							<div class="flex flex-col space-y-4 text-center">
-								<a class="inline-block px-6 py-4 mt-4 text-xl text-white bg-black rounded-full whitespace-nowrap md:w-auto md:px-8 lg:px-12 lg:py-5 lg:text-2xl" title="Get started with EDLs Design as a Service." href="https://savvycal.com/edl/getstarted" target="_blank" rel="noopener">Get started today</a>
-								
-								<div class="items-center text-base leading-snug text-center md:text-lg md:leading-snug lg:leading-snug lg:text-xl">
-									<span class="text-black/60">On the fence?</span>
-									<a class="inline-block py-2 underline underline-offset-4" title="Schedule a video call to talk through the concept and your needs." href="https://savvycal.com/edl/daas" target="_blank" rel="noopener">Let's chat</a>
-								</div>
-							</div>
 						</div>
 
-						<!-- Scale -->
-						<div class="px-6 pt-6 pb-8 space-y-6 border rounded-lg lg:space-y-8 md:p-6 lg:p-10 border-black/10 lg:border-none">
-							<header class="space-y-4 lg:space-y-5">
-								<h3 class="text-2xl leading-tight lg:leading-tight lg:text-3xl 2xl:text-4xl 2xl:leading-tight">Scale</h3>
-								<p class="text-xl leading-normal text-black/80 2xl:text-2xl 2xl:leading-normal">Designed for larger companies with more stakeholders and larger engineering teams.</p>
-							</header>
-							
-							<div class="space-y-1 lg:space-y-2">
-								<div class="text-3xl leading-tight lg:leading-tight lg:text-4xl 2xl:text-5xl 2xl:leading-tight">
-									<span>€5,499</span>
-									<span class="text-base leading-tight lg:leading-tight lg:text-lg text-black/60 2xl:text-xl 2xl:leading-tight">/ month</span>
-								</div>
-							</div>
-							
-							<ul class="space-y-4 text-lg leading-snug md:leading-snug md:text-xl lg:leading-snug lg:text-2xl">
-								<li class="flex items-center space-x-3 lg:space-x-6">
-									<svg class="w-5 h-5 lg:w-6 lg:h-6 2xl:h-7 2xl:w-7" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M11.6438 21.2433L6 15.5913L4 17.498L11.6438 25.125L28 8.78162L26 6.875L11.6438 21.2433Z" fill="currentColor"/>
-									</svg>
-									
-									<span class="flex items-center whitespace-pre-wrap">Everything from <span class="underline underline-offset-4 decoration-dotted">Starter</span></span>
-								</li>
-
-								<li class="flex items-center space-x-3 lg:space-x-6">
-									<svg class="w-5 h-5 lg:w-6 lg:h-6 2xl:h-7 2xl:w-7" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M11.6438 21.2433L6 15.5913L4 17.498L11.6438 25.125L28 8.78162L26 6.875L11.6438 21.2433Z" fill="currentColor"/>
-									</svg>
-									
-									<span class="flex items-center">Design system <button class="tooltip" x-tooltip.raw.arrowless.theme.default="A design system is a set of standards to manage design at scale by reducing redundancy while creating a shared language for the product team.">?</button></span>
-								</li>
-
-								<li class="flex items-center space-x-3 lg:space-x-6">
-									<svg class="w-5 h-5 lg:w-6 lg:h-6 2xl:h-7 2xl:w-7" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M11.6438 21.2433L6 15.5913L4 17.498L11.6438 25.125L28 8.78162L26 6.875L11.6438 21.2433Z" fill="currentColor"/>
-									</svg>
-									
-									<span class="flex items-center">Annual workshop <button class="tooltip" x-tooltip.raw.arrowless.theme.default="Once a year, EDL facilitates a workshop with your team centered around product improvements or design maturity.">?</button></span>
-								</li>
-
-								<li class="flex items-center space-x-3 lg:space-x-6">
-									<svg class="w-5 h-5 lg:w-6 lg:h-6 2xl:h-7 2xl:w-7" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M11.6438 21.2433L6 15.5913L4 17.498L11.6438 25.125L28 8.78162L26 6.875L11.6438 21.2433Z" fill="currentColor"/>
-									</svg>
-									
-									<span class="flex items-center">Biannual research review<button class="tooltip" x-tooltip.raw.arrowless.theme.default="Two times a year, we thoroughly test, examine, and evaluate the audience. Executives will receive a nice slideshow.">?</button></span>
-								</li>
+						<div class="relative w-full space-y-4 lg:space-y-8">
+							<h3 class="text-2xl leading-tight lg:text-3xl lg:leading-tight 2xl:leading-tight">Research</h3>
+							<ul class="space-y-4 text-2xl leading-tight lg:space-y-5 lg:text-3xl lg:leading-tight 2xl:leading-tight text-black/60">
+								<li>Market research</li>
+								<li>User research</li>
+								<li>Customer interviews</li>
+								<li>Usability tests</li>
 							</ul>
-
-							<div class="flex flex-col space-y-4 text-center">
-								<a class="inline-block px-6 py-4 mt-4 text-xl text-white bg-black rounded-full whitespace-nowrap md:w-auto md:px-8 lg:px-12 lg:py-5 lg:text-2xl" title="Get started with EDLs Design as a Service." href="https://savvycal.com/edl/getstarted" target="_blank" rel="noopener">Get started today</a>
-								
-								<div class="items-center text-base leading-snug text-center md:text-lg md:leading-snug lg:leading-snug lg:text-xl">
-									<span class="text-black/60">On the fence?</span>
-									<a class="inline-block py-2 underline underline-offset-4" title="Schedule a video call to talk through the concept and your needs." href="https://savvycal.com/edl/daas" target="_blank" rel="noopener">Let's chat</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			
-			<!-- FAQ -->
-			<section class="py-16 md:py-24 lg:py-32 2xl:py-40">
-				<div class="container px-6 mx-auto space-y-8 lg:px-12 md:space-y-12 lg:space-y-16">
-					<div class="space-y-4 lg:text-center">
-						<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7xl">Frequently asked questions</h2>
-						<p class="max-w-5xl mx-auto text-xl leading-normal md:leading-normal md:text-2xl lg:leading-relaxed lg:text-3xl">Please do not hesitate to reach out.</p>
-					</div>
-
-					<div x-data="{ active: 0 }" class="max-w-4xl mx-auto md:space-y-3 lg:space-y-4 2xl:max-w-6xl">
-						<div x-data="{ id: 1, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20 md:border md:border-black md:rounded-md">
-							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
-								<span>How to get started?</span>
-								
-								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>
-							</button>
-
-							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 2xl:px-8 lg:pb-8 lg:text-2xl lg:leading-relaxed">
-								<p><a class="underline underline-offset-4" title="Get started with EDLs Design as a Service." href="https://savvycal.com/edl/getstarted" target="_blank" rel="noopener">Schedule an initial meeting</a> with our CEO, Frederick, where your needs are coordinated. Is design as a service even right for you?</p>
-								<p>When the practical details are in order, the fun begins. You choose a task, and we deliver our first design within a few days.</p>
-							</div>
 						</div>
 						
-						<div x-data="{ id: 2, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20 md:border md:border-black md:rounded-md">
-							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
-								<span>Why don’t I just hire a full-time designer?</span>
-
-								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>
-							</button>
-
-							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 2xl:px-8 lg:pb-8 lg:text-2xl lg:leading-relaxed">
-								<p>The best designers are already working full-time.</p>
-								<p>It can be a hard sell to convince them to jump ship. Especially for smaller startups or larger organizations where design hasn’t been prioritized.</p>
-								<p>Another big reason is commitment and flexibility. You can easily pause Design as a Service for one or two months. A full-time designer needs to be occupied with relevant tasks all day every day.</p>
-							</div>
-						</div>
-
-						<div x-data="{ id: 3, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20 md:border md:border-black md:rounded-md">
-							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
-								<span>Is it really unlimited revision?</span>
-
-								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>
-							</button>
-
-							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 2xl:px-8 lg:text-2xl lg:leading-relaxed">
-								<p>We iterate your design until you are satisfied. We are skilled at hitting the mark on the first attempt, but some situations require revision or alternatives.</p>
-								<p>We are happy to help with that.</p>
-							</div>
-						</div>
-
-						<div x-data="{ id: 4, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20 md:border md:border-black md:rounded-md">
-							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
-								<span>Who designs for me?</span>
-
-								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>
-							</button>
-
-							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 2xl:px-8 lg:text-2xl lg:leading-relaxed">
-								<p>You will be assigned a specialized designer who will gradually become an expert within your business, product, and target group.</p>
-								<p>We always try to match new customers with a designer who has the right balance of industry knowledge and curious uncertainty.</p>
-								<p>Innovation flourishes best under these conditions.</p>
-							</div>
-						</div>
-
-						<div x-data="{ id: 5, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20 md:border md:border-black md:rounded-md">
-							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
-								<span>What happens if I cancel the subscription?</span>
-
-								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>
-							</button>
-
-							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 2xl:px-8 lg:text-2xl lg:leading-relaxed">
-								<p>You can cancel and pause your subscription. If the subscription is paused, you can resume the following month.</p>
-								<p>If you choose to cancel, source files and other relevant material will be handed over so that you are free to continue working on your own.</p>
-							</div>
-						</div>
-
-						<div x-data="{ id: 6, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20 md:border md:border-black md:rounded-md">
-							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
-								<span>What’s the delivery time?</span>
-
-								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>
-							</button>
-
-							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 2xl:px-8 lg:text-2xl lg:leading-relaxed">
-								<p>We deliver some design tasks in a few hours, while other more complex tasks can take several days.</p>
-								<p>We deliver finished solutions with an average duration of three days. We’ll address if a task should be broken down.</p>
-							</div>
+						<div class="relative w-full space-y-4 lg:space-y-8">
+							<h3 class="text-2xl leading-tight lg:text-3xl lg:leading-tight 2xl:leading-tight">Design</h3>
+							<ul class="space-y-4 text-2xl leading-tight lg:space-y-5 lg:text-3xl lg:leading-tight 2xl:leading-tight text-black/60">
+								<li>UX design</li>
+								<li>Software design</li>
+								<li>Visual design</li>
+								<li>Design systems</li>
+								<li>Developer handover</li>
+							</ul>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<!-- Call to action -->
-			<section class="pb-16 md:pb-24 lg:pb-32 2xl:pb-48">
-				<div class="container px-6 mx-auto space-y-8 lg:px-12 md:space-y-12 lg:space-y-16">
-					<article class="flex flex-col items-start p-8 mx-auto space-y-6 text-white bg-black rounded-lg md:space-y-8 lg:items-center lg:space-y-0 2xl:rounded-2xl lg:flex-row lg:space-x-12 md:p-10 lg:p-12 2xl:p-16">
-						<div class="w-full space-y-2 lg:space-y-2">
-							<h3 class="text-3xl leading-tight md:text-4xl md:leading-tight lg:leading-tight lg:text-5xl 2xl:leading-tight">Sounds interesting?</h3>
-							<p class="max-w-3xl text-xl leading-normal md:text-2xl md:leading-normal lg:leading-normal lg:text-3xl">Schedule a 30-minute video call to talk through the concept and your needs.</p>
-						</div>
+			<!-- Contact Frederick -->
+			<section class="relative pb-16 md:pb-24 lg:pb-32 2xl:pb-40">
+				<div class="container px-6 mx-auto lg:px-12">
+					<article class="p-8 text-white bg-black rounded-lg lg:p-12 2xl:p-16 md:space-y-0 md:flex md:gap-10 lg:gap-16 2xl:gap-20">
+						<img class="hidden object-cover rounded-md md:h-64 md:block aspect-square lg:h-104" src="../media/edl-frederick-andersen.png" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
 
-						<a class="inline-block px-5 py-3 text-xl text-center text-black bg-white rounded-full shrink-0 md:text-left lg:px-8 lg:py-5 md:text-xl lg:text-2xl 2xl:py-5 2xl:px-8 2xl:text-3xl" title="Schedule a video call to talk through the concept and your needs." href="https://savvycal.com/edl/daas" target="_blank" rel="noopener">Schedule call</a>
+						<div class="flex flex-col justify-between space-y-8">
+							<div class="space-y-4">
+								<h3 class="text-3xl leading-tight lg:leading-tight lg:text-4xl 2xl:leading-tight 2xl:text-5xl">Got any questions?</h3>
+								<p class="max-w-5xl mx-auto text-xl leading-normal lg:leading-relaxed lg:text-2xl 2xl:leading-relaxed 2xl:text-3xl">Frederick is always available if you have any questions regarding Design as a Service.</p>
+							</div>
+
+							<img class="object-cover w-40 h-40 rounded-lg md:hidden" src="../media/edl-frederick-andersen.png" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
+
+							<div class="space-y-4 text-lg leading-normal lg:text-xl lg:leading-normal 2xl:text-2xl 2xl:leading-normal">
+								<h3>Frederick J. Andersen</h3>
+								<span class="opacity-60">Designer & CEO</span>
+
+								<div>
+									<a href="mailto:fa@edl.dk" class="block underline underline-offset-4" title="Frederick love emails. Please be so kind and send him one.">fa@edl.dk</a>
+									<a href="tel:+4528253694" class="block underline underline-offset-4" title="Call Frederick and chat about design and business.">28 25 36 94</a>
+									<a href="https://www.linkedin.com/in/frederickjanandersen/" class="block underline underline-offset-4" target="blank" rel="noopener" title="Read more about Frederick Andersen on LinkedIn.">LinkedIn</a>
+								</div>
+							</div>
+						</div>
 					</article>
 				</div>
 			</section>
