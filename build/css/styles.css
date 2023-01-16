@@ -1160,8 +1160,12 @@ select{
   margin-top: 0.5rem;
 }
 
-.mt-40{
-  margin-top: 10rem;
+.ml-1{
+  margin-left: 0.25rem;
+}
+
+.ml-2{
+  margin-left: 0.5rem;
 }
 
 .block{
@@ -1214,6 +1218,10 @@ select{
 
 .h-3{
   height: 0.75rem;
+}
+
+.h-2{
+  height: 0.5rem;
 }
 
 .h-14{
@@ -1304,6 +1312,10 @@ select{
   width: 0.75rem;
 }
 
+.w-2{
+  width: 0.5rem;
+}
+
 .w-1\/4{
   width: 25%;
 }
@@ -1388,12 +1400,12 @@ select{
   max-width: 1536px;
 }
 
-.max-w-screen-md{
-  max-width: 768px;
-}
-
 .max-w-screen-3xl{
   max-width: 2000px;
+}
+
+.max-w-screen-md{
+  max-width: 768px;
 }
 
 .flex-1{
@@ -1493,12 +1505,6 @@ select{
 
 .list-disc{
   list-style-type: disc;
-}
-
-.appearance-none{
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
 }
 
 .break-after-column{
@@ -1759,10 +1765,6 @@ select{
   border-radius: 0.125rem;
 }
 
-.rounded-2xl{
-  border-radius: 1rem;
-}
-
 .rounded-t-3xl{
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
@@ -1796,26 +1798,6 @@ select{
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
-.border-black\/40{
-  border-color: rgb(0 0 0 / 0.4);
-}
-
-.border-black\/25{
-  border-color: rgb(0 0 0 / 0.25);
-}
-
-.border-white\/25{
-  border-color: rgb(255 255 255 / 0.25);
-}
-
-.border-white\/30{
-  border-color: rgb(255 255 255 / 0.3);
-}
-
-.border-black\/80{
-  border-color: rgb(0 0 0 / 0.8);
 }
 
 .border-opacity-20{
@@ -1877,14 +1859,6 @@ select{
 
 .bg-white\/10{
   background-color: rgb(255 255 255 / 0.1);
-}
-
-.bg-white\/5{
-  background-color: rgb(255 255 255 / 0.05);
-}
-
-.bg-white\/20{
-  background-color: rgb(255 255 255 / 0.2);
 }
 
 .bg-opacity-50{
@@ -2134,10 +2108,6 @@ select{
 
 .pt-40{
   padding-top: 10rem;
-}
-
-.text-left{
-  text-align: left;
 }
 
 .text-center{
@@ -2632,6 +2602,10 @@ select{
     margin-top: 0px;
   }
 
+  .md\:ml-2{
+    margin-left: 0.5rem;
+  }
+
   .md\:block{
     display: block;
   }
@@ -2936,6 +2910,11 @@ select{
     line-height: 1.75rem;
   }
 
+  .md\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
   .md\:leading-tight{
     line-height: 1.25;
   }
@@ -3042,6 +3021,10 @@ select{
 
   .lg\:mt-0{
     margin-top: 0px;
+  }
+
+  .lg\:ml-2{
+    margin-left: 0.5rem;
   }
 
   .lg\:flex{
@@ -3410,6 +3393,18 @@ select{
     margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
   }
 
+  .lg\:space-y-10 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+  }
+
+  .lg\:space-y-32 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(8rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(8rem * var(--tw-space-y-reverse));
+  }
+
   .lg\:space-x-16 > :not([hidden]) ~ :not([hidden]){
     --tw-space-x-reverse: 0;
     margin-right: calc(4rem * var(--tw-space-x-reverse));
@@ -3426,18 +3421,6 @@ select{
     --tw-space-x-reverse: 0;
     margin-right: calc(2rem * var(--tw-space-x-reverse));
     margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  .lg\:space-y-32 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-y-reverse: 0;
-    margin-top: calc(8rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(8rem * var(--tw-space-y-reverse));
-  }
-
-  .lg\:space-y-10 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-y-reverse: 0;
-    margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
   }
 
   .lg\:self-center{
@@ -3552,11 +3535,6 @@ select{
   .lg\:px-6{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-  }
-
-  .lg\:py-10{
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
   }
 
   .lg\:py-3{
@@ -3716,6 +3694,11 @@ select{
 
   .lg\:text-4\.5xl{
     font-size: 2.75rem;
+  }
+
+  .lg\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   .lg\:leading-normal{
@@ -3923,11 +3906,6 @@ select{
     row-gap: 8rem;
   }
 
-  .\32xl\:gap-x-48{
-    -moz-column-gap: 12rem;
-         column-gap: 12rem;
-  }
-
   .\32xl\:gap-x-40{
     -moz-column-gap: 10rem;
          column-gap: 10rem;
@@ -3987,22 +3965,10 @@ select{
     margin-bottom: calc(7rem * var(--tw-space-y-reverse));
   }
 
-  .\32xl\:space-x-8 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-x-reverse: 0;
-    margin-right: calc(2rem * var(--tw-space-x-reverse));
-    margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  .\32xl\:space-y-32 > :not([hidden]) ~ :not([hidden]){
+  .\32xl\:space-y-14 > :not([hidden]) ~ :not([hidden]){
     --tw-space-y-reverse: 0;
-    margin-top: calc(8rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(8rem * var(--tw-space-y-reverse));
-  }
-
-  .\32xl\:space-y-48 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-y-reverse: 0;
-    margin-top: calc(12rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(12rem * var(--tw-space-y-reverse));
+    margin-top: calc(3.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(3.5rem * var(--tw-space-y-reverse));
   }
 
   .\32xl\:space-y-40 > :not([hidden]) ~ :not([hidden]){
@@ -4011,10 +3977,10 @@ select{
     margin-bottom: calc(10rem * var(--tw-space-y-reverse));
   }
 
-  .\32xl\:space-y-14 > :not([hidden]) ~ :not([hidden]){
+  .\32xl\:space-y-32 > :not([hidden]) ~ :not([hidden]){
     --tw-space-y-reverse: 0;
-    margin-top: calc(3.5rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(3.5rem * var(--tw-space-y-reverse));
+    margin-top: calc(8rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(8rem * var(--tw-space-y-reverse));
   }
 
   .\32xl\:rounded-2xl{
@@ -4162,16 +4128,8 @@ select{
     grid-column: span 4 / span 4;
   }
 
-  .\33xl\:col-span-5{
-    grid-column: span 5 / span 5;
-  }
-
   .\33xl\:col-start-5{
     grid-column-start: 5;
-  }
-
-  .\33xl\:col-start-6{
-    grid-column-start: 6;
   }
 
   .\33xl\:py-32{
