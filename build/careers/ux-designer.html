@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+	<head>
+    	<meta charset="UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>UX Designer – EDL</title>
+
+		<meta name="title" content="We’re hiring a UX Designer!">
+    	<meta name="description" content="Help startups and established companies succeed with design as a UX Designer in the Copenhagen-based design agency, EDL.">
+		
+		<meta property="og:title" content="We’re hiring a UX Designer!">
+    	<meta property="og:description" content="Help startups and established companies succeed with design as a UX Designer in the Copenhagen-based design agency, EDL.">
+		<meta property="og:site_name" content="EDL®">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="https://www.edl.dk/media/og-jobs-ux-designer.jpg">
+
+		<link rel="icon" href="../favicon.png">
+		<link rel="stylesheet" href="../css/styles.css">
+
+		<script defer="">
+			/* https://github.com/madmurphy/cookies.js (GPL3) */
+			!function(){function e(e,o,t,n,r,s,i){var c="";if(t)switch(t.constructor){case Number:c=t===1/0?"; expires=Fri, 31 Dec 9999 23:59:59 GMT":"; max-age="+t;break;case String:c="; expires="+t;break;case Date:c="; expires="+t.toUTCString()}return encodeURIComponent(e)+"="+encodeURIComponent(o)+c+(r?"; domain="+r:"")+(n?"; path="+n:"")+(s?"; secure":"")+(i&&"no_restriction"!==i.toString().toLowerCase()?"lax"===i.toString().toLowerCase()||1===Math.ceil(i)||!0===i?"; samesite=lax":"none"===i.toString().toLowerCase()||i<0?"; samesite=none":"; samesite=strict":"")}var o=/[\-\.\+\*]/g,t=/^(?:expires|max\-age|path|domain|secure|samesite|httponly)$/i;window.docCookies={getItem:function(e){return e&&decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*"+encodeURIComponent(e).replace(o,"\\$&")+"\\s*\\=\\s*([^;]*).*$)|^.*$"),"$1"))||null},setItem:function(o,n,r,s,i,c,a){return!(!o||t.test(o))&&(document.cookie=e(o,n,r,s,i,c,a),!0)},removeItem:function(o,t,n,r,s){return!!this.hasItem(o)&&(document.cookie=e(o,"","Thu, 01 Jan 1970 00:00:00 GMT",t,n,r,s),!0)},hasItem:function(e){return!(!e||t.test(e))&&new RegExp("(?:^|;\\s*)"+encodeURIComponent(e).replace(o,"\\$&")+"\\s*\\=").test(document.cookie)},keys:function(){for(var e=document.cookie.replace(/((?:^|\s*;)[^\=]+)(?=;|$)|^\s*|\s*(?:\=[^;]*)?(?:\1|$)/g,"").split(/\s*(?:\=[^;]*)?;\s*/),o=e.length,t=0;t<o;t++)e[t]=decodeURIComponent(e[t]);return e},clear:function(e,o,t,n){for(var r=this.keys(),s=r.length,i=0;i<s;i++)this.removeItem(r[i],e,o,t,n)}}}(),"undefined"!=typeof module&&void 0!==module.exports&&(module.exports=docCookies);
+		</script>
+
+		<script defer src="https://unpkg.com/@alpinejs/intersect@3.10.4/dist/cdn.min.js"></script>
+		<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+	</head>
+
+	<body class="overflow-x-hidden font-sans antialiased">
+		<div class="relative hidden w-full px-12 py-4 text-center text-white bg-black hover:bg-black/80 md:block lg:px-24" x-data="{ hide_banner: true, cookie_name: 'announcement-daas' }" x-init="hide_banner = docCookies.hasItem(cookie_name) ? (docCookies.getItem(cookie_name) == 'true') : false;" x-bind:class="{ 'hidden': hide_banner, 'relative hidden md:block': !hide_banner }">
+			<a href="/services/design-service.html" class="block w-full space-x-2 text-base link lg:text-xl lg:leading-normal 2xl:text-2xl 2xl:leading-normal" @click="hide_banner = true; docCookies.setItem(cookie_name, true, (60*24*60*60));">
+				<span class="opacity-80">Latest update</span>
+				<span>Don’t hire a design team, subscribe to one</span>
+			</a>
+			
+			<button type="button" class="absolute z-10 flex items-center justify-center w-8 h-8 ease-in-out -translate-y-1/2 rounded-md hover:bg-white/20 right-2 lg:right-4 top-1/2" @click="hide_banner = true; docCookies.setItem(cookie_name, true, (60*24*60*60));" aria-label="Dismiss">✕</button>
+		</div>
+
+		<header>
+			<div class="container px-6 py-6 mx-auto lg:px-12">
+				<nav class="space-y-4 sm:space-y-0 sm:flex sm:items-center sm:justify-between sm:flex-1 sm:h-16 lg:h-20">
+					<a href="/" title="Go to the homepage."><svg class="w-auto h-10 lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40"><path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/></svg></a>
+
+					<div class="flex">
+						<a href="/services.html" class="py-2 pr-4 text-lg lg:pr-8 lg:text-xl xl:text-2xl" title="See how we can help you, and how we plan to do it.">Services</a>
+						<a href="/work.html" class="px-4 py-2 text-lg lg:px-8 lg:text-xl xl:text-2xl" title="Follow along as we design deliverables for our clients.">Work</a>
+						<a href="/careers.html" class="flex items-center px-4 py-2 text-lg underline underline-offset-4 lg:px-8 lg:text-xl xl:text-2xl" title="Come work with a talented team of designers.">Careers <span class="flex items-center justify-center w-4 h-4 ml-1 text-xs text-white bg-black rounded-full lg:text-sm lg:ml-2 lg:w-6 lg:h-6">2</span></a>
+						<a href="/contact.html" class="py-2 pl-4 text-lg lg:pl-8 lg:text-xl xl:text-2xl" title="Swing by for a cup of coffee.">Contact</a>
+					</div>
+				</nav>	
+			</div>
+		</header>
+
+		<main>
+			<nav class="container items-center hidden px-6 mx-auto space-x-4 text-lg lg:px-12 md:flex lg:text-xl 2xl:text-2xl">
+				<a class="text-link " href="/careers.html" title="View all our services and learn about our approach.">Careers</a>
+				<span class="opacity-40">▸</span>
+				<span class="opacity-70">UX Designer</span>
+			</nav>
+
+			<section class="relative pt-4 sm:pt-12 lg:pt-24 3xl:pt-32">
+				<div class="container w-full px-6 mx-auto space-y-8 transition duration-1000 lg:px-12 md:space-y-12 lg:space-y-16 2xl:space-y-20" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">
+					<div class="space-y-6 lg:space-y-8 2xl:space-y-10">
+						<div class="inline-flex items-center px-3 py-2 mb-2 text-lg leading-tight bg-white border rounded-full md:px-4 md:text-2xl md:leading-tight"><span class="block w-3 h-3 mr-2 rounded-full md:w-4 md:h-4 md:mr-4 bg-green"></span>Active</div>
+						<h1 class="w-full text-4xl leading-tight md:leading-tight md:text-5xl lg:text-7.5xl lg:leading-[1.2] xl:leading-[1.2] xl:text-8xl 2xl:leading-[1.2] 2xl:text-8.5xl 3xl:text-9xl 3xl:leading-[1.2]">UX Designer</h1>
+					</div>
+
+					<div class="flex gap-x-16 2xl:gap-x-32">
+						<div class="space-y-1">
+							<span class="inline-block text-lg lg:text-xl text-black/60">Location</span>
+							<p class="text-lg lg:text-xl">Copenhagen</p>
+						</div>
+
+						<div class="space-y-1">
+							<span class="inline-block text-lg lg:text-xl text-black/60">Job type</span>
+							<p class="text-lg lg:text-xl">Full-time, On-site</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="relative pt-12 pb-16 md:py-16 lg:py-20 2xl:py-28">
+				<div class="container px-6 mx-auto lg:px-12">
+					<div class="max-w-4xl text-xl leading-normal lg:leading-relaxed lg:text-2xl">
+						<h2 class="mb-4 text-3xl leading-normal md:text-4xl md:leading-snug lg:mb-8 lg:leading-snug lg:text-5xl">EDL is growing our design team of passionate people on a mission to help incredible companies succeed with design.</h2>
+
+						<div class="space-y-4 lg:space-y-6">
+							<p>EDL is a small, Copenhagen-based design agency helping early-stage and established companies make their complex technologies a joy to use.</p>
+							<p>We specialize in discovering, designing, and scaling products through user research, UX design, UI design, and design systems.</p>
+							<p>We embed ourselves into our clients’ product teams and help them succeed fast.</p>
+						</div>
+
+						<h3 class="mt-8 mb-4 text-2xl leading-tight md:text-3xl md:leading-tight lg:mb-8 lg:mt-12 lg:leading-tight lg:text-4xl 2xl:mt-16">What you’ll do at EDL</h3>
+						
+						<div class="space-y-4 lg:space-y-6">
+							<ul class="pb-4 pl-10 space-y-4 list-disc lg:pl-16">
+								<li class="pl-2 lg:pl-4">Help shape our growing UX research team.</li>
+								<li class="pl-2 lg:pl-4">Contribute to the overall strategy and decision-making of our client’s product direction.</li>
+								<li class="pl-2 lg:pl-4">Conduct and facilitate user research, including user interviews, surveys, and usability testing.</li>
+								<li class="pl-2 lg:pl-4">Create, collaborate, and iterate on flows and prototypes in Figma.</li>
+								<li class="pl-2 lg:pl-4">Work cross-functionally with product management, engineering, research, and design peers.</li>
+								<li class="pl-2 lg:pl-4">Deliver and refine clear storytelling around product needs and opportunities for clients and colleagues.</li>
+							</ul>
+						</div>
+
+						<h3 class="mt-8 mb-4 text-2xl leading-tight md:text-3xl md:leading-tight lg:mb-8 lg:mt-12 lg:leading-tight lg:text-4xl 2xl:mt-16">We’d love to hear from you if you</h3>
+						
+						<div class="space-y-4 lg:space-y-6">
+							<ul class="pb-4 pl-10 space-y-4 list-disc lg:pl-16">
+								<li class="pl-2 lg:pl-4">Speak and write fluently in Danish and are also confident in English.</li>
+								<li class="pl-2 lg:pl-4">Love using data and user feedback to iterate on designs.</li>
+								<li class="pl-2 lg:pl-4">Thrive when collaborating with other designers and partnering with founders, product managers, and engineers.</li>
+								<li class="pl-2 lg:pl-4">Enjoy coming up with novel but technically feasible solutions.</li>
+								<li class="pl-2 lg:pl-4">Have good written and verbal communication and presentation skills.</li>								
+								<li class="pl-2 lg:pl-4">Are well-versed in Figma, Dovetail, or other research software.</li>
+								<li class="pl-2 lg:pl-4">Are generally a good-spirited, emphatic, and well-meaning person.</li>
+							</ul>
+						</div>
+
+						<h3 class="mt-8 mb-4 text-2xl leading-tight md:text-3xl md:leading-tight lg:mb-8 lg:mt-12 lg:leading-tight lg:text-4xl 2xl:mt-16">What you get</h3>
+						
+						<div class="space-y-4 lg:space-y-6">
+							<ul class="pb-4 pl-10 space-y-4 list-disc lg:pl-16">
+								<li class="pl-2 lg:pl-4">Personal growth with 1:1’s and varied design tasks.</li>
+								<li class="pl-2 lg:pl-4">An opportunity to have a lasting impact on our client’s success.</li>
+								<li class="pl-2 lg:pl-4">Work with ambitious founders and leaders from emerging industries.</li>
+								<li class="pl-2 lg:pl-4">An opportunity to help define EDL as a growing workplace.</li>
+								<li class="pl-2 lg:pl-4">A beautiful workspace at <a href="https://woods-office.dk/augusthus/" target="_blank" role="noopener" class="underline underline-offset-4" title="Have a look at our beautiful offices!">Woods Augusthus</a> (100 meters from DR Byen).</li>
+								<li class="pl-2 lg:pl-4">All the coffee and tea you can drink.</li>
+								<li class="pl-2 lg:pl-4">Healthy lunch all week from the on-site kitchen.</li>
+								<li class="pl-2 lg:pl-4">Friday bars, gatherings, and activities with partners and clients.</li>
+							</ul>
+						</div>
+
+						<h4 class="mt-8 mb-4 text-2xl leading-tight md:text-3xl md:leading-tight 2xl:mt-16">Is this something for you?</h4>
+						
+						<div class="space-y-4 lg:space-y-6">
+							<p>Please send your application along with your CV and portfolio to <a href="mailto:careers@edl.dk?subject=Product Designer" class="underline underline-offset-4" title="Send an e-mail regarding the Product Designer position.">careers@edl.dk</a>. Again, we value great attention to detail, even in job applications.</p>						
+							<p>Expect to hear from us within a week or two. We’ll begin interviewing in February.</p>
+							<p>Questions about the job? Don’t hesitate to <a href="mailto:fa@edl.dk?subject=Questions about UX Designer position" class="underline underline-offset-4" title="Send Frederick questions about the position.">reach out to Frederick</a>.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		
+		<footer>
+			<div class="container px-6 mx-auto space-y-16 lg:space-y-28 lg:px-12">
+				<div class="flex justify-between w-full pb-8 md:pb-16">
+					<a class="inline-block text-lg underline underline-offset-4 2xl:text-xl hover:opacity-80" href="https://linkedin.com/company/edldesign" target="_blank" rel="noopener" title="View EDL’s profile on LinkedIn.">LinkedIn</a>
+					
+					<span class="text-lg 2xl:text-xl">&copy; 2023 EDL</span>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
