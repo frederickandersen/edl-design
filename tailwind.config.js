@@ -1,8 +1,14 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
     content: [
         './build/**/*.{html,js}'
     ],
     theme: {
+        screens: {
+            'xs': '375px',
+            ...defaultTheme.screens,
+        },
         fontFamily: {
             'sans': ['"Helvetica Neue LT W05 55 Roman"', '"Helvetica Neue"', 'Arial', 'sans-serif'],
             'serif': ['"Neco"', 'Times', 'serif'],
