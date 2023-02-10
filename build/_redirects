@@ -8,4 +8,5 @@
 /trial /services/start-trial
 /services/ux-evaluation /services/evaluation
 /career /career/junior-ux-designer 302
+/career/product-designer /careers/product-designer
 https://edl.design/* https://www.edl.dk/:splat 301!
