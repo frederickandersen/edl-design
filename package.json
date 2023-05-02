@@ -1,7 +1,7 @@
 {
   "name": "edl-design",
   "version": "1.0.0",
-  "description": "Website for digital design agency, EDL",
+  "description": "Website for digital design studio, EDL",
   "scripts": {
     "dev": "concurrently \"npm run watch\" \"npm run serve\"",
     "serve": "live-server ./build",
