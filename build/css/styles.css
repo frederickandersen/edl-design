@@ -1073,20 +1073,12 @@ select{
   margin-left: -0.5rem;
 }
 
-.mt-4{
-  margin-top: 1rem;
-}
-
 .mr-1\.5{
   margin-right: 0.375rem;
 }
 
 .mr-1{
   margin-right: 0.25rem;
-}
-
-.mr-6{
-  margin-right: 1.5rem;
 }
 
 .mt-8{
@@ -1121,6 +1113,14 @@ select{
   margin-right: 0.5rem;
 }
 
+.mt-4{
+  margin-top: 1rem;
+}
+
+.mr-6{
+  margin-right: 1.5rem;
+}
+
 .ml-8{
   margin-left: 2rem;
 }
@@ -1147,10 +1147,6 @@ select{
 
 .mt-2{
   margin-top: 0.5rem;
-}
-
-.mb-24{
-  margin-bottom: 6rem;
 }
 
 .block{
@@ -1209,6 +1205,10 @@ select{
   height: 0.75rem;
 }
 
+.h-96{
+  height: 24rem;
+}
+
 .h-14{
   height: 3.5rem;
 }
@@ -1259,10 +1259,6 @@ select{
 
 .h-20{
   height: 5rem;
-}
-
-.h-96{
-  height: 24rem;
 }
 
 .max-h-256{
@@ -1349,10 +1345,6 @@ select{
   max-width: 48rem;
 }
 
-.max-w-2xl{
-  max-width: 42rem;
-}
-
 .max-w-4xl{
   max-width: 56rem;
 }
@@ -1363,6 +1355,10 @@ select{
 
 .max-w-lg{
   max-width: 32rem;
+}
+
+.max-w-2xl{
+  max-width: 42rem;
 }
 
 .max-w-7xl{
@@ -1484,16 +1480,6 @@ select{
   list-style-type: disc;
 }
 
-.break-before-all{
-  -moz-column-break-before: all;
-       break-before: all;
-}
-
-.break-before-column{
-  -moz-column-break-before: column;
-       break-before: column;
-}
-
 .break-after-column{
   -moz-column-break-after: column;
        break-after: column;
@@ -1501,10 +1487,6 @@ select{
 
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.flex-row{
-  flex-direction: row;
 }
 
 .flex-col{
@@ -1573,16 +1555,6 @@ select{
        column-gap: 4rem;
 }
 
-.gap-x-8{
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
-}
-
-.gap-x-24{
-  -moz-column-gap: 6rem;
-       column-gap: 6rem;
-}
-
 .space-x-2 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -1625,6 +1597,12 @@ select{
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
+.space-x-4 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .space-y-1 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1655,12 +1633,6 @@ select{
   margin-bottom: calc(5rem * var(--tw-space-y-reverse));
 }
 
-.space-x-4 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-x-reverse: 0;
-  margin-right: calc(1rem * var(--tw-space-x-reverse));
-  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
 .space-y-5 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1677,12 +1649,6 @@ select{
   --tw-space-x-reverse: 0;
   margin-right: calc(0.25rem * var(--tw-space-x-reverse));
   margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.space-x-16 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-x-reverse: 0;
-  margin-right: calc(4rem * var(--tw-space-x-reverse));
-  margin-left: calc(4rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .divide-y > :not([hidden]) ~ :not([hidden]){
@@ -1959,14 +1925,19 @@ select{
   padding-bottom: 0.5rem;
 }
 
+.py-8{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .py-16{
   padding-top: 4rem;
   padding-bottom: 4rem;
-}
-
-.py-1{
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
 }
 
 .py-20{
@@ -1984,9 +1955,9 @@ select{
   padding-right: 1rem;
 }
 
-.py-3{
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .px-5{
@@ -1997,11 +1968,6 @@ select{
 .py-12{
   padding-top: 3rem;
   padding-bottom: 3rem;
-}
-
-.py-8{
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
 .py-5{
@@ -2028,6 +1994,10 @@ select{
 
 .pb-16{
   padding-bottom: 4rem;
+}
+
+.pt-16{
+  padding-top: 4rem;
 }
 
 .pb-4{
@@ -2078,20 +2048,12 @@ select{
   padding-top: 10rem;
 }
 
-.pt-16{
-  padding-top: 4rem;
-}
-
 .pb-6{
   padding-bottom: 1.5rem;
 }
 
 .pl-4{
   padding-left: 1rem;
-}
-
-.pb-2{
-  padding-bottom: 0.5rem;
 }
 
 .text-center{
@@ -2145,14 +2107,14 @@ select{
   line-height: 2.25rem;
 }
 
-.text-xs{
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .text-4\.5xl{
@@ -2188,8 +2150,16 @@ select{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-black\/70{
-  color: rgb(0 0 0 / 0.7);
+.text-white\/70{
+  color: rgb(255 255 255 / 0.7);
+}
+
+.text-white\/60{
+  color: rgb(255 255 255 / 0.6);
+}
+
+.text-black\/60{
+  color: rgb(0 0 0 / 0.6);
 }
 
 .text-black{
@@ -2197,16 +2167,8 @@ select{
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.text-white\/60{
-  color: rgb(255 255 255 / 0.6);
-}
-
-.text-white\/70{
-  color: rgb(255 255 255 / 0.7);
-}
-
-.text-black\/60{
-  color: rgb(0 0 0 / 0.6);
+.text-black\/70{
+  color: rgb(0 0 0 / 0.7);
 }
 
 .text-blue{
@@ -2234,14 +2196,6 @@ select{
 
 .underline-offset-4{
   text-underline-offset: 4px;
-}
-
-.underline-offset-2{
-  text-underline-offset: 2px;
-}
-
-.underline-offset-8{
-  text-underline-offset: 8px;
 }
 
 .antialiased{
@@ -2548,6 +2502,12 @@ select{
     margin-left: -0.5rem;
   }
 
+  .xs\:space-y-0 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+
   .xs\:px-2\.5{
     padding-left: 0.625rem;
     padding-right: 0.625rem;
@@ -2597,6 +2557,12 @@ select{
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+
+  .sm\:space-x-2 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .sm\:px-4{
@@ -2669,6 +2635,10 @@ select{
     height: 16rem;
   }
 
+  .md\:h-120{
+    height: 30rem;
+  }
+
   .md\:h-14{
     height: 3.5rem;
   }
@@ -2703,10 +2673,6 @@ select{
 
   .md\:h-12{
     height: 3rem;
-  }
-
-  .md\:h-120{
-    height: 30rem;
   }
 
   .md\:max-h-160{
@@ -2788,6 +2754,12 @@ select{
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
+  .md\:space-y-6 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+  }
+
   .md\:space-y-16 > :not([hidden]) ~ :not([hidden]){
     --tw-space-y-reverse: 0;
     margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
@@ -2800,22 +2772,10 @@ select{
     margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
   }
 
-  .md\:space-y-6 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-y-reverse: 0;
-    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-  }
-
   .md\:space-y-8 > :not([hidden]) ~ :not([hidden]){
     --tw-space-y-reverse: 0;
     margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(2rem * var(--tw-space-y-reverse));
-  }
-
-  .md\:space-y-10 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-y-reverse: 0;
-    margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
   }
 
   .md\:rounded-md{
@@ -2839,6 +2799,11 @@ select{
     padding: 0px;
   }
 
+  .md\:py-16{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
   .md\:py-24{
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -2847,11 +2812,6 @@ select{
   .md\:px-4{
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-
-  .md\:py-16{
-    padding-top: 4rem;
-    padding-bottom: 4rem;
   }
 
   .md\:py-4{
@@ -2920,6 +2880,11 @@ select{
     line-height: 2.25rem;
   }
 
+  .md\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
   .md\:text-2xl{
     font-size: 1.5rem;
     line-height: 2rem;
@@ -2928,11 +2893,6 @@ select{
   .md\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
-  }
-
-  .md\:text-base{
-    font-size: 1rem;
-    line-height: 1.5rem;
   }
 
   .md\:text-xl{
@@ -2954,14 +2914,6 @@ select{
 
   .md\:leading-relaxed{
     line-height: 1.625;
-  }
-
-  .md\:leading-none{
-    line-height: 1;
-  }
-
-  .md\:leading-10{
-    line-height: 2.5rem;
   }
 }
 
@@ -3092,6 +3044,10 @@ select{
     height: 26rem;
   }
 
+  .lg\:h-auto{
+    height: auto;
+  }
+
   .lg\:h-120{
     height: 30rem;
   }
@@ -3114,10 +3070,6 @@ select{
 
   .lg\:h-8{
     height: 2rem;
-  }
-
-  .lg\:h-auto{
-    height: auto;
   }
 
   .lg\:h-4{
@@ -3212,12 +3164,12 @@ select{
     width: 1.5rem;
   }
 
-  .lg\:max-w-5xl{
-    max-width: 64rem;
-  }
-
   .lg\:max-w-6xl{
     max-width: 72rem;
+  }
+
+  .lg\:max-w-5xl{
+    max-width: 64rem;
   }
 
   .lg\:max-w-7xl{
@@ -3244,11 +3196,6 @@ select{
   .lg\:columns-2{
     -moz-columns: 2;
          columns: 2;
-  }
-
-  .lg\:columns-3{
-    -moz-columns: 3;
-         columns: 3;
   }
 
   .lg\:grid-cols-contact{
@@ -3354,46 +3301,10 @@ select{
     margin-bottom: calc(7rem * var(--tw-space-y-reverse));
   }
 
-  .lg\:space-y-6 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-y-reverse: 0;
-    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-  }
-
-  .lg\:space-y-14 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-y-reverse: 0;
-    margin-top: calc(3.5rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(3.5rem * var(--tw-space-y-reverse));
-  }
-
-  .lg\:space-x-3 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-x-reverse: 0;
-    margin-right: calc(0.75rem * var(--tw-space-x-reverse));
-    margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
   .lg\:space-y-0 > :not([hidden]) ~ :not([hidden]){
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
-  }
-
-  .lg\:space-y-2 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-y-reverse: 0;
-    margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
-  }
-
-  .lg\:space-y-4 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-y-reverse: 0;
-    margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1rem * var(--tw-space-y-reverse));
-  }
-
-  .lg\:space-x-10 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-x-reverse: 0;
-    margin-right: calc(2.5rem * var(--tw-space-x-reverse));
-    margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .lg\:space-y-12 > :not([hidden]) ~ :not([hidden]){
@@ -3402,16 +3313,28 @@ select{
     margin-bottom: calc(3rem * var(--tw-space-y-reverse));
   }
 
-  .lg\:space-x-12 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-x-reverse: 0;
-    margin-right: calc(3rem * var(--tw-space-x-reverse));
-    margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
+  .lg\:space-y-4 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1rem * var(--tw-space-y-reverse));
   }
 
-  .lg\:space-x-4 > :not([hidden]) ~ :not([hidden]){
+  .lg\:space-x-24 > :not([hidden]) ~ :not([hidden]){
     --tw-space-x-reverse: 0;
-    margin-right: calc(1rem * var(--tw-space-x-reverse));
-    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+    margin-right: calc(6rem * var(--tw-space-x-reverse));
+    margin-left: calc(6rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .lg\:space-x-6 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .lg\:space-y-6 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
   }
 
   .lg\:space-y-10 > :not([hidden]) ~ :not([hidden]){
@@ -3420,22 +3343,52 @@ select{
     margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
   }
 
+  .lg\:space-x-4 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem * var(--tw-space-x-reverse));
+    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .lg\:space-x-3 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+    margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .lg\:space-y-2 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+  }
+
+  .lg\:space-x-10 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-x-reverse: 0;
+    margin-right: calc(2.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .lg\:space-x-12 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-x-reverse: 0;
+    margin-right: calc(3rem * var(--tw-space-x-reverse));
+    margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .lg\:space-y-32 > :not([hidden]) ~ :not([hidden]){
     --tw-space-y-reverse: 0;
     margin-top: calc(8rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(8rem * var(--tw-space-y-reverse));
   }
 
+  .lg\:space-y-14 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(3.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(3.5rem * var(--tw-space-y-reverse));
+  }
+
   .lg\:space-y-20 > :not([hidden]) ~ :not([hidden]){
     --tw-space-y-reverse: 0;
     margin-top: calc(5rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(5rem * var(--tw-space-y-reverse));
-  }
-
-  .lg\:space-x-6 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-x-reverse: 0;
-    margin-right: calc(1.5rem * var(--tw-space-x-reverse));
-    margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .lg\:space-y-5 > :not([hidden]) ~ :not([hidden]){
@@ -3460,12 +3413,6 @@ select{
     --tw-space-x-reverse: 0;
     margin-right: calc(2rem * var(--tw-space-x-reverse));
     margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  .lg\:space-x-24 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-x-reverse: 0;
-    margin-right: calc(6rem * var(--tw-space-x-reverse));
-    margin-left: calc(6rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .lg\:self-center{
@@ -3525,6 +3472,11 @@ select{
     padding-bottom: 6rem;
   }
 
+  .lg\:py-32{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
   .lg\:px-7{
     padding-left: 1.75rem;
     padding-right: 1.75rem;
@@ -3533,11 +3485,6 @@ select{
   .lg\:py-4{
     padding-top: 1rem;
     padding-bottom: 1rem;
-  }
-
-  .lg\:py-32{
-    padding-top: 8rem;
-    padding-bottom: 8rem;
   }
 
   .lg\:py-8{
@@ -3588,6 +3535,10 @@ select{
     padding-bottom: 8rem;
   }
 
+  .lg\:pt-16{
+    padding-top: 4rem;
+  }
+
   .lg\:pb-40{
     padding-bottom: 10rem;
   }
@@ -3614,10 +3565,6 @@ select{
 
   .lg\:pt-40{
     padding-top: 10rem;
-  }
-
-  .lg\:pt-16{
-    padding-top: 4rem;
   }
 
   .lg\:pt-32{
@@ -3664,10 +3611,6 @@ select{
     padding-left: 3rem;
   }
 
-  .lg\:pt-20{
-    padding-top: 5rem;
-  }
-
   .lg\:text-center{
     text-align: center;
   }
@@ -3700,14 +3643,14 @@ select{
     line-height: 2rem;
   }
 
-  .lg\:text-6xl{
-    font-size: 3.75rem;
-    line-height: 1;
+  .lg\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
-  .lg\:text-base{
-    font-size: 1rem;
-    line-height: 1.5rem;
+  .lg\:text-8xl{
+    font-size: 6rem;
+    line-height: 1;
   }
 
   .lg\:text-5xl{
@@ -3720,18 +3663,18 @@ select{
     line-height: 1;
   }
 
-  .lg\:text-lg{
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+  .lg\:text-6xl{
+    font-size: 3.75rem;
+    line-height: 1;
   }
 
   .lg\:text-4\.5xl{
     font-size: 2.75rem;
   }
 
-  .lg\:text-8xl{
-    font-size: 6rem;
-    line-height: 1;
+  .lg\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .lg\:leading-normal{
@@ -3808,10 +3751,6 @@ select{
   .xl\:px-8{
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-
-  .xl\:pt-24{
-    padding-top: 6rem;
   }
 
   .xl\:text-2xl{
@@ -3927,6 +3866,11 @@ select{
     gap: 12rem;
   }
 
+  .\32xl\:gap-x-24{
+    -moz-column-gap: 6rem;
+         column-gap: 6rem;
+  }
+
   .\32xl\:gap-x-32{
     -moz-column-gap: 8rem;
          column-gap: 8rem;
@@ -3941,11 +3885,6 @@ select{
          column-gap: 10rem;
   }
 
-  .\32xl\:gap-x-24{
-    -moz-column-gap: 6rem;
-         column-gap: 6rem;
-  }
-
   .\32xl\:space-y-20 > :not([hidden]) ~ :not([hidden]){
     --tw-space-y-reverse: 0;
     margin-top: calc(5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -3958,10 +3897,16 @@ select{
     margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
   }
 
-  .\32xl\:space-y-6 > :not([hidden]) ~ :not([hidden]){
+  .\32xl\:space-y-16 > :not([hidden]) ~ :not([hidden]){
     --tw-space-y-reverse: 0;
-    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+    margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(4rem * var(--tw-space-y-reverse));
+  }
+
+  .\32xl\:space-y-12 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(3rem * var(--tw-space-y-reverse));
   }
 
   .\32xl\:space-y-24 > :not([hidden]) ~ :not([hidden]){
@@ -3970,16 +3915,16 @@ select{
     margin-bottom: calc(6rem * var(--tw-space-y-reverse));
   }
 
+  .\32xl\:space-y-6 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+  }
+
   .\32xl\:space-x-14 > :not([hidden]) ~ :not([hidden]){
     --tw-space-x-reverse: 0;
     margin-right: calc(3.5rem * var(--tw-space-x-reverse));
     margin-left: calc(3.5rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  .\32xl\:space-y-12 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-y-reverse: 0;
-    margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(3rem * var(--tw-space-y-reverse));
   }
 
   .\32xl\:space-y-14 > :not([hidden]) ~ :not([hidden]){
@@ -4006,12 +3951,6 @@ select{
     margin-bottom: calc(8rem * var(--tw-space-y-reverse));
   }
 
-  .\32xl\:space-y-16 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-y-reverse: 0;
-    margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(4rem * var(--tw-space-y-reverse));
-  }
-
   .\32xl\:space-y-28 > :not([hidden]) ~ :not([hidden]){
     --tw-space-y-reverse: 0;
     margin-top: calc(7rem * calc(1 - var(--tw-space-y-reverse)));
@@ -4020,10 +3959,6 @@ select{
 
   .\32xl\:rounded-2xl{
     border-radius: 1rem;
-  }
-
-  .\32xl\:rounded-xl{
-    border-radius: 0.75rem;
   }
 
   .\32xl\:p-16{
@@ -4035,6 +3970,11 @@ select{
     padding-bottom: 8rem;
   }
 
+  .\32xl\:py-40{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
   .\32xl\:py-5{
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
@@ -4043,11 +3983,6 @@ select{
   .\32xl\:px-8{
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-
-  .\32xl\:py-40{
-    padding-top: 10rem;
-    padding-bottom: 10rem;
   }
 
   .\32xl\:py-28{
@@ -4069,6 +4004,14 @@ select{
     padding-bottom: 10rem;
   }
 
+  .\32xl\:pt-24{
+    padding-top: 6rem;
+  }
+
+  .\32xl\:pt-32{
+    padding-top: 8rem;
+  }
+
   .\32xl\:pb-32{
     padding-bottom: 8rem;
   }
@@ -4087,14 +4030,6 @@ select{
 
   .\32xl\:pt-96{
     padding-top: 24rem;
-  }
-
-  .\32xl\:pt-24{
-    padding-top: 6rem;
-  }
-
-  .\32xl\:pt-32{
-    padding-top: 8rem;
   }
 
   .\32xl\:align-bottom{
@@ -4125,18 +4060,9 @@ select{
     line-height: 1;
   }
 
-  .\32xl\:text-7\.5xl{
-    font-size: 5.25rem;
-  }
-
   .\32xl\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
-  }
-
-  .\32xl\:text-lg{
-    font-size: 1.125rem;
-    line-height: 1.75rem;
   }
 
   .\32xl\:text-6xl{
@@ -4147,6 +4073,10 @@ select{
   .\32xl\:text-8xl{
     font-size: 6rem;
     line-height: 1;
+  }
+
+  .\32xl\:text-7\.5xl{
+    font-size: 5.25rem;
   }
 
   .\32xl\:text-7xl{
@@ -4191,10 +4121,6 @@ select{
 
   .\33xl\:pt-32{
     padding-top: 8rem;
-  }
-
-  .\33xl\:pt-24{
-    padding-top: 6rem;
   }
 
   .\33xl\:text-9xl{
