@@ -6,8 +6,8 @@
 /session /services/designsession
 /services/design-abonnement /services/design-service
 /work/smooth-robotics /work
-/trial /services/start-trial
+/services/start-trial /trial
 /services/ux-evaluation /services/evaluation
-/career /careers/junior-ux-designer 302
+/career /careers
 /career/product-designer /careers/product-designer
 https://edl.design/* https://www.edl.dk/:splat 301!
