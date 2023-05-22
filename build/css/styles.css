@@ -1076,16 +1076,12 @@ select{
   margin-left: -0.5rem;
 }
 
-.ml-4{
-  margin-left: 1rem;
-}
-
-.mb-5{
-  margin-bottom: 1.25rem;
-}
-
 .mt-4{
   margin-top: 1rem;
+}
+
+.ml-4{
+  margin-left: 1rem;
 }
 
 .mr-1\.5{
@@ -1184,12 +1180,12 @@ select{
   height: 2.5rem;
 }
 
-.h-6{
-  height: 1.5rem;
-}
-
 .h-full{
   height: 100%;
+}
+
+.h-6{
+  height: 1.5rem;
 }
 
 .h-40{
@@ -1557,16 +1553,16 @@ select{
   margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-y-12 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-y-reverse: 0;
-  margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(3rem * var(--tw-space-y-reverse));
-}
-
 .space-y-1 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+
+.space-y-12 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(3rem * var(--tw-space-y-reverse));
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]){
@@ -1683,6 +1679,11 @@ select{
   border-top-width: 1px;
 }
 
+.border-white{
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
 .border-white\/20{
   border-color: rgb(255 255 255 / 0.2);
 }
@@ -1690,11 +1691,6 @@ select{
 .border-black{
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
-}
-
-.border-white{
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 .border-black\/20{
@@ -1742,14 +1738,14 @@ select{
   background-color: rgb(242 242 242 / var(--tw-bg-opacity));
 }
 
-.bg-mint-blue{
-  --tw-bg-opacity: 1;
-  background-color: rgb(199 211 222 / var(--tw-bg-opacity));
-}
-
 .bg-orange{
   --tw-bg-opacity: 1;
   background-color: rgb(255 117 68 / var(--tw-bg-opacity));
+}
+
+.bg-mint-blue{
+  --tw-bg-opacity: 1;
+  background-color: rgb(199 211 222 / var(--tw-bg-opacity));
 }
 
 .bg-mint-green{
@@ -1996,14 +1992,19 @@ select{
   line-height: 1.75rem;
 }
 
-.text-4xl{
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-sm{
@@ -2014,19 +2015,6 @@ select{
 .text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-xs{
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
-.text-\[0\.5rem\]{
-  font-size: 0.5rem;
-}
-
-.text-\[0\.25rem\]{
-  font-size: 0.25rem;
 }
 
 .not-italic{
@@ -2096,10 +2084,6 @@ select{
 
 .underline-offset-4{
   text-underline-offset: 4px;
-}
-
-.underline-offset-8{
-  text-underline-offset: 8px;
 }
 
 .antialiased{
@@ -2587,12 +2571,6 @@ select{
     margin-bottom: calc(3rem * var(--tw-space-y-reverse));
   }
 
-  .md\:space-y-16 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-y-reverse: 0;
-    margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(4rem * var(--tw-space-y-reverse));
-  }
-
   .md\:space-y-3 > :not([hidden]) ~ :not([hidden]){
     --tw-space-y-reverse: 0;
     margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
@@ -2603,6 +2581,12 @@ select{
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+
+  .md\:space-y-16 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(4rem * var(--tw-space-y-reverse));
   }
 
   .md\:space-y-6 > :not([hidden]) ~ :not([hidden]){
@@ -2705,6 +2689,11 @@ select{
     line-height: 1;
   }
 
+  .md\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
   .md\:text-5xl{
     font-size: 3rem;
     line-height: 1;
@@ -2713,11 +2702,6 @@ select{
   .md\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
-  }
-
-  .md\:text-base{
-    font-size: 1rem;
-    line-height: 1.5rem;
   }
 
   .md\:text-2xl{
@@ -2799,10 +2783,6 @@ select{
     margin-right: -1.5rem;
   }
 
-  .lg\:mb-8{
-    margin-bottom: 2rem;
-  }
-
   .lg\:mt-1{
     margin-top: 0.25rem;
   }
@@ -2813,6 +2793,10 @@ select{
 
   .lg\:mb-16{
     margin-bottom: 4rem;
+  }
+
+  .lg\:mb-8{
+    margin-bottom: 2rem;
   }
 
   .lg\:mt-12{
@@ -2911,14 +2895,6 @@ select{
     max-height: 40rem;
   }
 
-  .lg\:w-1\/3{
-    width: 33.333333%;
-  }
-
-  .lg\:w-2\/3{
-    width: 66.666667%;
-  }
-
   .lg\:w-7{
     width: 1.75rem;
   }
@@ -2929,6 +2905,10 @@ select{
 
   .lg\:w-20{
     width: 5rem;
+  }
+
+  .lg\:w-2\/3{
+    width: 66.666667%;
   }
 
   .lg\:w-11{
@@ -3017,12 +2997,12 @@ select{
     justify-content: center;
   }
 
-  .lg\:gap-24{
-    gap: 6rem;
-  }
-
   .lg\:gap-16{
     gap: 4rem;
+  }
+
+  .lg\:gap-24{
+    gap: 6rem;
   }
 
   .lg\:gap-8{
@@ -3071,18 +3051,6 @@ select{
     margin-bottom: calc(7rem * var(--tw-space-y-reverse));
   }
 
-  .lg\:space-y-0 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-y-reverse: 0;
-    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(0px * var(--tw-space-y-reverse));
-  }
-
-  .lg\:space-y-4 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-y-reverse: 0;
-    margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1rem * var(--tw-space-y-reverse));
-  }
-
   .lg\:space-y-6 > :not([hidden]) ~ :not([hidden]){
     --tw-space-y-reverse: 0;
     margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -3093,6 +3061,18 @@ select{
     --tw-space-y-reverse: 0;
     margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+  }
+
+  .lg\:space-y-4 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+  }
+
+  .lg\:space-y-0 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
   .lg\:space-y-12 > :not([hidden]) ~ :not([hidden]){
@@ -3355,14 +3335,14 @@ select{
     line-height: 2.25rem;
   }
 
-  .lg\:text-6xl{
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
   .lg\:text-2xl{
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .lg\:text-6xl{
+    font-size: 3.75rem;
+    line-height: 1;
   }
 
   .lg\:text-lg{
@@ -3580,12 +3560,12 @@ select{
     max-width: 48rem;
   }
 
-  .\32xl\:gap-48{
-    gap: 12rem;
-  }
-
   .\32xl\:gap-20{
     gap: 5rem;
+  }
+
+  .\32xl\:gap-48{
+    gap: 12rem;
   }
 
   .\32xl\:gap-x-24{
@@ -3610,12 +3590,6 @@ select{
     margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
   }
 
-  .\32xl\:space-y-24 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-y-reverse: 0;
-    margin-top: calc(6rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(6rem * var(--tw-space-y-reverse));
-  }
-
   .\32xl\:space-y-16 > :not([hidden]) ~ :not([hidden]){
     --tw-space-y-reverse: 0;
     margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
@@ -3626,6 +3600,12 @@ select{
     --tw-space-y-reverse: 0;
     margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(3rem * var(--tw-space-y-reverse));
+  }
+
+  .\32xl\:space-y-24 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(6rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(6rem * var(--tw-space-y-reverse));
   }
 
   .\32xl\:space-x-14 > :not([hidden]) ~ :not([hidden]){
@@ -3759,9 +3739,9 @@ select{
     line-height: 1.75rem;
   }
 
-  .\32xl\:text-6xl{
-    font-size: 3.75rem;
-    line-height: 1;
+  .\32xl\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .\32xl\:text-7\.5xl{
@@ -3773,23 +3753,23 @@ select{
     line-height: 2.25rem;
   }
 
+  .\32xl\:text-7xl{
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
   .\32xl\:text-5xl{
     font-size: 3rem;
     line-height: 1;
   }
 
-  .\32xl\:text-4xl{
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+  .\32xl\:text-6xl{
+    font-size: 3.75rem;
+    line-height: 1;
   }
 
   .\32xl\:text-8xl{
     font-size: 6rem;
-    line-height: 1;
-  }
-
-  .\32xl\:text-7xl{
-    font-size: 4.5rem;
     line-height: 1;
   }
 
@@ -3801,12 +3781,12 @@ select{
     line-height: 1.2;
   }
 
-  .\32xl\:leading-tight{
-    line-height: 1.25;
-  }
-
   .\32xl\:leading-relaxed{
     line-height: 1.625;
+  }
+
+  .\32xl\:leading-tight{
+    line-height: 1.25;
   }
 
   .\32xl\:leading-snug{
