@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+	<head>
+    	<meta charset="UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>A team of digital design specialists · EDL</title>
+
+		<meta name="title" content="A team of digital design specialists · EDL">
+    	<meta name="description" content="We’ve created a new kind of studio. EDL® combines killer branding with user-friendly digital design, all to make your product pop and your users’ world a little brighter.">
+
+		<meta property="og:title" content="A team of digital design specialists · EDL" />
+    	<meta property="og:description" content="We’ve created a new kind of studio. EDL® combines killer branding with user-friendly digital design, all to make your product pop and your users’ world a little brighter." />
+		<meta property="og:site_name" content="EDL®" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.edl.dk/about" />
+		<meta property="og:image" content="https://www.edl.dk/media/open-graph.jpg" />
+
+		<link rel="icon" href="./favicon.png">
+		<link rel="stylesheet" href="./css/styles.css">
+
+		<script defer="">
+			/* https://github.com/madmurphy/cookies.js (GPL3) */
+			!function(){function e(e,o,t,n,r,s,i){var c="";if(t)switch(t.constructor){case Number:c=t===1/0?"; expires=Fri, 31 Dec 9999 23:59:59 GMT":"; max-age="+t;break;case String:c="; expires="+t;break;case Date:c="; expires="+t.toUTCString()}return encodeURIComponent(e)+"="+encodeURIComponent(o)+c+(r?"; domain="+r:"")+(n?"; path="+n:"")+(s?"; secure":"")+(i&&"no_restriction"!==i.toString().toLowerCase()?"lax"===i.toString().toLowerCase()||1===Math.ceil(i)||!0===i?"; samesite=lax":"none"===i.toString().toLowerCase()||i<0?"; samesite=none":"; samesite=strict":"")}var o=/[\-\.\+\*]/g,t=/^(?:expires|max\-age|path|domain|secure|samesite|httponly)$/i;window.docCookies={getItem:function(e){return e&&decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*"+encodeURIComponent(e).replace(o,"\\$&")+"\\s*\\=\\s*([^;]*).*$)|^.*$"),"$1"))||null},setItem:function(o,n,r,s,i,c,a){return!(!o||t.test(o))&&(document.cookie=e(o,n,r,s,i,c,a),!0)},removeItem:function(o,t,n,r,s){return!!this.hasItem(o)&&(document.cookie=e(o,"","Thu, 01 Jan 1970 00:00:00 GMT",t,n,r,s),!0)},hasItem:function(e){return!(!e||t.test(e))&&new RegExp("(?:^|;\\s*)"+encodeURIComponent(e).replace(o,"\\$&")+"\\s*\\=").test(document.cookie)},keys:function(){for(var e=document.cookie.replace(/((?:^|\s*;)[^\=]+)(?=;|$)|^\s*|\s*(?:\=[^;]*)?(?:\1|$)/g,"").split(/\s*(?:\=[^;]*)?;\s*/),o=e.length,t=0;t<o;t++)e[t]=decodeURIComponent(e[t]);return e},clear:function(e,o,t,n){for(var r=this.keys(),s=r.length,i=0;i<s;i++)this.removeItem(r[i],e,o,t,n)}}}(),"undefined"!=typeof module&&void 0!==module.exports&&(module.exports=docCookies);
+		</script>
+
+		<script defer src="https://unpkg.com/@alpinejs/intersect@3.10.4/dist/cdn.min.js"></script>
+		<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+	</head>
+
+	<body class="overflow-x-hidden font-sans antialiased">
+		<div class="relative hidden w-full px-12 py-4 text-center text-white bg-black/80 hover:bg-black/70 md:block lg:px-24" x-data="{ hide_banner: true, cookie_name: 'announcement-daas' }" x-init="hide_banner = docCookies.hasItem(cookie_name) ? (docCookies.getItem(cookie_name) == 'true') : false;" x-bind:class="{ 'hidden': hide_banner, 'relative hidden md:block': !hide_banner }">
+			<a href="/services/design-service.html" class="block w-full space-x-2 text-base link lg:text-xl lg:leading-normal 2xl:text-2xl 2xl:leading-normal" @click="hide_banner = true; docCookies.setItem(cookie_name, true, (60*24*60*60));">
+				<span class="opacity-80">Latest update</span>
+				<span>Don’t hire a design team, subscribe to one</span>
+			</a>
+			
+			<button type="button" class="absolute z-10 flex items-center justify-center w-8 h-8 ease-in-out -translate-y-1/2 rounded-md hover:bg-white/20 right-2 lg:right-4 top-1/2" @click="hide_banner = true; docCookies.setItem(cookie_name, true, (60*24*60*60));" aria-label="Dismiss">✕</button>
+		</div>
+
+		<header class="text-white bg-black">
+			<div class="container px-6 py-6 mx-auto lg:px-12">
+				<nav class="space-y-4 sm:space-y-0 sm:flex sm:items-center sm:justify-between sm:flex-1 sm:h-16 lg:h-20">
+					<a href="/" title="Go to the homepage."><svg class="w-auto h-10 lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40"><path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/></svg></a>
+
+					<div class="flex -ml-2 xs:-ml-2.5 sm:-ml-4 lg:m-0 lg:-mr-6 xl:-mr-8">
+						<a href="/services.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="See how we can help you, and how we plan to do it.">Services</a>
+						<a href="/work.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="Follow along as we design deliverables for our clients.">Work</a>
+						<a href="/about.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl underline underline-offset-4" title="Meet the team behind the design studio." aria-current="page">About</a>
+						<a href="/contact.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="Swing by for a cup of coffee.">Contact</a>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<section class="relative pt-4 text-white bg-black sm:py-12 lg:py-24 3xl:py-32">
+				<div class="container w-full px-6 mx-auto space-y-8 lg:px-12 md:space-y-12 lg:space-y-16 2xl:space-y-20">
+					<div class="space-y-8 md:space-y-12 lg:space-y-16 2xl:space-y-20">
+						<h1 class="w-full text-5xl leading-tight md:leading-tight md:text-7xl lg:text-7.5xl transition duration-1000 lg:leading-[1.2] xl:leading-[1.2] xl:text-8xl 2xl:leading-[1.2] 2xl:text-8.5xl 3xl:text-9xl 3xl:leading-[1.2]" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">After many years in the biz, we decided to mix things up.</h1>
+						<p class="max-w-4xl text-2xl leading-normal lg:leading-relaxed lg:text-3xl 2xl:leading-relaxed 2xl:text-4xl">We’ve created a new kind of studio. EDL<span class="text-xs md:text-base align-super">®</span> combines killer branding with user-friendly digital design, all to make your product pop and your users’ world a little brighter.</p>
+					</div>
+
+					<nav class="space-x-8 text-2xl">
+						<a class="underline underline-offset-4 lg:underline-offset-8 opacity-60 hover:opacity-100" href="#team" title="View the team of the Copenhagen-based design studio.">Meet the team</a>
+						<a class="underline underline-offset-4 lg:underline-offset-8 opacity-60 hover:opacity-100" href="#collab" title="Read how we go about our business.">Working with us</a>
+					</nav>
+				</div>
+			</section>
+
+			<!-- The team -->
+			<section class="py-16 md:py-24 lg:py-32 2xl:py-40" id="team">
+				<div class="container px-6 mx-auto space-y-8 lg:space-y-16 2xl:space-y-20 lg:px-12">
+					<div class="space-y-4 lg:space-y-6">
+						<div class="preheader">Meet the team</div>
+						<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7.5xl 3xl:text-8xl 3xl:leading-tight">Specialised people, devoted to quality.</h2>
+					</div>
+
+					<div class="grid grid-cols-2 gap-y-12 gap-x-8 md:gap-y-24 md:gap-x-12 xl:grid-cols-3">
+						<article class="space-y-4 group lg:space-y-8">
+							<div class="relative overflow-hidden rounded-lg">
+								<img class="object-cover object-top w-full aspect-square 2xl:aspect-auto 2xl:h-160" src="../media/edl-alberte-christensen.jpg" alt="Profile picture of UX Designer, Alberte Emilie Christensen smiling happily.">
+							
+								<div class="absolute inset-0 hidden w-full h-full bg-black md:group-hover:block">
+									<p class="p-10 text-xl leading-normal text-white lg:text-2xl lg:leading-normal">Alberte empowers our clients’ products with user-centric experience design and data-driven insights.</p>
+								</div>
+							</div>
+
+							<div>
+								<h3 class="text-2xl leading-tight 2xl:leading-tight 2xl:text-3xl">Alberte Christensen</h3>
+								<span class="block text-lg leading-snug 2xl:leading-tight lg:leading-tight lg:text-xl lg:mt-1 2xl:text-2xl opacity-60">UX Designer</span>
+
+								<div class="mt-4 space-y-1 lg:space-y-2">
+									<a href="mailto:ac@edl.dk" title="Write Alberte an e-mail." class="text-base underline lg:text-xl 2xl:text-2xl opacity-60 underline-offset-4">ac@edl.dk</a>
+								</div>
+							</div>
+						</article>
+
+						<article class="space-y-4 group lg:space-y-8">
+							<div class="relative overflow-hidden rounded-lg">
+								<img class="object-cover object-top w-full aspect-square 2xl:aspect-auto 2xl:h-160" src="../media/edl-modestas-sekstela.jpg" alt="Profile picture of UX Designer, Alberte Emilie Christensen smiling happily.">
+								
+								<div class="absolute inset-0 hidden w-full h-full bg-black md:group-hover:block">
+									<p class="p-10 text-xl leading-normal text-white lg:text-2xl lg:leading-normal">Modestas helps companies build more competitive digital products by translating abstract concepts into intuitive experiences.</p>
+								</div>
+							</div>
+
+							<div>
+								<h3 class="text-2xl leading-tight 2xl:leading-tight 2xl:text-3xl">Modestas Sekstela</h3>
+								<span class="block text-lg leading-snug 2xl:leading-tight lg:leading-tight lg:text-xl lg:mt-1 2xl:text-2xl opacity-60">Product Designer</span>
+
+								<div class="mt-4 space-y-1 lg:space-y-2">
+									<a href="mailto:ms@edl.dk" title="Write Modestas an e-mail." class="text-base underline lg:text-xl 2xl:text-2xl opacity-60 underline-offset-4">ms@edl.dk</a>
+								</div>
+							</div>
+						</article>
+
+						<article class="space-y-4 group lg:space-y-8">
+							<div class="relative overflow-hidden rounded-lg">
+								<img class="object-cover object-top w-full aspect-square 2xl:aspect-auto 2xl:h-160" src="../media/edl-oskar-siemion.jpg" alt="Profile picture of Visual Designer, Oskar Siemion smiling happily.">
+
+								<div class="absolute inset-0 hidden w-full h-full bg-black md:group-hover:block">
+									<p class="p-10 text-xl leading-normal text-white lg:text-2xl lg:leading-normal">Oskar elevates the essence and creative direction of brands through the power of visual communication.</p>
+								</div>
+							</div>
+
+							<div>
+								<h3 class="text-2xl leading-tight 2xl:leading-tight 2xl:text-3xl">Oskar Siemion</h3>
+								<span class="block text-lg leading-snug 2xl:leading-tight lg:leading-tight lg:text-xl lg:mt-1 2xl:text-2xl opacity-60">Visual Designer</span>
+
+								<div class="mt-4 space-y-1 lg:space-y-2">
+									<a href="mailto:os@edl.dk" title="Write Oskar an e-mail." class="text-base underline lg:text-xl 2xl:text-2xl opacity-60 underline-offset-4">os@edl.dk</a>
+								</div>
+							</div>
+						</article>
+
+						<article class="space-y-4 group lg:space-y-8">
+							<div class="relative overflow-hidden rounded-lg">
+								<img class="object-cover object-top w-full aspect-square 2xl:aspect-auto 2xl:h-160" src="../media/edl-frederick-andersen.jpg" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
+								
+								<div class="absolute inset-0 hidden w-full h-full bg-black md:group-hover:block">
+									<p class="p-10 text-xl leading-normal text-white lg:text-2xl lg:leading-normal">Frederick helps transform companies and software through design. Additionally, Frederick plays a leading role in our business development.</p>
+								</div>
+							</div>
+
+							<div>
+								<h3 class="text-2xl leading-tight 2xl:leading-tight 2xl:text-3xl">Frederick Andersen</h3>
+								<span class="block text-lg leading-snug 2xl:leading-tight lg:leading-tight lg:text-xl lg:mt-1 2xl:text-2xl opacity-60">Designer & CEO</span>
+
+								<div class="mt-4 space-y-1 lg:space-y-2">
+									<a href="mailto:fa@edl.dk" title="Write Frederick an e-mail." class="text-base underline lg:text-xl 2xl:text-2xl opacity-60 underline-offset-4">fa@edl.dk</a>
+								</div>
+							</div>
+						</article>
+
+						<article class="space-y-4 group lg:space-y-8">
+							<div class="relative overflow-hidden rounded-lg">
+								<img class="object-cover object-top w-full aspect-square 2xl:aspect-auto 2xl:h-160" src="../media/edl-casper-stendal.jpg" alt="Profile picture of advisor, Casper Stendal smiling.">
+								<div class="absolute inset-0 hidden w-full h-full bg-black md:group-hover:block">
+									<p class="p-10 text-xl leading-normal text-white lg:text-2xl lg:leading-normal">Through business strategy and digital transformation, Casper excels at understanding, challenging, and inspiring companies to help them gain a competitive advantage.</p>
+								</div>
+							</div>
+
+							<div>
+								<h3 class="text-2xl leading-tight 2xl:leading-tight 2xl:text-3xl">Casper Stendal</h3>
+								<span class="block text-lg leading-snug 2xl:leading-tight lg:leading-tight lg:text-xl lg:mt-1 2xl:text-2xl opacity-60">Advisor</span>
+							</div>
+						</article>
+					
+						<article class="space-y-4 group lg:space-y-8">
+							<div class="relative overflow-hidden rounded-lg">
+								<img class="object-cover object-top w-full aspect-square 2xl:aspect-auto 2xl:h-160" src="../media/edl-anders-wind.jpg" alt="Profile picture of advisor, Anders Wind, smiling.">
+								<div class="absolute inset-0 hidden w-full h-full bg-black md:group-hover:block">
+									<p class="p-10 text-xl leading-normal text-white lg:text-2xl lg:leading-normal">While heavily invested in empowering and motivating people to unleash their full potential, Anders also helps with studio operations and finance.</p>
+								</div>
+							</div>
+							
+							<div>
+								<h3 class="text-2xl leading-tight 2xl:leading-tight 2xl:text-3xl">Anders Wind</h3>
+								<span class="block text-lg leading-snug 2xl:leading-tight lg:leading-tight lg:text-xl lg:mt-1 2xl:text-2xl opacity-60">Advisor</span>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<!-- Working with us -->
+			<section class="py-16 text-white bg-black md:py-24 lg:py-32 2xl:py-40" id="collba">
+				<div class="container px-6 mx-auto space-y-8 lg:px-12 md:space-y-12 lg:space-y-16">
+					<div class="space-y-4 lg:text-center">
+						<div class="border-white preheader">Working with us</div>
+						<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7xl">Not your average design studio.</h2>
+					</div>
+
+					<div x-data="{ active: 0 }" class="max-w-4xl mx-auto md:space-y-3 lg:space-y-4 2xl:max-w-6xl">
+						<div x-data="{ id: 1, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-white/20 md:border md:rounded-md">
+							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
+								<span>Validate often</span>
+								
+								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+
+							<div x-show="expanded" class="accordion-content">
+								<p>User testing and validation are part of every phase of our design process. Frequent in-field and online user research informs decisions and ensures the right product is built.</p>
+							</div>
+						</div>
+
+						<div x-data="{ id: 2, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-white/20 md:border md:rounded-md">
+							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
+								<span>Work over slideshows</span>
+
+								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+
+							<div x-show="expanded" class="accordion-content">
+								<p>We prefer actual work over presentations. Designing complicated digital products at scale is challenging enough without investing excessive hours in creating flashy presentations.</p>
+							</div>
+						</div>
+
+						<div x-data="{ id: 3, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-white/20 md:border md:rounded-md">
+							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
+								<span>Lasting partnerships</span>
+
+								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+
+							<div x-show="expanded" class="accordion-content">
+								<p>Our studio become an extension of your team. There is no us and them. It is through close collaboration we grow your product and business.</p>
+							</div>
+						</div>
+
+						<div x-data="{ id: 4, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-white/20 md:border md:rounded-md">
+							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
+								<span>Diversified outlook</span>
+
+								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+
+							<div x-show="expanded" class="accordion-content">
+								<p>Diversity can’t exist without inclusion, so the key to diversity is putting inclusion first. We need to include a wide range of opinions and perspectives in our design thinking and decision-making.</p>
+							</div>
+						</div>
+
+						<div x-data="{ id: 5, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-white/20 md:border md:rounded-md">
+							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
+								<span>Growth mindset</span>
+
+								<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+									<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+
+							<div x-show="expanded" class="accordion-content">
+								<p>Rome was not built in a day, and neither is your software. So we partner with clients who value long-term roadmaps and understand the importance of extending and optimising their digital platforms.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		
+		<footer class="text-white bg-black">
+			<div class="container px-6 py-8 mx-auto space-y-16 md:py-16 lg:space-y-28 lg:px-12 lg:pt-24">
+				<div class="space-y-12 lg:space-y-0 lg:columns-2 md:gap-x-16 lg:gap-x-24">
+					<div class="space-y-8 lg:space-y-12 break-after-column">
+						<div class="text-2xl leading-normal lg:leading-normal lg:text-3xl">
+							<span class="block"><a href="tel:+4528253694" title="Get in touch and discuss digital projects, ideas, or headaches." class="underline underline-offset-4">+45 28 25 36 94</a></span>
+							<span class="block"><a href="mailto:hello@edl.dk" title="Prefer writing? Shoot us an email instead." class="underline underline-offset-4">hello@edl.dk</a></span>
+						</div>
+
+						<ul class="text-xl leading-normal text-white/70 lg:text-2xl lg:leading-normal">
+							<li class="block">Amagerfælledvej 106</li>
+							<li class="block">2300 Copenhagen</li>
+							<li class="block">Denmark</li>
+						</ul>
+					</div>
+
+					<nav class="space-y-8 2xl:gap-x-24 md:columns-2 md:space-y-0">
+						<ul class="space-y-2 lg:space-y-4 break-after-column">
+							<li class="text-base text-white/60 lg:text-lg">Studio</li>
+							<li><a class="text-xl xl:text-2xl" href="./services.html" title="Learn about our capabilities and how to gain from them.">Services</a></li>
+							<li><a class="text-xl xl:text-2xl" href="./work.html" title="View the work we have done for and with fantastic people.">Work</a></li>
+							<li><a class="text-xl xl:text-2xl" href="./careers.html" title="Come work with a talented team of designers.">Careers</a></li>
+							<li><a class="text-xl xl:text-2xl" href="./contact.html" title="Swing by for a cup of coffee, give us a call, or write an email.">Contact</a></li>
+							<li><a class="text-xl xl:text-2xl" href="/trial.html" title="Try our services and meet our team before committing to an entire project.">Trial</a></li>
+						</ul>
+						
+						<ul class="space-y-2 lg:space-y-4">
+							<li class="text-base text-white/60 lg:text-lg">Services</li>
+							<li><a class="text-xl xl:text-2xl" href="./services/design-service.html" title="Learn more about Design as a Service.">Design as a Service</a></li>
+							<li><a class="text-xl xl:text-2xl" href="./services/design-projects.html" title="Learn how we facilitate design projects from start to finish.">Design project</a></li>
+							<li><a class="text-xl xl:text-2xl" href="./services/evaluation.html" title="Read about our process for evaluating existing products and services.">UX evaluation</a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="flex justify-between text-sm lg:space-x-24 lg:text-lg">
+					<span class="inline-block">&copy; 2023 EDL</span>
+					
+					<div class="space-x-4 lg:space-x-6">
+						<span class="hidden md:inline-block text-black/60">Follow us</span>
+						<a class="inline-block underline underline-offset-4" href="https://linkedin.com/company/edldesign" target="_blank" rel="noopener" title="View EDL’s profile on LinkedIn.">LinkedIn</a>
+						<a class="inline-block underline underline-offset-4" href="https://instagram.com/edl.studio" target="_blank" rel="noopener" title="View EDL’s profile on Instagram.">Instagram</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

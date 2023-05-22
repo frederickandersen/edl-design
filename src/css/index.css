@@ -44,7 +44,7 @@
     }
 
     .accordion-content {
-        @apply pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 2xl:px-8 lg:pb-8 lg:text-2xl lg:leading-relaxed 2xl:text-3xl 2xl:leading-relaxed;
+        @apply pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 2xl:px-8 lg:pb-8 lg:text-2xl lg:leading-relaxed;
     }
 
     .tile {
@@ -57,6 +57,10 @@
     
     .tag {
         @apply inline-flex items-center px-3 py-1 text-base leading-normal border rounded-full lg:py-1.5 lg:px-4 lg:text-xl 2xl:text-2xl;
+    }
+    
+    .preheader {
+        @apply inline-flex items-center px-3 py-2 text-lg leading-tight border border-black rounded-full md:px-4 lg:text-2xl lg:leading-tight 2xl:text-3xl 2xl:leading-tight;
     }
 
     .marquee-logo {
