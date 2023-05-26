@@ -1325,6 +1325,10 @@ select{
   width: 50%;
 }
 
+.min-w-\[72rem\]{
+  min-width: 72rem;
+}
+
 .max-w-4xl{
   max-width: 56rem;
 }
@@ -1367,6 +1371,10 @@ select{
 
 .max-w-screen-md{
   max-width: 768px;
+}
+
+.max-w-\[72rem\]{
+  max-width: 72rem;
 }
 
 .flex-1{
