@@ -1072,6 +1072,11 @@ select{
   margin-right: auto;
 }
 
+.my-16{
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
 .-ml-2{
   margin-left: -0.5rem;
 }
@@ -1092,16 +1097,24 @@ select{
   margin-right: 0.25rem;
 }
 
+.mb-16{
+  margin-bottom: 4rem;
+}
+
+.mb-4{
+  margin-bottom: 1rem;
+}
+
+.mt-12{
+  margin-top: 3rem;
+}
+
 .mt-8{
   margin-top: 2rem;
 }
 
 .mb-8{
   margin-bottom: 2rem;
-}
-
-.mb-4{
-  margin-bottom: 1rem;
 }
 
 .mb-2{
@@ -1274,6 +1287,10 @@ select{
 
 .w-3{
   width: 0.75rem;
+}
+
+.w-\[72rem\]{
+  width: 72rem;
 }
 
 .w-1\/4{
@@ -1900,6 +1917,10 @@ select{
   padding-top: 1rem;
 }
 
+.pb-12{
+  padding-bottom: 3rem;
+}
+
 .pt-12{
   padding-top: 3rem;
 }
@@ -1922,10 +1943,6 @@ select{
 
 .pl-2{
   padding-left: 0.5rem;
-}
-
-.pb-12{
-  padding-bottom: 3rem;
 }
 
 .pb-20{
@@ -2704,14 +2721,19 @@ select{
     line-height: 2.25rem;
   }
 
-  .md\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
   .md\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .md\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .md\:text-xl{
@@ -2774,6 +2796,11 @@ select{
     margin: 0px;
   }
 
+  .lg\:my-24{
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+
   .lg\:mx-auto{
     margin-left: auto;
     margin-right: auto;
@@ -2787,12 +2814,8 @@ select{
     margin-top: 0.25rem;
   }
 
-  .lg\:ml-6{
-    margin-left: 1.5rem;
-  }
-
-  .lg\:mb-16{
-    margin-bottom: 4rem;
+  .lg\:mb-24{
+    margin-bottom: 6rem;
   }
 
   .lg\:mb-8{
@@ -2801,6 +2824,22 @@ select{
 
   .lg\:mt-12{
     margin-top: 3rem;
+  }
+
+  .lg\:mt-16{
+    margin-top: 4rem;
+  }
+
+  .lg\:mt-20{
+    margin-top: 5rem;
+  }
+
+  .lg\:ml-6{
+    margin-left: 1.5rem;
+  }
+
+  .lg\:mb-16{
+    margin-bottom: 4rem;
   }
 
   .lg\:ml-0{
@@ -3355,13 +3394,13 @@ select{
     line-height: 2.5rem;
   }
 
-  .lg\:text-8xl{
-    font-size: 6rem;
+  .lg\:text-5xl{
+    font-size: 3rem;
     line-height: 1;
   }
 
-  .lg\:text-5xl{
-    font-size: 3rem;
+  .lg\:text-8xl{
+    font-size: 6rem;
     line-height: 1;
   }
 
@@ -3431,6 +3470,10 @@ select{
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .xl\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .xl\:gap-32{
     gap: 8rem;
   }
@@ -3488,8 +3531,16 @@ select{
     grid-column-start: 5;
   }
 
+  .\32xl\:mb-32{
+    margin-bottom: 8rem;
+  }
+
   .\32xl\:mt-16{
     margin-top: 4rem;
+  }
+
+  .\32xl\:mt-24{
+    margin-top: 6rem;
   }
 
   .\32xl\:aspect-auto{
@@ -3534,6 +3585,10 @@ select{
 
   .\32xl\:h-8{
     height: 2rem;
+  }
+
+  .\32xl\:w-\[72rem\]{
+    width: 72rem;
   }
 
   .\32xl\:w-14{
