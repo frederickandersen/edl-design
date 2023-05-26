@@ -54,33 +54,30 @@
 		</header>
 
 		<main>
-			<section class="relative pt-4 sm:pt-12 lg:pt-16 2xl:pt-24">
-				<div class="container w-full px-6 mx-auto space-y-6 lg:px-12 lg:space-y-10 xl:space-y-12 2xl:space-y-16">
-					<div class="space-y-8 2xl:space-y-12">
-						<h1 class="text-5xl leading-tight md:leading-tight md:text-7xl transition duration-1000 lg:leading-[1.2] lg:text-8xl 2xl:leading-[1.2] 2xl:text-8.5xl 3xl:text-9xl 3xl:leading-[1.2]" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">We make <span class="">complex technologies</span> a joy to use.</h1>
-						<p class="text-2xl leading-normal md:leading-normal md:text-3xl lg:leading-normal lg:text-4xl">EDL<span class="text-xs md:text-base align-super lg:text-lg">®</span> is an independent <a href="/contact.html" title="See our HQ and how to get in touch.">Copenhagen-based</a> digital design studio.</p>
-					</div>
+			<section class="relative pt-4 space-y-16 lg:space-y-24 2xl:space-y-32 sm:pt-12 lg:pt-16 2xl:pt-24">
+				<div class="container w-full px-6 mx-auto space-y-8 lg:px-12 xl:space-y-12 2xl:space-y-16">
+					<h1 class="text-5xl leading-tight md:leading-tight md:text-7xl transition duration-1000 lg:leading-[1.2] lg:text-8xl 2xl:leading-[1.2] 2xl:text-8.5xl 3xl:text-9xl 3xl:leading-[1.2]" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">Helping companies make their complex technologies a joy to use.</h1>
 
-					<div class="space-x-2 space-y-2 lg:space-x-4">
-						<a class="inline-block px-6 py-3 text-xl text-white bg-black rounded-full lg:px-7 lg:py-4 md:text-2xl 2xl:py-5 2xl:px-8 2xl:text-3xl" title="Learn about our capabilities and how to gain from them." href="/services.html">Our services</a>
-						<a class="inline-block px-6 py-3 text-xl text-black border border-black rounded-full lg:px-7 lg:py-4 md:text-2xl 2xl:py-5 2xl:px-8 2xl:text-3xl" rel="noopener" target="_blank" title="Quickly schedule a chat with our CEO, Frederick." href="https://cal.com/frederickandersen/15min">Quick check-in</a>
+					<div class="lg:grid lg:grid-cols-10">
+						<div class="space-y-4 lg:space-y-8 2xl:space-y-12 lg:col-span-7 xl:col-start-5 lg:col-start-4 2xl:col-start-5 2xl:col-span-5 3xl:col-start-5 3xl:col-span-4">
+							<p class="text-2xl leading-normal md:leading-normal md:text-3xl lg:leading-normal lg:text-4xl">EDL<span class="text-xs md:text-base align-super lg:text-lg">®</span> is an independent <a href="/copenhagen.html" title="Get to know our studio.">Copenhagen-based</a> digital design studio.</p>
+
+							<div class="space-x-2 space-y-2 lg:space-x-4">
+								<a class="inline-block px-6 py-3 text-xl text-white bg-black rounded-full lg:px-7 lg:py-4 md:text-2xl 2xl:py-5 2xl:px-8 2xl:text-3xl" href="/services" title="Learn about our capabilities and how to gain from them.">Our services</a>
+								<a class="inline-block px-6 py-3 text-xl text-black border border-black rounded-full lg:px-7 lg:py-4 md:text-2xl 2xl:py-5 2xl:px-8 2xl:text-3xl" rel="noopener" target="_blank" title="Quickly schedule a chat with our CEO, Frederick." href="https://cal.com/frederickandersen/15min">Quick check-in</a>
+							</div>
+						</div>
 					</div>
 				</div>
+
+				<img src="../media/edl-reel.gif" class="object-cover w-full bg-gray h-96 md:h-120 lg:h-auto lg:aspect-video" alt="A reel of versatile design and branding work by EDL."/>
 			</section>
 
-			<section class="relative px-6 pt-16 lg:pt-24 2xl:pt-32">
-				<video class="object-cover w-full bg-black rounded-lg h-96 md:h-120 lg:h-auto lg:aspect-video" playsinline loop autoplay muted poster="/media/daas-reel-poster.png">
-					<source src="../media/daas-reel.webm" type="video/webm">
-					<source src="../media/daas-reel.mp4" type="video/mp4">
-					This browser does not support the HTML5 video element.
-				</video>
-			</section>
-
-			<section class="relative py-16 pb-16 md:py-24 lg:pt-24 lg:pb-40">
+			<section class="relative py-16 pb-16 md:py-24 lg:pt-24 2xl:pt-32 lg:pb-40">
 				<div class="container px-6 mx-auto space-y-12 lg:space-y-16 lg:px-12">
-					<div class="space-y-2 lg:space-y-4">
-						<span class="block text-base lg:text-2xl opacity-60">Featured work</span>
-						<h2 class="text-3xl leading-snug md:text-4xl md:leading-snug lg:leading-snug lg:text-5xl 2xl:leading-snug 2xl:text-6xl">We partner with startups, category leaders, and all kinds of <span class="">fantastic people</span> in between.</h2>
+					<div class="space-y-4 lg:space-y-6">
+						<div class="preheader">Featured work</div>
+						<h2 class="text-3xl leading-snug md:text-4xl md:leading-snug lg:leading-snug lg:text-5xl 2xl:leading-snug 2xl:text-6xl">We partner with startups, category leaders, and all kinds of fantastic people in between.</h2>
 					</div>
 					
 					<div class="grid gap-16 lg:grid-cols-2 lg:gap-y-24">
@@ -96,7 +93,7 @@
 									<span class="tag">SaaS</span>
 								</div>
 
-								<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl">Enterprise data compliance made simple, collaborative, and <span class="">enjoyable</span>.</h3>
+								<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl">Enterprise data compliance made simple, collaborative, and enjoyable.</h3>
 							</div>
 						</article>
 
@@ -113,7 +110,7 @@
 									<span class="tag">App</span>
 								</div>
 
-								<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl">Designing a <span class="">white-label experience</span> onboarding thousands of users every week.</h3>
+								<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl">Designing a white-label experience onboarding thousands of users every week.</h3>
 							</div>
 						</article>
 					</div>
