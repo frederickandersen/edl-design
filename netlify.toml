@@ -6,5 +6,9 @@ package = "@netlify/plugin-sitemap"
   exclude = [
     # By file Path
     './build/404.html',
-    './build/success.html'
+    './build/success.html',
+    './build/careers/junior-ux-designer.html',
+    './build/careers/product-designer.html',
+    './build/careers/ui-designer.html',
+    './build/careers/ux-designer.html'
   ]
