@@ -18,26 +18,12 @@
 
 		<link rel="icon" href="../favicon.png">
 		<link rel="stylesheet" href="../css/styles.css">
-
-		<script defer="">
-			/* https://github.com/madmurphy/cookies.js (GPL3) */
-			!function(){function e(e,o,t,n,r,s,i){var c="";if(t)switch(t.constructor){case Number:c=t===1/0?"; expires=Fri, 31 Dec 9999 23:59:59 GMT":"; max-age="+t;break;case String:c="; expires="+t;break;case Date:c="; expires="+t.toUTCString()}return encodeURIComponent(e)+"="+encodeURIComponent(o)+c+(r?"; domain="+r:"")+(n?"; path="+n:"")+(s?"; secure":"")+(i&&"no_restriction"!==i.toString().toLowerCase()?"lax"===i.toString().toLowerCase()||1===Math.ceil(i)||!0===i?"; samesite=lax":"none"===i.toString().toLowerCase()||i<0?"; samesite=none":"; samesite=strict":"")}var o=/[\-\.\+\*]/g,t=/^(?:expires|max\-age|path|domain|secure|samesite|httponly)$/i;window.docCookies={getItem:function(e){return e&&decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*"+encodeURIComponent(e).replace(o,"\\$&")+"\\s*\\=\\s*([^;]*).*$)|^.*$"),"$1"))||null},setItem:function(o,n,r,s,i,c,a){return!(!o||t.test(o))&&(document.cookie=e(o,n,r,s,i,c,a),!0)},removeItem:function(o,t,n,r,s){return!!this.hasItem(o)&&(document.cookie=e(o,"","Thu, 01 Jan 1970 00:00:00 GMT",t,n,r,s),!0)},hasItem:function(e){return!(!e||t.test(e))&&new RegExp("(?:^|;\\s*)"+encodeURIComponent(e).replace(o,"\\$&")+"\\s*\\=").test(document.cookie)},keys:function(){for(var e=document.cookie.replace(/((?:^|\s*;)[^\=]+)(?=;|$)|^\s*|\s*(?:\=[^;]*)?(?:\1|$)/g,"").split(/\s*(?:\=[^;]*)?;\s*/),o=e.length,t=0;t<o;t++)e[t]=decodeURIComponent(e[t]);return e},clear:function(e,o,t,n){for(var r=this.keys(),s=r.length,i=0;i<s;i++)this.removeItem(r[i],e,o,t,n)}}}(),"undefined"!=typeof module&&void 0!==module.exports&&(module.exports=docCookies);
-		</script>
 		
 		<script defer src="https://unpkg.com/@alpinejs/intersect@3.10.4/dist/cdn.min.js"></script>
 		<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 	</head>
 
 	<body class="overflow-x-hidden font-sans antialiased">
-		<div class="relative hidden w-full px-12 py-4 text-center text-white bg-black/80 hover:bg-black/70 md:block lg:px-24" x-data="{ hide_banner: true, cookie_name: 'announcement-daas' }" x-init="hide_banner = docCookies.hasItem(cookie_name) ? (docCookies.getItem(cookie_name) == 'true') : false;" x-bind:class="{ 'hidden': hide_banner, 'relative hidden md:block': !hide_banner }">
-			<a href="/services/design-service.html" class="block w-full space-x-2 text-base link lg:text-xl lg:leading-normal 2xl:text-2xl 2xl:leading-normal" @click="hide_banner = true; docCookies.setItem(cookie_name, true, (60*24*60*60));">
-				<span class="opacity-80">Latest update</span>
-				<span>Don’t hire a design team, subscribe to one</span>
-			</a>
-			
-			<button type="button" class="absolute z-10 flex items-center justify-center w-8 h-8 ease-in-out -translate-y-1/2 rounded-md hover:bg-white/20 right-2 lg:right-4 top-1/2" @click="hide_banner = true; docCookies.setItem(cookie_name, true, (60*24*60*60));" aria-label="Dismiss">✕</button>
-		</div>
-
 		<header>
 			<div class="container px-6 py-6 mx-auto lg:px-12">
 				<nav class="space-y-4 sm:space-y-0 sm:flex sm:items-center sm:justify-between sm:flex-1 sm:h-16 lg:h-20">
@@ -256,7 +242,7 @@
 
 			<section>
 				<div class="container px-6 mx-auto space-y-8 lg:px-12 md:space-y-12 lg:space-y-16">
-					<article class="flex flex-col items-start p-8 mx-auto space-y-6 text-white bg-black rounded-lg md:space-y-8 lg:items-center max-w-screen-2xl lg:space-y-0 2xl:rounded-2xl lg:flex-row lg:space-x-12 md:p-10 lg:p-12 2xl:p-16">
+					<article class="flex flex-col items-start p-8 mx-auto space-y-6 text-white bg-black md:space-y-8 lg:items-center max-w-screen-2xl lg:space-y-0 2xl:rounded-2xl lg:flex-row lg:space-x-12 md:p-10 lg:p-12 2xl:p-16">
 						<div class="w-full space-y-2 lg:space-y-2">
 							<h3 class="text-3xl leading-tight md:text-4xl md:leading-tight lg:leading-tight lg:text-5xl 2xl:leading-tight">Ready to <span class="">improve your product?</span></h3>
 							<p class="max-w-3xl text-xl leading-normal md:text-2xl md:leading-normal lg:leading-normal lg:text-3xl">Schedule a 30-minute online call to plan the evaluation.</p>
@@ -390,7 +376,10 @@
 				</div>
 
 				<div class="flex justify-between text-sm lg:space-x-24 lg:text-lg">
-					<span class="inline-block">&copy; 2023 EDL</span>
+					<div class="space-x-4 lg:space-x-6">
+						<span class="inline-block">&copy; 2023 EDL</span>
+						<a class="inline-block" href="/privacy-policy.html" title="View EDL’s privacy policy.">Privacy policy</a>
+					</div>
 					
 					<div class="space-x-4 lg:space-x-6">
 						<span class="hidden md:inline-block text-black/60">Follow us</span>

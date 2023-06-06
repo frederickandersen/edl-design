@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+	<head>
+    	<meta charset="UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>The importance of accessibility in digital design · EDL</title>
+
+		<meta name="title" content="The importance of accessibility in digital design · EDL">
+    	<meta name="description" content="Designing products that are accessible means creating them in such a way that individuals with a wide range of abilities can use them. This involves developing a design that every user can access, comprehend, and utilise to the fullest extent.">
+		
+		<meta property="og:title" content="The importance of accessibility in digital design · EDL">
+    	<meta property="og:description" content="Designing products that are accessible means creating them in such a way that individuals with a wide range of abilities can use them. This involves developing a design that every user can access, comprehend, and utilise to the fullest extent." />
+		<meta property="og:site_name" content="EDL®" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.edl.dk/news/the-importance-accessibility-digital-design" />
+		<meta property="og:image" content="https://www.edl.dk/media/open-graph.jpg" />
+
+		<link rel="icon" href="../favicon.png">
+		<link rel="stylesheet" href="../css/styles.css">
+
+		<script defer src="https://unpkg.com/@alpinejs/intersect@3.10.4/dist/cdn.min.js"></script>
+		<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+	</head>
+
+	<body class="overflow-x-hidden font-sans antialiased bg-gray">
+		<header>
+			<div class="container px-6 py-6 mx-auto lg:px-12">
+				<nav class="space-y-4 sm:space-y-0 sm:flex sm:items-center sm:justify-between sm:flex-1 sm:h-16 lg:h-20">
+					<a href="/" title="Go to the homepage."><svg class="w-auto h-10 lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40"><path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/></svg></a>
+
+					<div class="flex -ml-2 xs:-ml-2.5 sm:-ml-4 lg:m-0 lg:-mr-6 xl:-mr-8">
+						<a href="/services.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="See how we can help you, and how we plan to do it.">Services</a>
+						<a href="/work.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="Follow along as we design deliverables for our clients.">Work</a>
+						<a href="/about.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="Meet the team behind the design studio.">About</a>
+						<a href="/contact.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="Swing by for a cup of coffee.">Contact</a>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<main>			
+			<section class="relative pt-4 sm:pt-12 lg:pt-24">
+				<div class="container w-full px-6 mx-auto space-y-4 transition duration-1000 max-w-screen-2xl lg:px-12 lg:space-y-8" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">
+					<div class="flex items-center space-x-2 lg:space-x-4 2xl:space-x-6"><span class="tag">Article</span><span class="text-xl text-black/60">June 5, 2023</span></div>
+					<h1 class="w-full text-5xl leading-tight md:leading-tight md:text-7xl lg:text-7.5xl lg:leading-[1.2] 2xl:leading-[1.2] 2xl:text-8xl">The importance of accessibility in digital design</h1>	
+				</div>
+¨			</section>
+
+			<section class="relative pt-8 pb-16 md:py-24 lg:pt-24 lg:pb-32">
+				<div class="container px-6 lg:mx-auto lg:px-12">
+					<div class="max-w-4xl mx-auto text-xl leading-normal lg:leading-relaxed lg:text-2xl">						
+						<div class="space-y-4 lg:space-y-6">
+							<p>Designing products that are accessible means creating them in such a way that individuals with a wide range of abilities can use them. This involves developing a design that every user can access, comprehend, and utilise to the fullest extent possible, considering their diverse visual, auditory, motor, or cognitive abilities. The goal is to eliminate obstacles hindering people with disabilities from interacting with or accessing digital products.</p>
+							<p>In the modern age of technology, accessibility has become a crucial aspect of user experience (UX) and user interface (UI) design. Ensuring digital products are accessible to all users, regardless of their abilities or disabilities, promotes inclusivity and greatly benefits businesses. This article delves into the significance of accessibility, its advantages, and the best practices for UX and UI design.</p>
+						</div>
+
+						<h2 class="mt-12 mb-4 text-3xl leading-snug md:text-4xl md:leading-tight lg:mt-12 2xl:mt-16 lg:mb-8 lg:leading-tight lg:text-5xl">Importance of accessibility</h2>
+						
+						<div class="space-y-4 lg:space-y-6">
+							<p>The importance of accessibility in UX and UI design cannot be overstated. Businesses and designers need to prioritise accessibility to ensure that all users have equal access and an inclusive experience. By incorporating accessible design principles, websites and applications become usable by people with visual, hearing, motor, or cognitive impairments.</p>
+							<p>Adhering to accessibility guidelines is not only a legal requirement but also an ethical responsibility. It also expands the potential user base and taps into a significant market segment. Furthermore, accessible design improves the user experience, enhances search engine visibility, and creates a positive brand image. Therefore, it is a critical aspect of developing digital products that are intuitive, usable, and inclusive.</p>
+							<p>Accessibility in digital design is not merely a courtesy but a necessity. According to the World Health Organization, over a billion people, or approximately 15% of the world’s population, live with some form of disability. By creating an accessible digital product, we ensure that this significant portion of the global population is not marginalised and can interact with the digital world meaningfully.</p>
+						</div>
+
+						<h2 class="mt-12 mb-4 text-3xl leading-snug md:text-4xl md:leading-tight lg:mt-12 2xl:mt-16 lg:mb-8 lg:leading-tight lg:text-5xl">The master of accessible design</h2>
+						
+						<div class="space-y-8 lg:space-y-12">
+							<p>In digital accessibility, technology giant Apple stands as a beacon of innovation. The company has consistently committed to inclusivity, designing features that significantly improving the user experience for individuals with different abilities.</p>
+						</div>
+					</div>
+
+					<div class="relative mx-auto my-16 lg:my-24 space-y-4 2xl:w-[72rem]">
+						<img src="../media/news/apple-accessibility.jpg" class="object-cover w-full h-auto" alt="Apple’s new accessibility features, including Assistive Access, Live Speech, and more, will arrive later this year."/>
+						<span class="inline-block text-sm md:text-base text-black/60">Apple’s new accessibility features, including Assistive Access, Live Speech, and more, will arrive later this year.</span>
+					</div>
+					
+					<div class="max-w-4xl mx-auto text-xl leading-normal lg:leading-relaxed lg:text-2xl">
+						<div class="space-y-4 lg:space-y-6">
+							<p>Recently, Apple introduced a suite of features focused on cognitive accessibility, significantly amplifying the capacity for inclusivity in technology design. One such feature is Live Speech, a tool designed to aid individuals with speech impairments. By providing real-time transcription of conversations, Live Speech enables those who may have difficulty speaking to communicate effectively and independently.</p>
+							<p>Alongside Live Speech, Apple has implemented a feature called Personal Voice. This function allows users to customise the voice output of their devices, providing an individualised auditory experience and making the technology more accessible and comfortable for diverse users.</p>
+							<p>Further expanding on visual aids, Apple introduced Point and Speak as a component of the Magnifier tool. This feature allows users to point their camera at text, which the device reads aloud, enabling individuals with visual impairments or reading difficulties to understand written content more readily.</p>
+							<p>These examples not only showcase Apple’s commitment to accessibility but also set a benchmark for other technology companies. By prioritising inclusivity in design and functionality, Apple enhances user experience for all, affirming the vital role accessibility plays in UX and UI design.</p>
+						</div>
+
+						<h2 class="mt-12 mb-4 text-3xl leading-snug md:text-4xl md:leading-tight lg:mt-12 2xl:mt-16 lg:mb-8 lg:leading-tight lg:text-5xl">JØNI x EDL</h2>
+						
+						<div class="space-y-8 lg:space-y-12">
+							<p>Let’s look at how we collaborated with JØNI, a company that aimed to enhance the accessibility and efficiency of their commercial kitchen equipment. First, we focused on improving the user interface design of the AutoChef 86 cooking kettle’s digital display. This included creating larger click areas, using easy-to-read typography, and streamlining the operational process. Our goal was to make the interaction as intuitive and efficient as possible, even in a busy kitchen environment.</p>
+						</div>
+					</div>
+
+					<div class="relative mx-auto my-16 lg:my-24 space-y-4 2xl:w-[72rem]">
+						<img src="../media/news/joeni-intial-design.png" class="object-cover w-full h-auto" alt="The initial AutoChef 86 interface displays."/>
+						<span class="inline-block text-sm md:text-base text-black/60">The initial AutoChef 86 interface displays.</span>
+					</div>
+
+					<div class="max-w-4xl mx-auto text-xl leading-normal lg:leading-relaxed lg:text-2xl">
+						<div class="space-y-4 lg:space-y-6">
+							<p>Our approach centred on redesigning the user interface, following inclusive design principles to ensure accessibility. The team aimed to create an intuitive design that allowed for a larger click area, transparent and predictable navigation, and consistent UI across the board. These design improvements were critical in maintaining JØNI’s commitment to delivering easy-to-operate, reliable equipment to their customers.</p>
+						</div>
+					</div>
+
+					<div class="relative mx-auto my-16 lg:my-24 space-y-4 2xl:w-[72rem]">
+						<img src="../media/news/joeni-new-design.png" class="object-cover w-full h-auto" alt="The redesigned AutoChef 86 interface displays by EDL."/>
+						<span class="inline-block text-sm md:text-base text-black/60">The redesigned AutoChef 86 interface displays.</span>
+					</div>
+
+					<div class="max-w-4xl mx-auto text-xl leading-normal lg:leading-relaxed lg:text-2xl">						
+						<div class="space-y-4 lg:space-y-6">
+							<p>The user interface has been redesigned, and a new web application has been developed to create a cohesive and easily accessible interface. The system is simple to understand and enhances data monitoring, aligning with JØNI’s commitment to innovation and reliability. The project goals have been successfully achieved, with significant improvements in efficiency and user experience.</p>
+						</div>
+
+						<h2 class="mt-12 mb-4 text-3xl leading-snug md:text-4xl md:leading-tight lg:mt-12 2xl:mt-16 lg:mb-8 lg:leading-tight lg:text-5xl">Essential practice for accessibility</h2>
+						
+						<div class="space-y-4 lg:space-y-6">
+							<p>Accessibility best practices are instrumental in guaranteeing an inclusive and user-friendly experience in UX and UI design. By adhering to these practices, designers can create digital products that are accessible to a diverse range of users. This includes users with disabilities and temporary impairments or limited technological familiarity.</p>
+							
+							<ol class="pb-4 pl-10 space-y-4 list-decimal lg:pl-16">
+								<li class="pl-2 lg:pl-4">Seamless and user-friendly navigation: A crucial aspect of accessibility is the ease of navigation. This can be achieved by designing precise and uniform menus, headings, and links. In addition, integrating features like skip links or bypass blocks can enhance navigation by allowing users to jump quickly to main content sections.</li>
+								<li class="pl-2 lg:pl-4">Transparent and understandable content: It’s vital to keep the language simple and the text succinct for effective communication. To improve accessibility, ensure that headings are meaningful, image descriptions (alt text) are precise, and multimedia content includes clear captions.</li>
+								<li class="pl-2 lg:pl-4">Considerate use of colour and contrast: Selecting colour combinations that provide adequate contrast is critical to making content readable for visually impaired users. Don’t rely exclusively on colour to convey information; ensure that text is easily distinguishable from the background.</li>
+								<li class="pl-2 lg:pl-4">Keyboard-friendly design: Designing interfaces that can be operated solely using a keyboard improves accessibility for users with motor disabilities or those who prefer keyboard navigation. It's essential to test and refine keyboard accessibility to ensure that all interactive elements are accessible via keyboard commands.</li>
+								<li class="pl-2 lg:pl-4">Compatibility with assistive technologies: Design should be executed with assistive technologies in mind. This includes compatibility with tools like screen readers, screen magnifiers, and alternative input devices. Make it a point to test the product with various assistive technology tools to guarantee compatibility and an optimal user experience.</li>
+							</ol>
+
+							<p>Accessibility is a fundamental aspect of UX and UI design for websites and applications, not a mere afterthought. Prioritising accessibility from the onset promotes inclusivity and equal access for all users and unlocks many benefits that contribute to a superior user experience and an expanded market reach.</p>
+							<p>By diligently adhering to established best practices, designers and developers can create digital products that are usable and deeply inclusive, resonating with all users, regardless of their abilities. This focus on inclusive design allows for more meaningful interactions with the digital world, fostering social equality and enhancing overall user satisfaction.</p>
+							<p>Embracing accessibility in UX and UI design isn’t just the ethically correct approach—it also makes sound business sense. The inclusive digital landscape this commitment cultivates helps empower all individuals, ensuring positive and compelling experiences. Designers and developers who internalise and implement these accessibility principles lead towards a more inclusive digital future.</p>
+						</div>
+					</div>
+
+					<!-- Newsletter highlight -->
+					<div class="relative max-w-4xl p-6 mx-auto mt-8 space-y-4 border lg:mt-16">
+						<svg xmlns="http://www.w3.org/2000/svg" class="w-auto h-8 lg:h-10" fill="none" viewBox="0 0 241 54">
+							<path fill="currentColor" d="M121.961 22.9h3.16c.213 0 .48-.013.8-.04.32-.04.66-.12 1.02-.24.36-.133.713-.32 1.06-.56.36-.24.68-.567.96-.98.28-.413.506-.927.68-1.54.186-.627.28-1.38.28-2.26 0-.853-.087-1.613-.26-2.28-.16-.68-.434-1.253-.82-1.72-.374-.48-.86-.84-1.46-1.08-.6-.253-1.34-.38-2.22-.38h-3.2V22.9Zm-1.9-12.68h4.9c2.2 0 3.893.56 5.08 1.68 1.186 1.12 1.78 2.827 1.78 5.12 0 1.2-.134 2.267-.4 3.2-.267.92-.68 1.7-1.24 2.34-.56.627-1.274 1.107-2.14 1.44-.867.333-1.894.5-3.08.5h-4.9V10.22ZM135.663 12.3h-1.7v-2.08h1.7v2.08Zm-1.7 1.86h1.7V24.5h-1.7V14.16ZM147.216 23.62c0 1.693-.386 2.96-1.16 3.8-.773.84-1.986 1.26-3.64 1.26-.48 0-.973-.053-1.48-.16a4.655 4.655 0 0 1-1.36-.52 3.21 3.21 0 0 1-1-.94c-.266-.387-.413-.86-.44-1.42h1.7c.014.307.107.567.28.78.187.213.407.387.66.52.267.133.554.227.86.28.307.067.6.1.88.1.56 0 1.034-.1 1.42-.3.387-.187.707-.453.96-.8a3.08 3.08 0 0 0 .54-1.22c.12-.48.18-1.007.18-1.58v-.68h-.04a2.895 2.895 0 0 1-1.34 1.42 4.144 4.144 0 0 1-1.88.44c-.773 0-1.446-.14-2.02-.42a4.29 4.29 0 0 1-1.44-1.12 5.092 5.092 0 0 1-.88-1.66 7.203 7.203 0 0 1-.28-2.02c0-.613.08-1.24.24-1.88.16-.653.427-1.24.8-1.76a4.255 4.255 0 0 1 1.48-1.3c.614-.347 1.367-.52 2.26-.52.654 0 1.254.147 1.8.44.547.28.974.707 1.28 1.28h.02v-1.48h1.6v9.46Zm-4.76-.5c.56 0 1.034-.113 1.42-.34.4-.24.72-.547.96-.92.24-.387.414-.82.52-1.3.12-.48.18-.96.18-1.44 0-.453-.053-.9-.16-1.34a3.487 3.487 0 0 0-.52-1.18 2.519 2.519 0 0 0-.9-.86c-.373-.213-.826-.32-1.36-.32-.546 0-1.013.107-1.4.32a2.73 2.73 0 0 0-.96.82c-.24.347-.42.747-.54 1.2-.106.453-.16.927-.16 1.42 0 .467.047.933.14 1.4.094.467.254.893.48 1.28.227.373.527.68.9.92.374.227.84.34 1.4.34ZM151.581 12.3h-1.7v-2.08h1.7v2.08Zm-1.7 1.86h1.7V24.5h-1.7V14.16ZM156.574 14.16h2.06v1.5h-2.06v6.42c0 .2.013.36.04.48.04.12.107.213.2.28.093.067.22.113.38.14.173.013.393.02.66.02h.78v1.5h-1.3c-.44 0-.82-.027-1.14-.08a1.812 1.812 0 0 1-.76-.34c-.187-.16-.327-.387-.42-.68-.093-.293-.14-.68-.14-1.16v-6.58h-1.76v-1.5h1.76v-3.1h1.7v3.1ZM169.683 24.46c-.294.173-.7.26-1.22.26-.44 0-.794-.12-1.06-.36-.254-.253-.38-.66-.38-1.22a4.148 4.148 0 0 1-1.64 1.22c-.614.24-1.28.36-2 .36-.467 0-.914-.053-1.34-.16a3.088 3.088 0 0 1-1.08-.5 2.503 2.503 0 0 1-.74-.88c-.174-.373-.26-.82-.26-1.34 0-.587.1-1.067.3-1.44.2-.373.46-.673.78-.9.333-.24.706-.42 1.12-.54.426-.12.86-.22 1.3-.3.466-.093.906-.16 1.32-.2.426-.053.8-.12 1.12-.2.32-.093.573-.22.76-.38.186-.173.28-.42.28-.74 0-.373-.074-.673-.22-.9a1.358 1.358 0 0 0-.54-.52c-.214-.12-.46-.2-.74-.24a5.396 5.396 0 0 0-.8-.06c-.72 0-1.32.14-1.8.42-.48.267-.74.78-.78 1.54h-1.7c.026-.64.16-1.18.4-1.62.24-.44.56-.793.96-1.06.4-.28.853-.48 1.36-.6.52-.12 1.073-.18 1.66-.18.466 0 .926.033 1.38.1.466.067.886.207 1.26.42.373.2.673.487.9.86.226.373.34.86.34 1.46v5.32c0 .4.02.693.06.88.053.187.213.28.48.28.146 0 .32-.033.52-.1v1.32Zm-2.76-5.3c-.214.16-.494.28-.84.36-.347.067-.714.127-1.1.18-.374.04-.754.093-1.14.16a3.942 3.942 0 0 0-1.04.28 1.93 1.93 0 0 0-.76.58c-.187.24-.28.573-.28 1 0 .28.053.52.16.72.12.187.266.34.44.46.186.12.4.207.64.26.24.053.493.08.76.08.56 0 1.04-.073 1.44-.22.4-.16.726-.353.98-.58.253-.24.44-.493.56-.76.12-.28.18-.54.18-.78v-1.74ZM171.365 10.22h1.7V24.5h-1.7V10.22ZM183.445 22.9h3.16c.213 0 .48-.013.8-.04.32-.04.66-.12 1.02-.24.36-.133.713-.32 1.06-.56.36-.24.68-.567.96-.98.28-.413.507-.927.68-1.54.187-.627.28-1.38.28-2.26 0-.853-.087-1.613-.26-2.28-.16-.68-.433-1.253-.82-1.72-.373-.48-.86-.84-1.46-1.08-.6-.253-1.34-.38-2.22-.38h-3.2V22.9Zm-1.9-12.68h4.9c2.2 0 3.893.56 5.08 1.68 1.187 1.12 1.78 2.827 1.78 5.12 0 1.2-.133 2.267-.4 3.2-.267.92-.68 1.7-1.24 2.34-.56.627-1.273 1.107-2.14 1.44-.867.333-1.893.5-3.08.5h-4.9V10.22ZM202.527 18.34c-.027-.4-.12-.78-.28-1.14a2.607 2.607 0 0 0-.62-.92 2.603 2.603 0 0 0-.92-.62 2.736 2.736 0 0 0-1.16-.24c-.44 0-.84.08-1.2.24a2.644 2.644 0 0 0-.9.62c-.253.267-.453.58-.6.94a3.44 3.44 0 0 0-.26 1.12h5.94Zm1.64 2.88c-.227 1.16-.727 2.033-1.5 2.62-.773.587-1.747.88-2.92.88-.827 0-1.547-.133-2.16-.4a4.257 4.257 0 0 1-1.52-1.12 4.88 4.88 0 0 1-.94-1.72 8.594 8.594 0 0 1-.34-2.18c0-.787.12-1.507.36-2.16a5.25 5.25 0 0 1 1-1.7c.44-.48.953-.853 1.54-1.12a4.77 4.77 0 0 1 1.96-.4c.92 0 1.68.193 2.28.58.613.373 1.1.853 1.46 1.44.373.587.627 1.227.76 1.92.147.693.207 1.353.18 1.98h-7.74c-.013.453.04.887.16 1.3.12.4.313.76.58 1.08.267.307.607.553 1.02.74.413.187.9.28 1.46.28.72 0 1.307-.167 1.76-.5.467-.333.773-.84.92-1.52h1.68ZM207.129 21.24c.013.373.1.693.26.96.16.253.367.46.62.62.267.147.56.253.88.32.333.067.673.1 1.02.1.267 0 .547-.02.84-.06.293-.04.56-.113.8-.22.253-.107.46-.26.62-.46.16-.213.24-.48.24-.8 0-.44-.167-.773-.5-1-.333-.227-.753-.407-1.26-.54a15.244 15.244 0 0 0-1.62-.38 9.82 9.82 0 0 1-1.64-.48 3.497 3.497 0 0 1-1.24-.88c-.333-.373-.5-.893-.5-1.56 0-.52.113-.967.34-1.34.24-.373.54-.673.9-.9.373-.24.787-.413 1.24-.52a5.53 5.53 0 0 1 1.38-.18c.587 0 1.127.053 1.62.16.493.093.927.267 1.3.52.387.24.693.573.92 1 .227.413.36.933.4 1.56h-1.7c-.027-.333-.113-.607-.26-.82a1.666 1.666 0 0 0-.56-.54 2.356 2.356 0 0 0-.76-.28c-.267-.067-.54-.1-.82-.1-.253 0-.513.02-.78.06-.253.04-.487.113-.7.22a1.299 1.299 0 0 0-.52.4c-.133.16-.2.373-.2.64 0 .293.1.54.3.74.213.187.48.347.8.48.32.12.68.227 1.08.32.4.08.8.167 1.2.26.427.093.84.207 1.24.34.413.133.773.313 1.08.54.32.213.573.487.76.82.2.333.3.747.3 1.24 0 .627-.133 1.147-.4 1.56a2.926 2.926 0 0 1-1.02 1 4.015 4.015 0 0 1-1.42.52 7.75 7.75 0 0 1-1.56.16c-.573 0-1.12-.06-1.64-.18-.52-.12-.98-.313-1.38-.58-.4-.28-.72-.64-.96-1.08-.24-.453-.373-1-.4-1.64h1.7ZM217.889 12.3h-1.7v-2.08h1.7v2.08Zm-1.7 1.86h1.7V24.5h-1.7V14.16ZM229.443 23.62c0 1.693-.387 2.96-1.16 3.8-.774.84-1.987 1.26-3.64 1.26-.48 0-.974-.053-1.48-.16a4.633 4.633 0 0 1-1.36-.52c-.4-.24-.734-.553-1-.94-.267-.387-.414-.86-.44-1.42h1.7c.013.307.106.567.28.78.186.213.406.387.66.52.266.133.553.227.86.28.306.067.6.1.88.1.56 0 1.033-.1 1.42-.3a2.55 2.55 0 0 0 .96-.8c.253-.333.433-.74.54-1.22.12-.48.18-1.007.18-1.58v-.68h-.04c-.294.64-.74 1.113-1.34 1.42a4.15 4.15 0 0 1-1.88.44c-.774 0-1.447-.14-2.02-.42a4.271 4.271 0 0 1-1.44-1.12 5.073 5.073 0 0 1-.88-1.66 7.167 7.167 0 0 1-.28-2.02c0-.613.08-1.24.24-1.88a5.03 5.03 0 0 1 .8-1.76 4.237 4.237 0 0 1 1.48-1.3c.613-.347 1.366-.52 2.26-.52.653 0 1.253.147 1.8.44.546.28.973.707 1.28 1.28h.02v-1.48h1.6v9.46Zm-4.76-.5c.56 0 1.033-.113 1.42-.34.4-.24.72-.547.96-.92.24-.387.413-.82.52-1.3.12-.48.18-.96.18-1.44 0-.453-.054-.9-.16-1.34a3.507 3.507 0 0 0-.52-1.18 2.535 2.535 0 0 0-.9-.86c-.374-.213-.827-.32-1.36-.32-.547 0-1.014.107-1.4.32-.387.2-.707.473-.96.82-.24.347-.42.747-.54 1.2-.107.453-.16.927-.16 1.42 0 .467.046.933.14 1.4.093.467.253.893.48 1.28.226.373.526.68.9.92.373.227.84.34 1.4.34ZM232.007 14.16h1.6v1.64h.04c.707-1.253 1.827-1.88 3.36-1.88.68 0 1.247.093 1.7.28.453.187.82.447 1.1.78.28.333.473.733.58 1.2.12.453.18.96.18 1.52v6.8h-1.7v-7c0-.64-.187-1.147-.56-1.52-.373-.373-.887-.56-1.54-.56-.52 0-.973.08-1.36.24-.373.16-.687.387-.94.68-.253.293-.447.64-.58 1.04-.12.387-.18.813-.18 1.28v5.84h-1.7V14.16ZM120.141 30.22h1.9V44.5h-1.9V30.22ZM124.956 34.16h1.6v1.64h.04c.707-1.253 1.827-1.88 3.36-1.88.68 0 1.247.093 1.7.28.454.187.82.447 1.1.78.28.333.474.733.58 1.2.12.453.18.96.18 1.52v6.8h-1.7v-7c0-.64-.186-1.147-.56-1.52-.373-.373-.886-.56-1.54-.56-.52 0-.973.08-1.36.24-.373.16-.686.387-.94.68a3.06 3.06 0 0 0-.58 1.04c-.12.387-.18.813-.18 1.28v5.84h-1.7V34.16ZM137.11 41.24c.013.373.1.693.26.96.16.253.366.46.62.62.266.147.56.253.88.32.333.067.673.1 1.02.1.266 0 .546-.02.84-.06.293-.04.56-.113.8-.22.253-.107.46-.26.62-.46.16-.213.24-.48.24-.8 0-.44-.167-.773-.5-1-.334-.227-.754-.407-1.26-.54a15.36 15.36 0 0 0-1.62-.38 9.792 9.792 0 0 1-1.64-.48 3.488 3.488 0 0 1-1.24-.88c-.334-.373-.5-.893-.5-1.56 0-.52.113-.967.34-1.34.24-.373.54-.673.9-.9.373-.24.786-.413 1.24-.52.466-.12.926-.18 1.38-.18.586 0 1.126.053 1.62.16.493.093.926.267 1.3.52.386.24.693.573.92 1 .226.413.36.933.4 1.56h-1.7c-.027-.333-.114-.607-.26-.82a1.675 1.675 0 0 0-.56-.54 2.356 2.356 0 0 0-.76-.28c-.267-.067-.54-.1-.82-.1-.254 0-.514.02-.78.06-.254.04-.487.113-.7.22a1.292 1.292 0 0 0-.52.4c-.134.16-.2.373-.2.64 0 .293.1.54.3.74.213.187.48.347.8.48.32.12.68.227 1.08.32.4.08.8.167 1.2.26.426.093.84.207 1.24.34.413.133.773.313 1.08.54.32.213.573.487.76.82.2.333.3.747.3 1.24 0 .627-.134 1.147-.4 1.56a2.943 2.943 0 0 1-1.02 1 4.022 4.022 0 0 1-1.42.52 7.75 7.75 0 0 1-1.56.16 7.27 7.27 0 0 1-1.64-.18c-.52-.12-.98-.313-1.38-.58-.4-.28-.72-.64-.96-1.08-.24-.453-.374-1-.4-1.64h1.7ZM147.87 32.3h-1.7v-2.08h1.7v2.08Zm-1.7 1.86h1.7V44.5h-1.7V34.16ZM159.423 43.62c0 1.693-.386 2.96-1.16 3.8-.773.84-1.986 1.26-3.64 1.26-.48 0-.973-.053-1.48-.16a4.655 4.655 0 0 1-1.36-.52 3.21 3.21 0 0 1-1-.94c-.266-.387-.413-.86-.44-1.42h1.7c.014.307.107.567.28.78.187.213.407.387.66.52.267.133.554.227.86.28.307.067.6.1.88.1.56 0 1.034-.1 1.42-.3.387-.187.707-.453.96-.8a3.08 3.08 0 0 0 .54-1.22c.12-.48.18-1.007.18-1.58v-.68h-.04a2.895 2.895 0 0 1-1.34 1.42 4.144 4.144 0 0 1-1.88.44c-.773 0-1.446-.14-2.02-.42a4.29 4.29 0 0 1-1.44-1.12 5.092 5.092 0 0 1-.88-1.66 7.203 7.203 0 0 1-.28-2.02c0-.613.08-1.24.24-1.88.16-.653.427-1.24.8-1.76a4.255 4.255 0 0 1 1.48-1.3c.614-.347 1.367-.52 2.26-.52.654 0 1.254.147 1.8.44.547.28.974.707 1.28 1.28h.02v-1.48h1.6v9.46Zm-4.76-.5c.56 0 1.034-.113 1.42-.34.4-.24.72-.547.96-.92.24-.387.414-.82.52-1.3.12-.48.18-.96.18-1.44 0-.453-.053-.9-.16-1.34a3.487 3.487 0 0 0-.52-1.18 2.519 2.519 0 0 0-.9-.86c-.373-.213-.826-.32-1.36-.32-.546 0-1.013.107-1.4.32a2.73 2.73 0 0 0-.96.82c-.24.347-.42.747-.54 1.2-.106.453-.16.927-.16 1.42 0 .467.047.933.14 1.4.094.467.254.893.48 1.28.227.373.527.68.9.92.374.227.84.34 1.4.34ZM161.988 30.22h1.7v5.46h.04c.133-.32.32-.587.56-.8.24-.227.506-.407.8-.54.306-.147.62-.253.94-.32.333-.067.653-.1.96-.1.68 0 1.246.093 1.7.28.453.187.82.447 1.1.78.28.333.473.733.58 1.2.12.453.18.96.18 1.52v6.8h-1.7v-7c0-.64-.187-1.147-.56-1.52-.374-.373-.887-.56-1.54-.56-.52 0-.974.08-1.36.24a2.54 2.54 0 0 0-.94.68c-.254.293-.447.64-.58 1.04-.12.387-.18.813-.18 1.28v5.84h-1.7V30.22ZM175.461 34.16h2.06v1.5h-2.06v6.42c0 .2.013.36.04.48.04.12.107.213.2.28.093.067.22.113.38.14.173.013.393.02.66.02h.78v1.5h-1.3c-.44 0-.82-.027-1.14-.08a1.812 1.812 0 0 1-.76-.34c-.187-.16-.327-.387-.42-.68-.093-.293-.14-.68-.14-1.16v-6.58h-1.76v-1.5h1.76v-3.1h1.7v3.1ZM180.449 41.24c.014.373.1.693.26.96.16.253.367.46.62.62.267.147.56.253.88.32.334.067.674.1 1.02.1.267 0 .547-.02.84-.06.294-.04.56-.113.8-.22.254-.107.46-.26.62-.46.16-.213.24-.48.24-.8 0-.44-.166-.773-.5-1-.333-.227-.753-.407-1.26-.54a15.244 15.244 0 0 0-1.62-.38 9.848 9.848 0 0 1-1.64-.48 3.505 3.505 0 0 1-1.24-.88c-.333-.373-.5-.893-.5-1.56 0-.52.114-.967.34-1.34.24-.373.54-.673.9-.9.374-.24.787-.413 1.24-.52a5.53 5.53 0 0 1 1.38-.18c.587 0 1.127.053 1.62.16a3.41 3.41 0 0 1 1.3.52c.387.24.694.573.92 1 .227.413.36.933.4 1.56h-1.7c-.026-.333-.113-.607-.26-.82a1.657 1.657 0 0 0-.56-.54 2.347 2.347 0 0 0-.76-.28c-.266-.067-.54-.1-.82-.1-.253 0-.513.02-.78.06-.253.04-.486.113-.7.22a1.306 1.306 0 0 0-.52.4c-.133.16-.2.373-.2.64 0 .293.1.54.3.74.214.187.48.347.8.48.32.12.68.227 1.08.32.4.08.8.167 1.2.26.427.093.84.207 1.24.34.414.133.774.313 1.08.54.32.213.574.487.76.82.2.333.3.747.3 1.24 0 .627-.133 1.147-.4 1.56a2.926 2.926 0 0 1-1.02 1 4.008 4.008 0 0 1-1.42.52 7.75 7.75 0 0 1-1.56.16c-.573 0-1.12-.06-1.64-.18-.52-.12-.98-.313-1.38-.58-.4-.28-.72-.64-.96-1.08-.24-.453-.373-1-.4-1.64h1.7ZM38.182 34.915c0-13.389-8.24-21.378-19.496-21.378C7.063 13.537 0 22.266 0 33.436 0 45.123 7.21 54 19.79 54c8.534 0 14.86-4.069 17.435-12.353l-10.3-.74c-1.25 3.329-3.751 4.956-7.356 4.956-5.15 0-8.46-3.403-8.902-9.173h27.515v-1.775ZM19.054 21.156c4.709 0 7.798 3.107 8.387 8.433H10.594c.515-5.252 3.752-8.433 8.46-8.433ZM66.506 0v18.345c-2.575-3.18-6.18-4.808-11.035-4.808-8.608 0-15.523 7.397-15.523 19.899 0 12.28 6.768 20.49 16.332 20.49 4.709 0 8.46-1.997 11.035-5.992l.368 4.735h9.196V0H66.506Zm-8.019 44.753c-5.003 0-8.534-4.29-8.534-11.317 0-6.954 3.531-11.244 8.534-11.244s8.534 4.364 8.534 11.244-3.531 11.317-8.534 11.317ZM82.745 52.669h10.373V0H82.745v52.669ZM101.604 7.855c2.159 0 3.908-1.758 3.908-3.928S103.763 0 101.604 0c-2.16 0-3.908 1.757-3.908 3.927s1.749 3.928 3.908 3.928Zm0-.732a3.185 3.185 0 0 1-3.18-3.196 3.185 3.185 0 0 1 3.18-3.196 3.185 3.185 0 0 1 3.18 3.196 3.185 3.185 0 0 1-3.18 3.196Zm-1.324-1.428h.63V4.394h.992l.674 1.3h.703l-.767-1.438c.352-.186.621-.555.621-1.05 0-.737-.582-1.134-1.124-1.134h-1.729v3.623Zm.63-1.797v-1.33h.909c.312 0 .63.181.63.638 0 .446-.313.692-.645.692h-.894Z"/>
+						</svg>
+
+						<p class="text-base">This article is part of our monthly newsletter that serves as your compass in the evolving landscape of digital design and user experience.</p>
+						<a class="flex items-center text-base underline link underline-offset-4" href="https://www.linkedin.com/newsletters/edl-digital-design-insights-7069622687349755904" target="_blank" rel="noopener" title="Jump to LinkedIn to subscribe to the newsletter.">Subscribe <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-0.5" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 7h10m0 0v10m0-10L7 17"/></svg></a>
+					</div>
+				</div>
+			</section>
+		</main>
+		
+		<footer class="text-white bg-black">
+			<div class="container px-6 py-8 mx-auto space-y-16 md:py-16 lg:space-y-28 lg:px-12 lg:pt-24">
+				<div class="space-y-12 lg:space-y-0 lg:columns-2 md:gap-x-16 lg:gap-x-24">
+					<div class="space-y-8 lg:space-y-12 break-after-column">
+						<div class="text-2xl leading-normal lg:leading-normal lg:text-3xl">
+							<span class="block"><a href="tel:+4528253694" title="Get in touch and discuss digital projects, ideas, or headaches." class="underline underline-offset-4">+45 28 25 36 94</a></span>
+							<span class="block"><a href="mailto:hello@edl.dk" title="Prefer writing? Shoot us an email instead." class="underline underline-offset-4">hello@edl.dk</a></span>
+						</div>
+
+						<ul class="text-xl leading-normal text-white/70 lg:text-2xl lg:leading-normal">
+							<li class="block">Amagerfælledvej 106</li>
+							<li class="block">2300 Copenhagen</li>
+							<li class="block">Denmark</li>
+						</ul>
+					</div>
+
+					<nav class="space-y-8 2xl:gap-x-24 md:columns-2 md:space-y-0">
+						<ul class="space-y-2 lg:space-y-4 break-after-column">
+							<li class="text-base text-white/60 lg:text-lg">Studio</li>
+							<li><a class="text-xl xl:text-2xl" href="services.html" title="Learn about our capabilities and how to gain from them.">Services</a></li>
+							<li><a class="text-xl xl:text-2xl" href="work.html" title="View the work we have done for and with fantastic people.">Work</a></li>
+							<li><a class="text-xl xl:text-2xl" href="about.html" title="Meet the team behind the design studio.">About</a></li>
+							<li><a class="text-xl xl:text-2xl" href="news.html" title="Dive into our blog to discover insights, inspiration, and the creative magic behind our work.">News</a></li>
+							<li><a class="text-xl xl:text-2xl" href="careers.html" title="Come work with a talented team of designers.">Careers</a></li>
+							<li><a class="text-xl xl:text-2xl" href="contact.html" title="Swing by for a cup of coffee, give us a call, or write an email.">Contact</a></li>
+						</ul>
+						
+						<ul class="space-y-2 lg:space-y-4">
+							<li class="text-base text-white/60 lg:text-lg">Services</li>
+							<li><a class="text-xl xl:text-2xl" href="services/design-service.html" title="Learn more about Design as a Service.">Design as a Service</a></li>
+							<li><a class="text-xl xl:text-2xl" href="services/design-projects.html" title="Learn how we facilitate design projects from start to finish.">Design project</a></li>
+							<li><a class="text-xl xl:text-2xl" href="services/evaluation.html" title="Read about our process for evaluating existing products and services.">UX evaluation</a></li>
+							<li><a class="text-xl xl:text-2xl" href="trial.html" title="Try our services and meet our team before committing to an entire project.">Trial</a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="flex justify-between text-sm lg:space-x-24 lg:text-lg">
+					<div class="space-x-4 lg:space-x-6">
+						<span class="inline-block">&copy; 2023 EDL</span>
+						<a class="inline-block" href="/privacy-policy.html" title="View EDL’s privacy policy.">Privacy policy</a>
+					</div>
+					
+					<div class="space-x-4 lg:space-x-6">
+						<span class="hidden md:inline-block text-black/60">Follow us</span>
+						<a class="inline-block underline underline-offset-4" href="https://linkedin.com/company/edldesign" target="_blank" rel="noopener" title="View EDL’s profile on LinkedIn.">LinkedIn</a>
+						<a class="inline-block underline underline-offset-4" href="https://instagram.com/edl.studio" target="_blank" rel="noopener" title="View EDL’s profile on Instagram.">Instagram</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

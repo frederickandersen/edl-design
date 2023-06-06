@@ -60,10 +60,8 @@
 				</div>
 			</section>
 
-			<!-- <div class="absolute inset-0 w-full bg-no-repeat bg-cover bg-sky-gradient -z-10"></div>-->
-
 			<div class="px-6">
-				<video class="object-cover w-full bg-black rounded-lg 2xl:rounded-2xl h-120 lg:h-auto lg:aspect-video" playsinline loop autoplay muted poster="/media/daas-reel-poster.png">
+				<video class="object-cover w-full bg-black 2xl:rounded-2xl h-120 lg:h-auto lg:aspect-video" playsinline loop autoplay muted poster="/media/daas-reel-poster.png">
 					<source src="../media/daas-reel.webm" type="video/webm">
 					<source src="../media/daas-reel.mp4" type="video/mp4">
 					This browser does not support the HTML5 video element.
@@ -341,8 +339,8 @@
 			<!-- Contact Frederick -->
 			<section class="relative py-16 md:py-24 lg:py-32 2xl:py-40">
 				<div class="container px-6 mx-auto lg:px-12">
-					<article class="p-8 text-white bg-black rounded-lg lg:p-12 2xl:p-16 md:space-y-0 md:flex md:gap-10 lg:gap-16 2xl:gap-20">
-						<img class="hidden object-cover rounded-lg md:h-64 md:block aspect-square lg:h-104" src="../media/edl-frederick-andersen.jpg" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
+					<article class="p-8 text-white bg-black lg:p-12 2xl:p-16 md:space-y-0 md:flex md:gap-10 lg:gap-16 2xl:gap-20">
+						<img class="hidden object-cover md:h-64 md:block aspect-square lg:h-104" src="../media/edl-frederick-andersen.jpg" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
 
 						<div class="flex flex-col justify-between space-y-8">
 							<div class="space-y-4">
@@ -350,7 +348,7 @@
 								<p class="max-w-5xl mx-auto text-xl leading-normal lg:leading-relaxed lg:text-2xl 2xl:leading-relaxed 2xl:text-3xl">He’s been designing digital projects for a decade and will help you get a running start with your next design project.</p>
 							</div>
 
-							<img class="object-cover w-40 h-40 rounded-lg md:hidden" src="../media/edl-frederick-andersen.jpg" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
+							<img class="object-cover w-40 h-40 md:hidden" src="../media/edl-frederick-andersen.jpg" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
 
 							<div class="space-y-4 text-lg leading-normal lg:text-xl lg:leading-normal 2xl:text-2xl 2xl:leading-normal">
 								<h3>Frederick Andersen</h3>
@@ -429,7 +427,7 @@
 			<!-- Call to action -->
 			<section class="pb-16 md:pb-24 lg:pb-32 2xl:pb-48">
 				<div class="container px-6 mx-auto space-y-8 lg:px-12 md:space-y-12 lg:space-y-16">
-					<article class="flex flex-col items-start p-8 mx-auto space-y-6 text-white bg-black rounded-lg md:space-y-8 lg:items-center lg:space-y-0 2xl:rounded-2xl lg:flex-row lg:space-x-12 md:p-10 lg:p-12 2xl:p-16">
+					<article class="flex flex-col items-start p-8 mx-auto space-y-6 text-white bg-black md:space-y-8 lg:items-center lg:space-y-0 2xl:rounded-2xl lg:flex-row lg:space-x-12 md:p-10 lg:p-12 2xl:p-16">
 						<div class="w-full space-y-2 lg:space-y-2">
 							<h3 class="text-3xl leading-tight md:text-4xl md:leading-tight lg:leading-tight lg:text-5xl 2xl:leading-tight">Got a project in mind?</h3>
 							<p class="max-w-3xl text-xl leading-normal md:text-2xl md:leading-normal lg:leading-normal lg:text-3xl">We’ll discuss the challenges and recommend the best next steps for the project.</p>
@@ -477,7 +475,10 @@
 				</div>
 
 				<div class="flex justify-between text-sm lg:space-x-24 lg:text-lg">
-					<span class="inline-block">&copy; 2023 EDL</span>
+					<div class="space-x-4 lg:space-x-6">
+						<span class="inline-block">&copy; 2023 EDL</span>
+						<a class="inline-block" href="/privacy-policy.html" title="View EDL’s privacy policy.">Privacy policy</a>
+					</div>
 					
 					<div class="space-x-4 lg:space-x-6">
 						<span class="hidden md:inline-block text-black/60">Follow us</span>

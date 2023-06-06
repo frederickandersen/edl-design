@@ -1,20 +1,7 @@
-/* This CSS resource incorporates links to font software which is the valuable copyrighted property of Monotype and/or its suppliers. You may not attempt to copy, install, redistribute, convert, modify or reverse engineer this font software. Please contact Monotype with any questions regarding Web Fonts: https://www.linotype.com */
-@import url("https://fast.fonts.net/lt/1.css?apiType=css&c=e143d2a0-7875-4e3d-8e59-d49b3eead621&fontids=5664093");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-    font-family: 'Neco';
-    src: url('../fonts/Neco-Italic.woff2') format('woff2'),
-         url('../fonts/Neco-Italic.woff') format('woff'),
-         url('../fonts/Neco-Italic.ttf') format('truetype');
-         font-weight: 400;
-         font-display: swap;
-         font-style: italic;
-         font-variant-numeric: tabular-nums;
-}
 
 @font-face {
     font-family: "Helvetica Neue LT W05 55 Roman";
