@@ -10,3 +10,4 @@
 /career /careers
 /career/product-designer /careers/product-designer
 https://edl.design/* https://www.edl.dk/:splat 301!
+/odense-zoo /app-experience-odense-zoo
