@@ -28,7 +28,7 @@
 		<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 	</head>
 
-	<body class="overflow-x-hidden font-sans antialiased">
+	<body class="overflow-x-hidden font-sans antialiased bg-black">
 		<div class="relative hidden w-full px-12 py-4 text-center text-white bg-black/80 hover:bg-black/70 md:block lg:px-24" x-data="{ hide_banner: true, cookie_name: 'announcement-daas' }" x-init="hide_banner = docCookies.hasItem(cookie_name) ? (docCookies.getItem(cookie_name) == 'true') : false;" x-bind:class="{ 'hidden': hide_banner, 'relative hidden md:block': !hide_banner }">
 			<a href="/services/design-service.html" class="block w-full space-x-2 text-base link lg:text-xl lg:leading-normal 2xl:text-2xl 2xl:leading-normal" @click="hide_banner = true; docCookies.setItem(cookie_name, true, (60*24*60*60));">
 				<span class="opacity-80">Latest update</span>
@@ -54,11 +54,11 @@
 		</header>
 
 		<main>
-			<section class="relative pt-4 pb-12 text-white bg-black sm:py-12 lg:py-24 3xl:py-32">
+			<section class="relative pt-4 pb-12 text-white bg-black sm:py-12 lg:py-16 2xl:py-24">
 				<div class="container w-full px-6 mx-auto space-y-8 lg:px-12 md:space-y-12 lg:space-y-16 2xl:space-y-20">
 					<div class="space-y-8 md:space-y-12 lg:space-y-16 2xl:space-y-20">
-						<h1 class="w-full text-5xl leading-tight md:leading-tight md:text-7xl lg:text-7.5xl transition duration-1000 lg:leading-[1.2] xl:leading-[1.2] xl:text-8xl 2xl:leading-[1.2] 2xl:text-8.5xl 3xl:text-9xl 3xl:leading-[1.2]" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">After many years in the biz, we decided to mix things up.</h1>
-						<p class="max-w-4xl text-2xl leading-normal lg:leading-relaxed lg:text-3xl 2xl:leading-relaxed 2xl:text-4xl">We’ve created a new kind of studio. EDL<span class="text-xs md:text-base align-super">®</span> combines killer branding with user-friendly digital design, all to make your product pop and your users’ world a little brighter.</p>
+						<h1 class="w-full text-5xl leading-tight md:leading-tight md:text-7xl lg:text-7.5xl transition duration-1000 lg:leading-[1.2] xl:leading-[1.2] xl:text-8xl 2xl:leading-[1.2] 2xl:text-8.5xl 3xl:text-9xl 3xl:leading-[1.2]" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">After many years in the biz, we decided to mix things up</h1>
+						<p class="max-w-4xl text-2xl leading-normal lg:leading-relaxed lg:text-3xl">We’ve created a new kind of studio. EDL<span class="text-xs md:text-base align-super">®</span> combines killer branding with user-friendly digital design, all to make your product pop and your users’ world a little brighter.</p>
 					</div>
 
 					<nav class="space-x-8">
@@ -69,11 +69,11 @@
 			</section>
 
 			<!-- The team -->
-			<section class="py-16 md:py-24 lg:py-32 2xl:py-40" id="team">
+			<section class="pt-16 pb-4 text-white md:pt-24 md:pb-12 lg:pt-32 lg:pb-16 2xl:pt-40 2xl:pb-24" id="team">
 				<div class="container px-6 mx-auto space-y-8 lg:space-y-16 2xl:space-y-20 lg:px-12">
 					<div class="space-y-4 lg:space-y-6">
-						<div class="preheader">Meet the team</div>
-						<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7.5xl 3xl:text-8xl 3xl:leading-tight">Specialised people, devoted to quality.</h2>
+						<div class="border-white preheader">Meet the team</div>
+						<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7.5xl 3xl:text-8xl 3xl:leading-tight">Specialised people, devoted to quality</h2>
 					</div>
 
 					<div class="grid grid-cols-2 gap-y-12 gap-x-8 md:gap-y-24 md:gap-x-12 xl:grid-cols-3">
@@ -185,14 +185,14 @@
 			</section>
 
 			<!-- Working with us -->
-			<section class="py-16 text-white bg-black md:py-24 lg:py-32 2xl:py-40" id="collab">
-				<div class="container px-6 mx-auto space-y-8 lg:px-12 md:space-y-12 lg:space-y-16">
-					<div class="space-y-4 lg:space-y-6 lg:text-center">
+			<section class="py-16 text-white md:py-24 lg:py-32 2xl:py-40" id="collab">
+				<div class="container px-6 mx-auto space-y-8 lg:px-12 lg:space-y-16 2xl:space-y-20">
+					<div class="space-y-4 lg:space-y-6 ">
 						<div class="border-white preheader">Working with us</div>
-						<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7xl">Not your average design studio.</h2>
+						<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7.5xl 3xl:text-8xl 3xl:leading-tight">Not your average design studio</h2>
 					</div>
 
-					<div x-data="{ active: 0 }" class="max-w-4xl mx-auto md:space-y-3 lg:space-y-4 2xl:max-w-6xl">
+					<div x-data="{ active: 0 }" class="md:space-y-3 lg:space-y-4">
 						<div x-data="{ id: 1, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-white/20 md:border md:rounded-md">
 							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
 								<span>Validate often</span>
@@ -234,7 +234,7 @@
 							</button>
 
 							<div x-show="expanded" class="accordion-content">
-								<p>Our studio become an extension of your team. There is no us and them. It is through close collaboration we grow your product and business.</p>
+								<p>Our studio become an extension of your team. There is no &ldquo;us and them.&rdquo; It is through close collaboration we grow your product and business.</p>
 							</div>
 						</div>
 
