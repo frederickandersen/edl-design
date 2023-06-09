@@ -4,10 +4,12 @@
 /dss) /services/design-service
 /session /services
 /services/design-abonnement /services/design-service
-/work/smooth-robotics /work
 /services/start-trial /trial
 /services/ux-evaluation /services/evaluation
 /career /careers
 /career/product-designer /careers/product-designer
 https://edl.design/* https://www.edl.dk/:splat 301!
-/odense-zoo /app-experience-odense-zoo
+/work/odense-zoo /work/app-experience-odense-zoo
+/work/iot-digital-display /work/enhancing-kitchen-opreations-improved-user-interface
+/work/cloud-platform /work/enhancing-kitchen-opreations-improved-user-interface
+/work/smooth-robotics /work
