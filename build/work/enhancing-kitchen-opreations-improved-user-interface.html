@@ -42,37 +42,22 @@
 		<main>
 			<section class="relative pt-4 sm:pt-12 lg:pt-16 3xl:pt-24">
 				<div class="container w-full px-6 mx-auto space-y-16 lg:px-12 lg:space-y-20 2xl:space-y-24">
-					<div class="space-y-8 md:space-y-8 lg:space-y-12">
+					<div class="space-y-6 md:space-y-8 lg:space-y-12">
 						<div class="preheader">Case story</div>
-						<h1 class="w-full text-5xl leading-tight md:leading-tight md:text-7xl lg:text-7.5xl lg:leading-[1.2] 2xl:leading-[1.2] 2xl:text-8xl" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">Enhancing kitchen operations with improved user interface and data monitoring</h1>
+						<h1 class="w-full text-4.5xl leading-tight md:leading-tight md:text-7xl lg:text-7.5xl lg:leading-[1.2] 2xl:leading-[1.2] 2xl:text-8xl" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">Enhancing kitchen operations with improved user interface and data monitoring</h1>
 						
-						<div class="flex flex-wrap gap-2">
-							<span class="tag">We helped with</span>
-							<span class="inline-flex items-center px-3 py-1 text-base leading-normal bg-white rounded-full lg:py-1.5 lg:px-4 lg:text-xl 2xl:text-2xl">Strategy and concept</span>
-							<span class="inline-flex items-center px-3 py-1 text-base leading-normal bg-white rounded-full lg:py-1.5 lg:px-4 lg:text-xl 2xl:text-2xl">Prototyping</span>
-							<span class="inline-flex items-center px-3 py-1 text-base leading-normal bg-white rounded-full lg:py-1.5 lg:px-4 lg:text-xl 2xl:text-2xl">UX design</span>
-							<span class="inline-flex items-center px-3 py-1 text-base leading-normal bg-white rounded-full lg:py-1.5 lg:px-4 lg:text-xl 2xl:text-2xl">UI design</span>
-							<span class="inline-flex items-center px-3 py-1 text-base leading-normal bg-white rounded-full lg:py-1.5 lg:px-4 lg:text-xl 2xl:text-2xl">Design system</span>
-						</div>
+					</div>
+					<div class="flex flex-wrap gap-2">
+						<span class="bg-white border-none tag">Strategy and concept</span>
+						<span class="bg-white border-none tag">Prototyping</span>
+						<span class="bg-white border-none tag">UX design</span>
+						<span class="bg-white border-none tag">UI design</span>
+						<span class="bg-white border-none tag">Design system</span>
 					</div>
 
 					<div class="mx-auto md:grid md:grid-cols-10">
 						<div class="w-full space-y-12 md:col-span-7 lg:col-span-6 lg:col-start-5 2xl:col-span-5 2xl:col-start-6 lg:space-y-16">
 							<p class="text-xl leading-normal lg:text-2xl lg:leading-relaxed">JØNI, a Danish production company established in 1973, has long been a prominent commercial kitchen equipment manufacturer, offering tilting pots, roasters, and hobs to the European market and beyond. Driven by innovation and flexibility, JØNI has a team of 45 employees dedicated to creating products focusing on easy and ergonomic operation, hygiene, reliability, and longevity. Striving to be the preferred manufacturer for commercial kitchens, they aim to deliver solutions tailored to the unique needs of individual customers.</p>
-		
-							<figure class="max-w-4xl space-y-6 transition duration-1000 2xl:max-w-4xl lg:space-y-8" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">
-								<blockquote>
-									<p class="w-full mt-8 text-2xl leading-normal md:text-3xl md:leading-normal lg:text-4xl lg:leading-normal">&ldquo;The process has been both iterative and creative. The approach has led to excellent results for both us and our clients.&rdquo;</p>
-								</blockquote>
-			
-								<figcaption class="flex items-center">
-									<img class="object-cover pointer-events-none w-14 h-14 lg:w-20 lg:h-20" src="../media/joeni-quote.jpg" alt="Profile picture of Uffe Pilgaard from JØNI." />
-									<div class="flex flex-col ml-4 leading-normal lg:ml-6 text-normal lg:text-xl">
-										Uffe Pilgaard
-										<cite class="not-italic text-black/70">Mechanical Engineer at <a href="https://joeni.com" class="text-link" target="_blank" rel="noopener">JØNI</a></cite>
-									</div>
-								</figcaption>
-							</figure>
 						</div>
 					</div>
 				</div>
@@ -80,7 +65,7 @@
 
 			<section class="relative py-16 space-y-16 md:py-24 lg:py-32 md:space-y-24 lg:space-y-32">				
 				<div class="px-6 space-y-4 lg:grid lg:grid-cols-10 lg:gap-6 lg:space-y-0">
-					<video class="object-cover col-span-full aspect-video bg-gray" playsinline loop autoplay muted>
+					<video class="object-cover w-full col-span-full aspect-video bg-gray" playsinline loop autoplay muted>
 						<source src="../media/cases/joeni-0.mp4" type='video/mp4'>
 						Sorry, your browser doesn't support HTML5 video.
 					</video>
@@ -139,6 +124,20 @@
 							<source>
 							<img src="../media/cases/joeni-08.png" class="object-contain w-full h-full" alt="Four designs laid out in a square, displaying wireframes of the final interface design."/>
 						</picture>
+					</figure>
+
+					<figure class="col-span-5 col-start-6 py-12 space-y-6 transition lg:space-y-8">
+						<blockquote>
+							<p class="w-full text-2xl leading-normal md:text-3xl md:leading-normal 2xl:text-4xl 2xl:leading-normal">&ldquo;The process has been both iterative and creative. The approach has led to excellent results for both us and our clients.&rdquo;</p>
+						</blockquote>
+	
+						<figcaption class="flex items-center">
+							<img class="object-cover pointer-events-none w-14 h-14 lg:w-20 lg:h-20" src="../media/joeni-quote.jpg" alt="Profile picture of Uffe Pilgaard from JØNI." />
+							<div class="flex flex-col ml-4 leading-normal lg:ml-6 text-normal lg:text-xl">
+								Uffe Pilgaard
+								<cite class="not-italic text-black/70">Mechanical Engineer at <a href="https://joeni.com" class="text-link" target="_blank" rel="noopener">JØNI</a></cite>
+							</div>
+						</figcaption>
 					</figure>
 
 					<figure class="space-y-2 col-span-full">
