@@ -1340,6 +1340,10 @@ select {
   width: 50%;
 }
 
+.w-2\/3 {
+  width: 66.666667%;
+}
+
 .max-w-4xl {
   max-width: 56rem;
 }
@@ -3941,6 +3945,10 @@ select {
 
   .\33xl\:pt-24 {
     padding-top: 6rem;
+  }
+
+  .\33xl\:pt-20 {
+    padding-top: 5rem;
   }
 
   .\33xl\:text-9xl {
