@@ -27,11 +27,11 @@
     }
 
     .accordion {
-        @apply flex items-center justify-between w-full py-6 text-xl leading-snug text-left md:p-6 md:text-2xl md:leading-snug 2xl:text-3xl 2xl:leading-snug 2xl:p-8;
+        @apply flex items-center justify-between w-full py-6 text-xl leading-snug 2xl:py-8 lg:text-2xl lg:leading-snug 2xl:text-3xl 2xl:leading-snug;
     }
 
     .accordion-content {
-        @apply max-w-4xl pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 2xl:px-8 lg:pb-8 lg:text-2xl lg:leading-relaxed 2xl:max-w-6xl;
+        @apply max-w-4xl pb-6 space-y-4 text-xl leading-normal 2xl:pb-12 lg:leading-relaxed 2xl:text-2xl 2xl:leading-relaxed 2xl:max-w-6xl;
     }
 
     .tile {
@@ -51,7 +51,7 @@
     }
 
     .marquee-logo {
-        @apply mx-12 lg:mx-16 2xl:mx-20;
+        @apply mx-8 md:mx-12 lg:mx-16 2xl:mx-20;
     }
 
     .text-link {

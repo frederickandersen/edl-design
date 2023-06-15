@@ -192,8 +192,8 @@
 						<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7.5xl 3xl:text-8xl 3xl:leading-tight">Not your average design studio</h2>
 					</div>
 
-					<div x-data="{ active: 0 }" class="md:space-y-3 lg:space-y-4">
-						<div x-data="{ id: 1, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-white/20 md:border md:rounded-md">
+					<div x-data="{ active: 0 }">
+						<div x-data="{ id: 1, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-white/20">
 							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
 								<span>Validate often</span>
 								
@@ -208,7 +208,7 @@
 							</div>
 						</div>
 
-						<div x-data="{ id: 2, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-white/20 md:border md:rounded-md">
+						<div x-data="{ id: 2, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-white/20">
 							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
 								<span>Work over slideshows</span>
 
@@ -223,7 +223,7 @@
 							</div>
 						</div>
 
-						<div x-data="{ id: 3, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-white/20 md:border md:rounded-md">
+						<div x-data="{ id: 3, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-white/20">
 							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
 								<span>Lasting partnerships</span>
 
@@ -238,7 +238,7 @@
 							</div>
 						</div>
 
-						<div x-data="{ id: 4, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-white/20 md:border md:rounded-md">
+						<div x-data="{ id: 4, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-white/20">
 							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
 								<span>Diversified outlook</span>
 
@@ -253,7 +253,7 @@
 							</div>
 						</div>
 
-						<div x-data="{ id: 5, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-white/20 md:border md:rounded-md">
+						<div x-data="{ id: 5, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-white/20">
 							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
 								<span>Growth mindset</span>
 
