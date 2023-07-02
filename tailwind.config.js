@@ -11,7 +11,6 @@ module.exports = {
         },
         fontFamily: {
             'sans': ['"Helvetica Neue LT W05 55 Roman"', '"Helvetica Neue"', 'Arial', 'sans-serif'],
-            'serif': ['"Neco"', 'Times', 'serif'],
         },
         colors: {
             transparent: 'transparent',
@@ -104,7 +103,13 @@ module.exports = {
                     '@screen sm': {
                         maxWidth: '96%',
                     },
+                    '@screen lg': {
+                        maxWidth: '88%',
+                    },
                     '@screen 2xl': {
+                        maxWidth: '92%',
+                    },
+                    '@screen 3xl': {
                         maxWidth: '1820px',
                     },
                 }
