@@ -152,7 +152,7 @@
 					</blockquote>
 
 					<figcaption class="flex items-center">
-						<img class="object-cover rounded-full pointer-events-none w-14 h-14 lg:w-20 lg:h-20" src="../media/acc-quote.jpg" alt="Profile picture of Kasper Rasmussen from Accutics smiling." />
+						<img class="object-cover pointer-events-none w-14 h-14 lg:w-20 lg:h-20" src="../media/acc-quote.jpg" alt="Profile picture of Kasper Rasmussen from Accutics smiling." />
 						<div class="flex flex-col ml-4 leading-normal lg:ml-6 text-normal lg:text-xl">
 							Kasper Rasmussen
 							<cite class="not-italic opacity-70">Co-Founder</cite>
@@ -242,9 +242,9 @@
 
 			<section>
 				<div class="container px-6 mx-auto space-y-8 lg:px-12 md:space-y-12 lg:space-y-16">
-					<article class="flex flex-col items-start p-8 mx-auto space-y-6 text-white bg-black md:space-y-8 lg:items-center max-w-screen-2xl lg:space-y-0 2xl:rounded-2xl lg:flex-row lg:space-x-12 md:p-10 lg:p-12 2xl:p-16">
-						<div class="w-full space-y-2 lg:space-y-2">
-							<h3 class="text-3xl leading-tight md:text-4xl md:leading-tight lg:leading-tight lg:text-5xl 2xl:leading-tight">Ready to <span class="">improve your product?</span></h3>
+					<article class="flex flex-col items-start p-8 mx-auto space-y-6 text-white bg-black md:space-y-8 lg:items-center lg:space-y-0 lg:flex-row lg:space-x-12 md:p-10 lg:p-12 2xl:p-16">
+						<div class="w-full space-y-2 lg:space-y-4">
+							<h3 class="text-3xl leading-tight md:text-4xl md:leading-tight lg:leading-tight lg:text-5xl 2xl:leading-tight">Ready to improve your product?</h3>
 							<p class="max-w-3xl text-xl leading-normal md:text-2xl md:leading-normal lg:leading-normal lg:text-3xl">Schedule a 30-minute online call to plan the evaluation.</p>
 						</div>
 
@@ -256,12 +256,13 @@
 			<!-- FAQ -->
 			<section class="pt-20 pb-16 md:py-24 lg:py-32 2xl:py-48">
 				<div class="container px-6 mx-auto space-y-8 lg:px-12 md:space-y-12 lg:space-y-16">
-					<div class="space-y-4 md:text-center">
+					<div class="space-y-4 lg:space-y-6">
 						<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7xl">Frequently asked questions</h2>
+						<p class="max-w-5xl text-xl leading-normal md:leading-normal md:text-2xl lg:leading-relaxed lg:text-3xl">Please do not hesitate to reach out.</p>
 					</div>
 
-					<div x-data="{ active: 0 }" class="max-w-4xl mx-auto md:space-y-3 lg:space-y-4 2xl:max-w-6xl">
-						<div x-data="{ id: 1, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="md:border md:border-black md:rounded-md">
+					<div x-data="{ active: 0 }">
+						<div x-data="{ id: 1, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20">
 							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
 								<span>What does it require of us?</span>
 								
@@ -271,12 +272,12 @@
 								</svg>
 							</button>
 
-							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 lg:text-2xl lg:leading-relaxed 2xl:px-8">
+							<div x-show="expanded" class="accordion-content">
 								<p>We need you to explain a few things (e.g., audience, their needs, your intent, and your KPIs), but we’ll do the actual evaluation. Before you know it, a list of actionable insights will land in your inbox.</p>
 							</div>
 						</div>
 						
-						<div x-data="{ id: 2, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20 md:border md:border-black md:rounded-md">
+						<div x-data="{ id: 2, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20">
 							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
 								<span>How do we get started?</span>
 
@@ -286,12 +287,12 @@
 								</svg>
 							</button>
 
-							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 lg:text-2xl lg:leading-relaxed 2xl:px-8">
+							<div x-show="expanded" class="accordion-content">
 								<p><a class="underline underline-offset-4" title="Schedule a call with our CEO, Frederick." href="https://cal.com/frederickandersen/ux-evaluation" target="_blank" rel="noopener">Schedule an introductory call</a> with our CEO, Frederick. Together you’ll discuss your product, budget, and timeline—no strings attached until you commit.</p>
 							</div>
 						</div>
 
-						<div x-data="{ id: 3, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20 md:border md:border-black md:rounded-md">
+						<div x-data="{ id: 3, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20">
 							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
 								<span>When is the right time for an evaluation?</span>
 
@@ -301,12 +302,12 @@
 								</svg>
 							</button>
 
-							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 lg:text-2xl lg:leading-relaxed 2xl:px-8">
+							<div x-show="expanded" class="accordion-content">
 								<p>An evaluation is good for stirring things up. Your team might need a fresh pair of unbiased eyes. Maybe your product has grown out of control in the last 12 months, and you need help connecting everything seamlessly. Perhaps you’re just trying to avoid easily correctable UX mistakes before launch.</p>
 							</div>
 						</div>
 
-						<div x-data="{ id: 4, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20 md:border md:border-black md:rounded-md">
+						<div x-data="{ id: 4, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20">
 							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
 								<span>How long does it take?</span>
 
@@ -316,12 +317,12 @@
 								</svg>
 							</button>
 
-							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 lg:text-2xl lg:leading-relaxed 2xl:px-8">
+							<div x-show="expanded" class="accordion-content">
 								<p>Typically, it takes less than two weeks from start to finish. Of course, the final time varies, but we’ll be able to determine that after our introductory call.</p>
 							</div>
 						</div>
 
-						<div x-data="{ id: 5, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20 md:border md:border-black md:rounded-md">
+						<div x-data="{ id: 5, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20">
 							<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
 								<span>What standards are you using?</span>
 
@@ -331,7 +332,7 @@
 								</svg>
 							</button>
 
-							<div x-show="expanded" class="pb-6 space-y-4 text-xl leading-normal md:px-6 lg:pr-16 lg:pb-8 lg:text-2xl lg:leading-relaxed 2xl:px-8">
+							<div x-show="expanded" class="accordion-content">
 								<p>Our evaluation builds upon the industry standards developed by Rolf Molich and Jakob Nielsen. In addition, we enrich the evaluation with our specialized experience working with small, medium, and large tech companies.</p>
 							</div>
 						</div>

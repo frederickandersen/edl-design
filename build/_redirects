@@ -4,7 +4,8 @@
 /dss) /services/design-service
 /session /services
 /services/design-abonnement /services/design-service
-/services/start-trial /trial
+/services/start-trial /
+/trial /
 /services/ux-evaluation /services/evaluation
 /career /careers
 /career/product-designer /careers/product-designer
