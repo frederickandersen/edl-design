@@ -54,103 +54,29 @@
 		</header>
 
 		<main>
-			<section class="relative pt-4 sm:pt-12 lg:pt-16 3xl:pt-24">
+			<section class="relative pt-4 pb-12 sm:py-12 lg:py-16 2xl:py-24">
 				<div class="container w-full px-6 mx-auto space-y-8 transition duration-1000 lg:px-12 md:space-y-12 lg:space-y-16 2xl:space-y-20" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">
 					<div class="space-y-6 lg:space-y-8 2xl:space-y-10">
 						<h1 class="w-full text-5xl leading-tight md:leading-tight md:text-7xl lg:text-7.5xl lg:leading-[1.2] xl:leading-[1.2] xl:text-8xl 2xl:leading-[1.2] 2xl:text-8.5xl 3xl:text-9xl 3xl:leading-[1.2]">We help companies be intentional about design and build better software faster</h1>
 					</div>
+
+					<nav class="space-x-8">
+						<a class="text-xl underline lg:text-2xl underline-offset-4 lg:underline-offset-8 opacity-60 hover:opacity-100" href="#cases" title="View the team of the Copenhagen-based design studio.">Case stories</a>
+						<a class="text-xl underline lg:text-2xl underline-offset-4 lg:underline-offset-8 opacity-60 hover:opacity-100" href="#playground" title="Read how we go about our business.">Playground</a>
+					</nav>
 				</div>
 			</section>
 
-			<section class="relative py-16 md:py-24 md:pt-16 lg:py-32 lg:pt-24 2xl:py-40">
+			<section id="cases" class="relative py-16 space-y-8 border-t lg:space-y-12 md:py-24 md:pt-16 lg:py-32 lg:pt-24 border-black/10">
+				<div class="container px-6 mx-auto lg:px-12">
+					<h2 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-snug lg:text-5xl">Case stories</h2>
+				</div>
+
 				<div class="container grid gap-16 px-6 mx-auto lg:px-12 lg:grid-cols-2 lg:gap-y-24">
-					<!-- Popermo -->
-					<article class="relative space-y-8 2xl:space-y-12">
-						<img src="../media/popermo-cover.png" class="object-cover w-full aspect-square" alt="User interface for Popermo's insurance product."/>
-						
-						<div class="space-y-4 lg:space-y-6">
-							<div class="space-y-4">
-								<div class="flex space-x-2 lg:space-x-3">
-									<span class="tag">B2B</span>
-									<span class="tag">B2C</span>
-									<span class="tag">App</span>
-								</div>
-
-								<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl">Rethinking how millennials buy insurance online</h3>
-							</div>
+					<article class="relative space-y-8 group 2xl:space-y-12">
+						<div class="overflow-hidden">
+							<img src="../media/jublo/jublo-10.jpg" class="object-cover w-full transition duration-500 ease-in-out group-hover:scale-105 aspect-video" alt="User interface for Jublo's property management SaaS tool designed by EDL."/>
 						</div>
-					</article>
-
-					<!-- Jublo app -->
-					<article class="relative space-y-8 2xl:space-y-12">
-						<img src="../media/jublo-app/jublo-app-cover.png" class="object-cover object-left w-full aspect-square" alt="Jublo app design displayed in iPhone."/>
-						
-						<div class="space-y-4 lg:space-y-6">
-							<div class="space-y-4">
-								<div class="flex space-x-2 lg:space-x-3">
-									<span class="tag">B2B</span>
-									<span class="tag">SaaS</span>
-								</div>
-
-								<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl">Enterprise functionality designed for the user on the move</h3>
-							</div>
-						</div>
-					</article>
-
-					<!-- ARIS Robotics -->
-					<article class="relative space-y-8 2xl:space-y-12">
-						<img src="../media/aris-robotics/aris-robotics-web-app-cover.png" class="object-cover object-left w-full aspect-square" alt="ARIS Robotics' web app experience placed in a Macbook Pro."/>
-						
-						<div class="space-y-4 lg:space-y-6">
-							<div class="space-y-4">
-								<div class="flex space-x-2 lg:space-x-3">
-									<span class="tag">B2B</span>
-									<span class="tag">SaaS</span>
-								</div>
-
-								<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl">Accessible, gorgeous data visualization for a sustainable future</h3>
-							</div>
-						</div>
-					</article>
-
-					<!-- ARIS Robotics -->
-					<article class="relative space-y-8 2xl:space-y-12">
-						<img src="../media/aris-cover.png" class="object-cover object-left w-full aspect-square" alt="Branding posters for ARIS Robotics."/>
-						
-						<div class="space-y-4 lg:space-y-6">
-							<div class="space-y-4">
-								<div class="flex space-x-2 lg:space-x-3">
-									<span class="tag">B2B</span>
-									<span class="tag">Branding</span>
-								</div>
-
-								<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl">Reimagining the brand identity for an AI-based monitoring system</h3>
-							</div>
-						</div>
-					</article>
-
-					<!-- Smooth Robotics -->
-					<article class="relative space-y-8 2xl:space-y-12">
-						<img src="../media/sr-cover.png" class="object-cover object-left w-full aspect-square bg-gray" alt="User interface for Smooth Robotics's new shiny app." />
-
-						<div class="space-y-4 lg:space-y-6">
-							<div class="space-y-4 lg:space-y-6">
-								<div class="space-y-4">
-									<div class="flex space-x-2 lg:space-x-3">
-										<span class="tag">B2B</span>
-										<span class="tag">Robotics</span>
-										<span class="tag">App</span>
-									</div>
-
-									<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl">We reimagined the user experience for building and executing robotic movements</h3>
-								</div>
-							</div>
-						</div>
-					</article>
-
-					<!-- Wult -->
-					<article class="relative space-y-8 2xl:space-y-12">
-						<img src="../media/wult-cover.png" class="object-cover object-left w-full aspect-square" alt="User interface for Wult's data compliance software."/>
 
 						<div class="space-y-4 lg:space-y-6">
 							<div class="space-y-4">
@@ -159,34 +85,21 @@
 									<span class="tag">SaaS</span>
 								</div>
 
-								<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl">Enterprise data compliance made simple, collaborative, and enjoyable</h3>
+								<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl">A customer-first approach to enterprise SaaS design</h3>
 							</div>
+
+							<a class="flex text-lg leading-normal underline group link lg:text-2xl lg:leading-normal text-black/60 hover:text-black underline-offset-4" href="./work/customer-first-approach-enterprise-saas-design.html" title="Read our case story on how we redesigned the property management experience.">Read case story</a>
 						</div>
 					</article>
 
-					<!-- Jublo -->
-					<article class="relative space-y-8 2xl:space-y-12">
-						<img src="../media/jublo/jublo-cover.png" class="object-cover w-full aspect-square" alt="User interface for Jublo's property management SaaS tool designed by EDL."/>
-
-						<div class="space-y-4 lg:space-y-6">
-							<div class="space-y-4">
-								<div class="flex space-x-2 lg:space-x-3">
-									<span class="tag">B2B</span>
-									<span class="tag">SaaS</span>
-								</div>
-
-								<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl"><a href="./work/customer-first-approach-enterprise-saas-design.html" class="link" title="Read our case story on how we redesigned the property management experience.">A customer-first approach to enterprise SaaS design</a></h3>
-							</div>
+					<article class="relative space-y-8 group 2xl:space-y-12">
+						<div class="overflow-hidden">
+							<video class="object-cover w-full transition duration-500 ease-in-out aspect-video bg-gray group-hover:scale-105" playsinline loop autoplay muted>
+								<source src="../media/joeni-cover.mp4" type='video/mp4; codecs="hvc1"'>
+								<source src="../media/joeni-cover.webm" type="video/webm">
+								Sorry, your browser doesn't support HTML5 video.
+							</video>
 						</div>
-					</article>
-
-					<!-- JØNI kettle -->
-					<article class="relative space-y-8 2xl:space-y-12">
-						<video class="object-cover w-full aspect-square bg-gray" playsinline loop autoplay muted>
-							<source src="../media/joeni-cover.mp4" type='video/mp4; codecs="hvc1"'>
-							<source src="../media/joeni-cover.webm" type="video/webm">
-							Sorry, your browser doesn't support HTML5 video.
-						</video>
 
 						<div class="space-y-4 lg:space-y-6">
 							<div class="space-y-4 lg:space-y-6">
@@ -196,79 +109,272 @@
 										<span class="tag">Software</span>
 									</div>
 	
-									<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl"><a href="./work/enhancing-kitchen-opreations-improved-user-interface.html" class="link" title="Read our case study on how we helped industrial kitchens with a digital experience.">Enhancing kitchen operations with improved user interface and data monitoring</a></h3>
+									<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl">Enhancing kitchen operations with improved user interface and data monitoring</h3>
 								</div>
+
+								<a class="flex text-lg leading-normal underline link lg:text-2xl lg:leading-normal text-black/60 hover:text-black underline-offset-4" href="./work/enhancing-kitchen-opreations-improved-user-interface.html" title="Read our case study on how we helped industrial kitchens with a digital experience.">Read case story</a>
 							</div>
 						</div>
 					</article>
 
-					<!-- Noitso -->
 					<article class="relative space-y-8 2xl:space-y-12">
-						<img src="../media/noitso-cover.png" class="object-cover w-full aspect-square" alt="User interface for Noitso's data compliance software."/>
+						<img src="../media/wult/wult-01.png" class="object-cover w-full aspect-video" alt="User interface for Wult's data compliance software."/>
 
 						<div class="space-y-4 lg:space-y-6">
 							<div class="space-y-4">
 								<div class="flex space-x-2 lg:space-x-3">
 									<span class="tag">B2B</span>
+									<span class="tag">SaaS</span>
+									<span class="tag">Enterprise</span>
+								</div>
+
+								<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl">Enterprise data compliance made simple, collaborative, and enjoyable</h3>
+							</div>
+
+							<span class="flex text-lg leading-normal link lg:text-2xl lg:leading-normal text-black/60 hover:cursor-wait">Coming soon</span>
+						</div>
+					</article>
+
+					<article class="relative space-y-8 2xl:space-y-12">
+						<img src="../media/popermo/popermo-app-01.jpg" class="object-cover w-full aspect-video" alt="User interface for Popermo's insurance product."/>
+
+						<div class="space-y-4 lg:space-y-6">
+							<div class="space-y-4">
+								<div class="flex space-x-2 lg:space-x-3">
 									<span class="tag">B2C</span>
-									<span class="tag">App</span>
+									<span class="tag">App design</span>
+								</div>
+
+								<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl">Rethinking how millennials buy insurance online</h3>
+							</div>
+
+							<span class="flex text-lg leading-normal link lg:text-2xl lg:leading-normal text-black/60 hover:cursor-wait">Coming soon</span>
+						</div>
+					</article>
+
+					<article class="relative space-y-8 2xl:space-y-12">
+						<img src="../media/jublo-app/jublo-app-01.jpg" class="object-cover w-full aspect-video" alt="Jublo app design displayed in iPhone."/>
+
+						<div class="space-y-4 lg:space-y-6">
+							<div class="space-y-4">
+								<div class="flex space-x-2 lg:space-x-3">
+									<span class="tag">B2B</span>
+									<span class="tag">SaaS</span>
+									<span class="tag">Enterprise</span>
+								</div>
+
+								<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl">Enterprise functionality designed for the user on the move</h3>
+							</div>
+
+							<span class="flex text-lg leading-normal link lg:text-2xl lg:leading-normal text-black/60 hover:cursor-wait">Coming soon</span>
+						</div>
+					</article>
+
+					<article class="relative space-y-8 2xl:space-y-12">
+						<img src="../media/aris-robotics/aris-robotics-01.png" class="object-cover object-top w-full aspect-video" alt="ARIS Robotics' web app experience placed in a Macbook Pro."/>
+
+						<div class="space-y-4 lg:space-y-6">
+							<div class="space-y-4">
+								<div class="flex space-x-2 lg:space-x-3">
+									<span class="tag">B2B</span>
+									<span class="tag">SaaS</span>
+								</div>
+
+								<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl">Accessible, gorgeous data visualization for a sustainable future</h3>
+							</div>
+
+							<span class="flex text-lg leading-normal link lg:text-2xl lg:leading-normal text-black/60 hover:cursor-wait">Coming soon</span>
+						</div>
+					</article>
+
+					<article class="relative space-y-8 2xl:space-y-12">
+						<img src="../media/smooth-robotics/smooth-robotics-01.jpg" class="object-cover object-top w-full aspect-video" alt="User interface for Smooth Robotics's new shiny app."/>
+
+						<div class="space-y-4 lg:space-y-6">
+							<div class="space-y-4">
+								<div class="flex space-x-2 lg:space-x-3">
+									<span class="tag">B2B</span>
+									<span class="tag">App design</span>
+									<span class="tag">Robotics</span>
+								</div>
+
+								<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl">Reimagining the user experience for building and executing robotic movements</h3>
+							</div>
+
+							<span class="flex text-lg leading-normal link lg:text-2xl lg:leading-normal text-black/60 hover:cursor-wait">Coming soon</span>
+						</div>
+					</article>
+
+					<article class="relative space-y-8 2xl:space-y-12">
+						<img src="../media/noitso/noitso-01.png" class="object-cover w-full aspect-video" alt="User interface for Noitso's data compliance software."/>
+
+						<div class="space-y-4 lg:space-y-6">
+							<div class="space-y-4">
+								<div class="flex space-x-2 lg:space-x-3">
+									<span class="tag">B2B</span>
+									<span class="tag">App design</span>
+									<span class="tag">Robotics</span>
 								</div>
 
 								<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl">Designing a white-label experience onboarding thousands of users every week</h3>
 							</div>
+
+							<span class="flex text-lg leading-normal link lg:text-2xl lg:leading-normal text-black/60 hover:cursor-wait">Coming soon</span>
 						</div>
 					</article>
+				</div>
+			</section>
 
-					<!-- Odense ZOO -->
-					<article class="relative space-y-8 2xl:space-y-12">
-						<img src="../media/odensezoo-cover.png" class="object-cover object-right w-full aspect-square bg-gray" alt="User interface for Odense ZOO's shiny app." />
+			<section id="playground" class="relative py-16 space-y-8 border-t lg:space-y-12 md:py-24 md:pt-16 lg:py-32 lg:pt-24 border-black/10">
+				<div class="container px-6 mx-auto space-y-4 lg:px-12">
+					<h2 class="text-3xl leading-snug text-black md:text-4xl md:leading-snug lg:leading-snug lg:text-5xl">Playground</h2>
+					<p class="text-xl leading-normal 2xl:text-2xl 2xl:leading-normal">We design little big details every single day.</p>
+				</div>
+
+				<div class="container grid gap-8 px-6 mx-auto lg:gap-12 md:grid-cols-2 lg:grid-cols-3 lg:px-12">
+					<figure class="h-auto max-w-full space-y-2">
+						<img src="../media/playground/playground-aris-robotics-01.png" class="object-cover h-auto p-12 lg:p-20 bg-gray" alt="Design system component for ARIS Robotics."/>
 						
-						<div class="space-y-4 lg:space-y-6">
-							<div class="space-y-4">
-								<div class="flex space-x-2 lg:space-x-3">
-									<span class="tag">B2C</span>
-									<span class="tag">App</span>
-								</div>
+						<figcaption>
+							<span class="inline-block text-sm md:text-base text-black/60">Stat widget</span>
+						</figcaption>
+					</figure>
 
-								<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl"><a href="./work/app-experience-odense-zoo.html" title="Read our case study on how we helped Odense ZOO design their app experience.">Transforming assumptions into a data-informed, minimum viable product users love</a></h3>
-							</div>
+					<figure class="h-auto max-w-full space-y-2">
+						<img src="../media/aris-robotics/aris-robotics-02.png" class="object-cover h-auto bg-gray" alt="Branding outdoors for ARIS Robotics."/>
+						
+						<figcaption>
+							<span class="inline-block text-sm md:text-base text-black/60">Outdoor branding exploration</span>
+						</figcaption>
+					</figure>
+
+					<figure class="h-auto max-w-full space-y-2">
+						<img src="../media/playground/playground-aris-robotics-02.png" class="object-contain h-auto p-12 lg:p-20 bg-gray" alt="Design system component for ARIS Robotics' website."/>
+						
+						<figcaption>
+							<span class="inline-block text-sm md:text-base text-black/60">Website component</span>
+						</figcaption>
+					</figure>
+
+					<figure class="h-auto max-w-full space-y-2">
+						<img src="../media/playground/playground-gf-01.png" class="object-contain h-auto p-20 bg-gray" alt="Design system component for GF Forsikring."/>
+						
+						<figcaption>
+							<span class="inline-block text-sm md:text-base text-black/60">Rating scale component</span>
+						</figcaption>
+					</figure>
+
+					<figure class="h-auto max-w-full space-y-2">
+						<img src="../media/playground/playground-gf-02.png" class="object-contain h-auto p-12 lg:p-20 bg-gray" alt="Design system component for GF Forsikring."/>
+						
+						<figcaption>
+							<span class="inline-block text-sm md:text-base text-black/60">Activity history component</span>
+						</figcaption>
+					</figure>
+
+					<figure class="h-auto max-w-full space-y-2">
+						<img src="../media/playground/playground-gf-03.png" class="object-contain h-auto p-12 lg:p-20 bg-gray" alt="Design system component for GF Forsikring."/>
+						
+						<figcaption>
+							<span class="inline-block text-sm md:text-base text-black/60">Smart options component</span>
+						</figcaption>
+					</figure>
+
+					<figure class="h-auto max-w-full space-y-2">
+						<img src="../media/playground/playground-wult-02.png" class="object-contain h-auto px-20 py-12 lg:px-28 lg:py-20 bg-gray" alt="Design system component for Wult."/>
+						
+						<figcaption>
+							<span class="inline-block text-sm md:text-base text-black/60">In-app comment thread</span>
+						</figcaption>
+					</figure>
+					
+					<figure class="h-auto max-w-full space-y-2">
+						<img src="../media/playground/playground-jublo-01.png" class="object-cover h-120 lg:h-160 bg-gray" alt="Android phone with the Jublo app displayed."/>
+						
+						<figcaption>
+							<span class="inline-block text-sm md:text-base text-black/60">In-app conversation thread</span>
+						</figcaption>
+					</figure>
+
+					<figure class="h-auto max-w-full space-y-2">
+						<img src="../media/playground/playground-odense-zoo-01.png" class="object-cover h-auto px-20 py-12 lg:py-20 lg:px-28 bg-gray" alt="Annual pass design system component."/>
+						
+						<figcaption>
+							<span class="inline-block text-sm md:text-base text-black/60">Annual pass for <a href="./work/app-experience-odense-zoo.html" title="Read our case study on how we helped Odense ZOO design their app experience.">Odense ZOO</a></span>
+						</figcaption>
+					</figure>
+				</div>
+
+				<div class="container px-6 pt-12 mx-auto lg:pt-16 lg:px-12">
+					<p class="text-xl text-center text-black/60">The playground is updated biweekly.</p>
+				</div>
+			</section>
+
+			<section class="relative py-16 border-t md:py-20 lg:py-24 border-black/10">
+				<div class="container px-6 mx-auto space-y-12 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-24 2xl:gap-x-32 lg:px-12">
+					<div class="space-y-8 lg:space-y-16 lg:col-span-1">
+						<div class="space-y-4">
+							<h3 class="text-3xl leading-snug md:text-4xl md:leading-snug lg:leading-snug lg:text-5xl 2xl:leading-snug 2xl:text-6xl">Want to see more?</h3>
+							<p class="text-xl leading-normal lg:leading-relaxed lg:text-2xl">Leave your phone number, and Frederick will give you a call. No strings attached.</p>
 						</div>
-					</article>	
 
-					<!-- BOR -->
-					<article class="relative space-y-8 2xl:space-y-12">
-						<img src="../media/bor-cover.jpg" class="object-cover w-full aspect-square bg-gray" alt="The UVD Robot driving around Copenhagen Airport." />
-						
-						<div class="space-y-4 lg:space-y-6">
-							<div class="space-y-4">
-								<div class="flex space-x-2 lg:space-x-3">
-									<span class="tag">B2B</span>
-									<span class="tag">Robotics</span>
-									<span class="tag">App</span>
-								</div>
-
-								<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl"><a href="./work/blue-ocean-robotics.html" title="Read our case study on how we helped Blue Ocean Robotics and UVD Robot redesign their visual language.">We helped design the visual design for the global robot phenomenon</a></h3>
-							</div>
-						</div>
-					</article>
-
-					<!-- Den Blå Planet -->
-					<article class="relative space-y-8 2xl:space-y-12">
-						<img src="../media/dbp-cover.png" class="object-cover w-full aspect-square bg-gray" alt="User interface for Den Blå Planet's shiny app." />
-						
-						<div class="space-y-4 lg:space-y-6">
-							<div class="space-y-4 lg:space-y-6">
-								<div class="space-y-4">
-									<div class="flex space-x-2 lg:space-x-3">
-										<span class="tag">B2C</span>
-										<span class="tag">App</span>
-									</div>
+						<div class="flex space-x-4 lg:space-x-8">
+							<img class="object-cover w-20 h-20 lg:h-32 lg:w-32" src="../media/edl-frederick-andersen.jpg" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
 	
-									<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl">An immersive digital experience for 500.000 annual guests</h3>
+							<div class="text-lg leading-normal lg:text-xl lg:space-y-2 lg:leading-normal 2xl:text-2xl 2xl:leading-normal">
+								<h3>Frederick Andersen</h3>
+								<span class="opacity-60">Designer & CEO</span>
+	
+								<div>
+									<a href="tel:+4528253694" class="block underline underline-offset-4" title="Call Frederick and chat about design and business.">28 25 36 94</a>
 								</div>
 							</div>
 						</div>
-					</article>
+					</div>
+
+					<div class="px-6 py-8 space-y-4 bg-black lg:p-10 2xl:px-12 2xl:py-14 lg:col-span-1 lg:space-y-8">
+						<h3 class="text-2xl leading-snug text-white md:leading-snug md:text-3xl 2xl:leading-snug 2xl:text-4xl">Get in touch</h3>
+						
+						<form name="Work" action="/success.html" data-netlify="true" method="POST" netlify-honeypot="bot-field">
+							<div class="hidden">
+								<label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+							</div>
+
+							<div>
+								<label for="name" class="block text-base text-white lg:text-lg">Name <span class="text-red">*</span></label>
+								
+								<div class="mt-1.5">
+									<input type="text" required name="name" id="name" autocomplete="given-name" class="block w-full px-4 py-3 text-white border-0 bg-white/20 focus:shadow-sm focus:ring-white focus:border-white">
+								</div>
+							</div>
+
+							<div class="mt-4">
+								<label for="company" class="block text-base text-white lg:text-lg">Company <span class="text-red">*</span></label>
+								
+								<div class="mt-1.5">
+									<input type="text" required name="company" id="company" autocomplete="company" class="block w-full px-4 py-3 text-white border-0 bg-white/20 focus:shadow-sm focus:ring-white focus:border-white">
+								</div>
+							</div>
+
+							<div class="mt-4">
+								<label for="phone" class="block text-base text-white lg:text-lg">Phone <span class="text-red">*</span></label>
+
+								<div class="mt-1.5">
+									<input type="text" id="phone" required name="phone" autocomplete="phone" class="block w-full px-4 py-3 text-white border-0 bg-white/20 focus:shadow-sm focus:ring-white focus:border-white">
+								</div>
+							</div>
+
+							<div class="mt-6">
+								<p class="text-white/60">By submitting the form, you agree to our <a href="/privacy-policy.html" class="text-white underline underline-offset-4" title="Read our privacy policy. It's dead simple." target="_blank" rel="noopener">Privacy Policy</a>.</p>
+							</div>
+
+							<div class="w-full mt-8 lg:mt-10 2xl:mt-12">
+								<button type="submit" class="w-full px-6 py-3 text-xl bg-white rounded-full lg:inline-block lg:px-7 lg:py-4 2xl:text-2xl 2xl:px-6">
+									Receive a phone call
+								</button>
+							</div>
+						</form>
+					</div>
 				</div>
 			</section>
 		</main>
