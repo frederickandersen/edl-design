@@ -4,13 +4,13 @@
     	<meta charset="UTF-8" />
     	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>Odense ZOO · EDL</title>
+		<title>App experience for Odense ZOO · EDL</title>
 
-		<meta name="title" content="Odense ZOO · EDL">
-    	<meta name="description" content="We designed the app experience and led app development from low-fidelity wireframes to a fully-fleshed design system.">
+		<meta name="title" content="App experience for Odense ZOO · EDL">
+    	<meta name="description" content="Learn how we designed the app experience and led app development from low-fidelity wireframes to a fully-fleshed design system loved by users.">
 		
-		<meta property="og:title" content="Odense ZOO · EDL" />
-    	<meta property="og:description" content="We designed the app experience and led app development from low-fidelity wireframes to a fully-fleshed design system." />
+		<meta property="og:title" content="App experience for Odense ZOO · EDL" />
+    	<meta property="og:description" content="Learn how we designed the app experience and led app development from low-fidelity wireframes to a fully-fleshed design system loved by users." />
 		<meta property="og:site_name" content="EDL®" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://www.edl.dk/work/app-experience-odense-zoo" />
@@ -23,7 +23,7 @@
 		<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 	</head>
 
-	<body class="overflow-x-hidden font-sans antialiased">
+	<body class="overflow-x-hidden font-sans antialiased bg-gray">
 		<header>
 			<div class="container px-6 py-6 mx-auto lg:px-12">
 				<nav class="space-y-4 sm:space-y-0 sm:flex sm:items-center sm:justify-between sm:flex-1 sm:h-16 lg:h-20">
@@ -40,153 +40,157 @@
 		</header>
 
 		<main>
-			<nav class="container items-center hidden px-6 mx-auto space-x-4 text-lg lg:px-12 md:flex lg:text-xl 2xl:text-2xl">
-				<a class="text-link " href="/work.html" title="View some of our best work.">Work</a>
-				<span class="opacity-40">▸</span>
-				<span class="opacity-70">App for Odense ZOO</span>
-			</nav>
+			<section class="relative pt-4 sm:pt-12 lg:pt-16 3xl:pt-24">
+				<div class="container w-full px-6 mx-auto space-y-8 md:space-y-12 lg:px-12 lg:space-y-16">
+					<div class="space-y-6 lg:space-y-8 2xl:space-y-12">
+						<div class="preheader">Case story</div>
+						<h1 class="w-full text-4.5xl leading-tight md:leading-tight md:text-7xl lg:text-7.5xl lg:leading-[1.2] 2xl:leading-[1.2] 2xl:text-8xl" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">Transforming assumptions into a beloved app experience</h1>
+					</div>
 
-			<section class="relative pt-4 pb-12 sm:pt-12 lg:pt-24 3xl:pt-32 md:pb-20 lg:pb-28 2xl:pb-32">
-				<div class="container z-10 px-6 mx-auto space-y-10 lg:px-12 lg:space-y-20 2xl:space-y-24">
-					<div x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }" class="mx-auto space-y-4 transition duration-1000 md:space-y-6 2xl:space-y-8">
-						<h1 class="w-full text-5xl leading-tight mx-auto md:text-7xl md:leading-tight xl:leading-tight xl:text-8xl 2xl:text-8.5xl 2xl:leading-[1.2] 3xl:text-9xl 3xl:leading-tight">Transforming assumptions into a data-informed, <span class="">minimal viable product</span> users love.</h1>
+					<div class="space-y-8 lg:space-y-12">
+						<div class="space-y-6 lg:space-y-8">
+							<p class="max-w-3xl text-xl leading-normal lg:text-2xl lg:leading-relaxed">Odense ZOO wanted to digitise their annual passes and create a feature-rich app experience. We needed to define the audience and their needs and produce a minimum viable product that could reward us with valuable insights immediately.</p>
+							<p class="max-w-3xl text-xl leading-normal lg:text-2xl lg:leading-relaxed">We designed the app experience starting from basic wireframes and evolved it into a complete design system. Additionally, we conducted workshops with stakeholders, online surveys with users, and an on-site usability test involving 40 participants.</p>
+						</div>
+
+						<ul class="max-w-3xl space-y-2 text-xl text-normal lg:text-xl 2xl:text-2xl">
+							<li class="flex">
+								<span class="w-1/3">Year</span>
+								<span class="w-2/3 leading-normal text-black/70">2021</span>
+							</li>
+
+							<li class="flex">
+								<span class="w-1/3">Partner</span>
+								<span class="w-2/3 leading-normal text-black/70">Odense ZOO</span>
+							</li>
+
+							<li class="flex">
+								<span class="w-1/3">Service</span>
+								<span class="w-2/3 leading-normal text-black/70">UX design, UI design, Design system, Usability tests</span>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</section>
 
-			<div class="px-6">
-				<img src="../media/oz-hero.png" class="object-cover object-right w-full bg-mint-green aspect-square lg:aspect-video" alt="iPhone with UI of the home and resturant page of the Odense ZOO app.">
-			</div>
+			<section class="relative py-16 space-y-16 md:py-24 md:space-y-24 lg:pb-32 lg:pt-24 lg:space-y-32">				
+				<div class="px-6 space-y-4 lg:grid lg:grid-cols-12 lg:gap-6 lg:space-y-0">
+					<figure class="space-y-2 col-span-full">
+						<picture class="block">
+							<source>
+							<img src="../media/odense-zoo/odense-zoo-01.png" class="object-contain w-full h-full" alt="The app laying on a green chair."/>
+						</picture>
+					</figure>
 
-			<section class="relative py-16 md:py-24 lg:py-32 2xl:py-40">
-				<div class="container flex flex-col-reverse px-6 mx-auto lg:flex-row lg:space-x-8 lg:px-12">
-					<!-- Sidebar -->
-					<div class="flex flex-col w-full mt-16 space-y-10 lg:space-y-12 lg:max-w-xs lg:mt-0 lg:h-full xl:max-w-sm lg:sticky lg:top-16">
-						<div>
-							<h4 class="text-2xl leading-normal">Deliverables</h4>
-								
-							<div class="flex flex-col mt-3 space-y-3">
-								<span class="text-lg leading-snug">Strategy and research</span>
-								<span class="text-lg leading-snug">UX design</span>
-								<span class="text-lg leading-snug">Design sprints</span>
-								<span class="text-lg leading-snug">UI design</span>
-								<span class="text-lg leading-snug">Usability tests</span>	
-							</div>
+					<figure class="w-full col-span-full bg-gray">
+						<video class="block w-full bg-[#e8e8e8] aspect-square lg:aspect-video" playsinline loop autoplay muted>
+							<source src="../media/odense-zoo/odense-zoo-reel.mp4" type='video/mp4; codecs="hvc1"'>
+							<source src="../media/odense-zoo/odense-zoo-reel.webm" type="video/webm">
+							Sorry, your browser doesn't support HTML5 video.
+						</video>
+					</figure>
+
+					<figure class="col-span-6 space-y-2">
+						<picture class="block">
+							<source>
+							<img src="../media/odense-zoo/odense-zoo-03.png" class="object-contain w-full h-full" alt="A photo of an iPhone taken from the top with the daily program showing."/>
+						</picture>
+					</figure>
+
+					<figure class="col-span-6 space-y-2 2xl:col-span-4">
+						<picture class="block">
+							<source>
+							<img src="../media/odense-zoo/odense-zoo-04.png" class="object-contain w-full h-full" alt="Close-up of a season pass in the Odense ZOO app."/>
+						</picture>
+					</figure>
+
+					<figure class="col-span-6 space-y-2 2xl:col-span-4">
+						<picture class="block">
+							<source>
+							<img src="../media/odense-zoo/odense-zoo-05.png" class="object-contain w-full h-full" alt="The bottom of the map view with a search function visible."/>
+						</picture>
+					</figure>
+
+					<figure class="col-span-6 space-y-2 2xl:col-span-4">
+						<picture class="block">
+							<source>
+							<img src="../media/odense-zoo/odense-zoo-06.png" class="object-contain w-full h-full" alt="A calendar of March open on top of the daily program."/>
+						</picture>
+					</figure>
+
+					<figure class="space-y-2 col-span-full">
+						<picture class="block">
+							<source>
+							<img src="../media/odense-zoo/odense-zoo-08.png" class="object-contain w-full h-full" alt="Two iPhones showing app UI."/>
+						</picture>
+					</figure>
+				</div>
+			</section>
+
+			<section class="relative py-16 border-t md:py-20 lg:py-24 border-black/10">
+				<div class="container px-6 mx-auto space-y-12 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-24 2xl:gap-x-32 lg:px-12">
+					<div class="space-y-8 lg:space-y-16 lg:col-span-1">
+						<div class="space-y-4">
+							<h3 class="text-3xl leading-snug md:text-4xl md:leading-snug lg:leading-snug lg:text-5xl 2xl:leading-snug 2xl:text-6xl">Want to learn more?</h3>
+							<p class="text-xl leading-normal lg:leading-relaxed lg:text-2xl">Leave your phone number, and Frederick will give you a call. No strings attached.</p>
 						</div>
 
-						<div>
-							<h4 class="text-2xl leading-normal">Download</h4>
-								
-							<div class="flex flex-col mt-3 space-y-3">
-								<a href="https://apps.apple.com/dk/app/odense-zoo/id1558822152?l=da#?platform=iphone" target="_blank" rel="noopener" class="flex items-center text-base leading-normal text-black lg:text-lg">
-									<span class="mr-1 text-lg leading-snug line">App Store</span>
-									<svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-										<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
-									</svg>
-								</a>
-
-								<a href="https://play.google.com/store/apps/details?id=dk.ecreo.odensezoo" target="_blank" rel="noopener" class="flex items-center text-base leading-normal text-black lg:text-lg">
-									<span class="mr-1 text-lg leading-snug line">Google Play</span>
-									<svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-										<path d="M18.48 16.834l-.116-11.198-11.198-.115.02 1.924 7.91.07L4.943 17.67l1.388 1.388L16.486 8.903l.081 7.924 1.912.007z" fill="currentColor"/>
-									</svg>
-								</a>
-							</div>
-						</div>
-
-						<div>
-							<h4 class="text-2xl leading-normal">Launch</h4>
-								
-							<div class="flex flex-col mt-2 space-y-3">
-								<span class="text-lg leading-snug">September 2021</span>
+						<div class="flex space-x-4 lg:space-x-8">
+							<img class="object-cover w-20 h-20 lg:h-32 lg:w-32" src="../media/edl-frederick-andersen.jpg" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
+	
+							<div class="text-lg leading-normal lg:text-xl lg:space-y-2 lg:leading-normal 2xl:text-2xl 2xl:leading-normal">
+								<h3>Frederick Andersen</h3>
+								<span class="opacity-60">Designer & CEO</span>
+	
+								<div>
+									<a href="tel:+4528253694" class="block underline underline-offset-4" title="Call Frederick and chat about design and business.">28 25 36 94</a>
+								</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="w-full space-y-12 lg:space-y-24">
-						<div class="max-w-5xl">
-							<h3 class="sr-only">The challenge</h3>
-							<p class="text-2xl leading-normal lg:leading-relaxed lg:text-4xl">Odense ZOO wanted to digitize their season passes and create a feature-rich mobile app experience. We needed to define our audience, their needs and produce a minimum viable product that could reward us with valuable insights immediately.</p>
-						</div>
+					<div class="px-6 py-8 space-y-4 bg-black lg:p-10 2xl:px-12 2xl:py-14 lg:col-span-1 lg:space-y-8">
+						<h3 class="text-2xl leading-snug text-white md:leading-snug md:text-3xl 2xl:leading-snug 2xl:text-4xl">Get in touch</h3>
 						
-						<div class="max-w-2xl 2xl:max-w-3xl">
-							<h3 class="mb-4 text-3xl leading-tight lg:leading-tight lg:text-4xl">Our role</h3>
-							<p class="text-xl leading-normal lg:leading-relaxed lg:text-2xl">
-								We designed the app experience from low-fidelity wireframes to a fully-fleshed design system. We also facilitated workshops with stakeholders, online surveys with users, and a 40-people usability test on-site.</p>
-							<p class="mt-4 text-xl leading-normal lg:leading-relaxed lg:text-2xl">
-								We documented and delivered the design system to <a href="https://ecreo.dk?ref=edl" title="Read more about web studio Ecreo" rel="noopener" target="blank" class="whitespace-pre line">Ecreo</a>, who executed on app development.</p>
-						</div>
-
-						<figure>
-							<video class="block w-full rounded-md max-h-80 bg-gray lg:max-h-160 lg:object-contain" playsinline loop autoplay muted>
-								<source src="../media/oz-screens.mp4" type='video/mp4; codecs="hvc1"'>
-								<source src="../media/oz-screens.webm" type="video/webm">
-								Sorry, your browser doesn't support HTML5 video.
-							</video>
-		
-							<figcaption class="w-full max-w-2xl mt-3 text-sm lg:leading-snug lg:text-base opacity-60">Screens and features from Odense ZOO’s new app.</figcaption>
-						</figure>
-
-						<div class="max-w-2xl 2xl:max-w-3xl">
-							<h2 class="mb-4 text-4xl leading-tight lg:leading-tight lg:text-5xl">Workshop and surveys</h2>
-							<p class="text-xl leading-normal lg:leading-relaxed lg:text-2xl">We held a workshop centered around a few core personas ranging from young single adults to grandparents visiting with their grandchildren.</p>
-							<p class="mt-4 text-xl leading-normal lg:leading-relaxed lg:text-2xl">Odense ZOO was well-represented. Marketing, sales, customer service, education, and their CEO all shared their expertise and experience. We based our exercises on Strategyzer’s value proposition canvas and created six customer journey maps.</p>
-							<p class="mt-4 text-xl leading-normal lg:leading-relaxed lg:text-2xl">Shortly after our workshop, we sent out a nine-question survey, which massed 5000 answers from season ticket holders. The answers ultimately helped define our minimal viable product.</p>
-						</div>
-
-						<figure>
-							<picture class="block px-8 pt-8 overflow-hidden rounded-md bg-gray">
-								<source>
-								<img src="../media/oz-wireframes.png" class="object-contain w-full h-full" alt="iPhone with UI of the home screen of the Odense ZOO app."/>
-							</picture>
-		
-							<figcaption class="w-full max-w-2xl mt-3 text-sm lg:leading-snug lg:text-base opacity-60">We layed out all screens to create an interactive prototype.</figcaption>
-						</figure>
-
-						<div class="max-w-2xl 2xl:max-w-3xl">
-							<h2 class="mb-4 text-4xl leading-tight lg:leading-tight lg:text-5xl">Rapid prototyping</h2>
-							<p class="text-xl leading-normal lg:leading-relaxed lg:text-2xl">We quickly turned to our prototyping tools to explore different experiences for each feature. We designed, tested, and iterated an interactive prototype over two days. Figma was essential to create close collaboration with Odense ZOO’s marketing team.</p>
-						</div>
-
-						<figure>
-							<div class="grid grid-cols-2 gap-2 lg:gap-4">
-								<picture class="block overflow-hidden rounded-md bg-gray max-h-104 lg:max-h-120">
-									<source>
-									<img src="../media/oz-map.png" class="object-cover w-full h-full" alt="The bottom of the map view with a search function visible."/>
-								</picture>
-
-								<picture class="block overflow-hidden rounded-md bg-gray max-h-104 lg:max-h-120">
-									<source>
-									<img src="../media/oz-calendar.png" class="object-cover w-full h-full" alt="A calendar of March open on top of the daily program."/>
-								</picture>
-
-								<picture class="block overflow-hidden rounded-md bg-gray max-h-104 lg:max-h-120">
-									<source>
-									<img src="../media/oz-passes.png" class="object-cover w-full h-full" alt="Close-up of a season pass in the Odense ZOO app."/>
-								</picture>
-
-								<picture class="block overflow-hidden rounded-md bg-gray max-h-104 lg:max-h-120">
-									<source>
-									<img src="../media/oz-program.png" class="object-cover w-full h-full" alt="A photo of an iPhone taken from the top with the daily program showing."/>
-								</picture>
+						<form name="Odense ZOO inquiries" action="/success.html" data-netlify="true" method="POST" netlify-honeypot="bot-field">
+							<div class="hidden">
+								<label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
 							</div>
 
-							<figcaption class="w-full max-w-2xl mt-3 text-sm lg:leading-snug lg:text-base opacity-60">Screens and elements from the new design system.</figcaption>
-						</figure>
+							<div>
+								<label for="name" class="block text-base text-white lg:text-lg">Name <span class="text-red">*</span></label>
+								
+								<div class="mt-1.5">
+									<input type="text" required name="name" id="name" autocomplete="given-name" class="block w-full px-4 py-3 text-white border-0 bg-white/20 focus:shadow-sm focus:ring-white focus:border-white">
+								</div>
+							</div>
 
-						<div class="max-w-2xl 2xl:max-w-3xl">
-							<h2 class="mb-4 text-4xl leading-tight lg:leading-tight lg:text-5xl">Design system and user testing</h2>
-							<p class="text-xl leading-normal lg:leading-relaxed lg:text-2xl">Odense ZOO was working on a new logo and a fresh overall identity. We transformed the design into a strict digital design system. Every part of the design from typography to individual components documented with usage and functionality in mind for Ecreo’s engineers.</p>
-						</div>
+							<div class="mt-4">
+								<label for="company" class="block text-base text-white lg:text-lg">Company <span class="text-red">*</span></label>
+								
+								<div class="mt-1.5">
+									<input type="text" required name="company" id="company" autocomplete="company" class="block w-full px-4 py-3 text-white border-0 bg-white/20 focus:shadow-sm focus:ring-white focus:border-white">
+								</div>
+							</div>
 
-						<figure>
-							<picture class="block overflow-hidden rounded-md bg-gray col-span-full">
-								<source>
-								<img src="../media/oz-design-system.png" class="object-contain w-full h-full" alt="iPhone with UI of the home screen of the Odense ZOO app."/>
-							</picture>
+							<div class="mt-4">
+								<label for="phone" class="block text-base text-white lg:text-lg">Phone <span class="text-red">*</span></label>
 
-							<figcaption class="w-full max-w-2xl mt-3 text-sm lg:leading-snug lg:text-base opacity-60">A small fraction of the design system.</figcaption>
-						</figure>
+								<div class="mt-1.5">
+									<input type="text" id="phone" required name="phone" autocomplete="phone" class="block w-full px-4 py-3 text-white border-0 bg-white/20 focus:shadow-sm focus:ring-white focus:border-white">
+								</div>
+							</div>
+
+							<div class="mt-6">
+								<p class="text-white/60">By submitting the form, you agree to our <a href="/privacy-policy.html" class="text-white underline underline-offset-4" title="Read our privacy policy. It's dead simple." target="_blank" rel="noopener">Privacy Policy</a>.</p>
+							</div>
+
+							<div class="w-full mt-8 lg:mt-10 2xl:mt-12">
+								<button type="submit" class="w-full px-6 py-3 text-xl bg-white rounded-full lg:inline-block lg:px-7 lg:py-4 2xl:text-2xl 2xl:px-6">
+									Receive a phone call
+								</button>
+							</div>
+						</form>
 					</div>
 				</div>
 			</section>
@@ -224,7 +228,6 @@
 							<li><a class="text-xl xl:text-2xl" href="../services/design-service.html" title="Learn more about Design as a Service.">Design as a Service</a></li>
 							<li><a class="text-xl xl:text-2xl" href="../services/design-projects.html" title="Learn how we facilitate design projects from start to finish.">Design project</a></li>
 							<li><a class="text-xl xl:text-2xl" href="../services/evaluation.html" title="Read about our process for evaluating existing products and services.">UX evaluation</a></li>
-
 						</ul>
 					</nav>
 				</div>

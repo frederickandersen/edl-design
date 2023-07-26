@@ -48,12 +48,12 @@
 					</div>
 
 					<div class="space-y-8 lg:space-y-12">
-						<div class="space-y-8">
+						<div class="space-y-6 lg:space-y-8">
 							<p class="max-w-3xl text-xl leading-normal lg:text-2xl lg:leading-relaxed">JØNI, a Danish production company established in 1973, has long been a prominent commercial kitchen equipment manufacturer, offering tilting pots, roasters, and hobs to the European market and beyond.</p>
 							<p class="max-w-3xl text-xl leading-normal lg:text-2xl lg:leading-relaxed">Driven by innovation and flexibility, JØNI has a team of 45 employees dedicated to creating products focusing on easy and ergonomic operation, hygiene, reliability, and longevity. Striving to be the preferred manufacturer for commercial kitchens, they aim to deliver solutions tailored to the unique needs of individual customers.</p>
 						</div>
 
-						<ul class="max-w-3xl space-y-2 text-xl text-normal lg:text-2xl">
+						<ul class="max-w-3xl space-y-2 text-xl text-normal lg:text-xl 2xl:text-2xl">
 							<li class="flex">
 								<span class="w-1/3">Year</span>
 								<span class="w-2/3 leading-normal text-black/70">2021</span>
@@ -170,6 +170,74 @@
 							</div>
 						</figcaption>
 					</figure>
+				</div>
+			</section>
+
+			<section class="relative py-16 border-t md:py-20 lg:py-24 border-black/10">
+				<div class="container px-6 mx-auto space-y-12 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-24 2xl:gap-x-32 lg:px-12">
+					<div class="space-y-8 lg:space-y-16 lg:col-span-1">
+						<div class="space-y-4">
+							<h3 class="text-3xl leading-snug md:text-4xl md:leading-snug lg:leading-snug lg:text-5xl 2xl:leading-snug 2xl:text-6xl">Want to learn more?</h3>
+							<p class="text-xl leading-normal lg:leading-relaxed lg:text-2xl">Leave your phone number, and Frederick will give you a call. No strings attached.</p>
+						</div>
+
+						<div class="flex space-x-4 lg:space-x-8">
+							<img class="object-cover w-20 h-20 lg:h-32 lg:w-32" src="../media/edl-frederick-andersen.jpg" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
+	
+							<div class="text-lg leading-normal lg:text-xl lg:space-y-2 lg:leading-normal 2xl:text-2xl 2xl:leading-normal">
+								<h3>Frederick Andersen</h3>
+								<span class="opacity-60">Designer & CEO</span>
+	
+								<div>
+									<a href="tel:+4528253694" class="block underline underline-offset-4" title="Call Frederick and chat about design and business.">28 25 36 94</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="px-6 py-8 space-y-4 bg-black lg:p-10 2xl:px-12 2xl:py-14 lg:col-span-1 lg:space-y-8">
+						<h3 class="text-2xl leading-snug text-white md:leading-snug md:text-3xl 2xl:leading-snug 2xl:text-4xl">Get in touch</h3>
+						
+						<form name="JØNI inquiries" action="/success.html" data-netlify="true" method="POST" netlify-honeypot="bot-field">
+							<div class="hidden">
+								<label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+							</div>
+
+							<div>
+								<label for="name" class="block text-base text-white lg:text-lg">Name <span class="text-red">*</span></label>
+								
+								<div class="mt-1.5">
+									<input type="text" required name="name" id="name" autocomplete="given-name" class="block w-full px-4 py-3 text-white border-0 bg-white/20 focus:shadow-sm focus:ring-white focus:border-white">
+								</div>
+							</div>
+
+							<div class="mt-4">
+								<label for="company" class="block text-base text-white lg:text-lg">Company <span class="text-red">*</span></label>
+								
+								<div class="mt-1.5">
+									<input type="text" required name="company" id="company" autocomplete="company" class="block w-full px-4 py-3 text-white border-0 bg-white/20 focus:shadow-sm focus:ring-white focus:border-white">
+								</div>
+							</div>
+
+							<div class="mt-4">
+								<label for="phone" class="block text-base text-white lg:text-lg">Phone <span class="text-red">*</span></label>
+
+								<div class="mt-1.5">
+									<input type="text" id="phone" required name="phone" autocomplete="phone" class="block w-full px-4 py-3 text-white border-0 bg-white/20 focus:shadow-sm focus:ring-white focus:border-white">
+								</div>
+							</div>
+
+							<div class="mt-6">
+								<p class="text-white/60">By submitting the form, you agree to our <a href="/privacy-policy.html" class="text-white underline underline-offset-4" title="Read our privacy policy. It's dead simple." target="_blank" rel="noopener">Privacy Policy</a>.</p>
+							</div>
+
+							<div class="w-full mt-8 lg:mt-10 2xl:mt-12">
+								<button type="submit" class="w-full px-6 py-3 text-xl bg-white rounded-full lg:inline-block lg:px-7 lg:py-4 2xl:text-2xl 2xl:px-6">
+									Receive a phone call
+								</button>
+							</div>
+						</form>
+					</div>
 				</div>
 			</section>
 		</main>
