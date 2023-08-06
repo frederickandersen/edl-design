@@ -1657,6 +1657,11 @@ select {
   border-color: rgb(0 0 0 / 0.2);
 }
 
+.border-neutral-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 229 229 / var(--tw-border-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1698,6 +1703,21 @@ select {
 .bg-\[\#e8e8e8\] {
   --tw-bg-opacity: 1;
   background-color: rgb(232 232 232 / var(--tw-bg-opacity));
+}
+
+.bg-neutral-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(38 38 38 / var(--tw-bg-opacity));
+}
+
+.bg-neutral-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(82 82 82 / var(--tw-bg-opacity));
+}
+
+.bg-neutral-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 229 229 / var(--tw-bg-opacity));
 }
 
 .object-contain {
@@ -3443,11 +3463,6 @@ select {
     padding: 4rem;
   }
 
-  .\32xl\:py-24 {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
-
   .\32xl\:py-40 {
     padding-top: 10rem;
     padding-bottom: 10rem;
@@ -3600,6 +3615,11 @@ select {
   .\33xl\:py-32 {
     padding-top: 8rem;
     padding-bottom: 8rem;
+  }
+
+  .\33xl\:py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
   .\33xl\:pt-40 {
