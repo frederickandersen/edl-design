@@ -23,7 +23,7 @@
 		<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 	</head>
 
-	<body class="overflow-x-hidden font-sans antialiased bg-gray">
+	<body class="overflow-x-hidden font-sans antialiased bg-neutral-100">
 		<header>
 			<div class="container px-6 py-6 mx-auto lg:px-12">
 				<nav class="space-y-4 sm:space-y-0 sm:flex sm:items-center sm:justify-between sm:flex-1 sm:h-16 lg:h-20">
@@ -44,7 +44,7 @@
 				<div class="container w-full px-6 mx-auto space-y-8 md:space-y-12 lg:px-12 lg:space-y-16">
 					<div class="space-y-6 lg:space-y-8 2xl:space-y-12">
 						<div class="preheader">Case story</div>
-						<h1 class="w-full text-4.5xl leading-tight md:leading-tight md:text-7xl lg:text-7.5xl lg:leading-[1.2] 2xl:leading-[1.2] 2xl:text-8xl" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">A customer-first approach to enterprise SaaS design</h1>
+						<h1 class="w-full text-4.5xl leading-tight duration-1000 transition md:leading-tight md:text-7xl lg:text-7.5xl lg:leading-[1.2] 2xl:leading-[1.2] 2xl:text-8xl" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">A customer-first approach to enterprise SaaS design</h1>
 					</div>
 
 					<div class="space-y-8 lg:space-y-12">
@@ -76,7 +76,7 @@
 
 			<section class="relative py-16 space-y-16 md:py-24 md:space-y-24 lg:pb-32 lg:pt-24 lg:space-y-32">				
 				<div class="px-6 space-y-4 lg:grid lg:grid-cols-12 lg:gap-6 lg:space-y-0">
-					<figure class="w-full col-span-full bg-gray">
+					<figure class="w-full col-span-full bg-neutral-100">
 						<picture class="block">
 							<source>
 							<img src="../media/jublo/jublo-0.jpg" class="object-cover w-full aspect-video" alt="Image of app and web app design in Macbook Pro and iPhone." />
@@ -160,7 +160,7 @@
 						</picture>
 					</figure>
 
-					<video class="object-cover w-full col-span-6 aspect-video bg-gray" playsinline loop autoplay muted>
+					<video class="object-cover w-full col-span-6 aspect-video bg-neutral-100" playsinline loop autoplay muted>
 						<source src="../media/jublo/jublo-13.mp4" type='video/mp4'>
 						Sorry, your browser doesn't support HTML5 video.
 					</video>
@@ -172,7 +172,7 @@
 						</picture>
 					</figure>
 
-					<video class="object-cover w-full col-span-6 aspect-video bg-gray" playsinline loop autoplay muted>
+					<video class="object-cover w-full col-span-6 aspect-video bg-neutral-100" playsinline loop autoplay muted>
 						<source src="../media/jublo/jublo-21.mp4" type='video/mp4'>
 						Sorry, your browser doesn't support HTML5 video.
 					</video>
@@ -224,7 +224,7 @@
 							</div>
 
 							<div>
-								<label for="name" class="block text-base text-white lg:text-lg">Name <span class="text-red">*</span></label>
+								<label for="name" class="block text-base text-white lg:text-lg">Name <span class="text-red-500">*</span></label>
 								
 								<div class="mt-1.5">
 									<input type="text" required name="name" id="name" autocomplete="given-name" class="block w-full px-4 py-3 text-white border-0 bg-white/20 focus:shadow-sm focus:ring-white focus:border-white">
@@ -232,7 +232,7 @@
 							</div>
 
 							<div class="mt-4">
-								<label for="company" class="block text-base text-white lg:text-lg">Company <span class="text-red">*</span></label>
+								<label for="company" class="block text-base text-white lg:text-lg">Company <span class="text-red-500">*</span></label>
 								
 								<div class="mt-1.5">
 									<input type="text" required name="company" id="company" autocomplete="company" class="block w-full px-4 py-3 text-white border-0 bg-white/20 focus:shadow-sm focus:ring-white focus:border-white">
@@ -240,7 +240,7 @@
 							</div>
 
 							<div class="mt-4">
-								<label for="phone" class="block text-base text-white lg:text-lg">Phone <span class="text-red">*</span></label>
+								<label for="phone" class="block text-base text-white lg:text-lg">Phone <span class="text-red-500">*</span></label>
 
 								<div class="mt-1.5">
 									<input type="text" id="phone" required name="phone" autocomplete="phone" class="block w-full px-4 py-3 text-white border-0 bg-white/20 focus:shadow-sm focus:ring-white focus:border-white">

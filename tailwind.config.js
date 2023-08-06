@@ -12,34 +12,7 @@ module.exports = {
         fontFamily: {
             'sans': ['"Helvetica Neue LT W05 55 Roman"', '"Helvetica Neue"', 'Arial', 'sans-serif'],
         },
-        colors: {
-            transparent: 'transparent',
-            current: 'currentColor',
-            black: '#000',
-            white: '#FFF',
-            gray: '#F2F2F2',
-            red: '#ED0B0A',
-            blue: '#3257DC',
-            pink: '#FE98FC',
-            blueish: '#87BFFF',
-            purple: {
-                '400': '#8938D1',
-                '500': '#5438D1',
-            },
-            yellow: '#F9BA43',
-            green: '#71CE5A',
-            orange: '#FF7544',
-            mint: {
-                'green': '#D3DABA',
-                'purple': '#D8B9DA',
-                'blue': '#C7D3DE',
-                'pink': '#D8BABC',
-            },
-        },
         extend: {
-            padding: {
-                '26': '6.5rem'
-            },
             fontSize: {
                 '4.5xl': '2.75rem',
                 '7.5xl': '5.25rem',

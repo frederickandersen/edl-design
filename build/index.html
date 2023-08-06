@@ -53,68 +53,64 @@
 			</div>
 		</header>
 
-		<main>			
-			<section class="relative pt-4 space-y-16 lg:space-y-24 2xl:space-y-32 sm:pt-12 lg:pt-16 2xl:pt-24">
-				<div class="container w-full px-6 mx-auto space-y-8 lg:px-12 xl:space-y-12 2xl:space-y-16">
-					<h1 class="text-4.5xl leading-tight md:leading-tight md:text-7xl transition duration-1000 lg:leading-[1.2] lg:text-8xl 2xl:leading-[1.2] 2xl:text-8.5xl 3xl:text-9xl 3xl:leading-[1.2]" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">Helping companies make their complex technologies a joy to use</h1>
+		<main>
+			<section class="relative pt-4 sm:pt-12 lg:pt-16 3xl:pt-24">
+				<div class="container w-full px-6 mx-auto space-y-6 sm:space-y-8 lg:space-y-12 lg:px-12 2xl:space-y-12">
+					<h1 class="w-full text-4.5xl leading-tight duration-1000 transition md:leading-tight md:text-7xl lg:text-7.5xl lg:leading-[1.2] 2xl:leading-[1.2] 2xl:text-8xl" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">We help companies be intentional about design and build better software faster</h1>
 
-					<div class="lg:grid lg:grid-cols-10">
-						<div class="space-y-4 lg:space-y-8 2xl:space-y-12 lg:col-span-7 xl:col-start-5 lg:col-start-4 2xl:col-start-5 2xl:col-span-5 3xl:col-start-5 3xl:col-span-4">
-							<p class="text-2xl leading-normal lg:leading-normal lg:text-3xl 2xl:leading-relaxed 2xl:text-4xl">EDL<span class="text-xs md:text-base align-super lg:text-lg">®</span> is an independent <a href="/copenhagen.html" title="Get to know our studio.">Copenhagen-based</a> digital design studio.</p>
-
-							<div class="space-x-2 space-y-2 lg:space-x-4">
-								<a class="inline-block px-6 py-3 text-xl text-white bg-black rounded-full lg:px-7 lg:py-4 md:text-2xl 2xl:py-5 2xl:px-8 2xl:text-3xl" href="/services.html" title="Learn about our capabilities and how to gain from them.">Our services</a>
-								<a class="inline-flex items-center px-6 py-3 text-xl text-black border border-black rounded-full lg:px-7 lg:py-4 md:text-2xl 2xl:py-5 2xl:px-8 2xl:text-3xl" rel="noopener" target="_blank" title="Quickly schedule a chat with our CEO, Frederick." href="https://cal.com/frederickandersen/15min">Let’s chat <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 ml-1 lg:h-8 lg:w-8" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 7h10m0 0v10m0-10L7 17"/></svg></a>
-							</div>
-						</div>
-					</div>
+					<div class="space-x-2 space-y-2 lg:space-x-4">
+						<a class="inline-block px-6 py-3 text-xl text-white bg-black rounded-full lg:px-7 lg:py-4 md:text-2xl 2xl:py-5 2xl:px-8 2xl:text-3xl" href="/services.html" title="Learn about our capabilities and how to gain from them.">Our services</a>
+						<a class="inline-flex items-center px-6 py-3 text-xl text-black border border-black rounded-full lg:px-7 lg:py-4 md:text-2xl 2xl:py-5 2xl:px-8 2xl:text-3xl" rel="noopener" target="_blank" title="Quickly schedule a chat with our CEO, Frederick." href="https://cal.com/frederickandersen/15min">Let’s chat <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 ml-1 lg:h-8 lg:w-8" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 7h10m0 0v10m0-10L7 17"/></svg></a>
+					</div>					
 				</div>
+			</section>
 
-				<img src="../media/edl-reel.gif" class="object-cover w-full bg-gray h-96 md:h-120 lg:h-auto lg:aspect-video" alt="A reel of versatile design and branding work by EDL."/>
+			<section class="relative w-full px-6 mt-12 lg:mt-20 2xl:mt-24 lg:px-12 bg-neutral-100 h-96 md:h-120 lg:h-auto lg:aspect-video">
+				<p class="text-2xl leading-normal text-white lg:leading-normal lg:text-3xl 2xl:leading-relaxed 2xl:text-4xl">EDL<span class="text-xs md:text-base align-super lg:text-lg">®</span> is an independent <a href="/copenhagen.html" title="Get to know our studio.">Copenhagen-based</a> digital design studio.</p>
+				<img src="../media/edl-reel.gif" class="absolute inset-0 object-cover w-full h-full" alt="A reel of versatile design and branding work by EDL."/>
 			</section>
 
 			<section class="relative py-16 pb-16 md:py-24 lg:pt-24 2xl:pt-32 lg:pb-40">
 				<div class="container px-6 mx-auto space-y-12 lg:space-y-16 lg:px-12">
-					<div class="space-y-4 lg:space-y-6">
+					<div class="space-y-4 lg:space-y-8">
 						<div class="preheader">Featured work</div>
 						<h2 class="text-3xl leading-snug md:text-4xl md:leading-snug lg:leading-snug lg:text-5xl 2xl:leading-snug 2xl:text-6xl">We partner with startups, category leaders, and all kinds of fantastic people in between</h2>
 					</div>
 					
 					<div class="grid gap-16 lg:grid-cols-2 lg:gap-y-24">
-						<!-- Wult -->
 						<article class="relative space-y-8 2xl:space-y-12">
-							<div class="relative overflow-hidden">
-								<img src="../media/wult/wult-01.png" class="object-cover aspect-video" alt="User interface for Wult's data compliance software."/>
-							</div>
-							
-							<div class="space-y-4">
-								<div class="flex space-x-2 lg:space-x-3">
-									<span class="tag">B2B</span>
-									<span class="tag">SaaS</span>
-								</div>
-
-								<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl">Enterprise data compliance made simple, collaborative, and enjoyable</h3>
-							</div>
-						</article>
-
-						<article class="relative space-y-8 2xl:space-y-12">
-							<video class="object-cover w-full aspect-square bg-gray" playsinline loop autoplay muted>
-								<source src="../media/joeni-cover.mp4" type='video/mp4; codecs="hvc1"'>
-								<source src="../media/joeni-cover.webm" type="video/webm">
-								Sorry, your browser doesn't support HTML5 video.
-							</video>
+							<img src="../media/aris-robotics/aris-robotics-01.jpg" class="object-cover object-top w-full aspect-video" alt="ARIS Robotics' web app experience placed in a Macbook Pro."/>
 	
 							<div class="space-y-4 lg:space-y-6">
-								<div class="space-y-4 lg:space-y-6">
-									<div class="space-y-4">
-										<div class="flex space-x-2 lg:space-x-3">
-											<span class="tag">B2B</span>
-											<span class="tag">Software</span>
-										</div>
-		
-										<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl"><a href="./work/enhancing-kitchen-opreations-improved-user-interface.html" title="Read our case study on how we helped industrial kitchens with a digital experience.">Enhancing kitchen operations with improved user interface and data monitoring</a></h3>
+								<div class="space-y-4">
+									<div class="flex space-x-2 lg:space-x-3">
+										<span class="tag">B2B</span>
+										<span class="tag">Web app</span>
 									</div>
+	
+									<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl">A uniform design system for AI-driven waste management</h3>
 								</div>
+	
+								<a class="flex text-lg leading-normal underline link lg:text-2xl lg:leading-normal text-black/60 hover:text-black underline-offset-4" href="./work/uniform-design-system-ai-driven-waste-management.html" title="Read our case study on how we helped ARIS Robotics design their web app.">Read case story</a>
+							</div>
+						</article>
+						
+						<article class="relative space-y-8 group 2xl:space-y-12">
+							<div class="overflow-hidden">
+								<img src="../media/jublo/jublo-10.jpg" class="object-cover w-full transition duration-500 ease-in-out group-hover:scale-105 aspect-video" alt="User interface for Jublo's property management SaaS tool designed by EDL."/>
+							</div>
+
+							<div class="space-y-4 lg:space-y-6">
+								<div class="space-y-4">
+									<div class="flex space-x-2 lg:space-x-3">
+										<span class="tag">B2B</span>
+										<span class="tag">SaaS</span>
+									</div>
+
+									<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl">A customer-first approach to enterprise SaaS design</h3>
+								</div>
+
+								<a class="flex text-lg leading-normal underline group link lg:text-2xl lg:leading-normal text-black/60 hover:text-black underline-offset-4" href="./work/customer-first-approach-enterprise-saas-design.html" title="Read our case story on how we redesigned the property management experience.">Read case story</a>
 							</div>
 						</article>
 					</div>
@@ -123,27 +119,30 @@
 
 			<section class="py-16 text-white bg-black md:py-24 lg:py-32 2xl:py-40">
 				<div class="container px-6 mx-auto space-y-8 lg:space-y-16 lg:px-12">
-					<h2 class="text-4xl leading-tight 2xl:max-w-7xl md:text-5xl md:leading-tight lg:leading-tight lg:text-7xl 2xl:leading-tight 2xl:text-8xl">Push beyond the limitations of your current design</h2>
+					<div class="space-y-4 lg:space-y-8">
+						<div class="preheader">Our expertise</div>
+						<h2 class="text-4xl leading-tight md:text-5xl md:leading-tight lg:leading-tight lg:text-6xl 2xl:leading-tight 2xl:text-7.5xl 3xl:text-8xl 3xl:leading-tight">Push beyond the limitations of your current design</h2>
+					</div>
 					
-					<div class="relative space-y-4 lg:flex lg:space-y-0 lg:gap-24 xl:gap-32 2xl:gap-48">						
-						<div class="divide-y divide-white lg:w-2/3 divide-opacity-20">		
-							<div class="relative py-6 space-y-1 lg:space-y-2 lg:py-8">
-								<h3><a class="text-2xl leading-tight lg:text-3xl lg:leading-tight 2xl:text-4xl 2xl:leading-tight link hover:underline hover:underline-offset-4" href="./services/design-service.html" title="Learn more about Design as a Service.">Continuous product improvements</a></h3>
-								<p class="text-xl leading-normal lg:text-2xl lg:leading-normal 2xl:leading-relaxed text-white/60">Don’t hire a design team, subscribe to one.</p>
+					<div class="relative space-y-12 lg:flex lg:space-y-0 lg:gap-x-24 xl:gap-x-32">						
+						<div class="lg:w-2/3">
+							<div class="relative py-6 space-y-1 border-t lg:space-y-2 lg:py-10 border-neutral-700">
+								<h3><a class="text-2xl leading-tight lg:text-3xl lg:leading-tight link hover:underline hover:underline-offset-4" href="./services/design-service.html" title="Learn more about Design as a Service.">Continuous product improvements</a></h3>
+								<p class="text-xl leading-normal lg:text-2xl lg:leading-normal 2xl:leading-relaxed text-neutral-400">Don’t hire a design team, subscribe to one.</p>
 							</div>
 							
-							<div class="relative py-6 space-y-1 lg:space-y-2 lg:py-8">
-								<h3><a class="text-2xl leading-tight lg:text-3xl lg:leading-tight 2xl:text-4xl 2xl:leading-tight link hover:underline hover:underline-offset-4" href="./services/design-projects.html" title="Learn how we facilitate design projects from start to finish.">New digital project</a></h3>
-								<p class="text-xl leading-normal lg:text-2xl lg:leading-normal 2xl:leading-relaxed text-white/60">Design superpowers for your next project.</p>
+							<div class="relative py-6 space-y-1 border-t lg:space-y-2 lg:py-10 border-neutral-700">
+								<h3><a class="text-2xl leading-tight lg:text-3xl lg:leading-tight link hover:underline hover:underline-offset-4" href="./services/design-projects.html" title="Learn how we facilitate design projects from start to finish.">New digital project</a></h3>
+								<p class="text-xl leading-normal lg:text-2xl lg:leading-normal 2xl:leading-relaxed text-neutral-400">A dedicated design team for your next project.</p>
 							</div>
 
-							<div class="relative py-6 space-y-1 lg:space-y-2 lg:py-8">
-								<h3><a class="text-2xl leading-tight lg:text-3xl lg:leading-tight 2xl:text-4xl 2xl:leading-tight link hover:underline hover:underline-offset-4" href="./services/evaluation.html" title="Read about our process for evaluating existing products and services.">Evaluate exisiting experience</a></h3>
-								<p class="text-xl leading-normal lg:text-2xl lg:leading-normal 2xl:leading-relaxed text-white/60">A shortcut to a better version of your product.</p>
+							<div class="relative py-6 space-y-1 border-t lg:space-y-2 lg:py-10 border-neutral-700">
+								<h3><a class="text-2xl leading-tight lg:text-3xl lg:leading-tight link hover:underline hover:underline-offset-4" href="./services/evaluation.html" title="Read about our process for evaluating existing products and services.">Evaluate exisiting experience</a></h3>
+								<p class="text-xl leading-normal lg:text-2xl lg:leading-normal 2xl:leading-relaxed text-neutral-400">A shortcut to a better version of your product.</p>
 							</div>
 						</div>
 
-						<figure class="max-w-4xl space-y-6 transition duration-1000 lg:w-1/3 2xl:max-w-4xl lg:space-y-8" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">
+						<figure class="space-y-6 transition duration-1000 lg:w-1/3 lg:space-y-8" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">
 							<blockquote>
 								<p class="w-full text-2xl leading-normal md:text-2xl md:leading-normal lg:text-2xl lg:leading-normal">&ldquo;After a thorough and highly-collaborate design sprint, we ended with a user interface our software engineers and customers are excited to use.&rdquo;</p>
 							</blockquote>
@@ -152,7 +151,7 @@
 								<img class="object-cover pointer-events-none w-14 h-14 lg:w-20 lg:h-20" src="../media/sr-mark-kromann.jpg" alt="Profile picture of Mark Kromann, COO at Smooth Robotics." />
 								<div class="flex flex-col ml-4 leading-normal lg:ml-6 text-normal lg:text-xl">
 									Mark Kromann
-									<cite class="not-italic text-white/70">COO at <a href="https://smooth-robotics.com" class="text-link-white" target="_blank" rel="noopener">Smooth Robotics</a></cite>
+									<cite class="not-italic text-white/70">COO at <a href="https://smooth-robotics.com" class="underline underline-offset-4" title="Visit Smooth Robotics' website." target="_blank" rel="noopener">Smooth Robotics</a></cite>
 								</div>
 							</figcaption>
 						</figure>
