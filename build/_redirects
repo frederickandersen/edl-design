@@ -5,8 +5,11 @@
 /session /services
 /services/design-abonnement /services/design-service
 /work/blue-ocean-robotics /news/we-helped-design-global-robot-phenomenon
-/services/start-trial /
-/trial /
+/services/start-trial /services
+/trial /services
+/da /
+/da/kontakt /contact
+/services/product /services
 /services/ux-evaluation /services/evaluation
 /career /careers
 /career/product-designer /careers/product-designer

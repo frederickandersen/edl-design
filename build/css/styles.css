@@ -1690,34 +1690,14 @@ select {
   background-color: rgb(249 115 22 / var(--tw-bg-opacity));
 }
 
-.bg-neutral-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(64 64 64 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#444\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(68 68 68 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#e8e8e8\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(232 232 232 / var(--tw-bg-opacity));
-}
-
 .bg-neutral-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(38 38 38 / var(--tw-bg-opacity));
 }
 
-.bg-neutral-600 {
+.bg-\[\#e8e8e8\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(82 82 82 / var(--tw-bg-opacity));
-}
-
-.bg-neutral-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 229 229 / var(--tw-bg-opacity));
+  background-color: rgb(232 232 232 / var(--tw-bg-opacity));
 }
 
 .object-contain {
@@ -1830,11 +1810,6 @@ select {
   padding-bottom: 5rem;
 }
 
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -1843,6 +1818,11 @@ select {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .pt-4 {
@@ -2567,10 +2547,6 @@ select {
     padding-top: 8rem;
   }
 
-  .md\:pt-24 {
-    padding-top: 6rem;
-  }
-
   .md\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
@@ -3147,10 +3123,6 @@ select {
     padding-top: 10rem;
   }
 
-  .lg\:pt-32 {
-    padding-top: 8rem;
-  }
-
   .lg\:pb-0 {
     padding-bottom: 0px;
   }
@@ -3435,16 +3407,16 @@ select {
     margin-bottom: calc(8rem * var(--tw-space-y-reverse));
   }
 
-  .\32xl\:space-y-28 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(7rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(7rem * var(--tw-space-y-reverse));
-  }
-
   .\32xl\:space-y-24 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(6rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(6rem * var(--tw-space-y-reverse));
+  }
+
+  .\32xl\:space-y-28 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(7rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(7rem * var(--tw-space-y-reverse));
   }
 
   .\32xl\:space-y-14 > :not([hidden]) ~ :not([hidden]) {
@@ -3529,16 +3501,16 @@ select {
     padding-top: 6rem;
   }
 
-  .\32xl\:pt-48 {
-    padding-top: 12rem;
-  }
-
   .\32xl\:pt-40 {
     padding-top: 10rem;
   }
 
   .\32xl\:pb-32 {
     padding-bottom: 8rem;
+  }
+
+  .\32xl\:pt-48 {
+    padding-top: 12rem;
   }
 
   .\32xl\:text-8\.5xl {
