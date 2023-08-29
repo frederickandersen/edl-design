@@ -2706,6 +2706,10 @@ select {
     margin-left: 0px;
   }
 
+  .lg\:block {
+    display: block;
+  }
+
   .lg\:inline-block {
     display: inline-block;
   }
@@ -3256,6 +3260,10 @@ select {
 @media (min-width: 1280px) {
   .xl\:-mr-8 {
     margin-right: -2rem;
+  }
+
+  .xl\:block {
+    display: block;
   }
 
   .xl\:max-w-2xl {
