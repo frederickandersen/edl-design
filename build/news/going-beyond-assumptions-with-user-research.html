@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+	<head>
+    	<meta charset="UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Going beyond assumptions with user research · EDL</title>
+
+		<meta name="title" content="Going beyond assumptions with user research · EDL">
+    	<meta name="description" content="Sometimes, designers rely too much on their assumptions when creating something new. But that can lead to problems down the line.">
+		
+		<meta property="og:title" content="Going beyond assumptions with user research · EDL">
+    	<meta property="og:description" content="Sometimes, designers rely too much on their assumptions when creating something new. But that can lead to problems down the line." />
+		<meta property="og:site_name" content="EDL®" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.edl.dk/news/going-beyond-assumptions-with-user-research" />
+		<meta property="og:image" content="https://www.edl.dk/media/smooth-robotics/smooth-robotics-01.jpg" />
+
+		<link rel="icon" href="../favicon.png">
+		<link rel="stylesheet" href="../css/styles.css">
+
+		<script defer src="https://unpkg.com/@alpinejs/intersect@3.10.4/dist/cdn.min.js"></script>
+		<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+	</head>
+
+	<body class="overflow-x-hidden font-sans antialiased bg-neutral-100">
+		<header>
+			<div class="container px-6 py-6 mx-auto lg:px-12">
+				<nav class="space-y-4 sm:space-y-0 sm:flex sm:items-center sm:justify-between sm:flex-1 sm:h-16 lg:h-20">
+					<a href="/" title="Go to the homepage."><svg class="w-auto h-10 lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40"><path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/></svg></a>
+
+					<div class="flex -ml-2 xs:-ml-2.5 sm:-ml-4 lg:m-0 lg:-mr-6 xl:-mr-8">
+						<a href="/services.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="See how we can help you, and how we plan to do it.">Services</a>
+						<a href="/work.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="Follow along as we design deliverables for our clients.">Work</a>
+						<a href="/about.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="Meet the team behind the design studio.">About</a>
+						<a href="/contact.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="Swing by for a cup of coffee.">Contact</a>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<main>			
+			<section class="relative pt-4 sm:pt-12 lg:pt-16 3xl:pt-24">
+				<div class="container px-6 mx-auto space-y-4 transition duration-1000 lg:px-12 lg:space-y-8" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">
+					<div class="flex items-center space-x-3 lg:space-x-4 2xl:space-x-6"><span class="preheader">Insights</span><span class="text-base lg:text-xl text-black/60">August 11, 2023</span></div>
+					<h1 class="w-full text-5xl leading-tight md:leading-tight md:text-7xl lg:text-7.5xl lg:leading-[1.2] 2xl:leading-[1.2] 2xl:text-8xl">Going beyond assumptions with user research</h1>	
+				</div>
+			</section>
+
+			<section class="relative pt-8 pb-16 md:py-12 md:pb-20 lg:py-16 lg:pb-24">
+				<div class="container px-6 lg:mx-auto lg:px-12">
+					<div class="max-w-4xl text-xl leading-normal lg:leading-relaxed lg:text-2xl">				
+						<div class="space-y-4 lg:space-y-6">
+							<p>It’s important to keep the user in mind when designing digital products. You want to ensure that everything you create meets their needs and solves their problems. That’s where user research comes in.</p>
+							<p>Sometimes, designers rely too much on their assumptions when creating something new. But that can lead to problems down the line. You need to take the time to understand your users to avoid ending up with a product that doesn’t work for them.</p>
+							<p>So in this article, we will discuss why user research is so important. We’ll cover how to do it and how it can help you create personas and empathy maps. And we’ll give you some tips for overcoming any challenges.</p>
+							<p>We aim to show you that user research isn’t just an extra step you can skip. It’s a crucial part of the design process. When you take the time to really understand your users, you’ll end up with a product that they love.</p>
+							<p>So let’s dive in and learn about user research together!</p>
+						</div>
+
+						<h2 class="mt-12 mb-4 text-3xl leading-snug md:text-4xl md:leading-tight lg:mt-12 2xl:mt-16 lg:mb-8 lg:leading-tight lg:text-5xl">Defining user research</h2>
+						
+						<div class="space-y-4 lg:space-y-6">
+							<p>User research is super important when it comes to creating designs that really work for people. It involves many methods, like surveys, interviews, and usability tests, aiming to understand how users interact with products and services.</p>
+							<p>Originally from the world of human-computer interaction, user research has become a crucial part of digital design. It helps us make sure we’re creating things that meet users’ needs, and it lets us make informed decisions.</p>
+							<p>This article will discuss the best ways to do user research and how it can help us create empathy maps and user personas. We’ll also look at real-life examples of how good user research has made a difference. We’ll talk about some common problems designers encounter during user research and offer solutions to help you.</p>
+						</div>
+
+						<h2 class="mt-12 mb-4 text-3xl leading-snug md:text-4xl md:leading-tight lg:mt-12 2xl:mt-16 lg:mb-8 lg:leading-tight lg:text-5xl">The need for user research in digital design</h2>
+						
+						<div class="space-y-8 lg:space-y-12">
+							<p>User research is the cornerstone of creating designs tailored to users’ needs and expectations. Refraining from using user research in the design process is like embarking on a voyage without a compass - one risks getting lost. Designs created without user research often reflect the assumptions or past experiences of designers rather than the current requirements of users. This approach can lead to products that fail to resonate with the intended audience, negatively impacting the user experience and, ultimately, the product’s success.</p>
+							<p>However, user research provides invaluable insights that can guide the direction of a product and prevent potential issues from becoming costly mistakes. Through user research, designers are empowered to create digital experiences that are truly user-centric, aligning with the users’ needs and expectations. In fact, user research methodologies play a critical role in developing essential design tools such as user personas and empathy maps, allowing designers to understand their users better and create products that truly resonate with them. Real-world examples of user research’s impact only reinforce its importance in design.</p>
+							<p>Ultimately, user research is the key to unlocking the full potential of digital experiences and creating products that truly meet the needs of their intended users.</p>
+						</div>
+					</div>
+					
+					<div class="max-w-4xl text-xl leading-normal lg:leading-relaxed lg:text-2xl">
+						<h3 class="mt-12 mb-4 text-2xl leading-snug md:text-3xl md:leading-tight lg:mt-12 2xl:mt-16 lg:mb-8 lg:leading-tight lg:text-4xl">Methods of conducting user research</h3>
+
+						<div class="space-y-4 lg:space-y-6">
+							<p>User research is a vast and diverse field that offers a multitude of approaches tailored to the various stages of the design process and the specific research questions at hand.</p>
+							<p>Qualitative methods, such as interviews and field studies, can provide designers with a deep and profound understanding of user behaviour and motivations, enabling them to better empathise with their users and gain valuable insights that can guide their initial design directions.</p>
+							<p>Quantitative methods, on the other hand, such as surveys and analytics, offer numerical data that can validate hypotheses and help designers make data-informed decisions.</p>
+							<p>The most effective research strategy often involves a combination of qualitative and quantitative approaches tailored to the research goals, project constraints, and the nature of the product or service being designed.</p>
+						</div>
+					</div>
+
+					<figure class="relative w-full my-16 space-y-4 lg:space-x-8 lg:my-24 lg:flex">
+						<img src="../media/smooth-robotics/smooth-robotics-01.jpg" class="object-cover h-auto lg:w-2/3" alt="The UI for the Smooth Robotics application."/>
+						
+						<figcaption class="flex-1 block lg:w-1/3">
+							<span class="inline-block text-sm md:text-base text-black/60">UX research can greatly improve ROI. For example, when the time and resources it takes to onboard employees to new software.</span>
+						</figcaption>
+					</figure>
+
+					<div class="max-w-4xl text-xl leading-normal lg:leading-relaxed lg:text-2xl">						
+						<h3 class="mt-12 mb-4 text-2xl leading-snug md:text-3xl md:leading-tight lg:mt-12 2xl:mt-16 lg:mb-8 lg:leading-tight lg:text-4xl">User personas and empathy maps</h3>
+						
+						<div class="space-y-4 lg:space-y-6">
+							<p>User research plays a vital role in creating effective tools for user-centred design, namely user personas and empathy maps.</p>
+							<p>User personas are an excellent way to understand our users better and create a realistic representation of their needs, experiences, behaviours, and goals. By keeping them in mind throughout the design process, designers can ensure they meet their target audience's requirements.</p>
+							<p>On the other hand, empathy maps allow designers to better understand users' emotional states, helping them create more user-centric and empathetic designs. They visually represent what users think, feel, say, and do.</p>
+							<p>Both user personas and empathy maps promote a user-centred approach, which is essential to creating designs that resonate with users. By fostering user empathy and ensuring that all team members have a common understanding of users, designers can create products that meet their users' needs and deliver positive outcomes.</p>
+						</div>
+
+						<h2 class="mt-12 mb-4 text-3xl leading-snug md:text-4xl md:leading-tight lg:mt-12 2xl:mt-16 lg:mb-8 lg:leading-tight lg:text-5xl">Real-world impact of user research</h2>
+						
+						<div class="space-y-8 lg:space-y-12">
+							<p>User research is a powerful tool with immense potential for driving real-world impact. By delving into user needs, design decisions can be made that have the potential to catapult a product to success.</p>
+							<p>Take the example of Mailchimp, the marketing automation platform that used user research to uncover why small businesses weren't using their service. Armed with these insights, they were able to revamp their platform to serve the needs of small businesses better, resulting in a remarkable surge in user engagement.</p>
+							<p>Similarly, Airbnb conducted user research to gain a deeper understanding of the challenges faced by their hosts. With these insights, they improved their host tools, resulting in a significant boost in host satisfaction.</p>
+							<p>These cases underscore the immense potential of user research to pinpoint pain points, identify opportunities, and guide design improvements that enhance user experience and drive product success.</p>
+						</div>
+					</div>
+
+					<figure class="relative w-full my-16 space-y-4 lg:space-x-8 lg:my-24 lg:flex">
+						<img src="../media/jublo-app/jublo-app-01.jpg" class="object-cover h-auto lg:w-2/3" alt="The mobile user interface of the Jublo app."/>
+						
+						<figcaption class="flex-1 block lg:w-1/3">
+							<span class="inline-block text-sm md:text-base text-black/60">The Jublo app project commanded UX research in the form of user interviews with existing customers.</span>
+						</figcaption>
+					</figure>
+
+					<div class="max-w-4xl text-xl leading-normal lg:leading-relaxed lg:text-2xl">						
+						<h2 class="mt-12 mb-4 text-3xl leading-snug md:text-4xl md:leading-tight lg:mt-12 2xl:mt-16 lg:mb-8 lg:leading-tight lg:text-5xl">Overcoming challenges in conducting user research</h2>
+						
+						<div class="space-y-4 lg:space-y-6">
+							<p>Undertaking user research can be a thrilling adventure full of opportunities to uncover valuable insights. Although challenges may arise from limited time, budget constraints, or difficulty in reaching the target audience, effective strategies exist to overcome them.</p>
+							<p>Suppose time is an issue, fear not! You can employ rapid research methods such as short surveys or quick user interviews to obtain valuable insights within a short period.</p>
+							<p>To address budget limitations, you can use cost-effective research methods, such as online surveys, remote usability tests, or by utilising existing analytics data.</p>
+							<p>Connecting with the appropriate target audience can be facilitated by online platforms that connect researchers with specific user groups or by collaborating with organisations with access to your target demographic.</p>
+							<p>In conclusion, while user research may present some obstacles, they can be navigated to obtain crucial insights that will help create a truly user-centric design. With these strategies, you can embark on your user research journey with confidence and excitement!</p>
+						</div>
+
+						<h2 class="mt-12 mb-4 text-3xl leading-snug md:text-4xl md:leading-tight lg:mt-12 2xl:mt-16 lg:mb-8 lg:leading-tight lg:text-5xl">Conclusion</h2>
+						
+						<div class="space-y-8 lg:space-y-12">
+							<p>Understanding our users is crucial in digital design. By researching their behaviours, needs, and motivations, we can create designs that put them at the centre. It can be challenging, but there are effective strategies to navigate these obstacles. The benefits of user research far outweigh the difficulties, making it a necessary investment in the design process.</p>
+							<p>The insights gained through user research are priceless. They help us create digital products that meet the needs of our users and resonate with them, ultimately leading to success in the market. So, let's dive in and get to know our users better!</p>
+						</div>
+					</div>
+
+					<!-- Newsletter highlight -->
+					<div class="relative max-w-4xl p-6 mt-8 space-y-4 text-white bg-black lg:mt-16">
+						<svg class="w-auto h-8 lg:h-10" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0 0.235601C9.91329 -1.04256 16.4172 4.17078 24.2112 19.1291C28.6725 6.2933 36.981 -0.546782 47.4011 0.0341989C49.1518 9.39962 41.9338 18.7031 28.3961 23.9009C40.3136 27.5417 47.1707 34.9395 48 47.2951C38.7317 49.588 28.4882 41.4155 24.0883 28.0375C20.4639 40.1374 13.1614 47.2176 0.660374 48C-0.93681 38.5494 5.32139 30.4389 19.3198 23.7072C7.68645 20.1129 1.09039 12.6066 0 0.235601Z" fill="white"/>
+						</svg>
+						
+						<p class="text-base lg:text-lg">This article is part of our monthly newsletter that serves as your compass in the evolving landscape of digital design and user experience.</p>
+						<a class="flex items-center text-base underline lg:text-lg link underline-offset-4" href="https://www.linkedin.com/newsletters/edl-digital-design-insights-7069622687349755904" target="_blank" rel="noopener" title="Jump to LinkedIn to subscribe to the newsletter.">Subscribe <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-0.5" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 7h10m0 0v10m0-10L7 17"/></svg></a>
+					</div>
+				</div>
+			</section>
+		</main>
+		
+		<footer class="text-white bg-black">
+			<div class="container px-6 py-8 mx-auto space-y-16 md:py-16 lg:space-y-28 lg:px-12 lg:pt-24">
+				<div class="space-y-12 lg:space-y-0 lg:columns-2 md:gap-x-16 lg:gap-x-24">
+					<div class="space-y-8 lg:space-y-12 break-after-column">
+						<div class="text-2xl leading-normal lg:leading-normal lg:text-3xl">
+							<span class="block"><a href="tel:+4528253694" title="Get in touch and discuss digital projects, ideas, or headaches." class="underline underline-offset-4">+45 28 25 36 94</a></span>
+							<span class="block"><a href="mailto:hello@edl.dk" title="Prefer writing? Shoot us an email instead." class="underline underline-offset-4">hello@edl.dk</a></span>
+						</div>
+
+						<ul class="text-xl leading-normal text-white/70 lg:text-2xl lg:leading-normal">
+							<li class="block">Amagerfælledvej 106</li>
+							<li class="block">2300 Copenhagen</li>
+							<li class="block">Denmark</li>
+						</ul>
+					</div>
+
+					<nav class="space-y-8 2xl:gap-x-24 md:columns-2 md:space-y-0">
+						<ul class="space-y-2 lg:space-y-4 break-after-column">
+							<li class="text-base text-white/60 lg:text-lg">Studio</li>
+							<li><a class="text-xl xl:text-2xl" href="../services.html" title="Learn about our capabilities and how to gain from them.">Services</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../work.html" title="View the work we have done for and with fantastic people.">Work</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../about.html" title="Meet the team behind the design studio.">About</a></li>
+							<li><a class="text-xl underline xl:text-2xl underline-offset-4" href="../news.html" title="Dive into our blog to discover insights, inspiration, and the creative magic behind our work.">News</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../careers.html" title="Come work with a talented team of designers.">Careers</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../contact.html" title="Swing by for a cup of coffee, give us a call, or write an email.">Contact</a></li>
+						</ul>
+						
+						<ul class="space-y-2 lg:space-y-4">
+							<li class="text-base text-white/60 lg:text-lg">Services</li>
+							<li><a class="text-xl xl:text-2xl" href="../services/design-service.html" title="Learn more about Design as a Service.">Design as a Service</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../services/design-projects.html" title="Learn how we facilitate design projects from start to finish.">Design project</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../services/evaluation.html" title="Read about our process for evaluating existing products and services.">UX evaluation</a></li>
+
+						</ul>
+					</nav>
+				</div>
+
+				<div class="flex justify-between text-sm lg:space-x-24 lg:text-lg">
+					<div class="space-x-4 lg:space-x-6">
+						<span class="inline-block">&copy; 2023 EDL</span>
+						<a class="inline-block" href="/privacy-policy.html" title="View EDL’s privacy policy.">Privacy policy</a>
+					</div>
+					
+					<div class="space-x-4 lg:space-x-6">
+						<span class="hidden md:inline-block text-black/60">Follow us</span>
+						<a class="inline-block underline underline-offset-4" href="https://linkedin.com/company/edldesign" target="_blank" rel="noopener" title="View EDL’s profile on LinkedIn.">LinkedIn</a>
+						<a class="inline-block underline underline-offset-4" href="https://instagram.com/edl.studio" target="_blank" rel="noopener" title="View EDL’s profile on Instagram.">Instagram</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+	<head>
+    	<meta charset="UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Understanding how human behaviour shapes digital interactions · EDL</title>
+
+		<meta name="title" content="Understanding how human behaviour shapes digital interactions · EDL">
+    	<meta name="description" content="As our communication increasingly relies on technology, it is crucial to comprehend the psychology that drives these interactions.">
+		
+		<meta property="og:title" content="Understanding how human behaviour shapes digital interactions · EDL">
+    	<meta property="og:description" content="As our communication increasingly relies on technology, it is crucial to comprehend the psychology that drives these interactions." />
+		<meta property="og:site_name" content="EDL®" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.edl.dk/news/understanding-how-human-behaviour-shapes-digital-design" />
+		<meta property="og:image" content="https://www.edl.dk/media/popermo/popermo-app-01.jpg" />
+
+		<link rel="icon" href="../favicon.png">
+		<link rel="stylesheet" href="../css/styles.css">
+
+		<script defer src="https://unpkg.com/@alpinejs/intersect@3.10.4/dist/cdn.min.js"></script>
+		<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+	</head>
+
+	<body class="overflow-x-hidden font-sans antialiased bg-neutral-100">
+		<header>
+			<div class="container px-6 py-6 mx-auto lg:px-12">
+				<nav class="space-y-4 sm:space-y-0 sm:flex sm:items-center sm:justify-between sm:flex-1 sm:h-16 lg:h-20">
+					<a href="/" title="Go to the homepage."><svg class="w-auto h-10 lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40"><path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/></svg></a>
+
+					<div class="flex -ml-2 xs:-ml-2.5 sm:-ml-4 lg:m-0 lg:-mr-6 xl:-mr-8">
+						<a href="/services.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="See how we can help you, and how we plan to do it.">Services</a>
+						<a href="/work.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="Follow along as we design deliverables for our clients.">Work</a>
+						<a href="/about.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="Meet the team behind the design studio.">About</a>
+						<a href="/contact.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="Swing by for a cup of coffee.">Contact</a>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<main>			
+			<section class="relative pt-4 sm:pt-12 lg:pt-16 3xl:pt-24">
+				<div class="container px-6 mx-auto space-y-4 transition duration-1000 lg:px-12 lg:space-y-8" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">
+					<div class="flex items-center space-x-3 lg:space-x-4 2xl:space-x-6"><span class="preheader">Insights</span><span class="text-base lg:text-xl text-black/60">June 26, 2023</span></div>
+					<h1 class="w-full text-5xl leading-tight md:leading-tight md:text-7xl lg:text-7.5xl lg:leading-[1.2] 2xl:leading-[1.2] 2xl:text-8xl">Understanding how human behaviour shapes digital interactions</h1>	
+				</div>
+			</section>
+
+			<section class="relative pt-8 pb-16 md:py-12 md:pb-20 lg:py-16 lg:pb-24">
+				<div class="container px-6 lg:mx-auto lg:px-12">
+					<div class="max-w-4xl text-xl leading-normal lg:leading-relaxed lg:text-2xl">				
+						<div class="space-y-4 lg:space-y-6">
+							<p>As our communication increasingly relies on technology, it is crucial to comprehend the psychology that drives these interactions. User experience (UX) design is a necessary field that utilises our knowledge of human behaviour to create digital experiences that are engaging, impactful, and persuasive.</p>
+							<p>One of Dieter Rams’ ten principles of good design stresses the importance of making useful products that meet functional, psychological, and aesthetic standards. Good design prioritises a product’s usefulness while eliminating any hindrances to that usefulness. What is the connection between psychology and UX?</p>
+							<p>As a UX designer, you will often find yourself at the intersection of technology and psychology. You can create digital products that meet users’ needs and desires by understanding their cognitive biases, behaviours, and emotions. It’s not just about creating visually appealing apps or sites but designing intuitive interactions that elicit positive emotional responses.</p>
+							<p>Every choice, from colour schemes and typography to button placement and menu structure, can affect how users perceive and interact with your digital products. Even subtle aspects such as loading times and animation speeds can evoke various emotional responses, ultimately affecting overall user satisfaction.</p>
+							<p>Understanding how human behaviour influences our digital interactions is essential as we rely more on technology for communication. User experience (UX) design leverages our understanding of human behaviour to create digital experiences that are engaging, impactful, and persuasive. Good design prioritises a product’s usefulness while eliminating any factors hindering it. As a UX designer, you must grasp users' cognitive biases, behaviours, and emotions to create visually appealing and intuitive digital products that cater to their needs and desires. Ultimately, your goal is to design interactions that elicit positive emotional responses.</p>
+						</div>
+
+						<h2 class="mt-12 mb-4 text-3xl leading-snug md:text-4xl md:leading-tight lg:mt-12 2xl:mt-16 lg:mb-8 lg:leading-tight lg:text-5xl">Cognitive biases and their impact on user behaviour</h2>
+						
+						<div class="space-y-4 lg:space-y-6">
+							<p>Our cognitive biases can heavily influence our actions on digital platforms, even without conscious awareness. For instance, the anchoring bias can lead us to rely too much on the first piece of information we encounter on a website, affecting how we perceive the following information. One way to address this is by prioritising important information at the beginning of a page. On the other hand, the bandwagon effect can make us follow the beliefs and actions of others, which is why designers can use social proof elements like reviews and testimonials to leverage this tendency.</p>
+						</div>
+
+						<h2 class="mt-12 mb-4 text-3xl leading-snug md:text-4xl md:leading-tight lg:mt-12 2xl:mt-16 lg:mb-8 lg:leading-tight lg:text-5xl">Emotions and user experience</h2>
+						
+						<div class="space-y-8 lg:space-y-12">
+							<p>The process of designing user experience involves both logic and emotions. Research shows that people tend to remember information better and form more positive opinions when they experience positive emotions. Designers can use this fact to create enjoyable experiences that leave a lasting positive impact on users.</p>
+							<p>Design elements such as imagery, colour schemes, and micro-interactions can all evoke emotional responses. Warm colours, for example, can create excitement or happiness, while cool colours can evoke feelings of professionalism or calmness. Micro-interactions, such as playful loading icons or subtly animated buttons, can enhance engagement and delight the user experience.</p>
+						</div>
+					</div>
+
+					<figure class="relative w-full my-16 space-y-4 lg:space-x-8 lg:my-24 lg:flex">
+						<img src="../media/popermo/popermo-app-01.jpg" class="object-cover h-auto lg:w-2/3" alt="An app interface showing the Popermo app."/>
+						
+						<figcaption class="flex-1 block lg:w-1/3">
+							<span class="inline-block text-sm md:text-base text-black/60">We used similiar principles, when we designed the app for Popermo and their insurance customers.</span>
+						</figcaption>
+					</figure>
+					
+					<div class="max-w-4xl text-xl leading-normal lg:leading-relaxed lg:text-2xl">
+						<h2 class="mt-12 mb-4 text-3xl leading-snug md:text-4xl md:leading-tight lg:mt-12 2xl:mt-16 lg:mb-8 lg:leading-tight lg:text-5xl">Understanding human behaviour for better UX design</h2>
+
+						<div class="space-y-4 lg:space-y-6">
+							<p>In the world of UX design, knowledge of human behaviour is crucial in creating interfaces that are easy to use and intuitive. Fitts’s Law and the Serial Position Effect are two important principles designers can use to enhance their work.</p>
+							<p>Fitts’s Law is a model that predicts how humans move and interact with computers. It states that the time required to reach a target area is based on the distance to the target and its size. In short, the closer and larger the target, the easier it is to reach.</p>
+							<p>This Law significantly impacts the design and placement of interactive elements, such as buttons, links, and menu items. Designers can minimise user effort by making frequently used buttons larger and placing them centrally. On the other hand, placing interactive elements too closely can lead to frustration and user errors. By understanding and applying Fitts's Law, designers can optimise interfaces for speed and efficiency, improving user satisfaction.</p>
+							<p>Did you know how we remember information is influenced by the order in which it’s presented to us? This is known as the Serial Position Effect, which states that people are likelier to remember the first and last items in a list or series. In contrast, the middle ones tend to be forgotten.</p>
+						</div>
+					</div>
+
+					<figure class="relative w-full my-16 space-y-4 lg:space-x-8 lg:my-24 lg:flex">
+						<img src="../media/aris-robotics/aris-robotics-11.png" class="object-cover h-auto lg:w-2/3" alt="UI components from ARIS Robotics web app."/>
+						
+						<figcaption class="flex-1 block lg:w-1/3">
+							<span class="inline-block text-sm md:text-base text-black/60">When used correctly, the Serial Position Effect can be powerful when showing a dense amount of data to users.</span>
+						</figcaption>
+					</figure>
+
+					<div class="max-w-4xl text-xl leading-normal lg:leading-relaxed lg:text-2xl">
+						<div class="space-y-4 lg:space-y-6">
+							<p>So, how can UX designers use this to their advantage? Place the most important information or features at the beginning or end of lists or menus. This makes it easier for users to notice and remember them. For example, navigation menus often start with "Home" or end with "Contact" because these are commonly used features that users are more likely to remember.</p>
+							<p>But that’s not all. When combined with Fitts’s Law, which determines the best size and placement of interactive elements, the Serial Position Effect can create even more intuitive and user-friendly interfaces. By understanding these cognitive biases and behavioural patterns, designers can create digital products that align with natural human behaviour, making them more usable, engaging, and effective.</p>
+							<p>Psychological principles in UX design can enhance user experience and encourage desired behaviours. However, it is crucial to consider ethical implications and ensure that persuasive design strategies are used to improve the user’s experience rather than manipulate them for commercial gain. Above all, privacy and consent should be prioritised, and users should always have the option to opt out of features that collect personal data.</p>
+						</div>
+					</div>
+
+					<div class="max-w-4xl text-xl leading-normal lg:leading-relaxed lg:text-2xl">						
+						<h2 class="mt-12 mb-4 text-3xl leading-snug md:text-4xl md:leading-tight lg:mt-12 2xl:mt-16 lg:mb-8 lg:leading-tight lg:text-5xl">Let’s wrap it up</h2>
+						
+						<div class="space-y-4 lg:space-y-6">
+							<p>Psychology is an integral aspect of the UX design process, not just as a tool but as an essential component. Designers who understand cognitive biases, emotions, and behavioural patterns can create digital products that deeply connect with users. It is important to maintain ethical standards to ensure that our understanding of psychology benefits users.</p>
+							<p>The connection between psychology and UX design transforms digital interactions, making them more intuitive, captivating, and human. The future of UX design is about creating exceptional experiences, not just building better websites or apps. For more information on best UX practices for making your next digital product, visit <a href="https://lawsofux.com" rel="noopener" target="_blank" title="Visit their website to learn more about UX." class="underline underline-offset-4">Laws of UX</a>.</p>
+						</div>
+					</div>
+
+					<!-- Newsletter highlight -->
+					<div class="relative max-w-4xl p-6 mt-8 space-y-4 text-white bg-black lg:mt-16">
+						<svg class="w-auto h-8 lg:h-10" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0 0.235601C9.91329 -1.04256 16.4172 4.17078 24.2112 19.1291C28.6725 6.2933 36.981 -0.546782 47.4011 0.0341989C49.1518 9.39962 41.9338 18.7031 28.3961 23.9009C40.3136 27.5417 47.1707 34.9395 48 47.2951C38.7317 49.588 28.4882 41.4155 24.0883 28.0375C20.4639 40.1374 13.1614 47.2176 0.660374 48C-0.93681 38.5494 5.32139 30.4389 19.3198 23.7072C7.68645 20.1129 1.09039 12.6066 0 0.235601Z" fill="white"/>
+						</svg>
+						
+						<p class="text-base lg:text-lg">This article is part of our monthly newsletter that serves as your compass in the evolving landscape of digital design and user experience.</p>
+						<a class="flex items-center text-base underline lg:text-lg link underline-offset-4" href="https://www.linkedin.com/newsletters/edl-digital-design-insights-7069622687349755904" target="_blank" rel="noopener" title="Jump to LinkedIn to subscribe to the newsletter.">Subscribe <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-0.5" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 7h10m0 0v10m0-10L7 17"/></svg></a>
+					</div>
+				</div>
+			</section>
+		</main>
+		
+		<footer class="text-white bg-black">
+			<div class="container px-6 py-8 mx-auto space-y-16 md:py-16 lg:space-y-28 lg:px-12 lg:pt-24">
+				<div class="space-y-12 lg:space-y-0 lg:columns-2 md:gap-x-16 lg:gap-x-24">
+					<div class="space-y-8 lg:space-y-12 break-after-column">
+						<div class="text-2xl leading-normal lg:leading-normal lg:text-3xl">
+							<span class="block"><a href="tel:+4528253694" title="Get in touch and discuss digital projects, ideas, or headaches." class="underline underline-offset-4">+45 28 25 36 94</a></span>
+							<span class="block"><a href="mailto:hello@edl.dk" title="Prefer writing? Shoot us an email instead." class="underline underline-offset-4">hello@edl.dk</a></span>
+						</div>
+
+						<ul class="text-xl leading-normal text-white/70 lg:text-2xl lg:leading-normal">
+							<li class="block">Amagerfælledvej 106</li>
+							<li class="block">2300 Copenhagen</li>
+							<li class="block">Denmark</li>
+						</ul>
+					</div>
+
+					<nav class="space-y-8 2xl:gap-x-24 md:columns-2 md:space-y-0">
+						<ul class="space-y-2 lg:space-y-4 break-after-column">
+							<li class="text-base text-white/60 lg:text-lg">Studio</li>
+							<li><a class="text-xl xl:text-2xl" href="../services.html" title="Learn about our capabilities and how to gain from them.">Services</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../work.html" title="View the work we have done for and with fantastic people.">Work</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../about.html" title="Meet the team behind the design studio.">About</a></li>
+							<li><a class="text-xl underline xl:text-2xl underline-offset-4" href="../news.html" title="Dive into our blog to discover insights, inspiration, and the creative magic behind our work.">News</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../careers.html" title="Come work with a talented team of designers.">Careers</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../contact.html" title="Swing by for a cup of coffee, give us a call, or write an email.">Contact</a></li>
+						</ul>
+						
+						<ul class="space-y-2 lg:space-y-4">
+							<li class="text-base text-white/60 lg:text-lg">Services</li>
+							<li><a class="text-xl xl:text-2xl" href="../services/design-service.html" title="Learn more about Design as a Service.">Design as a Service</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../services/design-projects.html" title="Learn how we facilitate design projects from start to finish.">Design project</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../services/evaluation.html" title="Read about our process for evaluating existing products and services.">UX evaluation</a></li>
+
+						</ul>
+					</nav>
+				</div>
+
+				<div class="flex justify-between text-sm lg:space-x-24 lg:text-lg">
+					<div class="space-x-4 lg:space-x-6">
+						<span class="inline-block">&copy; 2023 EDL</span>
+						<a class="inline-block" href="/privacy-policy.html" title="View EDL’s privacy policy.">Privacy policy</a>
+					</div>
+					
+					<div class="space-x-4 lg:space-x-6">
+						<span class="hidden md:inline-block text-black/60">Follow us</span>
+						<a class="inline-block underline underline-offset-4" href="https://linkedin.com/company/edldesign" target="_blank" rel="noopener" title="View EDL’s profile on LinkedIn.">LinkedIn</a>
+						<a class="inline-block underline underline-offset-4" href="https://instagram.com/edl.studio" target="_blank" rel="noopener" title="View EDL’s profile on Instagram.">Instagram</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
