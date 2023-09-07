@@ -1242,6 +1242,10 @@ select {
   height: 3.5rem;
 }
 
+.h-80 {
+  height: 20rem;
+}
+
 .h-auto {
   height: auto;
 }
@@ -1266,10 +1270,6 @@ select {
   height: 4rem;
 }
 
-.h-80 {
-  height: 20rem;
-}
-
 .h-20 {
   height: 5rem;
 }
@@ -1280,14 +1280,6 @@ select {
 
 .h-4 {
   height: 1rem;
-}
-
-.h-160 {
-  height: 40rem;
-}
-
-.h-64 {
-  height: 16rem;
 }
 
 .w-auto {
@@ -2758,6 +2750,10 @@ select {
     height: auto;
   }
 
+  .lg\:h-160 {
+    height: 40rem;
+  }
+
   .lg\:h-11 {
     height: 2.75rem;
   }
@@ -2768,10 +2764,6 @@ select {
 
   .lg\:h-9 {
     height: 2.25rem;
-  }
-
-  .lg\:h-160 {
-    height: 40rem;
   }
 
   .lg\:h-32 {
