@@ -1282,6 +1282,14 @@ select {
   height: 1rem;
 }
 
+.h-160 {
+  height: 40rem;
+}
+
+.h-64 {
+  height: 16rem;
+}
+
 .w-auto {
   width: auto;
 }

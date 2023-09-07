@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+	<head>
+    	<meta charset="UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Creating coherent user experiences on different devices · EDL</title>
+
+		<meta name="title" content="Creating coherent user experiences on different devices · EDL">
+    	<meta name="description" content="Explore techniques and strategies to achieve seamless connections between devices, enhance usability, and maintain brand integrity.">
+		
+		<meta property="og:title" content="Creating coherent user experiences on different devices · EDL">
+    	<meta property="og:description" content="Explore techniques and strategies to achieve seamless connections between devices, enhance usability, and maintain brand integrity." />
+		<meta property="og:site_name" content="EDL®" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.edl.dk/news/creating-coherent-user-experiences-on-different-devices" />
+		<meta property="og:image" content="https://www.edl.dk/media/jublo-app/jublo-app-03.png" />
+
+		<link rel="icon" href="../favicon.png">
+		<link rel="stylesheet" href="../css/styles.css">
+
+		<script defer src="https://unpkg.com/@alpinejs/intersect@3.10.4/dist/cdn.min.js"></script>
+		<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+	</head>
+
+	<body class="overflow-x-hidden font-sans antialiased bg-neutral-100">
+		<header>
+			<div class="container px-6 py-6 mx-auto lg:px-12">
+				<nav class="space-y-4 sm:space-y-0 sm:flex sm:items-center sm:justify-between sm:flex-1 sm:h-16 lg:h-20">
+					<a href="/" title="Go to the homepage."><svg class="w-auto h-10 lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40"><path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/></svg></a>
+
+					<div class="flex -ml-2 xs:-ml-2.5 sm:-ml-4 lg:m-0 lg:-mr-6 xl:-mr-8">
+						<a href="/services.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="See how we can help you, and how we plan to do it.">Services</a>
+						<a href="/work.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="Follow along as we design deliverables for our clients.">Work</a>
+						<a href="/about.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="Meet the team behind the design studio.">About</a>
+						<a href="/contact.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="Swing by for a cup of coffee.">Contact</a>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<main>			
+			<section class="relative pt-4 sm:pt-12 lg:pt-16 3xl:pt-24">
+				<div class="container px-6 mx-auto space-y-4 transition duration-1000 lg:px-12 lg:space-y-8" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">
+					<div class="flex items-center space-x-3 lg:space-x-4 2xl:space-x-6"><span class="preheader">Insights</span><span class="text-base lg:text-xl text-black/60">September 5, 2023</span></div>
+					<h1 class="w-full text-5xl leading-tight md:leading-tight md:text-7xl lg:text-7.5xl lg:leading-[1.2] 2xl:leading-[1.2] 2xl:text-8xl">Creating coherent user experiences on different devices</h1>	
+				</div>
+			</section>
+
+			<section class="relative pt-8 pb-16 md:py-12 md:pb-20 lg:py-16 lg:pb-24">
+				<div class="container px-6 lg:mx-auto lg:px-12">
+					<div class="max-w-4xl text-xl leading-normal lg:leading-relaxed lg:text-2xl">				
+						<div class="space-y-4 lg:space-y-6">
+							<p>Creating a consistent experience across different devices and platforms is no easy feat! Many factors need to be considered: screen sizes, user expectations, and varying interaction models. But don’t worry, we’ve got you covered.</p>
+							<p>In this edition of Digital Design Insights, we will explore techniques and strategies to achieve seamless connections between devices, enhance usability, and maintain brand integrity. We’ll cover topics like responsive design, adaptive layouts, and design systems for scalability. We’ll also emphasise the importance of user feedback and iterative refinement in fine-tuning these designs, ensuring they meet user needs across the digital spectrum.</p>
+							<p>By the time you finish reading this article, you’ll have gained insights into practical approaches that can empower you to navigate the challenges and complexities of the modern multi-device landscape. We aim to help you create experiences that captivate and engage users regardless of their device.</p>
+						</div>
+					</div>
+
+					<figure class="relative w-full my-16 space-y-4 lg:space-x-8 lg:my-24 lg:flex">
+						<img src="../media/jublo/jublo-0.jpg" class="object-cover h-auto lg:w-2/3" alt="The Jublo platform displayed in multiple devices."/>
+						
+						<figcaption class="flex-1 block lg:w-1/3">
+							<span class="inline-block text-sm md:text-base text-black/60 lg:text-lg">The <a href="/work/customer-first-approach-enterprise-saas-design.html" class="underline underline-offset-4" title="Read our case story on the Jublo platform." target="_blank" rel="noopener">Jublo platform</a> accessed on both desktop and mobile devices.</span>
+						</figcaption>
+					</figure>
+					
+					<div class="max-w-4xl text-xl leading-normal lg:leading-relaxed lg:text-2xl">
+						<h2 class="mt-12 mb-4 text-3xl leading-snug md:text-4xl md:leading-tight lg:mt-12 2xl:mt-16 lg:mb-8 lg:leading-tight lg:text-5xl">Let’s start with establishing a unified design language</h2>
+
+						<div class="space-y-4 lg:space-y-6">
+							<p>To achieve multi-platform consistency, we must establish a unified design language as a foundation for all platform-specific designs. This language includes visual elements such as colours, typography, icons, and layout principles. By defining these elements in a style guide or design system, we create a shared vocabulary that can be applied consistently across platforms.</p>
+							<p>The design language should reflect the brand’s identity while considering the unique characteristics of each platform. For example, while maintaining brand colours is crucial, adapting them slightly to suit the aesthetics of each forum can enhance the overall user experience. The challenge lies in finding the balance between brand identity and platform-specific usability.</p>
+						</div>
+
+						<h2 class="mt-12 mb-4 text-3xl leading-snug md:text-4xl md:leading-tight lg:mt-12 2xl:mt-16 lg:mb-8 lg:leading-tight lg:text-5xl">Responsive design and adaptive layouts</h2>
+						
+						<div class="space-y-4 lg:space-y-6">
+							<p>Having a website or app that works well on all kinds of devices is essential. That’s where responsive design comes in! It means ensuring that everything on the screen looks great no matter what size or how it’s held. This keeps things easy to use and navigate through no matter what device people use.</p>
+							<p>But it’s not just about making everything fit on the screen. We must also consider how people use the website or app on different devices. For example, on a computer, we have multiple columns of information, but on a phone, it is better to have everything in one column so people can scroll up and down easily. By ensuring everything is consistent and easy to use across all devices, we can help people switch between them without problems.</p>
+						</div>
+
+						<h2 class="mt-12 mb-4 text-3xl leading-snug md:text-4xl md:leading-tight lg:mt-12 2xl:mt-16 lg:mb-8 lg:leading-tight lg:text-5xl">Prioritising content, functionality, touchpoints, and interactions</h2>
+						
+						<div class="space-y-4 lg:space-y-6">
+							<p>It’s important to remember what users need when making content and functionality for different platforms. A desktop app may have many features, but when creating a mobile app, it’s best to focus on the most important tasks so users don’t get overwhelmed. Utilising progressive disclosure, everyone can access what they need without any unnecessary fuss.</p>
+							<p>Another thing to keep in mind is how people interact with different devices. Phones and computers have unique ways of doing things, like touching or clicking. So, we should adjust these interactions for each platform while still keeping them user-friendly. For instance, a swipe gesture could be changed to a drag-and-drop action for desktop users. These tweaks help everyone have a great experience, no matter their device.</p>
+						</div>
+					</div>
+
+					<figure class="relative w-full my-16 space-y-4 lg:space-x-8 lg:my-24 lg:flex">
+						<img src="../media/jublo-app/jublo-app-02.png" class="object-cover h-auto lg:w-2/3" alt="UI components from the Jublo mobile app."/>
+						
+						<figcaption class="flex-1 block lg:w-1/3">
+							<span class="inline-block text-sm md:text-base text-black/60 lg:text-lg">An overview of features designed specifically for <a href="/work/enterprise-functionality-designed-for-user-move.html" class="underline underline-offset-4" title="Read our case story on the Jublo mobile app experience." target="_blank" rel="noopener">the mobile experience of Jublo</a>.</span>
+						</figcaption>
+					</figure>
+
+					<div class="max-w-4xl text-xl leading-normal lg:leading-relaxed lg:text-2xl">
+						<h2 class="mt-12 mb-4 text-3xl leading-snug md:text-4xl md:leading-tight lg:mt-12 2xl:mt-16 lg:mb-8 lg:leading-tight lg:text-5xl">Leveraging design systems for scalability</h2>
+
+						<div class="space-y-4 lg:space-y-6">
+							<p>If you’re looking for a way to keep your designs consistent across different platforms, consider using a design system. This set of reusable components, guidelines, and design principles reflect your brand’s identity and user experience. With a design system in place, you’ll be able to create designs that look and feel the same across all your platforms, which saves you time and effort.</p>
+							<p>The great thing about design systems is that they provide a central repository of design elements like buttons, forms, navigation patterns, and typography styles. These components are carefully crafted to match your design language and can be easily adapted to different platforms without losing consistency. And if you need to make changes in the future, you can do so while still maintaining your brand’s core identity.</p>
+							<p>Another advantage of design systems is that they encourage collaboration among cross-functional teams, including designers, developers, and product managers. By using a shared set of design principles and assets, everyone can work together seamlessly and avoid inconsistencies arising from different design approaches.</p>
+							<p>So why not use a design system for your next project?</p>
+						</div>
+					</div>
+
+					<figure class="relative w-full my-16 space-y-4 lg:space-x-8 lg:my-24 lg:flex">
+						<img src="../media/news/jublo-navigation.png" class="object-cover h-auto lg:w-2/3" alt="Component overview of the flexibility of the new Jublo navigation."/>
+						
+						<figcaption class="flex-1 block lg:w-1/3">
+							<span class="inline-block text-sm md:text-base text-black/60 lg:text-lg">Jublo’s new navigation is designed for high accessibility, efficient multitasking, and interchangeable branding.</span>
+						</figcaption>
+					</figure>
+
+					<div class="max-w-4xl text-xl leading-normal lg:leading-relaxed lg:text-2xl">						
+						<h2 class="mt-12 mb-4 text-3xl leading-snug md:text-4xl md:leading-tight lg:mt-12 2xl:mt-16 lg:mb-8 lg:leading-tight lg:text-5xl">User feedback and iteration: The key to “good” design</h2>
+						
+						<div class="space-y-4 lg:space-y-6">
+							<p>Were you curious about how to judge whether your design works? Well, here’s the key: to consistently gather feedback from users. By conducting regular usability tests on different devices, we can pinpoint problem areas and inconsistencies in their designs. The feedback you will receive from users who switch between platforms is particularly valuable because it helps us determine how effective the design language is and how well it’s working for users.</p>
+							<p>But that’s not all. Iterative design is a crucial part of the process. We can gradually improve the overall experience and create a more cohesive design across platforms by continuously refining and optimising the design based on real-world usage and user feedback. It’s a never-ending cycle of improvement that ensures users always get the best possible experience.</p>
+						</div>
+					</div>
+
+					<figure class="relative w-full my-16 space-y-4 lg:space-x-8 lg:my-24 lg:flex">
+						<img src="../media/jublo-app/jublo-app-01.jpg" class="object-cover h-auto lg:w-2/3" alt="Component overview of the flexibility of the new Jublo navigation."/>
+						
+						<figcaption class="flex-1 block lg:w-1/3">
+							<span class="inline-block text-sm md:text-base text-black/60 lg:text-lg">By prototyping the mobile app experience, we could conduct usability tests that informed the final design.</span>
+						</figcaption>
+					</figure>
+
+					<div class="max-w-4xl text-xl leading-normal lg:leading-relaxed lg:text-2xl">						
+						<h2 class="mt-12 mb-4 text-3xl leading-snug md:text-4xl md:leading-tight lg:mt-12 2xl:mt-16 lg:mb-8 lg:leading-tight lg:text-5xl">Let’s wrap up everything we’ve talked about</h2>
+						
+						<div class="space-y-4 lg:space-y-6">
+							<p>It takes a lot of effort and expertise to establish a shared design language that can adapt to different screen sizes, prioritise the right features and content, and optimise touchpoints and interactions.</p>
+							<p>It’s all about making it easy for users to interact with brands and content, no matter where they are. By paying attention to even the smallest details, understanding what users want, and staying true to a brand's identity, we can overcome the challenges of cross-platform design and deliver experiences that truly resonate with users across all devices and platforms.</p>
+						</div>
+					</div>
+
+					<!-- Newsletter highlight -->
+					<div class="relative max-w-4xl p-6 mt-8 space-y-4 text-white bg-black lg:mt-16">
+						<svg class="w-auto h-8 lg:h-10" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0 0.235601C9.91329 -1.04256 16.4172 4.17078 24.2112 19.1291C28.6725 6.2933 36.981 -0.546782 47.4011 0.0341989C49.1518 9.39962 41.9338 18.7031 28.3961 23.9009C40.3136 27.5417 47.1707 34.9395 48 47.2951C38.7317 49.588 28.4882 41.4155 24.0883 28.0375C20.4639 40.1374 13.1614 47.2176 0.660374 48C-0.93681 38.5494 5.32139 30.4389 19.3198 23.7072C7.68645 20.1129 1.09039 12.6066 0 0.235601Z" fill="white"/>
+						</svg>
+						
+						<p class="text-base lg:text-lg">This article is part of our monthly newsletter that serves as your compass in the evolving landscape of digital design and user experience.</p>
+						<a class="flex items-center text-base underline lg:text-lg link underline-offset-4" href="https://www.linkedin.com/newsletters/edl-digital-design-insights-7069622687349755904" target="_blank" rel="noopener" title="Jump to LinkedIn to subscribe to the newsletter.">Subscribe <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-0.5" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 7h10m0 0v10m0-10L7 17"/></svg></a>
+					</div>
+				</div>
+			</section>
+		</main>
+		
+		<footer class="text-white bg-black">
+			<div class="container px-6 py-8 mx-auto space-y-16 md:py-16 lg:space-y-28 lg:px-12 lg:pt-24">
+				<div class="space-y-12 lg:space-y-0 lg:columns-2 md:gap-x-16 lg:gap-x-24">
+					<div class="space-y-8 lg:space-y-12 break-after-column">
+						<div class="text-2xl leading-normal lg:leading-normal lg:text-3xl">
+							<span class="block"><a href="tel:+4528253694" title="Get in touch and discuss digital projects, ideas, or headaches." class="underline underline-offset-4">+45 28 25 36 94</a></span>
+							<span class="block"><a href="mailto:hello@edl.dk" title="Prefer writing? Shoot us an email instead." class="underline underline-offset-4">hello@edl.dk</a></span>
+						</div>
+
+						<ul class="text-xl leading-normal text-white/70 lg:text-2xl lg:leading-normal">
+							<li class="block">Amagerfælledvej 106</li>
+							<li class="block">2300 Copenhagen</li>
+							<li class="block">Denmark</li>
+						</ul>
+					</div>
+
+					<nav class="space-y-8 2xl:gap-x-24 md:columns-2 md:space-y-0">
+						<ul class="space-y-2 lg:space-y-4 break-after-column">
+							<li class="text-base text-white/60 lg:text-lg">Studio</li>
+							<li><a class="text-xl xl:text-2xl" href="../services.html" title="Learn about our capabilities and how to gain from them.">Services</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../work.html" title="View the work we have done for and with fantastic people.">Work</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../about.html" title="Meet the team behind the design studio.">About</a></li>
+							<li><a class="text-xl underline xl:text-2xl underline-offset-4" href="../news.html" title="Dive into our blog to discover insights, inspiration, and the creative magic behind our work.">News</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../careers.html" title="Come work with a talented team of designers.">Careers</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../contact.html" title="Swing by for a cup of coffee, give us a call, or write an email.">Contact</a></li>
+						</ul>
+						
+						<ul class="space-y-2 lg:space-y-4">
+							<li class="text-base text-white/60 lg:text-lg">Services</li>
+							<li><a class="text-xl xl:text-2xl" href="../services/design-service.html" title="Learn more about Design as a Service.">Design as a Service</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../services/design-projects.html" title="Learn how we facilitate design projects from start to finish.">Design project</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../services/evaluation.html" title="Read about our process for evaluating existing products and services.">UX evaluation</a></li>
+
+						</ul>
+					</nav>
+				</div>
+
+				<div class="flex justify-between text-sm lg:space-x-24 lg:text-lg">
+					<div class="space-x-4 lg:space-x-6">
+						<span class="inline-block">&copy; 2023 EDL</span>
+						<a class="inline-block" href="/privacy-policy.html" title="View EDL’s privacy policy.">Privacy policy</a>
+					</div>
+					
+					<div class="space-x-4 lg:space-x-6">
+						<span class="hidden md:inline-block text-black/60">Follow us</span>
+						<a class="inline-block underline underline-offset-4" href="https://linkedin.com/company/edldesign" target="_blank" rel="noopener" title="View EDL’s profile on LinkedIn.">LinkedIn</a>
+						<a class="inline-block underline underline-offset-4" href="https://instagram.com/edl.studio" target="_blank" rel="noopener" title="View EDL’s profile on Instagram.">Instagram</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
