@@ -3368,10 +3368,6 @@ select {
     width: 3.5rem;
   }
 
-  .\32xl\:max-w-screen-2xl {
-    max-width: 1536px;
-  }
-
   .\32xl\:max-w-7xl {
     max-width: 80rem;
   }
