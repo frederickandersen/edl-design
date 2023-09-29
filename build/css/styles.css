@@ -1102,6 +1102,11 @@ select {
   margin-bottom: 4rem;
 }
 
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .-ml-2 {
   margin-left: -0.5rem;
 }
@@ -1188,6 +1193,10 @@ select {
 
 .inline-flex {
   display: inline-flex;
+}
+
+.table {
+  display: table;
 }
 
 .grid {
@@ -2784,6 +2793,10 @@ select {
 
   .lg\:h-14 {
     height: 3.5rem;
+  }
+
+  .lg\:h-120 {
+    height: 30rem;
   }
 
   .lg\:w-7 {
