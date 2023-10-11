@@ -1732,11 +1732,6 @@ select {
      object-position: left;
 }
 
-.object-right {
-  -o-object-position: right;
-     object-position: right;
-}
-
 .p-10 {
   padding: 2.5rem;
 }
