@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+	<head>
+    	<meta charset="UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Swimming with the fishes: An immersive UX experience · EDL</title>
+
+		<meta name="title" content="Swimming with the fishes: An immersive UX experience · EDL">
+    	<meta name="description" content="The new app had to mirror the wonderful atmosphere of the aquarium, enrich the visitor experience, and make life easier for annual pass holders.">
+		
+		<meta property="og:title" content="Swimming with the fishes: An immersive UX experience · EDL">
+    	<meta property="og:description" content="The new app had to mirror the wonderful atmosphere of the aquarium, enrich the visitor experience, and make life easier for annual pass holders." />
+		<meta property="og:site_name" content="EDL®" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.edl.dk/news/swimming-with-the-fishes-immersive-ux-experience" />
+		<meta property="og:image" content="https://www.edl.dk/media/national-aquarium/national-aquarium-06.png" />
+
+		<link rel="icon" href="../favicon.png">
+		<link rel="stylesheet" href="../css/styles.css">
+
+		<script defer src="https://unpkg.com/@alpinejs/intersect@3.10.4/dist/cdn.min.js"></script>
+		<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+	</head>
+
+	<body class="overflow-x-hidden font-sans antialiased bg-neutral-100">
+		<header>
+			<div class="container px-6 py-6 mx-auto lg:px-12">
+				<nav class="space-y-4 sm:space-y-0 sm:flex sm:items-center sm:justify-between sm:flex-1 sm:h-16 lg:h-20">
+					<a href="/" title="Go to the homepage."><svg class="w-auto h-10 lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40"><path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/></svg></a>
+
+					<div class="flex -ml-2 xs:-ml-2.5 sm:-ml-4 lg:m-0 lg:-mr-6 xl:-mr-8">
+						<a href="/services.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="See how we can help you, and how we plan to do it.">Services</a>
+						<a href="/work.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="Follow along as we design deliverables for our clients.">Work</a>
+						<a href="/about.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="Meet the team behind the design studio.">About</a>
+						<a href="/contact.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="Swing by for a cup of coffee.">Contact</a>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<main>			
+			<section class="relative pt-4 sm:pt-12 lg:pt-16 3xl:pt-24">
+				<div class="container px-6 mx-auto space-y-4 transition duration-1000 lg:px-12 lg:space-y-8" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">
+					<div class="flex items-center space-x-3 lg:space-x-4 2xl:space-x-6"><span class="preheader">Case study</span><span class="text-base lg:text-xl text-black/60">October 18, 2023</span></div>
+					<h1 class="w-full text-5xl leading-tight md:leading-tight md:text-7xl lg:text-7.5xl lg:leading-[1.2] 2xl:leading-[1.2] 2xl:text-8xl">Swimming with the fishes: An immersive UX experience</h1>	
+				</div>
+			</section>
+
+			<section class="relative pt-8 pb-20 md:py-12 md:pb-24 lg:py-16 lg:pb-32 2xl:pb-40">
+				<div class="container px-6 lg:mx-auto lg:px-12">
+					<div class="max-w-4xl text-xl leading-normal lg:leading-relaxed lg:text-2xl">				
+						<div class="space-y-4 lg:space-y-6">
+							<p>When it comes to the magic of underwater life, the <a href="https://denblaaplanet.dk" target="_blank" rel="noopener" class="underline underline-offset-4" title="Get to know National Aquarium Denmark and their team.">National Aquarium of Denmark</a> stands as a realm of awe and wonder. Yet, despite its rich physical experiences, its mobile app had to reach a comparable standard.</p>
+							<p>To bridge this divide, our team took on the challenge of <a href="/work/deep-dive-into-redesign-denmarks-national-aquarium-app.html" class="underline underline-offset-4" title="See how we designed the UX and UI for the app experience.">redesigning the app</a> to create an experience as engaging as a visit to the aquarium itself.</p>
+						</div>
+
+						<h2 class="mt-12 mb-4 text-3xl leading-snug md:text-4xl md:leading-tight lg:mt-12 2xl:mt-16 lg:mb-8 lg:leading-tight lg:text-5xl">The objective</h2>
+						
+						<div class="space-y-4 lg:space-y-6">
+							<p>Our primary objectives were clearly defined from the start. The new app had to mirror the wonderful atmosphere of the aquarium, enrich the visitor experience, and make life easier for annual pass holders. Keeping these goals in mind, we <a href="/services/design-projects.html" class="underline underline-offset-4" target="_blank" rel="noopener" title="Learn how we facilitate design projects from start to finish.">kicked off the project</a> by interviewing the staff at the aquarium. These conversations helped us understand the existing pain points and set the stage for what must be done.</p>
+						</div>
+					</div>
+
+					<figure class="relative w-full my-16 space-y-4 lg:space-x-8 lg:my-24 lg:flex">
+						<img src="../media/national-aquarium/national-aquarium-06.png" class="object-cover h-auto lg:w-2/3" alt="The program and calendar from National Aquarium Denmark app."/>
+						
+						<figcaption class="flex-1 block lg:w-1/3">
+							<span class="inline-block text-sm md:text-base text-black/60 lg:text-lg">Simple and recognisable UX patterns are a recipe for success.</span>
+						</figcaption>
+					</figure>
+					
+					<div class="max-w-4xl text-xl leading-normal lg:leading-relaxed lg:text-2xl">
+						<h2 class="mt-12 mb-4 text-3xl leading-snug md:text-4xl md:leading-tight lg:mt-12 2xl:mt-16 lg:mb-8 lg:leading-tight lg:text-5xl">Our approach</h2>
+						<h3 class="mt-8 mb-3 text-2xl leading-snug md:text-3xl md:leading-tight lg:mt-10 lg:mb-4">Stakeholder interviews</h3>
+						
+						<div class="space-y-4 lg:space-y-6">
+							<p>Our journey began with an in-depth conversation with the team at the aquarium to identify existing pain points. This helped us focus our efforts on areas that would deliver the most impact.</p>
+						</div>
+
+						<h3 class="mt-8 mb-3 text-2xl leading-snug md:text-3xl md:leading-tight lg:mt-12 lg:mb-4">Guest experience</h3>
+
+						<div class="space-y-4 lg:space-y-6">
+							<p>We didn’t just stop at stakeholder interviews; our team immersed itself in the aquarium as guests to understand the visitor's perspective. This experience was invaluable in conceptualising what an improved app experience should encompass.</p>
+						</div>
+					</div>
+
+					<figure class="relative w-full my-16 space-y-4 lg:space-x-8 lg:my-24 lg:flex">
+						<img src="../media/national-aquarium/national-aquarium-02.jpg" class="object-cover h-auto lg:w-2/3" alt="The app UX and UI on display in an iPhone."/>
+						
+						<figcaption class="flex-1 block lg:w-1/3">
+							<span class="inline-block text-sm md:text-base text-black/60 lg:text-lg">Annual passes displayed front-and-center when opening the app.</span>
+						</figcaption>
+					</figure>
+					
+					<div class="max-w-4xl text-xl leading-normal lg:leading-relaxed lg:text-2xl">
+						<h2 class="mt-12 mb-4 text-3xl leading-snug md:text-4xl md:leading-tight lg:mt-12 2xl:mt-16 lg:mb-8 lg:leading-tight lg:text-5xl">Outcome</h2>
+						<h3 class="mt-8 mb-3 text-2xl leading-snug md:text-3xl md:leading-tight lg:mt-10 lg:mb-4">A visitor-centric experience</h3>
+						
+						<div class="space-y-4 lg:space-y-6">
+							<p>We created a visitor-centric app experience by designing features to enhance the offline visitor journey.</p>
+						</div>
+
+						<h3 class="mt-8 mb-3 text-2xl leading-snug md:text-3xl md:leading-tight lg:mt-12 lg:mb-4">Multilingual audio experience</h3>
+						
+						<div class="space-y-4 lg:space-y-6">
+							<p>One of the key elements was a multilingual audio guide covering over 40 different animals, aligned perfectly with the aquarium’s layout. This not only made the visit more informative but also more engaging.</p>
+						</div>
+
+						<h3 class="mt-8 mb-3 text-2xl leading-snug md:text-3xl md:leading-tight lg:mt-12 lg:mb-4">Sales and convenience</h3>
+						
+						<div class="space-y-4 lg:space-y-6">
+							<p>The redesigned app also serves as a potent sales tool, enabling easy and quick purchases of tickets and annual passes. Family passes and renewals can also be effortlessly managed, streamlining the overall process and boosting convenience.</p>
+						</div>
+					</div>
+
+					<div class="max-w-4xl text-xl leading-normal lg:leading-relaxed lg:text-2xl">
+						<h2 class="mt-12 mb-4 text-3xl leading-snug md:text-4xl md:leading-tight lg:mt-12 2xl:mt-16 lg:mb-8 lg:leading-tight lg:text-5xl">Conclusion</h2>
+						
+						<div class="space-y-4 lg:space-y-6">
+							<p>Ultimately, the newly designed app was a digital interface and an extension of the aquarium itself. By focusing on visitor-centric features and aiming to improve the offline experience, we created an app that complements the physical beauty and educational richness of the National Aquarium of Denmark. Like the aquarium, the app now stands as a destination—offering layers of discovery and engagement that enrich the overall visitor experience.</p>
+							<p>What began as a project to redesign an app evolved into a fulfilling journey that connected the digital with the tangible, enriching the magical experience of underwater exploration at the National Aquarium of Denmark.</p>
+						</div>
+					</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="relative py-16 border-t md:py-20 lg:py-24 border-black/10">
+				<div class="container px-6 mx-auto space-y-12 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-24 2xl:gap-x-32 lg:px-12">
+					<div class="space-y-8 lg:space-y-16 lg:col-span-1">
+						<div class="space-y-4">
+							<h3 class="text-3xl leading-snug md:text-4xl md:leading-snug lg:leading-snug lg:text-5xl 2xl:leading-snug 2xl:text-6xl">Want to learn more?</h3>
+							<p class="text-xl leading-normal lg:leading-relaxed lg:text-2xl">Leave your phone number, and Frederick will give you a call. No strings attached.</p>
+						</div>
+
+						<div class="flex space-x-4 lg:space-x-8">
+							<img class="object-cover w-20 h-20 lg:h-32 lg:w-32" src="../media/edl-frederick-andersen.jpg" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
+	
+							<div class="text-lg leading-normal lg:text-xl lg:space-y-2 lg:leading-normal 2xl:text-2xl 2xl:leading-normal">
+								<h3>Frederick Andersen</h3>
+								<span class="opacity-60">Designer & CEO</span>
+	
+								<div>
+									<a href="tel:+4528253694" class="block underline underline-offset-4" title="Call Frederick and chat about design and business.">28 25 36 94</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="px-6 py-8 space-y-4 bg-black lg:p-10 2xl:px-12 2xl:py-14 lg:col-span-1 lg:space-y-8">
+						<h3 class="text-2xl leading-snug text-white md:leading-snug md:text-3xl 2xl:leading-snug 2xl:text-4xl">Get in touch</h3>
+						
+						<form name="National Aquarium case study inquiries" action="/success.html" data-netlify="true" method="POST" netlify-honeypot="bot-field">
+							<div class="hidden">
+								<label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+							</div>
+
+							<div>
+								<label for="name" class="block text-base text-white lg:text-lg">Name <span class="text-red-500">*</span></label>
+								
+								<div class="mt-1.5">
+									<input type="text" required name="name" id="name" autocomplete="given-name" class="block w-full px-4 py-3 text-white border-0 bg-white/20 focus:shadow-sm focus:ring-white focus:border-white">
+								</div>
+							</div>
+
+							<div class="mt-4">
+								<label for="company" class="block text-base text-white lg:text-lg">Company <span class="text-red-500">*</span></label>
+								
+								<div class="mt-1.5">
+									<input type="text" required name="company" id="company" autocomplete="company" class="block w-full px-4 py-3 text-white border-0 bg-white/20 focus:shadow-sm focus:ring-white focus:border-white">
+								</div>
+							</div>
+
+							<div class="mt-4">
+								<label for="phone" class="block text-base text-white lg:text-lg">Phone <span class="text-red-500">*</span></label>
+
+								<div class="mt-1.5">
+									<input type="text" id="phone" required name="phone" autocomplete="phone" class="block w-full px-4 py-3 text-white border-0 bg-white/20 focus:shadow-sm focus:ring-white focus:border-white">
+								</div>
+							</div>
+
+							<div class="mt-6">
+								<p class="text-white/60">By submitting the form, you agree to our <a href="/privacy-policy.html" class="text-white underline underline-offset-4" title="Read our privacy policy. It's dead simple." target="_blank" rel="noopener">Privacy Policy</a>.</p>
+							</div>
+
+							<div class="w-full mt-8 lg:mt-10 2xl:mt-12">
+								<button type="submit" class="w-full px-6 py-3 text-xl bg-white rounded-full lg:inline-block lg:px-7 lg:py-4 2xl:text-2xl 2xl:px-6">
+									Receive a phone call
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		
+		<footer class="text-white bg-black">
+			<div class="container px-6 py-8 mx-auto space-y-16 md:py-16 lg:space-y-28 lg:px-12 lg:pt-24">
+				<div class="space-y-12 lg:space-y-0 lg:columns-2 md:gap-x-16 lg:gap-x-24">
+					<div class="space-y-8 lg:space-y-12 break-after-column">
+						<div class="text-2xl leading-normal lg:leading-normal lg:text-3xl">
+							<span class="block"><a href="tel:+4528253694" title="Get in touch and discuss digital projects, ideas, or headaches." class="underline underline-offset-4">+45 28 25 36 94</a></span>
+							<span class="block"><a href="mailto:hello@edl.dk" title="Prefer writing? Shoot us an email instead." class="underline underline-offset-4">hello@edl.dk</a></span>
+						</div>
+
+						<ul class="text-xl leading-normal text-white/70 lg:text-2xl lg:leading-normal">
+							<li class="block">Amagerfælledvej 106</li>
+							<li class="block">2300 Copenhagen</li>
+							<li class="block">Denmark</li>
+						</ul>
+					</div>
+
+					<nav class="space-y-8 2xl:gap-x-24 md:columns-2 md:space-y-0">
+						<ul class="space-y-2 lg:space-y-4 break-after-column">
+							<li class="text-base text-white/60 lg:text-lg">Studio</li>
+							<li><a class="text-xl xl:text-2xl" href="../services.html" title="Learn about our capabilities and how to gain from them.">Services</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../work.html" title="View the work we have done for and with fantastic people.">Work</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../about.html" title="Meet the team behind the design studio.">About</a></li>
+							<li><a class="text-xl underline xl:text-2xl underline-offset-4" href="../news.html" title="Dive into our blog to discover insights, inspiration, and the creative magic behind our work.">News</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../careers.html" title="Come work with a talented team of designers.">Careers</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../contact.html" title="Swing by for a cup of coffee, give us a call, or write an email.">Contact</a></li>
+						</ul>
+						
+						<ul class="space-y-2 lg:space-y-4">
+							<li class="text-base text-white/60 lg:text-lg">Services</li>
+							<li><a class="text-xl xl:text-2xl" href="../services/design-service.html" title="Learn more about Design as a Service.">Design as a Service</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../services/design-projects.html" title="Learn how we facilitate design projects from start to finish.">Design project</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../services/evaluation.html" title="Read about our process for evaluating existing products and services.">UX evaluation</a></li>
+
+						</ul>
+					</nav>
+				</div>
+
+				<div class="flex justify-between text-sm lg:space-x-24 lg:text-lg">
+					<div class="space-x-4 lg:space-x-6">
+						<span class="inline-block">&copy; 2023 EDL</span>
+						<a class="inline-block" href="/privacy-policy.html" title="View EDL’s privacy policy.">Privacy policy</a>
+					</div>
+					
+					<div class="space-x-4 lg:space-x-6">
+						<span class="hidden md:inline-block text-black/60">Follow us</span>
+						<a class="inline-block underline underline-offset-4" href="https://linkedin.com/company/edldesign" target="_blank" rel="noopener" title="View EDL’s profile on LinkedIn.">LinkedIn</a>
+						<a class="inline-block underline underline-offset-4" href="https://instagram.com/edl.studio" target="_blank" rel="noopener" title="View EDL’s profile on Instagram.">Instagram</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
