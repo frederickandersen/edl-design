@@ -1,5 +1,10 @@
 [[plugins]]
-package = "@netlify/plugin-sitemap"
+  package = "@netlify/plugin-sitemap"
+  package = "netlify-plugin-cloudinary"
+
+  [plugins.inputs]
+    cloudName = "djm6ovxh2"
+
 
   [plugins.inputs]
   buildDir = "build"

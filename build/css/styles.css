@@ -1282,12 +1282,12 @@ select {
   height: 5rem;
 }
 
-.h-120 {
-  height: 30rem;
-}
-
 .h-4 {
   height: 1rem;
+}
+
+.h-120 {
+  height: 30rem;
 }
 
 .w-auto {
@@ -1496,10 +1496,6 @@ select {
 
 .gap-16 {
   gap: 4rem;
-}
-
-.gap-8 {
-  gap: 2rem;
 }
 
 .gap-y-12 {
@@ -1740,14 +1736,6 @@ select {
   padding: 2rem;
 }
 
-.p-12 {
-  padding: 3rem;
-}
-
-.p-20 {
-  padding: 5rem;
-}
-
 .p-6 {
   padding: 1.5rem;
 }
@@ -1800,16 +1788,6 @@ select {
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-.px-20 {
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
-
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
 .px-3 {
@@ -2460,10 +2438,6 @@ select {
          columns: 2;
   }
 
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .md\:items-start {
     align-items: flex-start;
   }
@@ -3039,10 +3013,6 @@ select {
     padding: 2.5rem;
   }
 
-  .lg\:p-20 {
-    padding: 5rem;
-  }
-
   .lg\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -3086,11 +3056,6 @@ select {
   .lg\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
-  }
-
-  .lg\:px-28 {
-    padding-left: 7rem;
-    padding-right: 7rem;
   }
 
   .lg\:py-20 {
