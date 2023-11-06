@@ -1728,6 +1728,11 @@ select {
      object-position: left;
 }
 
+.object-bottom {
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
 .p-10 {
   padding: 2.5rem;
 }
@@ -1869,6 +1874,10 @@ select {
 
 .pb-7 {
   padding-bottom: 1.75rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
 }
 
 .text-center {
