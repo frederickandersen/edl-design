@@ -31,7 +31,7 @@
 	<body class="overflow-x-hidden font-sans antialiased">
 		<div class="relative hidden w-full px-12 py-4 text-center text-white bg-black hover:bg-black/80 md:block lg:px-24" x-data="{ hide_banner: true, cookie_name: 'announcement-daas' }" x-init="hide_banner = docCookies.hasItem(cookie_name) ? (docCookies.getItem(cookie_name) == 'true') : false;" x-bind:class="{ 'hidden': hide_banner, 'relative hidden md:block': !hide_banner }">
 			<a href="/services/design-service.html" class="block w-full space-x-2 text-base link lg:text-xl lg:leading-normal 2xl:text-2xl 2xl:leading-normal" @click="hide_banner = true; docCookies.setItem(cookie_name, true, (60*24*60*60));">
-				<span class="opacity-80">Latest update</span>
+				
 				<span>Don’t hire a design team, subscribe to one</span>
 			</a>
 			
@@ -56,7 +56,7 @@
 		<main>
 			<section class="relative pt-4 sm:pt-12 lg:pt-16 3xl:pt-24">
 				<div class="container w-full px-6 mx-auto space-y-8 lg:px-12 md:space-y-12 lg:space-y-16 2xl:space-y-20">
-					<div class="space-y-8 md:space-y-12 lg:space-y-16 2xl:space-y-20">
+					<div class="space-y-8 md:space-y-12 lg:space-y-16">
 						<h1 class="w-full text-5xl leading-tight md:leading-tight md:text-7xl lg:text-7.5xl transition duration-1000 lg:leading-[1.2] xl:leading-[1.2] xl:text-8xl 2xl:leading-[1.2] 2xl:text-8.5xl 3xl:text-9xl 3xl:leading-[1.2]" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">An embedded part of your product team</h1>
 						<p class="max-w-4xl text-2xl leading-normal lg:text-3xl lg:leading-relaxed">You have a vision but need the capabilities or internal resources to realise it. That’s where we come in. We immerse ourselves in your product team to help you build better digital products more efficiently.</p>
 					</div>
@@ -508,8 +508,8 @@
 							<li class="text-base text-white/60 lg:text-lg">Services</li>
 							<li><a class="text-xl xl:text-2xl" href="services/design-service.html" title="Learn more about Design as a Service.">Design as a Service</a></li>
 							<li><a class="text-xl xl:text-2xl" href="services/design-projects.html" title="Learn how we facilitate design projects from start to finish.">Design project</a></li>
-							<li><a class="text-xl xl:text-2xl" href="services/evaluation.html" title="Read about our process for evaluating existing products and services.">UX evaluation</a></li>
-							
+							<li><a class="text-xl xl:text-2xl" href="services/ux-audit.html" title="Read about our process for evaluating existing products and services.">UX audit</a></li>
+							<li><a class="text-xl xl:text-2xl" href="services/saas-product-design.html" title="Learn how we enable SaaS companies elevate their products.">Design for SaaS</a></li>
 						</ul>
 					</nav>
 				</div>

@@ -10,7 +10,8 @@
 /da /
 /da/kontakt /contact
 /services/product /services
-/services/ux-evaluation /services/evaluation
+/services/ux-evaluation /services/ux-audit
+/services/evaluation /services/ux-audit
 /career /careers
 /career/product-designer /careers/product-designer
 https://edl.design/* https://www.edl.dk/:splat 301!
