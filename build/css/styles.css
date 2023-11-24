@@ -1170,6 +1170,14 @@ select {
   margin-left: 0px;
 }
 
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
 .mb-3 {
   margin-bottom: 0.75rem;
 }
@@ -1366,16 +1374,16 @@ select {
   max-width: 36rem;
 }
 
+.max-w-6xl {
+  max-width: 72rem;
+}
+
 .max-w-7xl {
   max-width: 80rem;
 }
 
 .max-w-screen-3xl {
   max-width: 2000px;
-}
-
-.max-w-6xl {
-  max-width: 72rem;
 }
 
 .max-w-\[1920px\] {
@@ -1697,6 +1705,11 @@ select {
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
 }
 
+.bg-neutral-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 229 229 / var(--tw-bg-opacity));
+}
+
 .bg-white\/20 {
   background-color: rgb(255 255 255 / 0.2);
 }
@@ -1807,6 +1820,11 @@ select {
   padding-right: 0.75rem;
 }
 
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 .py-20 {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -1815,11 +1833,6 @@ select {
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-}
-
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
 .py-1 {
@@ -2399,6 +2412,10 @@ select {
   .sm\:pt-12 {
     padding-top: 3rem;
   }
+
+  .sm\:pb-16 {
+    padding-bottom: 4rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -2722,6 +2739,10 @@ select {
 
   .lg\:mt-10 {
     margin-top: 2.5rem;
+  }
+
+  .lg\:mb-24 {
+    margin-bottom: 6rem;
   }
 
   .lg\:mb-4 {
@@ -3337,6 +3358,10 @@ select {
 
   .\32xl\:mt-12 {
     margin-top: 3rem;
+  }
+
+  .\32xl\:mb-24 {
+    margin-bottom: 6rem;
   }
 
   .\32xl\:aspect-auto {
