@@ -31,7 +31,6 @@
 	<body class="overflow-x-hidden font-sans antialiased">
 		<div class="relative hidden w-full px-12 py-4 text-center text-white bg-black hover:bg-black/80 md:block lg:px-24" x-data="{ hide_banner: true, cookie_name: 'announcement-daas' }" x-init="hide_banner = docCookies.hasItem(cookie_name) ? (docCookies.getItem(cookie_name) == 'true') : false;" x-bind:class="{ 'hidden': hide_banner, 'relative hidden md:block': !hide_banner }">
 			<a href="/services/design-service.html" class="block w-full space-x-2 text-base link lg:text-xl lg:leading-normal 2xl:text-2xl 2xl:leading-normal" @click="hide_banner = true; docCookies.setItem(cookie_name, true, (60*24*60*60));">
-				
 				<span>Don’t hire a design team, subscribe to one</span>
 			</a>
 			
@@ -54,45 +53,114 @@
 		</header>
 
 		<main>
-			<section class="relative pt-4 sm:pt-12 lg:pt-16 3xl:pt-24">
-				<div class="container w-full px-6 mx-auto space-y-8 transition duration-1000 lg:px-12 md:space-y-12 lg:space-y-16 2xl:space-y-20" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">
-					<div class="space-y-6 lg:space-y-8 2xl:space-y-10">
-						<h1 class="w-full text-4.5xl leading-tight duration-1000 transition md:leading-tight md:text-7xl lg:text-7.5xl lg:leading-[1.2] 2xl:leading-[1.2] 2xl:text-8xl">Share your idea, plans, or obstacles</h1>
+			<section class="relative pt-4 sm:pt-12 lg:py-16 lg:pb-8 3xl:py-24">
+				<div class="container w-full px-6 mx-auto space-y-8 lg:px-12 md:space-y-12 lg:space-y-16 2xl:space-y-20">
+					<div class="space-y-8 md:space-y-12 lg:space-y-16">
+						<h1 class="w-full text-5xl leading-tight md:leading-tight md:text-7xl lg:text-7.5xl transition duration-1000 lg:leading-[1.2] xl:leading-[1.2] xl:text-8xl 2xl:leading-[1.2] 2xl:text-8.5xl 3xl:text-9xl 3xl:leading-[1.2]" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">Share your idea, plans, or obstacles</h1>
 					</div>
 				</div>
 			</section>
 			
 			<section class="relative pt-12 pb-16 md:py-24 md:pt-16 lg:py-32 lg:pt-20">
-				<div class="container grid px-6 mx-auto gap-y-16 lg:px-12 lg:grid-cols-contact lg:gap-x-24 2xl:gap-x-32">
-					<div class="space-y-4 lg:space-y-8">
-						<img src="/media/edl-office.jpg" class="object-cover w-full aspect-video lg:aspect-square" alt="Photo of our office. Photo by Woods Augusthus." />
-						<h2 class="text-2xl leading-normal lg:leading-relaxed 2xl:text-3xl 2xl:leading-normal">Drop in for a coffee on the first floor at <a href="https://goo.gl/maps/rvbUxQUX1cxjvyaG9" class="text-link" title="Visit Google Maps for directions to Woods Augusthus.">Woods Augusthus</a>. We’ll show you some of our work.</h2>
-						<div class="space-y-4 lg:space-y-6">
-							<p class="text-xl leading-normal 2xl:text-2xl 2xl:leading-normal">Amagerfælledvej 106<br>2300 Copenhagen<br>Denmark</p>
-							<a class="inline-block text-xl underline underline-offset-4 2xl:text-2xl hover:opacity-80" href="https://goo.gl/maps/rvbUxQUX1cxjvyaG9" target="_blank" rel="noopener" title="Get directions to our Copenhagen office via Google Maps.">Directions</a>
+				<div class="container grid px-6 mx-auto xl:grid-cols-3 gap-y-16 lg:px-12 lg:gap-x-24 2xl:gap-x-32">
+					<div class="col-span-2 space-y-8 lg:space-y-12">						
+						<div class="space-y-4">
+							<h3 class="text-2xl leading-snug md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl 2xl:leading-snug 2xl:text-5xl">Tell us about your project and goals. We’ll get back to you within an hour.</h3>
 						</div>
+
+						<form name="Contact form" action="/success.html" data-netlify="true" method="POST" netlify-honeypot="bot-field">
+							<div class="hidden">
+								<label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+							</div>
+
+							<div>
+								<label for="name" class="block text-base lg:text-lg">Name <span class="text-red-500">*</span></label>
+								
+								<div class="mt-1.5">
+									<input type="text" required name="name" id="name" autocomplete="given-name" class="block w-full px-4 py-4 text-lg border-0 bg-neutral-100 focus:shadow-sm focus:ring-black focus:border-black">
+								</div>
+							</div>
+
+							<div class="mt-4 lg:mt-6">
+								<label for="company" class="block text-base lg:text-lg">Company <span class="text-red-500">*</span></label>
+								
+								<div class="mt-1.5">
+									<input type="text" required name="company" id="company" autocomplete="company" class="block w-full px-4 py-4 text-lg border-0 bg-neutral-100 focus:shadow-sm focus:ring-black focus:border-black">
+								</div>
+							</div>
+
+							<div class="mt-4 lg:mt-6">
+								<label for="email" class="block text-base lg:text-lg">Email <span class="text-red-500">*</span></label>
+
+								<div class="mt-1.5">
+									<input type="text" id="email" required name="email" autocomplete="email" class="block w-full px-4 py-4 text-lg border-0 bg-neutral-100 focus:shadow-sm focus:ring-black focus:border-black">
+								</div>
+							</div>
+
+							<div class="mt-4 lg:mt-6">
+								<label for="phone" class="block text-base lg:text-lg">Phone</label>
+
+								<div class="mt-1.5">
+									<input type="text" id="phone" name="phone" autocomplete="phone" class="block w-full px-4 py-4 text-lg border-0 bg-neutral-100 focus:shadow-sm focus:ring-blakc focus:border-black">
+								</div>
+							</div>
+
+							<div class="mt-4 lg:mt-6">
+								<label for="goals" class="block text-base lg:text-lg">Goals <span class="text-red-500">*</span></label>
+
+								<div class="mt-1.5">
+									<input type="text" placeholder="What are our ideal goals and outcomes for this project?" id="goals" required name="goals" class="block w-full px-4 py-4 text-lg border-0 bg-neutral-100 focus:shadow-sm focus:ring-black focus:border-black">
+								</div>
+							</div>
+
+							<div class="mt-4 lg:mt-6">
+								<label for="timeline" class="block text-base lg:text-lg">Timeline <span class="text-red-500">*</span></label>
+
+								<div class="mt-1.5">
+									<input type="text" placeholder="When do you need this done?" id="timeline" required name="timeline" class="block w-full px-4 py-4 text-lg border-0 bg-neutral-100 focus:shadow-sm focus:ring-black focus:border-black">
+								</div>
+							</div>
+
+							<div class="mt-4 lg:mt-6">
+								<label for="budget" class="block text-base lg:text-lg">Budget <span class="text-red-500">*</span></label>
+
+								<div class="mt-1.5">
+									<input type="text" placeholder="Just a ballpark figure..." id="budget" required name="budget" class="block w-full px-4 py-4 text-lg border-0 bg-neutral-100 focus:shadow-sm focus:ring-black focus:border-black">
+								</div>
+							</div>
+
+							<div class="mt-6">
+								<p class="text-neutral-500">By submitting the form, you agree to our <a href="/privacy-policy.html" class="underline underline-offset-4" title="Read our privacy policy. It's dead simple." target="_blank" rel="noopener">Privacy Policy</a>.</p>
+							</div>
+
+							<div class="w-full mt-8 lg:mt-10 2xl:mt-12">
+								<button type="submit" class="w-full px-6 py-3 text-xl text-white bg-black rounded-full lg:inline-block lg:px-7 lg:py-4 2xl:text-2xl 2xl:px-6">
+									Let us contact you
+								</button>
+							</div>
+						</form>
 					</div>
-
+					
 					<!-- Contact information -->
-					<div class="space-y-12 lg:space-y-16 2xl:space-y-20">
-						<div class="space-y-4 lg:space-y-6">
-							<h3 class="text-2xl leading-tight lg:leading-tight lg:text-3xl 2xl:text-4xl 2xl:leading-tight">Talk shop</h3>
-							<p class="text-xl leading-normal 2xl:text-2xl 2xl:leading-normal">Our CEO Frederick loves chatting about digital projects. Book him for a <span class="">down-to-earth</span> chat.<p>
-							<a class="text-xl underline underline-offset-4 2xl:text-2xl hover:opacity-80" href="https://cal.com/frederickandersen/30min" target="_blank" rel="noopener" title="Frederick always love talking shop. Shoot him an email!">Book a 30-minute chat</a>
+					<div class="col-span-1 space-y-12 lg:space-y-16 2xl:space-y-20">
+						<div class="space-y-4 lg:space-y-8">
+							<img src="/media/edl-office.jpg" class="object-cover w-full aspect-video" alt="Photo of our office. Photo by Woods Augusthus." />
+							
+							<div class="space-y-2 lg:space-y-4">
+								<h3 class="text-2xl leading-tight lg:leading-tight lg:text-3xl">Office</h3>
+								<p class="text-xl leading-normal 2xl:text-2xl 2xl:leading-normal"><a class="underline underline-offset-4" href="https://goo.gl/maps/rvbUxQUX1cxjvyaG9" target="_blank" rel="noopener" title="Get directions to our Copenhagen office via Google Maps.">Amagerfælledvej 106</a><br>2300 Copenhagen<br>Denmark</p>
+							</div>
 						</div>
 
-						<div class="space-y-4 lg:space-y-6">
-							<h3 class="text-2xl leading-tight lg:leading-tight lg:text-3xl 2xl:text-4xl 2xl:leading-tight">Just say hello</h3>
-							<p class="text-xl leading-normal 2xl:text-2xl 2xl:leading-normal">For all other matters, please send an email to the address below.<p>
-							<a class="text-xl underline underline-offset-4 2xl:text-2xl hover:opacity-80" href="mailto:hello@edl.dk?subject=What’s good?" title="Let us know what’s good with you!">hello@edl.dk</a>
+						<div class="space-y-2 lg:space-y-4">
+							<h3 class="text-2xl leading-tight lg:leading-tight lg:text-3xl">Dislike forms?</h3>
+							<p class="text-xl leading-normal 2xl:text-2xl 2xl:leading-normal">You can either <a class="text-xl underline underline-offset-4 2xl:text-2xl" href="mailto:fa@edl.dk?subject=Hi, Frederick!" title="Send a mail to Frederick directly.">write directly to Frederick</a> or <a class="underline underline-offset-4" href="https://cal.com/frederickandersen/30min" target="_blank" rel="noopener" title="Frederick always love talking shop. Shoot him an email!">schedule a 30-minute meeting</a> to pick his brain.<p>
 						</div>
-
-						<div class="space-y-4 lg:space-y-6">
-							<h3 class="text-2xl leading-tight lg:leading-tight lg:text-3xl 2xl:text-4xl 2xl:leading-tight">Career openings</h3>
-							<!-- <p class="text-xl leading-normal 2xl:text-2xl 2xl:leading-normal">We’re looking for a brilliant <a class="text-xl underline underline-offset-4 2xl:text-2xl hover:opacity-80" href="careers/ui-designer.html" title="Read about our job position."><span class="inline-block w-3 h-3 mr-1.5 rounded-full bg-green"></span>UI Designer</a> to join our team.</p>-->
-							<p class="text-xl leading-normal 2xl:text-2xl 2xl:leading-normal">We have no positions available, but always on the lookout for talented people. Please direct all portfolios here.<p>
-							<a class="text-xl underline underline-offset-4 2xl:text-2xl hover:opacity-80" href="mailto:careers@edl.dk?subject=Career at EDL" title="Send a mail regarding careers at EDL.">careers@edl.dk</a>
-						</div>			
+						
+						<div class="space-y-2 lg:space-y-4">
+							<h3 class="text-2xl leading-tight lg:leading-tight lg:text-3xl">Looking for a job?</h3>
+							<p class="text-xl leading-normal 2xl:text-2xl 2xl:leading-normal">Please direct all portfolios <a class="underline underline-offset-4" href="mailto:careers@edl.dk?subject=Career at EDL" title="Send a mail regarding careers at EDL.">to this email address</a>.<p>
+						</div>
 					</div>
 				</div>
 			</section>
