@@ -24,23 +24,72 @@
 	</head>
 
 	<body class="overflow-x-hidden font-sans antialiased bg-neutral-100">
-		<header>
-			<div class="container px-6 py-6 mx-auto lg:px-12">
-				<nav class="space-y-4 sm:space-y-0 sm:flex sm:items-center sm:justify-between sm:flex-1 sm:h-16 lg:h-20">
-					<a href="/" title="Go to the homepage."><svg class="w-auto h-10 lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40"><path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/></svg></a>
+		<header x-data="{ open: false }" @keydown.window.escape="open = false">
+			<nav class="container flex items-center justify-between flex-1 px-6 py-6 mx-auto lg:px-12 lg:py-10" aria-label="Global">
+				<a href="/" title="Go to the homepage."><svg class="w-auto h-10 lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40"><path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/></svg></a>
+			  
+				<div class="flex sm:hidden">
+					<button type="button" class="-m-2.5 inline-flex items-center justify-center p-2.5 text-black" @click="open = true">
+						<span class="sr-only">Open main menu</span>
+						
+						<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+						</svg>
+					</button>
+				</div>
 
-					<div class="flex -ml-2 xs:-ml-2.5 sm:-ml-4 lg:m-0 lg:-mr-6 xl:-mr-8">
-						<a href="/services.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="See how we can help you, and how we plan to do it.">Services</a>
-						<a href="/work.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="Follow along as we design deliverables for our clients.">Work</a>
-						<a href="/about.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="Meet the team behind the design studio.">About</a>
-						<a href="/contact.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="Swing by for a cup of coffee.">Contact</a>
+				<div class="hidden text-base sm:flex lg:-mr-6 xl:-mr-8 xs:text-lg lg:text-xl xl:text-2xl">
+					<a href="/services.html" class="px-2 py-2 xs:px-2.5 sm:px-4 lg:px-6 xl:px-8" title="See how we can help you, and how we plan to do it.">Services</a>
+					<a href="/work.html" class="px-2 py-2 xs:px-2.5 sm:px-4 lg:px-6 xl:px-8" title="Follow along as we design deliverables for our clients.">Work</a>
+					<a href="/about.html" class="px-2 py-2 xs:px-2.5 sm:px-4 lg:px-6 xl:px-8" title="Meet the team behind the design studio.">About</a>
+					<a href="/news.html" class="px-2 py-2 xs:px-2.5 sm:px-4 lg:px-6 xl:px-8 underline underline-offset-4" title="Dive into our blog to discover insights, inspiration, and the creative magic behind our work.">News</a>
+					<a href="/contact.html" class="px-2 py-2 xs:px-2.5 sm:px-4 lg:px-6 xl:px-8" title="Swing by for a cup of coffee.">Contact</a>
+				</div>
+			</nav>
+
+			<!-- Mobile menu, show/hide based on menu open state. -->
+			<div class="sm:hidden" x-ref="dialog" x-show="open" aria-modal="true">
+				<!-- Background backdrop, show/hide based on slide-over state. -->
+				<div class="fixed inset-0 z-10"></div>
+
+				<div class="fixed inset-y-0 right-0 z-10 w-full px-6 py-6 overflow-y-auto bg-black sm:max-w-sm sm:ring-1 sm:ring-neutral-900/10" @click.away="open = false">
+					<div class="flex items-center justify-between">
+						<a href="/" title="Go to the homepage."><svg class="w-auto h-10 text-white lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40"><path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/></svg></a>
+
+						<button type="button" class="-m-2.5 rounded-md p-2.5 text-white" @click="open = false">
+							<span class="sr-only">Close menu</span>
+							
+							<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+							</svg>
+						</button>
 					</div>
-				</nav>
+
+					<div class="flow-root">
+						<div class="flex flex-col justify-between h-full">
+							<div class="py-12">
+								<a href="/services.html" class="block px-3 py-3 -mx-2.5 text-2xl leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800" title="See how we can help you, and how we plan to do it.">Services</a>
+								<a href="/work.html" class="block px-3 py-3 -mx-2.5 text-2xl leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800" title="Follow along as we design deliverables for our clients.">Work</a>
+								<a href="/about.html" class="block px-3 py-3 -mx-2.5 text-2xl leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800" title="Meet the team behind the design studio.">About</a>
+								<a href="/news.html" class="block px-3 py-3 -mx-2.5 text-2xl leading-7 underline rounded-lg text-neutral-100 hover:bg-neutral-800 underline-offset-4" title="Dive into our blog to discover insights, inspiration, and the creative magic behind our work.">News</a>
+								<a href="/contact.html" class="block px-3 py-3 -mx-2.5 text-2xl leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800" title="Swing by for a cup of coffee.">Contact</a>
+							</div>
+							
+							<div>
+								<p class="mb-2 text-base text-neutral-400">What can we help you with?</p>
+								<a href="/services/saas-product-design.html" class="block px-3 py-2.5 -mx-2.5 text-lg leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800" title="Learn how we enable SaaS companies elevate their products.">Design for your SaaS</a>
+								<a href="/services/design-service.html" class="block px-3 py-2.5 -mx-2.5 text-lg leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800" title="Learn more about Design as a Service.">Access to our design team</a>
+								<a href="/services/design-projects.html" class="block px-3 py-2.5 -mx-2.5 text-lg leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800" title="Learn how we facilitate design projects from start to finish.">Lead your design project</a>
+								<a href="/services/ux-audit.html" class="block px-3 py-2.5 -mx-2.5 text-lg leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800" title="Read about our process for evaluating existing products and services.">Audit your user experience</a>
+							</div>							
+						</div>
+					</div>
+				</div>
 			</div>
 		</header>
 
 		<main>			
-			<section class="relative pt-4 sm:pt-12 lg:pt-16 3xl:pt-24">
+			<section class="relative pt-10 md:pt-16 3xl:pt-24">
 				<div class="container px-6 mx-auto space-y-4 transition duration-1000 lg:px-12 lg:space-y-8" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">
 					<div class="flex items-center space-x-3 lg:space-x-4 2xl:space-x-6"><span class="preheader">Insights</span><span class="text-base lg:text-xl text-black/60">June 5, 2023</span></div>
 					<h1 class="w-full text-5xl leading-tight md:leading-tight md:text-7xl lg:text-7.5xl lg:leading-[1.2] 2xl:leading-[1.2] 2xl:text-8xl">The importance of accessibility in digital design</h1>	

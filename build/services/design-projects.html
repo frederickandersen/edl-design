@@ -23,19 +23,68 @@
 		<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 	</head>
 
-	<body class="overflow-x-hidden font-sans antialiased bg-neutral-800">
-		<header class="text-white">
-			<div class="container px-6 py-6 mx-auto lg:px-12">
-				<nav class="space-y-4 sm:space-y-0 sm:flex sm:items-center sm:justify-between sm:flex-1 sm:h-16 lg:h-20">
-					<a href="/" title="Go to the homepage."><svg class="w-auto h-10 lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40"><path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/></svg></a>
+	<body class="overflow-x-hidden font-sans antialiased bg-black">
+		<header x-data="{ open: false }" @keydown.window.escape="open = false">
+			<nav class="container flex items-center justify-between flex-1 px-6 py-6 mx-auto lg:px-12 lg:py-10" aria-label="Global">
+				<a href="/" title="Go to the homepage."><svg class="w-auto h-10 text-white lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40"><path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/></svg></a>
+			  
+				<div class="flex sm:hidden">
+					<button type="button" class="-m-2.5 inline-flex items-center justify-center p-2.5 text-white" @click="open = true">
+						<span class="sr-only">Open main menu</span>
+						
+						<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+						</svg>
+					</button>
+				</div>
 
-					<div class="flex -ml-2 xs:-ml-2.5 sm:-ml-4 lg:m-0 lg:-mr-6 xl:-mr-8">
-						<a href="/services.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl underline underline-offset-4" title="See how we can help you, and how we plan to do it.">Services</a>
-						<a href="/work.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="Follow along as we design deliverables for our clients.">Work</a>
-						<a href="/about.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="Meet the team behind the design studio.">About</a>
-						<a href="/contact.html" class="px-2 py-2 xs:px-2.5 text-base xs:text-lg sm:px-4 lg:px-6 xl:px-8 lg:text-xl xl:text-2xl" title="Swing by for a cup of coffee.">Contact</a>
+				<div class="hidden text-base text-white sm:flex lg:-mr-6 xl:-mr-8 xs:text-lg lg:text-xl xl:text-2xl">
+					<a href="/services.html" class="px-2 py-2 xs:px-2.5 sm:px-4 lg:px-6 xl:px-8 underline underline-offset-4" title="See how we can help you, and how we plan to do it.">Services</a>
+					<a href="/work.html" class="px-2 py-2 xs:px-2.5 sm:px-4 lg:px-6 xl:px-8" title="Follow along as we design deliverables for our clients.">Work</a>
+					<a href="/about.html" class="px-2 py-2 xs:px-2.5 sm:px-4 lg:px-6 xl:px-8" title="Meet the team behind the design studio.">About</a>
+					<a href="/news.html" class="px-2 py-2 xs:px-2.5 sm:px-4 lg:px-6 xl:px-8" title="Dive into our blog to discover insights, inspiration, and the creative magic behind our work.">News</a>
+					<a href="/contact.html" class="px-2 py-2 xs:px-2.5 sm:px-4 lg:px-6 xl:px-8" title="Swing by for a cup of coffee.">Contact</a>
+				</div>
+			</nav>
+
+			<!-- Mobile menu, show/hide based on menu open state. -->
+			<div class="sm:hidden" x-ref="dialog" x-show="open" aria-modal="true">
+				<!-- Background backdrop, show/hide based on slide-over state. -->
+				<div class="fixed inset-0 z-10"></div>
+
+				<div class="fixed inset-y-0 right-0 z-10 w-full px-6 py-6 overflow-y-auto bg-black sm:max-w-sm sm:ring-1 sm:ring-neutral-900/10" @click.away="open = false">
+					<div class="flex items-center justify-between">
+						<a href="/" title="Go to the homepage."><svg class="w-auto h-10 text-white lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40"><path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/></svg></a>
+
+						<button type="button" class="-m-2.5 rounded-md p-2.5 text-white" @click="open = false">
+							<span class="sr-only">Close menu</span>
+							
+							<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+							</svg>
+						</button>
 					</div>
-				</nav>
+
+					<div class="flow-root">
+						<div class="flex flex-col justify-between h-full">
+							<div class="py-12">
+								<a href="/services.html" class="block px-3 py-3 -mx-2.5 text-2xl leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800" title="See how we can help you, and how we plan to do it.">Services</a>
+								<a href="/work.html" class="block px-3 py-3 -mx-2.5 text-2xl leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800" title="Follow along as we design deliverables for our clients.">Work</a>
+								<a href="/about.html" class="block px-3 py-3 -mx-2.5 text-2xl leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800" title="Meet the team behind the design studio.">About</a>
+								<a href="/news.html" class="block px-3 py-3 -mx-2.5 text-2xl leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800" title="Dive into our blog to discover insights, inspiration, and the creative magic behind our work.">News</a>
+								<a href="/contact.html" class="block px-3 py-3 -mx-2.5 text-2xl leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800" title="Swing by for a cup of coffee.">Contact</a>
+							</div>
+							
+							<div>
+								<p class="mb-2 text-base text-neutral-400">What can we help you with?</p>
+								<a href="/services/saas-product-design.html" class="block px-3 py-2.5 -mx-2.5 text-lg leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800" title="Learn how we enable SaaS companies elevate their products.">Design for your SaaS</a>
+								<a href="/services/design-service.html" class="block px-3 py-2.5 -mx-2.5 text-lg leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800" title="Learn more about Design as a Service.">Access to our design team</a>
+								<a href="/services/design-projects.html" class="block px-3 py-2.5 -mx-2.5 text-lg leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800 underline underline-offset-4" title="Learn how we facilitate design projects from start to finish." aria-current="page">Lead your design project</a>
+								<a href="/services/ux-audit.html" class="block px-3 py-2.5 -mx-2.5 text-lg leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800" title="Read about our process for evaluating existing products and services.">Audit your user experience</a>
+							</div>							
+						</div>
+					</div>
+				</div>
 			</div>
 		</header>
 
@@ -45,14 +94,14 @@
 				<span class="opacity-40">▸</span>
 				<span class="opacity-70">Design project</span>
 			</nav>
-
-			<section class="relative pt-4 space-y-16 text-white lg:space-y-24 2xl:space-y-32 sm:pt-12 lg:pt-16 2xl:pt-24">
+			
+			<section class="relative pt-10 space-y-16 text-white lg:space-y-24 2xl:space-y-32 md:pt-16 2xl:pt-24">
 				<div class="container w-full px-6 mx-auto space-y-8 lg:px-12 md:space-y-12 lg:space-y-16 2xl:space-y-20">
 					<div class="space-y-8 md:space-y-12 lg:space-y-16">
 						<h1 class="w-full text-5xl leading-tight md:leading-tight md:text-7xl lg:text-7.5xl transition duration-1000 lg:leading-[1.2] xl:leading-[1.2] xl:text-8xl 2xl:leading-[1.2] 2xl:text-8.5xl 3xl:text-9xl 3xl:leading-[1.2]" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 text-white transform translate-y-4' : !isIn }">A dedicated design team for your next project</h1>
 
 						<div class="space-y-8 lg:space-y-12 2xl:space-y-16">
-							<p class="max-w-4xl text-2xl leading-normal lg:text-3xl lg:leading-relaxed">You have a project but need the design resources to realise it. We immerse ourselves in your team of developers, product managers, and stakeholders to help you build better digital products.</p>
+							<p class="max-w-4xl text-xl leading-normal md:leading-normal md:text-2xl lg:text-3xl lg:leading-relaxed">You have a project but need the design resources to realise it. We immerse ourselves in your team of developers, product managers, and stakeholders to help you build better digital products.</p>
 							<a class="inline-flex items-center px-6 py-3 text-xl text-black bg-white rounded-full lg:px-7 lg:py-4 lg:text-2xl 2xl:py-5 2xl:px-8 2xl:text-3xl" rel="noopener" target="_blank" title="Quickly schedule a chat with our CEO, Frederick." href="https://cal.com/frederickandersen/project">Schedule 30-minute chat <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 ml-1 lg:h-8 lg:w-8" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 7h10m0 0v10m0-10L7 17"/></svg></a>
 						</div>
 					</div>
@@ -95,7 +144,7 @@
 							<h3 class="sr-only">GF Forsikring</h3>
 							<svg class="w-auto h-12 md:h-14 2xl:h-[64px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127 88">
 								<path fill="currentColor" d="M126.029 20.346C125.094 5.56 111.918.438 64.314.327V.325h-1.602v.002C15.106.438 1.931 5.56.997 20.347.59 26.39.156 30.421.156 44.143.156 57.87.59 61.9.998 67.942 1.93 82.73 15.107 87.852 62.71 87.964v.001h1.603v-.002c47.604-.111 60.78-5.233 61.715-20.02.405-6.043.838-10.074.838-23.799 0-13.722-.433-17.754-.838-23.798Z"/>
-								<path fill="#444" d="M58.864 60.985c-2.76.662-8.468 1.843-14.259 1.897-7.643.07-12.457-1.204-16.556-4.177-5.515-3.965-8.342-10.839-8.342-20.053 0-9.212 2.898-16.51 8.554-21.398 4.453-3.825 9.902-5.525 17.973-5.525 2.889 0 6.989.348 11.837 1.835 1.891.58 1.726 2.126 1.726 2.126v4.177c0 1.251-1.012 2.134-2.248 1.963 0 0-4.39-.61-7.71-.61-11.533 0-16.63 5.173-16.63 16.865 0 10.631 4.177 15.592 13.094 15.592.638 0 1.276-.071 1.983-.14V41.422a2.279 2.279 0 0 1 2.27-2.274h7.748a2.278 2.278 0 0 1 2.269 2.274v17.56c0 .97-.628 1.746-1.709 2.003ZM86.241 21.073V32.19h12.362a2.278 2.278 0 0 1 2.27 2.275v4.227a2.279 2.279 0 0 1-2.27 2.275H86.241v19.038a2.279 2.279 0 0 1-2.27 2.273H75.22a2.279 2.279 0 0 1-2.271-2.273V14.572a2.28 2.28 0 0 1 2.27-2.275h29.328a2.28 2.28 0 0 1 2.27 2.275v4.226a2.28 2.28 0 0 1-2.27 2.275H86.241ZM20.247 70.106h6.818v1.245h-5.37v1.726h4.615v1.245h-4.615v3.205h-1.448v-7.421ZM36.08 73.791c0-1.787-1.274-2.623-2.964-2.623-1.691 0-2.966.836-2.966 2.623 0 2.102 1.58 2.675 2.966 2.675 1.385 0 2.963-.573 2.963-2.675Zm-2.964-3.87c3.258 0 4.41 1.92 4.41 3.95 0 1.543-.906 3.84-4.41 3.84-3.506 0-4.412-2.297-4.412-3.84 0-2.03 1.15-3.95 4.412-3.95ZM44.057 73.403c1.183 0 1.784-.174 1.784-1.051 0-.87-.601-1.042-1.784-1.042h-2.791v2.093h2.791Zm-4.238-3.297h4.451c1.753 0 3.016.398 3.016 2.215 0 1.368-.977 2.122-2.067 2.184l2.272 3.022h-1.783l-2.15-2.92h-2.292v2.92h-1.447v-7.421ZM55.635 72.362c-.234-.663-.835-1.237-2.598-1.237-.978 0-1.966.246-1.966.93 0 .317.182.654 1.66.837l1.752.265c1.66.257 2.639.9 2.639 2.145 0 1.756-1.67 2.41-3.647 2.41-3.18 0-3.954-1.572-4.127-2.135l1.397-.44c.264.543.814 1.33 2.77 1.33 1.182 0 2.16-.389 2.16-1.032 0-.48-.549-.797-1.61-.93l-1.772-.245c-1.712-.234-2.67-.98-2.67-2.112 0-2.227 2.883-2.227 3.455-2.227 3.188 0 3.738 1.48 3.922 1.99l-1.365.45ZM59.465 70.106h1.448v7.421h-1.448v-7.421ZM63.775 70.106h1.447v3.46l4.105-3.46h2.059l-3.535 2.94 3.891 4.481h-1.894L66.8 73.903l-1.579 1.317v2.307h-1.447v-7.421ZM78.09 73.403c1.182 0 1.782-.174 1.782-1.051 0-.87-.6-1.042-1.782-1.042h-2.792v2.093h2.792Zm-4.24-3.297h4.454c1.752 0 3.016.398 3.016 2.215 0 1.368-.978 2.122-2.07 2.184l2.273 3.022H79.74l-2.151-2.92h-2.292v2.92H73.85v-7.421ZM84.02 70.106h1.446v7.421H84.02v-7.421ZM88.33 70.106h1.528l4.951 5.36v-5.36h1.386v7.421H94.87l-5.156-5.553v5.553H88.33v-7.421ZM106.562 73.72v3.889h-.875l-.287-.766c-.56.367-1.333.868-2.771.868-1.894 0-4.186-.928-4.186-3.88 0-1.98 1.19-3.91 4.146-3.91 1.702 0 3.567.633 3.922 2.502h-1.476c-.175-.378-.572-1.255-2.274-1.255-2.321 0-2.873 1.572-2.873 2.603 0 1.755 1.183 2.654 2.752 2.654 1.427 0 2.22-.5 2.567-1.542h-2.598V73.72h3.953Z"/>
+								<path fill="#000" d="M58.864 60.985c-2.76.662-8.468 1.843-14.259 1.897-7.643.07-12.457-1.204-16.556-4.177-5.515-3.965-8.342-10.839-8.342-20.053 0-9.212 2.898-16.51 8.554-21.398 4.453-3.825 9.902-5.525 17.973-5.525 2.889 0 6.989.348 11.837 1.835 1.891.58 1.726 2.126 1.726 2.126v4.177c0 1.251-1.012 2.134-2.248 1.963 0 0-4.39-.61-7.71-.61-11.533 0-16.63 5.173-16.63 16.865 0 10.631 4.177 15.592 13.094 15.592.638 0 1.276-.071 1.983-.14V41.422a2.279 2.279 0 0 1 2.27-2.274h7.748a2.278 2.278 0 0 1 2.269 2.274v17.56c0 .97-.628 1.746-1.709 2.003ZM86.241 21.073V32.19h12.362a2.278 2.278 0 0 1 2.27 2.275v4.227a2.279 2.279 0 0 1-2.27 2.275H86.241v19.038a2.279 2.279 0 0 1-2.27 2.273H75.22a2.279 2.279 0 0 1-2.271-2.273V14.572a2.28 2.28 0 0 1 2.27-2.275h29.328a2.28 2.28 0 0 1 2.27 2.275v4.226a2.28 2.28 0 0 1-2.27 2.275H86.241ZM20.247 70.106h6.818v1.245h-5.37v1.726h4.615v1.245h-4.615v3.205h-1.448v-7.421ZM36.08 73.791c0-1.787-1.274-2.623-2.964-2.623-1.691 0-2.966.836-2.966 2.623 0 2.102 1.58 2.675 2.966 2.675 1.385 0 2.963-.573 2.963-2.675Zm-2.964-3.87c3.258 0 4.41 1.92 4.41 3.95 0 1.543-.906 3.84-4.41 3.84-3.506 0-4.412-2.297-4.412-3.84 0-2.03 1.15-3.95 4.412-3.95ZM44.057 73.403c1.183 0 1.784-.174 1.784-1.051 0-.87-.601-1.042-1.784-1.042h-2.791v2.093h2.791Zm-4.238-3.297h4.451c1.753 0 3.016.398 3.016 2.215 0 1.368-.977 2.122-2.067 2.184l2.272 3.022h-1.783l-2.15-2.92h-2.292v2.92h-1.447v-7.421ZM55.635 72.362c-.234-.663-.835-1.237-2.598-1.237-.978 0-1.966.246-1.966.93 0 .317.182.654 1.66.837l1.752.265c1.66.257 2.639.9 2.639 2.145 0 1.756-1.67 2.41-3.647 2.41-3.18 0-3.954-1.572-4.127-2.135l1.397-.44c.264.543.814 1.33 2.77 1.33 1.182 0 2.16-.389 2.16-1.032 0-.48-.549-.797-1.61-.93l-1.772-.245c-1.712-.234-2.67-.98-2.67-2.112 0-2.227 2.883-2.227 3.455-2.227 3.188 0 3.738 1.48 3.922 1.99l-1.365.45ZM59.465 70.106h1.448v7.421h-1.448v-7.421ZM63.775 70.106h1.447v3.46l4.105-3.46h2.059l-3.535 2.94 3.891 4.481h-1.894L66.8 73.903l-1.579 1.317v2.307h-1.447v-7.421ZM78.09 73.403c1.182 0 1.782-.174 1.782-1.051 0-.87-.6-1.042-1.782-1.042h-2.792v2.093h2.792Zm-4.24-3.297h4.454c1.752 0 3.016.398 3.016 2.215 0 1.368-.978 2.122-2.07 2.184l2.273 3.022H79.74l-2.151-2.92h-2.292v2.92H73.85v-7.421ZM84.02 70.106h1.446v7.421H84.02v-7.421ZM88.33 70.106h1.528l4.951 5.36v-5.36h1.386v7.421H94.87l-5.156-5.553v5.553H88.33v-7.421ZM106.562 73.72v3.889h-.875l-.287-.766c-.56.367-1.333.868-2.771.868-1.894 0-4.186-.928-4.186-3.88 0-1.98 1.19-3.91 4.146-3.91 1.702 0 3.567.633 3.922 2.502h-1.476c-.175-.378-.572-1.255-2.274-1.255-2.321 0-2.873 1.572-2.873 2.603 0 1.755 1.183 2.654 2.752 2.654 1.427 0 2.22-.5 2.567-1.542h-2.598V73.72h3.953Z"/>
 							</svg>
 						</li>
 
@@ -196,7 +245,7 @@
 							<h3 class="sr-only">GF Forsikring</h3>
 							<svg class="w-auto h-12 md:h-14 2xl:h-[64px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127 88">
 								<path fill="currentColor" d="M126.029 20.346C125.094 5.56 111.918.438 64.314.327V.325h-1.602v.002C15.106.438 1.931 5.56.997 20.347.59 26.39.156 30.421.156 44.143.156 57.87.59 61.9.998 67.942 1.93 82.73 15.107 87.852 62.71 87.964v.001h1.603v-.002c47.604-.111 60.78-5.233 61.715-20.02.405-6.043.838-10.074.838-23.799 0-13.722-.433-17.754-.838-23.798Z"/>
-								<path fill="#444" d="M58.864 60.985c-2.76.662-8.468 1.843-14.259 1.897-7.643.07-12.457-1.204-16.556-4.177-5.515-3.965-8.342-10.839-8.342-20.053 0-9.212 2.898-16.51 8.554-21.398 4.453-3.825 9.902-5.525 17.973-5.525 2.889 0 6.989.348 11.837 1.835 1.891.58 1.726 2.126 1.726 2.126v4.177c0 1.251-1.012 2.134-2.248 1.963 0 0-4.39-.61-7.71-.61-11.533 0-16.63 5.173-16.63 16.865 0 10.631 4.177 15.592 13.094 15.592.638 0 1.276-.071 1.983-.14V41.422a2.279 2.279 0 0 1 2.27-2.274h7.748a2.278 2.278 0 0 1 2.269 2.274v17.56c0 .97-.628 1.746-1.709 2.003ZM86.241 21.073V32.19h12.362a2.278 2.278 0 0 1 2.27 2.275v4.227a2.279 2.279 0 0 1-2.27 2.275H86.241v19.038a2.279 2.279 0 0 1-2.27 2.273H75.22a2.279 2.279 0 0 1-2.271-2.273V14.572a2.28 2.28 0 0 1 2.27-2.275h29.328a2.28 2.28 0 0 1 2.27 2.275v4.226a2.28 2.28 0 0 1-2.27 2.275H86.241ZM20.247 70.106h6.818v1.245h-5.37v1.726h4.615v1.245h-4.615v3.205h-1.448v-7.421ZM36.08 73.791c0-1.787-1.274-2.623-2.964-2.623-1.691 0-2.966.836-2.966 2.623 0 2.102 1.58 2.675 2.966 2.675 1.385 0 2.963-.573 2.963-2.675Zm-2.964-3.87c3.258 0 4.41 1.92 4.41 3.95 0 1.543-.906 3.84-4.41 3.84-3.506 0-4.412-2.297-4.412-3.84 0-2.03 1.15-3.95 4.412-3.95ZM44.057 73.403c1.183 0 1.784-.174 1.784-1.051 0-.87-.601-1.042-1.784-1.042h-2.791v2.093h2.791Zm-4.238-3.297h4.451c1.753 0 3.016.398 3.016 2.215 0 1.368-.977 2.122-2.067 2.184l2.272 3.022h-1.783l-2.15-2.92h-2.292v2.92h-1.447v-7.421ZM55.635 72.362c-.234-.663-.835-1.237-2.598-1.237-.978 0-1.966.246-1.966.93 0 .317.182.654 1.66.837l1.752.265c1.66.257 2.639.9 2.639 2.145 0 1.756-1.67 2.41-3.647 2.41-3.18 0-3.954-1.572-4.127-2.135l1.397-.44c.264.543.814 1.33 2.77 1.33 1.182 0 2.16-.389 2.16-1.032 0-.48-.549-.797-1.61-.93l-1.772-.245c-1.712-.234-2.67-.98-2.67-2.112 0-2.227 2.883-2.227 3.455-2.227 3.188 0 3.738 1.48 3.922 1.99l-1.365.45ZM59.465 70.106h1.448v7.421h-1.448v-7.421ZM63.775 70.106h1.447v3.46l4.105-3.46h2.059l-3.535 2.94 3.891 4.481h-1.894L66.8 73.903l-1.579 1.317v2.307h-1.447v-7.421ZM78.09 73.403c1.182 0 1.782-.174 1.782-1.051 0-.87-.6-1.042-1.782-1.042h-2.792v2.093h2.792Zm-4.24-3.297h4.454c1.752 0 3.016.398 3.016 2.215 0 1.368-.978 2.122-2.07 2.184l2.273 3.022H79.74l-2.151-2.92h-2.292v2.92H73.85v-7.421ZM84.02 70.106h1.446v7.421H84.02v-7.421ZM88.33 70.106h1.528l4.951 5.36v-5.36h1.386v7.421H94.87l-5.156-5.553v5.553H88.33v-7.421ZM106.562 73.72v3.889h-.875l-.287-.766c-.56.367-1.333.868-2.771.868-1.894 0-4.186-.928-4.186-3.88 0-1.98 1.19-3.91 4.146-3.91 1.702 0 3.567.633 3.922 2.502h-1.476c-.175-.378-.572-1.255-2.274-1.255-2.321 0-2.873 1.572-2.873 2.603 0 1.755 1.183 2.654 2.752 2.654 1.427 0 2.22-.5 2.567-1.542h-2.598V73.72h3.953Z"/>
+								<path fill="#000" d="M58.864 60.985c-2.76.662-8.468 1.843-14.259 1.897-7.643.07-12.457-1.204-16.556-4.177-5.515-3.965-8.342-10.839-8.342-20.053 0-9.212 2.898-16.51 8.554-21.398 4.453-3.825 9.902-5.525 17.973-5.525 2.889 0 6.989.348 11.837 1.835 1.891.58 1.726 2.126 1.726 2.126v4.177c0 1.251-1.012 2.134-2.248 1.963 0 0-4.39-.61-7.71-.61-11.533 0-16.63 5.173-16.63 16.865 0 10.631 4.177 15.592 13.094 15.592.638 0 1.276-.071 1.983-.14V41.422a2.279 2.279 0 0 1 2.27-2.274h7.748a2.278 2.278 0 0 1 2.269 2.274v17.56c0 .97-.628 1.746-1.709 2.003ZM86.241 21.073V32.19h12.362a2.278 2.278 0 0 1 2.27 2.275v4.227a2.279 2.279 0 0 1-2.27 2.275H86.241v19.038a2.279 2.279 0 0 1-2.27 2.273H75.22a2.279 2.279 0 0 1-2.271-2.273V14.572a2.28 2.28 0 0 1 2.27-2.275h29.328a2.28 2.28 0 0 1 2.27 2.275v4.226a2.28 2.28 0 0 1-2.27 2.275H86.241ZM20.247 70.106h6.818v1.245h-5.37v1.726h4.615v1.245h-4.615v3.205h-1.448v-7.421ZM36.08 73.791c0-1.787-1.274-2.623-2.964-2.623-1.691 0-2.966.836-2.966 2.623 0 2.102 1.58 2.675 2.966 2.675 1.385 0 2.963-.573 2.963-2.675Zm-2.964-3.87c3.258 0 4.41 1.92 4.41 3.95 0 1.543-.906 3.84-4.41 3.84-3.506 0-4.412-2.297-4.412-3.84 0-2.03 1.15-3.95 4.412-3.95ZM44.057 73.403c1.183 0 1.784-.174 1.784-1.051 0-.87-.601-1.042-1.784-1.042h-2.791v2.093h2.791Zm-4.238-3.297h4.451c1.753 0 3.016.398 3.016 2.215 0 1.368-.977 2.122-2.067 2.184l2.272 3.022h-1.783l-2.15-2.92h-2.292v2.92h-1.447v-7.421ZM55.635 72.362c-.234-.663-.835-1.237-2.598-1.237-.978 0-1.966.246-1.966.93 0 .317.182.654 1.66.837l1.752.265c1.66.257 2.639.9 2.639 2.145 0 1.756-1.67 2.41-3.647 2.41-3.18 0-3.954-1.572-4.127-2.135l1.397-.44c.264.543.814 1.33 2.77 1.33 1.182 0 2.16-.389 2.16-1.032 0-.48-.549-.797-1.61-.93l-1.772-.245c-1.712-.234-2.67-.98-2.67-2.112 0-2.227 2.883-2.227 3.455-2.227 3.188 0 3.738 1.48 3.922 1.99l-1.365.45ZM59.465 70.106h1.448v7.421h-1.448v-7.421ZM63.775 70.106h1.447v3.46l4.105-3.46h2.059l-3.535 2.94 3.891 4.481h-1.894L66.8 73.903l-1.579 1.317v2.307h-1.447v-7.421ZM78.09 73.403c1.182 0 1.782-.174 1.782-1.051 0-.87-.6-1.042-1.782-1.042h-2.792v2.093h2.792Zm-4.24-3.297h4.454c1.752 0 3.016.398 3.016 2.215 0 1.368-.978 2.122-2.07 2.184l2.273 3.022H79.74l-2.151-2.92h-2.292v2.92H73.85v-7.421ZM84.02 70.106h1.446v7.421H84.02v-7.421ZM88.33 70.106h1.528l4.951 5.36v-5.36h1.386v7.421H94.87l-5.156-5.553v5.553H88.33v-7.421ZM106.562 73.72v3.889h-.875l-.287-.766c-.56.367-1.333.868-2.771.868-1.894 0-4.186-.928-4.186-3.88 0-1.98 1.19-3.91 4.146-3.91 1.702 0 3.567.633 3.922 2.502h-1.476c-.175-.378-.572-1.255-2.274-1.255-2.321 0-2.873 1.572-2.873 2.603 0 1.755 1.183 2.654 2.752 2.654 1.427 0 2.22-.5 2.567-1.542h-2.598V73.72h3.953Z"/>
 							</svg>
 						</li>
 
@@ -268,7 +317,7 @@
 
 			<img src="/media/edl-reel.gif" class="object-cover w-full px-6 h-96 md:h-120 lg:h-auto lg:aspect-video" alt="A reel of versatile design and branding work by EDL."/>
 
-			<section class="relative py-20 text-white bg-neutral-800 md:pt-32 md:pb-24 lg:pt-40 lg:pb-32 2xl:py-40">			
+			<section class="relative py-20 text-white bg-black md:pt-32 md:pb-24 lg:pt-40 lg:pb-32 2xl:py-40">			
 				<div class="container relative px-6 mx-auto space-y-12 lg:px-12 lg:space-y-20 2xl:space-y-24">
 					<div class="space-y-4 lg:space-y-8">
 						<div class="preheader">Our expertise</div>
