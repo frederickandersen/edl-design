@@ -106,17 +106,14 @@
 				<div class="container w-full px-6 mx-auto space-y-8 lg:px-12 md:space-y-12 lg:space-y-16 2xl:space-y-20">
 					<div class="space-y-8 md:space-y-12 lg:space-y-16">
 						<h1 class="w-full text-5xl leading-tight md:leading-tight md:text-7xl lg:text-7.5xl transition duration-1000 lg:leading-[1.2] xl:leading-[1.2] xl:text-8xl 2xl:leading-[1.2] 2xl:text-8.5xl 3xl:text-9xl 3xl:leading-[1.2]" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">Share your idea, plans, or obstacles</h1>
+						<p class="max-w-4xl text-xl leading-normal md:leading-normal md:text-2xl lg:text-3xl lg:leading-relaxed">Tell us about your project and goals. We’ll get back to you within an hour.</p>
 					</div>
 				</div>
 			</section>
 			
 			<section class="relative pt-12 pb-16 md:py-24 md:pt-16 lg:py-32 lg:pt-20">
 				<div class="container grid px-6 mx-auto xl:grid-cols-3 gap-y-16 lg:px-12 lg:gap-x-24 2xl:gap-x-32">
-					<div class="col-span-2 space-y-8 lg:space-y-12">						
-						<div class="space-y-4">
-							<h3 class="text-2xl leading-normal md:text-3xl md:leading-normal lg:leading-normal lg:text-4xl 2xl:leading-normal 2xl:text-5xl">Tell us about your project and goals. We’ll get back to you within an hour.</h3>
-						</div>
-
+					<div class="col-span-2">						
 						<form name="Contact form" action="/success.html" data-netlify="true" method="POST" netlify-honeypot="bot-field">
 							<div class="hidden">
 								<label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
