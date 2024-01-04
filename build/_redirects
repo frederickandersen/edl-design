@@ -13,6 +13,7 @@
 /services/ux-evaluation /services/ux-audit
 /services/evaluation /services/ux-audit
 /career /careers
+/saas /services/saas-product-design
 /career/product-designer /careers/product-designer
 https://edl.design/* https://www.edl.dk/:splat 301!
 /work/odense-zoo /work/app-experience-odense-zoo
