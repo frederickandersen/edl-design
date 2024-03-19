@@ -10,5 +10,6 @@ package = "@netlify/plugin-sitemap"
     './build/careers/junior-ux-designer.html',
     './build/careers/product-designer.html',
     './build/careers/ui-designer.html',
+    './build/careers/digital-marketing-manager.html',
     './build/careers/ux-designer.html'
   ]
