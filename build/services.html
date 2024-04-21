@@ -377,21 +377,6 @@
 									</div>
 								</div>
 		
-								<div x-data="{ id: 4, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20">
-									<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
-										<span>Design sprints</span>
-		
-										<svg class="flex-shrink-0 w-6 h-6 ml-4 lg:w-7 lg:h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-											<path x-show="expanded" d="M6 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-											<path x-show="!expanded" d="M12 12v6m-6-6h6-6Zm12 0h-6 6Zm-6 0V6v6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-										</svg>
-									</button>
-		
-									<div x-show="expanded" class="accordion-content">
-										<p>The sprint format enables us to efficiently produce new experiences, tackle urgent business issues, and even release MVPs within days instead of months. We facilitate the whole process. You just show up.</p>
-									</div>
-								</div>
-		
 								<div x-data="{ id: 5, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-t border-black/20">
 									<button @click="expanded = !expanded" :aria-expanded="expanded" class="accordion">
 										<span>Developer handover</span>
