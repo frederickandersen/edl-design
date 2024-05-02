@@ -2208,10 +2208,6 @@ select {
   line-height: 1;
 }
 
-.font-normal {
-  font-weight: 400;
-}
-
 .not-italic {
   font-style: normal;
 }
@@ -2641,10 +2637,6 @@ select {
 
 .hover\:underline-offset-4:hover {
   text-underline-offset: 4px;
-}
-
-.hover\:underline-offset-2:hover {
-  text-underline-offset: 2px;
 }
 
 .hover\:opacity-100:hover {
