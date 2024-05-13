@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+	<head>
+    	<meta charset="UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Empowering sustainability through enjoyable UX · EDL</title>
+		
+		<meta name="title" content="Empowering sustainability through enjoyable UX · EDL">
+    	<meta name="description" content="We collaborated with the SaaS company E-SG Cloud to design the MVP of their platform, enabling organisations worldwide to report on their ESG.">
+		
+		<meta property="og:title" content="Empowering sustainability through enjoyable UX · EDL" />
+    	<meta property="og:description" content="We collaborated with the SaaS company E-SG Cloud to design the MVP of their platform, enabling organisations worldwide to report on their ESG." />
+		<meta property="og:site_name" content="EDL®" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.edl.dk/work/empowering-sustainability-through-enjoyable-ux" />
+		<meta name="image" property="og:image" content="https://www.edl.dk/media/e-sg-cloud/e-sg-cloud-01.jpg" />
+
+		<link rel="icon" href="../favicon.png">
+		<link rel="stylesheet" href="../css/styles.css">
+
+		<script defer src="https://unpkg.com/@alpinejs/intersect@3.10.4/dist/cdn.min.js"></script>
+		<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+	</head>
+
+	<body class="overflow-x-hidden font-sans antialiased bg-neutral-100">
+		<header x-data="{ open: false }" @keydown.window.escape="open = false">
+			<nav class="container flex items-center justify-between flex-1 px-6 py-6 mx-auto lg:px-12 lg:py-10" aria-label="Global">
+				<a href="/" title="Go to the homepage."><svg class="w-auto h-10 lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40"><path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/></svg></a>
+			  
+				<div class="flex sm:hidden">
+					<button type="button" class="-m-2.5 inline-flex items-center justify-center p-2.5 text-black" @click="open = true">
+						<span class="sr-only">Open main menu</span>
+						
+						<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+						</svg>
+					</button>
+				</div>
+
+				<div class="hidden text-base sm:flex lg:-mr-6 xl:-mr-8 xs:text-lg lg:text-xl xl:text-2xl">
+					<a href="/services.html" class="px-2 py-2 xs:px-2.5 sm:px-4 lg:px-6 xl:px-8" title="See how we can help you, and how we plan to do it.">Services</a>
+					<a href="/work.html" class="px-2 py-2 xs:px-2.5 sm:px-4 lg:px-6 xl:px-8 underline underline-offset-4" title="Follow along as we design deliverables for our clients.">Work</a>
+					<a href="/about.html" class="px-2 py-2 xs:px-2.5 sm:px-4 lg:px-6 xl:px-8" title="Meet the team behind the design studio.">About</a>
+					<a href="/news.html" class="px-2 py-2 xs:px-2.5 sm:px-4 lg:px-6 xl:px-8" title="Dive into our blog to discover insights, inspiration, and the creative magic behind our work.">News</a>
+					<a href="/contact.html" class="px-2 py-2 xs:px-2.5 sm:px-4 lg:px-6 xl:px-8" title="Swing by for a cup of coffee.">Contact</a>
+				</div>
+			</nav>
+
+			<!-- Mobile menu, show/hide based on menu open state. -->
+			<div class="sm:hidden" x-ref="dialog" x-show="open" aria-modal="true">
+				<!-- Background backdrop, show/hide based on slide-over state. -->
+				<div class="fixed inset-0 z-10"></div>
+
+				<div class="fixed inset-y-0 right-0 z-10 w-full px-6 py-6 overflow-y-auto bg-black sm:max-w-sm sm:ring-1 sm:ring-neutral-900/10" @click.away="open = false">
+					<div class="flex items-center justify-between">
+						<a href="/" title="Go to the homepage."><svg class="w-auto h-10 text-white lg:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 40"><path fill="currentColor" d="M28.484 25.863c0-9.918-6.147-15.836-14.544-15.836C5.269 10.027 0 16.493 0 24.767 0 33.425 5.378 40 14.763 40c6.367 0 11.086-3.014 13.007-9.15l-7.683-.549c-.933 2.466-2.8 3.672-5.488 3.672-3.842 0-6.312-2.52-6.641-6.795h20.526v-1.315Zm-14.27-10.192c3.513 0 5.818 2.302 6.257 6.247H7.903c.384-3.89 2.799-6.247 6.311-6.247ZM49.614 0v13.589c-1.921-2.356-4.61-3.562-8.233-3.562-6.42 0-11.58 5.48-11.58 14.74 0 9.096 5.05 15.178 12.184 15.178 3.513 0 6.312-1.48 8.232-4.438l.275 3.507h6.86V0h-7.738Zm-5.982 33.15c-3.732 0-6.367-3.177-6.367-8.383 0-5.15 2.635-8.329 6.367-8.329s6.366 3.233 6.366 8.33c0 5.095-2.634 8.383-6.366 8.383ZM61.728 39.014h7.738V0h-7.738v39.014ZM80.51 10.91c3.033 0 5.49-2.442 5.49-5.455C86 2.44 83.543 0 80.51 0c-3.032 0-5.489 2.44-5.489 5.455 0 3.013 2.457 5.454 5.49 5.454Zm0-1.017c-2.47 0-4.466-1.984-4.466-4.438 0-2.455 1.996-4.44 4.467-4.44 2.47 0 4.467 1.985 4.467 4.44 0 2.454-1.997 4.438-4.467 4.438ZM78.652 7.91h.885V6.102h1.393l.947 1.807h.988l-1.077-1.998c.494-.259.871-.77.871-1.459 0-1.022-.816-1.575-1.578-1.575h-2.429V7.91Zm.885-2.495V3.566h1.277c.439 0 .885.252.885.886 0 .62-.44.962-.906.962h-1.256Z"/></svg></a>
+
+						<button type="button" class="-m-2.5 rounded-md p-2.5 text-white" @click="open = false">
+							<span class="sr-only">Close menu</span>
+							
+							<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+							</svg>
+						</button>
+					</div>
+
+					<div class="flow-root">
+						<div class="flex flex-col justify-between h-full">
+							<div class="py-12">
+								<a href="/services.html" class="block px-3 py-3 -mx-2.5 text-2xl leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800" title="See how we can help you, and how we plan to do it.">Services</a>
+								<a href="/work.html" class="block px-3 py-3 -mx-2.5 text-2xl leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800 underline underline-offset-4" title="Follow along as we design deliverables for our clients.">Work</a>
+								<a href="/about.html" class="block px-3 py-3 -mx-2.5 text-2xl leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800" title="Meet the team behind the design studio.">About</a>
+								<a href="/news.html" class="block px-3 py-3 -mx-2.5 text-2xl leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800" title="Dive into our blog to discover insights, inspiration, and the creative magic behind our work.">News</a>
+								<a href="/contact.html" class="block px-3 py-3 -mx-2.5 text-2xl leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800" title="Swing by for a cup of coffee.">Contact</a>
+							</div>
+							
+							<div>
+								<p class="mb-2 text-base text-neutral-400">What can we help you with?</p>
+								<a href="/services/saas-product-design.html" class="block px-3 py-2.5 -mx-2.5 text-lg leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800" title="Learn how we enable SaaS companies elevate their products.">Design for your SaaS</a>
+								<a href="/services/design-service.html" class="block px-3 py-2.5 -mx-2.5 text-lg leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800" title="Learn more about Design as a Service.">Access to our design team</a>
+								<a href="/services/design-projects.html" class="block px-3 py-2.5 -mx-2.5 text-lg leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800" title="Learn how we facilitate design projects from start to finish.">Lead your design project</a>
+								<a href="/services/ux-audit.html" class="block px-3 py-2.5 -mx-2.5 text-lg leading-7 rounded-lg text-neutral-100 hover:bg-neutral-800" title="Read about our process for evaluating existing products and services.">Audit your user experience</a>
+							</div>							
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<section class="relative pt-10 md:pt-16 3xl:pt-24">
+				<div class="container w-full px-6 mx-auto space-y-8 md:space-y-12 lg:px-12 lg:space-y-16">
+					<div class="space-y-6 lg:space-y-8 2xl:space-y-12">
+						<div class="preheader">Case story</div>
+						<h1 class="w-full text-4.5xl leading-tight duration-1000 transition md:leading-tight md:text-7xl lg:text-7.5xl lg:leading-[1.2] 2xl:leading-[1.2] 2xl:text-8xl" x-data="{ isIn: false }" x-intersect:enter.half="isIn = true" x-bind:class="{'opacity-0 transform translate-y-4' : !isIn }">Empowering sustainability through enjoyable UX</h1>
+					</div>
+
+					<div class="space-y-8 lg:space-y-12">
+						<div class="space-y-6 lg:space-y-8">
+							<p class="max-w-3xl text-xl leading-normal lg:text-2xl lg:leading-relaxed">Through <a href="../services/design-service.html" target="_blank" class="underline underline-offset-4" title="Design as a Service is our approach to streamlining design deliverables.">Design as a Service</a>, we collaborated with the SaaS company E-SG Cloud to design their MVP, enabling them to redefine industry norms and empower organisations worldwide to report on their ESG.</p>
+							<p class="max-w-3xl text-xl leading-normal lg:text-2xl lg:leading-relaxed">Despite limited scope, our aim was clear: deliver a functional platform with excellent UX, prioritising functionality, and efficient workflows. Extensive research on ESG reporting, such as EU regulations and user goals, informed our design decisions for the platform.</p>
+						</div>
+
+						<ul class="max-w-3xl space-y-2 text-base lg:text-xl 2xl:text-2xl">
+							<li class="flex">
+								<span class="w-1/3">Year</span>
+								<span class="w-2/3 leading-normal text-black/70">2024–</span>
+							</li>
+
+							<li class="flex">
+								<span class="w-1/3">Partner</span>
+								<span class="w-2/3 leading-normal text-black/70">E-SG Cloud</span>
+							</li>
+
+							<li class="flex">
+								<span class="w-1/3">Service</span>
+								<span class="w-2/3 leading-normal text-black/70">Strategy and UX design</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="relative py-16 space-y-16 md:py-24 md:space-y-24 lg:pb-32 lg:pt-24 lg:space-y-32">				
+				<div class="px-6 space-y-4 lg:grid lg:grid-cols-12 lg:gap-6 mx-auto max-w-[1920px] lg:space-y-0">
+					<figure class="w-full col-span-full bg-neutral-100">
+						<picture class="block">
+							<source>
+							<img src="/media/e-sg-cloud/e-sg-cloud-01.jpg" class="object-cover w-full aspect-video" alt="E-SG Cloud SaaS user interface." />
+						</picture>
+					</figure>
+
+					<figure class="w-full col-span-full bg-neutral-100">
+						<picture class="block">
+							<source>
+							<img src="/media/e-sg-cloud/e-sg-cloud-02.jpg" class="object-cover w-full aspect-video" alt="E-SG Cloud SaaS user interface." />
+						</picture>
+					</figure>
+
+					<figure class="w-full col-span-full bg-neutral-100">
+						<picture class="block">
+							<source>
+							<img src="/media/e-sg-cloud/e-sg-cloud-03.jpg" class="object-cover w-full aspect-video" alt="E-SG Cloud SaaS user interface." />
+						</picture>
+					</figure>
+
+					<figure class="w-full col-span-full bg-neutral-100">
+						<picture class="block">
+							<source>
+							<img src="/media/e-sg-cloud/e-sg-cloud-04.jpg" class="object-cover w-full aspect-video" alt="E-SG Cloud SaaS user interface." />
+						</picture>
+					</figure>
+
+					<figure class="w-full col-span-full bg-neutral-100">
+						<picture class="block">
+							<source>
+							<img src="/media/e-sg-cloud/e-sg-cloud-05.jpg" class="object-cover w-full aspect-video" alt="E-SG Cloud SaaS user interface." />
+						</picture>
+					</figure>
+
+					<figure class="w-full col-span-6 bg-neutral-100">
+						<picture class="block">
+							<source>
+							<img src="/media/e-sg-cloud/e-sg-cloud-06.jpg" class="object-cover w-full aspect-square" alt="E-SG Cloud SaaS user interface." />
+						</picture>
+					</figure>
+
+					<figure class="w-full col-span-6 bg-neutral-100">
+						<picture class="block">
+							<source>
+							<img src="/media/e-sg-cloud/e-sg-cloud-07.jpg" class="object-cover w-full aspect-square" alt="E-SG Cloud SaaS user interface." />
+						</picture>
+					</figure>
+
+					<figure class="w-full col-span-full bg-neutral-100">
+						<picture class="block">
+							<source>
+							<img src="/media/e-sg-cloud/e-sg-cloud-08.jpg" class="object-cover w-full aspect-video" alt="E-SG Cloud SaaS user interface." />
+						</picture>
+					</figure>
+
+					<figure class="w-full col-span-full bg-neutral-100">
+						<picture class="block">
+							<source>
+							<img src="/media/e-sg-cloud/e-sg-cloud-09.jpg" class="object-cover w-full aspect-video" alt="E-SG Cloud SaaS user interface." />
+						</picture>
+					</figure>
+
+					<figure class="w-full col-span-full bg-neutral-100">
+						<picture class="block">
+							<source>
+							<img src="/media/e-sg-cloud/e-sg-cloud-10.jpg" class="object-cover w-full aspect-video" alt="E-SG Cloud SaaS user interface." />
+						</picture>
+					</figure>
+
+					<figure class="w-full col-span-full bg-neutral-100">
+						<picture class="block">
+							<source>
+							<img src="/media/e-sg-cloud/e-sg-cloud-11.jpg" class="object-cover w-full aspect-video" alt="E-SG Cloud SaaS user interface." />
+						</picture>
+					</figure>
+
+					<figure class="w-full col-span-6 bg-neutral-100">
+						<picture class="block">
+							<source>
+							<img src="/media/e-sg-cloud/e-sg-cloud-12.jpg" class="object-cover w-full aspect-square" alt="E-SG Cloud SaaS user interface." />
+						</picture>
+					</figure>
+
+					<figure class="w-full col-span-6 bg-neutral-100">
+						<picture class="block">
+							<source>
+							<img src="/media/e-sg-cloud/e-sg-cloud-13.jpg" class="object-cover w-full aspect-square" alt="E-SG Cloud SaaS user interface." />
+						</picture>
+					</figure>
+				</div>
+			</section>
+
+			<section class="relative py-16 border-t md:py-20 lg:py-24 border-black/10">
+				<div class="container px-6 mx-auto space-y-12 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-24 2xl:gap-x-32 lg:px-12">
+					<div class="space-y-8 lg:space-y-16 lg:col-span-1">
+						<div class="space-y-4">
+							<h3 class="text-3xl leading-snug md:text-4xl md:leading-snug lg:leading-snug lg:text-5xl 2xl:leading-snug 2xl:text-6xl">Want to learn more?</h3>
+							<p class="text-xl leading-normal lg:leading-relaxed lg:text-2xl">Leave your phone number, and Frederick will give you a call. No strings attached.</p>
+						</div>
+
+						<div class="flex space-x-4 lg:space-x-8">
+							<img class="object-cover w-20 h-20 lg:h-32 lg:w-32" src="/media/edl-frederick-andersen.jpg" alt="Profile picture of CEO, Frederick Andersen smiling infront of computer screens.">
+	
+							<div class="text-lg leading-normal lg:text-xl lg:space-y-2 lg:leading-normal 2xl:text-2xl 2xl:leading-normal">
+								<h3>Frederick Andersen</h3>
+								<span class="opacity-60">CEO</span>
+	
+								<div>
+									<a href="tel:+4528253694" class="block underline underline-offset-4" title="Call Frederick and chat about design and business.">28 25 36 94</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="px-6 py-8 space-y-4 bg-black lg:p-10 2xl:px-12 2xl:py-14 lg:col-span-1 lg:space-y-8">
+						<h3 class="text-2xl leading-snug text-white md:leading-snug md:text-3xl 2xl:leading-snug 2xl:text-4xl">Get in touch</h3>
+						
+						<form name="E-SG Cloud inquiries" action="/success.html" data-netlify="true" method="POST" netlify-honeypot="bot-field">
+							<div class="hidden">
+								<label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+							</div>
+
+							<div>
+								<label for="name" class="block text-base text-white lg:text-lg">Name <span class="text-red-500">*</span></label>
+								
+								<div class="mt-1.5">
+									<input type="text" required name="name" id="name" autocomplete="given-name" class="block w-full px-4 py-3 text-white border-0 bg-white/20 focus:shadow-sm focus:ring-white focus:border-white">
+								</div>
+							</div>
+
+							<div class="mt-4">
+								<label for="company" class="block text-base text-white lg:text-lg">Company <span class="text-red-500">*</span></label>
+								
+								<div class="mt-1.5">
+									<input type="text" required name="company" id="company" autocomplete="company" class="block w-full px-4 py-3 text-white border-0 bg-white/20 focus:shadow-sm focus:ring-white focus:border-white">
+								</div>
+							</div>
+
+							<div class="mt-4">
+								<label for="phone" class="block text-base text-white lg:text-lg">Phone <span class="text-red-500">*</span></label>
+
+								<div class="mt-1.5">
+									<input type="text" id="phone" required name="phone" autocomplete="phone" class="block w-full px-4 py-3 text-white border-0 bg-white/20 focus:shadow-sm focus:ring-white focus:border-white">
+								</div>
+							</div>
+
+							<div class="mt-6">
+								<p class="text-white/60">By submitting the form, you agree to our <a href="/privacy-policy.html" class="text-white underline underline-offset-4" title="Read our privacy policy. It's dead simple." target="_blank" rel="noopener">Privacy Policy</a>.</p>
+							</div>
+
+							<div class="w-full mt-8 lg:mt-10 2xl:mt-12">
+								<button type="submit" class="w-full px-6 py-3 text-xl bg-white rounded-full lg:inline-block lg:px-7 lg:py-4 2xl:text-2xl 2xl:px-6">
+									Receive a phone call
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+
+			<section class="relative py-16 border-t md:py-20 lg:py-24 border-black/10">
+				<div class="container px-6 mx-auto space-y-12 lg:space-y-20 lg:px-12">
+					<div class="space-y-2">
+						<h3 class="text-3xl leading-snug md:text-4xl md:leading-snug lg:leading-snug lg:text-5xl 2xl:leading-snug 2xl:text-6xl">Keep on reading</h3>
+						<p class="text-xl leading-normal lg:leading-relaxed lg:text-2xl">We have handpicked a few related news stories and articles for you.</p>
+					</div>
+
+					<div class="grid gap-16 lg:grid-cols-2 lg:gap-y-24">
+						<article class="relative space-y-8 group 2xl:space-y-12">
+							<div class="overflow-hidden">
+								<img src="/media/propbinder-branding/propbinder-14.jpg" class="object-cover w-full transition duration-500 ease-in-out group-hover:scale-105 aspect-video" alt="Branding for SaaS platform Propbinder."/>
+							</div>
+	
+							<div class="space-y-4 lg:space-y-6">
+								<div class="space-y-4">
+									<div class="flex space-x-2 lg:space-x-3">
+										<span class="tag">Branding</span>
+										<span class="tag">SaaS</span>
+										<span class="tag">Digital presence</span>
+									</div>
+	
+									<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl">Creative direction for the new kid on the PropTech block</h3>
+								</div>
+	
+								<a class="flex text-lg leading-normal underline link lg:text-2xl lg:leading-normal text-black/60 hover:text-black underline-offset-4" href="/work/creative-direction-for-the-new-kid-on-the-proptech-block.html" title="Read our case story on how we helped Propbinder create their SaaS branding.">Read case story</a>
+							</div>
+						</article>
+	
+						<article class="relative space-y-8 group 2xl:space-y-12">
+							<div class="overflow-hidden">
+								<img src="/media/allyy/allyy-01.png" class="object-cover w-full transition duration-500 ease-in-out group-hover:scale-105 h-120 aspect-video" alt="User interface for Allyy's machine learning MarTech software."/>
+							</div>
+	
+							<div class="space-y-4 lg:space-y-6">
+								<div class="space-y-4">
+									<div class="flex space-x-2 lg:space-x-3">
+										<span class="tag">B2B</span>
+										<span class="tag">SaaS</span>
+										<span class="tag">Enterprise</span>
+									</div>
+	
+									<h3 class="text-2xl leading-snug text-black md:text-3xl md:leading-snug lg:leading-snug lg:text-4xl">Enterprise platform for adding individualisation to your marketing</h3>
+								</div>
+	
+								<a class="flex text-lg leading-normal underline link lg:text-2xl lg:leading-normal text-black/60 hover:text-black underline-offset-4" href="/work/enterprise-platform-for-adding-individualisation-to-your-marketing.html" title="Read our case story on how we helped Allyy transform their SaaS product.">Read case story</a>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="text-white bg-black">
+			<div class="container px-6 py-8 mx-auto space-y-16 md:py-16 lg:space-y-28 lg:px-12 lg:pt-24">
+				<div class="space-y-12 lg:space-y-0 lg:columns-2 md:gap-x-16 lg:gap-x-24">
+					<div class="space-y-8 lg:space-y-12 break-after-column">
+						<div class="text-2xl leading-normal lg:leading-normal lg:text-3xl">
+							<span class="block"><a href="tel:+4528253694" title="Get in touch and discuss digital projects, ideas, or headaches." class="underline underline-offset-4">+45 28 25 36 94</a></span>
+							<span class="block"><a href="mailto:hello@edl.dk" title="Prefer writing? Shoot us an email instead." class="underline underline-offset-4">hello@edl.dk</a></span>
+						</div>
+
+						<ul class="text-xl leading-normal text-white/70 lg:text-2xl lg:leading-normal">
+							<li class="block">Amagerfælledvej 106</li>
+							<li class="block">2300 Copenhagen</li>
+							<li class="block">Denmark</li>
+						</ul>
+					</div>
+
+					<nav class="space-y-8 2xl:gap-x-24 md:columns-2 md:space-y-0">
+						<ul class="space-y-2 lg:space-y-4 break-after-column">
+							<li class="text-base text-white/60 lg:text-lg">Studio</li>
+							<li><a class="text-xl xl:text-2xl" href="../services.html" title="Learn about our capabilities and how to gain from them.">Services</a></li>
+							<li><a class="text-xl underline xl:text-2xl underline-offset-4" href="../work.html" title="View the work we have done for and with fantastic people." aria-current="page">Work</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../about.html" title="Meet the team behind the design studio.">About</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../news.html" title="Dive into our blog to discover insights, inspiration, and the creative magic behind our work.">News</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../careers.html" title="Come work with a talented team of designers.">Careers</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../contact.html" title="Swing by for a cup of coffee, give us a call, or write an email.">Contact</a></li>
+						</ul>
+						
+						<ul class="space-y-2 lg:space-y-4">
+							<li class="text-base text-white/60 lg:text-lg">Services</li>
+							<li><a class="text-xl xl:text-2xl" href="../services/design-service.html" title="Learn more about Design as a Service.">Design as a Service</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../services/design-projects.html" title="Learn how we facilitate design projects from start to finish.">Design project</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../services/ux-audit.html" title="Read about our process for evaluating existing products and services.">UX audit</a></li>
+							<li><a class="text-xl xl:text-2xl" href="../services/saas-product-design.html" title="Learn how we enable SaaS companies elevate their products.">Design for SaaS</a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="flex justify-between text-sm lg:space-x-24 lg:text-lg">
+					<div class="space-x-4 lg:space-x-6">
+						<span class="inline-block">&copy; 2024 EDL</span>
+						<a class="inline-block" href="/privacy-policy.html" title="View EDL’s privacy policy.">Privacy policy</a>
+					</div>
+					
+					<div class="space-x-4 lg:space-x-6">
+						<span class="hidden md:inline-block text-black/60">Follow us</span>
+						<a class="inline-block underline underline-offset-4" href="https://linkedin.com/company/edldesign" target="_blank" rel="noopener" title="View EDL’s profile on LinkedIn.">LinkedIn</a>
+						<a class="inline-block underline underline-offset-4" href="https://instagram.com/edl.studio" target="_blank" rel="noopener" title="View EDL’s profile on Instagram.">Instagram</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
