@@ -29,9 +29,11 @@
 	</head>
 
 	<body class="overflow-x-hidden font-sans antialiased">
-		<div class="relative hidden w-full px-12 py-4 text-center text-white bg-black hover:bg-black/80 md:block lg:px-24" x-data="{ hide_banner: true, cookie_name: 'announcement-daas' }" x-init="hide_banner = docCookies.hasItem(cookie_name) ? (docCookies.getItem(cookie_name) == 'true') : false;" x-bind:class="{ 'hidden': hide_banner, 'relative hidden md:block': !hide_banner }">
-			<a href="/services/design-service.html" class="block w-full space-x-2 text-base link lg:text-xl lg:leading-normal 2xl:text-2xl 2xl:leading-normal" @click="hide_banner = true; docCookies.setItem(cookie_name, true, (60*24*60*60));">
-				<span>Don’t hire a design team, subscribe to one</span>
+		<div class="relative hidden w-full px-12 py-4 overflow-hidden text-center text-white bg-blue-600 md:block lg:px-24" x-data="{ hide_banner: true, cookie_name: 'announcement-daas' }" x-init="hide_banner = docCookies.hasItem(cookie_name) ? (docCookies.getItem(cookie_name) == 'true') : false;" x-bind:class="{ 'hidden': hide_banner, 'relative hidden md:block': !hide_banner }">
+			<img loading="lazy" class="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]" style="color:transparent" src="./media/background-bootcamp.jpg">
+
+			<a href="/sprint.html" class="relative block w-full space-x-2 text-base link lg:text-xl lg:leading-normal 2xl:text-2xl 2xl:leading-normal" @click="hide_banner = true; docCookies.setItem(cookie_name, true, (60*24*60*60));">
+				<span>Join our Copenhagen Startup Design Sprint</span>	
 			</a>
 			
 			<button type="button" class="absolute z-10 flex items-center justify-center w-8 h-8 ease-in-out -translate-y-1/2 rounded-md hover:bg-white/20 right-2 lg:right-4 top-1/2" @click="hide_banner = true; docCookies.setItem(cookie_name, true, (60*24*60*60));" aria-label="Dismiss">✕</button>
@@ -116,9 +118,15 @@
 				</div>
 			</section>
 
-			<section class="relative w-full px-6 mt-12 md:mt-16 lg:mt-24 2xl:mt-32 lg:px-12 bg-neutral-100 h-96 md:h-120 lg:h-auto lg:aspect-video">
-				<p class="text-2xl leading-normal text-white lg:leading-normal lg:text-3xl 2xl:leading-relaxed 2xl:text-4xl">EDL<span class="text-xs md:text-base align-super lg:text-lg">®</span> is an independent <a href="/copenhagen.html" title="Get to know our studio.">Copenhagen-based</a> digital design studio.</p>
-				<img src="/media/edl-reel.gif" class="absolute inset-0 object-cover w-full h-full" alt="A reel of versatile design and branding work by EDL."/>
+			<section class="relative w-full px-6 mt-12 overflow-hidden pointer-events-none lg:px-12 md:mt-16 lg:mt-24 2xl:mt-32">
+				<iframe
+  src="https://player.cloudinary.com/embed/?public_id=videos%2Fedl-showreel-2024&cloud_name=djm6ovxh2&player[controls]=false&player[muted]=true&player[skin]=light&player[hideContextMenu]=true&player[floatingWhenNotVisible]=false&player[autoplayMode]=on-scroll&player[autoplay]=true&player[loop]=true"
+  width="640"
+  height="360"
+  style="background: #e8e8e8; height: auto; width: 100%; aspect-ratio: 640 / 360;"
+  allow="autoplay;"
+  frameborder="0"
+></iframe>
 			</section>
 
 			<section class="relative py-16 md:py-24 lg:pt-24 lg:pb-32 2xl:pt-32">
