@@ -26,14 +26,12 @@
 	</head>
 
 	<body class="overflow-x-hidden font-sans antialiased">
-		<div class="relative hidden w-full px-12 py-4 overflow-hidden text-center text-white bg-blue-600 md:block lg:px-24">
+		<div class="relative hidden w-full px-12 overflow-hidden text-center text-white bg-blue-600 md:block lg:px-24">
 			<img loading="lazy" class="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]" style="color:transparent" src="./media/background-bootcamp.jpg">
 
-			<a href="/sprint" class="relative block w-full space-x-2 text-base link lg:text-xl lg:leading-normal 2xl:text-2xl 2xl:leading-normal" @click="hide_banner = true; docCookies.setItem(cookie_name, true, (60*24*60*60));">
-				<span>Join our Copenhagen Startup Design Sprint</span>	
+			<a href="/sprint.html" class="relative block w-full py-4 space-x-2 text-base link lg:text-xl lg:leading-normal 2xl:text-xl 2xl:leading-normal" @click="hide_banner = true; docCookies.setItem(cookie_name, true, (60*24*60*60));">
+				<span class="text-white/80">Scale your startup with our design sprint for 45.000 DKK. <span class="inline-block ml-1 text-white">Learn more</span></span>	
 			</a>
-			
-			<button type="button" class="absolute z-10 flex items-center justify-center w-8 h-8 ease-in-out -translate-y-1/2 rounded-md hover:bg-white/20 right-2 lg:right-4 top-1/2" @click="hide_banner = true; docCookies.setItem(cookie_name, true, (60*24*60*60));" aria-label="Dismiss">✕</button>
 		</div>
 
 		<header x-data="{ open: false }" @keydown.window.escape="open = false">
