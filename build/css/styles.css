@@ -1361,6 +1361,10 @@ select {
   height: 419px;
 }
 
+.max-h-256 {
+  max-height: 64rem;
+}
+
 .w-auto {
   width: auto;
 }
@@ -1954,6 +1958,26 @@ select {
 .bg-\[\#e8e8e8\] {
   --tw-bg-opacity: 1;
   background-color: rgb(232 232 232 / var(--tw-bg-opacity));
+}
+
+.bg-indigo-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(79 70 229 / var(--tw-bg-opacity));
+}
+
+.bg-purple-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(147 51 234 / var(--tw-bg-opacity));
+}
+
+.bg-purple-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(192 132 252 / var(--tw-bg-opacity));
+}
+
+.bg-purple-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(126 34 206 / var(--tw-bg-opacity));
 }
 
 .object-contain {
@@ -3838,10 +3862,6 @@ select {
 @media (min-width: 1280px) {
   .xl\:-mr-8 {
     margin-right: -2rem;
-  }
-
-  .xl\:block {
-    display: block;
   }
 
   .xl\:max-w-2xl {
